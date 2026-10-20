@@ -1,0 +1,6 @@
+name = "collatzTM"
+version = "0.1.0"
+defaultTargets = ["CollatzTM"]
+
+[[lean_lib]]
+name = "CollatzTM"

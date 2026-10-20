@@ -1,0 +1,49 @@
+{
+  "source_snapshot_commit": "b6c17e92bb9f0f4ba070190e17e17a24fe789ec6",
+  "toolchain": "leanprover/lean4:v4.30.0",
+  "compiler_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+  "lean_sources": {
+    "Audit.lean": "5880aa1280af083a3f6ab0ed6e12a5a569af169f569db40f606d2ec4f68f686e",
+    "CollatzTM/Arithmetic.lean": "4b4cf76000ea32242534f51f612e7ae022da738383d98271ee8a64a3d5fb9c70",
+    "CollatzTM/ArithmeticBridge.lean": "4cd83b939a465fbfc2508f4dfd989bcbede67c59c2a872138b755ea234d51302",
+    "CollatzTM/Binary.lean": "2f8f9c85af73fca390aaf18629742c362abe64d402f0c3e81f502729115f2d2b",
+    "CollatzTM/Core.lean": "60da5c636bc93887bdbf81df6b6c514af1bc100ffcd6474796326b6a09c202dd",
+    "CollatzTM/Evaluator.lean": "183d2dc338ada127197f51556b04c090e62925b70f988260aa155d7260e9b161",
+    "CollatzTM/ExactHalt.lean": "ec5070ffdce59129206ab1b364f839153cf4e63f332c3ee038c2b7710e89dee9",
+    "CollatzTM/Global.lean": "874f9f758a58709b8cb71d7fbc7a424a623b4faa3c1174764f53012e7fad04df",
+    "CollatzTM/Machine12.lean": "d3282876ab41406e39451f63bc47b3ec457c4ec51de0be6bfe418efbf843f886",
+    "CollatzTM/Machine16.lean": "79449c1ea696940b2b78ff651567e5fb4d70ab33c3423a6dda13744131f2bbb3",
+    "CollatzTM/Search.lean": "ca7119156632f5fd9cc38b77d9fadca835c29f4a7fef3d196f65d282f9db6632",
+    "CollatzTM/Sixteen.lean": "bf425611324ea79ce2b11094652496a934b93c6cf5f96f3fc7a2f33a9505e174",
+    "CollatzTM/SixteenEntry.lean": "03dfb62bea58dd5d03f4a530b34d9e5cc586fe3fc5f8c29a5fa780b68ad53dd7",
+    "CollatzTM/SixteenEven.lean": "d8d37bc1cb110a64a7c754f0fa28444d09543894e2942aff348b0d8226115883",
+    "CollatzTM/SixteenMain.lean": "61439d21914bce41c214626ef4cacff341b10514ea0d6311001405647cbc3f4c",
+    "CollatzTM/SixteenOdd.lean": "5d839ab58e2a20633aec56655d56b68a4d8367faaf69bc93143641b401265b2a",
+    "CollatzTM/SixteenRebuild.lean": "c70b886ef04400866f1cfe82e7a0a3926bae41240788e1c35f39db3e8ea6ad1c",
+    "CollatzTM/Support.lean": "27432013b69080806cc214c0163c4a52f16ed68013ba4b2a19b59193d30783ba",
+    "CollatzTM/TableAudit.lean": "8eb6779169cbfb56e4fed4bcf7b4e27fc8c2876c1ffd2bd748557a667c131930",
+    "CollatzTM/Twelve.lean": "33cbe29ee4201683015b8558115862b8724472a0fc960828e548d1a450b09859",
+    "CollatzTM/TwelveMain.lean": "0ed5ee4756660a2254f34ff41a75ba030ba0750091fc0aa004e53dc344e2e38b",
+    "CollatzTM.lean": "692f45ecfa3202803a8966c674d6abb8ed2a2c8116a96e875354e858e8d87810"
+  },
+  "machines": {
+    "12": {
+      "file": "machines/collatz12.tm",
+      "string": "1RH0RK_0RA1RC_0RB1RD_1RH1RE_1RB0RF_1RB1RG_0RD1RF_1LI1LI_0RK1LJ_0LI1LI_0RA0RL_0LZ1RG",
+      "string_sha256": "25f442e5880609d0430e59811b86ac6e16f07e2fb5df6f27b21addfa46f06179",
+      "file_sha256": "28ae1d5db170aa1cd1d486827985c58ae280d5f7e4b69da6a5fdc099c3db9012"
+    },
+    "16": {
+      "file": "machines/collatz-cycle16.tm",
+      "string": "1RP1LA_0LC0LC_0RD1LC_1RP1RE_1LB0RF_1LG1RF_0RI0LH_1RE1LH_0LA0LJ_1LK1LJ_0RN0RL_1RM1RL_0LA1RI_0RO1RN_0RZ1LB_0LC1RP",
+      "string_sha256": "5de502db2350261f00471e9bbf998957dd30cbb6eb4000474bf8953ebe90d131",
+      "file_sha256": "6904107db5c32cca7dd8395e63f0e07e8abaa1449330bc17bca0f82351076867"
+    }
+  },
+  "upstream_influence": {
+    "repository": "calr3/tinycryptids",
+    "commit": "c73bbd5377d4a06285660c170fccea56cf724155",
+    "path": "lean/TinyCryptids/WeakCollatz/Spec.lean",
+    "vendored": false
+  }
+}

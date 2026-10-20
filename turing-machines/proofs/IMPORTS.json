@@ -1,0 +1,96 @@
+{
+  "CollatzTM/Arithmetic.lean": [
+    "Lean"
+  ],
+  "CollatzTM/ArithmeticBridge.lean": [
+    "CollatzTM.Arithmetic"
+  ],
+  "CollatzTM/Binary.lean": [
+    "CollatzTM.Twelve"
+  ],
+  "CollatzTM/Core.lean": [
+    "Lean"
+  ],
+  "CollatzTM/Evaluator.lean": [
+    "CollatzTM.Core"
+  ],
+  "CollatzTM/ExactHalt.lean": [
+    "CollatzTM.Core",
+    "CollatzTM.Arithmetic"
+  ],
+  "CollatzTM/Global.lean": [
+    "CollatzTM.Evaluator",
+    "CollatzTM.Search",
+    "CollatzTM.ArithmeticBridge"
+  ],
+  "CollatzTM/Machine12.lean": [
+    "CollatzTM.Core"
+  ],
+  "CollatzTM/Machine16.lean": [
+    "CollatzTM.Core"
+  ],
+  "CollatzTM/Search.lean": [
+    "CollatzTM.Core",
+    "CollatzTM.Arithmetic"
+  ],
+  "CollatzTM/Sixteen.lean": [
+    "CollatzTM.Machine16"
+  ],
+  "CollatzTM/SixteenEntry.lean": [
+    "CollatzTM.SixteenRebuild"
+  ],
+  "CollatzTM/SixteenEven.lean": [
+    "CollatzTM.Sixteen"
+  ],
+  "CollatzTM/SixteenMain.lean": [
+    "CollatzTM.SixteenEntry",
+    "CollatzTM.SixteenOdd",
+    "CollatzTM.Global"
+  ],
+  "CollatzTM/SixteenOdd.lean": [
+    "CollatzTM.Sixteen",
+    "CollatzTM.SixteenEntry"
+  ],
+  "CollatzTM/SixteenRebuild.lean": [
+    "CollatzTM.SixteenEven"
+  ],
+  "CollatzTM/Support.lean": [
+    "CollatzTM.Core"
+  ],
+  "CollatzTM/TableAudit.lean": [
+    "CollatzTM.Machine12",
+    "CollatzTM.Machine16"
+  ],
+  "CollatzTM/Twelve.lean": [
+    "CollatzTM.Machine12"
+  ],
+  "CollatzTM/TwelveMain.lean": [
+    "CollatzTM.Binary",
+    "CollatzTM.Global"
+  ],
+  "CollatzTM.lean": [
+    "CollatzTM.Arithmetic",
+    "CollatzTM.ArithmeticBridge",
+    "CollatzTM.Binary",
+    "CollatzTM.Core",
+    "CollatzTM.Evaluator",
+    "CollatzTM.ExactHalt",
+    "CollatzTM.Global",
+    "CollatzTM.Machine12",
+    "CollatzTM.Machine16",
+    "CollatzTM.Search",
+    "CollatzTM.Sixteen",
+    "CollatzTM.SixteenEntry",
+    "CollatzTM.SixteenEven",
+    "CollatzTM.SixteenMain",
+    "CollatzTM.SixteenOdd",
+    "CollatzTM.SixteenRebuild",
+    "CollatzTM.Support",
+    "CollatzTM.TableAudit",
+    "CollatzTM.Twelve",
+    "CollatzTM.TwelveMain"
+  ],
+  "Audit.lean": [
+    "CollatzTM"
+  ]
+}
