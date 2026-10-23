@@ -11,3 +11,7 @@ These are correctness reductions. They do not prove the Collatz conjecture,
 and make no minimality or record claim.
 
 See [attribution and license status](turing-machines/ATTRIBUTION.md).
+
+## Research notes
+
+- [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
