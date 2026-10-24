@@ -1,9 +1,9 @@
 # From 975 to 488 Wang tiles: a seeded half-plane construction
 
 This note gives **488 oriented Wang tile types**, including one distinguished
-seed, that tile the half-plane $\mathbb Z\times\mathbb N_0$ with that seed at
+seed, that tile the half-plane $`\mathbb Z\times\mathbb N_0`$ with that seed at
 the origin if and only if the exact K215 Turing machine never halts from its
-blank tape. Here $\mathbb N_0=\{0,1,2,\ldots\}$.
+blank tape. Here $`\mathbb N_0=\{0,1,2,\ldots\}`$.
 
 The starting point is Conor Grogan and Claude's
 [975-tile seeded construction](https://github.com/jconorgrogan/k230-wang-tiles/tree/1e483bad46dd91d9ad20aa38b7f750986be043fc)
@@ -27,7 +27,7 @@ Its [renderer](render_atlas.py) reads the released TSV directly; see
 
 ## The exact statement
 
-Let $T_{488}$ be the set in
+Let $`T_{488}`$ be the set in
 [k215_diagonal_488.tsv](k215_diagonal_488.tsv). A row gives the tile's
 zero-based index, seed flag, and edge colors in **north, east, south, west**
 order. Tiles may be translated, but not rotated or reflected. Neighboring
@@ -40,8 +40,8 @@ The distinguished seed has index **487** and tuple
 ```
 
 **Theorem.** There is a map
-$\tau:\mathbb Z\times\mathbb N_0\to T_{488}$ with matching neighboring
-edges and $\tau(0,0)=T_{488}[487]$ if and only if K215 does not halt from
+$`\tau:\mathbb Z\times\mathbb N_0\to T_{488}`$ with matching neighboring
+edges and $`\tau(0,0)=T_{488}[487]`$ if and only if K215 does not halt from
 its all-zero two-way infinite tape, starting in state 0 at tape cell 0.
 
 The exact K215 input is the
@@ -52,7 +52,7 @@ at commit `440dd03ab8de73ba5ea5218c37527a6edb7e5d8b` of
 `68 1 1 R 215`, in `state read write direction target` format.
 
 This theorem concerns a **seeded half-plane**, not unrestricted whole-plane
-tileability. In fact, $T_{488}$ contains the constant tile
+tileability. In fact, $`T_{488}`$ contains the constant tile
 `(sym:0, sym:0, sym:0, sym:0)`, which tiles the ordinary plane periodically.
 Putting the distinguished seed in the whole plane would instead be
 impossible: its south color `bottom` occurs on no north edge. The boundary
@@ -87,28 +87,33 @@ saving comes from changing the simulation geometry: even K230 has a
 
 For K215, the final count is
 
-$$
-\boxed{480\text{ instruction tiles}+4\text{ symbol tiles}
-+4\text{ boundary/seed tiles}=488.}
-$$
+```math
+\boxed{
+\begin{aligned}
+&480\text{ instruction tiles}\\
+&\quad+4\text{ symbol tiles}\\
+&\quad+4\text{ boundary/seed tiles}=488.
+\end{aligned}
+}
+```
 
 ## A complete diagonal compiler
 
-Let $M$ be a deterministic partial binary Turing machine. Write
-$\delta(q,a)=(q',b,d)$ for an instruction that reads $a$, writes $b$, moves
-in direction $d\in\{L,R\}$, and enters $q'$. An undefined instruction halts
-the computation. Use distinct symbol colors $s_0,s_1$, state colors $h_q$,
+Let $`M`$ be a deterministic partial binary Turing machine. Write
+$`\delta(q,a)=(q',b,d)`$ for an instruction that reads $`a`$, writes $`b`$, moves
+in direction $`d\in\{L,R\}`$, and enters $`q'`$. An undefined instruction halts
+the computation. Use distinct symbol colors $`s_0,s_1`$, state colors $`h_q`$,
 and the four fresh boundary colors described below.
 
-All tuples in this section are ordered $(N,E,S,W)$.
+All tuples in this section are ordered $`(N,E,S,W)`$.
 
 ### Four symbol tiles
 
-For each $a,b\in\{0,1\}$, include
+For each $`a,b\in\{0,1\}`$, include
 
-$$
+```math
 (s_a,s_b,s_b,s_a).
-$$
+```
 
 This passes the west input to the north and the south input to the east.
 Along the ordered tape frontier it preserves the two symbols' order.
@@ -120,12 +125,12 @@ orientation is possible:
 
 | Instruction | Head arrives from west | Head arrives from south |
 | --- | --- | --- |
-| $\delta(q,a)=(q',b,R)$ | $(s_b,h_{q'},s_a,h_q)$ | $(s_b,h_{q'},h_q,s_a)$ |
-| $\delta(q,a)=(q',b,L)$ | $(h_{q'},s_b,s_a,h_q)$ | $(h_{q'},s_b,h_q,s_a)$ |
+| $`\delta(q,a)=(q',b,R)`$ | $`(s_b,h_{q'},s_a,h_q)`$ | $`(s_b,h_{q'},h_q,s_a)`$ |
+| $`\delta(q,a)=(q',b,L)`$ | $`(h_{q'},s_b,s_a,h_q)`$ | $`(h_{q'},s_b,h_q,s_a)`$ |
 
-Let $D(q)$ be the set of directions of all instructions entering $q$, with
-$R$ also included for the starting state. Include the west-arrival copy
-only when $R\in D(q)$ and the south-arrival copy only when $L\in D(q)$.
+Let $`D(q)`$ be the set of directions of all instructions entering $`q`$, with
+$`R`$ also included for the starting state. Include the west-arrival copy
+only when $`R\in D(q)`$ and the south-arrival copy only when $`L\in D(q)`$.
 This filter is sound: an east output enters the next tile from the west,
 and a north output enters it from the south. The extra initial orientation
 is supplied by the boundary. No instruction tiles are supplied for an
@@ -138,19 +143,19 @@ add:
 
 | Tile | North | East | South | West |
 | --- | --- | --- | --- | --- |
-| Distinguished seed | `wall:start` | `init:R` | `bottom` | $s_0$ |
-| Bottom initializer | $s_0$ | `init:R` | `bottom` | `init:R` |
-| First wall cell | `wall` | $h_{\mathrm{start}}$ | `wall:start` | $s_0$ |
-| Remaining wall | `wall` | $s_0$ | `wall` | $s_0$ |
+| Distinguished seed | `wall:start` | `init:R` | `bottom` | $`s_0`$ |
+| Bottom initializer | $`s_0`$ | `init:R` | `bottom` | `init:R` |
+| First wall cell | `wall` | $`h_{\mathrm{start}}`$ | `wall:start` | $`s_0`$ |
+| Remaining wall | `wall` | $`s_0`$ | `wall` | $`s_0`$ |
 
-Require the seed at $(0,0)$. The initializer is the only tile with west
-color `init:R`, so it is forced at every $(x,0)$ with $x>0$. The first
+Require the seed at $`(0,0)`$. The initializer is the only tile with west
+color `init:R`, so it is forced at every $`(x,0)`$ with $`x>0`$. The first
 wall cell is the only tile with south color `wall:start`, so it is forced
-at $(0,1)$. The remaining wall is then forced at $(0,y)$ for all $y\ge2$.
+at $`(0,1)`$. The remaining wall is then forced at $`(0,y)`$ for all $`y\ge2`$.
 
-These rays supply blank inputs to the quadrant $x,y\ge1$, except for
-one starting head entering $(1,1)$ from the west. The region $x<0$ can
-be filled with $(s_0,s_0,s_0,s_0)$, matching the west side of the seed
+These rays supply blank inputs to the quadrant $`x,y\ge1`$, except for
+one starting head entering $`(1,1)`$ from the west. The region $`x<0`$ can
+be filled with $`(s_0,s_0,s_0,s_0)`$, matching the west side of the seed
 and wall. Its possible other fillings cannot change the quadrant's fixed
 inputs. The boundary tiles cannot appear inside that quadrant: their
 southwest inputs do not match a pair of state/symbol colors. Also, no tile
@@ -159,7 +164,7 @@ occur above row zero.
 
 ## Proof that the compiler preserves nonhalting
 
-Process the computation quadrant by increasing antidiagonal $x+y$.
+Process the computation quadrant by increasing antidiagonal $`x+y`$.
 Each antidiagonal has finitely many cells. Its south and west inputs are
 fixed by the boundary or by the preceding antidiagonal, so every cell
 depends only on finite earlier data.
@@ -171,16 +176,16 @@ the west scans the adjacent symbol to its right in this word. A head
 arriving from the south scans the adjacent symbol to its left. This
 orientation convention matters when the machine reverses direction.
 
-Filling a cell replaces its incoming frontier pair $(W,S)$ by its
-outgoing pair $(N,E)$:
+Filling a cell replaces its incoming frontier pair $`(W,S)`$ by its
+outgoing pair $`(N,E)`$:
 
-- A symbol tile replaces $(s_a,s_b)$ by $(s_a,s_b)$. The ordered tape
+- A symbol tile replaces $`(s_a,s_b)`$ by $`(s_a,s_b)`$. The ordered tape
   word does not change.
-- A head tile consumes either $(h_q,s_a)$ or $(s_a,h_q)$. A rightward
-  instruction produces $(s_b,h_{q'})$ with the head exiting east and
+- A head tile consumes either $`(h_q,s_a)`$ or $`(s_a,h_q)`$. A rightward
+  instruction produces $`(s_b,h_{q'})`$ with the head exiting east and
   scanning its next right neighbor. A leftward instruction produces
-  $(h_{q'},s_b)$ with the head exiting north and scanning its next left
-  neighbor. In each case the scanned cell becomes $b$.
+  $`(h_{q'},s_b)`$ with the head exiting north and scanning its next left
+  neighbor. In each case the scanned cell becomes $`b`$.
 
 Thus each head tile performs exactly one ordinary machine step, including
 on a reversal. Symbol tiles neither create nor erase a head. A head tile
@@ -188,12 +193,16 @@ consumes one head and produces one, so each completed antidiagonal has
 exactly one outgoing head. It enters the next antidiagonal, whose other
 input is the appropriate adjacent tape symbol by the frontier invariant.
 
-The $t$-th head cell, counting the first one as $t=0$, has coordinates
+Let $`R_t`$ and $`L_t`$ count the right and left moves among the first $`t`$
+machine steps. The $`t`$-th head cell, counting the first one as $`t=0`$,
+has coordinates
 
-$$
-(x,y)=(1+\#R,1+\#L),\qquad
-\text{tape position}=x-y,\qquad t=x+y-2.
-$$
+```math
+\begin{aligned}
+(x,y)&=(1+R_t,1+L_t),\\
+\text{tape position}&=x-y,\qquad t=x+y-2.
+\end{aligned}
+```
 
 For any southwest input pair that occurs in this computation there is
 at most one matching tile. Two symbols force their symbol tile; one
@@ -201,18 +210,19 @@ head and one symbol force the corresponding instruction, if defined.
 Two incoming heads never occur. The fixed boundary and this local
 determinism force every antidiagonal of any candidate seeded tiling.
 
-If $M$ never halts, the frontier invariant supplies a matching tile at
+If $`M`$ never halts, the frontier invariant supplies a matching tile at
 every cell. The union of the successively filled finite antidiagonals,
 together with the boundary and the blank left exterior, is a tiling of
-the required half-plane. If $M$ halts, the forced head reaches a cell
+the required half-plane. If $`M`$ halts, the forced head reaches a cell
 with no matching instruction tile at a finite antidiagonal. No seeded
 tiling can pass that obstruction. Therefore
 
-$$
-\operatorname{SeededHalfPlaneTiling}(\operatorname{compile}(M))
-\quad\Longleftrightarrow\quad
-M\text{ does not halt on blank tape}.
-$$
+```math
+\begin{gathered}
+\mathrm{SeededHalfPlaneTiling}(\mathrm{compile}(M))\\
+\Longleftrightarrow\quad M\text{ does not halt on blank tape}.
+\end{gathered}
+```
 
 The argument gives both directions; it is not merely a recipe for turning
 a known infinite execution into one particular tiling.
@@ -235,7 +245,7 @@ orientation at its source state, so omitting it leaves **493** tiles.
 
 ### Five impossible inputs
 
-An incoming direction describes the preceding TM move: $L$ means the
+An incoming direction describes the preceding TM move: $`L`$ means the
 head tile is entered from the south. Remove these five instruction variants:
 
 | State | Incoming direction | Impossible scanned bit |
@@ -286,9 +296,9 @@ against the original, untrimmed K215 table. Its 1,173 abstract
 configurations record the state, incoming direction, and three consecutive
 tape bits centered at the head. The blank initial abstraction is included.
 In the JSON, an entry is `[q, w, d]`, where
-$w=a_{-1}+2a_0+4a_1$ records the left, scanned, and right bits. If the
-instruction writes $b$, a right move gives $(b,a_1,e)$ and a left move
-gives $(e,a_{-1},b)$, where $e\in\{0,1\}$ is the newly exposed bit.
+$`w=a_{-1}+2a_0+4a_1`$ records the left, scanned, and right bits. If the
+instruction writes $`b`$, a right move gives $`(b,a_1,e)`$ and a left move
+gives $`(e,a_{-1},b)`$, where $`e\in\{0,1\}`$ is the newly exposed bit.
 
 After writing the middle bit and moving the head, one outer bit becomes
 newly exposed. The certificate is closed under **both** possible values
@@ -311,7 +321,7 @@ If K215 is nonhalting, its forced quadrant never needs any of the five
 removed tiles, so it is still a tiling using the 488-type subset.
 Conversely, a tiling using the subset is also a tiling using the
 493-type set and therefore implies nonhalting. Together with the
-halt-target omission, this proves the stated theorem for $T_{488}$.
+halt-target omission, this proves the stated theorem for $`T_{488}`$.
 
 ## What follows about ZFC
 
@@ -320,25 +330,26 @@ The upstream
 supplies the machine-to-proof-search calibration, stated to be
 formalizable in ZFC:
 
-$$
+```math
 \mathrm{ZFC}\vdash
-\bigl(\neg\operatorname{Halt}(K215,\mathrm{blank})
-\leftrightarrow\operatorname{Con}(\mathrm{ZFC})\bigr).
-$$
+\bigl(\neg\mathrm{Halt}(K215,\mathrm{blank})
+\leftrightarrow\mathrm{Con}(\mathrm{ZFC})\bigr).
+```
 
 Taking that pinned source calibration as a premise, the elementary
 compiler and pruning proof above give
 
-$$
-\mathrm{ZFC}\vdash
-\bigl(\operatorname{SeededHalfPlaneTiling}(T_{488},487)
-\leftrightarrow\operatorname{Con}(\mathrm{ZFC})\bigr).
-$$
+```math
+\begin{aligned}
+\mathrm{ZFC}\vdash\bigl(&\mathrm{SeededHalfPlaneTiling}(T_{488},487)\\
+&\leftrightarrow\mathrm{Con}(\mathrm{ZFC})\bigr).
+\end{aligned}
+```
 
 Thus, if ZFC is consistent, the seeded tiling exists and ZFC cannot
 prove its existence, by the second incompleteness theorem. To conclude
 also that ZFC cannot refute the tiling statement, use a suitable stronger
-assumption, for example $\Sigma_1$-soundness. Mere consistency does not
+assumption, for example $`\Sigma_1`$-soundness. Mere consistency does not
 by itself establish that second unprovability claim.
 
 The upstream external Lean and Rocq endpoints identify the literal
