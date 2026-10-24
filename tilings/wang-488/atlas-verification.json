@@ -1,0 +1,18 @@
+{
+  "source_commit": "cebfe3e282ee65337d9fa69c274d5321d757e340",
+  "source_url": "https://github.com/Mira-Cult/math/blob/main/tilings/wang-488/k215_diagonal_488.tsv",
+  "source_sha256": "371ebc4063c47ba3491d99c6884faa43633d3ea2600411d9eee9b4a020207017",
+  "tile_count": 488,
+  "distinct_tile_count": 488,
+  "edge_color_count": 221,
+  "unique_palette_colors": 221,
+  "unique_display_codes": 221,
+  "seed_index": 487,
+  "svg_tile_group_count": 488,
+  "svg_contains_all_tiles_exactly_once": true,
+  "svg_edges_verified_against_tsv": true,
+  "dimensions": [
+    3600,
+    4500
+  ]
+}

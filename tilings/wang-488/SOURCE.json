@@ -1,0 +1,153 @@
+{
+  "result": "488 oriented Wang tile types for the K215 seeded half-plane problem",
+  "scope": {
+    "domain": "Z x N_0",
+    "seed_coordinate": [
+      0,
+      0
+    ],
+    "seed_index": 487,
+    "rotations": false,
+    "reflections": false,
+    "working_machine_states": 215,
+    "halt_state": 215,
+    "tile_types": 488
+  },
+  "research_source": {
+    "repository": "Mira-Cult/turing-machines",
+    "commit": "cebfe3e282ee65337d9fa69c274d5321d757e340",
+    "directory": "research/wang",
+    "source_files": {
+      "tm_to_wang.py": {
+        "sha256": "7f2facd3412533707b704b8b0104f6fc63a60ff40a7c5fb07227bbf6aa52d9a5",
+        "bytes": 7621,
+        "public_adaptation": "Module docstring points to the self-contained public README; executable AST unchanged."
+      },
+      "window_invariant.py": {
+        "sha256": "bafd5117cd610b78a30174b29ee8c1f5811682309bb0ed6d9efe74a03d034f77",
+        "bytes": 3088,
+        "public_adaptation": "Preserved byte-for-byte."
+      },
+      "verify.py": {
+        "sha256": "b2d443bed2ccac5a2616719a4ca5d85bf275cf1f099cce3690ea6eb99759ffcf",
+        "bytes": 8790,
+        "public_adaptation": "Module docstring points to the self-contained public README; executable AST unchanged."
+      },
+      "fetch_sources.py": {
+        "sha256": "01f00e2d051032058011ca48a447cf6ea8fc9c4dbe238d4be5780fe9694bc4f1",
+        "bytes": 960,
+        "public_adaptation": "Preserved byte-for-byte."
+      },
+      "sources.json": {
+        "sha256": "cf31f34520bbcdf9a3ab5c98fd11195d7596df98c9327fcca9a7255cf9059d80",
+        "bytes": 1063,
+        "public_adaptation": "Preserved byte-for-byte."
+      },
+      "k215_diagonal_488.tsv": {
+        "sha256": "371ebc4063c47ba3491d99c6884faa43633d3ea2600411d9eee9b4a020207017",
+        "bytes": 16906,
+        "public_adaptation": "Preserved byte-for-byte."
+      },
+      "k215_window_certificate.json": {
+        "sha256": "b2f347a7bdb17320ad32a6d18347bf1a2d987b8ab5f966aa8bac9397eab7a62a",
+        "bytes": 49881,
+        "public_adaptation": "Preserved byte-for-byte."
+      }
+    }
+  },
+  "public_release": {
+    "repository": "Mira-Cult/math",
+    "directory": "tilings/wang-488",
+    "article": "README.md",
+    "proof_kind": "ordinary mathematical proof plus independently checked finite invariant; no new Lean/Rocq tiling proof",
+    "external_calibration": "The ZFC consequence takes the pinned upstream K215 machine-to-refutation calibration as a premise; its proof dependency closure was not rebuilt for this release.",
+    "adaptations": [
+      "The article consolidates the construction and complete direct pruning proof.",
+      "SOURCES.md replaces research-only local input paths with the public pinned fetch route.",
+      "independent_check.py adds a compiler-independent audit with command-line input/output paths.",
+      "The atlas has an exact TSV-driven renderer, public source URL, and preserved research-source commit metadata."
+    ],
+    "raw_machine_inputs_redistributed": false,
+    "generated_build_products_included": false
+  },
+  "validation": {
+    "date_utc": "2026-10-24",
+    "generic_partial_two_state_machines": 6561,
+    "generic_steps_each": 12,
+    "random_nonblank_machines": 2000,
+    "random_steps_each": 40,
+    "random_seed": 20261024,
+    "k215_and_k230_steps_each": 1000,
+    "mismatches": 0,
+    "finite_certificate_states": 1173,
+    "tile_tsv_regeneration": "byte-for-byte match",
+    "certificate_regeneration": "byte-for-byte match",
+    "independent_audit": "passed; no compiler or invariant-checker imports"
+  },
+  "public_artifacts": {
+    "488-wang-tiles.svg": {
+      "sha256": "64e4c538a8a667c10b5a9a2b166245195d4dfa5886bebb9f6e75f3598a116221",
+      "bytes": 855959
+    },
+    "ATLAS.md": {
+      "sha256": "06b24db059d211af31ca559763f180d1583fb0cc5f2c2bace8fb992fe3815164",
+      "bytes": 2326
+    },
+    "ATTRIBUTION.md": {
+      "sha256": "36702842d545d2794f899d2ab258710cac273e55f6154fe39e348c0b7b1ad8ed",
+      "bytes": 2928
+    },
+    "README.md": {
+      "sha256": "a6969edba60877c52194c93dc9ec23affbd9b84b07dbfd71c8a6fc3bb729a342",
+      "bytes": 19686
+    },
+    "SOURCES.md": {
+      "sha256": "8eae39dbaebfc542704d099d9c40f1532c65ea0d16c089a08553439bebfb0cb2",
+      "bytes": 5503
+    },
+    "atlas-verification.json": {
+      "sha256": "2514d66893067e5aae721c1fee1bffc58601d4f9ceb348187ae0b78450017177",
+      "bytes": 579
+    },
+    "fetch_sources.py": {
+      "sha256": "01f00e2d051032058011ca48a447cf6ea8fc9c4dbe238d4be5780fe9694bc4f1",
+      "bytes": 960
+    },
+    "independent_check.py": {
+      "sha256": "ab55f90197abdd286f8819bda5ca6528009dd97352ff08823e38a7b73c301946",
+      "bytes": 6043
+    },
+    "k215_diagonal_488.tsv": {
+      "sha256": "371ebc4063c47ba3491d99c6884faa43633d3ea2600411d9eee9b4a020207017",
+      "bytes": 16906
+    },
+    "k215_window_certificate.json": {
+      "sha256": "b2f347a7bdb17320ad32a6d18347bf1a2d987b8ab5f966aa8bac9397eab7a62a",
+      "bytes": 49881
+    },
+    "palette.json": {
+      "sha256": "24ca78c4b1d880cfb2ab1bc5b030f7a57a151c795d6a9717e51a621f7c74c5e7",
+      "bytes": 26495
+    },
+    "render_atlas.py": {
+      "sha256": "984bef27c65bfc6f3a86472ec535ef5e353c5119fe6e1ad14a70b1890eaa2962",
+      "bytes": 10537
+    },
+    "sources.json": {
+      "sha256": "cf31f34520bbcdf9a3ab5c98fd11195d7596df98c9327fcca9a7255cf9059d80",
+      "bytes": 1063
+    },
+    "tm_to_wang.py": {
+      "sha256": "97b9d70242be76cdc003284383cd3c04ab9baf62ff05489d5cb13adc80237773",
+      "bytes": 7599
+    },
+    "verify.py": {
+      "sha256": "479c4df4f6d5ab92953e0ae446a23897a72fd1818d1d1c9f52a529b13782dd16",
+      "bytes": 8782
+    },
+    "window_invariant.py": {
+      "sha256": "bafd5117cd610b78a30174b29ee8c1f5811682309bb0ed6d9efe74a03d034f77",
+      "bytes": 3088
+    }
+  }
+}

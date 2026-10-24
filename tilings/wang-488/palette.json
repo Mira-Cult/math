@@ -1,0 +1,1328 @@
+[
+  {
+    "source_color": "bottom",
+    "edge_code": "B",
+    "hex_color": "#df637f",
+    "label_ink": "#13232c"
+  },
+  {
+    "source_color": "head:0",
+    "edge_code": "H0",
+    "hex_color": "#df9d6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:1",
+    "edge_code": "H1",
+    "hex_color": "#7565e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:10",
+    "edge_code": "H10",
+    "hex_color": "#a5e765",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:100",
+    "edge_code": "H100",
+    "hex_color": "#e765c8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:101",
+    "edge_code": "H101",
+    "hex_color": "#5defe7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:102",
+    "edge_code": "H102",
+    "hex_color": "#e5c68a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:103",
+    "edge_code": "H103",
+    "hex_color": "#aa83ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:104",
+    "edge_code": "H104",
+    "hex_color": "#7df286",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:105",
+    "edge_code": "H105",
+    "hex_color": "#eca7b6",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:106",
+    "edge_code": "H106",
+    "hex_color": "#a2caf1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:107",
+    "edge_code": "H107",
+    "hex_color": "#e4f59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:108",
+    "edge_code": "H108",
+    "hex_color": "#d46ddf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:109",
+    "edge_code": "H109",
+    "hex_color": "#65e7b5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:11",
+    "edge_code": "H11",
+    "hex_color": "#ef5dd0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:110",
+    "edge_code": "H110",
+    "hex_color": "#ef8c5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:111",
+    "edge_code": "H111",
+    "hex_color": "#8d8ae5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:112",
+    "edge_code": "H112",
+    "hex_color": "#9fec83",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:113",
+    "edge_code": "H113",
+    "hex_color": "#f27dbe",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:114",
+    "edge_code": "H114",
+    "hex_color": "#a7e1ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:115",
+    "edge_code": "H115",
+    "hex_color": "#f1e6a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:116",
+    "edge_code": "H116",
+    "hex_color": "#d09ef5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:117",
+    "edge_code": "H117",
+    "hex_color": "#6ddf8d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:118",
+    "edge_code": "H118",
+    "hex_color": "#e76566",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:119",
+    "edge_code": "H119",
+    "hex_color": "#5d89ef",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:12",
+    "edge_code": "H12",
+    "hex_color": "#8ae5de",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:120",
+    "edge_code": "H120",
+    "hex_color": "#c0e58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:121",
+    "edge_code": "H121",
+    "hex_color": "#ec83e0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:122",
+    "edge_code": "H122",
+    "hex_color": "#7df2dd",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:123",
+    "edge_code": "H123",
+    "hex_color": "#eccba7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:124",
+    "edge_code": "H124",
+    "hex_color": "#b5a2f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:125",
+    "edge_code": "H125",
+    "hex_color": "#a2f59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:126",
+    "edge_code": "H126",
+    "hex_color": "#df6d94",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:127",
+    "edge_code": "H127",
+    "hex_color": "#65b8e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:128",
+    "edge_code": "H128",
+    "hex_color": "#e5ef5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:129",
+    "edge_code": "H129",
+    "hex_color": "#d18ae5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:13",
+    "edge_code": "H13",
+    "hex_color": "#ecc583",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:130",
+    "edge_code": "H130",
+    "hex_color": "#83ecb6",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:131",
+    "edge_code": "H131",
+    "hex_color": "#f2947d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:132",
+    "edge_code": "H132",
+    "hex_color": "#a7aeec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:133",
+    "edge_code": "H133",
+    "hex_color": "#c1f1a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:134",
+    "edge_code": "H134",
+    "hex_color": "#f59ed9",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:135",
+    "edge_code": "H135",
+    "hex_color": "#6ddcdf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:136",
+    "edge_code": "H136",
+    "hex_color": "#e7c465",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:137",
+    "edge_code": "H137",
+    "hex_color": "#9e5def",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:138",
+    "edge_code": "H138",
+    "hex_color": "#8ae598",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:139",
+    "edge_code": "H139",
+    "hex_color": "#ec8392",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:14",
+    "edge_code": "H14",
+    "hex_color": "#a47df2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:140",
+    "edge_code": "H140",
+    "hex_color": "#7db0f2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:141",
+    "edge_code": "H141",
+    "hex_color": "#d9eca7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:142",
+    "edge_code": "H142",
+    "hex_color": "#efa2f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:143",
+    "edge_code": "H143",
+    "hex_color": "#9ef5da",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:144",
+    "edge_code": "H144",
+    "hex_color": "#df9a6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:145",
+    "edge_code": "H145",
+    "hex_color": "#7365e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:146",
+    "edge_code": "H146",
+    "hex_color": "#77ef5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:147",
+    "edge_code": "H147",
+    "hex_color": "#e58ab5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:148",
+    "edge_code": "H148",
+    "hex_color": "#83d3ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:149",
+    "edge_code": "H149",
+    "hex_color": "#f2eb7d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:15",
+    "edge_code": "H15",
+    "hex_color": "#a7ecaa",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:150",
+    "edge_code": "H150",
+    "hex_color": "#d4a7ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:151",
+    "edge_code": "H151",
+    "hex_color": "#a2f1be",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:152",
+    "edge_code": "H152",
+    "hex_color": "#f5a39e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:153",
+    "edge_code": "H153",
+    "hex_color": "#6d86df",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:154",
+    "edge_code": "H154",
+    "hex_color": "#a8e765",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:155",
+    "edge_code": "H155",
+    "hex_color": "#ef5dd3",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:156",
+    "edge_code": "H156",
+    "hex_color": "#8ae5dc",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:157",
+    "edge_code": "H157",
+    "hex_color": "#ecc383",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:158",
+    "edge_code": "H158",
+    "hex_color": "#a27df2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:159",
+    "edge_code": "H159",
+    "hex_color": "#a7eca9",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:16",
+    "edge_code": "H16",
+    "hex_color": "#f1a2b6",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:160",
+    "edge_code": "H160",
+    "hex_color": "#f1a2b7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:161",
+    "edge_code": "H161",
+    "hex_color": "#9ecff5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:162",
+    "edge_code": "H162",
+    "hex_color": "#cedf6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:163",
+    "edge_code": "H163",
+    "hex_color": "#d465e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:164",
+    "edge_code": "H164",
+    "hex_color": "#5defaf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:165",
+    "edge_code": "H165",
+    "hex_color": "#e5a38a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:166",
+    "edge_code": "H166",
+    "hex_color": "#8385ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:167",
+    "edge_code": "H167",
+    "hex_color": "#a1f27d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:168",
+    "edge_code": "H168",
+    "hex_color": "#eca7d0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:169",
+    "edge_code": "H169",
+    "hex_color": "#a2e8f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:17",
+    "edge_code": "H17",
+    "hex_color": "#9ecdf5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:170",
+    "edge_code": "H170",
+    "hex_color": "#f5e59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:171",
+    "edge_code": "H171",
+    "hex_color": "#a86ddf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:172",
+    "edge_code": "H172",
+    "hex_color": "#65e783",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:173",
+    "edge_code": "H173",
+    "hex_color": "#ef5d65",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:174",
+    "edge_code": "H174",
+    "hex_color": "#8aaae5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:175",
+    "edge_code": "H175",
+    "hex_color": "#c7ec83",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:176",
+    "edge_code": "H176",
+    "hex_color": "#f27deb",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:177",
+    "edge_code": "H177",
+    "hex_color": "#a7ecdc",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:178",
+    "edge_code": "H178",
+    "hex_color": "#f1c8a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:179",
+    "edge_code": "H179",
+    "hex_color": "#ae9ef5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:18",
+    "edge_code": "H18",
+    "hex_color": "#ccdf6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:180",
+    "edge_code": "H180",
+    "hex_color": "#78df6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:181",
+    "edge_code": "H181",
+    "hex_color": "#e76598",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:182",
+    "edge_code": "H182",
+    "hex_color": "#5dc1ef",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:183",
+    "edge_code": "H183",
+    "hex_color": "#e3e58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:184",
+    "edge_code": "H184",
+    "hex_color": "#d083ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:185",
+    "edge_code": "H185",
+    "hex_color": "#7df2b0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:186",
+    "edge_code": "H186",
+    "hex_color": "#ecb1a7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:187",
+    "edge_code": "H187",
+    "hex_color": "#a2aef1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:188",
+    "edge_code": "H188",
+    "hex_color": "#c4f59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:189",
+    "edge_code": "H189",
+    "hex_color": "#df6dc0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:19",
+    "edge_code": "H19",
+    "hex_color": "#d765e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:190",
+    "edge_code": "H190",
+    "hex_color": "#65e7e4",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:191",
+    "edge_code": "H191",
+    "hex_color": "#efc15d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:192",
+    "edge_code": "H192",
+    "hex_color": "#ae8ae5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:193",
+    "edge_code": "H193",
+    "hex_color": "#83ec8e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:194",
+    "edge_code": "H194",
+    "hex_color": "#f27d93",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:195",
+    "edge_code": "H195",
+    "hex_color": "#a7c8ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:196",
+    "edge_code": "H196",
+    "hex_color": "#dff1a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:197",
+    "edge_code": "H197",
+    "hex_color": "#f09ef5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:198",
+    "edge_code": "H198",
+    "hex_color": "#6ddfb6",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:199",
+    "edge_code": "H199",
+    "hex_color": "#e79365",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:2",
+    "edge_code": "H2",
+    "hex_color": "#75ef5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:20",
+    "edge_code": "H20",
+    "hex_color": "#5defb2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:200",
+    "edge_code": "H200",
+    "hex_color": "#655def",
+    "label_ink": "#ffffff"
+  },
+  {
+    "source_color": "head:201",
+    "edge_code": "H201",
+    "hex_color": "#9fe58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:202",
+    "edge_code": "H202",
+    "hex_color": "#ec83ba",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:203",
+    "edge_code": "H203",
+    "hex_color": "#7ddcf2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:204",
+    "edge_code": "H204",
+    "hex_color": "#ece4a7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:205",
+    "edge_code": "H205",
+    "hex_color": "#d1a2f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:206",
+    "edge_code": "H206",
+    "hex_color": "#9ef5b9",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:207",
+    "edge_code": "H207",
+    "hex_color": "#df6f6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:208",
+    "edge_code": "H208",
+    "hex_color": "#6588e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:209",
+    "edge_code": "H209",
+    "hex_color": "#afef5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:21",
+    "edge_code": "H21",
+    "hex_color": "#e5a58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:210",
+    "edge_code": "H210",
+    "hex_color": "#e58ad8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:211",
+    "edge_code": "H211",
+    "hex_color": "#83ecdc",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:212",
+    "edge_code": "H212",
+    "hex_color": "#f2bf7d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:213",
+    "edge_code": "H213",
+    "hex_color": "#baa7ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:214",
+    "edge_code": "H214",
+    "hex_color": "#a4f1a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:22",
+    "edge_code": "H22",
+    "hex_color": "#8483ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:23",
+    "edge_code": "H23",
+    "hex_color": "#9ff27d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:24",
+    "edge_code": "H24",
+    "hex_color": "#eca7cf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:25",
+    "edge_code": "H25",
+    "hex_color": "#a2e7f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:26",
+    "edge_code": "H26",
+    "hex_color": "#f5e79e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:27",
+    "edge_code": "H27",
+    "hex_color": "#aa6ddf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:28",
+    "edge_code": "H28",
+    "hex_color": "#65e785",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:29",
+    "edge_code": "H29",
+    "hex_color": "#ef5d63",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:3",
+    "edge_code": "H3",
+    "hex_color": "#e58ab4",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:30",
+    "edge_code": "H30",
+    "hex_color": "#8aa8e5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:31",
+    "edge_code": "H31",
+    "hex_color": "#c5ec83",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:32",
+    "edge_code": "H32",
+    "hex_color": "#f27de8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:33",
+    "edge_code": "H33",
+    "hex_color": "#a7ecdd",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:34",
+    "edge_code": "H34",
+    "hex_color": "#f1c9a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:35",
+    "edge_code": "H35",
+    "hex_color": "#b09ef5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:36",
+    "edge_code": "H36",
+    "hex_color": "#76df6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:37",
+    "edge_code": "H37",
+    "hex_color": "#e76596",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:38",
+    "edge_code": "H38",
+    "hex_color": "#5dbeef",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:39",
+    "edge_code": "H39",
+    "hex_color": "#e2e58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:4",
+    "edge_code": "H4",
+    "hex_color": "#83d1ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:40",
+    "edge_code": "H40",
+    "hex_color": "#d183ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:41",
+    "edge_code": "H41",
+    "hex_color": "#7df2b2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:42",
+    "edge_code": "H42",
+    "hex_color": "#ecb2a7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:43",
+    "edge_code": "H43",
+    "hex_color": "#a2acf1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:44",
+    "edge_code": "H44",
+    "hex_color": "#c2f59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:45",
+    "edge_code": "H45",
+    "hex_color": "#df6dbe",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:46",
+    "edge_code": "H46",
+    "hex_color": "#65e7e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:47",
+    "edge_code": "H47",
+    "hex_color": "#efc45d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:48",
+    "edge_code": "H48",
+    "hex_color": "#b08ae5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:49",
+    "edge_code": "H49",
+    "hex_color": "#83ec90",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:5",
+    "edge_code": "H5",
+    "hex_color": "#f2ee7d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:50",
+    "edge_code": "H50",
+    "hex_color": "#f27d91",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:51",
+    "edge_code": "H51",
+    "hex_color": "#a7c7ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:52",
+    "edge_code": "H52",
+    "hex_color": "#ddf1a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:53",
+    "edge_code": "H53",
+    "hex_color": "#f19ef5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:54",
+    "edge_code": "H54",
+    "hex_color": "#6ddfb8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:55",
+    "edge_code": "H55",
+    "hex_color": "#e79565",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:56",
+    "edge_code": "H56",
+    "hex_color": "#685def",
+    "label_ink": "#ffffff"
+  },
+  {
+    "source_color": "head:57",
+    "edge_code": "H57",
+    "hex_color": "#9de58a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:58",
+    "edge_code": "H58",
+    "hex_color": "#ec83b8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:59",
+    "edge_code": "H59",
+    "hex_color": "#7ddaf2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:6",
+    "edge_code": "H6",
+    "hex_color": "#d5a7ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:60",
+    "edge_code": "H60",
+    "hex_color": "#ece6a7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:61",
+    "edge_code": "H61",
+    "hex_color": "#d3a2f1",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:62",
+    "edge_code": "H62",
+    "hex_color": "#9ef5ba",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:63",
+    "edge_code": "H63",
+    "hex_color": "#df716d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:64",
+    "edge_code": "H64",
+    "hex_color": "#6586e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:65",
+    "edge_code": "H65",
+    "hex_color": "#adef5d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:66",
+    "edge_code": "H66",
+    "hex_color": "#e58ad7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:67",
+    "edge_code": "H67",
+    "hex_color": "#83ecde",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:68",
+    "edge_code": "H68",
+    "hex_color": "#f2c17d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:69",
+    "edge_code": "H69",
+    "hex_color": "#bba7ec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:7",
+    "edge_code": "H7",
+    "hex_color": "#a2f1c0",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:70",
+    "edge_code": "H70",
+    "hex_color": "#a3f1a2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:71",
+    "edge_code": "H71",
+    "hex_color": "#f59eb8",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:72",
+    "edge_code": "H72",
+    "hex_color": "#6db0df",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:73",
+    "edge_code": "H73",
+    "hex_color": "#d7e765",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:74",
+    "edge_code": "H74",
+    "hex_color": "#d65def",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:75",
+    "edge_code": "H75",
+    "hex_color": "#8ae5bb",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:76",
+    "edge_code": "H76",
+    "hex_color": "#ec9d83",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:77",
+    "edge_code": "H77",
+    "hex_color": "#7d83f2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:78",
+    "edge_code": "H78",
+    "hex_color": "#beeca7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:79",
+    "edge_code": "H79",
+    "hex_color": "#f1a2d4",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:8",
+    "edge_code": "H8",
+    "hex_color": "#f5a59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:80",
+    "edge_code": "H80",
+    "hex_color": "#9eeff5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:81",
+    "edge_code": "H81",
+    "hex_color": "#dfc66d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:82",
+    "edge_code": "H82",
+    "hex_color": "#a565e7",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:83",
+    "edge_code": "H83",
+    "hex_color": "#5def7a",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:84",
+    "edge_code": "H84",
+    "hex_color": "#e58a92",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:85",
+    "edge_code": "H85",
+    "hex_color": "#83abec",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:86",
+    "edge_code": "H86",
+    "hex_color": "#ccf27d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:87",
+    "edge_code": "H87",
+    "hex_color": "#eca7e9",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:88",
+    "edge_code": "H88",
+    "hex_color": "#a2f1dc",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:89",
+    "edge_code": "H89",
+    "hex_color": "#f5c59e",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:9",
+    "edge_code": "H9",
+    "hex_color": "#6d84df",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:90",
+    "edge_code": "H90",
+    "hex_color": "#7f6ddf",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:91",
+    "edge_code": "H91",
+    "hex_color": "#76e765",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:92",
+    "edge_code": "H92",
+    "hex_color": "#ef5d9b",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:93",
+    "edge_code": "H93",
+    "hex_color": "#8acbe5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:94",
+    "edge_code": "H94",
+    "hex_color": "#eceb83",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:95",
+    "edge_code": "H95",
+    "hex_color": "#cf7df2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:96",
+    "edge_code": "H96",
+    "hex_color": "#a7ecc3",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:97",
+    "edge_code": "H97",
+    "hex_color": "#f1aba2",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:98",
+    "edge_code": "H98",
+    "hex_color": "#9eadf5",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "head:99",
+    "edge_code": "H99",
+    "hex_color": "#a2df6d",
+    "label_ink": "#000000"
+  },
+  {
+    "source_color": "init:R",
+    "edge_code": "R",
+    "hex_color": "#ffb25b",
+    "label_ink": "#13232c"
+  },
+  {
+    "source_color": "sym:0",
+    "edge_code": "0",
+    "hex_color": "#264158",
+    "label_ink": "#ffffff"
+  },
+  {
+    "source_color": "sym:1",
+    "edge_code": "1",
+    "hex_color": "#e4f5f1",
+    "label_ink": "#152a35"
+  },
+  {
+    "source_color": "wall",
+    "edge_code": "W",
+    "hex_color": "#78b9f3",
+    "label_ink": "#13232c"
+  },
+  {
+    "source_color": "wall:start",
+    "edge_code": "WS",
+    "hex_color": "#aa8ce8",
+    "label_ink": "#13232c"
+  }
+]

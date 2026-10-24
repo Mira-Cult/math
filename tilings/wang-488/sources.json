@@ -1,0 +1,24 @@
+{
+  "machines": {
+    "k215": {
+      "repository": "VladimirReshetnikov/ProveIt",
+      "commit": "440dd03ab8de73ba5ea5218c37527a6edb7e5d8b",
+      "path": "Computability/BusyBeaver/Research/ZFC/candidate-k215/k215.tm",
+      "sha256": "fdbcef0825886035c3091c8537a69535bc96f9e265f0ae45863543d40ae70090",
+      "raw_url": "https://raw.githubusercontent.com/VladimirReshetnikov/ProveIt/440dd03ab8de73ba5ea5218c37527a6edb7e5d8b/Computability/BusyBeaver/Research/ZFC/candidate-k215/k215.tm"
+    },
+    "k230": {
+      "repository": "elliotglazer/k230-rocq",
+      "commit": "a8312f0ca703bc81baac16695a437a7d3788f690",
+      "path": "machine/k230.tm",
+      "sha256": "e7ccbcec074534cfd955f0ab94d16f13594e81974074309dc2ce663b9dfd7ba8",
+      "raw_url": "https://raw.githubusercontent.com/elliotglazer/k230-rocq/a8312f0ca703bc81baac16695a437a7d3788f690/machine/k230.tm"
+    }
+  },
+  "upstream_tiles": {
+    "repository": "jconorgrogan/k230-wang-tiles",
+    "commit": "1e483bad46dd91d9ad20aa38b7f750986be043fc",
+    "scope": "seeded half-plane",
+    "count": 975
+  }
+}
