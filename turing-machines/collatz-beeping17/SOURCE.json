@@ -1,0 +1,101 @@
+{
+  "description": "Source identity and finite validation for the 17-state full-Collatz beeping machine.",
+  "prepared_date_utc": "2026-10-24",
+  "development_source": {
+    "repository": "Mira-Cult/turing-machines",
+    "private": true,
+    "commit": "116c88e23fb6580113b1f86f22816bdce316ba1f",
+    "directory": "experiments/collatz-beeping17",
+    "proof_path": "experiments/collatz-beeping17/PROOF.md",
+    "proof_git_blob": "1da403e32aeb6f78c3d386fb25dea5f53ed94b2b",
+    "url": "https://github.com/Mira-Cult/turing-machines/tree/116c88e23fb6580113b1f86f22816bdce316ba1f/experiments/collatz-beeping17",
+    "access_note": "The public article and checkers are self-contained; access to the private development repository is not needed."
+  },
+  "upstream_arithmetic": {
+    "repository": "calr3/tinycryptids",
+    "commit": "ad9c597ad728f301400325b8e2115a4bb62a25d3",
+    "directory": "weakcollatz",
+    "readme_git_blob": "e457df04b14211cf8d353c13df7fc24564cdf0c1",
+    "generator_git_blob": "753bdd1b3a76390472cc30d64b0da56671a23a89",
+    "url": "https://github.com/calr3/tinycryptids/tree/ad9c597ad728f301400325b8e2115a4bb62a25d3/weakcollatz",
+    "vendored": false
+  },
+  "machine": {
+    "working_states": 17,
+    "symbols": 2,
+    "blank_symbol": 0,
+    "start_state": "A",
+    "start_head_coordinate": 0,
+    "initial_tape": "All zero on a two-way-infinite tape indexed by the integers.",
+    "beep_state": "O",
+    "beep_event": "Every exit from O, on either read symbol.",
+    "halting_transitions": 0
+  },
+  "files": {
+    "collatz_beeping17.tm": {
+      "source_path": "experiments/collatz-beeping17/collatz_beeping17.tm",
+      "source_git_blob": "14b71b61d46826afa1660351d4840392075ff30b",
+      "source_sha256": "88f60c6fcbd05cd3ce1dd1f821c4f07133b18b1cbf5a5e44bdad245be99215f0",
+      "published_sha256": "88f60c6fcbd05cd3ce1dd1f821c4f07133b18b1cbf5a5e44bdad245be99215f0",
+      "modifications": []
+    },
+    "machine.py": {
+      "source_path": "experiments/collatz-beeping17/machine.py",
+      "source_git_blob": "da0e66be36c7065ac203b5f50adb11eb9f2a2153",
+      "source_sha256": "2cb7bcc3879eba66beaec1b3e19a886dbf730915b23fd14b3c831a26357397e8",
+      "published_sha256": "7db78e1e47bdb4deb0ffcf73a206a67d16c711594d8cfc076fc6375d49f53700",
+      "modifications": [
+        "Documentation cross-reference changed from PROOF.md to README.md; executable code unchanged."
+      ]
+    },
+    "validate.cpp": {
+      "source_path": "experiments/collatz-beeping17/validate.cpp",
+      "source_git_blob": "1a51755fbfebc0fe3993c9687a0dbc2e26e11d70",
+      "source_sha256": "15a676a4be2ca96896ef91303c47e710beb509c4d5118fcf08213466fa496aef",
+      "published_sha256": "15a676a4be2ca96896ef91303c47e710beb509c4d5118fcf08213466fa496aef",
+      "modifications": []
+    },
+    "README.md": {
+      "origin": "Prepared for this public release.",
+      "published_sha256": "cba3c78655592fd607ddd21e4953e42068044e427cd747175d3776019a901756"
+    },
+    "independent_check.py": {
+      "origin": "Prepared for this public release.",
+      "published_sha256": "9c40e6e4ac819435b5feb2e13ea6002a6c46f0796a6b6732d2557c30504f4c6a"
+    }
+  },
+  "verification": {
+    "proof_status": "Ordinary mathematical invariant proof; no Lean or Rocq certificate.",
+    "finite_checks_do_not_prove_infinite_run_theorem": true,
+    "python_original": {
+      "macro_cases": 2079,
+      "normal_and_optimized_modes": "PASS"
+    },
+    "cpp_original": {
+      "macro_cases": 20736,
+      "macro_transitions": 175723118,
+      "blank_trace_transitions": 200000000,
+      "checked_blank_macros": 712,
+      "completed_inputs": 46,
+      "beeps": 1081,
+      "current_input": 47,
+      "last_checkpoint_value": 3644,
+      "last_checkpoint_transition": 198095814,
+      "status": "PASS; original recorded outputs reproduced."
+    },
+    "independent_checker": {
+      "macro_cases": 1807,
+      "macro_transitions": 47399744,
+      "checks": [
+        "First return to A",
+        "Head at cell zero",
+        "Entire tape",
+        "Exact beep count",
+        "Exact macro length",
+        "Exact visited-cell interval"
+      ],
+      "status": "PASS"
+    }
+  },
+  "license_note": "No license choice or third-party relicensing is made by this manifest. See ../ATTRIBUTION.md."
+}

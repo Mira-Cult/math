@@ -1,5 +1,10 @@
 # Two exact binary Collatz Turing machines
 
+This page documents the Lean-certified 12-state evaluator and 16-state cycle
+detector. A separate [17-state blank-tape beeping machine](collatz-beeping17/README.md)
+has infinite beeping equivalent to the full Collatz conjecture. Its release has
+an ordinary mathematical proof and finite checks, not a Lean certificate.
+
 Both machines use one two-way infinite tape indexed by the integers, symbols
 `0` and `1`, and blank `0`. Every transition writes a bit, moves one cell
 left or right, and enters its next state. `Z` alone halts. The state counts
