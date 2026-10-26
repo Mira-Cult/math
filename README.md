@@ -18,3 +18,5 @@ and the [488-tile construction](tilings/wang-488/ATTRIBUTION.md).
 ## Research notes
 
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
+
+- [Trimmed coded folding for Euclidean GapCVP](notes/lattices/trimmed-coded-fold/README.md) (2026-10-26 research proof draft). A quantitative lattice-rank bound for ordinary reductions, with the complete applicable proof packet, reproducible finite checks, and a comparison with Fenzi–Weissenberg's preprocessing result. Not formally verified or human-expert-reviewed.

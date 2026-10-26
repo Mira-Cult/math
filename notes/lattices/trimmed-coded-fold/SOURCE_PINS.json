@@ -1,0 +1,73 @@
+{
+  "repository": "Mira-Cult/cvp",
+  "pull_request": 369,
+  "commit": "1a2a2b06e1942e6938ccb8b51a33deb43f0380bb",
+  "files": [
+    {
+      "source_path": "docs/TRIMMED_CODED_FOLD.md",
+      "public_path": "proofs/TRIMMED_CODED_FOLD.md",
+      "git_blob_sha": "ce0286892a593e2e8a6fecd7387764ffa39262e0",
+      "sha256": "c81c4c38cc5268a1f9127ec3e7a395b53919c423df6acac8667255741c68b357"
+    },
+    {
+      "source_path": "docs/TRIMMED_FOLD_PARAMETERS.md",
+      "public_path": "proofs/TRIMMED_FOLD_PARAMETERS.md",
+      "git_blob_sha": "7d60245cc9d335bb6dc26403625aea50544f5efd",
+      "sha256": "600b745bff2ec3c98986ac35dbacf7342485ce057f683f11cb0e5e8a2bf22cf8"
+    },
+    {
+      "source_path": "docs/CODED_PACKED_TWO_LEVEL_FOLD.md",
+      "public_path": "proofs/CODED_PACKED_TWO_LEVEL_FOLD.md",
+      "git_blob_sha": "ccef33140034da4a1e1720e0a2706623b6ae7d7a",
+      "sha256": "380bb8d860c6458c1ecbc4ab7d3d9bbb68c8343e58e55388908929407950e374"
+    },
+    {
+      "source_path": "docs/CODED_CHANNELS_LEMMA.md",
+      "public_path": "proofs/CODED_CHANNELS_LEMMA.md",
+      "git_blob_sha": "328a45f2d157b2cb17df280df0e8726c82deaa24",
+      "sha256": "d17d7cd4df4278afc9cfd0d04e75c3ace44fbca7f9471fcc8cd7de882099f1c8"
+    },
+    {
+      "source_path": "docs/VECTOR_HANKEL_ATOMICITY.md",
+      "public_path": "proofs/VECTOR_HANKEL_ATOMICITY.md",
+      "git_blob_sha": "352e4939a32915333a190daa81f73585cf437699",
+      "sha256": "60900f1f320728c1347449440b6fb353cac3280d17a9a45e1b19ae074a66a91f"
+    },
+    {
+      "source_path": "experiments/check_trimmed_sampling.py",
+      "public_path": "experiments/check_trimmed_sampling.py",
+      "git_blob_sha": "cb8f42813b728dbe7bdede641920bca58c1b7a41",
+      "sha256": "056bce4d00ac39179048b88409097952dfbec5ed49263e409a34fcad936530fb"
+    },
+    {
+      "source_path": "experiments/check_trimmed_fold_parameters.py",
+      "public_path": "experiments/check_trimmed_fold_parameters.py",
+      "git_blob_sha": "b8c1126c591f6c8c55899f72cef0136c86cb802d",
+      "sha256": "2939a33d9347773e752c2816ce9d819d4e59c6fc03cd4dd13186cf9845c70f3f"
+    },
+    {
+      "source_path": "experiments/vector_hankel_atomicity_check.py",
+      "public_path": "experiments/vector_hankel_atomicity_check.py",
+      "git_blob_sha": "c96802b19baf728af23ca250f0bf8c307e11ef45",
+      "sha256": "037fa68378f47f8d7a033bf00d28092a4369b2ed04ca56aefe5033c376b094e2"
+    },
+    {
+      "source_path": "experiments/check_packed_two_level_fold.py",
+      "public_path": "experiments/check_packed_two_level_fold.py",
+      "git_blob_sha": "74683ccdf1104232f290438e3009775f999ce5a1",
+      "sha256": "e37a80719a89747e8c9d8161d1c555b41de54b2faf0474c11925c0f8b64ba969"
+    },
+    {
+      "source_path": "experiments/check_coded_fold_uniform_schedule.py",
+      "public_path": "experiments/check_coded_fold_uniform_schedule.py",
+      "git_blob_sha": "d184b20afc3ce0127a72db7b84831e81870de810",
+      "sha256": "4fa52d3fe02e885daab4558c33105433e2cdbed3707880ca4abf8176a2bef709"
+    },
+    {
+      "source_path": "experiments/check_coded_channels.py",
+      "public_path": "experiments/check_coded_channels.py",
+      "git_blob_sha": "54aeab2aec4af7f3172e2e57f3b4f33abd9e3714",
+      "sha256": "38edbdee4e4cc345090f46a62b89dc0889cbadb6ae9da28442410ea5cb722a74"
+    }
+  ]
+}
