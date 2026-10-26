@@ -61,7 +61,7 @@ python3 experiments/check_coded_channels.py --output /tmp/coded_channels.json
 The two other scripts supply imported finite-field and predecessor-schedule
 routines. Generated JSON outputs are not required source files and are not
 included. None of these scripts instantiates the full asymptotic compiler.
-The parameter examples with enormous $L$ use virtual $N=2^L$, not enormous
+The parameter examples with enormous $`L`$ use virtual $`N=2^L`$, not enormous
 materialized fields or lattices.
 
 Release preparation reran all four checks successfully:
