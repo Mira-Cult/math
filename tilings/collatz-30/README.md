@@ -62,6 +62,45 @@ C(n) = n/2 when n is even, and 3n+1 when n is odd.
 It is not a statement about every tiling, about ordinary tileability alone,
 or about a finite illustrated window.
 
+## Equivalent piece-counting formulation
+
+The same theorem has the following simpler, equivalent formulation, using
+whole polygon types numbered as in the poster and the theorem's tuple table:
+
+> Full positive Collatz holds if and only if there exists a completed legal
+> whole-plane tiling containing **a copy of piece 29 (ROOT)** and
+> **infinitely many copies of piece 27 (RESET)**.
+
+There is no need to specify “on that root's spine” in this formulation:
+**once ROOT occurs, every copy of piece 27 is necessarily on its upward spine.**
+This is a corollary of the included frame rules, not a change to the shapes.
+
+**Proof of the reformulation.** The geometric converse decodes every legal
+polygon tiling to one common oriented grid. In the
+[30-type frame](manuscripts/stream-frame-v3.md#thirty-type-half-value-source),
+each spine tile forces spine tiles at every site above it: its north color is
+a parity color, and only spine tiles have a parity south color. At each of
+those heights, its east carry forces a right-infinite row of digit tiles,
+since only digits have a carry west color and every digit has a carry east
+color. Thus two spine columns are impossible: above both starting heights,
+the left column would force a digit at the right column's spine site.
+
+ROOT likewise forces a spine at every positive height above itself. Every
+spine must therefore lie in that same column. None can lie below ROOT, since
+its upward continuation would force a spine at ROOT's site. Consequently all
+spine tiles, including every piece 27, occur at positive integer heights
+`j≥1` above this ROOT. This also rules out a second ROOT: a second column
+would produce two spine columns, while a higher ROOT in the same column
+would replace a forced spine. Infinitely many copies of piece 27 therefore
+mean unbounded positive heights on the unique root's spine; conversely,
+unbounded RESET heights give infinitely many copies of piece 27. These are
+exactly the events counted by the original recurrence `R`. ∎
+
+This counts **whole pieces of type 27**, not arbitrary occurrences of the
+small 32/13 EVENT corner motif: that motif also occurs on digit piece 6.
+The statement remains existential; it does not say that every continuation
+of ROOT resets infinitely often. Quiet rooted tilings are still legal.
+
 ## Why the equivalence works
 
 The polygon contacts force a common orientation and a translated 66ℤ² grid,

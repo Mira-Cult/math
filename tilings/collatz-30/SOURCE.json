@@ -22,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "public_sha256": "3fdd1b36f61aab9089d6cd6165c4f8f1e3d59123feb50f8807394629c6dded78",
-      "adaptation": "new public release documentation"
+      "public_sha256": "7ec54279164b98650cf79cfc9251aecb1be7e86a483c5ec928b9dc1522b11247",
+      "adaptation": "new public release documentation, including a proved equivalent ROOT-plus-infinitely-many-whole-RESET-pieces formulation derived from the included frame rules"
     },
     {
       "path": "VALIDATION.md",
