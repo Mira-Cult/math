@@ -1,0 +1,188 @@
+{
+  "scientific_source": {
+    "repository": "Mira-Cult/math-wip",
+    "commit": "3a73ade5ef934e2f073b3a2d95156c5571d2011d",
+    "directory": "problems/collatz-polygons",
+    "access_note": "Private origin; all required proof and build sources are included here."
+  },
+  "selected_candidate": "parity30-profile14",
+  "review_scope": "Ordinary mathematical proof with exact finite checks; not proof-assistant-certified or externally human-expert-reviewed.",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "public_sha256": "24070ff1a8a729bb235649df86c734e4df2b50876e3ab50b77037120330efb31",
+      "adaptation": "new public release documentation"
+    },
+    {
+      "path": "PROBLEM.md",
+      "public_sha256": "860e03d62e654dd696bd1524f16e09f21c8e989a5b35f595500d0a6f793a0628",
+      "source_path": "problems/collatz-polygons/PROBLEM.md",
+      "source_sha256": "add011589e5a9ad566d356d94fcc79cf0af7a1b51777428e3361a56103d59d8b",
+      "adaptation": "public-facing links/scope only; mathematical content unchanged"
+    },
+    {
+      "path": "README.md",
+      "public_sha256": "3fdd1b36f61aab9089d6cd6165c4f8f1e3d59123feb50f8807394629c6dded78",
+      "adaptation": "new public release documentation"
+    },
+    {
+      "path": "VALIDATION.md",
+      "public_sha256": "15a2825e7d83682f46be7827fe6a3dd2311c100fcf76d8f42fed5b43b26213a5",
+      "adaptation": "new public release documentation"
+    },
+    {
+      "path": "code/arithmetic_v2.py",
+      "public_sha256": "1e7e4c4afb3343a64af3fb68ad30d96739b10705574864c68c63ed222c580cdd",
+      "source_path": "problems/collatz-polygons/code/arithmetic_v2.py",
+      "source_sha256": "1e7e4c4afb3343a64af3fb68ad30d96739b10705574864c68c63ed222c580cdd",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/arithmetic_v3.py",
+      "public_sha256": "3bde2607cecda3ebd8700925d5d473a1886b00c43ab833bd4aa761c748c02f89",
+      "source_path": "problems/collatz-polygons/code/arithmetic_v3.py",
+      "source_sha256": "3bde2607cecda3ebd8700925d5d473a1886b00c43ab833bd4aa761c748c02f89",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/build_v3.py",
+      "public_sha256": "d08bf79ca26d6f3a8d64b53125ae982f4f3669daf0d47b2a53e47f5703702017",
+      "source_path": "problems/collatz-polygons/code/build_v3.py",
+      "source_sha256": "d08bf79ca26d6f3a8d64b53125ae982f4f3669daf0d47b2a53e47f5703702017",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/geometry_v2.py",
+      "public_sha256": "02ac1c47d389c6a5f80167e8bf45a2a28388bce217819fa50809bfde5e464a4f",
+      "source_path": "problems/collatz-polygons/code/geometry_v2.py",
+      "source_sha256": "02ac1c47d389c6a5f80167e8bf45a2a28388bce217819fa50809bfde5e464a4f",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/geometry_v3.py",
+      "public_sha256": "7191004238c833b1b5b0c60ea12e8e5a1096e1de98cfa90836c599070c28b243",
+      "source_path": "problems/collatz-polygons/code/geometry_v3.py",
+      "source_sha256": "7191004238c833b1b5b0c60ea12e8e5a1096e1de98cfa90836c599070c28b243",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/scaffold_v3.py",
+      "public_sha256": "b7b055d90ad3873096b4050da40363faa1d7159f601dc32315904f04e2ddc5d3",
+      "source_path": "problems/collatz-polygons/code/scaffold_v3.py",
+      "source_sha256": "b7b055d90ad3873096b4050da40363faa1d7159f601dc32315904f04e2ddc5d3",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/spine_frame_v3.py",
+      "public_sha256": "8617169a062be9e07e5f7aaf21429c85ac7a9bb044dd22121e70e84de9d38082",
+      "source_path": "problems/collatz-polygons/code/spine_frame_v3.py",
+      "source_sha256": "8617169a062be9e07e5f7aaf21429c85ac7a9bb044dd22121e70e84de9d38082",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/test_acceptance_v3.py",
+      "public_sha256": "b4975cb7508fda8f490b33df9db244ae35abf9ba0189cf87f2e969055c3b454c",
+      "source_path": "problems/collatz-polygons/code/test_acceptance_v3.py",
+      "source_sha256": "b4975cb7508fda8f490b33df9db244ae35abf9ba0189cf87f2e969055c3b454c",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/test_arithmetic_v3.py",
+      "public_sha256": "c8926087c4ba34a8cdd33734bc9a4d99d58767fb1d5feee0d7148e435dbd8c7a",
+      "source_path": "problems/collatz-polygons/code/test_arithmetic_v3.py",
+      "source_sha256": "c8926087c4ba34a8cdd33734bc9a4d99d58767fb1d5feee0d7148e435dbd8c7a",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/test_geometry_v3.py",
+      "public_sha256": "2cb9108271602fbdf40ad45861c1f93a8ab4e61c65432d587ae6c504c53950d6",
+      "source_path": "problems/collatz-polygons/code/test_geometry_v3.py",
+      "source_sha256": "2cb9108271602fbdf40ad45861c1f93a8ab4e61c65432d587ae6c504c53950d6",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/test_scaffold_v3.py",
+      "public_sha256": "b5899519ad4d4e89620bebc71ee714f15ef2a7ced890006e43b2465ad38a4478",
+      "source_path": "problems/collatz-polygons/code/test_scaffold_v3.py",
+      "source_sha256": "b5899519ad4d4e89620bebc71ee714f15ef2a7ced890006e43b2465ad38a4478",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/test_spine_frame_v3.py",
+      "public_sha256": "2406d58dcebe26a115cad2f3c6e5d9c922a08e61fc6af408787729a7258c8016",
+      "source_path": "problems/collatz-polygons/code/test_spine_frame_v3.py",
+      "source_sha256": "2406d58dcebe26a115cad2f3c6e5d9c922a08e61fc6af408787729a7258c8016",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/verify_v3.py",
+      "public_sha256": "19c92f6965dbe55479b04508628249e35fadcb0f0d73027aa25293add39b2ef4",
+      "source_path": "problems/collatz-polygons/code/verify_v3.py",
+      "source_sha256": "19c92f6965dbe55479b04508628249e35fadcb0f0d73027aa25293add39b2ef4",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "code/verify_v3_cells.py",
+      "public_sha256": "75de621a282d531d7e22e846f0e0447340d7ae9e495283f6074c7cd7ff0d2ed7",
+      "source_path": "problems/collatz-polygons/code/verify_v3_cells.py",
+      "source_sha256": "75de621a282d531d7e22e846f0e0447340d7ae9e495283f6074c7cd7ff0d2ed7",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "inputs/observer-v3.txt",
+      "public_sha256": "8a7c4482c2536cfaa78c60f2918e466e3d3dd2fa1671990d2fe6e9707af21824",
+      "source_path": "problems/collatz-polygons/inputs/observer-v3.txt",
+      "source_sha256": "8a7c4482c2536cfaa78c60f2918e466e3d3dd2fa1671990d2fe6e9707af21824",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "inputs/parity30-wang.json",
+      "public_sha256": "5a96939fdc7f86de1171d563e37a8415b4e78a683c6cd13973bbca0889e1360f",
+      "source_path": "problems/collatz-polygons/inputs/parity30-wang.json",
+      "source_sha256": "5a96939fdc7f86de1171d563e37a8415b4e78a683c6cd13973bbca0889e1360f",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "inputs/selection-v3.json",
+      "public_sha256": "aa755d6999fd172050e56855a3c2556f9ea2ed8c6f2a65208c1884298a1c5828",
+      "source_path": "problems/collatz-polygons/inputs/selection-v3.json",
+      "source_sha256": "aa755d6999fd172050e56855a3c2556f9ea2ed8c6f2a65208c1884298a1c5828",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "manuscripts/arithmetic-v3.md",
+      "public_sha256": "7e5b04912ad4f0a3aef0e7938b3a9504b502bc6ed384df71b8561d87a9c4a872",
+      "source_path": "problems/collatz-polygons/manuscripts/arithmetic-v3.md",
+      "source_sha256": "7e5b04912ad4f0a3aef0e7938b3a9504b502bc6ed384df71b8561d87a9c4a872",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "manuscripts/geometry-v3.md",
+      "public_sha256": "d1beb9b094ee6fa87b7226354280379c1dcc44d2bb8a4321efa8c2ab2b36cdb9",
+      "source_path": "problems/collatz-polygons/manuscripts/geometry-v3.md",
+      "source_sha256": "d1beb9b094ee6fa87b7226354280379c1dcc44d2bb8a4321efa8c2ab2b36cdb9",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "manuscripts/polygon-v3-theorem.md",
+      "public_sha256": "61aaedd69cc33e142c915434fbe9f6f81a36dde39c551981698b050419c2e35f",
+      "source_path": "problems/collatz-polygons/manuscripts/polygon-v3-theorem.md",
+      "source_sha256": "87abb50b3d769c0a5de460d95953cfa982f2667fb5d65bc1e77dce771a4a9c27",
+      "adaptation": "public-facing links/scope only; mathematical content unchanged"
+    },
+    {
+      "path": "manuscripts/stream-arithmetic-v3.md",
+      "public_sha256": "f41203992786dcc3a18ca27fbdd0cdd00925e4999b84248ffee4c69dbf8b7b28",
+      "source_path": "problems/collatz-polygons/manuscripts/stream-arithmetic-v3.md",
+      "source_sha256": "f41203992786dcc3a18ca27fbdd0cdd00925e4999b84248ffee4c69dbf8b7b28",
+      "adaptation": "unchanged"
+    },
+    {
+      "path": "manuscripts/stream-frame-v3.md",
+      "public_sha256": "d1ce26181e6ff9c12740162d2d7d4adcea30bbe9e0b3b1310cf75f090466ff0d",
+      "source_path": "problems/collatz-polygons/manuscripts/stream-frame-v3.md",
+      "source_sha256": "d1ce26181e6ff9c12740162d2d7d4adcea30bbe9e0b3b1310cf75f090466ff0d",
+      "adaptation": "unchanged"
+    }
+  ]
+}

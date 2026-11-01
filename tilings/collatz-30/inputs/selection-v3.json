@@ -1,0 +1,97 @@
+{
+  "candidate": "parity30-profile14",
+  "certificate_sha256": "b32b6d91733d571f1dcef2a6b5eef9c03232275f331f30c8e1d49cc7c2120aa0",
+  "file_bytes": 10156,
+  "observer": {
+    "event": {
+      "anchor": [
+        79,
+        32
+      ],
+      "color": "h:carry:6",
+      "incoming_direction": [
+        0,
+        1
+      ],
+      "lengths": [
+        32,
+        13
+      ],
+      "matching_shape_indices": [
+        6,
+        27
+      ],
+      "outgoing_direction": [
+        -1,
+        0
+      ],
+      "patch_radius": 33,
+      "recognizes": "east source color; contextual event use is separately proved",
+      "same_neighbor_on_both_sides": true
+    },
+    "event_anchor_offset": [
+      13,
+      -34
+    ],
+    "event_column_offset": 0,
+    "event_context": "ROOT spine column",
+    "event_source_indices_in_context": [
+      27
+    ],
+    "global_formula": "exists p,u,v: root(p,u,v) and forall k>=1 exists integer j>=k: event(p+dx*u+(dy+j*L)*v,u,v)",
+    "macro_pitch": 66,
+    "root": {
+      "anchor": [
+        66,
+        66
+      ],
+      "east_color": "h:bg",
+      "incoming_direction": [
+        0,
+        1
+      ],
+      "lengths": [
+        38,
+        43
+      ],
+      "matching_shape_indices": [
+        29
+      ],
+      "north_color": "v:parity:1",
+      "outgoing_direction": [
+        -1,
+        0
+      ],
+      "patch_radius": 44,
+      "recognizes": "ordered east/north source-color pair",
+      "same_neighbor_on_both_sides": false
+    },
+    "root_index": 29
+  },
+  "observer_sha256": "8a7c4482c2536cfaa78c60f2918e466e3d3dd2fa1671990d2fe6e9707af21824",
+  "observer_spec_bytes": 1092,
+  "parameters": {
+    "H": 8,
+    "L": 66,
+    "V": 6,
+    "east_depth": 13,
+    "horizontal_length": 19,
+    "south_depth": 19,
+    "vertical_length": 25
+  },
+  "polygon_sha256": "a417e7ac065bdba092d334fce5dfe27821da15f74aa23f5f4ed4b3b7107a2d17",
+  "source_sha256": "5a96939fdc7f86de1171d563e37a8415b4e78a683c6cd13973bbca0889e1360f",
+  "summary": {
+    "coordinate_denominator": 1,
+    "max_coordinate_absolute": 79,
+    "max_sides": 14,
+    "minimum_core_area": 4170,
+    "minimum_sides": 14,
+    "shapes": 30,
+    "side_histogram": {
+      "14": 30
+    },
+    "signed_coordinate_bits": 8,
+    "total_sides": 420
+  }
+}

@@ -1,0 +1,15 @@
+Use the specified 30 polygons by translations and rotations, without reflections,
+with disjoint interiors and union R^2. Edge-to-edge placement is not required.
+Let u,v be perpendicular unit vectors with det(u,v)=1. A corner Q(a,b;p,u,v)
+means one tile has consecutive genuine sides with vertices p-a*v, p, p-b*u
+in counterclockwise boundary order, with interior angle pi/2 at p. Genuine
+means a full maximal straight side, including both endpoints. A disk of radius
+1+max(a,b) about p suffices to inspect the two sides and their maximality.
+ROOT(p,u,v) is Q(38,43;p,u,v); its two sides need not share a neighbor.
+EVENT(p,u,v) is Q(32,13;p,u,v), with one other tile sharing both relative side
+interiors. The two predicate radii are 44 and 33. Colors and labels are unused.
+R(tau) iff there exist p,u,v as above such that ROOT(p,u,v) and, for every
+integer k>=1, there exists an integer j>=k such that
+EVENT(p+13*u+(66*j-34)*v,u,v).
+The root and oriented frame are chosen before k. The fixed offset selects that
+root's spine. The observer reads no bits, carry states, integer values or paths.
