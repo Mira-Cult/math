@@ -1,10 +1,10 @@
 # What transfers from the ordinary-prime construction
 
-This audit uses the complete public [full signed-line cube proof](../../sudes-first-conjecture/prime-cube.md)
-and its [six supporting manuscripts](../../sudes-first-conjecture/cube/README.md).
+This audit uses the complete public [full signed-line cube proof](../../prime-cube.md)
+and its [six supporting manuscripts](../../cube/README.md).
 The square finite-controller and target interfaces are the public
-[finite controller](../../sudes-first-conjecture/explicit-controller.md) and
-[exact prime targets](../../sudes-first-conjecture/explicit-targets.md).
+[finite controller](../../explicit-controller.md) and
+[exact prime targets](../../explicit-targets.md).
 Exact research-source revisions and the public dependency mapping are recorded
 in [Provenance](../PROVENANCE.md). None of these earlier manuscripts is modified here.
 

@@ -203,3 +203,68 @@ The delivered source also contains complete integer-image and kernel certificate
 Finite checks do not prove the asymptotic analytic supplies, uniform packing, or the full eventual theorem. The proofs of those statements are the conventional arguments in the linked manuscripts. The publication review did not independently reprove the external analytic theorems or their computational inputs, and no end-to-end kernel formalization is claimed. The source's final remote CI was skipped rather than passed; no full-repository CI pass is asserted here.
 
 This publication makes no literature-priority, external peer-acceptance, efficient-construction, evaluated-cutoff, or growing-dimension arrangement claim. The three square manuscripts remain unchanged.
+
+
+## Explicit prime cube
+
+Manuscript V, [explicit-prime-cube.md](explicit-prime-cube.md), adds the
+explicit full signed-line cube bound $`2^{61750}`$. It preserves Manuscripts
+I–IV and the square bound $`2^{4320}`$. It asserts existence for **every odd
+order at or above the stated bound**, with exactly the initial odd-prime
+pool, all full signed lines, and no square-section primality assumption.
+
+### Source and earlier checkpoint
+
+- Optimized scientific snapshot: `c6880d03d0025b44d3c5a56bec9e80a11d38e45b`.
+- Final delivery and independent internal review records: `117c33de62d0dc24730e9e49b7991b67ef3eed5c`.
+- Earlier successful scientific checkpoint: `ad17fce4ad0605a70fdc4e04b7c842622f9f587e`, with bound $`2^{250226}`$. It remains a historical fallback, not the current cutoff. A redundant growth-deletion row originally missed a factor two; a stronger midpoint condition already implied the required inequality. The corrected replay preserves that first theorem. The final phased proof uses its own correct early invoice.
+- Qualitative cube science: `a2445962ec6e06b2a893980fb7a183057eb9bcee`, already represented by Manuscript IV.
+- Imported optimized-square science: `f519b7fd796393cd6ab202f6790fe1824e6fc22f`; review delivery `b776784e3cffc3aeeb3c3c6886516c3337a16bd1`.
+
+The readable edition publishes the complete main composition and six
+supporting manuscripts under [cube-explicit](cube-explicit/README.md).
+Existing public geometric and analytic proofs supply its explicitly linked
+imports. In particular the six reused optimized-square manuscript sources
+were compared with the recovered imported copies: their contents agree
+apart from trailing whitespace. The corrected E2 import has raw SHA-256
+`70b1e235b91885882afedd2e206df8f59e0064bf8923a6d9d3937ebe1a2a7c4d`.
+The [source map](cube-explicit/source-map.json) records source and public
+hashes. Math rendering changes replace delimiters, relation symbols,
+operator formatting and equation labels only; retained formula tokens were
+checked against their source excerpts. Recovery-only execution instructions
+and attribution bookkeeping are replaced by this record. Inactive analytic
+alternatives are not part of this publication's proof chain.
+
+### Fresh verification and review
+
+The recovered self-contained archive has SHA-256
+`09637abd8e451b8d3bf3625905c59f5a35e06efc7b252260482295b35461a79c`.
+A fresh offline replay checked all 197 member hashes and completed all 29
+recorded commands. This includes the initial checkpoint and final optimized
+composition, independent reflected-supply and analytic arithmetic oracles,
+and delivery recovery checks. Its final composition binds 73 scientific
+sources/inputs, checks 30 controller/supply interfaces, seven local analytic
+request types, nine target comparisons, and 38 relevant rejection controls.
+The delivery checker additionally passed 25 packaging negative controls and
+two synthetic dispatch checks. These are finite arithmetic and recovery
+results, not an enumeration of a cube at this astronomical order.
+
+The exact cutoff representation was independently checked to equal
+$`2^{61750}`$. All-tail justification is mathematical: pointwise ceiling
+bounds and nonnegative Laurent envelopes, together with separate analytic
+and target derivative guards. It is not inferred by sampling later orders.
+The predecessor $`61749`$ fails the selected sufficient envelope, not the
+conjecture; no optimality claim is made.
+
+A separate publication-scope review read the complete composition and its
+changed analytic, target, packing and reflected-allocation interfaces and
+found no blocking defect. The reviewer did not author those components.
+That pass did not independently reprove all classical analytic imports,
+the complete tensor proof, or signed-incidence proof. Earlier source-level
+internal reviews and the fresh replay have their own stated boundaries.
+This is a conventional mathematical proof with internal review: **not** an
+end-to-end kernel-checked theorem, external peer acceptance, or a claim that
+remote CI passed. The recorded remote CI run was skipped. Public exposition
+hashes differ from the research archive after formatting and link editing;
+its original byte-binding manifest is not claimed to verify these edited
+files. The executable recovery archive is distinct from this proof edition.

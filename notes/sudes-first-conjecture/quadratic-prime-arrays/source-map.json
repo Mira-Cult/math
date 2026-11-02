@@ -7,168 +7,168 @@
     {
       "source_path": "problems/quadratic-prime-arrays/manuscripts/analytic_inputs.md",
       "source_sha256": "478b0eea059b9d16f206b4a34c75d49dedb77d75ae425bfa7ab21bff4790394e",
-      "public_path": "notes/quadratic-prime-arrays/manuscripts/analytic_inputs.md",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/manuscripts/analytic_inputs.md",
       "public_sha256": "4a91d1c92e14a794d8608ea538ca0bbb7eaf195071335476b98f9e0d1e3e6669",
       "adaptation": "Equivalent math formatting, public dependency links, editorial provenance and cross-references; complete mathematical manuscript retained."
     },
     {
       "source_path": "problems/quadratic-prime-arrays/manuscripts/local_arithmetic.md",
       "source_sha256": "bb356d361d675fee35c7963470b60e1b69b1b2df1289d0899a820fc2121958d0",
-      "public_path": "notes/quadratic-prime-arrays/manuscripts/local_arithmetic.md",
-      "public_sha256": "56924f9dd168ae0462d45d2a0abae09613b3b27d493e0e2b288141725e54088a",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/manuscripts/local_arithmetic.md",
+      "public_sha256": "af02a38e5ff67baf2b2b1b9d1da752cb1f25dadb70282db33e3ca8ee44d9ee88",
       "adaptation": "Equivalent math formatting, public dependency links, editorial provenance and cross-references; complete mathematical manuscript retained."
     },
     {
       "source_path": "problems/quadratic-prime-arrays/manuscripts/ordinary_architecture.md",
       "source_sha256": "eccb0f82c62233cb15de54ae53670c48c3c97627549da5afc3aa685ece7101b7",
-      "public_path": "notes/quadratic-prime-arrays/manuscripts/ordinary_architecture.md",
-      "public_sha256": "1b27cd06d982c3d59c0497da2cc6bd801a05686654e108dc11a4d3b4411f1a70",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/manuscripts/ordinary_architecture.md",
+      "public_sha256": "cfbd654dfa56bc8cd528e66dc3aec51dc51cfa04b5f4b6124f2c43bf2e67f93b",
       "adaptation": "Equivalent math formatting, public dependency links, editorial provenance and cross-references; complete mathematical manuscript retained."
     },
     {
       "source_path": "problems/quadratic-prime-arrays/manuscripts/vector_controller.md",
       "source_sha256": "c5dd9cc99de4edf6b4dd6b7bc511d039828ec54f1ccf4cd7523f0997775724fb",
-      "public_path": "notes/quadratic-prime-arrays/manuscripts/vector_controller.md",
-      "public_sha256": "33dc54c71e366c736c324b593a4abfce2644e6c4f90b8b4f254210ba7c3c4b47",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/manuscripts/vector_controller.md",
+      "public_sha256": "19ecdae4af50a12f246620af2227456cfdbbcb3c5eac3472a33b97214987b827",
       "adaptation": "Equivalent math formatting, public dependency links, editorial provenance and cross-references; complete mathematical manuscript retained."
     },
     {
       "source_path": "problems/quadratic-prime-arrays/code/check_certificate.py",
       "source_sha256": "c34e7856191353bb5678fa3b4e79e6460bb2dda273e402edaf6eed13887216d5",
-      "public_path": "notes/quadratic-prime-arrays/code/check_certificate.py",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/code/check_certificate.py",
       "public_sha256": "c34e7856191353bb5678fa3b4e79e6460bb2dda273e402edaf6eed13887216d5",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/code/local_audit.py",
       "source_sha256": "78d91d3af70f63bd71a20c5141d34790f1eb12915d380cb55d33b50957bec956",
-      "public_path": "notes/quadratic-prime-arrays/code/local_audit.py",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/code/local_audit.py",
       "public_sha256": "78d91d3af70f63bd71a20c5141d34790f1eb12915d380cb55d33b50957bec956",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/code/prime_arrays.py",
       "source_sha256": "9d47ab70a7d84fc6ece4c5e014fd4c8378a8bb906d894611ef8391a59b10907a",
-      "public_path": "notes/quadratic-prime-arrays/code/prime_arrays.py",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/code/prime_arrays.py",
       "public_sha256": "9d47ab70a7d84fc6ece4c5e014fd4c8378a8bb906d894611ef8391a59b10907a",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/code/search_arrays.py",
       "source_sha256": "bfed1cf1eeea30170421d487d7ec06fe533ded40c2c0d46a5bb0a955404a31bd",
-      "public_path": "notes/quadratic-prime-arrays/code/search_arrays.py",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py",
       "public_sha256": "bfed1cf1eeea30170421d487d7ec06fe533ded40c2c0d46a5bb0a955404a31bd",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/code/vector_trade_fixture.py",
       "source_sha256": "e208b5bd6fd7707844cba7f2cfe2702dd2a01fdccf372934f76680a41057e68f",
-      "public_path": "notes/quadratic-prime-arrays/code/vector_trade_fixture.py",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/code/vector_trade_fixture.py",
       "public_sha256": "e208b5bd6fd7707844cba7f2cfe2702dd2a01fdccf372934f76680a41057e68f",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_cube1.json",
       "source_sha256": "b3dfaa54845061dc45f27532f933284cd67518466b3b3b2080d7f18625a098aa",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_cube1.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_cube1.json",
       "public_sha256": "b3dfaa54845061dc45f27532f933284cd67518466b3b3b2080d7f18625a098aa",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_cube3_obstruction.json",
       "source_sha256": "673853642c13d9bd841b452f8e2cbf2853481e3e41af202c41b0d26ed7f2ae53",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_cube3_obstruction.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_cube3_obstruction.json",
       "public_sha256": "673853642c13d9bd841b452f8e2cbf2853481e3e41af202c41b0d26ed7f2ae53",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square1.json",
       "source_sha256": "b05adb1d3f8358ee838382dfde37dd730fd49fc8bebaec72e62a9e2b207aa988",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square1.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square1.json",
       "public_sha256": "b05adb1d3f8358ee838382dfde37dd730fd49fc8bebaec72e62a9e2b207aa988",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square2_obstruction.json",
       "source_sha256": "0c40d4a0c259fa3d4e7ae6e087eae95862a5790002654e7dd329ca7a78d7ca20",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square2_obstruction.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square2_obstruction.json",
       "public_sha256": "0c40d4a0c259fa3d4e7ae6e087eae95862a5790002654e7dd329ca7a78d7ca20",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square3.json",
       "source_sha256": "7d6169ead1965833d0ea1701cc5dee165cada0aac71126bd7d39ce9793307531",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square3.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square3.json",
       "public_sha256": "7d6169ead1965833d0ea1701cc5dee165cada0aac71126bd7d39ce9793307531",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square4_obstruction.json",
       "source_sha256": "ded3b37b5bc2c51b035f0a698698b56d800f9e707490d3ebf6beac797ac23005",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square4_obstruction.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square4_obstruction.json",
       "public_sha256": "ded3b37b5bc2c51b035f0a698698b56d800f9e707490d3ebf6beac797ac23005",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square5.json",
       "source_sha256": "0c6d768ccda84c34bf803fef19f1faa2fab25b1232682d11e96e3a54db2c240a",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square5.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square5.json",
       "public_sha256": "0c6d768ccda84c34bf803fef19f1faa2fab25b1232682d11e96e3a54db2c240a",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/eisenstein_square6.json",
       "source_sha256": "887539dbe30bebedccced53479dcdb052ce43fde19e6973efca66da4ab88091b",
-      "public_path": "notes/quadratic-prime-arrays/inputs/eisenstein_square6.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_square6.json",
       "public_sha256": "887539dbe30bebedccced53479dcdb052ce43fde19e6973efca66da4ab88091b",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/gaussian_cube1.json",
       "source_sha256": "5dbdd8e680109e3d14d90f028a9afbd556c9e62d4feacce0c841dbc2557b5ecb",
-      "public_path": "notes/quadratic-prime-arrays/inputs/gaussian_cube1.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_cube1.json",
       "public_sha256": "5dbdd8e680109e3d14d90f028a9afbd556c9e62d4feacce0c841dbc2557b5ecb",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/gaussian_cube3.json",
       "source_sha256": "57570554b395523ce5c31bf5d08f8f007ac21ef0de2daee10e94d6cde0764f53",
-      "public_path": "notes/quadratic-prime-arrays/inputs/gaussian_cube3.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_cube3.json",
       "public_sha256": "57570554b395523ce5c31bf5d08f8f007ac21ef0de2daee10e94d6cde0764f53",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/gaussian_square1.json",
       "source_sha256": "33314bfde91aa654a492d6cc5266e4f88a4ed82963abdc075290a6a1a249f18a",
-      "public_path": "notes/quadratic-prime-arrays/inputs/gaussian_square1.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_square1.json",
       "public_sha256": "33314bfde91aa654a492d6cc5266e4f88a4ed82963abdc075290a6a1a249f18a",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/gaussian_square3.json",
       "source_sha256": "ea9bb3745cfb086a62240eef585fb7f73ccc8329ed1597134ec67313bd7ad9c7",
-      "public_path": "notes/quadratic-prime-arrays/inputs/gaussian_square3.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_square3.json",
       "public_sha256": "ea9bb3745cfb086a62240eef585fb7f73ccc8329ed1597134ec67313bd7ad9c7",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/gaussian_square5.json",
       "source_sha256": "010e807e8dd957bbcabbd2ede0ba68dcdef4fc959780c650191757ce3ae96782",
-      "public_path": "notes/quadratic-prime-arrays/inputs/gaussian_square5.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_square5.json",
       "public_sha256": "010e807e8dd957bbcabbd2ede0ba68dcdef4fc959780c650191757ce3ae96782",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/vector_trade_eisenstein.json",
       "source_sha256": "418a2666f190ed90ec7ba51d56665393e4867f6851f2db4ca1f0f9a5d1e2d409",
-      "public_path": "notes/quadratic-prime-arrays/inputs/vector_trade_eisenstein.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/vector_trade_eisenstein.json",
       "public_sha256": "418a2666f190ed90ec7ba51d56665393e4867f6851f2db4ca1f0f9a5d1e2d409",
       "adaptation": "unchanged"
     },
     {
       "source_path": "problems/quadratic-prime-arrays/inputs/vector_trade_gaussian.json",
       "source_sha256": "b18f02bd9634f02d97d63a42d26bd688c64a996112c7dad2fe68815cb791d895",
-      "public_path": "notes/quadratic-prime-arrays/inputs/vector_trade_gaussian.json",
+      "public_path": "notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/vector_trade_gaussian.json",
       "public_sha256": "b18f02bd9634f02d97d63a42d26bd688c64a996112c7dad2fe68815cb791d895",
       "adaptation": "unchanged"
     }

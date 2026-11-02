@@ -23,10 +23,4 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 
 - [Trimmed coded folding for Euclidean GapCVP](notes/lattices/trimmed-coded-fold/README.md) (2026-10-26 research proof draft). A quantitative lattice-rank bound for ordinary reductions, with the complete applicable proof packet, reproducible finite checks, and a comparison with Fenzi–Weissenberg's preprocessing result. Not formally verified or human-expert-reviewed.
 
-- [Sude's First Conjecture: prime-line squares with an explicit bound](notes/sudes-first-conjecture/README.md) (2026-11-02 research proof). The exact first n² odd primes admit the required arrangement for every odd n ≥ 2^4320. Includes separate manuscripts for qualitative existence, the initial explicit bound, and the optimized classical proof, with the complete numerical dependency chain. Proposed unconditional conventional proof with internal review; not formally verified or externally peer accepted. The finite range below the bound is not settled.
-
-
-
-- [Prime cubes with every full signed-line sum prime](notes/sudes-first-conjecture/prime-cube.md) (2026-11-02 research proof). Every sufficiently large odd n admits a placement of exactly the first n³ odd primes with all 3n²+6n+4 full signed-coordinate line sums prime. Includes all slice diagonals and four body diagonals; no evaluated cutoff or square-section primality claim. Conventional proof with internal review, not formally verified or externally peer accepted.
-
-- [Gaussian and Eisenstein prime squares and cubes](notes/quadratic-prime-arrays/README.md) (2026-11-02 research proof). Canonical Gaussian arrays at every sufficiently large odd order, and Eisenstein arrays at every sufficiently large integer order, including even orders and multiples of three. Complete conventional proofs, exact pools, local obstructions, finite certificates and reproducible checks; thresholds ineffective and unevaluated. Internally reviewed, not kernel-verified or externally peer accepted.
+- [Sude's First Conjecture](notes/sudes-first-conjecture/README.md)

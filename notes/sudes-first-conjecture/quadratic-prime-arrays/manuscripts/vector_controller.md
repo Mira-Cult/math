@@ -45,12 +45,12 @@ four-pair supply. Lemma T uses Kai, arXiv:2306.16983v5, Theorem12.1 with
 $`t=3,d=4`$, not a growing affine system. The arithmetic and even-order
 incidence statements are in [local_arithmetic.md](local_arithmetic.md).
 
-The geometric imports are the public [signed trades](../../sudes-first-conjecture/cube/signed_trades.md), Sections 1, 2, 4;
-[full cube composition](../../sudes-first-conjecture/prime-cube.md), Section 4;
-[axis controller](../../sudes-first-conjecture/cube/cube_controller.md), Sections 3, 4;
-and [incidence](../../sudes-first-conjecture/cube/incidence.md), the tensor-expander
+The geometric imports are the public [signed trades](../../cube/signed_trades.md), Sections 1, 2, 4;
+[full cube composition](../../prime-cube.md), Section 4;
+[axis controller](../../cube/cube_controller.md), Sections 3, 4;
+and [incidence](../../cube/incidence.md), the tensor-expander
 coefficient theorem. Square geometry uses the public
-[finite controller](../../sudes-first-conjecture/explicit-controller.md),
+[finite controller](../../explicit-controller.md),
 Section3. These are geometry and integer-flow imports only. None of their
 rational-prime distribution or scalar subset-sum conclusions is transferred.
 

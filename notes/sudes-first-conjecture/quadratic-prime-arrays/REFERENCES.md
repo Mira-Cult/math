@@ -22,16 +22,16 @@ Its Siegel step leaves the threshold ineffective.
 
 The mathematical imports are available publicly in this repository:
 
-- [Full signed-line cube composition](../sudes-first-conjecture/prime-cube.md).
-- [Signed integer incidence](../sudes-first-conjecture/cube/signed_incidence.md).
-- [Signed physical trades](../sudes-first-conjecture/cube/signed_trades.md).
-- [Axis controller](../sudes-first-conjecture/cube/cube_controller.md).
-- [Tensor incidence and bounded coefficients](../sudes-first-conjecture/cube/incidence.md).
-- [Compatible cube targets](../sudes-first-conjecture/cube/cube_targets.md) and
-  [signed targets](../sudes-first-conjecture/cube/signed_targets.md).
-- [Square finite controller](../sudes-first-conjecture/explicit-controller.md)
-  and [exact-total targets](../sudes-first-conjecture/explicit-targets.md).
-- [Degree-64 graph and expansion-eight construction](../sudes-first-conjecture/controller.md#f-independent-row-and-column-controls).
+- [Full signed-line cube composition](../prime-cube.md).
+- [Signed integer incidence](../cube/signed_incidence.md).
+- [Signed physical trades](../cube/signed_trades.md).
+- [Axis controller](../cube/cube_controller.md).
+- [Tensor incidence and bounded coefficients](../cube/incidence.md).
+- [Compatible cube targets](../cube/cube_targets.md) and
+  [signed targets](../cube/signed_targets.md).
+- [Square finite controller](../explicit-controller.md)
+  and [exact-total targets](../explicit-targets.md).
+- [Degree-64 graph and expansion-eight construction](../controller.md#f-independent-row-and-column-controls).
 
 Only the specified geometric and integer-flow interfaces transfer to the
 quadratic-ring controller. Ordinary rational-prime supplies and scalar

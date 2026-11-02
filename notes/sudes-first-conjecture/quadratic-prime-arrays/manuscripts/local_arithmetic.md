@@ -7,7 +7,7 @@ capacities have been supplied. In particular, a lift by arbitrary ring elements
 is not a permutation of the prescribed primes.
 
 The scalar geometric source is the public
-[signed-incidence manuscript](../../sudes-first-conjecture/cube/signed_incidence.md),
+[signed-incidence manuscript](../../cube/signed_incidence.md),
 Theorems SI/BC and the cuboids in equations (8)--(11). Its physical boundary
 is preserved explicitly here.
 

@@ -1,0 +1,58 @@
+[
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_optimized_cutoff.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "3cea00a278d8896ed825d73c78212cb23d00fe1b4451080188270b2056a51832",
+    "public_path": "notes/sudes-first-conjecture/explicit-prime-cube.md",
+    "public_sha256": "7be8fbea576f96c6908bbda07466b68f4efa0aea7443be1dab68279a76a9ba13",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_analytic.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "c57d4afbd28cffff33fdd68aa76d987f00b0a57b30898031d1ecea3faff4f083",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_analytic.md",
+    "public_sha256": "690eea9b0043f96f2455a304b07021fd1652266f25f634b7e133cd3525b341f5",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_controller.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "d167f7ad01f93d0384fdd41456a37f6652c2a11d831bd80f8e2f54a1343e20f6",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_controller.md",
+    "public_sha256": "b3e8af3a2f74d481081e45e28543348f119b80bffea3e32ed1109420df3dc16d",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_weighted_controller.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "46ca499ab9a8771c2ec9661d530d2263d9bbafe28797ff53872ac43a2884135d",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_weighted_controller.md",
+    "public_sha256": "acb77c92a1507381fe8f80bfe0a95b0a2b81bd69c1c98a0717e0016e920d98c9",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_reflected_supplies.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "d24d9b46024e029c2ed5523bfcc7e11a3737eafc66ce976db35ec40fdfbcbb57",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_reflected_supplies.md",
+    "public_sha256": "2d519c8c6f198313e805ae519bafba03dc66887181f5a00f1884223fc7173843",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_targets_tq.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "ae50671e9ef8790094b53cfa81f3613a3d7a289ee3d0132dd31d64f54f447c61",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_targets_tq.md",
+    "public_sha256": "f2feaadecae8d798ef1683b07a2ffe0a87351c6410d68d90064d2d93d08bde59",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/explicit_signed_targets.md",
+    "source_commit": "c6880d03d0025b44d3c5a56bec9e80a11d38e45b",
+    "source_sha256": "dcd1d2cb41ec4d69f685b6fa345ebfcf32b6221810158b74c5ea29eceabca554",
+    "public_path": "notes/sudes-first-conjecture/cube-explicit/explicit_signed_targets.md",
+    "public_sha256": "bb7e28865bbe4747cd4291578509cf5da98b3fe74489d63aed19f1969c689cfb",
+    "edits": "Renderer-safe math; public dependency links; recovery-only author/replay instructions replaced by provenance. Main historical checkpoint paragraph summarized; analytic inactive Section 7 alternatives omitted. All retained mathematical tokens checked."
+  }
+]

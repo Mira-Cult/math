@@ -4,15 +4,17 @@
 
 Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that every row, column, and both main diagonals have prime sums?
 
-The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{4320}`$**. The full conjecture for every positive odd order is still open. This index preserves the three square manuscripts and adds the full signed-line cube theorem as a fourth manuscript. The qualitative argument and the initial explicit bound remain readable in their original form.
+The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{4320}`$**. The full conjecture for every positive odd order is still open. This index preserves three square manuscripts and two cube manuscripts: the qualitative extension and its explicit cutoff. The qualitative argument and the initial explicit bound remain readable in their original form.
 
-## Four manuscripts: three square proofs and the cube extension
+## Five manuscripts: three square proofs and two cube proofs
 
 1. **[I. Eventual existence](proof.md).** Every sufficiently large odd order works. This is the original qualitative argument: it constructs a placement but does not provide an effective numerical threshold. Supporting manuscripts: [centered controller](controller.md) and [prime targets with an exact total](prime-targets.md).
 2. **[II. The initial published explicit bound](explicit-bound.md).** Every odd $`n\ge2^{2^{40}}`$ works. This separate quantitative proof replaces the ineffective analytic inputs and pays all construction costs. Supporting manuscripts: [classical prime supplies](classical-primes.md), [finite controller](explicit-controller.md), and [exact prime targets](explicit-targets.md). This manuscript is preserved as the initial public numerical result.
 3. **[III. The optimized explicit bound](optimized-bound.md).** Every odd $`n\ge2^{4320}`$ works. The improvement changes the analytic estimates, reservoir allocation, graph degree, and target window together. Its full composition and linked supporting proofs are published here.
 
 4. **[IV. The full signed-line prime cube](prime-cube.md).** For every sufficiently large odd $`n`$, exactly the first $`n^3`$ odd primes can be placed in a cube with prime sums on all $`3n^2+6n+4`$ full signed-coordinate lines: axes, both diagonals in every coordinate-parallel square slice, and the four body diagonals. The threshold is not evaluated. Its [supporting proofs](cube/README.md) establish integer compatibility, physical trades, and compatible prime targets.
+
+5. **[V. Explicit full signed-line prime cubes](explicit-prime-cube.md).** Every odd $`n\ge2^{61750}`$ works for exactly the first $`n^3`$ odd primes and all $`3n^2+6n+4`$ full signed-coordinate lines. The [complete supporting proofs](cube-explicit/README.md) supply effective logarithmic prime windows, finite packing and centering, phased reflected allocation, and compatible exact-total targets. This numerical cube bound is separate from the square bound above.
 
 These are conventional mathematical arguments with internal review and exact arithmetic checks. They are not end-to-end proof-assistant formalizations or claims of external peer acceptance. [Provenance](PROVENANCE.md) identifies the scientific snapshot, review scope, and verification limits; [References](REFERENCES.md) identifies the classical imports.
 
@@ -84,6 +86,7 @@ The [optimized composition](optimized-bound.md) supplies the exact dependency gr
 
 
 
-## Related: Gaussian and Eisenstein prime arrays
+## Gaussian and Eisenstein generalizations
 
-The [quadratic-prime-array note](../quadratic-prime-arrays/README.md) extends the geometric architecture to prime elements of the Gaussian and Eisenstein rings, with complete replacement analytic and rank-two physical-controller arguments. Gaussian arrays retain the odd-order obstruction; Eisenstein squares and full signed-line cubes exist at every sufficiently large integer order, even or odd. These are separate ineffective eventual results, not extensions of the rational-prime numerical bound.
+The [quadratic-prime-array note](quadratic-prime-arrays/README.md) extends the geometric architecture to prime elements of the Gaussian and Eisenstein rings, with complete replacement analytic and rank-two physical-controller arguments. Gaussian arrays retain the odd-order obstruction; Eisenstein squares and full signed-line cubes exist at every sufficiently large integer order, even or odd. These are separate ineffective eventual results, not extensions of the rational-prime numerical bound.
+

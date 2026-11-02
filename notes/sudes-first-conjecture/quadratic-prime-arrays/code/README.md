@@ -6,7 +6,7 @@ Use Python 3.11 or newer; the recorded run used CPython 3.12.14. All modules
 use only the standard library. From the repository root:
 
 ```sh
-python3 -B notes/quadratic-prime-arrays/code/check_certificate.py --negative-controls notes/quadratic-prime-arrays/inputs/gaussian_*.json notes/quadratic-prime-arrays/inputs/eisenstein_*.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/check_certificate.py --negative-controls notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/gaussian_*.json notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/eisenstein_*.json
 ```
 
 This independently reconstructs each prescribed pool, all deduplicated signed
@@ -17,8 +17,8 @@ the producer, numerical primality probabilities, or a SAT solver.
 The separately labeled physical-trade fixtures have a different format:
 
 ```sh
-python3 -B notes/quadratic-prime-arrays/code/vector_trade_fixture.py verify notes/quadratic-prime-arrays/inputs/vector_trade_*.json --negative-controls
-python3 -B notes/quadratic-prime-arrays/code/local_audit.py --self-test
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/vector_trade_fixture.py verify notes/sudes-first-conjecture/quadratic-prime-arrays/inputs/vector_trade_*.json --negative-controls
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/local_audit.py --self-test
 ```
 
 Do not pass `vector_trade_*.json` to the array-certificate checker. Those
@@ -52,12 +52,12 @@ search budget exhausted without a solution proves nothing. Reproduce the
 retained nontrivial successful searches (each uses seed 20261102):
 
 ```sh
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 3 --steps 20000 --restarts 10 --output /tmp/gaussian_square3.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 3 --steps 20000 --restarts 10 --output /tmp/eisenstein_square3.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 5 --steps 100000 --restarts 30 --output /tmp/gaussian_square5.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 5 --steps 100000 --restarts 30 --output /tmp/eisenstein_square5.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 6 --steps 100000 --restarts 30 --output /tmp/eisenstein_square6.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 3 --dimension 3 --steps 100000 --restarts 30 --output /tmp/gaussian_cube3.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 3 --steps 20000 --restarts 10 --output /tmp/gaussian_square3.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 3 --steps 20000 --restarts 10 --output /tmp/eisenstein_square3.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 5 --steps 100000 --restarts 30 --output /tmp/gaussian_square5.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 5 --steps 100000 --restarts 30 --output /tmp/eisenstein_square5.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 6 --steps 100000 --restarts 30 --output /tmp/eisenstein_square6.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring gaussian --n 3 --dimension 3 --steps 100000 --restarts 30 --output /tmp/gaussian_cube3.json
 ```
 
 The search metadata in every certificate records the budget, seed, restart,
@@ -94,9 +94,9 @@ The independent checker reconstructs these constraints and checks the entire
 proof, rather than trusting an `unsat` assertion or absence of a found array.
 
 ```sh
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 2 --obstruction --output /tmp/eisenstein_square2_obstruction.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 4 --obstruction --output /tmp/eisenstein_square4_obstruction.json
-python3 -B notes/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 3 --dimension 3 --obstruction --ignore-total-count --output /tmp/eisenstein_cube3_obstruction.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 2 --obstruction --output /tmp/eisenstein_square2_obstruction.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 4 --obstruction --output /tmp/eisenstein_square4_obstruction.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/search_arrays.py --ring eisenstein --n 3 --dimension 3 --obstruction --ignore-total-count --output /tmp/eisenstein_cube3_obstruction.json
 ```
 
 | Impossible instance | Plus/minus input counts | Proof nodes | Contradiction leaves | Count used? |
@@ -149,8 +149,8 @@ and digests of the fully reconstructible arrays and complete sum lists.
 The Eisenstein fixture includes the inert endpoint `11`, of norm `121`.
 
 ```sh
-python3 -B notes/quadratic-prime-arrays/code/vector_trade_fixture.py generate --ring gaussian --output /tmp/vector_trade_gaussian.json
-python3 -B notes/quadratic-prime-arrays/code/vector_trade_fixture.py generate --ring eisenstein --output /tmp/vector_trade_eisenstein.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/vector_trade_fixture.py generate --ring gaussian --output /tmp/vector_trade_gaussian.json
+python3 -B notes/sudes-first-conjecture/quadratic-prime-arrays/code/vector_trade_fixture.py generate --ring eisenstein --output /tmp/vector_trade_eisenstein.json
 ```
 
 Both regenerate byte for byte. Verification reconstructs the pool through
