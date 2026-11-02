@@ -22,3 +22,5 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
 
 - [Trimmed coded folding for Euclidean GapCVP](notes/lattices/trimmed-coded-fold/README.md) (2026-10-26 research proof draft). A quantitative lattice-rank bound for ordinary reductions, with the complete applicable proof packet, reproducible finite checks, and a comparison with Fenzi–Weissenberg's preprocessing result. Not formally verified or human-expert-reviewed.
+
+- [Sude's First Conjecture: eventual prime-line squares](notes/sudes-first-conjecture/README.md) (2026-11-02 research proof). The exact first n² odd primes admit the required arrangement for every sufficiently large odd n. Includes the complete controller and prime-target arguments; no explicit cutoff, formal verification or external peer acceptance is claimed.
