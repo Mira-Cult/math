@@ -77,7 +77,7 @@ ceiling, that
 
 ```math
 \ell\le\frac32(u-1),\qquad \log(2Y)\le\ell,
- \qquad \log x>u-1,\quad \log x<u+1<2u.              \qquad\text{(N3)}
+ \qquad \log x\gt u-1,\quad \log x\lt u+1\lt 2u.              \qquad\text{(N3)}
 ```
 
 
@@ -115,7 +115,7 @@ comparison `79999>40 L(80000)^2` and the positive derivative of
 
 
 ```math
-\log x>u-1\ge40L^2>4R_1(\log Q)^2                   \qquad\text{(AW1)}
+\log x\gt u-1\ge40L^2\gt 4R_1(\log Q)^2                   \qquad\text{(AW1)}
 ```
 
 
@@ -128,7 +128,7 @@ BMOR Proposition 1.11 and (N3) give, for every point `t` in the interval,
 
 ```math
 (1-\beta)\log t\ge\frac{40(u-1)}{\sqrt Q(\log Q)^2}
- >\frac{20}{9B^2}>\frac2{B^2}.                         \qquad\text{(AW2)}
+ \gt \frac{20}{9B^2}\gt \frac2{B^2}.                         \qquad\text{(AW2)}
 ```
 
 
@@ -176,7 +176,7 @@ It is enough to prove `4ell^4 L^2 A(u)<1`. The ceiling-free majorant is
 ```math
 11664u^{13/2}L^2e^{-\alpha\sqrt u}
  +1721250u^9L^2e^{-u}
- +17496u^6L^2e^{-u/2}<1.                               \qquad\text{(AW6)}
+ +17496u^6L^2e^{-u/2}\lt 1.                               \qquad\text{(AW6)}
 ```
 
 
@@ -220,8 +220,8 @@ The certificate checks
 
 
 ```math
-u-1>40L_1^2,\qquad
- \frac{40(u-1)}{7\sqrt u\,L_1^2}>2                    \qquad\text{(AS1)}
+u-1\gt 40L_1^2,\qquad
+ \frac{40(u-1)}{7\sqrt u\,L_1^2}\gt 2                    \qquad\text{(AS1)}
 ```
 
 

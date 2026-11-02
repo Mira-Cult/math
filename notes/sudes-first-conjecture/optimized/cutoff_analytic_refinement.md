@@ -84,7 +84,7 @@ length, then `H_0>=Q>=100000`. The exact spectral coefficient in E2.3 is
 
 ```math
 0.5001(1+2/H_0)
- +0.511(1+6/H_0+18/H_0^2+20/H_0^3)<1.012=253/250.
+ +0.511(1+6/H_0+18/H_0^2+20/H_0^3)\lt 1.012=253/250.
 ```
 
 
@@ -123,7 +123,7 @@ including all ceiling jumps,
 
 
 ```math
-\ell\le au,\quad \ell>10u/7,\quad
+\ell\le au,\quad \ell\gt 10u/7,\quad
  \log(2Y)\le\ell,\quad
  v\ge\alpha\sqrt u.                                  \qquad\text{(AL4)}
 ```
@@ -154,7 +154,7 @@ Then `log Q<=B<=L(u)`. The source-domain check at the actual endpoint is
 
 
 ```math
-U-1>4R_1 L(U)^2.                                     \qquad\text{(AL6)}
+U-1\gt 4R_1 L(U)^2.                                     \qquad\text{(AL6)}
 ```
 
 
@@ -234,7 +234,7 @@ It suffices that
 
 ```math
 \frac{2a^p u^p L(u)^2}{A-1/2}
- \left(f(u)+85000u^5e^{-u}+864u^2e^{-u/2}\right)<1.      \qquad\text{(AL11)}
+ \left(f(u)+85000u^5e^{-u}+864u^2e^{-u/2}\right)\lt 1.      \qquad\text{(AL11)}
 ```
 
 
@@ -247,7 +247,7 @@ For the first summand, `u` times its logarithmic derivative is bounded by
 
 
 ```math
-p+\frac52+\frac4{L(u)}-\frac{\alpha\sqrt u}{2}<0.
+p+\frac52+\frac4{L(u)}-\frac{\alpha\sqrt u}{2}\lt 0.
 ```
 
 

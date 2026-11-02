@@ -78,8 +78,8 @@ in this range, give
 
 
 ```math
-E\ge2v\ge8640>8192,\quad E\le4v,\quad n\ge E^{32},
- \quad 5E/4\le e\le2E,\quad E<(167/250)e.             \qquad\text{(CC2)}
+E\ge2v\ge8640\gt 8192,\quad E\le4v,\quad n\ge E^{32},
+ \quad 5E/4\le e\le2E,\quad E\lt (167/250)e.             \qquad\text{(CC2)}
 ```
 
 
@@ -91,7 +91,7 @@ comparison discarded:
 
 
 ```math
-\frac X{n^2}>\log X-\frac32>
+\frac X{n^2}\gt \log X-\frac32\gt 
  Q(E)=\frac{693E-2193}{1000}.                         \qquad\text{(CC3)}
 ```
 
@@ -135,9 +135,9 @@ with center Y, CC1 and the two mean bounds give
 
 
 ```math
-\frac3{70}X<Y<\eta X,\qquad
+\frac3{70}X\lt Y\lt \eta X,\qquad
  \eta=\frac{501}{1000}+\frac14+\frac3{28}
-      =\frac{6007}{7000}<1.                           \qquad\text{(CC5)}
+      =\frac{6007}{7000}\lt 1.                           \qquad\text{(CC5)}
 ```
 
 
@@ -165,9 +165,9 @@ ceiling estimate gives
 
 
 ```math
-h<\frac{4601289711}{12500000000}e^2
+h\lt \frac{4601289711}{12500000000}e^2
      +\frac{11239539711}{12500000000}e
-   <\frac{369}{1000}e^2,\qquad e\ge1024.              \qquad\text{(CC7)}
+   \lt \frac{369}{1000}e^2,\qquad e\ge1024.              \qquad\text{(CC7)}
 ```
 
 
@@ -224,9 +224,9 @@ stock in every matched bin/class pair, the selected invoice proves
 
 ```math
 \frac{\log(2X)B}{X}
- <0.107110942194074742946509
- <\frac3{28}-\frac1{100000},\qquad
- S\ge\frac X{100000E},\quad S^2>3117X.               \qquad\text{(CC9)}
+ \lt 0.107110942194074742946509
+ \lt \frac3{28}-\frac1{100000},\qquad
+ S\ge\frac X{100000E},\quad S^2\gt 3117X.               \qquad\text{(CC9)}
 ```
 
 
@@ -259,7 +259,7 @@ the actual degree in the centering calculation:
 
 ```math
 630\delta K+90P+10g+1+3\sqrt{n\log n}
- <\frac{2707}{125000}K.                              \qquad\text{(CC10)}
+ \lt \frac{2707}{125000}K.                              \qquad\text{(CC10)}
 ```
 
 
@@ -279,8 +279,8 @@ including every jump of `ceil(log2e)`. From CC2,
 
 
 ```math
-E^{28}>680\cdot16,\qquad
- \frac25 E^{92}>32768\cdot1370
+E^{28}\gt 680\cdot16,\qquad
+ \frac25 E^{92}\gt 32768\cdot1370
 ```
 
 
@@ -307,9 +307,9 @@ The floor in CC1 satisfies
 
 ```math
 K\ge\frac{999999}{1000000}\frac n{1308},\qquad
- \frac D{KX}<\frac{7281200}{15222207},\qquad
+ \frac D{KX}\lt \frac{7281200}{15222207},\qquad
  \frac{2707}{125000}+\frac{7281200}{15222207}
- <0.499983485627<\frac12.                            \qquad\text{(CC12)}
+ \lt 0.499983485627\lt \frac12.                            \qquad\text{(CC12)}
 ```
 
 

@@ -15,7 +15,7 @@ meanings. Suppose
 
 
 ```math
-n^2\le X\le n^3,\quad 2X/5<m<3X/5,
+n^2\le X\le n^3,\quad 2X/5\lt m\lt 3X/5,
  \qquad E\ge10000,\qquad n\ge E^{32}.              \qquad\text{(SG1)}
 ```
 
@@ -66,7 +66,7 @@ is even, phi(g) at most g/2 is at most E/2. Also
 
 
 For example the positive log series, bounded after its first term, gives
-$`\log2\le2/3+1/36<3/4`$; this proves the last comparison. The interval
+$`\log2\le2/3+1/36\lt 3/4`$; this proves the last comparison. The interval
 (X/2,X] has length X/2, so the strong count
 $`|I|/(2\varphi(g)\log(2X))`$ is at least X/(2E squared).
 The centers Y plus/minus are less than X; the macro interval length is
@@ -106,7 +106,7 @@ Also $`gM/(16X)\le1/(64E)\le1`$, and
 
 ```math
 M^2g\ge X^2/(32E^4)\ge48X,\qquad
- H^2\ge X^2/(4A^2E^4)>X\ge\lceil X/g\rceil.
+ H^2\ge X^2/(4A^2E^4)\gt X\ge\lceil X/g\rceil.
 ```
 
 
@@ -137,7 +137,7 @@ B=(128n+8)(P+7K)+4(n+1)(g/2-1).
 
 Use the prime-index logarithm from [CG1](cutoff_controller_optimization.md):
 RS62 Theorem 2 (3.4) gives
-$`X/n^2>Q(E)=(693E-2193)/1000`$ on this domain. The original
+$`X/n^2\gt Q(E)=(693E-2193)/1000`$ on this domain. The original
 coefficient 128n+8 is retained, and g at most E gives
 
 
@@ -147,7 +147,7 @@ coefficient 128n+8 is retained, and g at most E gives
  \left(128+\frac8{E^{32}}\right)
  \left(\frac{160}{E^{27}}+\frac7E\right)
  +\frac2{E^{29}}\left(1+\frac1{E^{32}}\right),\\
- \frac{E^2B}{X}&<\frac{U(E)}{Q(E)}\le\frac1A.
+ \frac{E^2B}{X}&\lt \frac{U(E)}{Q(E)}\le\frac1A.
 \end{split}                                             \qquad\text{(SG4)}
 ```
 
@@ -173,8 +173,8 @@ Substituting (SG3) into FC's original L and J gives
 
 ```math
 \begin{split}
- (4L+8)/n&\le122892/E^{29}+5376/E^3<1,\\
- 4J/n&\le1280/E^{29}+56/E^3+4/E^{31}<1.
+ (4L+8)/n&\le122892/E^{29}+5376/E^3\lt 1,\\
+ 4J/n&\le1280/E^{29}+56/E^3+4/E^{31}\lt 1.
 \end{split}                                             \qquad\text{(SG5)}
 ```
 
@@ -193,7 +193,7 @@ and using log n at most E, yields
 \frac{6000}{A}+
  \frac{576\cdot160}{(4/5)E^{26}}+
  \frac{92}{(4/5)E^{28}}+
- \frac3{(4/5)E^{12}}<\frac1{10}.                   \qquad\text{(SG6)}
+ \frac3{(4/5)E^{12}}\lt \frac1{10}.                   \qquad\text{(SG6)}
 ```
 
 
@@ -216,10 +216,10 @@ $`\log_2n\ge\tfrac13\log_2X`$. Since m is greater than 2X/5,
 
 
 ```math
-\log_2y>\tfrac43\log_2X-2
- >\tfrac43(E-1)-2,
+\log_2y\gt \tfrac43\log_2X-2
+ \gt \tfrac43(E-1)-2,
  \quad\text{and hence}\quad
- e>\tfrac43E-\tfrac{10}{3}\ge\tfrac54E.            \qquad\text{(SG7)}
+ e\gt \tfrac43E-\tfrac{10}{3}\ge\tfrac54E.            \qquad\text{(SG7)}
 ```
 
 
@@ -230,7 +230,7 @@ worst-case logarithms. Therefore
 
 ```math
 \frac{D}{KX}
- <\frac{3/5}{4/5}\left(\frac45\right)^3
+ \lt \frac{3/5}{4/5}\left(\frac45\right)^3
  =\frac{48}{125}=0.384.
 ```
 
@@ -244,7 +244,7 @@ the fourth power follow from
 
 
 ```math
-(2/5)E^{89}>2^{18},\qquad E^{28}>680\cdot16.
+(2/5)E^{89}\gt 2^{18},\qquad E^{28}\gt 680\cdot16.
 ```
 
 

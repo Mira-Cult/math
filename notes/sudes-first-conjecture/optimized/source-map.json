@@ -6,115 +6,115 @@
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_all_class_controller.md",
       "source_sha256": "c133ca06710cceafae8eb3411290f8705b6b9cf8877d6aa2f6d5c3aa9c7c0236",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_all_class_controller.md",
-      "public_sha256": "80ca06cf6f15cb06751b54f9258c7cdb3530206ff5ef842b2443e88b940a4af7"
+      "public_sha256": "d4c8d69bdf58beb3bfef4a017304d1d61803f5b01ab9fbc60fb554c9b50227ac"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_analytic_optimization.md",
       "source_sha256": "655aeeccfdf375a77ef7c8568f94aafb0892af59efcce57b61dad9fbef10873f",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_analytic_optimization.md",
-      "public_sha256": "5afcea12bb1d89e2bcadf0d92e977b1aab0614fd984f08a031aa6a35bb172f13"
+      "public_sha256": "a9f1e983173e9f68ff54eb2335682c18fd346ab43b4fc587121975f8c23bde02"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_analytic_refinement.md",
       "source_sha256": "4dd8117e71b4638c75cec1762b1afe3999f999c23dbf842c4a09c54034212262",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_analytic_refinement.md",
-      "public_sha256": "7bc0b06962ba1cc9dab42876d8c82ff884afbf7809708811b9242d3344e36fd1"
+      "public_sha256": "c76ebcc2894cfd8fa6aa6879e86b6e99aea4b2fab11b5cee1f9073e6297410a9"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_constant_campaign_theorem.md",
       "source_sha256": "5870c3611d3378cd9da9ab5ec4cfcc9d25375ef4ba2d2cb8669b6f696ca87612",
       "public_path": "notes/sudes-first-conjecture/optimized-bound.md",
-      "public_sha256": "7ae99175174a9222194881e6ebb69914b5310588e1fdc5a26c22844c6fb04df9"
+      "public_sha256": "aceaeeae1f73e6603fde5a6493bb580651bbd97bc3b2a14746ef0b5ba7e7ec1b"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_constant_window_analytic.md",
       "source_sha256": "eb9e222964affcf38076092188a72e238327877756b0a40407c0a6130c047cca",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_constant_window_analytic.md",
-      "public_sha256": "e305b94caa9f86fc93b386197149e4b9375179876fc937cef586ceb28989de2f"
+      "public_sha256": "9e6598e28ee39a38ea77e3855c1e77063276422ea26dcd1bfdcd55e64c2cbc34"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_constant_window_controller.md",
       "source_sha256": "288273f9ac228d4a91e706e8234d9c968a3bab7fd4792cd60ba8afb9c862e80a",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_constant_window_controller.md",
-      "public_sha256": "b9de5f5b91e1e174abda2b3ffadda4cf9a59b307b9ef5a90ba2e475ad4aa4e8d"
+      "public_sha256": "eab15f796a9b1c682a1165f99ab3bb29352113dfc6944c686b47a00dee26c021"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_controller_optimization.md",
       "source_sha256": "4433c169bc3a212d6eb159416791bbdd6de102ac61b00a236c589ca179388bb5",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_controller_optimization.md",
-      "public_sha256": "0a6b4ba05a7652befef4ab2aba315e3a824be4124e3efb45071882bb6ad64bd5"
+      "public_sha256": "57d89bef17c89cc800d13ba04b99cbb6021d3e00f4c6b8d402c42c69c781e0cb"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_coupled_model.md",
       "source_sha256": "3147bc9017a3e3d84f6de68c4767357f82bc8049d266f7dca4bfb7511e88ddc4",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_coupled_model.md",
-      "public_sha256": "9fa73b8404bbc786874f7b6a4a6a012ef7c420e06141222a26863b84be85f4ea"
+      "public_sha256": "bb4605178665bb61359438355be180cfcc603461de1d18229d4255523185b29d"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_degree10_graph.md",
       "source_sha256": "1c79dcbe89b80d7408720cc30dcb88bcfe1935cc875eebecc6024208f31c735a",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_degree10_graph.md",
-      "public_sha256": "dec542acfa1cd9dbfb94fa676796582e69531418efcb6ec7acd2ba132fe7e9b9"
+      "public_sha256": "83513bb3b84f90bb9e7c61191c6ec09b5e52e2d08890aeac6347956f2a0afc65"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_graph_experiment.md",
       "source_sha256": "706e6b50b904681b77c722134289deba0c8d71ffefc9aa45fb5d22a548ede7a8",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_graph_experiment.md",
-      "public_sha256": "5f299a85aa503a70d376313b9c3b2c7a89a60293d135022e74f7d077fe142e76"
+      "public_sha256": "8c322d65bba27347c8f513a56794fe4ce8fdd218a26f31948ffc8be45fc6284a"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_linear_window_analytic.md",
       "source_sha256": "53f5401c4dd0b2bf97ad5acc7c72fff732a16424c2ab64a9f31ea9abad2c7eec",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_linear_window_analytic.md",
-      "public_sha256": "a6647cb929546db8b618d8081c03ec30a31ffd5fc65dd8b6c0682cfb3e6cfdba"
+      "public_sha256": "de262861d0159ba6b8b462033498905848b44dbc834625d78cae6916eb518a2d"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_quadratic_window_analytic.md",
       "source_sha256": "bd9c4d6499e4fc0c04c58a54ff701b6e2f049338e7dd559f3beccb17dad67fac",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_quadratic_window_analytic.md",
-      "public_sha256": "c55d63ee9022a6535b35ddd826b3a7945247973dc5b5f5b204c5a630578c8be2"
+      "public_sha256": "3a3254a05242a43f29a3ac69325685af64efed2c7f92b8d8ead33108b0fa0cf2"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_reflected_bins_controller.md",
       "source_sha256": "2f3c886735ebd0f58aec5030494651463a488aa1b976993f0766f25d200ac9fe",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_reflected_bins_controller.md",
-      "public_sha256": "c01b3981633a21b49e6f9fdc033c37c2b1e175e954ad7117770cbb4d429e2857"
+      "public_sha256": "7d585f3256806935fdb5aae84138984a9c44a4114d6954c4e1652085b13a7d71"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_relaxed_height_analytic.md",
       "source_sha256": "0f48fe1ccb7cbbd81923ccd03be9186252f4b128bf6d4d1e8166674d3e11d47c",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_relaxed_height_analytic.md",
-      "public_sha256": "e44e8e8857d03ce8a9ac9e3ba4dc6495e226e6e1080f0f70b0777a37fafc60a9"
+      "public_sha256": "229d393ae34b476529c40628c32195ddfb86f7b6ff31eb30ad06abbbad35b363"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_seed_density_refinement.md",
       "source_sha256": "705575de296c62bdbb547b44a58bafb12ba75c435aeea4b522d26e7e84a77018",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_seed_density_refinement.md",
-      "public_sha256": "c0c73ea6655775fb15d250849bfabc0640912bb959160f29bcc17eb98fde32b8"
+      "public_sha256": "4129cd825e2b101eea2b0bad8f0811247177249b84b56bd2073a0445b07534d5"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_seed_optimization.md",
       "source_sha256": "b21d49365063394bbcb9c38f3937b9732de690e6c7f34d0bfebbdf1632a721c1",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_seed_optimization.md",
-      "public_sha256": "6794b25ace3d811accef4c71425f12b7aa2b6195816d34d072872853403f8bab"
+      "public_sha256": "6631b09af57290beb78bf0b066b8d60af83f9bac08429af84253e6cc87d29f10"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_small_gap_controller.md",
       "source_sha256": "58adb01b55eeb782c6c81b1999e9d8250583b1150a736b4aed867e310a76fb64",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_small_gap_controller.md",
-      "public_sha256": "7274e8614fe893f02651293ce40309dcefadc6fe295aff712801243625bfb5e8"
+      "public_sha256": "295d72f85b984f3504cae7d463dd240e7a8af3a6bddcd232987d7f70971fe8c5"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_target_optimization.md",
       "source_sha256": "5d8aebe53af395ffb5d0eb0589bc05c8b91892edae4353ae69f9f607f4f60f2e",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_target_optimization.md",
-      "public_sha256": "f384b2d7cacdffa19ca2fce424ad17f916be049b0f4804e6fb675e3327c4436e"
+      "public_sha256": "606e66f1a03a0cc7a2a5a111ee5ac093754d26ffa79e388d8055012b990ccbc5"
     },
     {
       "source_path": "problems/prime-line-sums/manuscripts/cutoff_target_seed_refinement.md",
       "source_sha256": "cb88fa9e47b08485643bcd0611f1ebf943921c54130921774ddba11f42552870",
       "public_path": "notes/sudes-first-conjecture/optimized/cutoff_target_seed_refinement.md",
-      "public_sha256": "2cc9543d5adbcc49058173756d5ccc6aba52e8e607103e27b633ab0cbb22bba0"
+      "public_sha256": "1f8b77cb011aa59ec6076dba8e5c9ad8ff70e433793b7e2c3d5cac0a633a09e7"
     }
   ],
   "review_delivery_revision": "b776784e3cffc3aeeb3c3c6886516c3337a16bd1"

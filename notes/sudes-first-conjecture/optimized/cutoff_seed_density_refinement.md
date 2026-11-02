@@ -14,8 +14,8 @@ atanh series and proves
 
 
 ```math
-\frac{6931}{10000}<\log 2<b<\frac7{10},
- \qquad \log4<\frac75.                         \qquad\text{(SD0)}
+\frac{6931}{10000}\lt \log 2\lt b\lt \frac7{10},
+ \qquad \log4\lt \frac75.                         \qquad\text{(SD0)}
 ```
 
 
@@ -57,8 +57,8 @@ Put `E_0=4096` and `t=log X`. Since `t>(E-1)log 2`, (SD0) gives
 
 ```math
 \frac{\log(X/4)}{\log X}
- >r_0:=1-\frac{7/5}{(6931/10000)(E_0-1)}
- =\frac{810527}{810927}>0.                         \qquad\text{(SD2)}
+ \gt r_0:=1-\frac{7/5}{(6931/10000)(E_0-1)}
+ =\frac{810527}{810927}\gt 0.                         \qquad\text{(SD2)}
 ```
 
 
@@ -68,12 +68,12 @@ primes in `(X/4,3X/4]` satisfies
 
 
 ```math
-M>\left(\frac34-\frac{62753}{200000r_0}\right)
+M\gt \left(\frac34-\frac{62753}{200000r_0}\right)
        \frac Xt
- >\rho_0\frac XE,
+ \gt \rho_0\frac XE,
  \qquad
  \rho_0=\frac{353454739845}{561815168996}
- >0.62912993338475.                                  \qquad\text{(SD3)}
+ \gt 0.62912993338475.                                  \qquad\text{(SD3)}
 ```
 
 
@@ -128,7 +128,7 @@ least
  -\frac{\lambda(\lambda+2/E_0)}{8192}\\
  &=\frac{41886407253843599599}
  {1873356770411576033280000}
- >0.000022359.                                       \qquad\text{(SD6)}
+ \gt 0.000022359.                                       \qquad\text{(SD6)}
 \end{split}
 ```
 
@@ -137,7 +137,7 @@ For all integer `E>=32`, `2^(E-1)/E` is increasing, and
 
 
 ```math
-\frac XE>\frac{2^{E-1}}E\ge\frac{2^{31}}{32}=2^{26}.
+\frac XE\gt \frac{2^{E-1}}E\ge\frac{2^{31}}{32}=2^{26}.
 ```
 
 
@@ -187,7 +187,7 @@ class. The size condition implies
 
 
 ```math
-D\ge512\ell^3>32\ell^2(\ell+1)
+D\ge512\ell^3\gt 32\ell^2(\ell+1)
        \ge2gL_b(L_b+1).                              \qquad\text{(TD3)}
 ```
 
@@ -213,7 +213,7 @@ Suppose a square composition independently proves
 
 
 ```math
-E<\frac{167}{250}e,\qquad e\ge1024,
+E\lt \frac{167}{250}e,\qquad e\ge1024,
 ```
 
 
@@ -223,11 +223,11 @@ and uses SD and TD with `ell=e`. Then
 ```math
 \begin{split}
  h&\le gL_b
- <\frac{159}{200}\frac{167}{250}e
+ \lt \frac{159}{200}\frac{167}{250}e
        \bigl(be+b+1\bigr)\\
  &=\frac{4601289711}{12500000000}e^2
    +\frac{11239539711}{12500000000}e
- <\boxed{\frac{369}{1000}e^2}.                       \qquad\text{(TD4)}
+ \lt \boxed{\frac{369}{1000}e^2}.                       \qquad\text{(TD4)}
 \end{split}
 ```
 

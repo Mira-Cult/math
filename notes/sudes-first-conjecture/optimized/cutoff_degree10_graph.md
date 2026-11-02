@@ -40,9 +40,9 @@ Put r=exp(1+5H(1/20))2 to the power -15/4. The exact comparison is
 
 ```math
 r^4=\exp(4)\frac{20^{20}}{19^{19}2^{15}}
- <\left(\frac{11}{4}\right)^4
+ \lt \left(\frac{11}{4}\right)^4
        \frac{20^{20}}{19^{19}2^{15}}
- <\left(\frac35\right)^4.                     \qquad\text{(G10.3)}
+ \lt \left(\frac35\right)^4.                     \qquad\text{(G10.3)}
 ```
 
 
@@ -56,7 +56,7 @@ The total bad-event probability is therefore strictly less than
 
 ```math
 \sum_{s\ge1}(3/40)^s+\sum_{s\ge3}(3/5)^s
- =\frac3{37}+\frac{27}{50}<1.                 \qquad\text{(G10.4)}
+ =\frac3{37}+\frac{27}{50}\lt 1.                 \qquad\text{(G10.4)}
 ```
 
 

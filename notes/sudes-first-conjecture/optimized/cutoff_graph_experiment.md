@@ -40,8 +40,8 @@ bound, since k/(6s) is at least 23/24. Exactly
 
 ```math
 r^4=\exp(4)\frac{24^{24}}{23^{23}2^{19}}
- <\left(\frac{11}{4}\right)^4
-   \frac{24^{24}}{23^{23}2^{19}}<\frac1{16}.
+ \lt \left(\frac{11}{4}\right)^4
+   \frac{24^{24}}{23^{23}2^{19}}\lt \frac1{16}.
                                                         \qquad\text{(G2)}
 ```
 
@@ -127,7 +127,7 @@ the scaled reservation envelope now is
 
 
 ```math
-\frac{E^2B_{12}}X<\frac{U_{12}(E)}{Q(E)},\qquad
+\frac{E^2B_{12}}X\lt \frac{U_{12}(E)}{Q(E)},\qquad
  U_{12}(E)=\left(24+\frac8{E^{32}}\right)
  \left(\frac{5120}{E^{27}}+\frac7E\right)
  +\frac{32}{E^{29}}\left(1+\frac1{E^{32}}\right).
@@ -146,7 +146,7 @@ and y greater than (2/5)nX, one obtains
 
 
 ```math
-e>\frac43E-\frac{10}{3}\ge\frac54E\quad(E\ge40).
+e\gt \frac43E-\frac{10}{3}\ge\frac54E\quad(E\ge40).
                                                         \qquad\text{(G5)}
 ```
 
@@ -156,7 +156,7 @@ n/E cubed. Consequently
 
 
 ```math
-\frac D{KX}<\frac{3/5}{4/5}\left(\frac45\right)^3
+\frac D{KX}\lt \frac{3/5}{4/5}\left(\frac45\right)^3
  =\frac{48}{125}=0.384.
 ```
 

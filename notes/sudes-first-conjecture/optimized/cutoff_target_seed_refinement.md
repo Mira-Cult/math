@@ -62,7 +62,7 @@ primes in this class. Then
 
 
 ```math
-M_0\ge\frac{D}{2gL}>1.                                \qquad\text{(TS5)}
+M_0\ge\frac{D}{2gL}\gt 1.                                \qquad\text{(TS5)}
 ```
 
 
@@ -70,7 +70,7 @@ The required strict inequality
 
 
 ```math
-D>2gL(L+1)                                             \qquad\text{(TS6)}
+D\gt 2gL(L+1)                                             \qquad\text{(TS6)}
 ```
 
 
@@ -78,7 +78,7 @@ follows from (TS1), `F>=ell`, `g<=16ell`, and `L<=ell`:
 
 
 ```math
-D\ge512\ell^3>32\ell^2(\ell+1)\ge2gL(L+1).
+D\ge512\ell^3\gt 32\ell^2(\ell+1)\ge2gL(L+1).
 ```
 
 
@@ -90,7 +90,7 @@ Among consecutive seed primes one gap h is at most
 
 ```math
 \frac{D}{2(M_0-1)}
- \le\frac{D}{2\{D/(2gL)-1\}}<g(L+1).                  \qquad\text{(TS7)}
+ \le\frac{D}{2\{D/(2gL)-1\}}\lt g(L+1).                  \qquad\text{(TS7)}
 ```
 
 
@@ -138,7 +138,7 @@ If the composition also proves `E<7ell/10`, then
 
 
 ```math
-h<\frac{49}{100}\ell^2+\frac{119}{100}\ell
+h\lt \frac{49}{100}\ell^2+\frac{119}{100}\ell
  \le\frac12\ell^2\qquad(\ell\ge119).                  \qquad\text{(TS9)}
 ```
 

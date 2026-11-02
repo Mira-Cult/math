@@ -34,28 +34,28 @@ inserted into the old PC3 statement.
 
 ## 1. The lost prime-index logarithm
 
-**CG1.** If $`X=p_{n^2+1}>\exp(3/2)`$, then
+**CG1.** If $`X=p_{n^2+1}\gt \exp(3/2)`$, then
 
 
 ```math
-\frac X{n^2}>\log X-\frac32
- >Q(E):=\frac{693E-2193}{1000}.                 \qquad\text{(CG1)}
+\frac X{n^2}\gt \log X-\frac32
+ \gt Q(E):=\frac{693E-2193}{1000}.                 \qquad\text{(CG1)}
 ```
 
 
 The first inequality is the direct rearrangement of Rosser--Schoenfeld
 (1962), Theorem 2, equation (3.4), printed p.69:
-$`\pi(x)<x/(\log x-3/2)`$` for `$`x>\exp(3/2)`$.
+$`\pi(x)\lt x/(\log x-3/2)`$` for `$`x\gt \exp(3/2)`$.
 Since $`\pi(X)=n^2+1`$, the extra 1 strengthens the bound.
-For the second inequality, $`\log X>(E-1)\log2`$, including when
+For the second inequality, $`\log X\gt (E-1)\log2`$, including when
 $`X`$ is a dyadic endpoint. Three positive terms of the elementary series
 give
 
 
 ```math
 \log2=2\sum_{j\ge0}\frac{1}{(2j+1)3^{2j+1}}
- >2\left(\frac13+\frac1{81}+\frac1{1215}\right)
- >\frac{693}{1000}.
+ \gt 2\left(\frac13+\frac1{81}+\frac1{1215}\right)
+ \gt \frac{693}{1000}.
 ```
 
 
@@ -63,7 +63,7 @@ The primary source was visually inspected at printed p.69, PDF page 6:
 [RS62 original scanned paper](https://denisevellachemla.eu/Rosser-Schoenfeld-1962.pdf).
 Its DOI is [10.1215/ijm/1255631807](https://doi.org/10.1215/ijm/1255631807).
 The already-used RS62 Corollary 1, (3.6), would give the weaker bound
-$`X/n^2>(E-1)\log2/1.25506`$. Thus the principal logarithmic gain
+$`X/n^2\gt (E-1)\log2/1.25506`$. Thus the principal logarithmic gain
 requires no modern prime-index theorem; the sharper denominator comes from
 the same primary page. The program checks the rational consequences, not
 the proof or computational inputs of RS62.
@@ -75,11 +75,11 @@ Let $`p\ge32`$ be even and suppose
 
 ```math
 n\ge E^p,\quad n^2\le X\le n^3,
- \quad 2X/5<m<3X/5.                              \qquad\text{(CG2)}
+ \quad 2X/5\lt m\lt 3X/5.                              \qquad\text{(CG2)}
 ```
 
 
-Take a positive integer $`A>24`$`, put `$`\delta=1/A`$, and set
+Take a positive integer $`A\gt 24`$`, put `$`\delta=1/A`$, and set
 
 
 ```math
@@ -144,7 +144,7 @@ All remaining prefix and seed comparisons reduce to
 ```math
 \begin{gathered}
  E^{2p-2}\ge1040,\quad gM/(16X)\le1/(128E)\le1,\\
- E^{2p-4}\ge1572864,\quad E^{2p-4}>(128A)^2,\\
+ E^{2p-4}\ge1572864,\quad E^{2p-4}\gt (128A)^2,\\
  E^{2p-3}\ge4096,\quad E^{p-5}\ge213909504.
                                                         \qquad\text{(CG5)}
 \end{gathered}
@@ -152,7 +152,7 @@ All remaining prefix and seed comparisons reduce to
 
 
 These prove $`sg\le X`$`, `$`M^2g\ge48X`$,
-$`H^2>X\ge\lceil X/g\rceil`$, and seed demand
+$`H^2\gt X\ge\lceil X/g\rceil`$, and seed demand
 $`(64n+4)s\le52224nE^2\le X/(4096E^3)`$.
 The seed floor loses at most a factor two. Every ordinary seed and both
 physical pairs in each diagonal seed group are included.
@@ -186,7 +186,7 @@ negative. CG1 now yields the sufficient depletion inequality
 
 
 ```math
-\boxed{\frac{E^2B}{X}<\frac{U(E)}{Q(E)}
+\boxed{\frac{E^2B}{X}\lt \frac{U(E)}{Q(E)}
        \le\frac1{64A}.}                              \qquad\text{(CG7)}
 ```
 
@@ -205,7 +205,7 @@ The exact-pool occupancy condition requires a separate check:
 
 
 ```math
-B/n^2\le U(E)/E^2<1/2.                            \qquad\text{(CG8)}
+B/n^2\le U(E)/E^2\lt 1/2.                            \qquad\text{(CG8)}
 ```
 
 
@@ -221,8 +221,8 @@ from
 
 ```math
 \begin{split}
- (4L+8)/n&\le3932360/E^{p-3}+5376c/E^k<1,\\
- 4J/n&\le40960/E^{p-3}+56c/E^k+64/E^{p-1}<1.
+ (4L+8)/n&\le3932360/E^{p-3}+5376c/E^k\lt 1,\\
+ 4J/n&\le40960/E^{p-3}+56c/E^k+64/E^{p-1}\lt 1.
 \end{split}                                             \qquad\text{(CG9)}
 ```
 
@@ -236,7 +236,7 @@ Dividing FC's complete centering invoice by K gives
 \boxed{\frac{6000}{A}
  +\frac{576\cdot5120}{bE^{p-k-3}}
  +\frac{242}{bE^{p-k-1}}
- +\frac3{bE^{p/2-k-1}}<\frac1{10}.}                \qquad\text{(CG10)}
+ +\frac3{bE^{p/2-k-1}}\lt \frac1{10}.}                \qquad\text{(CG10)}
 ```
 
 
@@ -245,7 +245,7 @@ $`\sqrt E\le E`$`, and `$`\sqrt n\ge E^{p/2}`$.
 The residue numerator uses $`10g+82\le242E`$. Thus every term, including
 prefixes, midpoint width, residue repair, and random-completion fluctuation,
 is included. The endpoint comparisons
-$`3/20-1/A>2^{-32}`$` and `$`17/20+1/A<1`$ place the two intervals in
+$`3/20-1/A\gt 2^{-32}`$` and `$`17/20+1/A\lt 1`$ place the two intervals in
 $`(1,X)`$`, once `$`X\ge2^{32}`$.
 
 The bounded-degree graph, cut expansion 8, routing capacities, disjoint
@@ -255,13 +255,13 @@ parameter, with no infrastructure sharing or reuse of entry positions.
 
 ### Target fit
 
-From (CG2), $`X<y\le nX\le X^{3/2}`$` and hence `$`E\le e\le2E`$.
+From (CG2), $`X\lt y\le nX\le X^{3/2}`$` and hence `$`E\le e\le2E`$.
 The old finite target lemma's conditions already follow from
 
 
 ```math
-E^{p-11}>54000\,2^{11},\qquad
- (2/5)E^{3p-15}>2^{35},\qquad E^4\ge4.              \qquad\text{(CG11)}
+E^{p-11}\gt 54000\,2^{11},\qquad
+ (2/5)E^{3p-15}\gt 2^{35},\qquad E^4\ge4.              \qquad\text{(CG11)}
 ```
 
 
@@ -305,8 +305,8 @@ At the fourth endpoint, $`U/Q`$ is enclosed by
 
 ```math
 0.000000037658289108127213
- < U(4096)/Q(4096)
- <0.000000037658289108127214,
+ \lt  U(4096)/Q(4096)
+ \lt 0.000000037658289108127214,
 ```
 
 
@@ -327,9 +327,9 @@ separately at each n and E.
 For example, the smaller-K corollary's purely combinatorial domain follows
 from $`n\ge2^{2048}`$, provided its index and mean assumptions hold:
 writing $`v=\log_2n`$`, `$`2v\le E\le3v+1\le4v`$.
-At $`v=2048`$`, `$`v>32\log_2(4v)=416`$, and
+At $`v=2048`$`, `$`v\gt 32\log_2(4v)=416`$, and
 $`v-32\log_2(4v)`$ is increasing thereafter because
-$`1-32/(v\log2)>0`$`. This proves `$`n\ge E^{32}`$ across every ceiling
+$`1-32/(v\log2)\gt 0`$`. This proves `$`n\ge E^{32}`$ across every ceiling
 jump. The analytic scale thresholds can be much larger; $`2^{2048}`$
 is not presented as a cutoff for the conjecture.
 

@@ -96,7 +96,7 @@ The low-zero integral is at most
 ```math
 \frac1{2\pi}\int_1^{\mathcal H}
      t^{-1}e^{-\nu^2/\log(Qt)}\log(Qt)\,dt
- <\frac{\nu e^{-\nu}}{2\pi}.                         \qquad\text{(CW3)}
+ \lt \frac{\nu e^{-\nu}}{2\pi}.                         \qquad\text{(CW3)}
 ```
 
 
@@ -134,9 +134,9 @@ low- and high-zero coefficients are consequently less than, respectively,
 
 
 ```math
-\frac1{2(3.14159)}+12\cdot10^{-6}<0.159168,
+\frac1{2(3.14159)}+12\cdot10^{-6}\lt 0.159168,
  \qquad
- \frac{1+1/46}{2(3.14159)}+11\cdot10^{-6}<0.162628.
+ \frac{1+1/46}{2(3.14159)}+11\cdot10^{-6}\lt 0.162628.
 ```
 
 
@@ -147,7 +147,7 @@ The smoothing factors at `mathcal H>=100000` give
 \begin{split}
  &0.159168(1+2/\mathcal H)\\
  &\quad+0.162628(1+6/\mathcal H+18/\mathcal H^2+20/\mathcal H^3)
- <\boxed{0.32181}.                                   \qquad\text{(CW4)}
+ \lt \boxed{0.32181}.                                   \qquad\text{(CW4)}
  \end{split}
 ```
 
@@ -165,7 +165,7 @@ If an exceptional zero exists, let `epsilon=chi_beta(a)` and write
 
 
 ```math
-0<M'(t)=\frac{1-t^{\beta-1}}{\varphi(Q)}<\frac1{\varphi(Q)}.
+0\lt M'(t)=\frac{1-t^{\beta-1}}{\varphi(Q)}\lt \frac1{\varphi(Q)}.
 ```
 
 
@@ -233,7 +233,7 @@ continuous envelope
 
 
 ```math
-Q<Q_s(u)=100000+au.                                  \qquad\text{(CW7)}
+Q\lt Q_s(u)=100000+au.                                  \qquad\text{(CW7)}
 ```
 
 
@@ -248,7 +248,7 @@ Fix `U=8990`, `d=1370`, and `C=369/1000`. The certificate encloses
 
 
 ```math
-10u/7<\ell\le au,\qquad \log(2Y)\le\ell.
+10u/7\lt \ell\le au,\qquad \log(2Y)\le\ell.
 ```
 
 
@@ -278,7 +278,7 @@ We have `b+c<=c_yY` and `log Q<=B<=L(u)`. The new source domain is
 
 
 ```math
-U-1>R[L(U)+\log100000]^2.                             \qquad\text{(CW8)}
+U-1\gt R[L(U)+\log100000]^2.                             \qquad\text{(CW8)}
 ```
 
 
@@ -320,7 +320,7 @@ The nonspectral envelope follows from the same original remainders,
 
 ```math
 \frac{2dL(U)^2}{A-1/2}\,[f(U)+r(U)]
- <\boxed{0.999606454099}<1.                            \qquad\text{(CW11)}
+ \lt \boxed{0.999606454099}\lt 1.                            \qquad\text{(CW11)}
 ```
 
 
@@ -338,7 +338,7 @@ satisfy the original E2 source domain and
 
 
 ```math
-\frac{40(u-1)}{\sqrt{Q_s(u)}\log^2Q_s(u)}>2.
+\frac{40(u-1)}{\sqrt{Q_s(u)}\log^2Q_s(u)}\gt 2.
 ```
 
 
@@ -377,7 +377,7 @@ that `2eta A_bin[f_s(u)+r(u)]<1`. Its exact upper bound at the base is
 
 
 ```math
-\boxed{0.999206400830}<1.                             \qquad\text{(CW12)}
+\boxed{0.999206400830}\lt 1.                             \qquad\text{(CW12)}
 ```
 
 
@@ -393,7 +393,7 @@ odd primes, and put `m=T/n^2`. If `log X>=1000`, then
 
 
 ```math
-\boxed{m<\frac{501}{1000}X}.                         \qquad\text{(MR1)}
+\boxed{m\lt \frac{501}{1000}X}.                         \qquad\text{(MR1)}
 ```
 
 
@@ -422,7 +422,7 @@ The sign is essential when using `N<X/(u-3/2)`. Consequently
 \begin{split}
  \frac mX
  &=1-\frac{I-X+2}{NX}\\
- &<\frac12+\frac3{4u}+(u+1/2)e^{-u}.                  \qquad\text{(MR2)}
+ &\lt \frac12+\frac3{4u}+(u+1/2)e^{-u}.                  \qquad\text{(MR2)}
  \end{split}
 ```
 

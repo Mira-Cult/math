@@ -24,7 +24,7 @@ half-open bins
 
 ```math
 A_j=(a_j,a_j+2\delta X],\quad
- a_j=m-X/4-wX+2j\delta X,\quad0\le j<N.
+ a_j=m-X/4-wX+2j\delta X,\quad0\le j\lt N.
 ```
 
 
@@ -136,7 +136,7 @@ Assume the bands lie inside (1,X), w at least delta, 0<delta<1/24, and
 
 
 ```math
-7(1/2-2w)\ge2,\qquad1/2+2w<1.                \qquad\text{(RB8)}
+7(1/2-2w)\ge2,\qquad1/2+2w\lt 1.                \qquad\text{(RB8)}
 ```
 
 
@@ -146,9 +146,9 @@ Also retain all of FC's numerical hypotheses with B from (RB7), namely
 ```math
 \begin{gathered}
  X\ge g,\quad sg\le X,\quad gM\le16X,
- \quad M^2g\ge48X,\quad H^2>\lceil X/g\rceil,\\
- 2B\le n^2,\quad n>4J,\quad n>4L+8,\quad KX\ge2g,\\
- 6000\delta K+576P+10g+82+3\sqrt{n\log n}<K/10.
+ \quad M^2g\ge48X,\quad H^2\gt \lceil X/g\rceil,\\
+ 2B\le n^2,\quad n\gt 4J,\quad n\gt 4L+8,\quad KX\ge2g,\\
+ 6000\delta K+576P+10g+82+3\sqrt{n\log n}\lt K/10.
                                                         \qquad\text{(RB9)}
 \end{gathered}
 ```
@@ -314,7 +314,7 @@ Theorem 2, inequality (3.4), gives
 
 
 ```math
-\frac X{n^2}>Q(E):=\frac{693E-2193}{1000}>0.     \qquad\text{(RB12)}
+\frac X{n^2}\gt Q(E):=\frac{693E-2193}{1000}\gt 0.     \qquad\text{(RB12)}
 ```
 
 
@@ -338,9 +338,9 @@ The exact entry cap, including the +8 and n+1 terms, gives
 
 
 ```math
-\frac{E^2B_0}{X}<\frac{U_0(E)}{Q(E)}\le\frac1A,
+\frac{E^2B_0}{X}\lt \frac{U_0(E)}{Q(E)}\le\frac1A,
  \qquad
- \frac{EB}{X}<\frac{V(E)}{Q(E)}\le\frac{91}{1000}.
+ \frac{EB}{X}\lt \frac{V(E)}{Q(E)}\le\frac{91}{1000}.
                                                         \qquad\text{(RB14)}
 ```
 
@@ -366,10 +366,10 @@ The original conservative placement comparisons become
 
 ```math
 \frac{4L+8}{n}\le\frac{122892}{E^{29}}
-                  +\frac{5376(101/100)}E<1,
+                  +\frac{5376(101/100)}E\lt 1,
  \qquad
  \frac{4J}{n}\le\frac{1280}{E^{29}}
-                  +\frac{56(101/100)}E+\frac4{E^{31}}<1.
+                  +\frac{56(101/100)}E+\frac4{E^{31}}\lt 1.
                                                         \qquad\text{(RB16)}
 ```
 
@@ -382,7 +382,7 @@ K at least bn/E. The centering invoice divided by K is bounded by
 \frac{6000}A+
  \frac{576\cdot160}{bE^{28}}+
  \frac{92}{bE^{30}}+
- \frac3{bE^{14}}<\frac1{10}.                    \qquad\text{(RB17)}
+ \frac3{bE^{14}}\lt \frac1{10}.                    \qquad\text{(RB17)}
 ```
 
 
@@ -412,7 +412,7 @@ n at least 64. With v=log2 n it implies
 
 
 ```math
-E<2v+\log_2v+3,\qquad e>3v-2.
+E\lt 2v+\log_2v+3,\qquad e\gt 3v-2.
 ```
 
 
@@ -421,7 +421,7 @@ For v at least 4096,
 
 ```math
 \frac{167}{250}(3v-2)-(2v+\log_2v+3)
- =\frac v{250}-\log_2v-\frac{542}{125}>0.       \qquad\text{(RB18)}
+ =\frac v{250}-\log_2v-\frac{542}{125}\gt 0.       \qquad\text{(RB18)}
 ```
 
 
@@ -434,8 +434,8 @@ Using m<3X/5, K at least bn/E and D=y/e now gives
 
 
 ```math
-\frac D{KX}<\frac{(3/5)(167/250)}{1009/1000}
- =\frac{2004}{5045}<\frac25.                    \qquad\text{(RB19)}
+\frac D{KX}\lt \frac{(3/5)(167/250)}{1009/1000}
+ =\frac{2004}{5045}\lt \frac25.                    \qquad\text{(RB19)}
 ```
 
 
@@ -450,7 +450,7 @@ fourth follow from e at most 2E, n at least E to the power 32 and
 
 
 ```math
-E^{28}>680\cdot16,\qquad (2/5)E^{91}>2^{16}.
+E^{28}\gt 680\cdot16,\qquad (2/5)E^{91}\gt 2^{16}.
 ```
 
 

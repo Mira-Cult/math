@@ -194,7 +194,7 @@ Its distance from the controlled midpoint is at most
 
 
 ```math
-D+PD/2+JD/4 < JD/2\le R_{\rm tot}/2,                  \qquad\text{(TQ.11)}
+D+PD/2+JD/4 \lt  JD/2\le R_{\rm tot}/2,                  \qquad\text{(TQ.11)}
 ```
 
 

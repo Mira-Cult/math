@@ -74,9 +74,9 @@ The exact certificate verifies anew, at this smaller base, all of
 
 
 ```math
-\ell\le au,\quad \ell>10u/7,\quad
- R_1\alpha^2<1-1/U,\quad
- 2(1+U^{-2})<c_y,
+\ell\le au,\quad \ell\gt 10u/7,\quad
+ R_1\alpha^2\lt 1-1/U,\quad
+ 2(1+U^{-2})\lt c_y,
 ```
 
 
@@ -124,7 +124,7 @@ The necessary comparison is exactly the larger-window version of AL11:
 
 ```math
 \frac{2a^2u^2L(u)^2}{A-1/2}
- \left(f(u)+85000u^5e^{-u}+864u^2e^{-u/2}\right)<1.      \qquad\text{(AQ4)}
+ \left(f(u)+85000u^5e^{-u}+864u^2e^{-u/2}\right)\lt 1.      \qquad\text{(AQ4)}
 ```
 
 

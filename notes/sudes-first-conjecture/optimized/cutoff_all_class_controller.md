@@ -79,7 +79,7 @@ Assume:
 2. It has at least B0+M primes in class a.
 3. Each macro interval has at least W primes in **every** reduced class
    modulo g, where $`W\ge B_0+H`$.
-4. $`S_0:=\varphi(g)W-B>0`$` and `$`S_0^2>X`$.
+4. $`S_0:=\varphi(g)W-B\gt 0`$` and `$`S_0^2\gt X`$.
 
 Keep FC's finite inequalities, including
 
@@ -88,9 +88,9 @@ Keep FC's finite inequalities, including
 \begin{gathered}
  X\ge g,\quad I_-\cup I_+\subset(1,X),\quad sg\le X,
  \quad gM\le16X,\\
- M^2g\ge48X,\quad H^2>\lceil X/g\rceil,\quad 2B\le n^2,\\
- n>4J,\quad n>4L+8,\quad KX\ge2g,\\
- 6000\delta K+576P+10g+82+3\sqrt{n\log n}<K/10.
+ M^2g\ge48X,\quad H^2\gt \lceil X/g\rceil,\quad 2B\le n^2,\\
+ n\gt 4J,\quad n\gt 4L+8,\quad KX\ge2g,\\
+ 6000\delta K+576P+10g+82+3\sqrt{n\log n}\lt K/10.
 \end{gathered}                                      \qquad\text{(AC4)}
 ```
 
@@ -188,7 +188,7 @@ Suppose the exact pool has
 
 
 ```math
-n^2\le X\le n^3,\quad 2X/5<m<3X/5,
+n^2\le X\le n^3,\quad 2X/5\lt m\lt 3X/5,
  \qquad E\ge16384,\qquad n\ge E^{32}.
 ```
 
@@ -237,9 +237,9 @@ The prime-index logarithm gives the two different phase invoices
 
 
 ```math
-\frac{E^2B_0}{X}<\frac{U_0(E)}{Q(E)}\le\frac1A,
+\frac{E^2B_0}{X}\lt \frac{U_0(E)}{Q(E)}\le\frac1A,
  \qquad
- \frac{EB}{X}<\frac{V(E)}{Q(E)}\le\frac1{2A}.       \qquad\text{(AC6)}
+ \frac{EB}{X}\lt \frac{V(E)}{Q(E)}\le\frac1{2A}.       \qquad\text{(AC6)}
 ```
 
 
@@ -249,7 +249,7 @@ stock. The second gives
 
 
 ```math
-S_0=\varphi(g)W-B\ge X/(2AE),\qquad S_0^2>X,
+S_0=\varphi(g)W-B\ge X/(2AE),\qquad S_0^2\gt X,
 ```
 
 
@@ -263,8 +263,8 @@ For the enlarged K, the original placement comparisons become
 
 
 ```math
-(4L+8)/n\le122892/E^{29}+5376/E^2<1,
- \qquad4J/n\le1280/E^{29}+56/E^2+4/E^{31}<1.
+(4L+8)/n\le122892/E^{29}+5376/E^2\lt 1,
+ \qquad4J/n\le1280/E^{29}+56/E^2+4/E^{31}\lt 1.
 ```
 
 
@@ -276,7 +276,7 @@ $`K\ge(49/50)n/E^2`$. The full centering invoice divided by K is
 \frac{6000}{A}+
  \frac{576\cdot160}{(49/50)E^{27}}+
  \frac{92}{(49/50)E^{29}}+
- \frac3{(49/50)E^{13}}<\frac1{10}.                 \qquad\text{(AC7)}
+ \frac3{(49/50)E^{13}}\lt \frac1{10}.                 \qquad\text{(AC7)}
 ```
 
 
@@ -291,15 +291,15 @@ The already-proved pointwise ceiling coupling e greater than or equal to
 
 ```math
 \frac D{KX}
- <\frac{3/5}{49/50}\left(\frac45\right)^2
- =\frac{96}{245}<\frac25.
+ \lt \frac{3/5}{49/50}\left(\frac45\right)^2
+ =\frac{96}{245}\lt \frac25.
 ```
 
 
 The strict baseline radius adds less than KX/10, so every target remains
 inside AFC's KX/2 box. The optimized target size conditions for density
 cost at most 4e squared follow from
-$`(2/5)E^{90}>2^{17}`$` and `$`E^{28}>680\cdot16`$.
+$`(2/5)E^{90}\gt 2^{17}`$` and `$`E^{28}\gt 680\cdot16`$.
 The target supply and exact-total lemmas are still required independently.
 
 ## 4. Infinite tail, controls, and limits

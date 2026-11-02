@@ -41,7 +41,7 @@ raw bin supply W in every reduced class, and the aggregate stock condition
 
 
 ```math
-S_0=N\varphi(g)W-B>0,\qquad S_0^2>NX.         \qquad\text{(CW2)}
+S_0=N\varphi(g)W-B\gt 0,\qquad S_0^2\gt NX.         \qquad\text{(CW2)}
 ```
 
 
@@ -55,7 +55,7 @@ and H squared greater than ceil(X/g). Assume also
 
 
 ```math
-2B\le n^2,\qquad n>4J,\qquad n>4L_d+8,
+2B\le n^2,\qquad n\gt 4J,\qquad n\gt 4L_d+8,
  \qquad KX\ge2g.                               \qquad\text{(CW3)}
 ```
 
@@ -66,7 +66,7 @@ hypothesis is
 
 ```math
 63d\delta K+9dP+10g+\frac{3d}{2}-14
-       +3\sqrt{n\log n}<c_0K.                 \qquad\text{(CW4)}
+       +3\sqrt{n\log n}\lt c_0K.                 \qquad\text{(CW4)}
 ```
 
 
@@ -199,7 +199,7 @@ and
 
 
 ```math
-2X/5<m<\mu X,\qquad 2/5<\mu\le3/5.           \qquad\text{(CW6)}
+2X/5\lt m\lt \mu X,\qquad 2/5\lt \mu\le3/5.           \qquad\text{(CW6)}
 ```
 
 
@@ -239,7 +239,7 @@ The bin centers satisfy
 
 
 ```math
-(3/20-w)X<Y<(\mu+1/4+w)X=\eta X.
+(3/20-w)X\lt Y\lt (\mu+1/4+w)X=\eta X.
 ```
 
 
@@ -281,7 +281,7 @@ sufficient that
 ```math
 \frac{U_0(E)}{Q(E)}\le\frac1A,\qquad
  \frac{V(E)}E\frac{b_2(E+1)}{Q(E)}\le w-\frac1S,\qquad
- \frac{V(E)}E<\frac12.                         \qquad\text{(CW9)}
+ \frac{V(E)}E\lt \frac12.                         \qquad\text{(CW9)}
 ```
 
 
@@ -301,12 +301,12 @@ bn/C. The actual placement, rectangle, capacity and centering checks are
 
 ```math
 \begin{gathered}
- \frac{1920d}{E^{29}}+\frac{84d}{C}+\frac{12}{E^{31}}<1,
- \qquad\frac{1280}{E^{29}}+\frac{56}{C}+\frac4{E^{31}}<1,
+ \frac{1920d}{E^{29}}+\frac{84d}{C}+\frac{12}{E^{31}}\lt 1,
+ \qquad\frac{1280}{E^{29}}+\frac{56}{C}+\frac4{E^{31}}\lt 1,
  \qquad bE^{95}\ge2C,\\
  \frac{63d}{A}+\frac{9d\cdot160C}{bE^{29}}
  +\frac{(10E+3d/2-14)C}{bE^{32}}
- +\frac{3C}{bE^{15}}<c_0.                      \qquad\text{(CW10)}
+ +\frac{3C}{bE^{15}}\lt c_0.                      \qquad\text{(CW10)}
 \end{gathered}
 ```
 
@@ -320,7 +320,7 @@ The target displacement satisfies
 
 
 ```math
-\frac D{KX}<\frac{\mu C}{bR}.                  \qquad\text{(CW11)}
+\frac D{KX}\lt \frac{\mu C}{bR}.                  \qquad\text{(CW11)}
 ```
 
 
@@ -334,7 +334,7 @@ and D at least 2048e to the fourth follow from e at most 2E and
 
 
 ```math
-E^{28}>680\cdot16,\qquad (2/5)E^{92}>32768R.
+E^{28}\gt 680\cdot16,\qquad (2/5)E^{92}\gt 32768R.
 ```
 
 

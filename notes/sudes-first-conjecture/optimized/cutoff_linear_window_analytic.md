@@ -117,7 +117,7 @@ scales, pointwise including every ceiling jump,
 
 
 ```math
-10u/7<\ell\le au,\qquad \log(2Y)\le\ell.
+10u/7\lt \ell\le au,\qquad \log(2Y)\le\ell.
 ```
 
 
@@ -157,7 +157,7 @@ Then `Q<=C ell^2<=Ca^2u^2`, including the small-modulus lifts, and
 
 
 ```math
-U-1>4R_1 L(U)^2,                                     \qquad\text{(AT4)}
+U-1\gt 4R_1 L(U)^2,                                     \qquad\text{(AT4)}
 ```
 
 
@@ -202,7 +202,7 @@ The exact certificate proves
 
 ```math
 \frac{2auL(u)^2}{A-1/2}\,[f(u)+r(u)]
- <0.107045145685<1\quad\hbox{at }u=U.                  \qquad\text{(AT8)}
+ \lt 0.107045145685\lt 1\quad\hbox{at }u=U.                  \qquad\text{(AT8)}
 ```
 
 
@@ -249,8 +249,8 @@ the lift threshold. At the base the certificate proves
 
 
 ```math
-U_s-1>4R_1L_s(U_s)^2,\qquad
- \frac{40(U_s-1)}{\sqrt{Q_*(U_s)}L_s(U_s)^2}>2.         \qquad\text{(ASs2)}
+U_s-1\gt 4R_1L_s(U_s)^2,\qquad
+ \frac{40(U_s-1)}{\sqrt{Q_*(U_s)}L_s(U_s)^2}\gt 2.         \qquad\text{(ASs2)}
 ```
 
 
@@ -278,7 +278,7 @@ certificate gives
 
 
 ```math
-200000[f_s(U_s)+r(U_s)]<0.181083444776<1.              \qquad\text{(ASs4)}
+200000[f_s(U_s)+r(U_s)]\lt 0.181083444776\lt 1.              \qquad\text{(ASs4)}
 ```
 
 

@@ -30,8 +30,8 @@ The preserved mean calculation M0 in
 
 
 ```math
-n^2\le X<n^3\quad(n\ge64),\qquad
- \frac25X<m<\frac35X\quad(X\ge2^{256}).                 \qquad\text{(CM1)}
+n^2\le X\lt n^3\quad(n\ge64),\qquad
+ \frac25X\lt m\lt \frac35X\quad(X\ge2^{256}).                 \qquad\text{(CM1)}
 ```
 
 
@@ -40,9 +40,9 @@ additional RS62 Theorem 2 inequality (3.4), valid for `x>exp(3/2)`, gives
 
 
 ```math
-n^2+1=\pi(X)<\frac X{\log X-3/2},\qquad
- \frac X{n^2}>\log X-\frac32
- >Q(E):=\frac{693E-2193}{1000}.                         \qquad\text{(CM2)}
+n^2+1=\pi(X)\lt \frac X{\log X-3/2},\qquad
+ \frac X{n^2}\gt \log X-\frac32
+ \gt Q(E):=\frac{693E-2193}{1000}.                         \qquad\text{(CM2)}
 ```
 
 
@@ -56,8 +56,8 @@ The upper-index estimate C1 in
 
 
 ```math
-X<4n^2\log n\quad(n\ge64),\qquad
- E<2v+\log_2v+3.                                      \qquad\text{(CM3)}
+X\lt 4n^2\log n\quad(n\ge64),\qquad
+ E\lt 2v+\log_2v+3.                                      \qquad\text{(CM3)}
 ```
 
 
@@ -72,7 +72,7 @@ For every real `v>=4096`, (CM1)--(CM3) imply
 ```math
 2v\le E\le4v,\qquad
  \frac54 E\le e\le2E,\qquad
- e>3v-2,\qquad E<\frac{167}{250}e.                    \qquad\text{(CM4)}
+ e\gt 3v-2,\qquad E\lt \frac{167}{250}e.                    \qquad\text{(CM4)}
 ```
 
 
@@ -83,7 +83,7 @@ The sharper comparison follows from `e>3v-2` and
 
 
 ```math
-\frac v{250}-\log_2v-\frac{542}{125}>0.               \qquad\text{(CM5)}
+\frac v{250}-\log_2v-\frac{542}{125}\gt 0.               \qquad\text{(CM5)}
 ```
 
 
@@ -97,7 +97,7 @@ from
 
 
 ```math
-2^{v_0}\ge(4v_0)^{32},\qquad v_0\log2>32.            \qquad\text{(CM6)}
+2^{v_0}\ge(4v_0)^{32},\qquad v_0\log2\gt 32.            \qquad\text{(CM6)}
 ```
 
 
@@ -146,7 +146,7 @@ Its target refinement TD reapplies the exact-total proof using
 
 
 ```math
-b=\frac{173287}{250000}=0.693148>\log2,\qquad
+b=\frac{173287}{250000}=0.693148\gt \log2,\qquad
  L_t=\lceil b(e+1)\rceil,\qquad h\le gL_t.            \qquad\text{(CM10)}
 ```
 
@@ -157,9 +157,9 @@ Since `L_t<=be+b+1`, (CM4) and (CM9) show
 
 
 ```math
-h<\frac{4601289711}{12500000000}e^2
+h\lt \frac{4601289711}{12500000000}e^2
      +\frac{11239539711}{12500000000}e
-   <\frac{369}{1000}e^2\quad(e\ge1024).                \qquad\text{(CM11)}
+   \lt \frac{369}{1000}e^2\quad(e\ge1024).                \qquad\text{(CM11)}
 ```
 
 
@@ -248,8 +248,8 @@ ceiling ratio in (CM4) gives
 
 ```math
 \frac{D}{KX}
- <\frac{3/5}{1009/1000}\frac{167}{250}
- =\frac{2004}{5045}<\frac25.                         \qquad\text{(CM16)}
+ \lt \frac{3/5}{1009/1000}\frac{167}{250}
+ =\frac{2004}{5045}\lt \frac25.                         \qquad\text{(CM16)}
 ```
 
 

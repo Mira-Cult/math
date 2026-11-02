@@ -46,7 +46,7 @@ already follows for every $`n\ge3`$ from
 
 
 ```math
-\frac{\mu^{3/5}}{KX}\le n^{-13/15}<\frac25.
+\frac{\mu^{3/5}}{KX}\le n^{-13/15}\lt \frac25.
 ```
 
 
@@ -151,7 +151,7 @@ The third manuscript gives the proposed unconditional cutoff $`2^{4320}`$ for th
 
 [The optimized composition](optimized-bound.md) and the manuscripts in [its supporting directory](optimized/) reproduce the active classical proof chain. Dependencies on the earlier finite controller, original target lemma, and corrected primitive-character explicit formula link to the already public manuscripts. The mathematical argument is readable without access to the research repository.
 
-The public adaptation changes display and inline mathematics to GitHub-safe syntax, replaces equation tags by text labels, rewrites links to public counterparts, removes internal workflow instructions and inactive future-work discussion, and separates executable-recovery claims from the mathematical exposition. It does not change the asserted theorem or its proof inequalities. A token comparison checked all 292 retained display formulas and 108 inline LaTeX expressions against the frozen source, ignoring only whitespace and equation-label presentation. The only omitted display formulas were two in a removed discussion of an unsupported smaller candidate. The [source map](optimized/source-map.json) records the input and public-output SHA-256 hashes for each adapted manuscript. The exact-byte source recovery and these formatted manuscripts are different artifacts; the original manifests must not be run against edited exposition bytes.
+The public adaptation changes display and inline mathematics to GitHub-safe syntax, replaces equation tags by text labels and literal comparison signs by equivalent TeX macros, rewrites links to public counterparts, removes internal workflow instructions and inactive future-work discussion, and separates executable-recovery claims from the mathematical exposition. It does not change the asserted theorem or its proof inequalities. A token comparison checked all 292 retained display formulas and 108 inline LaTeX expressions against the frozen source, ignoring whitespace, equivalent comparison macros, and equation-label presentation. The only omitted display formulas were two in a removed discussion of an unsupported smaller candidate. The [source map](optimized/source-map.json) records the input and public-output SHA-256 hashes for each adapted manuscript. The exact-byte source recovery and these formatted manuscripts are different artifacts; the original manifests must not be run against edited exposition bytes.
 
 ### Final source reviews
 

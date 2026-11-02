@@ -22,8 +22,8 @@ The already-proved RS62 calculation E1.1 gives
 
 ```math
 M:=\pi(3X/4)-\pi(X/4)
- >\frac{68497}{175000}\frac{X}{\log X}
- >\frac{68497}{122500}\frac XE.                    \qquad\text{(S1.1)}
+ \gt \frac{68497}{175000}\frac{X}{\log X}
+ \gt \frac{68497}{122500}\frac XE.                    \qquad\text{(S1.1)}
 ```
 
 
@@ -42,7 +42,7 @@ at most E therefore satisfies
 
 
 ```math
-s>\frac{7247}{122500}\frac XE-1.                  \qquad\text{(S1.2)}
+s\gt \frac{7247}{122500}\frac XE-1.                  \qquad\text{(S1.2)}
 ```
 
 
@@ -54,7 +54,7 @@ at least s/2 edges. Thus its size is greater than
 
 ```math
 \frac{7247}{245000}\frac XE-\frac12
- >\frac{X}{40E}.                                    \qquad\text{(S1.3)}
+ \gt \frac{X}{40E}.                                    \qquad\text{(S1.3)}
 ```
 
 
@@ -118,7 +118,7 @@ For every `n>=64`, the same RS62 lower bound for pi gives
 
 
 ```math
-X<4n^2\log n.                                      \qquad\text{(C1.1)}
+X\lt 4n^2\log n.                                      \qquad\text{(C1.1)}
 ```
 
 
@@ -132,8 +132,8 @@ Set `v=log_2 n`. For `v>=128`, (C1.1) and `log2<1` imply
 
 ```math
 E\le2v+\log_2v+3,
- \qquad e>3v-2,
- \qquad E<\frac7{10}e.                              \qquad\text{(C1.2)}
+ \qquad e\gt 3v-2,
+ \qquad E\lt \frac7{10}e.                              \qquad\text{(C1.2)}
 ```
 
 
@@ -148,7 +148,7 @@ If the refined target lemma gives `h<=gL` for
 
 
 ```math
-h\le EL<\frac{49}{100}e^2+\frac{119}{100}e
+h\le EL\lt \frac{49}{100}e^2+\frac{119}{100}e
  \le\frac12 e^2\qquad(e\ge119).                     \qquad\text{(C1.3)}
 ```
 

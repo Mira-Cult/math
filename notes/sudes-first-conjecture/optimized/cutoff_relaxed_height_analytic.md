@@ -126,7 +126,7 @@ zero-counting constants, follows from
 
 
 ```math
-(C_1-1/\pi)RL>2C_1.                                 \qquad\text{(ZH1)}
+(C_1-1/\pi)RL\gt 2C_1.                                 \qquad\text{(ZH1)}
 ```
 
 
@@ -156,16 +156,16 @@ In terms of the present variables, BMOR's displayed expressions give
 
 ```math
 \begin{split}
- \epsilon_2<&\ e^{-R\nu^2}(QL+\eta L^2)\\
+ \epsilon_2\lt &\ e^{-R\nu^2}(QL+\eta L^2)\\
  &+\tfrac12e^{-R\nu^2/2}
  \left[\frac{(1+4\eta+\eta^2)L^2}{2\pi}
        +\frac{(2+\eta)L}{\pi}
        +\frac{C_1\nu+C_2}{\mathcal H}
        +0.798L+11.075\right],\\
  \epsilon_3=&\ \frac{C_1\nu+C_2}{\mathcal H}e^{-\nu},\\
- \epsilon_4<&\ \tfrac12\int_1^{\mathcal H}
+ \epsilon_4\lt &\ \tfrac12\int_1^{\mathcal H}
        t^{-1}e^{-\nu^2/\log(Qt)}\log(Qt)\,dt
-       <\tfrac12\nu e^{-\nu}.                        \qquad\text{(ZH2)}
+       \lt \tfrac12\nu e^{-\nu}.                        \qquad\text{(ZH2)}
 \end{split}
 ```
 
@@ -181,7 +181,7 @@ For `nu>=23`, the following elementary bounds apply:
 \eta L^2\le\nu^2/4,\quad
  (1+4\eta+\eta^2)L^2\le3\nu^2/2,\quad
  (2+\eta)L\le2\nu,
- \quad Q<e^\nu.
+ \quad Q\lt e^\nu.
 ```
 
 
@@ -191,9 +191,9 @@ With `pi>3`, these bounds give
 
 
 ```math
-\epsilon_2<
+\epsilon_2\lt 
  \left(\frac38\nu^2+\frac{31}{12}\nu\right)e^{-R\nu^2/2}
- <\nu^2 e^{-R\nu^2/2}.                                \qquad\text{(ZH3)}
+ \lt \nu^2 e^{-R\nu^2/2}.                                \qquad\text{(ZH3)}
 ```
 
 
@@ -204,7 +204,7 @@ so it is less than `10^-6`. Moreover
 
 ```math
 \frac{\epsilon_3}{\nu e^{-\nu}}
- \le\frac{C_1+C_2/23}{100000}<10^{-5}.                 \qquad\text{(ZH4)}
+ \le\frac{C_1+C_2/23}{100000}\lt 10^{-5}.                 \qquad\text{(ZH4)}
 ```
 
 
@@ -231,7 +231,7 @@ The high-zero calculation gives `epsilon_5+epsilon_6+epsilon_7`, with
 
 ```math
 \begin{split}
- \epsilon_5<&\ \frac{e^{-R\nu^2/2}}{2\mathcal H^3}
+ \epsilon_5\lt &\ \frac{e^{-R\nu^2/2}}{2\mathcal H^3}
    \left(\frac{\mathcal H\nu}{2\pi}+0.798\nu+10.809\right)
     +\frac{4L e^{-R\nu^2}}{\mathcal H^2},\\
  \epsilon_7=&\ \frac{C_1\nu+C_2}{\mathcal H^3}e^{-\nu}.
@@ -249,7 +249,7 @@ The remaining integral, after combining its two terms using
 
 
 ```math
-\epsilon_6<\frac12\int_{\mathcal H}^\infty
+\epsilon_6\lt \frac12\int_{\mathcal H}^\infty
        t^{-3}e^{-\nu^2/\log(Qt)}\log(Qt)\,dt
  =\frac{Q^2}{2}\int_\nu^\infty s e^{-2s-\nu^2/s}\,ds. \qquad\text{(ZH6)}
 ```
@@ -290,7 +290,7 @@ The exact combined spectral coefficient is
 ```math
 0.5001(1+2/\mathcal H)
  +0.511(1+6/\mathcal H+18/\mathcal H^2+20/\mathcal H^3)
- <1.012.
+ \lt 1.012.
 ```
 
 
@@ -327,7 +327,7 @@ inequality is
 
 
 ```math
-U-1>R\,[L(U)+\log100000]^2,
+U-1\gt R\,[L(U)+\log100000]^2,
  \quad L(u)=\log(Ca^2)+2\log u.                        \qquad\text{(ZH9)}
 ```
 
