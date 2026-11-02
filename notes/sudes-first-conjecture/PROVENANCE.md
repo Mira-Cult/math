@@ -2,12 +2,7 @@
 
 ## Scope
 
-This public note presents Sude's First Conjecture, the original qualitative
-proof of eventual existence, and the explicit sufficient cutoff
-$`N_0=2^{2^{40}}`$. It is maintained as Mira-Cult research. The theorem for
-all odd $`n\ge N_0`$ is distinguished from the conjecture for every positive
-odd order in the [main note](README.md) and [explicit proof](explicit-bound.md).
-The unresolved finite range is not claimed to have been checked.
+This public note preserves three separate manuscripts: the original qualitative proof of eventual existence, the initial public explicit cutoff $`2^{2^{40}}`$, and the optimized explicit cutoff $`2^{4320}`$. Each applies to the exact first $`n^2`$ odd primes and to every odd order in its asserted tail. None proves the conjecture for every positive odd order or claims to have checked the entire remaining finite range. See the [manuscript index](README.md).
 
 ## Original qualitative source revisions
 
@@ -98,7 +93,7 @@ imported classical literature linked in [References](REFERENCES.md).
 
 The source history preserves the corrected earlier numerical checkpoint at
 scientific revision `06f214078caad757697a69757e3e10054d86ee1d`, delivered
-at `511c7f466d789467f5d532a0eca73c51709f77f2`. The current supplement
+at `511c7f466d789467f5d532a0eca73c51709f77f2`. The initial explicit supplement
 uses the directly specialized progression estimates, not the earlier larger
 starting points.
 
@@ -145,3 +140,34 @@ The result is therefore presented as a **proposed unconditional conventional
 proof with internal nonauthor review**, not formal verification, external peer
 acceptance, or a practical construction. It does not settle all odd orders
 below $`2^{2^{40}}`$.
+
+
+
+## Optimized bound
+
+The third manuscript gives the proposed unconditional cutoff $`2^{4320}`$ for the same complete odd-order tail and exact prime pool. Its frozen scientific source is revision `f519b7fd796393cd6ab202f6790fe1824e6fc22f` of the research repository, in `problems/prime-line-sums/`. The final review delivery is revision `b776784e3cffc3aeeb3c3c6886516c3337a16bd1`. The first two public manuscripts remain preserved. The new argument does not merely substitute a smaller number into their statements.
+
+### Public proof and editorial transformations
+
+[The optimized composition](optimized-bound.md) and the manuscripts in [its supporting directory](optimized/) reproduce the active classical proof chain. Dependencies on the earlier finite controller, original target lemma, and corrected primitive-character explicit formula link to the already public manuscripts. The mathematical argument is readable without access to the research repository.
+
+The public adaptation changes display and inline mathematics to GitHub-safe syntax, replaces equation tags by text labels, rewrites links to public counterparts, removes internal workflow instructions and inactive future-work discussion, and separates executable-recovery claims from the mathematical exposition. It does not change the asserted theorem or its proof inequalities. A token comparison checked all 292 retained display formulas and 108 inline LaTeX expressions against the frozen source, ignoring only whitespace and equation-label presentation. The only omitted display formulas were two in a removed discussion of an unsupported smaller candidate. The [source map](optimized/source-map.json) records the input and public-output SHA-256 hashes for each adapted manuscript. The exact-byte source recovery and these formatted manuscripts are different artifacts; the original manifests must not be run against edited exposition bytes.
+
+### Final source reviews
+
+The final delivery contains two reports on the exact scientific revision:
+
+- **Fresh nonauthor mathematical review.** The reviewer did not author or edit the producers, chosen profiles, composition, or verifier. The report found no blocking issue after examining the active analytic, graph, controller, seed/target, composition, and whole-tail arguments, including the relevant primary Rosser–Schoenfeld, BMOR, and McCurley statements. It independently reconstructed and replayed the complete 81-file recovery. A separately implemented standard-library rational oracle, importing no producer module, passed 57 named checks and finite adversarial controls. This is internal conventional review, not an external referee report or a kernel proof.
+- **Scoped composition cross-review.** The analytic component author checked the separately authored final composition, scale translations, manifests, and certificate wrapper, and independently replayed the same recovery. That report found no blocking issue within its scope. It expressly does not count as nonauthor review of the analytic derivations, controller architecture, target refinements, or joint parameter selection in which that reviewer participated.
+
+Both source reviewers obtained deterministic replay-output SHA-256 `de3926189b8383dc73f128ff27cf982aa48fa487338ce1a4e6be2cadb24bc361`. A further publication-side recovery and replay reproduced the same result. The final reports make their authorship exclusions explicit; their conclusions are not silently extended to later scientific changes.
+
+### Independent publication checks
+
+A separate internal recovery reconstructed all **81** required source files from the frozen revision and checked all **80** dependency hashes. The complete certificate passed: **55** final composition checks, **6** top-level component replays including the historical **16**-component campaign, **20** final malformed-manifest, parameter, and preceding-bound controls, and **401** physical file attacks rejected as intended. The final manifest SHA-256 was `66510e1283506b5eadafeaa5c06ae844ae79ffd7ad65fd1b4da59f669765b2dc`.
+
+The arithmetic checks certify the declared finite inequalities, source integrity, and negative controls. They do not prove the imported analytic results, turn handwritten arguments into kernel proofs, or construct an explicitly listed square of order $`2^{4320}`$. Mathematical source review of the final analytic, finite-controller, target, and whole-tail composition is recorded separately from this replay. Component collaborators are not counted as independent reviewers of their own contributions. Publication review is internal, not external peer acceptance.
+
+The new classical deductions use Rosser–Schoenfeld for index and pool-mean bounds, Bennett–Martin–O'Bryant–Rechnitzer for explicit zero-counting and exceptional-zero estimates, and McCurley's parameterized explicit-formula and zero-sum calculations. In particular, the extended source domain is proved from the parameterized formulas; a published lemma is not simply invoked outside its printed domain. The corrected primitive/imprimitive character normalization and omitted Euler-factor prime-power allowances are retained.
+
+No claim of optimality, a proof for the full finite remaining range, or a practical construction at this scale is made.
