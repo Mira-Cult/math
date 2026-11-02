@@ -118,7 +118,7 @@ Define
 
 
 ```math
-V=\operatorname{lcm}(q,W),\qquad d_0=V/W.
+V=\mathrm{lcm}(q,W),\qquad d_0=V/W.
 ```
 
 

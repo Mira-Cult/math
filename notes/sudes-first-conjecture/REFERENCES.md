@@ -103,7 +103,7 @@ analytic hypotheses in Section 5.
 
 **Use:** [A1](prime-targets.md#a1-almost-equal-ternary-primes-in-prescribed-fixed-classes)
 derives the prescribed-class version for a fixed even modulus, including
-prime powers, by replacing $`W`$ with $`\operatorname{lcm}(q,W)`$. It accounts
+prime powers, by replacing $`W`$ with $`\mathrm{lcm}(q,W)`$. It accounts
 for the Fourier error, lower density, restriction norm, lifted residues and
 exact convolution target. The published headline theorem does not prescribe
 individual residue classes; that extension is proved here. [A3](prime-targets.md#a3-prime-vectors-with-exact-total-uniformly-in-their-length)

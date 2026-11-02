@@ -329,12 +329,14 @@ $`q^*=1`$ and $`m_\chi=0`$. It follows that on either averaging interval
 
 
 ```math
-\begin{aligned}
  |f_{\chi^*}(t)-J_\chi(t)|
- &\le\omega(q)\log(2x)+0.01q\log q+1\\
- &\le\frac{\log q\log x}{\log2}+0.01002q\log q
- <E_0.                                                   \qquad\text{(E2.2d)}
- \end{aligned}
+ \le \omega(q)\log(2x)+0.01q\log q+1.
+```
+
+```math
+ \omega(q)\log(2x)+0.01q\log q+1
+ \le \frac{\log q\log x}{\log2}+0.01002q\log q
+ < E_0. \qquad\text{(E2.2d)}
 ```
 
 
