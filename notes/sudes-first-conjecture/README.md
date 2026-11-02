@@ -5,9 +5,9 @@
 Can the first $n^2$ odd primes be placed in an $n\times n$ square so that
 all row sums, column sums and both main diagonal sums are prime?
 Sude's First Conjecture says yes for every positive odd $n$. This note records
-our proof for **every sufficiently large odd $n$**, together with its full
-combinatorial and analytic components. It does not yet prove the assertion
-for every positive odd order.
+a proposed unconditional proof for **every odd $n\ge2^{2^{40}}$**, together
+with its supporting combinatorial and analytic arguments. It does not yet
+prove the assertion for every positive odd order.
 
 ## The conjecture
 
@@ -49,95 +49,99 @@ note; see the [example reference](REFERENCES.md#order-three-example).
 
 ## What is proved
 
-**Eventual-existence theorem.** There is an integer $n_0$ such that every odd
-$n\ge n_0$ satisfies Sude's First Conjecture.
+**Explicit-threshold theorem.** Every odd integer
 
-The theorem uses the exact initial pool for each order. It is not restricted
-to a subsequence of successful orders, and it does not extend one small square
-inductively. The construction is carried out afresh inside each prescribed
-pool.
+$$
+\boxed{n\ge N_0=2^{2^{40}}=2^{1099511627776}}
+$$
 
-The proof is an **internally reviewed conventional mathematical research
-proof**, presented here for public scrutiny. Internal reviews found no
-remaining blocking mathematical gap in the controller, prime-target lemmas or
-their composition. This is not a claim of formal verification, external peer
-acceptance or novelty. The source revisions and review boundary are recorded
-in [PROVENANCE.md](PROVENANCE.md).
+satisfies Sude's First Conjecture.
 
-No numerical value of $n_0$ is supplied. Consequently the theorem alone does
-not settle every positive odd order: it leaves an unspecified finite range.
-A finite list of successful examples cannot bridge that range without a
-certified threshold. Deriving one would require explicit bounds throughout
-the analytic estimates and the construction, not merely choosing a very large
-number.
+The theorem applies to **every** odd order at or above the bound, not merely
+a subsequence. The construction is performed afresh inside each exact initial
+pool. The bound is sufficient, not claimed optimal or practically usable.
+The finitely many odd orders below $N_0$ remain unresolved by this theorem;
+known small examples do not close that range.
 
-## How the proof works
+This is a **proposed unconditional conventional mathematical proof**, using
+the stated classical prime-distribution estimates. Its source has undergone
+internal reviews by reviewers other than the component authors. Internal
+review and arithmetic checks are not formal verification or external peer
+acceptance. No novelty claim is made. See [Provenance](PROVENANCE.md) for
+the pinned sources and precise review boundary.
+
+## How the explicit proof works
 
 The difficulty is to meet many coupled conditions without changing the entries.
-Changing a cell affects its row and column, and sometimes a diagonal. The
-proof first builds a sparse collection of reversible moves that control the
-line sums, then chooses prime sums within the range those moves can reach.
+Changing one cell affects its row and column, and sometimes a diagonal.
+The proof first reserves disjoint reversible moves, then chooses prime sums
+within the range those moves can reach.
 
-### 1. Reserve switches inside the prescribed pool
+### 1. Find a numerical supply of switches
 
-If two primes $p,p+d$ occupy one column in different rows, exchanging them
-transfers $d$ between those two row sums while leaving the column sum unchanged.
-A transposed pair transfers between columns while preserving rows. Using
-pairwise disjoint entries makes these switches commute.
+Write $X=p_{n^2+1}$ and $E=\lceil\log_2X\rceil$. Pair consecutive primes
+inside $[X/4,3X/4]$. An elementary density and pigeonhole argument gives
+at least $\lfloor X/(2048E^3)\rfloor$ disjoint pairs with a common even
+gap $g\le16E$ and a common reduced lower-endpoint residue modulo $g$.
+The gap may change with $n$, so the progression estimates are uniform in it.
 
-A quantitative consequence of Maynard's sieve supplies many disjoint prime
-pairs with one common even gap $g\le600$ at **every sufficiently large scale**.
-This is the starting point for bundles whose subset sums contain every multiple
-of $g$ in a long interval. Further pairs enlarge those intervals, while their
-midpoints are chosen to keep the reserved entries balanced.
+[Classical explicit estimates](classical-primes.md) supply the additional
+prime pairs needed to enlarge these switches. Their quantitative range is
+checked at every scale used by the construction, including its shorter
+entry-reservoir intervals.
 
-Bounded-degree networks organize the row and column transfers. An integral
-flow argument realizes all balanced correction vectors of the needed size;
-the exact-total dependency between rows, and separately between columns, is
-built into that argument. Four-cell rectangle trades control each diagonal
-without changing any row or column. The supports of these controls are
-embedded disjointly.
+### 2. Build a controller with all costs paid
 
-### 2. Obtain a centered baseline with usable residues
+With $K=\lfloor n/E^3\rfloor$ and
+$\mu=(\sum_{p\in P_n}p)/n$, the [finite controller](explicit-controller.md)
+produces a baseline whose required sums are units modulo $g$ and within
+$KX/10$ of $\mu$. Bounded-degree networks transfer amounts between rows
+or columns. Four-cell rectangle trades control each diagonal while preserving
+all rows and columns. Separate switches repair the residues.
 
-Write $X=p_{n^2+1}$, $T=\sum_{p\in P_n}p$, $\mu=T/n$ and
-$K=\lceil n^{2/3}\rceil$. After reserving the controls, place the unused
-entries by a permutation chosen to balance all required lines. Sampling
-without replacement gives a simultaneous concentration bound. Separate
-bounded-size switches repair the residues, making every line sum coprime to
-$g$.
+All supports use distinct pool entries. The proof pays the complete global
+reservation cost before each prime-supply selection, as well as cell loads,
+centering errors, integer floors and both diagonal families. The controller
+can realize every compatible target vector within $KX/2$ of its baseline,
+with row and column totals each exactly equal to the total of the pool.
 
-The resulting [controller theorem](controller.md#u-the-centered-universal-controller)
-has a baseline within $KX/10$ of $\mu$. It can reach every integer target
-within $KX/2$ of its baseline coordinate, provided each target has the same
-residue modulo $g$ and each of the row and column target vectors sums exactly
-to $T$.
+### 3. Choose nearby prime sums with the exact total
 
-### 3. Choose prime targets with the exact total
+Set $\ell=\lceil\log_2\mu\rceil$ and $D=\mu/\ell^4$.
+The [finite target lemma](explicit-targets.md) constructs $n$ prime targets
+in $[\mu-D,\mu+D]$, in their assigned residue classes, with the exact
+required total. It uses repeated prime targets to build a complete interval
+of attainable sums on an arithmetic grid; a balancing step then finishes
+with an exact correction. Repetition is legal for line sums, not for entries.
+Apply it separately to rows and columns and choose the two diagonal targets
+independently.
 
-The [analytic component](prime-targets.md) derives a prescribed-residue
-version of the Matomäki–Maynard–Shao theorem on three almost-equal primes.
-The modulus is fixed; prime powers in it and the costs of residue filtering
-are treated explicitly.
-
-To choose $n$ prime row targets, select primes just above or below $\mu$ in
-the required classes, always correcting the current discrepancy. This keeps
-the cumulative discrepancy bounded independently of $n$. Finish the last
-three targets with the ternary theorem, obtaining **exactly** the total $T$.
-Repeat for columns and choose the two diagonal targets individually.
-All target primes lie within $\mu^{3/5}$ of $\mu$.
-
-These targets fit inside the controller's range. Applying the switches gives
-a permutation of the original entries with every required line sum prime.
-The [synthesis proof](proof.md#proof-of-theorem-p) checks the capacities,
-congruences, exact totals and eventual quantifier.
+The [composition proof](explicit-bound.md) checks that all supplies and
+finite inequalities hold for every odd $n\ge N_0$. In particular,
+$D/(KX)\le2/E<1/10$, so the prime targets fit inside the controller's range.
+The final operations only permute the original $n^2$ primes.
 
 ## Reading the full argument
 
-- [Proof of eventual existence](proof.md): the theorem and its composition.
-- [Centered controller](controller.md): complete seed-supply, transfer,
-  placement, residue-repair and centering arguments.
-- [Nearby prime targets with an exact total](prime-targets.md): the analytic
-  source contract and complete proofs of A1–A4.
-- [References](REFERENCES.md): primary sources, versions and theorem locators.
-- [Provenance](PROVENANCE.md): source pins and the limits of internal review.
+### Explicit bound
+
+- [The bound and its complete composition](explicit-bound.md): theorem,
+  dependency graph, numerical ledger and uniform-tail checks.
+- [Classical prime supplies](classical-primes.md): pool size and mean,
+  common-gap matching, the primitive-character explicit formula, and the
+  specialized strong and weak progression estimates.
+- [Finite controller and numerical regime](explicit-controller.md): complete
+  transfer, placement, depletion, residue-repair and centering proofs.
+- [Exact prime target lists](explicit-targets.md): complete finite target lemma.
+
+### Original qualitative proof
+
+The earlier [eventual-existence proof](proof.md),
+[centered controller](controller.md) and
+[nearby prime-target arguments](prime-targets.md) are retained as the original
+qualitative proof. That argument did not compute a threshold. The explicit
+supplement above changes the quantitative construction and supplies the new
+bound; it is not merely a large number inserted into the earlier proof.
+
+[References](REFERENCES.md) records primary sources, versions and locators.
+[Provenance](PROVENANCE.md) records source revisions and the limits of review.

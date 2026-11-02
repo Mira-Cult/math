@@ -1,14 +1,17 @@
-# Proof of eventual existence
+# Original qualitative proof of eventual existence
 
 **Theorem P.** There is an integer $n_0$ such that, for every odd integer
 $n\ge n_0$, the first $n^2$ odd primes can be arranged in an $n\times n$
 square whose rows, columns and two main diagonals all have prime sums.
 Each prescribed entry is used once. The line sums need not be equal or distinct.
 
-This is an internally reviewed conventional research proof, presented for
-public scrutiny. No explicit $n_0$, formal verification, external peer
-acceptance or novelty claim is asserted. The stronger assertion for every
-positive odd $n$ is [Sude's First Conjecture](README.md#the-conjecture).
+This is the retained original qualitative argument. It did not compute
+$n_0$; the [explicit supplement](explicit-bound.md) now supplies the
+sufficient bound $n_0=2^{2^{40}}$ through a separate quantitative composition.
+Both are conventional research proofs presented for public scrutiny, not
+claims of formal verification, external peer acceptance or novelty.
+The stronger assertion for every positive odd $n$ is
+[Sude's First Conjecture](README.md#the-conjecture).
 
 Write $p_j$ for the $j$-th prime, including $p_1=2$, and put
 $P_n=\{p_2,\ldots,p_{n^2+1}\}$. The proof combines two components:
@@ -136,15 +139,17 @@ theorem are pinned in [REFERENCES.md](REFERENCES.md):
 
 ## Scope of the conclusion
 
-The argument is unconditional: its analytic inputs are the published results
-specified above, with the needed extensions proved in the component files.
-It is an existence proof and supplies neither a numerical threshold nor a
-practical running-time guarantee for constructing large examples. Establishing
-a particular numerical threshold would require explicit bounds for every
-analytic supply and target-selection threshold, as well as the placement and
-centering conditions. The elementary estimate (P3) alone does not supply one.
+This qualitative argument is unconditional: its analytic inputs are the
+published results specified above, with the needed extensions proved in the
+component files. It does not itself evaluate a numerical threshold or give a
+practical running-time guarantee. The elementary estimate (P3) alone would
+not supply such a threshold.
 
-In particular, this theorem does not settle the finitely many odd orders below
-its unspecified threshold and therefore does not prove the full conjecture.
-See the [main note](README.md) for the exact statement, an example and a guide
-to the proof, and [provenance](PROVENANCE.md) for the source revisions.
+The [explicit supplement](explicit-bound.md) supplies a complete numerical
+composition with sufficient cutoff $2^{2^{40}}$. That supplement uses its
+own quantitative supplies, controller regime and target construction; the
+original proof above is retained without replacing its unevaluated analytic
+thresholds. The finitely many odd orders below the new bound remain unresolved
+by these theorems, so the full conjecture is not established.
+See the [main note](README.md) for the current result and reading guide,
+and [Provenance](PROVENANCE.md) for the source revisions.
