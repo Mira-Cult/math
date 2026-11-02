@@ -1,0 +1,42 @@
+[
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/hyper4_cube.md",
+    "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
+    "source_sha256": "1a3173d3cb7635bd021aafa42673343ad6ea54ab0928a7aae08cb6c3a9689501",
+    "public_path": "notes/sudes-first-conjecture/prime-hypercube-4d.md",
+    "public_sha256": "f44403746f6e740d0674e73aa88e6a1513943ae3200b4efa1f9eaaf97a7fea6c",
+    "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/hyper4_incidence.md",
+    "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
+    "source_sha256": "b91309ac57931ac4fcd7d382cb1973806dfc3aa02f96148e324da7dd589c1f67",
+    "public_path": "notes/sudes-first-conjecture/hyper4/hyper4_incidence.md",
+    "public_sha256": "8684b61e7c09ebcfc2021af3990e76e958bbb3fd35e634e76d1a407e62827aeb",
+    "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/hyper4_axis.md",
+    "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
+    "source_sha256": "ca9cefea5142343144dfa27904279066743d67e7f79a4c763ff0fc3ab45e4496",
+    "public_path": "notes/sudes-first-conjecture/hyper4/hyper4_axis.md",
+    "public_sha256": "3e31cf9d8ba222ca8bdb2a3c0e784483b5777e446b41049266e892844da76538",
+    "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/hyper4_trades.md",
+    "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
+    "source_sha256": "76c41b51b437fbe693a86bd7ec04593a9cc9bb11afe11a6d21661bd75812d418",
+    "public_path": "notes/sudes-first-conjecture/hyper4/hyper4_trades.md",
+    "public_sha256": "f9c64cfe079c7c991174f3fcbaa40157cadd03ba07cb8211be9dbbc3b32d612b",
+    "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
+  },
+  {
+    "source_path": "problems/prime-arrays-beyond-square/manuscripts/hyper4_targets.md",
+    "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
+    "source_sha256": "d289b119e80b4fd93c9b277e26da96d32870675916c96aa6f03e54f881b64b1f",
+    "public_path": "notes/sudes-first-conjecture/hyper4/hyper4_targets.md",
+    "public_sha256": "d994cd3e858ef8a46d664c4219b1a89d2f1018da0ffe175b4182b0d4dd7e169e",
+    "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
+  }
+]

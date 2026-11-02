@@ -2,7 +2,7 @@
 
 ## Scope
 
-This public note preserves three separate manuscripts: the original qualitative proof of eventual existence, the initial public explicit cutoff $`2^{2^{40}}`$, and the optimized explicit cutoff $`2^{4320}`$. Each applies to the exact first $`n^2`$ odd primes and to every odd order in its asserted tail. None proves the conjecture for every positive odd order or claims to have checked the entire remaining finite range. See the [manuscript index](README.md).
+The first three manuscripts preserve three stages of the square proof: the original qualitative proof of eventual existence, the initial public explicit cutoff $`2^{2^{40}}`$, and the optimized explicit cutoff $`2^{4320}`$. Each applies to the exact first $`n^2`$ odd primes and to every odd order in its asserted tail. None proves the conjecture for every positive odd order or claims to have checked the entire remaining finite range. See the [manuscript index](README.md).
 
 ## Original qualitative source revisions
 
@@ -268,3 +268,35 @@ remote CI passed. The recorded remote CI run was skipped. Public exposition
 hashes differ from the research archive after formatting and link editing;
 its original byte-binding manifest is not claimed to verify these edited
 files. The executable recovery archive is distinct from this proof edition.
+
+
+## Four-dimensional prime hypercubes
+
+Manuscript VI, [prime-hypercube-4d.md](prime-hypercube-4d.md), publishes the full signed-line theorem SC4 and its universal compatible-target realization theorem USC4. The pool is exactly the first $`n^4`$ odd primes; the conclusion concerns **every sufficiently large odd order**, not a subsequence. All $`4n^3+12n^2+16n+8`$ full signed-coordinate lines have prime sums. Sums may repeat. Whole-section primality is not required. The singleton array containing 3 is separate.
+
+### Pinned science and public proof closure
+
+- Scientific manuscripts: `b837e307fc41975d0fb332c8215d6835ba47a271`, in `problems/prime-arrays-beyond-square/manuscripts/` of the canonical research repository Mira-Cult/math-wip.
+- Additional physical trade controls: `61755c8ca37f8ab796ca4eefac6af890825b1b68`.
+- Final delivery, handoff and four scoped internal review records: `112c2bca0d38f82391a34994b63153e7ec08aa74`.
+- Inherited qualitative cube science: `a2445962ec6e06b2a893980fb7a183057eb9bcee`; finite prime-list interface: `c2118dfad1aeb660d66308dc6a94d6c959f5010c`.
+
+The public edition includes the complete composition and [four supporting manuscripts](hyper4/README.md), with links to complete already-public integer routing, graph, reservoir and finite prime-list proofs. The Thorner–Zaman analytic input remains an identified external theorem. This is a readable proof edition, not a relocated executable archive. [Source map](hyper4/source-map.json) records scientific and public SHA-256 hashes. Author/workspace introductions and private execution instructions were replaced by public scope and this record. Mathematical content was preserved, with renderer-safe notation and public links. Historical pending-review language in the frozen scientific introductions is superseded by the final delivery's review records, not evidence that those records predated the science.
+
+### Conventional review and fresh finite replay
+
+The four delivered internal reviews cover incidence, analytic targets, geometry and whole-proof composition, with their authorship exclusions recorded. A fresh read-only public-promotion review examined all five scientific manuscripts, all four reviews and the inherited axis/tensor and target interfaces. No blocking defect or scientific repair was identified within that scope. The reviewer did not independently reprove the external analytic theorem or the complete inherited finite-list result. This is internal conventional mathematical review, not external peer acceptance or kernel verification.
+
+A separate read-only replay recovered 23 canonical files and checked every Git blob hash. Primary scientific controls match the scientific snapshot; additional trade code and its forty-pair fixture match the control snapshot. Unedited standard-library verification paths completed on Python 3.12.14:
+
+- Exact line enumeration: 272 and 888 lines at orders 3 and 5; the singleton [3] accepted; eight arrangement and eight geometry corruptions rejected.
+- Full incidence certificates: ranks 81 and 572, array-kernel ranks 0 and 53, and complete integer transformations, divisibility and negative controls. The finite saturation indices are 486 and $`2^{19}3^{10}5^{35}`$. These small-order obstructions are not proofs of nonexistence of prime arrays.
+- Axis controls: exact pool of 14,641 primes, 52 switch patterns, 19 signed reference changes, 16 exceptional endpoint cases, 24 ring controls and eight numerical five-pass compositions; 17 named corruptions rejected. The stored physical fixture was independently checked.
+- Prime targets at orders 3, 5 and 17: 272, 888 and 23,400 lines; 154, 298 and 2,170 partition identities; exact pool totals 15,535, 1,340,727 and 42,747,841,521. Seven target mutations were rejected at each of orders 3 and 5.
+- Extra trades: 256 exact images, two physical shapes, a forty-pair fixture on 80 vertices, seven rejected mutations, and four whole-bundle families.
+- Additional adversarial lifts at orders 17, 19 and 21; a nonconstant order-17 lift with all 83,521 entries congruent to 3 modulo 17 and all 23,400 line sums independently verified. No inverse of the order modulo 17 was used.
+- A central compound regression has 32 physical pairs touching eight complementary support lines while its complementary net image is zero. The check retains support occupancy rather than treating zero net effect as empty support.
+
+These finite checks test interfaces and certificates; they do not prove the asymptotic estimates. No all-prime 4D arrangement of order at least 3 was supplied or established. Prime targets, integer lifts and controller fixtures are distinct from prime permutations. The fresh replay did not run optional producers, the complete repository integration suite or remote CI; the delivery's skipped remote run is not recorded as a pass.
+
+**Unchanged limits:** no numerical $`N_4`$ is evaluated, no assertion for every odd order is made, and no dimension at least 5 is covered. The integer-image threshold $`n\ge17`$ is not a prime-arrangement cutoff: additional physical and ineffective analytic thresholds remain. The three square manuscripts and the two cube manuscripts retain their separate statements and bounds.
