@@ -4,8 +4,8 @@
 
 This public note presents Sude's First Conjecture, the original qualitative
 proof of eventual existence, and the explicit sufficient cutoff
-$N_0=2^{2^{40}}$. It is maintained as Mira-Cult research. The theorem for
-all odd $n\ge N_0$ is distinguished from the conjecture for every positive
+$`N_0=2^{2^{40}}`$. It is maintained as Mira-Cult research. The theorem for
+all odd $`n\ge N_0`$ is distinguished from the conjecture for every positive
 odd order in the [main note](README.md) and [explicit proof](explicit-bound.md).
 The unresolved finite range is not claimed to have been checked.
 
@@ -45,12 +45,16 @@ The conjecture is stated for all positive odd orders. This original argument
 is qualitative; the explicit cutoff is supplied by the supplement below.
 
 One elementary simplification has been added to the synthesis: since
-$\mu\le nX$, $X\ge n^2$ and $K\ge n^{2/3}$, its capacity inequality (P3)
-already follows for every $n\ge3$ from
+$`\mu\le nX`$, $`X\ge n^2`$ and $`K\ge n^{2/3}`$, its capacity inequality (P3)
+already follows for every $`n\ge3`$ from
 
-$$
+
+
+```math
 \frac{\mu^{3/5}}{KX}\le n^{-13/15}<\frac25.
-$$
+```
+
+
 
 This removes an unnecessary threshold from that comparison only. It does not
 evaluate the original argument's other thresholds. The explicit supplement
@@ -67,7 +71,7 @@ anonymous external peer review or formal proof-assistant verification.
 The proof remains open to public scrutiny. Its analytic imports retain their
 stated hypotheses. Checking how an imported theorem is used is not a claim
 that its entire published proof has been independently reproved here.
-The original argument did not evaluate $n_0$. No external acceptance or
+The original argument did not evaluate $`n_0`$. No external acceptance or
 novelty claim is asserted for either argument.
 
 
@@ -140,4 +144,4 @@ formulas and locators used are disclosed in [References](REFERENCES.md).
 The result is therefore presented as a **proposed unconditional conventional
 proof with internal nonauthor review**, not formal verification, external peer
 acceptance, or a practical construction. It does not settle all odd orders
-below $2^{2^{40}}$.
+below $`2^{2^{40}}`$.

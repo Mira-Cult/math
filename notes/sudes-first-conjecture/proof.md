@@ -1,20 +1,20 @@
 # Original qualitative proof of eventual existence
 
-**Theorem P.** There is an integer $n_0$ such that, for every odd integer
-$n\ge n_0$, the first $n^2$ odd primes can be arranged in an $n\times n$
+**Theorem P.** There is an integer $`n_0`$ such that, for every odd integer
+$`n\ge n_0`$, the first $`n^2`$ odd primes can be arranged in an $`n\times n`$
 square whose rows, columns and two main diagonals all have prime sums.
 Each prescribed entry is used once. The line sums need not be equal or distinct.
 
 This is the retained original qualitative argument. It did not compute
-$n_0$; the [explicit supplement](explicit-bound.md) now supplies the
-sufficient bound $n_0=2^{2^{40}}$ through a separate quantitative composition.
+$`n_0`$; the [explicit supplement](explicit-bound.md) now supplies the
+sufficient bound $`n_0=2^{2^{40}}`$ through a separate quantitative composition.
 Both are conventional research proofs presented for public scrutiny, not
 claims of formal verification, external peer acceptance or novelty.
-The stronger assertion for every positive odd $n$ is
+The stronger assertion for every positive odd $`n`$ is
 [Sude's First Conjecture](README.md#the-conjecture).
 
-Write $p_j$ for the $j$-th prime, including $p_1=2$, and put
-$P_n=\{p_2,\ldots,p_{n^2+1}\}$. The proof combines two components:
+Write $`p_j`$ for the $`j`$-th prime, including $`p_1=2`$, and put
+$`P_n=\{p_2,\ldots,p_{n^2+1}\}`$. The proof combines two components:
 
 1. [The centered controller](controller.md) constructs disjoint switches
    inside the exact pool. It realizes a box of integer row, column and
@@ -31,80 +31,108 @@ array is handled by the finite construction and balancing arguments below.
 
 Put
 
-$$
- X=p_{n^2+1},\qquad T=\sum_{p\in P_n}p,\qquad
+
+
+```math
+X=p_{n^2+1},\qquad T=\sum_{p\in P_n}p,\qquad
  \mu=T/n,\qquad K=\lceil n^{2/3}\rceil.
-$$
+```
+
+
 
 The prime number theorem and partial summation give
 
-$$
- X\sim2n^2\log n,\qquad T\sim n^4\log n,\qquad
+
+
+```math
+X\sim2n^2\log n,\qquad T\sim n^4\log n,\qquad
  \mu\sim n^3\log n.
-$$
+```
 
-Fix $\theta=3/5$. In particular,
 
-$$
- \mu^{3/5}/X
- \asymp n^{-1/5}(\log n)^{-2/5}\longrightarrow0.       \tag{P1}
-$$
 
-For all sufficiently large odd $n$, apply [Theorem U](controller.md#u-the-centered-universal-controller) to the exact pool
-$P_n$. It gives an even integer $g$, with $2\le g\le600$, and
-a baseline permutation having row sums $A_i$, column sums $B_j$,
-and diagonal sums $D_+,D_-$. Each baseline sum is a unit modulo $g$
-and lies within $KX/10$ of $\mu$. The baseline is an actual
+Fix $`\theta=3/5`$. In particular,
+
+
+
+```math
+\mu^{3/5}/X
+ \asymp n^{-1/5}(\log n)^{-2/5}\longrightarrow0.       \qquad\text{(P1)}
+```
+
+
+
+For all sufficiently large odd $`n`$, apply [Theorem U](controller.md#u-the-centered-universal-controller) to the exact pool
+$`P_n`$. It gives an even integer $`g`$, with $`2\le g\le600`$, and
+a baseline permutation having row sums $`A_i`$, column sums $`B_j`$,
+and diagonal sums $`D_+,D_-`$. Each baseline sum is a unit modulo $`g`$
+and lies within $`KX/10`$ of $`\mu`$. The baseline is an actual
 permutation, so
 
-$$
- \sum_i A_i=\sum_j B_j=T.                            \tag{P2}
-$$
 
-Apply [A3](prime-targets.md#a3-prime-vectors-with-exact-total-uniformly-in-their-length) with $q=g$, $k=n$, total $T$, and the residue vector
-$(A_i\bmod g)_{i=1}^n$. Its hypotheses hold: the classes are reduced,
-their sum is $T\pmod g$ by (P2), and $\mu$ eventually exceeds
-the required threshold. Thus there are primes $a_i$ satisfying
 
-$$
- a_i\equiv A_i\pmod g,\qquad
+```math
+\sum_i A_i=\sum_j B_j=T.                            \qquad\text{(P2)}
+```
+
+
+
+Apply [A3](prime-targets.md#a3-prime-vectors-with-exact-total-uniformly-in-their-length) with $`q=g`$, $`k=n`$, total $`T`$, and the residue vector
+$`(A_i\bmod g)_{i=1}^n`$. Its hypotheses hold: the classes are reduced,
+their sum is $`T\pmod g`$ by (P2), and $`\mu`$ eventually exceeds
+the required threshold. Thus there are primes $`a_i`$ satisfying
+
+
+
+```math
+a_i\equiv A_i\pmod g,\qquad
  \sum_i a_i=T,\qquad |a_i-\mu|\le\mu^{3/5}.
-$$
+```
 
-Independently apply A3 to the column residues. It gives primes $b_j$
-with $b_j\equiv B_j\pmod g$, $\sum_jb_j=T$, and
-$|b_j-\mu|\le\mu^{3/5}$. Apply the [bracketing statement A2](prime-targets.md#a2-bracketing-primes-in-every-requested-class) to
-each of $D_+,D_-\pmod g$, choosing a prime $d_+,d_-$ within
-$\mu^{3/5}$ of $\mu$ in its respective class. All these target
+
+
+Independently apply A3 to the column residues. It gives primes $`b_j`$
+with $`b_j\equiv B_j\pmod g`$, $`\sum_jb_j=T`$, and
+$`|b_j-\mu|\le\mu^{3/5}`$. Apply the [bracketing statement A2](prime-targets.md#a2-bracketing-primes-in-every-requested-class) to
+each of $`D_+,D_-\pmod g`$, choosing a prime $`d_+,d_-`$ within
+$`\mu^{3/5}`$ of $`\mu`$ in its respective class. All these target
 primes are positive. Repetitions among them are permitted by the problem.
 
-There are only 300 possible even moduli $g\le600$. A3's threshold
-is independent of the vector length $k$, and the maximum of the finitely
-many thresholds in A2 and A3 is finite. The fact that the selected $g$
-may change with $n$ therefore causes no subsequence restriction.
+There are only 300 possible even moduli $`g\le600`$. A3's threshold
+is independent of the vector length $`k`$, and the maximum of the finitely
+many thresholds in A2 and A3 is finite. The fact that the selected $`g`$
+may change with $`n`$ therefore causes no subsequence restriction.
 
 The capacity comparison can be checked without an additional asymptotic
-threshold. Since $\mu\le nX$, $X\ge n^2$ and $K\ge n^{2/3}$,
+threshold. Since $`\mu\le nX`$, $`X\ge n^2`$ and $`K\ge n^{2/3}`$,
 
-$$
- \frac{\mu^{3/5}}{KX}
+
+
+```math
+\frac{\mu^{3/5}}{KX}
  \le \frac{n^{3/5}}{KX^{2/5}}
  \le n^{-13/15}<\frac25 \qquad(n\ge3).
-$$
+```
 
-The last inequality follows from $3^{13}>(5/2)^{15}$ and monotonicity.
+
+
+The last inequality follows from $`3^{13}>(5/2)^{15}`$ and monotonicity.
 Thus every target coordinate satisfies
 
-$$
- |a_i-A_i|,\ |b_j-B_j|,\ |d_\pm-D_\pm|
- \le KX/10+\mu^{3/5}<KX/2. \tag{P3}
-$$
+
+
+```math
+|a_i-A_i|,\ |b_j-B_j|,\ |d_\pm-D_\pm|
+ \le KX/10+\mu^{3/5}<KX/2. \qquad\text{(P3)}
+```
+
+
 
 The differences are integer multiples
-of $g$; the row and column target totals are exactly $T$. These
+of $`g`$; the row and column target totals are exactly $`T`$. These
 are precisely the hypotheses of Theorem U. Apply its simultaneous target
-assertion to obtain a permutation of exactly $P_n$ with line sums
-$a_i,b_j,d_+,d_-$, all prime. This proves Theorem P. $\square$
+assertion to obtain a permutation of exactly $`P_n`$ with line sums
+$`a_i,b_j,d_+,d_-`$, all prime. This proves Theorem P. $`\square`$
 
 The quantifier is every sufficiently large odd integer, not an unbounded
 subsequence. No inductive extension of one square to a larger square is used;
@@ -112,18 +140,22 @@ the construction is performed directly inside each full initial pool.
 
 ## Quantifiers and imported results
 
-All constants are fixed before increasing $n$: the 105-tuple, the gap
-bound 600, the graph degree 64, the midpoint width $\delta=10^{-7}$,
-and the target exponent $3/5$. The modulus and reduced class selected
+All constants are fixed before increasing $`n`$: the 105-tuple, the gap
+bound 600, the graph degree 64, the midpoint width $`\delta=10^{-7}`$,
+and the target exponent $`3/5`$. The modulus and reduced class selected
 from the seed supply vary only over finite sets. Every supply and placement
 inequality holds eventually for each member of those finite sets, so one
 threshold handles all choices. The scale separations used are
 
-$$
- n\log^2X=o(X^{3/4}),\quad nK=o(n^2),\quad
+
+
+```math
+n\log^2X=o(X^{3/4}),\quad nK=o(n^2),\quad
  \log^2X=o(K),\quad\sqrt{n\log n}=o(K),\quad
  \mu^{3/5}=o(X).
-$$
+```
+
+
 
 The two non-elementary imports beyond the fixed-progression prime number
 theorem are pinned in [REFERENCES.md](REFERENCES.md):
@@ -146,7 +178,7 @@ practical running-time guarantee. The elementary estimate (P3) alone would
 not supply such a threshold.
 
 The [explicit supplement](explicit-bound.md) supplies a complete numerical
-composition with sufficient cutoff $2^{2^{40}}$. That supplement uses its
+composition with sufficient cutoff $`2^{2^{40}}`$. That supplement uses its
 own quantitative supplies, controller regime and target construction; the
 original proof above is retained without replacing its unevaluated analytic
 thresholds. The finitely many odd orders below the new bound remain unresolved

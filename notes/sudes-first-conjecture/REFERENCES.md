@@ -22,8 +22,8 @@ Source: [scan of the original paper](https://denisevellachemla.eu/Rosser-Schoenf
 **Locators:** printed page 69, Theorem 1 and Corollary 1, equations (3.2),
 (3.5) and (3.6).
 
-**Use:** explicit upper and lower bounds for $\pi(x)$ give the index bound,
-mean bounds for the first $n^2$ odd primes, and the all-scale consecutive-prime
+**Use:** explicit upper and lower bounds for $`\pi(x)`$ give the index bound,
+mean bounds for the first $`n^2`$ odd primes, and the all-scale consecutive-prime
 matching E1. The prime 2 is explicitly excluded in the pool-total identity.
 
 ### Bennett–Martin–O'Bryant–Rechnitzer: progression estimates
@@ -40,7 +40,7 @@ and its hypotheses (6.23).
 
 **Use:** the real-zero bound, zero-sum bounds and proper-prime-power estimate
 enter E2. The strong interface S40-S evaluates Proposition 6.16 at
-$Z=8$, $\kappa_1=1$, $\kappa_2=\kappa_3=2^{20}$.
+$`Z=8`$, $`\kappa_1=1`$, $`\kappa_2=\kappa_3=2^{20}`$.
 The weak interface S40-W retains the sign and size of a possible exceptional
 zero. Both interfaces hold uniformly for the stated growing modulus ranges.
 These imported estimates include their published computational inputs; the
@@ -84,7 +84,7 @@ on printed page 6.
 derives a quantitative supply of disjoint common-gap pairs at every
 sufficiently large scale. It divides a positive weighted sieve surplus by a
 bound for the largest weight, then applies a matching and finite pigeonhole
-argument. The selected even gap $g\le600$ and reduced residue class may vary
+argument. The selected even gap $`g\le600`$ and reduced residue class may vary
 with the scale. Merely knowing that bounded gaps occur infinitely often would
 not supply the required conclusion.
 
@@ -103,7 +103,7 @@ analytic hypotheses in Section 5.
 
 **Use:** [A1](prime-targets.md#a1-almost-equal-ternary-primes-in-prescribed-fixed-classes)
 derives the prescribed-class version for a fixed even modulus, including
-prime powers, by replacing $W$ with $\operatorname{lcm}(q,W)$. It accounts
+prime powers, by replacing $`W`$ with $`\operatorname{lcm}(q,W)`$. It accounts
 for the Fourier error, lower density, restriction norm, lifted residues and
 exact convolution target. The published headline theorem does not prescribe
 individual residue classes; that extension is proved here. [A3](prime-targets.md#a3-prime-vectors-with-exact-total-uniformly-in-their-length)
