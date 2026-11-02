@@ -537,7 +537,7 @@ $`h`$, with each $`x_{ef}`$ in the stated range. Apply (18). For each
 sign the remaining marker coefficients $`\mu`$ have total zero modulo
 $`h`$, because the corresponding trace of $`D`$ is zero modulo $`h`$.
 
-Order each marker set arbitrarily. The coefficient on its $j$th
+Order each marker set arbitrarily. The coefficient on its $`j`$-th
 path edge is the prefix sum $`\sum_{i\le j}\mu_i`$, reduced modulo
 $`h`$. These edge divergences recover $`\mu`$ modulo $`h`$, including
 the final vertex. If two consecutive marker supports intersect,

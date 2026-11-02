@@ -100,7 +100,7 @@ Every reserve includes both legal reference orientations on the same entries.
 | All macro centering | Axis plus extra reserves `<Q_*=o(n^4)` | Midpoint error `O(delta K_7X)` | `delta K_7=O(n^.59)=o(K_0)` |
 | Whole-bundle orientation | One independent bit per main reservoir | Range `O(X)`; `O(K_7+P)` relevant bundles per line | Fluctuation `O(X sqrt((K_7+P)log n))=o(K_0X)` |
 | Unused-pool completion | Every remaining prime, exactly once | `O(X sqrt(n log n))` per line, plus changed mean | `sqrt(n log n)=o(K_0)` |
-| Compatible prime windows | `4n^3+12n^2+16n+8` targets | `|q-mu|<=mu^(3/5)` | `mu^(3/5)=o(X)` and hence `o(K_0X)` |
+| Compatible prime windows | `4n^3+12n^2+16n+8` targets | `\|q-mu\|<=mu^(3/5)` | `mu^(3/5)=o(X)` and hence `o(K_0X)` |
 
 The axis total invoice is `<2^24n^3K_4`; all extra entries total
 `O(n^2(P+g+K_7))=o(n^3K_4)`. Thus their sum is `<Q_*` eventually, with a

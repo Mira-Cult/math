@@ -4,7 +4,7 @@
     "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
     "source_sha256": "1a3173d3cb7635bd021aafa42673343ad6ea54ab0928a7aae08cb6c3a9689501",
     "public_path": "notes/sudes-first-conjecture/prime-hypercube-4d.md",
-    "public_sha256": "f44403746f6e740d0674e73aa88e6a1513943ae3200b4efa1f9eaaf97a7fea6c",
+    "public_sha256": "bbcedc4042b0448ad365c2a1456b3e32bfc4410aad505369c99875aa9b5761e8",
     "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
   },
   {
@@ -12,7 +12,7 @@
     "source_commit": "b837e307fc41975d0fb332c8215d6835ba47a271",
     "source_sha256": "b91309ac57931ac4fcd7d382cb1973806dfc3aa02f96148e324da7dd589c1f67",
     "public_path": "notes/sudes-first-conjecture/hyper4/hyper4_incidence.md",
-    "public_sha256": "8684b61e7c09ebcfc2021af3990e76e958bbb3fd35e634e76d1a407e62827aeb",
+    "public_sha256": "1067ef0b7bb2859357aca8fb2d19e7db9b9ff8448a91f377664c8e5f9573798e",
     "edits": "Replace workflow/authorship introductions with public scope; link inherited complete proofs publicly; replace private code commands by verification scope; retain mathematical arguments and finite diagnostic tables; renderer-safe math."
   },
   {
