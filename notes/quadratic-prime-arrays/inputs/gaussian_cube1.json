@@ -1,0 +1,53 @@
+{
+  "format": "quadratic-prime-array-v1",
+  "ring": "gaussian",
+  "n": 1,
+  "dimension": 3,
+  "family": "full-signed-coordinate-lines",
+  "coordinates": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "pool": [
+    [
+      1,
+      2
+    ]
+  ],
+  "array": [
+    [
+      1,
+      2
+    ]
+  ],
+  "provenance": {
+    "method": "singleton"
+  },
+  "entry_primality": [
+    {
+      "kind": "rational-prime-norm",
+      "rational_prime": 5,
+      "trial_division_through": 2
+    }
+  ],
+  "lines": [
+    {
+      "cells": [
+        0
+      ],
+      "sum": [
+        1,
+        2
+      ],
+      "norm": 5,
+      "primality": {
+        "kind": "rational-prime-norm",
+        "rational_prime": 5,
+        "trial_division_through": 2
+      }
+    }
+  ]
+}

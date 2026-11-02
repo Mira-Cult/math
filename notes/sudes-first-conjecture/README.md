@@ -82,3 +82,8 @@ The proof reserves disjoint reversible moves inside the prescribed pool, chooses
 
 The [optimized composition](optimized-bound.md) supplies the exact dependency graph. Its most direct supporting arguments are the [constant-window analytic estimates](optimized/cutoff_constant_window_analytic.md), [constant-window controller](optimized/cutoff_constant_window_controller.md), [degree-10 graph](optimized/cutoff_degree10_graph.md), [seed and target-modulus refinement](optimized/cutoff_seed_density_refinement.md), and [finite target lemma](optimized/cutoff_target_optimization.md). Earlier quantitative lemmas remain linked where they supply a proof dependency; their historical numerical profiles are not substituted into the final theorem without checking their hypotheses.
 
+
+
+## Related: Gaussian and Eisenstein prime arrays
+
+The [quadratic-prime-array note](../quadratic-prime-arrays/README.md) extends the geometric architecture to prime elements of the Gaussian and Eisenstein rings, with complete replacement analytic and rank-two physical-controller arguments. Gaussian arrays retain the odd-order obstruction; Eisenstein squares and full signed-line cubes exist at every sufficiently large integer order, even or odd. These are separate ineffective eventual results, not extensions of the rational-prime numerical bound.

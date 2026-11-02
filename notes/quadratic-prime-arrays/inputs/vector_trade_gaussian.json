@@ -1,0 +1,918 @@
+{
+  "format": "quadratic-vector-trade-fixture-v1",
+  "label": "finite-physical-trade-fixture-not-an-all-prime-line-array",
+  "ring": "gaussian",
+  "n": 19,
+  "dimension": 3,
+  "family": "full-signed-coordinate-lines",
+  "pool_count": 6859,
+  "pool_boundary": {
+    "last": [
+      235,
+      118
+    ],
+    "last_norm": 69149,
+    "next": [
+      263,
+      0
+    ],
+    "next_norm": 69169,
+    "pool_sha256": "40de975f8404fdbabb79ebc40d5b5c5c91a6290841cb6861864d51892fae9a83"
+  },
+  "coordinates": "lexicographic-zero-based",
+  "filler_rule": "unused-canonical-pool-in-order-to-unreserved-lexicographic-cells",
+  "native_body": [
+    1,
+    1,
+    1
+  ],
+  "stages": [
+    {
+      "gap": [
+        2,
+        0
+      ],
+      "levels": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "pairs": [
+        {
+          "lower": [
+            1,
+            2
+          ],
+          "upper": [
+            3,
+            2
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 5,
+            "trial_division_through": 2
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 13,
+            "trial_division_through": 3
+          },
+          "positive_cell": [
+            0,
+            0,
+            0
+          ],
+          "negative_cell": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "lower": [
+            2,
+            1
+          ],
+          "upper": [
+            4,
+            1
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 5,
+            "trial_division_through": 2
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 17,
+            "trial_division_through": 4
+          },
+          "positive_cell": [
+            1,
+            0,
+            3
+          ],
+          "negative_cell": [
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "lower": [
+            2,
+            5
+          ],
+          "upper": [
+            4,
+            5
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 29,
+            "trial_division_through": 5
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 41,
+            "trial_division_through": 6
+          },
+          "positive_cell": [
+            1,
+            2,
+            0
+          ],
+          "negative_cell": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "lower": [
+            5,
+            2
+          ],
+          "upper": [
+            7,
+            2
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 29,
+            "trial_division_through": 5
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 53,
+            "trial_division_through": 7
+          },
+          "positive_cell": [
+            0,
+            2,
+            3
+          ],
+          "negative_cell": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "gap": [
+        0,
+        2
+      ],
+      "levels": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "pairs": [
+        {
+          "lower": [
+            1,
+            4
+          ],
+          "upper": [
+            1,
+            6
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 17,
+            "trial_division_through": 4
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 37,
+            "trial_division_through": 6
+          },
+          "positive_cell": [
+            4,
+            4,
+            4
+          ],
+          "negative_cell": [
+            5,
+            4,
+            4
+          ]
+        },
+        {
+          "lower": [
+            5,
+            4
+          ],
+          "upper": [
+            5,
+            6
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 41,
+            "trial_division_through": 6
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 61,
+            "trial_division_through": 7
+          },
+          "positive_cell": [
+            5,
+            4,
+            7
+          ],
+          "negative_cell": [
+            4,
+            4,
+            7
+          ]
+        },
+        {
+          "lower": [
+            3,
+            8
+          ],
+          "upper": [
+            3,
+            10
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 73,
+            "trial_division_through": 8
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 109,
+            "trial_division_through": 10
+          },
+          "positive_cell": [
+            5,
+            6,
+            4
+          ],
+          "negative_cell": [
+            4,
+            6,
+            4
+          ]
+        },
+        {
+          "lower": [
+            8,
+            3
+          ],
+          "upper": [
+            8,
+            5
+          ],
+          "lower_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 73,
+            "trial_division_through": 8
+          },
+          "upper_primality": {
+            "kind": "rational-prime-norm",
+            "rational_prime": 89,
+            "trial_division_through": 9
+          },
+          "positive_cell": [
+            4,
+            6,
+            7
+          ],
+          "negative_cell": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    }
+  ],
+  "increment_lattice": {
+    "basis_columns": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "index": 4,
+    "smith_invariants": [
+      2,
+      2
+    ]
+  },
+  "patterns": [
+    {
+      "bits": [
+        0,
+        0
+      ],
+      "native_sum": [
+        1520,
+        2325
+      ],
+      "native_change": [
+        0,
+        0
+      ],
+      "face_changes": [],
+      "changed_axis_lines": 0,
+      "changed_other_body_lines": 0,
+      "changed_signed_lines": 0,
+      "total_sum": [
+        737354,
+        734003
+      ],
+      "array_sha256": "b34e8557b3bd4ab1f0b8883d5e7ef918a68388c6c3669010dadef2f6aa4821bb",
+      "all_line_sums_sha256": "1d4d4e19c73081d536af310be8cd655afd4efbb34bc1438f6167d60e48745833"
+    },
+    {
+      "bits": [
+        1,
+        0
+      ],
+      "native_sum": [
+        1522,
+        2325
+      ],
+      "native_change": [
+        2,
+        0
+      ],
+      "face_changes": [
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            338,
+            459
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            2442,
+            1535
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            2138,
+            1777
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 3
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            2112,
+            2075
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 2
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            2067,
+            1780
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 1
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            686,
+            759
+          ]
+        }
+      ],
+      "changed_axis_lines": 0,
+      "changed_other_body_lines": 0,
+      "changed_signed_lines": 7,
+      "total_sum": [
+        737354,
+        734003
+      ],
+      "array_sha256": "311ee1fddde7b3c5360dd6b6563df3872d9453fa0c1f4ea7b8b2198cea58487a",
+      "all_line_sums_sha256": "b88cb63fd486574c40f149e04c69e95276baf46b44b9fcce5824b74584e8d617"
+    },
+    {
+      "bits": [
+        0,
+        1
+      ],
+      "native_sum": [
+        1520,
+        2327
+      ],
+      "native_change": [
+        0,
+        2
+      ],
+      "face_changes": [
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1921,
+            2088
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 7
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            2028,
+            1845
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1958,
+            1875
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 6
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            1759,
+            2018
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1813,
+            788
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 5
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            1127,
+            1896
+          ]
+        }
+      ],
+      "changed_axis_lines": 0,
+      "changed_other_body_lines": 0,
+      "changed_signed_lines": 7,
+      "total_sum": [
+        737354,
+        734003
+      ],
+      "array_sha256": "276077b2d3be5b593cd65edc3e71ee32ffeba3186d5c08778b4a29f5cc0dbf7e",
+      "all_line_sums_sha256": "e4eb9f98aba37a9d624930fc66441a2b5ecb3e2277993964acf3a047f06ba2da"
+    },
+    {
+      "bits": [
+        1,
+        1
+      ],
+      "native_sum": [
+        1522,
+        2327
+      ],
+      "native_change": [
+        2,
+        2
+      ],
+      "face_changes": [
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            338,
+            459
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            2442,
+            1535
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 0
+          },
+          "change": [
+            2,
+            0
+          ],
+          "sum": [
+            2138,
+            1777
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 3
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            2112,
+            2075
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1921,
+            2088
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              1
+            ],
+            "sign": 1,
+            "fixed_axis": 2,
+            "fixed_coordinate": 7
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            2028,
+            1845
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 2
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            2067,
+            1780
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1958,
+            1875
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              0,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 1,
+            "fixed_coordinate": 6
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            1759,
+            2018
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 1
+          },
+          "change": [
+            -2,
+            0
+          ],
+          "sum": [
+            686,
+            759
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 4
+          },
+          "change": [
+            0,
+            2
+          ],
+          "sum": [
+            1813,
+            788
+          ]
+        },
+        {
+          "line": {
+            "kind": "face",
+            "varying_axes": [
+              1,
+              2
+            ],
+            "sign": 1,
+            "fixed_axis": 0,
+            "fixed_coordinate": 5
+          },
+          "change": [
+            0,
+            -2
+          ],
+          "sum": [
+            1127,
+            1896
+          ]
+        }
+      ],
+      "changed_axis_lines": 0,
+      "changed_other_body_lines": 0,
+      "changed_signed_lines": 13,
+      "total_sum": [
+        737354,
+        734003
+      ],
+      "array_sha256": "4f849a8cbb63b78c17cd2ba72fee8120aa469e53fd318ec8fedbadebe5e3e2c4",
+      "all_line_sums_sha256": "a6e5fe183a14de106258cdc23a0d1a125d67b2053822e9d860c573db38f72c62"
+    }
+  ],
+  "scope": {
+    "all_prime_line_sums_claimed": false,
+    "asymptotic_construction_claimed": false,
+    "claim": "two actual independent cuboid increments on one exact pool permutation"
+  }
+}

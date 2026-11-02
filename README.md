@@ -28,3 +28,5 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 
 
 - [Prime cubes with every full signed-line sum prime](notes/sudes-first-conjecture/prime-cube.md) (2026-11-02 research proof). Every sufficiently large odd n admits a placement of exactly the first n³ odd primes with all 3n²+6n+4 full signed-coordinate line sums prime. Includes all slice diagonals and four body diagonals; no evaluated cutoff or square-section primality claim. Conventional proof with internal review, not formally verified or externally peer accepted.
+
+- [Gaussian and Eisenstein prime squares and cubes](notes/quadratic-prime-arrays/README.md) (2026-11-02 research proof). Canonical Gaussian arrays at every sufficiently large odd order, and Eisenstein arrays at every sufficiently large integer order, including even orders and multiples of three. Complete conventional proofs, exact pools, local obstructions, finite certificates and reproducible checks; thresholds ineffective and unevaluated. Internally reviewed, not kernel-verified or externally peer accepted.

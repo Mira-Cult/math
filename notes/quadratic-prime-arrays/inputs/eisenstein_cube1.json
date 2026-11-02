@@ -1,0 +1,53 @@
+{
+  "format": "quadratic-prime-array-v1",
+  "ring": "eisenstein",
+  "n": 1,
+  "dimension": 3,
+  "family": "full-signed-coordinate-lines",
+  "coordinates": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "pool": [
+    [
+      2,
+      0
+    ]
+  ],
+  "array": [
+    [
+      2,
+      0
+    ]
+  ],
+  "provenance": {
+    "method": "singleton"
+  },
+  "entry_primality": [
+    {
+      "kind": "inert-rational-associate",
+      "rational_prime": 2,
+      "trial_division_through": 1
+    }
+  ],
+  "lines": [
+    {
+      "cells": [
+        0
+      ],
+      "sum": [
+        2,
+        0
+      ],
+      "norm": 4,
+      "primality": {
+        "kind": "inert-rational-associate",
+        "rational_prime": 2,
+        "trial_division_through": 1
+      }
+    }
+  ]
+}
