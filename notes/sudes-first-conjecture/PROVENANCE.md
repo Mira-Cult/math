@@ -171,3 +171,35 @@ The arithmetic checks certify the declared finite inequalities, source integrity
 The new classical deductions use Rosser–Schoenfeld for index and pool-mean bounds, Bennett–Martin–O'Bryant–Rechnitzer for explicit zero-counting and exceptional-zero estimates, and McCurley's parameterized explicit-formula and zero-sum calculations. In particular, the extended source domain is proved from the parameterized formulas; a published lemma is not simply invoked outside its printed domain. The corrected primitive/imprimitive character normalization and omitted Euler-factor prime-power allowances are retained.
 
 No claim of optimality, a proof for the full finite remaining range, or a practical construction at this scale is made.
+
+
+
+## Full signed-line cube
+
+Manuscript IV gives a proposed unconditional conventional proof that, for every sufficiently large odd n, exactly the first n³ odd primes can be placed once each in a cube with prime sums on all 3n²+6n+4 full signed-coordinate lines. The threshold is ineffective and unevaluated. The result includes every axis line, both diagonals in every coordinate-parallel square slice, and the four body diagonals. It does not require a square-section sum to be prime.
+
+### Sources and complete public dependency chain
+
+The four new mathematical sources were frozen at research revision `a2445962ec6e06b2a893980fb7a183057eb9bcee`: `signed_cube.md`, `signed_incidence.md`, `signed_targets.md`, and `signed_trades.md`. The final delivery and review revision is `cdb7879e358f93afa54b685027a27692d22635a9`. The separately reviewed full-matrix integer-kernel certificates were frozen at `f44ac4d78246d8190f653fdbc3ee18525f6c5cc1`. The axis-controller and target baseline was preserved from `aba3397991165103c2bebca3a898a4b30d79fcb2`.
+
+The public [composition](prime-cube.md) and [six supporting manuscripts](cube/README.md) include the complete active mathematical chain: full integer compatibility, signed physical cuboid trades, prime targets and residue routing, the baseline triangular axis controller, symmetric exact-total targets, and bounded tensor-expander coefficients. The [finite target-list lemma](explicit-targets.md) and [degree-64 graph construction](controller.md#f-independent-row-and-column-controls) are reused from the already public square proof. The latter retains the expansion-eight capacity used by the cube argument; it is not replaced by the optimized square proof's different graph constants.
+
+The named non-elementary prime-distribution input is the short-interval progression consequence in Section 1.2, printed page 3, of [Thorner–Zaman, arXiv:2108.10878v2](https://arxiv.org/pdf/2108.10878v2). The manuscripts specify its interval lengths, logarithmic modulus range, uniformity, and ineffective threshold. No growing-complexity prime-pattern theorem is substituted for this input.
+
+Public exposition changes notation and links for readability, omits internal workflow instructions and unrelated investigations, and uses GitHub-safe math delimiters, equivalent comparison macros, and text equation labels. The incidence appendix retains its complete active axis-image, integer-rounding, and tensor-expander proofs; unrelated later sections on other constraint systems are not needed here. Executable instructions are replaced by the verification description below so that the exposition does not claim private programs are publicly runnable. The [source map](cube/source-map.json) binds source and public manuscript hashes. These edited exposition bytes are not the exact-byte scientific recovery.
+
+### Review and finite checks
+
+Four fresh internal nonauthor reviewers examined the integer, geometric, analytic, and end-to-end composition aspects of the frozen sources. Their reports identify authorship boundaries, exact revisions, inspected arguments, finite tests, and exclusions. They found no blocking defect in their stated scopes. Component collaborators' preliminary cross-checks were not substituted for these fresh reviews. A further publication-side read of the new composition and its dependencies found no concrete defect within its bounded scope.
+
+The publication-side replay used Python 3.12.14 and exact source/input bytes matching the recorded bindings. It reproduced:
+
+- Exact-pool prime cubes at n = 1, 3, and 5, with respectively 1, 49, and 109 required prime line sums; 18 corrupted certificates were rejected.
+- An order-19 physical fixture using all 6,859 prescribed primes, 44 available switches and four selected stages, changing exactly one signed line while preserving all others. This is a trade certificate, not a claim that every line in that fixture is prime.
+- Joint support fixtures at orders 31 and 51, with no old-control body hits and maximum old face loads 8 and 14. Four corrupted geometries and three invalid exponent choices were rejected; eight positive asymptotic exponent margins were checked.
+
+The delivered source also contains complete integer-image and kernel certificates at n = 3 and 5, checked by independently reconstructed line matrices and unimodular transformations, and finite compatible-target certificates. These additional source review records were inspected; they are not described as a second publication-side replay of every test. The order-five torsion conditions and the order-three obstruction to adding a diagonal-square prime-sum requirement remain part of the mathematical account. They do not contradict the positive full-line examples.
+
+Finite checks do not prove the asymptotic analytic supplies, uniform packing, or the full eventual theorem. The proofs of those statements are the conventional arguments in the linked manuscripts. The publication review did not independently reprove the external analytic theorems or their computational inputs, and no end-to-end kernel formalization is claimed. The source's final remote CI was skipped rather than passed; no full-repository CI pass is asserted here.
+
+This publication makes no literature-priority, external peer-acceptance, efficient-construction, evaluated-cutoff, or growing-dimension arrangement claim. The three square manuscripts remain unchanged.

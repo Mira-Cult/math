@@ -4,15 +4,17 @@
 
 Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that every row, column, and both main diagonals have prime sums?
 
-The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{4320}`$**. The full conjecture for every positive odd order is still open. This index preserves three stages of the proof as separate manuscripts, so that the qualitative argument and the initial explicit bound remain readable in their original form.
+The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{4320}`$**. The full conjecture for every positive odd order is still open. This index preserves the three square manuscripts and adds the full signed-line cube theorem as a fourth manuscript. The qualitative argument and the initial explicit bound remain readable in their original form.
 
-## Three manuscripts
+## Four manuscripts: three square proofs and the cube extension
 
 1. **[I. Eventual existence](proof.md).** Every sufficiently large odd order works. This is the original qualitative argument: it constructs a placement but does not provide an effective numerical threshold. Supporting manuscripts: [centered controller](controller.md) and [prime targets with an exact total](prime-targets.md).
 2. **[II. The initial published explicit bound](explicit-bound.md).** Every odd $`n\ge2^{2^{40}}`$ works. This separate quantitative proof replaces the ineffective analytic inputs and pays all construction costs. Supporting manuscripts: [classical prime supplies](classical-primes.md), [finite controller](explicit-controller.md), and [exact prime targets](explicit-targets.md). This manuscript is preserved as the initial public numerical result.
 3. **[III. The optimized explicit bound](optimized-bound.md).** Every odd $`n\ge2^{4320}`$ works. The improvement changes the analytic estimates, reservoir allocation, graph degree, and target window together. Its full composition and linked supporting proofs are published here.
 
-These are conventional mathematical arguments with internal review and exact arithmetic checks. They are not end-to-end proof-assistant formalizations or claims of external peer acceptance. [Provenance](PROVENANCE.md#optimized-bound) identifies the scientific snapshot, review scope, and verification limits; [References](REFERENCES.md) identifies the classical imports.
+4. **[IV. The full signed-line prime cube](prime-cube.md).** For every sufficiently large odd $`n`$, exactly the first $`n^3`$ odd primes can be placed in a cube with prime sums on all $`3n^2+6n+4`$ full signed-coordinate lines: axes, both diagonals in every coordinate-parallel square slice, and the four body diagonals. The threshold is not evaluated. Its [supporting proofs](cube/README.md) establish integer compatibility, physical trades, and compatible prime targets.
+
+These are conventional mathematical arguments with internal review and exact arithmetic checks. They are not end-to-end proof-assistant formalizations or claims of external peer acceptance. [Provenance](PROVENANCE.md) identifies the scientific snapshot, review scope, and verification limits; [References](REFERENCES.md) identifies the classical imports.
 
 ## The conjecture
 
@@ -79,3 +81,4 @@ The proof reserves disjoint reversible moves inside the prescribed pool, chooses
 - **One coupled calculation for every larger order.** The final proof checks prime-supply scales, all reservations, floors and ceilings, centering, target size, and correction capacity together. Pointwise estimates and monotone envelopes establish persistence throughout the infinite tail.
 
 The [optimized composition](optimized-bound.md) supplies the exact dependency graph. Its most direct supporting arguments are the [constant-window analytic estimates](optimized/cutoff_constant_window_analytic.md), [constant-window controller](optimized/cutoff_constant_window_controller.md), [degree-10 graph](optimized/cutoff_degree10_graph.md), [seed and target-modulus refinement](optimized/cutoff_seed_density_refinement.md), and [finite target lemma](optimized/cutoff_target_optimization.md). Earlier quantitative lemmas remain linked where they supply a proof dependency; their historical numerical profiles are not substituted into the final theorem without checking their hypotheses.
+

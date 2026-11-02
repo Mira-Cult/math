@@ -1,0 +1,49 @@
+{
+  "source_revision": "a2445962ec6e06b2a893980fb7a183057eb9bcee",
+  "delivery_revision": "cdb7879e358f93afa54b685027a27692d22635a9",
+  "public_baseline": "92f4d2ac767d4d8e7e3c6705b24658534054b1b7",
+  "files": [
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_cube.md",
+      "source_sha256": "1326878734d551b6d6c2f040336edc5f0500d3ba428f8a3480d846609391d639",
+      "public_path": "notes/sudes-first-conjecture/prime-cube.md",
+      "public_sha256": "a9424e6ecc57fc6268ff4fb9eae9111acd71373da77dc1e12ada0fce9ffccf03"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_incidence.md",
+      "source_sha256": "b7d34a3bfde077ebfa9d323cc66dc1a1c7121b4dc83f86033b5ecc4ccaeda748",
+      "public_path": "notes/sudes-first-conjecture/cube/signed_incidence.md",
+      "public_sha256": "4b9b0686033c01bee1dd5f708f6c6a7e8bdd07067bdf76d36a3821e4eb0a4e61"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_targets.md",
+      "source_sha256": "981a4db36ed62234d28748af4faf54ca7ee395a693e966105b6a6ebe3ca89fb1",
+      "public_path": "notes/sudes-first-conjecture/cube/signed_targets.md",
+      "public_sha256": "d742e5391e4691a003b9a06d970690d1fa1f57a90fe27c84c7a66b77cde8edff"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_trades.md",
+      "source_sha256": "7b271ae6416c2115727d239c8a4172430aaa3d282c22ccc8e3f4027a079f3ef9",
+      "public_path": "notes/sudes-first-conjecture/cube/signed_trades.md",
+      "public_sha256": "1690d07bbb8bfc3ce7f475bdeb0ed19d669447d34bcb36e3f08772dd00eb5e16"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/cube_controller.md",
+      "source_sha256": "f845e7fdb6f441a62f1cb9c26296fd53af9674129216c366b0f89dc109eac1ef",
+      "public_path": "notes/sudes-first-conjecture/cube/cube_controller.md",
+      "public_sha256": "867fa730b8d0d4d52ff392433877d598b2c8a188a2f110eaf82e7584077abb80"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/cube_targets.md",
+      "source_sha256": "b92be738cd42c0ec61c6ed40004c267ce631ba08dc37899656cd1055f8388559",
+      "public_path": "notes/sudes-first-conjecture/cube/cube_targets.md",
+      "public_sha256": "702f24051d068fd623d0d0c2d0131a55bfeb8d7af0ce47d11c2549eea0542848"
+    },
+    {
+      "source_path": "problems/prime-arrays-beyond-square/manuscripts/incidence.md",
+      "source_sha256": "2c9e334928fbadffa703ad2baebbcabd3049a3c356037805526565d8256b53e5",
+      "public_path": "notes/sudes-first-conjecture/cube/incidence.md",
+      "public_sha256": "3d199df5f05b436cc4e94c315e54c33e466c331e5a91f695f8ee628b5a2e1b44"
+    }
+  ]
+}
