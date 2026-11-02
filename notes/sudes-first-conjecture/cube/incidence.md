@@ -41,7 +41,7 @@ Consequently the integer image is saturated, and
 
 
 ```math
-\operatorname{rank}_{\mathbb Q}M=n^D-(n-1)^D,
+\mathrm{rank}\,_{\mathbb Q}M=n^D-(n-1)^D,
  \qquad \ker_{\mathbb Z}M=(\ker\epsilon)^{\otimes D}. \qquad\text{(2)}
 ```
 
@@ -391,7 +391,7 @@ $`h^2/(2\Delta)\sum_vf_v^2`$. For a zero-mean real function $`v`$,
 subtract a median and apply this bound to the positive and negative
 parts. Each is supported on at most half the vertices. Their energies
 sum to at most the energy of $`v`$, whereas their squared norms sum
-to $`\sum(v-\operatorname{med}v)^2\geq\sum v^2`$. Hence
+to $`\sum(v-\mathrm{med}\,v)^2\geq\sum v^2`$. Hence
 $`\lambda_2(BB^{\mathsf T})\geq h^2/(2\Delta)`$. Dividing by
 $`2\Delta`$ proves (9a). The walk has nonnegative spectrum because
 $`\sum_{uv}(v_u-v_v)^2\leq2\Delta\sum_vv_v^2`$.

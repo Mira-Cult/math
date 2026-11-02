@@ -121,8 +121,8 @@ The rational rank and the integer-kernel rank are respectively
 
 
 ```math
-\operatorname{rank}L=3n^2+3n-1,\qquad
- \operatorname{rank}\ker_{\mathbb Z}L=n^3-3n^2-3n+1.        \qquad\text{(4)}
+\mathrm{rank}\,L=3n^2+3n-1,\qquad
+ \mathrm{rank}\,\ker_{\mathbb Z}L=n^3-3n^2-3n+1.        \qquad\text{(4)}
 ```
 
 

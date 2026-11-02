@@ -13,7 +13,7 @@
       "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_incidence.md",
       "source_sha256": "b7d34a3bfde077ebfa9d323cc66dc1a1c7121b4dc83f86033b5ecc4ccaeda748",
       "public_path": "notes/sudes-first-conjecture/cube/signed_incidence.md",
-      "public_sha256": "4b9b0686033c01bee1dd5f708f6c6a7e8bdd07067bdf76d36a3821e4eb0a4e61"
+      "public_sha256": "7eb70fba843ab8fd7fc2fbe27b36abb68a14bb46ad4fb599447d12ef117befaa"
     },
     {
       "source_path": "problems/prime-arrays-beyond-square/manuscripts/signed_targets.md",
@@ -43,7 +43,7 @@
       "source_path": "problems/prime-arrays-beyond-square/manuscripts/incidence.md",
       "source_sha256": "2c9e334928fbadffa703ad2baebbcabd3049a3c356037805526565d8256b53e5",
       "public_path": "notes/sudes-first-conjecture/cube/incidence.md",
-      "public_sha256": "3d199df5f05b436cc4e94c315e54c33e466c331e5a91f695f8ee628b5a2e1b44"
+      "public_sha256": "c1a28ab8f7bc8fd8414f885dd2f2ed17459ebc7fc2ac886a1226ee7833c00c0a"
     }
   ]
 }
