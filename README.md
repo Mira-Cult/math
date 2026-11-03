@@ -1,6 +1,22 @@
 # Public mathematical results
 
-An index of results publicly released in this repository.
+An index of results and proof drafts publicly released in this repository.
+Each entry states its scope and verification status; publication does not
+by itself imply formal verification or external referee acceptance.
+
+## Prime arrays and lattice reductions
+
+| Result | Exact scope | Sources and verification |
+| --- | --- | --- |
+| **Sude's First Theorem** | For every positive odd n, exactly the first n² odd primes can be arranged, each once, in an n × n square with prime sums in every row, column and both main diagonals. | [Resolution and proof](notes/sudes-first-conjecture/resolution.md), [complete public replay packet](notes/sudes-first-conjecture/packet/README.md), and [internal nonauthor review](notes/sudes-first-conjecture/proof-source/problems/prime-line-sums/reviews/sude-all-odd-independent-review.md). A conventional computer-assisted theorem with explicit analytic imports and independently reproduced exact checks; no end-to-end formalization or external referee acceptance claimed. |
+| **Trimmed coded folding for Euclidean GapCVP** | For each fixed rational 0 < ε < 1/2, a deterministic ordinary reduction from sparse Boolean quadratic satisfiability with source-size bound N has exact gap D^(1/2−ε) and full lattice rank D ≤ N^(1/ε+o(1)). The lattice depends on the instance; this is a rank bound, not the runtime exponent. | [Statement, complete proof packet and finite checks](notes/lattices/trimmed-coded-fold/README.md), with [provenance and verification limits](notes/lattices/trimmed-coded-fold/PROVENANCE.md). A complete mathematical **proof draft**, not formally verified or human-expert-reviewed. |
+
+The [prime-array research index](notes/sudes-first-conjecture/README.md)
+also records higher-dimensional and other-field generalizations, each with
+its own range and proof status. Those ranges are not enlarged by the
+all-odd-order square theorem.
+
+## Turing machines and tilings
 
 | Result | Exact scope | Sources and verification |
 | --- | --- | --- |
@@ -20,7 +36,3 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 ## Research notes
 
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
-
-- [Trimmed coded folding for Euclidean GapCVP](notes/lattices/trimmed-coded-fold/README.md) (2026-10-26 research proof draft). A quantitative lattice-rank bound for ordinary reductions, with the complete applicable proof packet, reproducible finite checks, and a comparison with Fenzi–Weissenberg's preprocessing result. Not formally verified or human-expert-reviewed.
-
-- [Sude's First Conjecture](notes/sudes-first-conjecture/README.md)
