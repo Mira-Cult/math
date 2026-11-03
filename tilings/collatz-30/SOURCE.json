@@ -10,8 +10,8 @@
   "files": [
     {
       "path": "ATTRIBUTION.md",
-      "public_sha256": "24070ff1a8a729bb235649df86c734e4df2b50876e3ab50b77037120330efb31",
-      "adaptation": "new public release documentation"
+      "public_sha256": "ad48243882e20c74680b4d51ff6904b30aeb48f772ca0a9c1a4d51d72aba0ae5",
+      "adaptation": "new public release documentation; Collatz machine navigation updated 2026-11-03, mathematical content unchanged"
     },
     {
       "path": "PROBLEM.md",

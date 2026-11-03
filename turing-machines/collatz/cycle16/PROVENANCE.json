@@ -1,0 +1,46 @@
+{
+  "description": "Exact source identity of the 16-state Collatz machine package.",
+  "source_snapshot_commit": "b6c17e92bb9f0f4ba070190e17e17a24fe789ec6",
+  "toolchain": "leanprover/lean4:v4.30.0",
+  "machine": {
+    "file": "collatz-cycle16.tm",
+    "string": "1RP1LA_0LC0LC_0RD1LC_1RP1RE_1LB0RF_1LG1RF_0RI0LH_1RE1LH_0LA0LJ_1LK1LJ_0RN0RL_1RM1RL_0LA1RI_0RO1RN_0RZ1LB_0LC1RP",
+    "string_sha256": "5de502db2350261f00471e9bbf998957dd30cbb6eb4000474bf8953ebe90d131",
+    "file_sha256": "6904107db5c32cca7dd8395e63f0e07e8abaa1449330bc17bca0f82351076867"
+  },
+  "machine_specific_lean_sources": {
+    "proofs/Machine16.lean": {
+      "lean_module_path": "CollatzTM/Machine16.lean",
+      "sha256": "79449c1ea696940b2b78ff651567e5fb4d70ab33c3423a6dda13744131f2bbb3"
+    },
+    "proofs/Sixteen.lean": {
+      "lean_module_path": "CollatzTM/Sixteen.lean",
+      "sha256": "bf425611324ea79ce2b11094652496a934b93c6cf5f96f3fc7a2f33a9505e174"
+    },
+    "proofs/SixteenEntry.lean": {
+      "lean_module_path": "CollatzTM/SixteenEntry.lean",
+      "sha256": "03dfb62bea58dd5d03f4a530b34d9e5cc586fe3fc5f8c29a5fa780b68ad53dd7"
+    },
+    "proofs/SixteenEven.lean": {
+      "lean_module_path": "CollatzTM/SixteenEven.lean",
+      "sha256": "d8d37bc1cb110a64a7c754f0fa28444d09543894e2942aff348b0d8226115883"
+    },
+    "proofs/SixteenMain.lean": {
+      "lean_module_path": "CollatzTM/SixteenMain.lean",
+      "sha256": "61439d21914bce41c214626ef4cacff341b10514ea0d6311001405647cbc3f4c"
+    },
+    "proofs/SixteenOdd.lean": {
+      "lean_module_path": "CollatzTM/SixteenOdd.lean",
+      "sha256": "5d839ab58e2a20633aec56655d56b68a4d8367faaf69bc93143641b401265b2a"
+    },
+    "proofs/SixteenRebuild.lean": {
+      "lean_module_path": "CollatzTM/SixteenRebuild.lean",
+      "sha256": "c70b886ef04400866f1cfe82e7a0a3926bae41240788e1c35f39db3e8ea6ad1c"
+    }
+  },
+  "shared_proof_dependency": "../shared/proofs/",
+  "complete_environment_manifest": "../PROVENANCE.json",
+  "import_inventory": "../proofs/IMPORTS.json",
+  "build_recipe": "../scripts/prepare_proofs.py",
+  "source_contents_unchanged": true
+}

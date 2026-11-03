@@ -1,0 +1,42 @@
+# Machine-package layout migration
+
+The 2026-11-03 reorganization groups [related Collatz machines](README.md) while
+keeping each writeup, provenance, attribution, exact table and machine-specific
+proof with its own machine. Shared Lean infrastructure is stored once.
+
+## What did not change
+
+- Every one of the 22 Lean source files has its original bytes and SHA-256.
+- All three machine files have their original bytes.
+- The 17-state machine's Python and C++ checker code is byte-identical.
+- The mathematical claims and proof status are unchanged.
+- Git history is retained; no history was rewritten and no license was changed.
+
+## Build layout
+
+The old monolithic Lean source directory is split into the individual machines'
+`proofs/` directories and `shared/proofs/`. [PROVENANCE.json](PROVENANCE.json)
+records the original module names, new canonical paths and original hashes.
+The [assembler](scripts/prepare_proofs.py) copies the verified source bytes into
+`.build/lean/`, preserving the original module paths, Lake project and audit.
+There are no tracked symlinks, duplicate canonical proofs or generated build
+products. Run the [new verification commands](README.md#verify-locally).
+
+## Earlier links and commands
+
+The old machine catalogue headings and 17-state README remain as navigation
+pointers. All three old `.tm` URLs are retained as checked compatibility copies.
+The two old Python verification commands forward to the canonical family
+scripts. Direct old Lean-source and checker-file URLs have moved; the complete
+[path map](MIGRATION.json) records every move. Pinned historical URLs remain
+available in [the previous public snapshot](https://github.com/Mira-Cult/math/tree/334212df64a1d7c3d0f4b1227b882d15e9c85166/turing-machines).
+
+`cd turing-machines/proofs && lake build` is replaced by the assembler command;
+the old proof directory contains a migration guide, not a second proof tree.
+
+## Verification of this migration
+
+Source hashes, original blob identities, import closure, machine table strings,
+local provenance, document paths and compatibility-table equality are checked.
+A fresh Lean build/kernel replay is separate from byte-identity checking; consult
+[VALIDATION.md](VALIDATION.md) for what was actually rerun for this change.

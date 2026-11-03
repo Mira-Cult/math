@@ -1,0 +1,201 @@
+{
+  "date_utc": "2026-11-03",
+  "previous_public_snapshot": "334212df64a1d7c3d0f4b1227b882d15e9c85166",
+  "mappings": [
+    {
+      "from": "turing-machines/README.md",
+      "to": "turing-machines/collatz/README.md",
+      "note": "Old page is now the family catalogue; existing evaluator/cycle headings remain."
+    },
+    {
+      "from": "turing-machines/ATTRIBUTION.md",
+      "to": "turing-machines/collatz/ATTRIBUTION.md",
+      "note": "Old page is an attribution index; each machine also has local attribution."
+    },
+    {
+      "from": "turing-machines/PROVENANCE.json",
+      "to": "turing-machines/collatz/PROVENANCE.json",
+      "note": "Old JSON points to the canonical manifest."
+    },
+    {
+      "from": "turing-machines/proofs/Audit.lean",
+      "to": "turing-machines/collatz/shared/proofs/Audit.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Arithmetic.lean",
+      "to": "turing-machines/collatz/shared/proofs/Arithmetic.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/ArithmeticBridge.lean",
+      "to": "turing-machines/collatz/shared/proofs/ArithmeticBridge.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Binary.lean",
+      "to": "turing-machines/collatz/evaluator12/proofs/Binary.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Core.lean",
+      "to": "turing-machines/collatz/shared/proofs/Core.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Evaluator.lean",
+      "to": "turing-machines/collatz/shared/proofs/Evaluator.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/ExactHalt.lean",
+      "to": "turing-machines/collatz/shared/proofs/ExactHalt.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Global.lean",
+      "to": "turing-machines/collatz/shared/proofs/Global.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Machine12.lean",
+      "to": "turing-machines/collatz/evaluator12/proofs/Machine12.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Machine16.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/Machine16.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Search.lean",
+      "to": "turing-machines/collatz/shared/proofs/Search.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Sixteen.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/Sixteen.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/SixteenEntry.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/SixteenEntry.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/SixteenEven.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/SixteenEven.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/SixteenMain.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/SixteenMain.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/SixteenOdd.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/SixteenOdd.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/SixteenRebuild.lean",
+      "to": "turing-machines/collatz/cycle16/proofs/SixteenRebuild.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Support.lean",
+      "to": "turing-machines/collatz/shared/proofs/Support.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/TableAudit.lean",
+      "to": "turing-machines/collatz/shared/proofs/TableAudit.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/Twelve.lean",
+      "to": "turing-machines/collatz/evaluator12/proofs/Twelve.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM/TwelveMain.lean",
+      "to": "turing-machines/collatz/evaluator12/proofs/TwelveMain.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/CollatzTM.lean",
+      "to": "turing-machines/collatz/shared/proofs/CollatzTM.lean",
+      "note": "Exact original blob and SHA-256 preserved."
+    },
+    {
+      "from": "turing-machines/proofs/lakefile.toml",
+      "to": "turing-machines/collatz/proofs/lakefile.toml",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/proofs/lake-manifest.json",
+      "to": "turing-machines/collatz/proofs/lake-manifest.json",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/proofs/lean-toolchain",
+      "to": "turing-machines/collatz/proofs/lean-toolchain",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/proofs/IMPORTS.json",
+      "to": "turing-machines/collatz/proofs/IMPORTS.json",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/machines/collatz12.tm",
+      "to": "turing-machines/collatz/evaluator12/collatz12.tm",
+      "note": "Old raw URL retained as a checked byte-identical compatibility copy."
+    },
+    {
+      "from": "turing-machines/machines/collatz-cycle16.tm",
+      "to": "turing-machines/collatz/cycle16/collatz-cycle16.tm",
+      "note": "Old raw URL retained as a checked byte-identical compatibility copy."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/SOURCE.json",
+      "to": "turing-machines/collatz/beeping17/SOURCE.json",
+      "note": "Manifest updated only for layout, local attribution and navigation hashes."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/collatz_beeping17.tm",
+      "to": "turing-machines/collatz/beeping17/collatz_beeping17.tm",
+      "note": "Old raw URL retained as a checked byte-identical compatibility copy."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/README.md",
+      "to": "turing-machines/collatz/beeping17/README.md",
+      "note": "Old README is a migration pointer; proof text unchanged apart from links."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/independent_check.py",
+      "to": "turing-machines/collatz/beeping17/independent_check.py",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/validate.cpp",
+      "to": "turing-machines/collatz/beeping17/validate.cpp",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/collatz-beeping17/machine.py",
+      "to": "turing-machines/collatz/beeping17/machine.py",
+      "note": "Exact original blob preserved."
+    },
+    {
+      "from": "turing-machines/scripts/check_release.py",
+      "to": "turing-machines/collatz/scripts/check_release.py",
+      "note": "Old command is a forwarding wrapper."
+    },
+    {
+      "from": "turing-machines/scripts/verify_finite.py",
+      "to": "turing-machines/collatz/scripts/verify_finite.py",
+      "note": "Old command is a forwarding wrapper."
+    }
+  ]
+}

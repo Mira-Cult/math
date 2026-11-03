@@ -29,7 +29,7 @@ Tristan Stérin and Damien Woods, *The Collatz Process Embeds a Base Conversion
 Algorithm* ([paper](https://arxiv.org/abs/2007.06979)). These are background,
 not proofs of the recurrent whole-plane polygon theorem stated here.
 
-The earlier [17-state beeping-machine release](../../turing-machines/collatz-beeping17/README.md)
+The earlier [17-state beeping-machine release](../../turing-machines/collatz/beeping17/README.md)
 is a different reduction and is not a build or proof dependency of this package.
 Its upstream attribution and license notice remain in
 [the Turing-machine attribution file](../../turing-machines/ATTRIBUTION.md).

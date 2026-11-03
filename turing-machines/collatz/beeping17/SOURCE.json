@@ -57,11 +57,19 @@
     },
     "README.md": {
       "origin": "Prepared for this public release.",
-      "published_sha256": "cba3c78655592fd607ddd21e4953e42068044e427cd747175d3776019a901756"
+      "published_sha256": "803fecf65615896182963b735feca92e0f654d7dd9bd5be14e3448cb1772420c",
+      "previous_published_sha256": "cba3c78655592fd607ddd21e4953e42068044e427cd747175d3776019a901756",
+      "modifications": [
+        "Navigation links updated for the family layout; theorem, proof and validation statements unchanged."
+      ]
     },
     "independent_check.py": {
       "origin": "Prepared for this public release.",
       "published_sha256": "9c40e6e4ac819435b5feb2e13ea6002a6c46f0796a6b6732d2557c30504f4c6a"
+    },
+    "ATTRIBUTION.md": {
+      "origin": "Extracted from the original public family attribution with local navigation.",
+      "published_sha256": "f833bc6d0aa1db6c5a429d791f9f52fe7dfd38a78c7cce4ee87fb502b697d0fd"
     }
   },
   "verification": {
@@ -97,5 +105,12 @@
       "status": "PASS"
     }
   },
-  "license_note": "No license choice or third-party relicensing is made by this manifest. See ../ATTRIBUTION.md."
+  "license_note": "No license choice or third-party relicensing is made by this manifest. See ATTRIBUTION.md.",
+  "layout_migration": {
+    "date_utc": "2026-11-03",
+    "previous_public_snapshot": "334212df64a1d7c3d0f4b1227b882d15e9c85166",
+    "previous_directory": "turing-machines/collatz-beeping17",
+    "canonical_directory": "turing-machines/collatz/beeping17",
+    "machine_and_checker_bytes_unchanged": true
+  }
 }
