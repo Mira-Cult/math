@@ -20,9 +20,9 @@ all-odd-order square theorem.
 
 | Result | Exact scope | Sources and verification |
 | --- | --- | --- |
-| 12-state binary Collatz evaluator | On each encoded positive input, halts exactly when its ordinary Collatz orbit reaches 1. Universal positive-input termination is equivalent to the ordinary Collatz conjecture. | [Machine and Lean proof](turing-machines/README.md#12-state-input-evaluator) |
-| 16-state binary Collatz cycle detector | From a blank tape, halts exactly when a nontrivial positive ordinary Collatz cycle exists. | [Machine and Lean proof](turing-machines/README.md#16-state-blank-tape-cycle-detector) |
-| 17-state binary Collatz beeping machine | From a blank tape, beeps infinitely often exactly when every positive Collatz orbit reaches 1. If b is the least counterexample, emits exactly b(b−1)/2 beeps. | [Machine, ordinary mathematical proof and finite checks](turing-machines/collatz-beeping17/README.md) |
+| 12-state binary Collatz evaluator | On each encoded positive input, halts exactly when its ordinary Collatz orbit reaches 1. Universal positive-input termination is equivalent to the ordinary Collatz conjecture. | [Machine and Lean proof](turing-machines/collatz/evaluator12/README.md) |
+| 16-state binary Collatz cycle detector | From a blank tape, halts exactly when a nontrivial positive ordinary Collatz cycle exists. | [Machine and Lean proof](turing-machines/collatz/cycle16/README.md) |
+| 17-state binary Collatz beeping machine | From a blank tape, beeps infinitely often exactly when every positive Collatz orbit reaches 1. If b is the least counterexample, emits exactly b(b−1)/2 beeps. | [Machine, ordinary mathematical proof and finite checks](turing-machines/collatz/beeping17/README.md) |
 | 30 fourteen-sided polygons with recurrence | An unseeded whole-plane tiling with fixed same-root completion recurrence exists exactly when full positive Collatz holds. Ordinary tileability is unconditional. | [Proof, exact geometry and reproducible checks](tilings/collatz-30/README.md) |
 | 488 Wang tile types for a seeded half-plane | With seed 487 at the origin of ℤ × ℕ₀, tiles the half-plane exactly when the pinned K215 machine does not halt. The ZFC consequence uses the upstream machine calibration. | [Tile set, ordinary mathematical proof and reproducible checks](tilings/wang-488/README.md) |
 
