@@ -1,5 +1,8 @@
 # Balanced binary residue cycles and a smaller completion remainder
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/prefix_balance_research`. The fixed-closing-pair and
 balanced-diagonal proposal is due to `/root/controller_redesign`.
 The permutation-layer placement, exact cell counts, and smaller regular
@@ -25,11 +28,13 @@ Assume the same reduced-class supplies and disjoint-pair selection
 hypotheses as BN, now paying the complete revised entry count below.
 The lower and upper entry intervals are
 
-\[
- [m-X/4-\delta X,m-X/4+\delta X],\qquad
+
+```math
+[m-X/4-\delta X,m-X/4+\delta X],\qquad
  [m+X/4-\delta X,m+X/4+\delta X],
- \quad 0\le\delta<1/4.                                  \tag{CY1}
-\]
+ \quad 0\le\delta\lt 1/4.                                  \qquad\text{(CY1)}
+```
+
 
 Every pair has one lower and one upper entry, with positive difference
 congruent to delta_j modulo g. The actual gaps lie in
@@ -43,9 +48,11 @@ the original controllable path. Relative to BN there is exactly one
 extra pair per bit in each orientation, hence 4b extra entries.
 The two diagonal families still contain b rectangles each. Therefore
 
-\[
-                         B_r=4(n+2)b.                    \tag{CY2}
-\]
+
+```math
+B_r=4(n+2)b.                    \qquad\text{(CY2)}
+```
+
 
 For a fixed reduced class, every pair contains at most one member of
 that class, and every double-pair rectangle at most two. The entire
@@ -73,9 +80,11 @@ Let S=P_0+J_b+7K be the actual number of main stages and put
 r_0=2dS. Their ordinary cells remain off both diagonals, with exactly
 r_0 cells on every row and column. The actual rectangle count is
 
-\[
-                   J_{\rm rect}=4dS+2b.                 \tag{CY3}
-\]
+
+```math
+J_{\rm rect}=4dS+2b.                 \qquad\text{(CY3)}
+```
+
 
 Use RP's explicit placement, whose rectangle rows and columns are
 all distinct and avoid the central row and column. Its designated
@@ -101,9 +110,11 @@ After all 2b layers, every row and column has exactly 4b ordinary
 residue cells. Continue with PB's usual ordinary main layers. A valid
 upper load and its sufficient placement gate are
 
-\[
- L=2d(P+J_b+7K)+4b+2,\qquad n>4L+8,\quad P_0\le P.       \tag{CY4}
-\]
+
+```math
+L=2d(P+J_b+7K)+4b+2,\qquad n\gt 4L+8,\quad P_0\le P.       \qquad\text{(CY4)}
+```
+
 
 Every partial pass has load at most this final upper bound. CY4 also
 implies RP's packing gate, since its right side exceeds
@@ -123,10 +134,12 @@ ordinary residue entries. Their signed quarter-X offsets cancel.
 
 A diagonal rectangle has template
 
-\[
-             \begin{pmatrix}a&a+\lambda\\
-                              c+\lambda&c\end{pmatrix}. \tag{CY5}
-\]
+
+```math
+\begin{pmatrix}a&a+\lambda\\
+                              c+\lambda&c\end{pmatrix}. \qquad\text{(CY5)}
+```
+
 
 Every row and column of it contains one lower and one upper entry,
 before or after its double swap. As at most one joint rectangle meets
@@ -140,13 +153,15 @@ upper entries and the other b-floor(b/2) lower entries. Its initial
 deviation has absolute value at most
 [(b mod 2)/4+b delta]X. A common initial residue allowance is therefore
 
-\[
- u_{\rm initial}=
+
+```math
+u_{\rm initial}=
  \begin{cases}
  0,&b=0,\\
- \max\{\delta(4b+2),(b\bmod2)/4+b\delta\},&b>0 .
- \end{cases}                                            \tag{CY6}
-\]
+ \max\{\delta(4b+2),(b\bmod2)/4+b\delta\},&b\gt 0 .
+ \end{cases}                                            \qquad\text{(CY6)}
+```
+
 
 The ordinary target residues remain arbitrary subject to their exact
 total compatibility. For desired half-corrections v_i modulo h, with
@@ -171,9 +186,11 @@ flipping exactly the differing bits. If S(u) is the sum of the
 actual positive gaps selected by u, its change is S(u)-S(u_0).
 Both numbers lie in [0,r(1/2+2delta)X]. Thus the same BR bound
 
-\[
-                   r(1/2+2\delta)X                      \tag{CY7}
-\]
+
+```math
+r(1/2+2\delta)X                      \qquad\text{(CY7)}
+```
+
 
 holds although some rectangles now reverse their initial switch.
 Every row, column, and the opposite diagonal remains fixed.
@@ -197,15 +214,19 @@ r_0+q reserved cells with q=4b+e, e in {0,2}; a diagonal has q=b.
 For a common-stage mean sum A, its ordinary reference plus completion
 mean shift is
 
-\[
- \frac{2dA}{N_0}\{(n+8)q-B_r-8n\}.                      \tag{CY8}
-\]
+
+```math
+\frac{2dA}{N_0}\{(n+8)q-B_r-8n\}.                      \qquad\text{(CY8)}
+```
+
 
 The coefficients inside braces are exactly
 
-\[
- 24b+e(n+8)-8n \quad\hbox{or}\quad -(3b+8)n.              \tag{CY9}
-\]
+
+```math
+24b+e(n+8)-8n \quad\hbox{or}\quad -(3b+8)n.              \qquad\text{(CY9)}
+```
+
 
 For n>=9 their absolute values are at most (3b+8)n.
 For the row/column expressions the lower endpoint is at least -8n;
@@ -214,9 +235,11 @@ the upper comparison follows from
 Thus a shared prefix or wide mean term previously paying B_r+8n
 in PB/WB's corresponding identity may instead pay
 
-\[
-                           (3b+8)n.                    \tag{CY10}
-\]
+
+```math
+(3b+8)n.                    \qquad\text{(CY10)}
+```
+
 
 The numerator change does not remove the separate residue global-mean
 charge, main rectangle midpoint errors, or allocation discrepancies.
@@ -247,9 +270,11 @@ J_rect rows with q=4 and exactly J_rect columns with q=4.
 
 Require
 
-\[
-                        \rho+4\le n/4.                 \tag{CY11}
-\]
+
+```math
+\rho+4\le n/4.                 \qquad\text{(CY11)}
+```
+
 
 CY4 already implies this with the actual P_0. The remaining degrees
 lie in [n-rho-4,n-rho-1], and all remaining cells avoid both diagonals.
@@ -267,9 +292,11 @@ Apply RF1 with minimum-degree parameter n-rho-4>=3n/4 and Delta=2.
 It supplies a positive
 regular factor of degree
 
-\[
-                         k=n-\rho-5.                   \tag{CY12}
-\]
+
+```math
+k=n-\rho-5.                   \qquad\text{(CY12)}
+```
+
 
 This factor is also a subgraph of the original residual support.
 Each original vertex has at most4 edges outside it, including the two
@@ -283,15 +310,19 @@ occupy 4J_rect more, including exactly J_rect diagonal cells.
 Completing the diagonal union adds 2n-1-J_rect cells. The number of
 still-empty cells is therefore exactly
 
-\[
- N=n^2-\rho n-3J_{\rm rect}-2n+1.
-\]
+
+```math
+N=n^2-\rho n-3J_{\rm rect}-2n+1.
+```
+
 
 For the factor CY12 its complement has
 
-\[
- T=N-kn=3n-3J_{\rm rect}+1\le3n+1.                     \tag{CY13}
-\]
+
+```math
+T=N-kn=3n-3J_{\rm rect}+1\le3n+1.                     \qquad\text{(CY13)}
+```
+
 
 In RF2 choose exactly T central unused primes for these cells.
 The maximum local exceptional degree is4. The proof of RF2 gives
@@ -301,9 +332,11 @@ the factor mean shift, and less than X for the sorted matching blocks.
 After paying the preceding 3X preassignment error, a uniform completion
 allowance is
 
-\[
-                  [4+(7+1/n)\epsilon]X.                \tag{CY14}
-\]
+
+```math
+[4+(7+1/n)\epsilon]X.                \qquad\text{(CY14)}
+```
+
 
 The sharper T/n can be retained if the actual rectangle count is known.
 Both diagonals keep their smaller preceding allowance.
@@ -315,10 +348,12 @@ hypotheses. Then the central interval loses no wide or residue entry.
 It pays at most B_p+B_b+2n previous deletions and needs at most3n+1
 exceptional values. Hence RF's existing raw central count suffices if
 
-\[
- \frac{2\epsilon X-(1036/125)\sqrt X}{\log X}
-                       > B_p+B_b+5n+1.                \tag{CY15}
-\]
+
+```math
+\frac{2\epsilon X-(1036/125)\sqrt X}{\log X}
+                       \gt  B_p+B_b+5n+1.                \qquad\text{(CY15)}
+```
+
 
 CY15 uses exactly the analytic interface already stated in RF; this
 project does not independently prove its imported source computation.

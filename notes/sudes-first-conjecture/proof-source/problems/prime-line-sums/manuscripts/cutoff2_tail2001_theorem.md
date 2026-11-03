@@ -1,5 +1,8 @@
 # Complete classical prime-line tail from odd order 2001
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Composition author and coordinator: `/root`. This additive theorem uses the
 exact bounded sources frozen at scientific revision
 `10cb5da79f1296c9d41a580e2d0841bc0102bb23` and the preserved complete
@@ -44,11 +47,13 @@ successful orders. No square is transferred from one order to another.
 
 In every row use the same definitions
 
-\[
- X=p_{n^2+1},\qquad T=\sum_{j=2}^{n^2+1}p_j,\qquad
+
+```math
+X=p_{n^2+1},\qquad T=\sum_{j=2}^{n^2+1}p_j,\qquad
  m=T/n^2,\qquad y=T/n,\qquad
  E=\lceil\log_2X\rceil,\quad e=\lceil\log_2y\rceil.
-\]
+```
+
 
 Analytic logarithms are natural. The symbol e denotes an integer ceiling,
 not Euler's number. The original K=floor(n/E³), D=y/e⁴ are not premises of
@@ -176,10 +181,12 @@ entries in the full reservation budget. Equal-gap blocks remain disjoint.
 an explicitly bounded reference interval, and separately verified outer
 and whole central stocks. Its completion error is
 
-\[
- X+\big[(5+T_{ex}/n)(1+\kappa_c)+3/n\big]\varepsilon X,
+
+```math
+X+\big[(5+T_{ex}/n)(1+\kappa_c)+3/n\big]\varepsilon X,
  \qquad T_{ex}=3n-3J_{rect}+1.
-\]
+```
+
 
 The graph degree is6, its expansion is199/200, and the large-cut estimate
 uses decay1/34 from n=2001. FC2K explicitly checks that the diagonal

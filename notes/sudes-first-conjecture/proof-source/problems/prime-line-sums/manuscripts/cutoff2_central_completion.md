@@ -1,5 +1,8 @@
 # Central diagonal preassignment and completion near the original mean
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/prefix_balance_research`. The proposal to preassign both
 diagonals from a narrow central stock is due to `/root/controller_redesign`.
 This is a separate elementary completion component. It changes none of
@@ -21,36 +24,44 @@ the **actually unused** values after all earlier reservations.
 Let n>=20 be odd. An n-by-n partial array has distinct prescribed
 values and N_0 still-empty cells, where
 
-\[
- N_0\ge3n^2/4.
- \tag{CC1}
-\]
+
+```math
+N_0\ge3n^2/4.
+ \qquad\text{(CC1)}
+```
+
 
 Its distinct unused value set S_0 has exactly N_0 elements, lies in an
 interval of width less than X, and has mean mu. The center is empty.
 After counting the center once, let q_1 and q_2 be the numbers of other
 empty cells on the first and second main diagonal. Thus
 
-\[
- 0\le q_i\le n-1,\qquad s=1+q_1+q_2\le2n-1.
- \tag{CC2}
-\]
+
+```math
+0\le q_i\le n-1,\qquad s=1+q_1+q_2\le2n-1.
+ \qquad\text{(CC2)}
+```
+
 
 The off-diagonal empty cells form a bipartite graph of rows and columns.
 Assume it has a spanning k-regular factor F, with integer k>0. Define
 
-\[
- t=N_0-s-kn\ge0.
- \tag{CC3}
-\]
+
+```math
+t=N_0-s-kn\ge0.
+ \qquad\text{(CC3)}
+```
+
 
 These t cells are the off-diagonal empty cells outside F. If a_L is a
 row or column's original number of empty cells, suppose
 
-\[
-                         a_L-k\le u.
- \tag{CC4}
-\]
+
+```math
+a_L-k\le u.
+ \qquad\text{(CC4)}
+```
+
 
 This joint count includes that line's diagonal preassignments **and**
 its cells outside the factor. It must not be replaced by an unnecessarily
@@ -58,27 +69,33 @@ separate sum of maximum counts when the support gives a sharper value.
 
 Take epsilon>0, set eta=epsilon X, and let c be a reference satisfying
 
-\[
- |\mu-c|\le\kappa\eta,\qquad0\le\kappa\le1/4.
- \tag{CC5}
-\]
+
+```math
+|\mu-c|\le\kappa\eta,\qquad0\le\kappa\le1/4.
+ \qquad\text{(CC5)}
+```
+
 
 Use the central interval and two disjoint outer subintervals
 
-\[
- I=[c-\eta,c+\eta],\quad
+
+```math
+I=[c-\eta,c+\eta],\quad
  I_-=(c-\eta,c-\eta/2],\quad
  I_+=(c+\eta/2,c+\eta].
- \tag{CC6}
-\]
+ \qquad\text{(CC6)}
+```
+
 
 Assume the following exact lower counts in the initially unused pool:
 
-\[
- |S_0\cap I_-|\ge s,\qquad |S_0\cap I_+|\ge s,
+
+```math
+|S_0\cap I_-|\ge s,\qquad |S_0\cap I_+|\ge s,
  \qquad |S_0\cap I|\ge s+t.
- \tag{CC7}
-\]
+ \qquad\text{(CC7)}
+```
+
 
 The weaker actual-count version CC7 is useful in the CY application.
 A simpler sufficient version, when t<=3n+1, is at least 3n+2 unused
@@ -97,9 +114,11 @@ values in I as v_1<...<v_M. The sum of the first q is below q nu,
 and the sum of the last q is above q nu. Consecutive q-window sums
 increase by
 
-\[
- v_{i+q}-v_i\le2\eta.
-\]
+
+```math
+v_{i+q}-v_i\le2\eta.
+```
+
 
 One of the two windows adjacent to the crossing therefore has sum
 within eta of q nu. Select the nearer one, breaking ties by its
@@ -116,26 +135,32 @@ Let N_j,mu_j be the unused count and mean after batch j, with
 N_0,mu_0=mu the initial data. Write e_j for that batch's sum minus
 its size times mu_(j-1). The selection guarantees |e_j|<=eta, and
 
-\[
- \mu_j=\mu_{j-1}-e_j/N_j.
- \tag{CC8}
-\]
+
+```math
+\mu_j=\mu_{j-1}-e_j/N_j.
+ \qquad\text{(CC8)}
+```
+
 
 Here j=1 is the center; the three batch sizes are 1,q_1,q_2.
 The hypotheses required for every selection persist. Indeed
 
-\[
- N_j\ge N_0-s\ge3n^2/4-2n+1\ge n^2/2,
+
+```math
+N_j\ge N_0-s\ge3n^2/4-2n+1\ge n^2/2,
  \qquad n\ge20.
-\]
+```
+
 
 By induction, before and after any of the three batches,
 
-\[
- |\mu_j-c|\le(\kappa+6/n^2)\eta
- \le(1/4+3/200)\eta<\eta/2.
- \tag{CC9}
-\]
+
+```math
+|\mu_j-c|\le(\kappa+6/n^2)\eta
+ \le(1/4+3/200)\eta\lt \eta/2.
+ \qquad\text{(CC9)}
+```
+
 
 The base case is CC5. The update CC8 gives the next bound, so there
 is no circular use of a selection whose mean has not been bracketed.
@@ -146,12 +171,14 @@ by CC7. This charges even adversarial removal from one outer interval.
 Let A_Delta be the deviation of **all** s selected diagonal-union
 values from s times the original mean mu. Then
 
-\[
- A_\Delta=-N_3(\mu_3-\mu)
+
+```math
+A_\Delta=-N_3(\mu_3-\mu)
           =\sum_{j=1}^3 e_j N_3/N_j,
  \qquad |A_\Delta|\le3\eta.
- \tag{CC10}
-\]
+ \qquad\text{(CC10)}
+```
+
 
 The signed deviation is small regardless of the number of newly filled
 diagonal cells. It is not bounded by charging eta for each such cell.
@@ -166,23 +193,29 @@ Put e_0=e_1 for the center error, f_1=e_2 and f_2=e_3 for the two
 diagonal-batch errors. Set A=N_0-1 and B=A-q_1. The first completed
 diagonal's error from its original completion expectation is
 
-\[
- e_0(1-q_1/A)+f_1,
-\]
+
+```math
+e_0(1-q_1/A)+f_1,
+```
+
 
 whose absolute value is at most 2eta. For the second diagonal it is
 
-\[
- e_0(1-q_2/A)-(q_2/B)f_1+f_2.
-\]
+
+```math
+e_0(1-q_2/A)-(q_2/B)f_1+f_2.
+```
+
 
 Since A,B>q_i and B=A-q_1, its absolute value is at most
 
-\[
- \left(2+\frac{q_1q_2}{AB}\right)\eta
+
+```math
+\left(2+\frac{q_1q_2}{AB}\right)\eta
  \le\frac{201}{100}\eta.
- \tag{CC11}
-\]
+ \qquad\text{(CC11)}
+```
+
 
 For the last inequality, A,B>=7n^2/10 when n>=20, and
 q_1q_2<=n^2; hence q_1q_2/(AB)<=100/(49n^2)<=1/196<1/100.
@@ -198,17 +231,21 @@ t off-factor cells, and write A_E for their total deviation from t mu.
 Every selected central value differs from mu by at most
 (1+kappa)eta. In particular
 
-\[
-                         |A_E|\le t(1+\kappa)\eta.
- \tag{CC12}
-\]
+
+```math
+|A_E|\le t(1+\kappa)\eta.
+ \qquad\text{(CC12)}
+```
+
 
 Exactly kn unused values remain. Their mean mu_F satisfies
 
-\[
- k(\mu_F-\mu)=-(A_\Delta+A_E)/n.
- \tag{CC13}
-\]
+
+```math
+k(\mu_F-\mu)=-(A_\Delta+A_E)/n.
+ \qquad\text{(CC13)}
+```
+
 
 Decompose the k-regular factor into k perfect matchings, sort the kn
 values, and split them into k consecutive blocks of n values. Assign
@@ -226,21 +263,25 @@ diagonal and exceptional deviations from the **original** mean mu.
 If z_L is the factor-block discrepancy, then the final line error
 from its original completion expectation is exactly
 
-\[
- A_{\Delta,L}+A_{E,L}
+
+```math
+A_{\Delta,L}+A_{E,L}
        -\frac{A_\Delta+A_E}{n}+z_L,
- \qquad |z_L|<X.
- \tag{CC14}
-\]
+ \qquad |z_L|\lt X.
+ \qquad\text{(CC14)}
+```
+
 
 There are a_L-k<=u central assignments on that line. Combining
 CC10, CC12 and CC14 proves the general row/column bound
 
-\[
- \boxed{\quad X+
+
+```math
+\boxed{\quad X+
    \left[(u+t/n)(1+\kappa)+3/n\right]\varepsilon X.\quad}
- \tag{CC15}
-\]
+ \qquad\text{(CC15)}
+```
+
 
 This direct identity avoids charging successive changes of unused mean
 again. The actual signed A_Delta+A_E may be retained if a caller knows
@@ -261,29 +302,35 @@ these support facts.
 
 The original unused count and unfilled diagonal-union count are
 
-\[
- N_0=n^2-\rho n-4J,\qquad s=2n-1-J.
- \tag{CC16}
-\]
+
+```math
+N_0=n^2-\rho n-4J,\qquad s=2n-1-J.
+ \qquad\text{(CC16)}
+```
+
 
 CY5's removal of two temporary center edges puts the residual support
 in RF1's degree interval `[n-rho-4,n-rho-2]`. Therefore it contains
 a factor of degree k=n-rho-5>0. The removed edges remain ordinary
 off-factor completion cells; no cell or value is discarded. CY6 gives
 
-\[
-                   t=3n-3J+1\le3n+1.
- \tag{CC17}
-\]
+
+```math
+t=3n-3J+1\le3n+1.
+ \qquad\text{(CC17)}
+```
+
 
 Initially each row and column has either rho or rho+2 prescribed
 cells, according as it misses or meets a rectangle. Hence
 
-\[
- a_L-k=(n-\rho-e_L)-(n-\rho-5)=5-e_L\le5,
+
+```math
+a_L-k=(n-\rho-e_L)-(n-\rho-5)=5-e_L\le5,
  \quad e_L\in\{0,2\}.
- \tag{CC18}
-\]
+ \qquad\text{(CC18)}
+```
+
 
 This is why the local bound is 5, not the separate maxima 2+4.
 A central row/column has one newly assigned diagonal cell and four
@@ -292,29 +339,35 @@ a rectangle line has only three central assignments in total.
 
 The sufficient central-stock invoices become
 
-\[
- |S_0\cap I_-|,|S_0\cap I_+|\ge2n-1-J,
+
+```math
+|S_0\cap I_-|,|S_0\cap I_+|\ge2n-1-J,
  \qquad |S_0\cap I|\ge5n-4J.
- \tag{CC19}
-\]
+ \qquad\text{(CC19)}
+```
+
 
 Under CC1 and CC5, CC15 with u=5 gives the sharper actual-count
 completion allowance
 
-\[
- \boxed{\quad
+
+```math
+\boxed{\quad
  X+\left[(1+\kappa)(8-3J/n+1/n)+3/n\right]\varepsilon X.
- \quad}                                                   \tag{CC20}
-\]
+ \quad}                                                   \qquad\text{(CC20)}
+```
+
 
 Dropping the favorable J term gives, pointwise for every n>=20,
 
-\[
- X+\left[8(1+\kappa)+(4+\kappa)/n\right]\varepsilon X
+
+```math
+X+\left[8(1+\kappa)+(4+\kappa)/n\right]\varepsilon X
  \le X+\frac{817}{80}\varepsilon X
- < X+\frac{41}{4}\varepsilon X.
- \tag{CC21}
-\]
+ \lt  X+\frac{41}{4}\varepsilon X.
+ \qquad\text{(CC21)}
+```
+
 
 This also covers both diagonal bounds CC11, since its epsilon
 coefficient exceeds 201/100. If c=mu, the sharper coefficient is

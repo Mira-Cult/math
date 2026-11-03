@@ -1,5 +1,8 @@
 # A bounded-source controller from the order square root of 2^33
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/controller_redesign`. This additive conditional controller
 changes no frozen predecessor. It uses the published computed-range
 prime-count theorem through the separately pinned S18/BG interfaces,
@@ -15,9 +18,11 @@ Unmarked logarithms are natural; e here is an integer parameter.
 All rows, columns and both main diagonals are required. This component
 covers every odd order satisfying
 
-\[
-                         n^2\ge2^{33},\qquad n<2^{18}.       \tag{BCM1}
-\]
+
+```math
+n^2\ge2^{33},\qquad n\lt 2^{18}.       \qquad\text{(BCM1)}
+```
+
 
 The first integer satisfying the lower condition is92682, and the first
 relevant odd integer is92683. The upper handoff is to the frozen
@@ -31,11 +36,13 @@ has already undergone a new complete composition review.
 The [S18 interface](cutoff2_analytic_sub18_band.md) and
 [BG geometry](cutoff2_bounded_pool_geometry.md) give, throughout BCM1,
 
-\[
- \frac{487}{1000}X<m<\frac{123}{250}X,\qquad
- X/n^2>u-9/8,\qquad
- \#\{X/8<p\le X\}\ge\frac{112X}{125u}.                    \tag{BCM2}
-\]
+
+```math
+\frac{487}{1000}X\lt m\lt \frac{123}{250}X,\qquad
+ X/n^2\gt u-9/8,\qquad
+ \#\{X/8\lt p\le X\}\ge\frac{112X}{125u}.                    \qquad\text{(BCM2)}
+```
+
 
 The printed BMOR Theorem1.9 is used only on its finite domain. The
 index bound in S18.10 gives X<2^41<10^13; every requested entry
@@ -46,16 +53,20 @@ Theorem1.9 past its domain.
 Put a_2=6931/10000 and b_2=693148/10^6. S18's before-ceiling
 index bound gives
 
-\[
- u<V(v)=b_2(293v/125-1).
-\]
+
+```math
+u\lt V(v)=b_2(293v/125-1).
+```
+
 
 The exact comparison log(33a_2)>25/8 and the lower prime-index
 bound give
 
-\[
- u>U(v)=2a_2v+25/8,\qquad X/n^2>Q(v)=U(v)-9/8.            \tag{BCM3}
-\]
+
+```math
+u\gt U(v)=2a_2v+25/8,\qquad X/n^2\gt Q(v)=U(v)-9/8.            \qquad\text{(BCM3)}
+```
+
 
 In particular24<U(33/2)<V(18)<29. The full ceiling unit in V
 comes from S18's before-ceiling statement; it is not subtracted from
@@ -65,16 +76,18 @@ supplies every reduced class for those actual moduli.
 
 The exact common parameters are
 
-\[
+
+```math
 \begin{gathered}
  d=6,\quad\kappa=26/25,\quad G=40,\quad c=7/8,\quad
  \rho=112/125,\quad\alpha=81/100,\quad\eta=103/200,\\
  L=22,\quad C=700,\quad K=\lfloor n/C\rfloor,\quad
  z=8,\quad f=99999/100000,\\
  A=336,\quad\delta=1/A,\quad N=36,\quad w=N/A=3/28,\quad
- S_{\rm stock}=1600,\quad R_{\rm target}=2200 .             \tag{BCM4}
+ S_{\rm stock}=1600,\quad R_{\rm target}=2200 .             \qquad\text{(BCM4)}
 \end{gathered}
-\]
+```
+
 
 Residue and bridge stocks retain one eighth of their stated analytic
 lower counts. The equality7(1/2-2w)=2 preserves the seven-wide-stage
@@ -105,17 +118,21 @@ with b=0 for g=2. Let Q_s=d(n+8), and let s_g be the seed-stage
 count in the exact input manifest. The demand for every reduced label
 of gap g is
 
-\[
-                D_g=Q_s s_g+B_r/2+2Q_sJ_b,
-       \qquad B_r=4(n+1)b,\quad J_b=5.                    \tag{BCM5}
-\]
+
+```math
+D_g=Q_s s_g+B_r/2+2Q_sJ_b,
+       \qquad B_r=4(n+1)b,\quad J_b=5.                    \qquad\text{(BCM5)}
+```
+
 
 The certificate checks
 
-\[
- (\rho/u-1/48)X-1>
-          2\sum_{g=2,4,\ldots,40}\varphi(g)(1-g/42)D_g.    \tag{BCM6}
-\]
+
+```math
+(\rho/u-1/48)X-1\gt 
+          2\sum_{g=2,4,\ldots,40}\varphi(g)(1-g/42)D_g.    \qquad\text{(BCM6)}
+```
+
 
 Consequently one reduced label has its full demand before any entries
 are reserved. Residue deletions destroy at most B_r/2 edges of that
@@ -151,19 +168,23 @@ otherwise. This is S18.3, including its explicit modulus-2 treatment.
 For an entry bin centered at Y<=c_+X, where
 c_+=123/250+1/4+w, S18.5 supplies at least
 
-\[
- \frac{2\delta X}{\varphi(g)u}
-       \left(1-\Gamma_g A\sqrt{c_+/X}\right)              \tag{BCM7}
-\]
+
+```math
+\frac{2\delta X}{\varphi(g)u}
+       \left(1-\Gamma_g A\sqrt{c_+/X}\right)              \qquad\text{(BCM7)}
+```
+
 
 primes in every required class. For a bridge of radius rX and
 width epsilon_b rX inside[X/4,3X/4], it supplies at least
 
-\[
- \frac{\epsilon_b rX}{\varphi(g)u}
+
+```math
+\frac{\epsilon_b rX}{\varphi(g)u}
        \left(1-\frac{2\Gamma_g\sqrt{3/(4X)}}{\epsilon_b r}\right).
-                                                               \tag{BCM8}
-\]
+                                                               \qquad\text{(BCM8)}
+```
+
 
 The two parentheses are evaluated outward, using the lower X bound
 in BCM3. They are positive. Relative to the earlier half-density
@@ -192,15 +213,17 @@ rectangle retains two exactly equal differences.
 
 For the whole band set
 
-\[
+
+```math
 \begin{gathered}
  n_0=92681,\quad U_0=U(33/2),\quad Q_0=Q(33/2),\quad V_1=V(18),\
  X_0=n_0^2Q_0,\quad q_0=d(n_0+8)/X_0,\quad
  m_f=f\alpha/V_1,\\
  m_0=\rho/V_1-4(n_0+1)b/X_0-2q_0(J_b+s_g),\quad
- R_*={\varphi(g)\over2\eta m_f},\quad S_0=s_gg-R_* .      \tag{BCM9}
+ R_*={\varphi(g)\over2\eta m_f},\quad S_0=s_gg-R_* .      \qquad\text{(BCM9)}
 \end{gathered}
-\]
+```
+
 
 For the actual X, m_0X is a lower post-seed stock; m_fX is a real
 terminal lower stock. Real lower bounds are permitted by MC/BT:
@@ -218,24 +241,28 @@ given integer; no floating root or optimized decimal is read.
 
 For a positive-lambda phase, take the shifted starting threshold
 
-\[
- S_{\lambda}=\left\lceil
-  {\varphi(g)\exp(\lambda)\over\zeta\eta m_f}\right\rceil. \tag{BCM10}
-\]
+
+```math
+S_{\lambda}=\left\lceil
+  {\varphi(g)\exp(\lambda)\over\zeta\eta m_f}\right\rceil. \qquad\text{(BCM10)}
+```
+
 
 The exponential is enclosed upward by BT's exact rational Taylor
 routine before taking this ceiling. Let a be the sum of preceding
 phase caps and J the current cap. Define m_a=m_0-2q_0a and
 t_max=zeta eta g rho/[phi(g)U_0]. The checker proves, for each phase,
 
-\[
+
+```math
 \begin{gathered}
- 0<t_{\max}\le1,\qquad m_a-2q_0J\ge m_f>0,\\
+ 0\lt t_{\max}\le1,\qquad m_a-2q_0J\ge m_f\gt 0,\\
  {\zeta\eta g\{Jm_a-q_0J(J-1)\}\over
        \varphi(g)(1+t_{\max})}
-   \ge\log(S_{\rm next}/S_{\rm start}).                  \tag{BCM11}
+   \ge\log(S_{\rm next}/S_{\rm start}).                  \qquad\text{(BCM11)}
 \end{gathered}
-\]
+```
+
 
 For the last phase replace the right side by V_1-log(L S_start),
 which is at least the required log[X/(L S_start)]. All intermediate
@@ -247,9 +274,11 @@ a valid sufficient target.
 
 With epsilon=1/[2(c+1/L)]-eta, the simultaneous candidate condition is
 
-\[
-                  \epsilon m_f^2g\ge2zq_0\varphi(g).       \tag{BCM12}
-\]
+
+```math
+\epsilon m_f^2g\ge2zq_0\varphi(g).       \qquad\text{(BCM12)}
+```
+
 
 It supplies zQ_s disjoint pairs of one common difference, after every
 previous deletion. BN retains Q_s in one of z midpoint bins of width
@@ -260,9 +289,11 @@ seven-wide-stage family supplies the original K-dependent capacity.
 
 Writing P_g=s_g+sum J_lambda, the independent global stock check is
 
-\[
-              B_r+2Q_s(P_g+J_b)\le(\rho-\alpha)X/u.        \tag{BCM13}
-\]
+
+```math
+B_r+2Q_s(P_g+J_b)\le(\rho-\alpha)X/u.        \qquad\text{(BCM13)}
+```
+
 
 All wide entries, including every diagonal copy, are charged in
 B=B_r+2Q_s(P_g+J_b+7K). No overlapping supply is assumed independent.
@@ -274,9 +305,11 @@ J_rect=4d(P_0+J_b+7K)+2b, P_0<=P_g. Here K>=1 and d=6,
 so J_rect>=3. RP applies at n>=2J_rect+1. The retained ordinary
 matching inequality
 
-\[
- {8d(P_g+J_b)\over n}+{56d\over C}+{24b+16\over n}<1      \tag{BCM14}
-\]
+
+```math
+{8d(P_g+J_b)\over n}+{56d\over C}+{24b+16\over n}\lt 1      \qquad\text{(BCM14)}
+```
+
 
 is stronger than RP's sufficient rectangle inequality, whose last
 numerator is4b+1. No other PB placement hypothesis changes: every
@@ -286,10 +319,12 @@ unintended diagonal, and meets its designated diagonal once.
 Sorted seeds and narrowed common growth stages give the BN/DP
 allocation error
 
-\[
- cX\sqrt{(3d+4)\log(8n+8)/2}
-          +(10c/z)X\lceil\log_2 Q_s\rceil.                \tag{BCM15}
-\]
+
+```math
+cX\sqrt{(3d+4)\log(8n+8)/2}
+          +(10c/z)X\lceil\log_2 Q_s\rceil.                \qquad\text{(BCM15)}
+```
+
 
 The exact inequality d(262145+8)<2^21 bounds every allocation-depth
 jump in BCM1. Use the [WB](cutoff2_wide_balance_experiment.md)
@@ -309,11 +344,13 @@ error, the inherited2bX repairs, bridge midpoint error, WB error and
 reservoir rounding. The certificate records each term individually.
 It divides by the rigorous K lower bound n/C-1 and proves
 
-\[
-  \text{baseline error}<(4/5)KX,\qquad
+
+```math
+\text{baseline error}\lt (4/5)KX,\qquad
  {4\over5}+{(123/250)C\over R_{\rm target}(1-C/n_0)}
-                      <.999\kappa.                       \tag{BCM16}
-\]
+                      \lt .999\kappa.                       \qquad\text{(BCM16)}
+```
+
 
 It also verifies KX>=1000g. The original integral graph routing then
 repairs every row and column to its chosen prime target; amplified
@@ -333,18 +370,22 @@ For the weighted seed condition expand its fixed demand sum as
 A_0n+B_0, A_0,B_0>0. Its normalized upper bound is a positive sum
 of terms proportional to
 
-\[
- {e^{-jv\log2}V(v)\over Q(v)\{\rho-V(v)/48\}},
-                           \qquad j=1,2.                 \tag{BCM17}
-\]
+
+```math
+{e^{-jv\log2}V(v)\over Q(v)\{\rho-V(v)/48\}},
+                           \qquad j=1,2.                 \qquad\text{(BCM17)}
+```
+
 
 If a=V'(v), the logarithmic derivative of each term is
 -j log2+a/V-Q'/Q+(a/48)/(rho-V/48).
 Dropping the negative -Q'/Q, the checker proves on the entire band
 
-\[
- {a\over V(33/2)}+{a/48\over\rho-V(18)/48}<a_2<\log2.    \tag{BCM18}
-\]
+
+```math
+{a\over V(33/2)}+{a/48\over\rho-V(18)/48}\lt a_2\lt \log2.    \qquad\text{(BCM18)}
+```
+
 
 Thus both terms decrease. The lower-order endpoint check suffices;
 the upper endpoint is also checked as a redundant consistency control.

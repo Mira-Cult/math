@@ -1,5 +1,8 @@
 # Exact packing of the independent diagonal rectangles
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: /root/controller_redesign. The coordinator independently checked
 the compatibility with PB's later ordinary-pair placement. This additive
 lemma changes no frozen source. It requires independent nonauthor review
@@ -26,24 +29,30 @@ R and bar(R) are disjoint, and neither contains the center.
 Use cyclic permutations pi(i)=i+1 modJ and sigma(i)=i+2 modJ
 of these labels. Because J>=3,
 
-\[
-                \pi(i)\ne i,\qquad
-                \sigma(i)\notin\{i,\pi(i)\}.               \tag{RP1}
-\]
+
+```math
+\pi(i)\ne i,\qquad
+                \sigma(i)\notin\{i,\pi(i)\}.               \qquad\text{(RP1)}
+```
+
 
 Choose the designated column
 
-\[
- c_i=i\quad\hbox{for a main-diagonal rectangle},\qquad
+
+```math
+c_i=i\quad\hbox{for a main-diagonal rectangle},\qquad
  c_i=\bar i\quad\hbox{for the other diagonal}.
-\]
+```
+
 
 Place rectangle i on the rows and columns
 
-\[
-       (i,\overline{\pi(i)})\quad\hbox{and}\quad
-       (c_i,\overline{c_{\sigma(i)}}).                      \tag{RP2}
-\]
+
+```math
+(i,\overline{\pi(i)})\quad\hbox{and}\quad
+       (c_i,\overline{c_{\sigma(i)}}).                      \qquad\text{(RP2)}
+```
+
 
 The row set is exactly R union bar(R), with no repetition. The
 designated columns select one element of each mirror pair
@@ -69,12 +78,14 @@ Suppose a rectangle uses rows(i,j), columns(c,k), with(i,c) its
 unique diagonal cell. Put two disjoint pairs of common positive gap h
 in the array
 
-\[
- \begin{pmatrix}
+
+```math
+\begin{pmatrix}
        a & a+h\\
        b+h & b
- \end{pmatrix}.                                           \tag{RP3}
-\]
+ \end{pmatrix}.                                           \qquad\text{(RP3)}
+```
+
 
 Switching both horizontal pairs keeps each row sum fixed and changes
 the two column contributions by h-h=0 and -h+h=0.
@@ -92,17 +103,21 @@ all other entries remain untouched.
 PB places all main and binary-residue rectangles jointly before
 placing the ordinary pairs. Its actual total rectangle count is
 
-\[
- J_{\rm rect}=4d(P_0+J_b+7K)+2b,\qquad
- P_0\le P,\quad b=\lceil\log_2(g/2)\rceil .                 \tag{RP4}
-\]
+
+```math
+J_{\rm rect}=4d(P_0+J_b+7K)+2b,\qquad
+ P_0\le P,\quad b=\lceil\log_2(g/2)\rceil .                 \qquad\text{(RP4)}
+```
+
 
 The previous greedy sufficient test was n>4J_rect. It can be
 replaced by the exact packing test
 
-\[
-              2\{4d(P+J_b+7K)+2b\}+1\le n.                \tag{RP5}
-\]
+
+```math
+2\{4d(P+J_b+7K)+2b\}+1\le n.                \qquad\text{(RP5)}
+```
+
 
 All applications have d>=6 and K>=1, so J_rect>=3.
 The packing uses the actual count, not fictitious entries for a
@@ -124,15 +139,19 @@ stage on each diagonal. No entries or positions are reused.
 In the existing numerical notation K=floor(n/C), the pointwise
 sufficient version of(RP5) is
 
-\[
- \frac{8d(P+J_b)}n+\frac{56d}C+\frac{4b+1}n\le1.           \tag{RP6}
-\]
+
+```math
+\frac{8d(P+J_b)}n+\frac{56d}C+\frac{4b+1}n\le1.           \qquad\text{(RP6)}
+```
+
 
 The already required ordinary-placement condition is
 
-\[
- \frac{8d(P+J_b)}n+\frac{56d}C+\frac{24b+16}n<1.            \tag{RP7}
-\]
+
+```math
+\frac{8d(P+J_b)}n+\frac{56d}C+\frac{24b+16}n\lt 1.            \qquad\text{(RP7)}
+```
+
 
 It is stronger than(RP6), since their numerators differ by20b+15>0.
 Thus after this explicit packing there is no additional factor-two

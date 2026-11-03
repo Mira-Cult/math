@@ -1,5 +1,8 @@
 # Shared prefix stages and balanced placement
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/prefix_balance_research`, with the balanced permutation-layer
 placement identified independently and jointly checked with `/root`.
 The derangement conditioning gate in section 2 was suggested by
@@ -33,9 +36,11 @@ reservoir. At every stage, each diagonal uses `2d` equal-gap rectangles,
 each requiring two further disjoint prime pairs. Thus the number of prime
 pair slots per prefix stage is
 
-\[
-                   Q=d(n+8).                       \tag{PB1}
-\]
+
+```math
+Q=d(n+8).                       \qquad\text{(PB1)}
+```
+
 
 There is no reuse of a prime or cell. The only shared data are a difference
 value and its place in the common complete sequence.
@@ -74,29 +79,35 @@ replace it.
 The graph proof in the frozen target-first controller gives, for
 `a=kappa/d`, `b_*=r-kappa/2-1>0`, a small-set failure bound
 
-\[
- \{\exp(1+rH(a))(s/n)^{b_*}\}^{s},
-\]
+
+```math
+\{\exp(1+rH(a))(s/n)^{b_*}\}^{s},
+```
+
 
 and the large-set entropy function `F(t)` with its endpoint-maximum
 property. These calculations apply to independent uniform permutations,
 before any conditioning. Put `t_0=1/256` and require
 
-\[
+
+```math
 \begin{split}
- 1+rH(a)+b_*\log t_0+r\log3&<\log(1/8),\\
- F(t_0),F(1/2)&<-1/1000.                         \tag{PB2}
+ 1+rH(a)+b_*\log t_0+r\log3&\lt \log(1/8),\\
+ F(t_0),F(1/2)&\lt -1/1000.                         \qquad\text{(PB2)}
 \end{split}
-\]
+```
+
 
 The probability that any small set has a bad cut is then less than
 `3^{-r}/7`. The probability for all larger sets is at most
 `(2n)^d exp(-n/1000)`. Since `3^r<2^d`, it is less than
 `3^{-r}/8` whenever
 
-\[
-              (4n)^d\exp(-n/1000)<1/8.           \tag{PB3}
-\]
+
+```math
+(4n)^d\exp(-n/1000)\lt 1/8.           \qquad\text{(PB3)}
+```
+
 
 For `d<=512` and `n>=2^24`, (PB3) holds: at the endpoint,
 `2^24/1000>26*512+3`, `log2<1`, and `exp(1)>2`; thereafter its
@@ -111,10 +122,12 @@ at least `3^{-r}`. The total bad-cut probability is strictly smaller.
 Their difference is positive, proving existence of derangements whose
 multigraph has
 
-\[
-             |\partial S|\ge\kappa\min(|S|,n-|S|).
-                                                               \tag{PB4}
-\]
+
+```math
+|\partial S|\ge\kappa\min(|S|,n-|S|).
+                                                               \qquad\text{(PB4)}
+```
+
 
 This is an existence proof on the full integer tail. It does not assume
 that conditioning preserves the original cut probabilities.
@@ -125,27 +138,33 @@ Here is a general batch form of the prefix counting lemma. Suppose the
 currently unused set contains at least `M` primes in one class modulo `g`
 and in an interval of length `cX`. Suppose
 
-\[
- \frac{\sigma X}{M}\le R\le\frac XL,\qquad
- c,\sigma,L>0,
-\]
+
+```math
+\frac{\sigma X}{M}\le R\le\frac XL,\qquad
+ c,\sigma,L\gt 0,
+```
+
 
 and choose
 
-\[
- 0<\eta<\frac1{2(c+1/L)}-\frac1{2\sigma},\qquad
- \epsilon=\frac1{2(c+1/L)}-\frac1{2\sigma}-\eta>0.
-                                                               \tag{PB5}
-\]
+
+```math
+0\lt \eta\lt \frac1{2(c+1/L)}-\frac1{2\sigma},\qquad
+ \epsilon=\frac1{2(c+1/L)}-\frac1{2\sigma}-\eta\gt 0.
+                                                               \qquad\text{(PB5)}
+```
+
 
 Divide that interval into `ceil(cX/R)` half-open bins of length at most
 `R`. The number of bins is at most `(c+1/L)X/R`. Cauchy--Schwarz
 therefore gives at least
 
-\[
- \left\{\frac1{2(c+1/L)}-\frac1{2\sigma}\right\}
+
+```math
+\left\{\frac1{2(c+1/L)}-\frac1{2\sigma}\right\}
              \frac{M^2R}{X}
-\]
+```
+
 
 within-bin unordered pairs. Fewer than `eta M^2R/X` pairs have positive
 difference below `eta gMR/X`: for a fixed lower endpoint, the number of
@@ -153,17 +172,21 @@ positive permitted steps is strictly less than `eta MR/X`.
 There are at most `R/g` remaining differences. Consequently one positive
 `g`-multiple `h` with
 
-\[
-                \eta gMR/X\le h\le R             \tag{PB6}
-\]
+
+```math
+\eta gMR/X\le h\le R             \qquad\text{(PB6)}
+```
+
 
 occurs on more than `epsilon M^2g/X` edges. A fixed-positive-difference
 graph is a disjoint union of paths, and a matching contains at least half
 its edges. In particular the sufficient condition
 
-\[
-                 \epsilon M^2g\ge2QX             \tag{PB7}
-\]
+
+```math
+\epsilon M^2g\ge2QX             \qquad\text{(PB7)}
+```
+
 
 provides `Q` vertex-disjoint copies of this same difference. This is the
 extra cost of sharing one complete sequence across all reservoirs.
@@ -192,21 +215,23 @@ do not need `Q` copies of a common wide difference.
 
 Put `h=g/2`. The exact upper reservation count and the rectangle count are
 
-\[
+
+```math
 \begin{split}
  B_r&=4(n+1)(h-1),\\
  B_p&=2QP,\quad B_b=2QJ_b,\quad B_w=14QK,\\
  B&=B_r+B_p+B_b+B_w,\\
  J_{\rm rect}&=4d(P+J_b+7K)+2(h-1),\\
- L_{\rm cell}&=2d(P+J_b+7K)+6(h-1)+2.             \tag{PB8}
+ L_{\rm cell}&=2d(P+J_b+7K)+6(h-1)+2.             \qquad\text{(PB8)}
 \end{split}
 
 Assume
 
 \[
-                 n>4J_{\rm rect},\qquad n>4L_{\rm cell}+8.
-                                                               \tag{PB9}
-\]
+                 n\gt 4J_{\rm rect},\qquad n\gt 4L_{\rm cell}+8.
+                                                               \qquad\text{(PB9)}
+```
+
 
 First place all main and residue rectangles jointly by FC's greedy
 argument, with distinct rows and columns across all rectangles on both
@@ -267,34 +292,42 @@ squared weights sum to at most four. A diagonal has `2d` slots of weight
 one at every stage. Hence, for every required line, the sum of squared
 weights over the prefix stages is at most
 
-\[
-                         3dP+4.                   \tag{PB10}
-\]
+
+```math
+3dP+4.                   \qquad\text{(PB10)}
+```
+
 
 All prefix midpoints lie in an interval of length at most `cX`, the
 length of the prefix pool. For a weighted random permutation, expose the
 positive-weight slots in decreasing order of weight. Its Doob difference
 at a slot of weight `w_i` is
 
-\[
- \left(w_i-\frac{\text{remaining weight}}{\text{remaining slots}}\right)
+
+```math
+\left(w_i-\frac{\text{remaining weight}}{\text{remaining slots}}\right)
  (Z_i-\text{previous remaining mean}).
-\]
+```
+
 
 The coefficient lies in `[0,w_i]`. Thus its conditional range length is
 at most `w_i cX`. The conditional moment estimate proved in the frozen
 controller gives the two-sided concentration bound
 
-\[
- \Pr(|Z-\mathbb EZ|>uX)
+
+```math
+\Pr(|Z-\mathbb EZ|\gt uX)
  \le2\exp\left(-\frac{2u^2}{c^2(3dP+4)}\right).
-\]
+```
+
 
 The union bound over all `2n+2` lines is at most one half for
 
-\[
- u_p=c\sqrt{(3dP+4)\log(8n+8)/2}.                \tag{PB11}
-\]
+
+```math
+u_p=c\sqrt{(3dP+4)\log(8n+8)/2}.                \qquad\text{(PB11)}
+```
+
 
 Consequently some allocation satisfies this prefix-midpoint error on
 every required line. This proof uses independent allocation permutations
@@ -306,9 +339,11 @@ the earlier adaptive prime selections were independent.
 Suppose every prefix prime has distance at most `beta X` from `m`.
 Write
 
-\[
- A=\sum_{t=1}^{P_0}(\mu_t-m),\qquad |A|\le\beta P X.
-\]
+
+```math
+A=\sum_{t=1}^{P_0}(\mu_t-m),\qquad |A|\le\beta P X.
+```
+
 
 The total prefix deviation is exactly `2Q A`. A required line's expected
 prefix midpoint deviation is `2d A`, with an additional contribution of
@@ -321,25 +356,31 @@ is `r_0+q`, where `0<=q<=6(h-1)+2`; on a diagonal `q=h-1`.
 Uniform completion by the unused primes adds the prefix mean correction
 `-(n-r_0-q)2Q A/N_0`. Its sum with `2d A` is exactly
 
-\[
-  \frac{2dA}{N_0}\{(n+8)q-B_r-8n\}.             \tag{PB12}
-\]
+
+```math
+\frac{2dA}{N_0}\{(n+8)q-B_r-8n\}.             \qquad\text{(PB12)}
+```
+
 
 For `n>=20` and `0<=q<=6(h-1)+2`,
 
-\[
- |(n+8)q-B_r-8n|\le B_r+8n.
-\]
+
+```math
+|(n+8)q-B_r-8n|\le B_r+8n.
+```
+
 
 Indeed the lower endpoint is `-(B_r+8n)`; at the upper endpoint the
 needed comparison reduces to
 `2h(n-20)+12n+24>=0`. It follows that the prefix contribution to the
 expected completed line error is at most
 
-\[
-  \left(2\beta+\frac{2d\beta P(B_r+8n)}{n^2-B}\right)X,
-                                                               \tag{PB13}
-\]
+
+```math
+\left(2\beta+\frac{2d\beta P(B_r+8n)}{n^2-B}\right)X,
+                                                               \qquad\text{(PB13)}
+```
+
 
 in addition to the random-allocation error (PB11). The `O(dP)` term
 has disappeared from every required line, including both diagonals.
@@ -354,9 +395,11 @@ pair midpoints refer separately to both pairs of a rectangle.
 
 The same elementary concentration estimate for uniform completion gives
 
-\[
-                  u_c=\sqrt{n\log(8n+8)/2}.
-\]
+
+```math
+u_c=\sqrt{n\log(8n+8)/2}.
+```
+
 
 After choosing the successful prefix allocation, some completion has all
 line fluctuations at most `u_c X`. No independence between those two
@@ -366,15 +409,17 @@ residues; their cost is at most `(g-2)X` on any required line.
 The following one bound therefore suffices for all rows, columns, and
 both diagonals:
 
-\[
+
+```math
 \begin{split}
  C_{\rm bal}={}&u_p+u_c+2\beta
     +\frac{2d\beta P(B_r+8n)}{n^2-B}+\frac{dg}{2X}+g-2\\
  &+\delta\left(14dK+2+\frac{n(B_w+B_r)}{n^2-B}\right)\\
  &+\beta_b\left(2dJ_b+2+\frac{nB_b}{n^2-B}\right)
-   +\gamma\{6(h-1)+2\}.                         \tag{PB14}
+   +\gamma\{6(h-1)+2\}.                         \qquad\text{(PB14)}
 \end{split}
-\]
+```
+
 
 Here the two harmless `+2` bounds may both be paid even though a line
 meets at most one rectangle. The formula separately accounts for prefix

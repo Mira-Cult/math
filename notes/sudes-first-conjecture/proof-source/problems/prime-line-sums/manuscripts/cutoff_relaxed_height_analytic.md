@@ -1,5 +1,8 @@
 # Re-estimating the parameterized zero sums at a fixed minimum height
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/analytic`. This additive argument preserves the
 [original-domain linear-window theorem](cutoff_linear_window_analytic.md)
 as an independent fallback. The new mathematical obligation is the
@@ -48,42 +51,52 @@ bounding the smaller critical-strip sums; it is not a new zero-set identity.
 
 Write
 
-\[
- R=9.645908801,\quad C_1=0.399,\quad C_2=5.338,
+
+```math
+R=9.645908801,\quad C_1=0.399,\quad C_2=5.338,
  \quad \nu=\sqrt{\log x/R},\quad L=\log Q,
  \quad \eta=\nu/L-1,\quad \mathcal H=e^\nu/Q=Q^\eta.
-\]
+```
+
 
 **ZH0.** Suppose `Q>=100000` and `mathcal H>=100000`, equivalently
 
-\[
- \boxed{\log x\ge R\bigl(\log Q+\log100000\bigr)^2}.   \tag{ZH0a}
-\]
+
+```math
+\boxed{\log x\ge R\bigl(\log Q+\log100000\bigr)^2}.   \qquad\text{(ZH0a)}
+```
+
 
 For every character modulo `Q`, with the critical-strip zero set used in
 the corrected E2 proof, the sum over zeros with `|Im rho|<=mathcal H`,
 excluding a possible exceptional zero `beta_0`, is less than
 
-\[
- 0.5001\,\nu e^{-\nu},                                \tag{ZH0b}
-\]
+
+```math
+0.5001\,\nu e^{-\nu},                                \qquad\text{(ZH0b)}
+```
+
 
 after weighting each zero by `x^(Re rho-1)/|rho|`. The corresponding
 high-zero sum, with denominator `|rho(rho+1)(rho+2)|`, is less than
 
-\[
- 0.511\,\nu e^{-\nu}\mathcal H^{-2}.                  \tag{ZH0c}
-\]
+
+```math
+0.511\,\nu e^{-\nu}\mathcal H^{-2}.                  \qquad\text{(ZH0c)}
+```
+
 
 Consequently, for every even `Q` in this domain and every reduced class,
 the sharper signed error (AL3) still holds:
 
-\[
- |\theta(x;Q,a)-M_{Q,a}(x)|\le
+
+```math
+|\theta(x;Q,a)-M_{Q,a}(x)|\le
  1.012x\nu e^{-\nu}
  +\frac{4Qxe^{-\nu}}{\varphi(Q)}
- +2\log Q\log x+Q\log Q+2\sqrt x.                     \tag{ZH0d}
-\]
+ +2\log Q\log x+Q\log Q+2\sqrt x.                     \qquad\text{(ZH0d)}
+```
+
 
 The exceptional main term is retained with its actual sign. The new domain
 does not imply the absence of an exceptional zero.
@@ -94,9 +107,11 @@ We have `nu>=2log100000>23`, `0<L<nu`, and `eta>0`. In McCurley's
 notation take `lambda=(1+eta)^2`, so `log x=lambda R L^2`.
 For the low-zero calculation, the function
 
-\[
- t^{-1}\exp[-\nu^2/\log(Qt)]
-\]
+
+```math
+t^{-1}\exp[-\nu^2/\log(Qt)]
+```
+
 
 is increasing for `1<=t<=mathcal H`: its logarithmic derivative,
 multiplied by `t`, is `-1+nu^2/log(Qt)^2>=0`.
@@ -120,9 +135,11 @@ the zero-free bound gives `Re rho>=1/(RL)>1/log x` because `nu^2>L`.
 The boundary cancellation in McCurley's (3.32)–(3.33), after using BMOR's
 zero-counting constants, follows from
 
-\[
- (C_1-1/\pi)RL>2C_1.                                 \tag{ZH1}
-\]
+
+```math
+(C_1-1/\pi)RL\gt 2C_1.                                 \qquad\text{(ZH1)}
+```
+
 
 The certificate checks the stronger comparison with `1/pi` replaced by
 `1/3` at `L=log100000`; it persists for larger `L`. The other hypotheses
@@ -147,20 +164,22 @@ The bound before estimating the three terms is
 `epsilon_2+epsilon_3+epsilon_4`, excluding both exceptional real zeros.
 In terms of the present variables, BMOR's displayed expressions give
 
-\[
+
+```math
 \begin{split}
- \epsilon_2<&\ e^{-R\nu^2}(QL+\eta L^2)\\
+ \epsilon_2\lt &\ e^{-R\nu^2}(QL+\eta L^2)\\
  &+\tfrac12e^{-R\nu^2/2}
  \left[\frac{(1+4\eta+\eta^2)L^2}{2\pi}
        +\frac{(2+\eta)L}{\pi}
        +\frac{C_1\nu+C_2}{\mathcal H}
        +0.798L+11.075\right],\\
  \epsilon_3=&\ \frac{C_1\nu+C_2}{\mathcal H}e^{-\nu},\\
- \epsilon_4<&\ \tfrac12\int_1^{\mathcal H}
+ \epsilon_4\lt &\ \tfrac12\int_1^{\mathcal H}
        t^{-1}e^{-\nu^2/\log(Qt)}\log(Qt)\,dt
-       <\tfrac12\nu e^{-\nu}.                        \tag{ZH2}
+       \lt \tfrac12\nu e^{-\nu}.                        \qquad\text{(ZH2)}
 \end{split}
-\]
+```
+
 
 The last substitution, `s=nu^2/log(Qt)`, integrates from `nu` to
 `nu^2/L` and then extends the upper endpoint to infinity. It requires
@@ -168,39 +187,47 @@ only `L<nu`, not `L<=nu/2`.
 
 For `nu>=23`, the following elementary bounds apply:
 
-\[
- \eta L^2\le\nu^2/4,\quad
+
+```math
+\eta L^2\le\nu^2/4,\quad
  (1+4\eta+\eta^2)L^2\le3\nu^2/2,\quad
  (2+\eta)L\le2\nu,
- \quad Q<e^\nu.
-\]
+ \quad Q\lt e^\nu.
+```
+
 
 Also `(C_1 nu+C_2)/mathcal H<nu`, `0.798L<nu`,
 `11.075<nu/2`, and `e^nu<e^(R nu^2/2)`.
 With `pi>3`, these bounds give
 
-\[
- \epsilon_2<
+
+```math
+\epsilon_2\lt 
  \left(\frac38\nu^2+\frac{31}{12}\nu\right)e^{-R\nu^2/2}
- <\nu^2 e^{-R\nu^2/2}.                                \tag{ZH3}
-\]
+ \lt \nu^2 e^{-R\nu^2/2}.                                \qquad\text{(ZH3)}
+```
+
 
 The normalized envelope `nu exp(nu-R nu^2/2)` decreases for
 `nu>=23`. At 23 its exponent denominator exceeds `exp(2000)>2^2000`,
 so it is less than `10^-6`. Moreover
 
-\[
- \frac{\epsilon_3}{\nu e^{-\nu}}
- \le\frac{C_1+C_2/23}{100000}<10^{-5}.                 \tag{ZH4}
-\]
+
+```math
+\frac{\epsilon_3}{\nu e^{-\nu}}
+ \le\frac{C_1+C_2/23}{100000}\lt 10^{-5}.                 \qquad\text{(ZH4)}
+```
+
 
 If the reflected exceptional zero `1-beta_0` is present, then
 `beta_0>0.99` because `RL>100`. BMOR Proposition 1.11 gives
 
-\[
- \frac{x^{-\beta_0}}{1-\beta_0}
+
+```math
+\frac{x^{-\beta_0}}{1-\beta_0}
  \le \frac{e^{\nu/2}\nu^2}{40}\,e^{-0.99R\nu^2}.
-\]
+```
+
 
 After division by `nu exp(-nu)`, this is bounded by the same
 `nu exp(nu-R nu^2/2)<10^-6`; use
@@ -212,15 +239,17 @@ This proves ZH0b without absorbing the exceptional zero itself.
 
 The high-zero calculation gives `epsilon_5+epsilon_6+epsilon_7`, with
 
-\[
+
+```math
 \begin{split}
- \epsilon_5<&\ \frac{e^{-R\nu^2/2}}{2\mathcal H^3}
+ \epsilon_5\lt &\ \frac{e^{-R\nu^2/2}}{2\mathcal H^3}
    \left(\frac{\mathcal H\nu}{2\pi}+0.798\nu+10.809\right)
     +\frac{4L e^{-R\nu^2}}{\mathcal H^2},\\
  \epsilon_7=&\ \frac{C_1\nu+C_2}{\mathcal H^3}e^{-\nu}.
-                                                               \tag{ZH5}
+                                                               \qquad\text{(ZH5)}
 \end{split}
-\]
+```
+
 
 After normalization by `nu exp(-nu)mathcal H^-2`, the first is less
 than `5exp(nu-R nu^2/2)<10^-6`, and the second is bounded by ZH4.
@@ -229,28 +258,34 @@ All decreasing-envelope and base comparisons are exact certificate inputs.
 The remaining integral, after combining its two terms using
 `C_1/t<log(2pi)` for `t>=mathcal H`, is at most
 
-\[
- \epsilon_6<\frac12\int_{\mathcal H}^\infty
+
+```math
+\epsilon_6\lt \frac12\int_{\mathcal H}^\infty
        t^{-3}e^{-\nu^2/\log(Qt)}\log(Qt)\,dt
- =\frac{Q^2}{2}\int_\nu^\infty s e^{-2s-\nu^2/s}\,ds. \tag{ZH6}
-\]
+ =\frac{Q^2}{2}\int_\nu^\infty s e^{-2s-\nu^2/s}\,ds. \qquad\text{(ZH6)}
+```
+
 
 Here is a direct bound for that integral, avoiding any unstated Bessel
 function parameter domain. Let `f(s)=2s+nu^2/s`. For `s>=nu`,
 `f'(s)>=1`. If `z=nu^2/s^2` lies in `[0,1]`, then
 
-\[
- \left(\frac{s}{f'(s)}\right)'
+
+```math
+\left(\frac{s}{f'(s)}\right)'
    =\frac{2-3z}{(2-z)^2}\le\frac12,
-\]
+```
+
 
 because `2-3z<=(2-z)^2/2`. Integration by parts therefore gives
 
-\[
- \int_\nu^\infty s e^{-f(s)}ds
+
+```math
+\int_\nu^\infty s e^{-f(s)}ds
  \le\nu e^{-3\nu}+\frac12\int_\nu^\infty e^{-f(s)}ds
- \le(\nu+1/2)e^{-3\nu}.                               \tag{ZH7}
-\]
+ \le(\nu+1/2)e^{-3\nu}.                               \qquad\text{(ZH7)}
+```
+
 
 Since `Q^2e^-2nu=mathcal H^-2`, the normalized epsilon_6 is at most
 `1/2+1/(4nu)<=1/2+1/92`. Adding `10^-5+10^-6` gives a number strictly
@@ -262,11 +297,13 @@ In the corrected E2 smoothing argument use
 `h=2x/mathcal H` and `delta=2/mathcal H`.
 The exact combined spectral coefficient is
 
-\[
- 0.5001(1+2/\mathcal H)
+
+```math
+0.5001(1+2/\mathcal H)
  +0.511(1+6/\mathcal H+18/\mathcal H^2+20/\mathcal H^3)
- <1.012.
-\]
+ \lt 1.012.
+```
+
 
 The inequality is checked at `mathcal H=100000` and persists.
 The positive double average displaces its principal and exceptional
@@ -285,9 +322,11 @@ Let `u=log Y`, `ell=ceil(log_2Y)`, `D=Y/ell`, and
 every even `q<=(369/1000)ell^2` and every `(b,c]` inside
 `[Y-D,Y+D]` with `H>=D/2`, provided
 
-\[
- \boxed{\log Y\ge11650}.                              \tag{ZH8}
-\]
+
+```math
+\boxed{\log Y\ge11650}.                              \qquad\text{(ZH8)}
+```
+
 
 The strong initial-pair conclusion AT1b also holds there for `q<=32ell`.
 No controller or square theorem is implied by this analytic-scale statement.
@@ -297,20 +336,24 @@ Retain `a=1443/1000`, `alpha=3219/10000`, `c_y=2001/1000`,
 envelope of the linear-window proof. The only changed source-domain
 inequality is
 
-\[
- U-1>R\,[L(U)+\log100000]^2,
- \quad L(u)=\log(Ca^2)+2\log u.                        \tag{ZH9}
-\]
+
+```math
+U-1\gt R\,[L(U)+\log100000]^2,
+ \quad L(u)=\log(Ca^2)+2\log u.                        \qquad\text{(ZH9)}
+```
+
 
 It has margin exceeding `2981.833622475794` at `U=11650`.
 The ratio `(u-1)/(L(u)+log100000)^2` increases because its denominator's
 logarithm term exceeds 4. Thus ZH0 applies at every endpoint on the tail.
 The fixed main coefficient computed at this base is
 
-\[
- A=\frac{5321071}{125000},\qquad
+
+```math
+A=\frac{5321071}{125000},\qquad
  A-\tfrac12=\frac{5258571}{125000}.
-\]
+```
+
 
 The complete normalized weak error is less than `0.998854483492`;
 the strong-target error is less than `0.002644173218`. The exact

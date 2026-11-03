@@ -1,5 +1,8 @@
 # Complete classical cutoff at 311744
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Coordinator and composition author: `/root`. This is an additive composition
 of separately frozen components. The exact scientific revision, its source
 closure and the complete composition require independent nonauthor review
@@ -47,11 +50,13 @@ preserved complete theorem, with its full historical source closure.
 
 Use the prescribed notation
 
-\[
- X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
+
+```math
+X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
  m=T/n^2,\quad y=T/n,\quad
  E=\lceil\log_2X\rceil,\quad e=\lceil\log_2y\rceil.
-\]
+```
+
 
 Write u=log X. Unmarked logarithms are natural; the integer e is not
 Euler's number. The baseline choices K=floor(n/E³) and D=y/e⁴ are
@@ -62,10 +67,12 @@ and prime target tolerances, not the pool or required lines.
 The freshly specialized [OP](cutoff2_order18_pool.md) proves, from
 n>=2^18 and the original prime-index and prime-count domains,
 
-\[
- n^2<X<n^3,\qquad .47X<m<.53X,\qquad
- u>2v\log2+\log(2v\log2)>28.
-\]
+
+```math
+n^2\lt X\lt n^3,\qquad .47X\lt m\lt .53X,\qquad
+ u\gt 2v\log2+\log(2v\log2)\gt 28.
+```
+
 
 Its weighted seed pool contains more than .8748X/u primes in (X/8,X].
 This is OP's polynomial comparison at u>=28; the older .8749 density
@@ -73,18 +80,22 @@ is not used below its u>=29 premise.
 
 OP's before-ceiling envelopes are
 
-\[
- \log_2X<(58/25)v-1\quad(v\ge73/4),\qquad
- \log_2X<(463/200)v-1\quad(v\ge37/2).
-\]
+
+```math
+\log_2X\lt (58/25)v-1\quad(v\ge73/4),\qquad
+ \log_2X\lt (463/200)v-1\quad(v\ge37/2).
+```
+
 
 Their derivation includes the full one-unit ceiling allowance before
 taking E. Subtracting one from an arbitrary bound on E would not suffice.
 Both controllers retain the index gain
 
-\[
-                   X/n^2>u-3/2
-\]
+
+```math
+X/n^2\gt u-3/2
+```
+
 
 from the original upper prime-count theorem, instead of discarding the
 logarithm. Each controller has its own certified lower affine bound on
@@ -116,10 +127,12 @@ are separate and all pass; no interval borrows another's supply.
 The analytic improvement keeps the signed boundary in the low-zero
 partial summation. BMOR counts both signs with multiplicity, and
 
-\[
- \sum_{1<|\gamma|\le H}|\gamma|^{-1}
+
+```math
+\sum_{1\lt |\gamma|\le H}|\gamma|^{-1}
  =N(H)/H-N(1)+\int_1^H N(t)t^{-2}\,dt.
-\]
+```
+
 
 Combining the boundary with the small-zero contribution before bounding
 N leaves one copy of N(1). LZ applies the primitive-conductor upper
@@ -137,17 +150,21 @@ alternating matching carries at least half the total weight and is
 globally vertex-disjoint before its label is chosen. For every gap label
 preassign its entire demand
 
-\[
- D_g=Q_s s_g+B_r/2+2Q_sJ_b,\quad Q_s=6(n+8),
+
+```math
+D_g=Q_s s_g+B_r/2+2Q_sJ_b,\quad Q_s=6(n+8),
  \quad B_r=4(n+1)\lceil\log_2(g/2)\rceil.
-\]
+```
+
 
 The BQ and AN certificates each check
 
-\[
- (.8748/u-7/256)X-1>
+
+```math
+(.8748/u-7/256)X-1\gt 
  2\sum_{g=2,4,\ldots,30}\varphi(g)(1-g/32)D_g
-\]
+```
+
 
 over every order in their branches. All possible labels are paid, so
 neither the gap nor its totient is assumed favorable. All seed primes
@@ -175,10 +192,12 @@ supplies. OP invokes the size inequalities SO11--SO12 at integer bins
 j>=17 and R<=5000, with fresh mean and index inputs. The exact base
 inequalities are
 
-\[
- 2^{17}\ge19(4\cdot17+4)^2,\qquad
+
+```math
+2^{17}\ge19(4\cdot17+4)^2,\qquad
  2^{51}\ge100000(4\cdot17+4)^2.
-\]
+```
+
 
 Their integer-bin induction establishes the complete list-length,
 fine-grid and radius conditions. SO13's old literal log y>40 claim
@@ -232,9 +251,11 @@ Allocate all ordinary and diagonal blocks from one shared stage
 population. The common stage mean cancels the former term proportional
 to the number of wide stages. The remaining stochastic error is
 
-\[
-                 2\delta X\sqrt{(21dK+4)\log(8n+8)}.
-\]
+
+```math
+2\delta X\sqrt{(21dK+4)\log(8n+8)}.
+```
+
 
 The seed and wide allocations concern disjoint pairs and slots, with
 their stage means unchanged. Choose an allocation meeting each separate

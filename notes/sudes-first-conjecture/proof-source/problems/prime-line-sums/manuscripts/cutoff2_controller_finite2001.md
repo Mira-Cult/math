@@ -1,5 +1,8 @@
 # A finite controller for every odd order 2001 through 19483
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/controller_redesign`. This additive manuscript composes
 the explicit finite prefix family FPF, the exact target table FTT, and
 central completion CC. It preserves every frozen predecessor. The
@@ -20,11 +23,13 @@ composition before presenting a new all-tail record.
 
 Retain
 
-\[
- X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
+
+```math
+X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
  m=T/n^2,\quad y=T/n,\quad
  E=\lceil\log_2X\rceil,\quad e=\lceil\log_2y\rceil.
-\]
+```
+
 
 All analytic logarithms are natural. The integer `e` is not Euler's
 number. Here X,T and the targets come from the complete finite table
@@ -57,9 +62,11 @@ Use d=6, `kappa=199/200`, and three derangements for each graph.
 Reapply PB's graph argument with `t0=1/256`, `a=kappa/d`,
 `b=3-kappa/2-1`, and the actual entropy function
 
-\[
- F(t)=3\{tH(a)+(1-t)H(at/(1-t))\}-2H(t).
-\]
+
+```math
+F(t)=3\{tH(a)+(1-t)H(at/(1-t))\}-2H(t).
+```
+
 
 The exact checker proves the conditioned small-cut inequality
 `1+3H(a)+b log(t0)+3 log3<log(1/8)`, and both endpoint bounds
@@ -67,9 +74,11 @@ The exact checker proves the conditioned small-cut inequality
 universal calculation in PB, whose domain `0<kappa<d/2` holds.
 The large-cut tail is paid by
 
-\[
- n/34>6\log(4n)+\log8.                         \tag{FC2K1}
-\]
+
+```math
+n/34\gt 6\log(4n)+\log8.                         \qquad\text{(FC2K1)}
+```
+
 
 It holds at2001 with positive derivative `1/34-6/n`, and therefore
 for every larger real n. This supplies two degree-exact-six graphs
@@ -100,9 +109,11 @@ grid through `R0=2^(P+1)-2`. This uses the sharp finite induction
 diagonal has2d copies of every stage and the amplified complete grid.
 The prefix stage means, ranges, total prime sum Sp and variance
 
-\[
- V_p=18\sum_j W_j^2+4\max_j W_j^2                 \tag{FC2K2}
-\]
+
+```math
+V_p=18\sum_j W_j^2+4\max_j W_j^2                 \qquad\text{(FC2K2)}
+```
+
 
 are computed from the actual truncated prime lists, not upper-order
 copies or an assumed mean interval. Exact protected counts in every
@@ -112,9 +123,11 @@ later rational interval are computed from those same lists.
 
 Set `eb=3/100`. Start R=R0. While R<X, put `r=min(R/X,1/2)` and take
 
-\[
- I=(X/2-rX/2,\ X/2-rX/2+e_b rX],\qquad I'=X-I.
-\]
+
+```math
+I=(X/2-rX/2,\ X/2-rX/2+e_b rX],\qquad I'=X-I.
+```
+
 
 The reflection uses the corresponding half-open convention; a change
 of one endpoint to the other convention is conservatively harmless
@@ -124,9 +137,11 @@ Both intervals have width H=eb rX and lie inside `[X/4,3X/4]`.
 Every cross-pair has a positive even difference in
 `((1-2eb)rX,rX)`. After selecting the stage update
 
-\[
- R\leftarrow R+(1-2e_b)rX.                       \tag{FC2K3}
-\]
+
+```math
+R\leftarrow R+(1-2e_b)rX.                       \qquad\text{(FC2K3)}
+```
+
 
 Actual ordinary coverage remains at least R. Every appended gap is
 at most the previous coverage, so all even grids persist. The2d
@@ -140,10 +155,12 @@ domain and modulus-two reduction are recorded in [S18-1](cutoff2_analytic_sub18_
 Sum its two modulus-four reduced classes. For every real
 `2<=a<b<=X<10^10`, with `Gamma=518/125`,
 
-\[
- \#\{\hbox{odd primes in }(a,b]\}
- \ge {b-a-\Gamma(\sqrt a+\sqrt b)\over\log X}.     \tag{FC2K4}
-\]
+
+```math
+\#\{\hbox{odd primes in }(a,b]\}
+ \ge {b-a-\Gamma(\sqrt a+\sqrt b)\over\log X}.     \qquad\text{(FC2K4)}
+```
+
 
 Both q4 source arguments are below their `4*10^13` threshold. The
 finite computation supporting this published theorem is an imported
@@ -160,9 +177,11 @@ Two side sets of size at least M provide at least M^2 cross-pairs.
 Their even differences occupy at most `floor(H)+1<=H+1` values,
 since the difference interval has length2H. Consequently
 
-\[
-                         M^2>H+1                       \tag{FC2K5}
-\]
+
+```math
+M^2\gt H+1                       \qquad\text{(FC2K5)}
+```
+
 
 gives two pairs with the same difference. They are vertex-disjoint:
 the side sets are disjoint, and a fixed difference determines the
@@ -188,10 +207,12 @@ least2KX, and the amplified diagonal ranges are more than sufficient.
 Let `cmax=m/X+a+w`. From FC2K4 and concavity of the square root,
 each bin initially contains at least
 
-\[
- W={2\delta X-2\Gamma\sqrt{c_{\max}X}\over\log X}.
-                                                               \tag{FC2K6}
-\]
+
+```math
+W={2\delta X-2\Gamma\sqrt{c_{\max}X}\over\log X}.
+                                                               \qquad\text{(FC2K6)}
+```
+
 
 Pay W−1 per bin for integral rounding. Subtract the exact number of
 protected prefix entries in the union of both whole wide bands; this
@@ -202,17 +223,21 @@ from each side of the same fixed cell**, so it decreases S by exactly1.
 The fixed partition never changes. Therefore all3QK wide pairs cost
 3QK, while the final entry budget remains `Bw=6QK`. Define
 
-\[
- S_* = N(W-1)-\text{protected wide entries}-3QK.
-                                                               \tag{FC2K7}
-\]
+
+```math
+S_* = N(W-1)-\text{protected wide entries}-3QK.
+                                                               \qquad\text{(FC2K7)}
+```
+
 
 There are at least `sum_i L_i H_i>=S_*^2/N` eligible cross-pairs.
 Their even gaps occupy at most `floor(2wX)+1` values. The checked gates
 
-\[
-                  S_*>0,\qquad S_*^2>N(2wX+1)          \tag{FC2K8}
-\]
+
+```math
+S_*\gt 0,\qquad S_*^2\gt N(2wX+1)          \qquad\text{(FC2K8)}
+```
+
 
 thus provide an equal-gap double block after every preceding deletion.
 Select all blocks sequentially, keeping the complete `Bw` budget.
@@ -225,10 +250,12 @@ Put `S=P+J+3K`, `B=Bp+Bb+Bw`, `N0=n^2-B`.
 The actual uniform main degree is `rho=r0=12S`; the actual joint
 rectangle count is `Jrect=24S`. Check
 
-\[
- B\le n^2/4,\qquad n>48S+16,\qquad J_{rect}\ge3.
-                                                               \tag{FC2K9}
-\]
+
+```math
+B\le n^2/4,\qquad n\gt 48S+16,\qquad J_{rect}\ge3.
+                                                               \qquad\text{(FC2K9)}
+```
+
 
 These reestablish RP packing, ordinary matching and the CY center-trim
 factor conditions at every actual order. In particular all rectangles
@@ -239,11 +266,13 @@ The unused count agrees exactly with `n^2-rho*n-4Jrect`.
 Every bridge midpoint is within `eb X/4` of X/2; every wide midpoint
 is within delta X of m. Define the exact reference and uncertainty
 
-\[
- c={T-S_p-B_bX/2-B_wm\over N_0},\qquad
+
+```math
+c={T-S_p-B_bX/2-B_wm\over N_0},\qquad
  \sigma={e_bB_b/4+\delta B_w\over N_0}.
-                                                               \tag{FC2K10}
-\]
+                                                               \qquad\text{(FC2K10)}
+```
+
 
 For **every** permitted bridge and wide selection the actual unused
 mean mu satisfies `|mu-c|<=sigma X`. This includes their signed total
@@ -256,21 +285,25 @@ checked disjoint from every bridge and wide interval. FC2K4 minus the
 exact protected prefix count and one rounding unit is a lower bound
 for the **actually unused** stock in each central interval. Check
 
-\[
- \begin{split}
+
+```math
+\begin{split}
  \#I_-,\#I_+&\ge D=2n-1-J_{rect},\\
  \#I&\ge D+T_{ex}=5n-4J_{rect},\qquad
- T_{ex}=3n-3J_{rect}+1.                            \tag{FC2K11}
+ T_{ex}=3n-3J_{rect}+1.                            \qquad\text{(FC2K11)}
  \end{split}
-\]
+```
+
 
 The two outer counts and whole count are distinct obligations. Apply
 CC with its actual CY factor `k=n-rho-5`. Completion changes every
 row and column from its original unused-mean expectation by less than
 
-\[
- X+[(5+T_{ex}/n)(1+\kappa_c)+3/n]\epsilon X.       \tag{FC2K12}
-\]
+
+```math
+X+[(5+T_{ex}/n)(1+\kappa_c)+3/n]\epsilon X.       \qquad\text{(FC2K12)}
+```
+
 
 Its two diagonal errors are at most2.01epsilon X, which is smaller
 than the same common allowance. Every completion value is used once,
@@ -283,7 +316,8 @@ Define `beta_p=max_j |mu_j-m|/X`,
 `Ap=sum_j(mu_j-m)/X`, `beta_b=|1/2-m/X|+eb/4`.
 The simultaneous all-line baseline allowance, in units of X, is
 
-\[
+
+```math
 \begin{split}
  U_p&=\sqrt{V_pL/2}/X,
  &M_p&=2\beta_p+12|A_p|H_c/N_0,\\
@@ -291,8 +325,9 @@ The simultaneous all-line baseline allowance, in units of X, is
                       +12\beta_bJH_c/N_0,\\
  U_w&=2\delta\sqrt{(54K+4)L}+2\delta
                       +36\delta K H_c/N_0.
-\end{split}                                                   \tag{FC2K13}
-\]
+\end{split}                                                   \qquad\text{(FC2K13)}
+```
+
 
 These are FP's actual signed mean cancellation and BB/WB's balanced
 block allocations, with Jw=3K. Each disjoint family can separately
@@ -304,11 +339,13 @@ midpoint rounding costs `d g/(2X)=6/X`.
 The exact finite test, using the actual largest FTT target deviation
 `tau=max_z |nz-T|/(nX)`, is
 
-\[
- U_p+M_p+U_b+U_w+1+
+
+```math
+U_p+M_p+U_b+U_w+1+
  [(5+T_{ex}/n)(1+\kappa_c)+3/n]\epsilon+6/X+\tau
- <{999\over1000}{199\over200}K.                 \tag{FC2K14}
-\]
+ \lt {999\over1000}{199\over200}K.                 \qquad\text{(FC2K14)}
+```
+
 
 Every row and column demand is even and has total zero. Give every
 graph edge integer capacity `floor(KX/2)` after division by g=2.

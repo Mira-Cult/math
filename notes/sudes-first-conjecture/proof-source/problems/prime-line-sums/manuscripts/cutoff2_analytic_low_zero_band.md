@@ -1,5 +1,8 @@
 # Smaller-order progression supplies from the signed low-zero sum
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/analytic_redesign`, following `/root`'s identification of
 the discarded boundary term. This additive source changes no frozen Q30,
 AB, SM, SE, GD, SO or SQ file. All labels below are manuscript-local.
@@ -43,18 +46,22 @@ The zeros with `abs(gamma)<=1` each contribute at most 2 to
 `1/abs(rho)`. For the remaining zeros, `1/abs(rho)<=1/abs(gamma)`.
 The closed-height convention gives the exact identity
 
-\[
- \sum_{1<|\gamma|\le H}\frac1{|\gamma|}
+
+```math
+\sum_{1\lt |\gamma|\le H}\frac1{|\gamma|}
     =\frac{N(H)}H-N(1)+\int_1^H\frac{N(t)}{t^2}\,dt.
-                                                               \tag{LZ1}
-\]
+                                                               \qquad\text{(LZ1)}
+```
+
 
 Consequently
 
-\[
- \sum_{|\gamma|\le H}\frac1{|\rho|}
- \le N(1)+\frac{N(H)}H+\int_1^H\frac{N(t)}{t^2}\,dt.           \tag{LZ2}
-\]
+
+```math
+\sum_{|\gamma|\le H}\frac1{|\rho|}
+ \le N(1)+\frac{N(H)}H+\int_1^H\frac{N(t)}{t^2}\,dt.           \qquad\text{(LZ2)}
+```
+
 
 This combines `2N(1)-N(1)` before any upper bound for `N` is inserted.
 It does not bound a negative count term in the wrong direction. It also
@@ -65,10 +72,12 @@ is in `N(1)` and has `abs(rho)=1/2`; no division by that ordinate occurs.
 
 Proposition 2.5 gives, with the actual conductor retained,
 
-\[
- N(t)<\frac t\pi\log\frac{dt}{2\pi\mathrm e}
+
+```math
+N(t)\lt \frac t\pi\log\frac{dt}{2\pi\mathrm e}
                        +C_1\log(dt)+C_2\qquad(t\ge1).
-\]
+```
+
 
 The right side increases with `log d`, its coefficient being
 `t/pi+C_1>0`. We may therefore replace `d` by `Q` in this **one-sided
@@ -77,21 +86,25 @@ No two-sided zero-count theorem with conductor `Q` is asserted.
 
 Put
 
-\[
- \nu=\log Q,\qquad \lambda=\log(QH),\qquad
+
+```math
+\nu=\log Q,\qquad \lambda=\log(QH),\qquad
  c=\log(2\pi)+1.
-\]
+```
+
 
 Integrating the majorant in (LZ2) gives
 
-\[
- \boxed{\displaystyle
+
+```math
+\boxed{\displaystyle
  \mathcal K(Q,H)=
  \frac{(\nu-c)+(\lambda-c)
        +\tfrac12\{(\lambda-c)^2-(\nu-c)^2\}}{\pi}
        +2C_1\nu+C_1+2C_2-\frac{C_1}{H}.}
-                                                               \tag{LZ3}
-\]
+                                                               \qquad\text{(LZ3)}
+```
+
 
 In detail, the counting-error integral is
 
@@ -130,10 +143,12 @@ monotonic substitution in its square.
 
 Retain the prescribed pool and notation
 
-\[
- X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
+
+```math
+X=p_{n^2+1},\quad T=\sum_{j=2}^{n^2+1}p_j,\quad
  m=T/n^2,\quad y=T/n,\quad E=\lceil\log_2 X\rceil.
-\]
+```
+
 
 Every statement in this section assumes an **actual even modulus
 `2<=q<=30`**. The selected-gap assertion remains a separate controller
@@ -148,16 +163,20 @@ now with `K_0=57.525` in place of 110, and with
 In Q30's definitions of `S_z`, `A_r`, `a_0` and `Gamma`, keep the
 high-zero sum unchanged and replace only
 
-\[
-              \Gamma=\Phi\{K_0(1+r\tau/2)+2\}.                \tag{LZ4}
-\]
+
+```math
+\Gamma=\Phi\{K_0(1+r\tau/2)+2\}.                \qquad\text{(LZ4)}
+```
+
 
 The source proposition then gives, whenever `log x>=z`,
 
-\[
- \varphi(q)\left|\theta(x;q,a)-\frac{x}{\varphi(q)}\right|
-        \le a_0x+\Gamma\sqrt x+\Phi(25\log x+62).              \tag{LZ5}
-\]
+
+```math
+\varphi(q)\left|\theta(x;q,a)-\frac{x}{\varphi(q)}\right|
+        \le a_0x+\Gamma\sqrt x+\Phi(25\log x+62).              \qquad\text{(LZ5)}
+```
+
 
 The original primitive-character correction remains paid in `W_q`.
 Proper prime powers are removed by the frozen SM estimate
@@ -188,20 +207,24 @@ unstated rounding of those thresholds. In every practical profile,
 For every `1/A_*<=delta<=1/100`, each centered entry interval
 `(Y-delta X,Y+delta X]` contains at least
 
-\[
-                         \frac{\delta X}{\varphi(q)\log X}.
-                                                               \tag{LZ6}
-\]
+
+```math
+\frac{\delta X}{\varphi(q)\log X}.
+                                                               \qquad\text{(LZ6)}
+```
+
 
 Every interval inside `[X/4,3X/4]` of length `H>=X/W_*` contains
 at least `H/[2phi(q)log X]` class primes. In particular, all three
 profiles support the requested prefix width `X/512`. Also the wider
 global pool `(X/8,X]` contains at least
 
-\[
-                         \frac{693X}{800\varphi(q)\log X}.
-                                                               \tag{LZ7}
-\]
+
+```math
+\frac{693X}{800\varphi(q)\log X}.
+                                                               \qquad\text{(LZ7)}
+```
+
 
 ### Domains and whole-tail proof
 
@@ -225,7 +248,8 @@ smoothing, verified-height, high-zero and prime-power domains.
 With `u=log X`, apply (LZ5) to the endpoints as in Q30. The three
 normalized errors are
 
-\[
+
+```math
 \begin{split}
  B(u)&=2c_+a_0+2\Gamma\sqrt{c_+}\,e^{-u/2}
                      +2\Phi(25u+62)e^{-u},\\
@@ -233,8 +257,9 @@ normalized errors are
                      +2\Phi(25u+62)e^{-u},\\
  G(u)&=\tfrac98a_0+(1+\sqrt{1/8})\Gamma e^{-u/2}
                      +2\Phi(25u+62)e^{-u}.
-\end{split}                                                     \tag{LZ8}
-\]
+\end{split}                                                     \qquad\text{(LZ8)}
+```
+
 
 The certificate proves `A_*B(U)<1`, `2W_*B_b(U)<1`, and
 `G(U)<7/800`. It also checks the practical A and width 512 ratios:
@@ -262,10 +287,12 @@ supply or on the square problem.
 
 Assume the separately supplied mean bounds `.47X<m<.53X`, and set
 
-\[
- e=\lceil\log_2 y\rceil,\qquad
+
+```math
+e=\lceil\log_2 y\rceil,\qquad
  L=\lceil(693148/10^6)(e+1)\rceil,\qquad D=y/R_0.
-\]
+```
+
 
 For every real `4<=R_0<=5000`, the two dense-target supply premises hold:
 
@@ -288,10 +315,12 @@ Rosser--Schoenfeld corollary (3.13), valid for j>=6, gives
 
 Since `log j<39log2<28` and `log log j<log28<4`,
 
-\[
- X<32(2^{38}+1)<2^{44},\quad y<2^{63},\quad e\le63,\quad L\le45.
-                                                               \tag{LZ9}
-\]
+
+```math
+X\lt 32(2^{38}+1)\lt 2^{44},\quad y\lt 2^{63},\quad e\le63,\quad L\le45.
+                                                               \qquad\text{(LZ9)}
+```
+
 
 Every requested even target modulus is therefore at most 44:
 `(50/49)L<=2250/49<46`. The complete totient table through 44 proves
@@ -299,9 +328,11 @@ Every requested even target modulus is therefore at most 44:
 
 At the lower order, the lower index and mean bounds give
 
-\[
- \log y>28.170304+18\log2+\log(.47)>39.891930665800.
-\]
+
+```math
+\log y\gt 28.170304+18\log2+\log(.47)\gt 39.891930665800.
+```
+
 
 Every target endpoint has logarithm greater than
 `28.170304+18log2+log(.47)+log(3/4)>39.604248593349>39`.
@@ -314,9 +345,11 @@ Use `Q=44`, `Phi=20`, `z=39`, `r=16`, `tau=22/10^7`, and the
 second low-zero cap `K_0=57.861`. The same primitive-correct formula
 gives relative theta error less than
 
-\[
-                  0.000022752411458<\frac1{8(5000+1)}.          \tag{LZ10}
-\]
+
+```math
+0.000022752411458\lt \frac1{8(5000+1)}.          \qquad\text{(LZ10)}
+```
+
 
 The interval endpoints sum to at most `2y(1+1/R_0)`, and its length
 is at least `y/(2R_0)`. Thus the theta error removes less than half
@@ -331,16 +364,20 @@ The reciprocal low-zero sum is at most 94.1 by the third row of LZ2.
 For higher zeros simply use `x^(beta-1)<=1`. The unchanged SM
 integration-by-parts majorant gives
 
-\[
- S\le H^{-20}\left\{\frac{25/20+1/20^2}{\pi}
+
+```math
+S\le H^{-20}\left\{\frac{25/20+1/20^2}{\pi}
                           +\frac{2(25C_1+C_2)}H\right\},
-\]
+```
+
 
 using `log(2H)<25`. The resulting relative theta error is less than
 
-\[
-                  0.000000328687258<\frac1{400\cdot5000}.       \tag{LZ11}
-\]
+
+```math
+0.000000328687258\lt \frac1{400\cdot5000}.       \qquad\text{(LZ11)}
+```
+
 
 The seed endpoints sum to `2y`, so their error loses less than one
 percent of the main term `D/2`. This proves the first supply premise.

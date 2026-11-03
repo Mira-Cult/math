@@ -1,5 +1,8 @@
 # A wheel-assisted finite controller from order 2^16
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/controller_redesign`. This additive conditional component
 preserves all frozen predecessors. Its exact finite certificate is not a
 proof of its analytic imports or a kernel formalization. Independent
@@ -12,9 +15,11 @@ y=T/n, u=log X, v=log_2 n, E=ceil(log_2 X), and e=ceil(log_2 y).
 Unmarked logarithms are natural; e is an integer parameter. The covered
 orders are precisely all odd n in
 
-\[
-                         2^{16}\le n,\qquad n^2<2^{33}.    \tag{WC1}
-\]
+
+```math
+2^{16}\le n,\qquad n^2\lt 2^{33}.    \qquad\text{(WC1)}
+```
+
 
 The two parameter-table branches are16<=v<65/4 and
 65/4<=v<33/2. The exact integer comparison n^4<2^65 chooses
@@ -31,20 +36,24 @@ Use the published bounded-range S18.1--S18.5 counts from
 [BG](cutoff2_bounded_pool_geometry.md), at their actual arguments.
 They supply
 
-\[
- .487X<m<.492X,\quad X/n^2>u-9/8,\quad
- \#\{X/8<p\le X\}\ge .896X/u.                            \tag{WC2}
-\]
+
+```math
+.487X\lt m\lt .492X,\quad X/n^2\gt u-9/8,\quad
+ \#\{X/8\lt p\le X\}\ge .896X/u.                            \qquad\text{(WC2)}
+```
+
 
 The lower and upper envelopes are
 
-\[
- \begin{split}
- U(v)&=2a_2v+3099/1000<u,\quad Q(v)=U(v)-9/8<X/n^2,\\
- u&<V(v)=b_2(294v/125-1),\qquad
- a_2=6931/10000,\quad b_2=693148/10^6.                    \tag{WC3}
+
+```math
+\begin{split}
+ U(v)&=2a_2v+3099/1000\lt u,\quad Q(v)=U(v)-9/8\lt X/n^2,\\
+ u&\lt V(v)=b_2(294v/125-1),\qquad
+ a_2=6931/10000,\quad b_2=693148/10^6.                    \qquad\text{(WC3)}
  \end{split}
-\]
+```
+
 
 The lower source comparison is log(32a_2)>3099/1000. The upper
 expression is S18's actual before-ceiling index bound from v=16;
@@ -59,16 +68,18 @@ The generic geometry of BN, MC and RP only requires an even modulus.
 
 Use the exact common parameters
 
-\[
+
+```math
 \begin{gathered}
  d=6,\quad\kappa=26/25,\quad c=7/8,\quad\rho=112/125,\quad
  \alpha=103/125,\quad\eta=12/25,\quad L=21,\\
  C=635,\quad K=\lfloor n/C\rfloor,\quad z=16,\quad
  f=9999/10000,\quad A=280,\quad\delta=1/A,\quad N=30,\\
  w=N/A=3/28,\quad S_{\rm stock}=2000,\quad
- R_{\rm target}=1300,\quad\epsilon_b=L/336=1/16.           \tag{WC4}
+ R_{\rm target}=1300,\quad\epsilon_b=L/336=1/16.           \qquad\text{(WC4)}
 \end{gathered}
-\]
+```
+
 
 The degree-six graph is rechecked by the original PB entropy proof
 with decay1/400, valid for every n>=2^16. Every prefix, bridge,
@@ -96,11 +107,13 @@ Q_s=d(n+8). The manifest's two tables specify fixed seed counts s_g
 and fixed phase caps, with sum P_g including the seeds. The weighted
 prime-path condition is
 
-\[
- (\rho/u-1/48)X-1>
+
+```math
+(\rho/u-1/48)X-1\gt 
  2\sum_{g=2,4,\ldots,40}\varphi(g)(1-g/42)
-       \{Q_ss_g+B_r/2+2Q_sJ_b\},\qquad B_r=4(n+1)b.       \tag{WC5}
-\]
+       \{Q_ss_g+B_r/2+2Q_sJ_b\},\qquad B_r=4(n+1)b.       \qquad\text{(WC5)}
+```
+
 
 This is SQ's weighted matching proof applied to the actual total
 rho X/u in (X/8,X], with path span at most7X/8. Its fixed-class
@@ -115,10 +128,12 @@ s_i for twice the resulting parenthetical densities. All residue and
 bridge deletion/floor ratios divide by s_e or s_i; double-pair ratios
 divide by their squares. The aggregate reflected-bin condition is
 
-\[
-    {Z\{1+(9/8)/Q(v_0)\}\over s_e w-1/S_{\rm stock}}<1,
-       \qquad N S_{\rm stock}^2 V(v_1)^2<X_0,             \tag{WC6}
-\]
+
+```math
+{Z\{1+(9/8)/Q(v_0)\}\over s_e w-1/S_{\rm stock}}\lt 1,
+       \qquad N S_{\rm stock}^2 V(v_1)^2\lt X_0,             \qquad\text{(WC6)}
+```
+
 
 where Z bounds the complete reservation fraction and
 X_0=n_0²Q(v_0), n_0=floor(2^v_0). This retains the prime-index
@@ -129,9 +144,11 @@ the new f is used in every supply and common-batch comparison.
 
 The total entry invoice remains
 
-\[
-                    B=B_r+2Q_s(P_g+J_b+7K).               \tag{WC7}
-\]
+
+```math
+B=B_r+2Q_s(P_g+J_b+7K).               \qquad\text{(WC7)}
+```
+
 
 Seven wide stages retain coverage because7(1/2-2w)=2.
 The RP rectangle count and ordinary matching conditions are unchanged
@@ -145,19 +162,23 @@ imported [BT lemma](cutoff2_bruntitchmarsh_prefix.md).
 Within each branch let U_0=U(v_0), V_1=V(v_1), Q_0=Q(v_0),
 X_0=n_0²Q_0 and q_0=d(n_0+8)/X_0. Put
 
-\[
- m_f=f\alpha/V_1,\quad
+
+```math
+m_f=f\alpha/V_1,\quad
  m_0=\rho/V_1-4(n_0+1)b/X_0-2q_0(J_b+s_g),\quad
- R_*=\frac{\varphi(g)}{2\eta m_f},\quad S_0=s_gg-R_* .    \tag{WC8}
-\]
+ R_*=\frac{\varphi(g)}{2\eta m_f},\quad S_0=s_gg-R_* .    \qquad\text{(WC8)}
+```
+
 
 The actual post-seed stock is at least m_0X; all phase caps pay
 their successive2Q_s entry deletions. The common-candidate condition is
 
-\[
-                  \epsilon m_f^2g\ge2zq_0\varphi(g),
-               \quad\epsilon=1/[2(c+1/L)]-\eta.           \tag{WC9}
-\]
+
+```math
+\epsilon m_f^2g\ge2zq_0\varphi(g),
+               \quad\epsilon=1/[2(c+1/L)]-\eta.           \qquad\text{(WC9)}
+```
+
 
 It supplies all16Q_s candidate pairs. BN retains Q_s pairs in one
 midpoint subinterval of width cX/16. Unselected candidates remain
@@ -176,13 +197,15 @@ All primes in the pool exceed13, so every wheel phase screens its
 actual available set. WP computes rho_W and its full finite-period
 discrepancy C_W exactly. The sufficient shifted entry thresholds are
 
-\[
- S_W=\left\lceil{\varphi(g)C_W\over
+
+```math
+S_W=\left\lceil{\varphi(g)C_W\over
                  (1-\rho_W\zeta)\eta m_f}\right\rceil,
  \qquad
  S_{\lambda}=\left\lceil{\varphi(g)e^{\lambda}\over
-                              \zeta\eta m_f}\right\rceil. \tag{WC10}
-\]
+                              \zeta\eta m_f}\right\rceil. \qquad\text{(WC10)}
+```
+
 
 For the second threshold use BT's upward rational exponential enclosure.
 The starts and multipliers are strictly increasing. At each wheel
@@ -194,11 +217,13 @@ prime-density lower bound.
 For a phase with previous cap total a and current cap J,
 m_a=m_0-2q_0a. The same exact finite comparison as BCM11 is checked:
 
-\[
- {\zeta\eta g\{Jm_a-q_0J(J-1)\}\over
+
+```math
+{\zeta\eta g\{Jm_a-q_0J(J-1)\}\over
        \varphi(g)\{1+\zeta\eta g\rho/[\varphi(g)U_0]\}}
-       \ge\log(S_{\rm next}/S_{\rm start}).               \tag{WC11}
-\]
+       \ge\log(S_{\rm next}/S_{\rm start}).               \qquad\text{(WC11)}
+```
+
 
 The final right side is bounded by V_1-log(L S_start). Every terminal
 stock remains at least m_fX, and every multiplier/compatibility condition
@@ -216,10 +241,12 @@ and sends an outgoing positive transfer, both in the same interval.
 With r_b=floor(log_2(g/2)), its repair magnitude, and that of either
 diagonal, is at most r_b(1/2+2delta)X. The full residue contribution is
 
-\[
-                  (1/4+\delta)(6b+2)X
-                                +r_b(1/2+2\delta)X.        \tag{WC12}
-\]
+
+```math
+(1/4+\delta)(6b+2)X
+                                +r_b(1/2+2\delta)X.        \qquad\text{(WC12)}
+```
+
 
 All b-bit gadgets, entries, CRT unit classes and deletion charges
 are retained. Column repairs preserve every row, row repairs preserve
@@ -230,10 +257,12 @@ The rest of the all-line centering is evaluated afresh from BN, DP,
 PB, WB and BG. Sorted seed allocation and narrowed growth allocation
 cost at most
 
-\[
- cX\sqrt{(3d+4)\log(8n+8)/2}
-                       +(10c/16)X\lceil\log_2Q_s\rceil.   \tag{WC13}
-\]
+
+```math
+cX\sqrt{(3d+4)\log(8n+8)/2}
+                       +(10c/16)X\lceil\log_2Q_s\rceil.   \qquad\text{(WC13)}
+```
+
 
 The depth bounds are19 on the first branch and20 on the second,
 proved from their exact integer upper orders. The unused-prime depth

@@ -1,5 +1,8 @@
 # Multiclass adaptive controller from order 2^18
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: /root/controller_redesign. This additive conditional controller
 preserves every frozen predecessor. Its exact revision and complete
 composition require independent nonauthor review. The arithmetic checker
@@ -12,9 +15,11 @@ v=log_2 n, E=ceil(log_2 X), e=ceil(log_2 y).
 Unmarked logarithms are natural. Every row, every column and both main
 diagonals are included. This component covers every odd order in
 
-\[
-                         n\ge2^{18},\qquad n^4<2^{73}.       \tag{CM1}
-\]
+
+```math
+n\ge2^{18},\qquad n^4\lt 2^{73}.       \qquad\text{(CM1)}
+```
+
 
 At the upper boundary the frozen BQ controller applies, followed by AN
 and the independently reviewed complete 2^19 tail. The root composition
@@ -26,17 +31,21 @@ premises are not imported into this smaller band.
 [OP](cutoff2_order18_pool.md) gives .47X<m<.53X,
 rho=2187/2500=.8748, and the before-ceiling envelope
 
-\[
- u<V(v)=b_2(233v/100-1),\qquad b_2=693148/10^6.
-\]
+
+```math
+u\lt V(v)=b_2(233v/100-1),\qquad b_2=693148/10^6.
+```
+
 
 The exact logarithm comparison log(36a_2)>321/100, with
 a_2=6931/10000, gives the pointwise lower bounds
 
-\[
- U_-(v)=2a_2v+321/100<u,\qquad
- Q(v)=U_-(v)-3/2<X/n^2 .                                  \tag{CM2}
-\]
+
+```math
+U_-(v)=2a_2v+321/100\lt u,\qquad
+ Q(v)=U_-(v)-3/2\lt X/n^2 .                                  \qquad\text{(CM2)}
+```
+
 
 In particular u>28 throughout this band, and
 u/(X/n²)<1+(3/2)/Q(v). These are coupled prime-index bounds,
@@ -58,7 +67,8 @@ independent diagonal targets. Target prime values may repeat.
 
 The finite parameters are
 
-\[
+
+```math
 \begin{gathered}
  d=6,\quad\kappa=26/25,\quad c=7/8,\quad
  \alpha=41/50,\quad\eta=27/50,\quad L=37,\\
@@ -66,8 +76,9 @@ The finite parameters are
  f=99999/100000,\\
  A=924,\quad N=99,\quad S_{\rm stock}=4000,\quad
  G=30,\quad \chi=99/100.
-\end{gathered}                                             \tag{CM3}
-\]
+\end{gathered}                                             \qquad\text{(CM3)}
+```
+
 
 The retained residue and bridge stocks are one eighth of their
 analytic counts. The degree-six graph and cut expansion are checked
@@ -107,17 +118,21 @@ both reflected windows, all overlaps and residue intersections.
 
 The seed demand for a possible label is
 
-\[
- D_g=Q_ss_g+B_r/2+2Q_sJ_b,\qquad J_b=6.                    \tag{CM4}
-\]
+
+```math
+D_g=Q_ss_g+B_r/2+2Q_sJ_b,\qquad J_b=6.                    \qquad\text{(CM4)}
+```
+
 
 The weighted path matching of SQ, with OP's smaller-domain density,
 is applicable because the certificate proves
 
-\[
- (\rho/u-7/256)X-1>
- 2\sum_{g=2,4,\ldots,30}\varphi(g)(1-g/32)D_g .             \tag{CM5}
-\]
+
+```math
+(\rho/u-7/256)X-1\gt 
+ 2\sum_{g=2,4,\ldots,30}\varphi(g)(1-g/32)D_g .             \qquad\text{(CM5)}
+```
+
 
 Thus at least one gap and reduced class supply its actual demanded
 number of disjoint seed pairs. No favorable gap is assumed.
@@ -137,24 +152,28 @@ the target-first residue repair and the equal-gap diagonal trades.
 
 Set
 
-\[
- n_0=2^{18},\quad V_1=V(73/4),\quad
+
+```math
+n_0=2^{18},\quad V_1=V(73/4),\quad
  U_0=U_-(18),\quad Q_0=Q(18),\quad
  q_0=\frac{d(n_0+8)}{n_0^2Q_0},\quad r=\varphi(g).
-\]
+```
+
 
 The full pool (X/8,X] has at least chi cX/u primes.
 Every one exceeds g and therefore belongs to a reduced class.
 Pay every selected residue entry, every bridge entry and every seed
 entry against this total stock. The uniform real lower bounds are
 
-\[
+
+```math
 \begin{split}
  m_f&=f\alpha/V_1,\\
  m_0&=\chi c/V_1-\frac{4(n_0+1)b}{n_0^2Q_0}
                          -2q_0(J_b+s_g).
-\end{split}                                               \tag{CM6}
-\]
+\end{split}                                               \qquad\text{(CM6)}
+```
+
 
 There is no B_r/2 saving in this pooled invoice. After j growth
 stages the actual surviving cardinality is at least
@@ -163,17 +182,19 @@ it does not require any uniform surviving count in an individual class.
 
 Let epsilon=1/[2(c+1/L)]-eta. The exact checks are
 
-\[
+
+```math
 \begin{gathered}
- m_0-2q_0J_g\ge m_f>0,\qquad
+ m_0-2q_0J_g\ge m_f\gt 0,\qquad
  \epsilon m_f^2g\ge2zq_0r,\\
- S_0=s_gg-\frac{r}{2\eta m_f}>0,\qquad
+ S_0=s_gg-\frac{r}{2\eta m_f}\gt 0,\qquad
  t_{\max}=\frac{\eta g\chi c}{rU_0}\le1,\\
  \frac{\eta g\{J_gm_0-q_0J_g(J_g-1)\}}
              {r(1+t_{\max})}\ge V_1-\log(LS_0),\qquad
- s_ggL<n_0^2Q_0 .                                         \tag{CM7}
+ s_ggL\lt n_0^2Q_0 .                                         \qquad\text{(CM7)}
 \end{gathered}
-\]
+```
+
 
 These are MC2 and MC8 evaluated from their numerical hypotheses.
 Every J_g is an explicit integer; the proof does not trust a
@@ -189,15 +210,19 @@ by subdivision into residue classes has not been dropped.
 
 With P_g=s_g+J_g the complete reservation bound remains
 
-\[
- B=B_r+2Q_s(P_g+J_b+7K).                                  \tag{CM8}
-\]
+
+```math
+B=B_r+2Q_s(P_g+J_b+7K).                                  \qquad\text{(CM8)}
+```
+
 
 The global growth invoice is now
 
-\[
- B_r+2Q_s(P_g+J_b)\le(\chi c-\alpha)X/u.                    \tag{CM9}
-\]
+
+```math
+B_r+2Q_s(P_g+J_b)\le(\chi c-\alpha)X/u.                    \qquad\text{(CM9)}
+```
+
 
 The residue stocks, each overlapping bridge quota, integer floors,
 equal-gap double pairs, aggregate reflected-bin stock, and ordinary
@@ -209,10 +234,12 @@ from AN/BQ and are all re-evaluated. No supply or entry position is shared.
 BN's sorted-seed allocation and DP's simultaneous common-stage
 rounding give prefix allocation error, in units of X, at most
 
-\[
- c\sqrt{(3d+4)\log(8n+8)/2}
-        +\frac{10c}{8}\lceil\log_2(d(n+8))\rceil.           \tag{CM10}
-\]
+
+```math
+c\sqrt{(3d+4)\log(8n+8)/2}
+        +\frac{10c}{8}\lceil\log_2(d(n+8))\rceil.           \qquad\text{(CM10)}
+```
+
 
 The exact bound d(311744+8)<2^21 covers every allocation-depth jump
 in this branch. Every seed stage and growth stage retains the PB
@@ -222,10 +249,12 @@ Use WB's shared wide-stage allocation and exact mean cancellation.
 Writing Z for the certified upper bound B/n², its entire wide and
 residue-mean contribution is
 
-\[
- 2\delta\sqrt{(21dK+4)\log(8n+8)}+2\delta+
- \frac{14d\delta K(B_r+8n)+\delta nB_r}{n^2-B}.              \tag{CM11}
-\]
+
+```math
+2\delta\sqrt{(21dK+4)\log(8n+8)}+2\delta+
+ \frac{14d\delta K(B_r+8n)+\delta nB_r}{n^2-B}.              \qquad\text{(CM11)}
+```
+
 
 Seed and wide allocation can be fixed separately because their
 entries and slots are disjoint and each family preserves its own
@@ -266,10 +295,12 @@ enclosures used by its endpoint helper.
 For seeds, expand the fixed weighted sum in CM5 as A_0n+B_0,
 with A_0,B_0>0. Its normalized upper bound is a positive sum of
 
-\[
- \frac{\exp(-jv\log2)V(v)}
+
+```math
+\frac{\exp(-jv\log2)V(v)}
  {Q(v)\{\rho-(7/256)V(v)\}},\qquad j=1,2.
-\]
+```
+
 
 The same explicitly proved convexity calculation as AN11/BQ5
 applies: the logarithmic second derivative is positive under

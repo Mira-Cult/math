@@ -1,5 +1,8 @@
 # Balance all wide stages through equal-gap blocks
 
+*Presentation copy: mathematical delimiters and equation labels are adapted for GitHub rendering. The unchanged, hash-bound source is in the [complete replay packet](../../../../packet/README.md).*
+
+
 Author: `/root/prefix_balance_research`, with `/root` supplying the
 wide-stage question and checking the controller composition. This is an
 additive finite component. It changes no frozen source and asserts no
@@ -27,17 +30,21 @@ requirements. Suppose each bin initially has at least W pool primes in
 every reduced class modulo g. Let B be an upper bound for **all** reserved
 entries in the complete controller, and suppose
 
-\[
- S_0=N\varphi(g)W-B>0,\qquad S_0^2>NX.            \tag{WB1}
-\]
+
+```math
+S_0=N\varphi(g)W-B\gt 0,\qquad S_0^2\gt NX.            \qquad\text{(WB1)}
+```
+
 
 After any set of at most B deleted pool entries, RBC gives
 
-\[
+
+```math
 S=\sum_{j,a}\min(L_{j,a},H_{j,a})\ge S_0,
 \qquad
-\sum_{j,a}L_{j,a}H_{j,a}\ge\frac{S^2}{N\varphi(g)}>X/g.
-\]
+\sum_{j,a}L_{j,a}H_{j,a}\ge\frac{S^2}{N\varphi(g)}\gt X/g.
+```
+
 
 Each low--high pair has a positive g-multiple difference below X.
 There are at most floor(X/g) such differences. Hence one difference
@@ -50,10 +57,12 @@ Thus a fresh equal-gap **double block** exists after every allowed
 deletion set. Its two pairs may have different lower residues and may
 come from different matched bins. Each pair separately satisfies
 
-\[
- \left|(p+q)/2-m\right|\le\delta X,
- \quad(1/2-2w)X\le q-p\le(1/2+2w)X<X.             \tag{WB2}
-\]
+
+```math
+\left|(p+q)/2-m\right|\le\delta X,
+ \quad(1/2-2w)X\le q-p\le(1/2+2w)X\lt X.             \qquad\text{(WB2)}
+```
+
 
 This uses the original aggregate stock criterion, not a new common-gap
 batch criterion. In particular no Q-copy multiplicity condition has
@@ -65,9 +74,11 @@ primes before choosing another. Both Q and dn are even. Every selection
 is protected by (WB1), since the deletion invoice includes the entire
 eventual family. Its total consumption is still exactly
 
-\[
-                B_w=2QJ_w=14d(n+8)K.             \tag{WB3}
-\]
+
+```math
+B_w=2QJ_w=14d(n+8)K.             \qquad\text{(WB3)}
+```
+
 
 There is no temporary reservation of unused candidates and no independence
 assumption about overlapping stocks. Compared with the former procedure,
@@ -98,9 +109,11 @@ diagonal receives 2d rectangles per stage.
 
 The existing capacity condition
 
-\[
-                   7(1/2-2w)\ge2                \tag{WB4}
-\]
+
+```math
+7(1/2-2w)\ge2                \qquad\text{(WB4)}
+```
+
 
 still makes J_w=7K stages supply at least 2KX of added ordinary
 coverage and 4dKX of added diagonal coverage. Thus the same K, wide-stage
@@ -126,21 +139,25 @@ The SQ argument reveals block averages in nonincreasing order of
 w_1+w_2, and then reveals the internal swaps. The squared conditional
 ranges are at most
 
-\[
+
+```math
 (2\delta X)^2\sum\{(w_1+w_2)^2+(w_1-w_2)^2\}
                  =2(2\delta X)^2\sum_s w_s^2.
-\]
+```
+
 
 PB's unchanged positions give `sum_s w_s^2<=3dJ_w+4` for a row
 or column. A diagonal has the smaller bound 2dJ_w. The same finite
 conditional-range Hoeffding bound and union bound over all 2n+2 lines
 give an allocation with every wide midpoint contribution within
 
-\[
- u_wX,
+
+```math
+u_wX,
  \qquad
- \boxed{u_w=2\delta\sqrt{(3dJ_w+4)\log(8n+8)}.}             \tag{WB5}
-\]
+ \boxed{u_w=2\delta\sqrt{(3dJ_w+4)\log(8n+8)}.}             \qquad\text{(WB5)}
+```
+
 
 The success probability is at least one half. This is an existence
 argument for a finite assignment, not an assumption about random prime
@@ -155,11 +172,13 @@ their deterministic error bounds.
 Let P_0 be the actual prefix-stage count and J_b the bridge-stage count.
 Write
 
-\[
+
+```math
 r_0=2d(P_0+J_b+J_w),\qquad
 B_{\rm actual}=r_0(n+8)+B_r,\qquad
-N_0=n^2-B_{\rm actual}>0.                         \tag{WB6}
-\]
+N_0=n^2-B_{\rm actual}\gt 0.                         \qquad\text{(WB6)}
+```
+
 
 Use a residue parameter r>=0 with
 `B_r=4(n+1)r` and a required line's reserved-cell count
@@ -170,9 +189,11 @@ invoices, not assumptions that all line counts are identical.
 
 Put
 
-\[
+
+```math
 A_w=\sum_{t=1}^{J_w}(\mu_t-m),\qquad |A_w|\le J_w\delta X.
-\]
+```
+
 
 The complete wide family has total deviation 2Q A_w from B_w m.
 Its expected main contribution on any required line is 2d A_w.
@@ -183,18 +204,22 @@ wide extra. These small extras are separate from the residue count q_L.
 After completion about the actual unused-pool mean, the contribution
 arising from A_w is exactly
 
-\[
+
+```math
 \begin{split}
 2dA_w-(n-r_L)\frac{2QA_w}{N_0}
- &=\frac{2dA_w}{N_0}\{(n+8)q_L-B_r-8n\}.        \tag{WB7}
+ &=\frac{2dA_w}{N_0}\{(n+8)q_L-B_r-8n\}.        \qquad\text{(WB7)}
 \end{split}
-\]
+```
+
 
 For n>=20,
 
-\[
-                 |(n+8)q_L-B_r-8n|\le B_r+8n.              \tag{WB8}
-\]
+
+```math
+|(n+8)q_L-B_r-8n|\le B_r+8n.              \qquad\text{(WB8)}
+```
+
 
 The lower bound follows from q_L>=0. At the upper endpoint
 q_L=6r+2, the difference between the asserted upper bound and the
@@ -204,10 +229,12 @@ Let B>=B_actual be the certified full entry invoice, with B<n².
 Combining (WB5)--(WB8), the wide midpoint and unused-pool mean
 contribution is at most
 
-\[
- \left\{u_w+2\delta+
-       \frac{2d\delta J_w(B_r+8n)}{n^2-B}\right\}X          \tag{WB9}
-\]
+
+```math
+\left\{u_w+2\delta+
+       \frac{2d\delta J_w(B_r+8n)}{n^2-B}\right\}X          \qquad\text{(WB9)}
+```
+
 
 to the completed baseline error. The usual separate total-residue
 deviation is at most delta B_r X, so its unused-pool contribution
@@ -219,17 +246,21 @@ orientation error are still added in the complete centering invoice.
 Accordingly, in the existing PB centering invoice replace the old
 combined wide/residue-mean term
 
-\[
- \delta\left\{2dJ_w+2+\frac{n(B_w+B_r)}{n^2-B}\right\}
-\]
+
+```math
+\delta\left\{2dJ_w+2+\frac{n(B_w+B_r)}{n^2-B}\right\}
+```
+
 
 by
 
-\[
+
+```math
 \boxed{
  u_w+2\delta+
- \frac{2d\delta J_w(B_r+8n)+\delta nB_r}{n^2-B}.}            \tag{WB10}
-\]
+ \frac{2d\delta J_w(B_r+8n)+\delta nB_r}{n^2-B}.}            \qquad\text{(WB10)}
+```
+
 
 Every other centering term is retained. This is the exact reason that
 the previous losses proportional to J_w disappear. The full reservation
@@ -245,10 +276,12 @@ shared block population is essential.
 
 This alternative can replace u_w in (WB9)--(WB10) by
 
-\[
- \boxed{u_w^{\rm det}
-       =40\delta\lceil\log_2(Q/2)\rceil+20\delta.}          \tag{WB11}
-\]
+
+```math
+\boxed{u_w^{\rm det}
+       =40\delta\lceil\log_2(Q/2)\rceil+20\delta.}          \qquad\text{(WB11)}
+```
+
 
 First replace each selected block by its average pair midpoint. It lies
 in the same interval of width 2 delta X. A slot block has line weight
@@ -262,9 +295,11 @@ stage means. Every stage remains an exact block bijection.
 It remains to choose the internal pair swaps. For an assigned block b,
 let its two pair midpoints be a_b,b_b, and define the signed coefficient
 
-\[
-             c_{L,b}=(w_{L,1}-w_{L,2})(a_b-b_b).
-\]
+
+```math
+c_{L,b}=(w_{L,1}-w_{L,2})(a_b-b_b).
+```
+
 
 The difference between the actual line contribution and its block-average
 contribution is `(x_b-1/2)c_(L,b)`, where x_b=0 or 1 chooses the swap.
