@@ -26,11 +26,27 @@ proof of Collatz. The pre-migration public snapshot is
 - The Collatz polygon attribution link was updated to the new machine package;
   its source manifest and SHA256SUMS were refreshed for that documentation edit.
 
-## Runtime checks to reproduce
+## Independent checkout validation
 
-The new Python assembler and a fresh Lean build/audit/kernel replay were not
-executed in the connector-only preparation environment. Byte identity is not
-reported as a fresh Lean run. Run from the repository root:
+A separate checkout of published commit
+`a99d7fd47768a2566340faf54ca38aa0f24d2c3c` ran the following checks:
+
+- `check_release.py`: PASS, including all canonical sources, provenance,
+  compatibility tables and beeper hashes.
+- `prepare_proofs.py`: PASS, materialized the exact 22-file original module layout.
+- `verify_finite.py`: PASS, 65,535 evaluator and 5,049 cycle-detector cases.
+- `beeping17/machine.py`: PASS, 2,079 macro cases in both normal and `-O` modes.
+- `beeping17/independent_check.py`: PASS, 1,807 cases and 47,399,744 transitions.
+- `tilings/collatz-30/SHA256SUMS`: every entry passed.
+
+The fresh Lean build stopped before execution because `lake` was unavailable.
+No new Lean build, axiom-audit execution or kernel replay is claimed. The
+unchanged source-byte identities preserve the previously published audited
+sources, but do not replace a fresh toolchain run.
+
+## Reproduce the runtime checks
+
+Run from the repository root with the pinned Lean toolchain available:
 
 ```sh
 python3 turing-machines/collatz/scripts/check_release.py
@@ -42,6 +58,6 @@ python3 turing-machines/collatz/beeping17/independent_check.py
 (cd tilings/collatz-30 && sha256sum -c SHA256SUMS)
 ```
 
-The old 17-state C++ and Python release results remain historical results in
-its [source manifest](beeping17/SOURCE.json); this migration does not label those
-recorded runs as freshly executed.
+The 17-state C++ macro/blank-trace results remain historical results in its
+[source manifest](beeping17/SOURCE.json); the C++ executable was not rerun for
+this migration. The Python results above were independently rerun.
