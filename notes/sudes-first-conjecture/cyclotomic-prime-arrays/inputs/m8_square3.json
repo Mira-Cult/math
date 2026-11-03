@@ -1,0 +1,394 @@
+{
+  "format": "cyclotomic-prime-array-v1",
+  "conductor": 8,
+  "dimension": 2,
+  "side": 3,
+  "polynomial": [
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "normalization": "balanced-log-symmetric-sector-v1",
+  "omitted_rational_primes": [
+    2
+  ],
+  "pool": [
+    [
+      1,
+      0,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -2
+    ],
+    [
+      0,
+      2,
+      -1,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      -1
+    ],
+    [
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      -2
+    ],
+    [
+      0,
+      2,
+      0,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -2
+    ]
+  ],
+  "pool_completeness": {
+    "coefficient_scan_radius": 2,
+    "norm_cutoff": 41,
+    "complete_tie_count": 12,
+    "all_through_cutoff": [
+      [
+        1,
+        0,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -2
+      ],
+      [
+        0,
+        2,
+        -1,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        -1
+      ],
+      [
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        -2
+      ],
+      [
+        0,
+        2,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        -2
+      ],
+      [
+        1,
+        2,
+        -1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        1,
+        -1
+      ],
+      [
+        2,
+        1,
+        -1,
+        1
+      ]
+    ]
+  },
+  "arrangement": [
+    [
+      1,
+      0,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      1,
+      -2
+    ],
+    [
+      0,
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      -2
+    ],
+    [
+      2,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      2,
+      0,
+      -1
+    ],
+    [
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      -1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      -2
+    ]
+  ],
+  "lines": [
+    {
+      "cells": [
+        0,
+        1,
+        2
+      ],
+      "sum": [
+        1,
+        2,
+        1,
+        -3
+      ],
+      "prime": {
+        "norm": 193,
+        "rational_prime": 193,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          43,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        0,
+        3,
+        6
+      ],
+      "sum": [
+        3,
+        2,
+        1,
+        -3
+      ],
+      "prime": {
+        "norm": 137,
+        "rational_prime": 137,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          127,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        0,
+        4,
+        8
+      ],
+      "sum": [
+        4,
+        1,
+        2,
+        -4
+      ],
+      "prime": {
+        "norm": 977,
+        "rational_prime": 977,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          439,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        1,
+        4,
+        7
+      ],
+      "sum": [
+        3,
+        1,
+        0,
+        -3
+      ],
+      "prime": {
+        "norm": 73,
+        "rational_prime": 73,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          10,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        2,
+        4,
+        6
+      ],
+      "sum": [
+        4,
+        3,
+        -1,
+        -1
+      ],
+      "prime": {
+        "norm": 337,
+        "rational_prime": 337,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          252,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        2,
+        5,
+        8
+      ],
+      "sum": [
+        1,
+        5,
+        0,
+        -3
+      ],
+      "prime": {
+        "norm": 1097,
+        "rational_prime": 1097,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          611,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        3,
+        4,
+        5
+      ],
+      "sum": [
+        2,
+        3,
+        0,
+        -4
+      ],
+      "prime": {
+        "norm": 449,
+        "rational_prime": 449,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          327,
+          1
+        ]
+      }
+    },
+    {
+      "cells": [
+        6,
+        7,
+        8
+      ],
+      "sum": [
+        4,
+        3,
+        0,
+        -2
+      ],
+      "prime": {
+        "norm": 41,
+        "rational_prime": 41,
+        "residue_degree": 1,
+        "quotient_polynomial": [
+          38,
+          1
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "method": "seeded-swap-annealing",
+    "seed": 20261102,
+    "steps_per_restart": 20000,
+    "restarts_budget": 5,
+    "restart": 0,
+    "successful_step": 77
+  }
+}

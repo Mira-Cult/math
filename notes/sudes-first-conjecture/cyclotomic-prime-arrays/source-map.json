@@ -1,0 +1,391 @@
+{
+  "scientific_revision": "d9bd9ac92851a9996c14dd2fdf49f1879bcae97b",
+  "delivery_revision": "763d1486f3289654d36a00f6423a8a7600c75257",
+  "editorial_changes": "GitHub-compatible math delimiters and commands; public links. No mathematical alterations. Original scientific and metadata Markdown preserved byte-for-byte. Code and inputs unchanged.",
+  "files": [
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/OPEN_PROBLEMS.md",
+      "source_sha256": "2431e77d4d3cde9e267d892c8b82a32f16e362ed9fa3d139b3595b6afa23a0fe",
+      "public_path": "OPEN_PROBLEMS.md",
+      "public_sha256": "2431e77d4d3cde9e267d892c8b82a32f16e362ed9fa3d139b3595b6afa23a0fe",
+      "original_path": "originals/OPEN_PROBLEMS.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/PROBLEM.md",
+      "source_sha256": "ad95075405f91ed77e5145f11e7c256bb2c46ada429309585fd91ea0710ee3c0",
+      "public_path": "PROBLEM.md",
+      "public_sha256": "ad95075405f91ed77e5145f11e7c256bb2c46ada429309585fd91ea0710ee3c0",
+      "original_path": "originals/PROBLEM.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/README.md",
+      "source_sha256": "883ae6e56775f10a5296ef1ac8054d502308e130f47c544887f1312fb6cda938",
+      "public_path": "README.md",
+      "public_sha256": "8a7a792525898d937b6690caf51b3344eb814f35fd2b1c6ff9980171e9d94c6c",
+      "original_path": "originals/README.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/RECOVERY.md",
+      "source_sha256": "7e4ff24f1a74c992dba4a1207b09daa7e7c3ee60092db3ae043ffa518178030b",
+      "public_path": "RECOVERY.md",
+      "public_sha256": "79fc7f988b5534b142b56be3e0cf448afdf9fbfecb4695cb6d84c1465fd8704e",
+      "original_path": "originals/RECOVERY.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/REFERENCES.md",
+      "source_sha256": "87bc70d8fc5a992fbc976d8811533463c394f81a99e6558ab5f67c97652ce625",
+      "public_path": "REFERENCES.md",
+      "public_sha256": "ed3c18cb710f4b29c1216d0af1ba193fc40f4275b637f21083ea4376d8de07af",
+      "original_path": "originals/REFERENCES.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/README.md",
+      "source_sha256": "c2d823b99b22404785f4741457251a03a8f9818fcbc3183892fc45c478cca0c4",
+      "public_path": "code/README.md",
+      "public_sha256": "c2d823b99b22404785f4741457251a03a8f9818fcbc3183892fc45c478cca0c4",
+      "original_path": "originals/code/README.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/check_certificate.py",
+      "source_sha256": "2dff196576abafc7c178eacb0c356dd8d10f454484c59ee38b35e6f12e37d6da",
+      "public_path": "code/check_certificate.py",
+      "public_sha256": "2dff196576abafc7c178eacb0c356dd8d10f454484c59ee38b35e6f12e37d6da"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/check_energy_certificate.py",
+      "source_sha256": "35d72bc0fa529751d5b8d79651df9b1f21acb5f4ac4069a9f92daa53668f20c6",
+      "public_path": "code/check_energy_certificate.py",
+      "public_sha256": "35d72bc0fa529751d5b8d79651df9b1f21acb5f4ac4069a9f92daa53668f20c6"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/check_ternary_cube_obstruction.py",
+      "source_sha256": "7ccff9d3d22a39c0b5cc409a716750678f556d69697fc7bd21c1a25adace7da8",
+      "public_path": "code/check_ternary_cube_obstruction.py",
+      "public_sha256": "7ccff9d3d22a39c0b5cc409a716750678f556d69697fc7bd21c1a25adace7da8"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/cyclotomic.py",
+      "source_sha256": "acb6319cdc8325450018fcdb2c040537b2bfd8f77d4317e6f0f3bf68d92981a7",
+      "public_path": "code/cyclotomic.py",
+      "public_sha256": "acb6319cdc8325450018fcdb2c040537b2bfd8f77d4317e6f0f3bf68d92981a7"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/energy_cyclotomic.py",
+      "source_sha256": "66737ed888e7040c13ad820de441e8fae40d1ad8e3f8456b54af9fa9b259604d",
+      "public_path": "code/energy_cyclotomic.py",
+      "public_sha256": "66737ed888e7040c13ad820de441e8fae40d1ad8e3f8456b54af9fa9b259604d"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/general_unit_certificates.py",
+      "source_sha256": "381a3ec7dc8e07c37fe12e87a4dc31fafbd67b775522d103828a56a94f8885e3",
+      "public_path": "code/general_unit_certificates.py",
+      "public_sha256": "381a3ec7dc8e07c37fe12e87a4dc31fafbd67b775522d103828a56a94f8885e3"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/generate_ternary_cube_obstruction.py",
+      "source_sha256": "63f019bf75fadb4ecff1014c7e6fc4620a07f863ec10f6baeb174ea2a186c0ab",
+      "public_path": "code/generate_ternary_cube_obstruction.py",
+      "public_sha256": "63f019bf75fadb4ecff1014c7e6fc4620a07f863ec10f6baeb174ea2a186c0ab"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/local_audit.py",
+      "source_sha256": "0a113baf870d8cb229cbffcdc4b5fc4478dc8a64ec7833fe05ae874ef5f3e491",
+      "public_path": "code/local_audit.py",
+      "public_sha256": "0a113baf870d8cb229cbffcdc4b5fc4478dc8a64ec7833fe05ae874ef5f3e491"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/replay_ternary_cube_tree.py",
+      "source_sha256": "28368daed16c80143c26984f1fa542c5d87df69ad89b14561e864b2dcb19a804",
+      "public_path": "code/replay_ternary_cube_tree.py",
+      "public_sha256": "28368daed16c80143c26984f1fa542c5d87df69ad89b14561e864b2dcb19a804"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/search_arrays.py",
+      "source_sha256": "ae0507dc574c4ca51acf98912dc062799d1641022cf7c3e8ec7e54e3f4e7ab3b",
+      "public_path": "code/search_arrays.py",
+      "public_sha256": "ae0507dc574c4ca51acf98912dc062799d1641022cf7c3e8ec7e54e3f4e7ab3b"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/search_energy_arrays.py",
+      "source_sha256": "94a78875c236ff12afcf88dac7513ff5c8b823f8e8ef8f96cc05d72c23733f03",
+      "public_path": "code/search_energy_arrays.py",
+      "public_sha256": "94a78875c236ff12afcf88dac7513ff5c8b823f8e8ef8f96cc05d72c23733f03"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/tensor_rounding_check.py",
+      "source_sha256": "a21c1005c7603dca586a9b199dce8b695479b8a86ddd53ccdadf5ba16e3f545b",
+      "public_path": "code/tensor_rounding_check.py",
+      "public_sha256": "a21c1005c7603dca586a9b199dce8b695479b8a86ddd53ccdadf5ba16e3f545b"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/code/vector_fixture.py",
+      "source_sha256": "38c096e401006779a11911dff06e9c850a4347d2450f2306b1a9f53c81bd230b",
+      "public_path": "code/vector_fixture.py",
+      "public_sha256": "38c096e401006779a11911dff06e9c850a4347d2450f2306b1a9f53c81bd230b"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m15_cube3.json",
+      "source_sha256": "1dd38b1a4b0486d4d5bf4833eefff468519da8ce841dc7132941c3576b419a9c",
+      "public_path": "inputs/energy_m15_cube3.json",
+      "public_sha256": "1dd38b1a4b0486d4d5bf4833eefff468519da8ce841dc7132941c3576b419a9c"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m15_square4.json",
+      "source_sha256": "71ae0203ca786b2cbbc8e20123c1bab8150abddc544364b7d995fdcd3f7128c3",
+      "public_path": "inputs/energy_m15_square4.json",
+      "public_sha256": "71ae0203ca786b2cbbc8e20123c1bab8150abddc544364b7d995fdcd3f7128c3"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m16_cube3.json",
+      "source_sha256": "019024ab4a81b3873cf3d036d964a02d38bdce5a5244dacb3e652773416c5100",
+      "public_path": "inputs/energy_m16_cube3.json",
+      "public_sha256": "019024ab4a81b3873cf3d036d964a02d38bdce5a5244dacb3e652773416c5100"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m16_square3.json",
+      "source_sha256": "80bdac5f83a454ee24059add450142f099be620e17829af7e1cc79bdbd7605ce",
+      "public_path": "inputs/energy_m16_square3.json",
+      "public_sha256": "80bdac5f83a454ee24059add450142f099be620e17829af7e1cc79bdbd7605ce"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m7_cube3.json",
+      "source_sha256": "ce4463e3b5334e8a78a0b7f93a7c8e46f8cbd63fdf4ec9d9f031d484e3a1b05e",
+      "public_path": "inputs/energy_m7_cube3.json",
+      "public_sha256": "ce4463e3b5334e8a78a0b7f93a7c8e46f8cbd63fdf4ec9d9f031d484e3a1b05e"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m7_square4.json",
+      "source_sha256": "b6c618033e5e9c1ed57e10738b82fc0e711ec55a500ee4febeedf9ecc8121960",
+      "public_path": "inputs/energy_m7_square4.json",
+      "public_sha256": "b6c618033e5e9c1ed57e10738b82fc0e711ec55a500ee4febeedf9ecc8121960"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m9_cube4.json",
+      "source_sha256": "63026669c57fd3e68b59b4e1ec2dba41ae3beb59cc6975f68e1c158a93752919",
+      "public_path": "inputs/energy_m9_cube4.json",
+      "public_sha256": "63026669c57fd3e68b59b4e1ec2dba41ae3beb59cc6975f68e1c158a93752919"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/energy_m9_square4.json",
+      "source_sha256": "6051c8dbefb5bd6fa745147002beea97fc8039e81688ff232e0e55b78bb2a294",
+      "public_path": "inputs/energy_m9_square4.json",
+      "public_sha256": "6051c8dbefb5bd6fa745147002beea97fc8039e81688ff232e0e55b78bb2a294"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/general_unit_subgroups.json",
+      "source_sha256": "fb6fa2f7aabf37f2def191b3d1eeff1d7d4f559716a6adf024e6b92a0356eb7e",
+      "public_path": "inputs/general_unit_subgroups.json",
+      "public_sha256": "fb6fa2f7aabf37f2def191b3d1eeff1d7d4f559716a6adf024e6b92a0356eb7e"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/local_ledger.json",
+      "source_sha256": "ceb8b61e3d5b5a69d6722b6084d2cd0f5f81f7357cbede4cee4b0013cd4d5dde",
+      "public_path": "inputs/local_ledger.json",
+      "public_sha256": "ceb8b61e3d5b5a69d6722b6084d2cd0f5f81f7357cbede4cee4b0013cd4d5dde"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m12_cube3.json",
+      "source_sha256": "65af50dd586b6302d1c68e46425e3a5a6a7ebaa9bb5d02ad54ce03d26baf4826",
+      "public_path": "inputs/m12_cube3.json",
+      "public_sha256": "65af50dd586b6302d1c68e46425e3a5a6a7ebaa9bb5d02ad54ce03d26baf4826"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m12_square3.json",
+      "source_sha256": "2722bbf00ca9a3af3a8ca4e040de183f627e79dceede005709cee0a87d5f2420",
+      "public_path": "inputs/m12_square3.json",
+      "public_sha256": "2722bbf00ca9a3af3a8ca4e040de183f627e79dceede005709cee0a87d5f2420"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m12_square6.json",
+      "source_sha256": "c13455d03f6a89810eeb4d0cdcc853c2a0f6693abe4e17849e8cab3060ef9413",
+      "public_path": "inputs/m12_square6.json",
+      "public_sha256": "c13455d03f6a89810eeb4d0cdcc853c2a0f6693abe4e17849e8cab3060ef9413"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m5_cube3.json",
+      "source_sha256": "49e71372f39878dbaed0f85f73f1521a9123393b4c407ebe5c6d3adf5081a9f5",
+      "public_path": "inputs/m5_cube3.json",
+      "public_sha256": "49e71372f39878dbaed0f85f73f1521a9123393b4c407ebe5c6d3adf5081a9f5"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m5_square3.json",
+      "source_sha256": "401fddb6ce72cec01070562a8aae5736a4e0a50da5253116e3f595f2d2ab305b",
+      "public_path": "inputs/m5_square3.json",
+      "public_sha256": "401fddb6ce72cec01070562a8aae5736a4e0a50da5253116e3f595f2d2ab305b"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m5_square4.json",
+      "source_sha256": "be24889cf878d61eed9ed0cb4876000177f402c9b0132007aee1fd88f355fc47",
+      "public_path": "inputs/m5_square4.json",
+      "public_sha256": "be24889cf878d61eed9ed0cb4876000177f402c9b0132007aee1fd88f355fc47"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m8_cube3.json",
+      "source_sha256": "bdca883f8ce5c3c7bb5adf0ea019585bb37d4026a64ed553d026278229c309bf",
+      "public_path": "inputs/m8_cube3.json",
+      "public_sha256": "bdca883f8ce5c3c7bb5adf0ea019585bb37d4026a64ed553d026278229c309bf"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m8_square3.json",
+      "source_sha256": "95d5ec6dc65398cf81a50da66aca72dbdb55d1c61a678f46721d2d7f4b3ade8d",
+      "public_path": "inputs/m8_square3.json",
+      "public_sha256": "95d5ec6dc65398cf81a50da66aca72dbdb55d1c61a678f46721d2d7f4b3ade8d"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/m8_square5.json",
+      "source_sha256": "e5b952ce25e6752610c8a41112f2ea88a5f90c01ed3a79ea80bdca4c0b6c9351",
+      "public_path": "inputs/m8_square5.json",
+      "public_sha256": "e5b952ce25e6752610c8a41112f2ea88a5f90c01ed3a79ea80bdca4c0b6c9351"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/physical_m12_cube9.json",
+      "source_sha256": "67a2ee93e239c508848f246dd41dfa7fa3dc5d4c04391b394e45660973b4e787",
+      "public_path": "inputs/physical_m12_cube9.json",
+      "public_sha256": "67a2ee93e239c508848f246dd41dfa7fa3dc5d4c04391b394e45660973b4e787"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/physical_m5_cube9.json",
+      "source_sha256": "adbd7cd942620ca705babe30f822462c63bd6edd2562563f02cb7da42d3679f0",
+      "public_path": "inputs/physical_m5_cube9.json",
+      "public_sha256": "adbd7cd942620ca705babe30f822462c63bd6edd2562563f02cb7da42d3679f0"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/physical_m8_cube9.json",
+      "source_sha256": "00f59b556bf7336744999fe330d4333c33d257e3aa0bd74faee8121ea031a79d",
+      "public_path": "inputs/physical_m8_cube9.json",
+      "public_sha256": "00f59b556bf7336744999fe330d4333c33d257e3aa0bd74faee8121ea031a79d"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/inputs/ternary_cube3_unsat.json",
+      "source_sha256": "dd55e8f59cf73c47afce579e413d7572d744485c06feeeaecf636efa3ab316b9",
+      "public_path": "inputs/ternary_cube3_unsat.json",
+      "public_sha256": "dd55e8f59cf73c47afce579e413d7572d744485c06feeeaecf636efa3ab316b9"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/analytic.md",
+      "source_sha256": "5dbe0b8a5f485870274da96b3f80f9d5469174ece1bdb9b5fc384903813724b8",
+      "public_path": "manuscripts/analytic.md",
+      "public_sha256": "95567f2917dca6f3cd5f9cb21250324170ac4b98e51965284811163d87bda8b2",
+      "original_path": "originals/manuscripts/analytic.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/composition.md",
+      "source_sha256": "9b224ea217b03a1b6e7ead46b47edcf4b62a1fcad0ffc1baa4a94a70c01ee636",
+      "public_path": "manuscripts/composition.md",
+      "public_sha256": "9b224ea217b03a1b6e7ead46b47edcf4b62a1fcad0ffc1baa4a94a70c01ee636",
+      "original_path": "originals/manuscripts/composition.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/controller.md",
+      "source_sha256": "30904f8f03c150e029662d33f9dfca7fef6babc223d3d972f45883b79e04a8c3",
+      "public_path": "manuscripts/controller.md",
+      "public_sha256": "ceda6818638e8c0d260f40d5762de34b37e844c432fcce27df8eeb70ec1da0fd",
+      "original_path": "originals/manuscripts/controller.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/finite_controls.md",
+      "source_sha256": "43bacee8d506fbd577264d43708bfa629897d8b69f48ec262f308b298d80a7d0",
+      "public_path": "manuscripts/finite_controls.md",
+      "public_sha256": "43bacee8d506fbd577264d43708bfa629897d8b69f48ec262f308b298d80a7d0",
+      "original_path": "originals/manuscripts/finite_controls.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/general_analytic.md",
+      "source_sha256": "31da5bf826935c6c08fd3f98c2cc1246a4422ef226ef378354e0c09c232b74d9",
+      "public_path": "manuscripts/general_analytic.md",
+      "public_sha256": "672e05463dabcfa869c55b513c50132decfbc419925c47461d3f607681bef098",
+      "original_path": "originals/manuscripts/general_analytic.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/general_composition.md",
+      "source_sha256": "53cbd81439c3584b4bb18f390747a6f837f99f646af9aa725e9264ef2eaa2acd",
+      "public_path": "manuscripts/general_composition.md",
+      "public_sha256": "53cbd81439c3584b4bb18f390747a6f837f99f646af9aa725e9264ef2eaa2acd",
+      "original_path": "originals/manuscripts/general_composition.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/general_controller.md",
+      "source_sha256": "233027e3650aee504735a197ddb02d24246d0823ee4551eb80baef68a53ab1bd",
+      "public_path": "manuscripts/general_controller.md",
+      "public_sha256": "43ed2c76d1df2b87eb8814ed5c064554fdb9226eea772ac1808a9d9cbd7b3796",
+      "original_path": "originals/manuscripts/general_controller.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/general_normalization_local.md",
+      "source_sha256": "7d21da0fe1d2fcd50ba708c4b555c3e5a12f01c349661e5626fb1a928538e160",
+      "public_path": "manuscripts/general_normalization_local.md",
+      "public_sha256": "7d21da0fe1d2fcd50ba708c4b555c3e5a12f01c349661e5626fb1a928538e160",
+      "original_path": "originals/manuscripts/general_normalization_local.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/normalization_local.md",
+      "source_sha256": "e7c4a406da14483b34f451b4fd67e5d589d79a95816a2451781505377437927b",
+      "public_path": "manuscripts/normalization_local.md",
+      "public_sha256": "e7c4a406da14483b34f451b4fd67e5d589d79a95816a2451781505377437927b",
+      "original_path": "originals/manuscripts/normalization_local.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/manuscripts/ternary_cube_obstruction.md",
+      "source_sha256": "3e9f58ec0d8c8bf109d63494550b1360aa1119d024f33b11121e3e61abc02ecf",
+      "public_path": "manuscripts/ternary_cube_obstruction.md",
+      "public_sha256": "3e9f58ec0d8c8bf109d63494550b1360aa1119d024f33b11121e3e61abc02ecf",
+      "original_path": "originals/manuscripts/ternary_cube_obstruction.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/analytic-local-review.md",
+      "source_sha256": "eb8ffbf5b341aad4accebb6d5b4d915135fb27f55e9118c80280d759ca0eddcb",
+      "public_path": "reviews/analytic-local-review.md",
+      "public_sha256": "eb8ffbf5b341aad4accebb6d5b4d915135fb27f55e9118c80280d759ca0eddcb",
+      "original_path": "originals/reviews/analytic-local-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/composition-review.md",
+      "source_sha256": "14d4fdc0571f3e87e0cf5fdb650cdd4b356b6f275de27fd0c087426860192282",
+      "public_path": "reviews/composition-review.md",
+      "public_sha256": "14d4fdc0571f3e87e0cf5fdb650cdd4b356b6f275de27fd0c087426860192282",
+      "original_path": "originals/reviews/composition-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/general-analytic-local-review.md",
+      "source_sha256": "fb64fc5a553b5d0143c9b42fcccfbb533aa83f78018c367e1a8c21294ad6115e",
+      "public_path": "reviews/general-analytic-local-review.md",
+      "public_sha256": "fb64fc5a553b5d0143c9b42fcccfbb533aa83f78018c367e1a8c21294ad6115e",
+      "original_path": "originals/reviews/general-analytic-local-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/general-composition-review.md",
+      "source_sha256": "c1569de2aecb7c387fb4a8ca00e91383e0fc0243f47fbce56466f788a4f8e87f",
+      "public_path": "reviews/general-composition-review.md",
+      "public_sha256": "c1569de2aecb7c387fb4a8ca00e91383e0fc0243f47fbce56466f788a4f8e87f",
+      "original_path": "originals/reviews/general-composition-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/general-normalization-controller-review.md",
+      "source_sha256": "622879dbfeb57a8a592d72566f0471a1614cb561ac07e2355d29d7905b7d3b27",
+      "public_path": "reviews/general-normalization-controller-review.md",
+      "public_sha256": "24ce3767f17c639de89bc1a7c171185eb1f4989066d97817398cbbdcdfb82156",
+      "original_path": "originals/reviews/general-normalization-controller-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/normalization-controller-review.md",
+      "source_sha256": "8f70216c0853173ee81c4c8b2d4214abc6e680b887724cc4286c34e342f187a6",
+      "public_path": "reviews/normalization-controller-review.md",
+      "public_sha256": "8f70216c0853173ee81c4c8b2d4214abc6e680b887724cc4286c34e342f187a6",
+      "original_path": "originals/reviews/normalization-controller-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/physical-local-controls-review.md",
+      "source_sha256": "cd1cf0ac20e37c84d6e82dfb0cb05dbfb032025f8568c052356945a9c3aeb0b2",
+      "public_path": "reviews/physical-local-controls-review.md",
+      "public_sha256": "cd1cf0ac20e37c84d6e82dfb0cb05dbfb032025f8568c052356945a9c3aeb0b2",
+      "original_path": "originals/reviews/physical-local-controls-review.md"
+    },
+    {
+      "source_path": "problems/cyclotomic-prime-arrays/reviews/ternary-obstruction-review.md",
+      "source_sha256": "86eacf1a6b8ed43ac857a31fa14c233d1dfc09d47265689f7df78afd2dd5b104",
+      "public_path": "reviews/ternary-obstruction-review.md",
+      "public_sha256": "86eacf1a6b8ed43ac857a31fa14c233d1dfc09d47265689f7df78afd2dd5b104",
+      "original_path": "originals/reviews/ternary-obstruction-review.md"
+    }
+  ]
+}

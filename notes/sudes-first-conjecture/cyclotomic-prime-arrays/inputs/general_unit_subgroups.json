@@ -1,0 +1,590 @@
+{
+  "nonprincipal_control": {
+    "conclusion": "P=(2,omega)O_K is prime and nonprincipal: if principal, its relative ideal norm p^11 would be principal, contrary to class order3. Rational2 is irreducible but not prime in O_K.",
+    "conductor": 23,
+    "cube_principal_generator_in_basis_1_omega": [
+      2,
+      -1
+    ],
+    "degree": 22,
+    "extended_prime_ideal_norm": 2048,
+    "format": "cyclotomic-nonprincipal-prime-v1",
+    "gauss_sum_square_reduced": [
+      -23,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "limitation": "This certifies a nonprincipal prime and h_K divisible by3; it does not compute the full class number of K23.",
+    "omega_coefficients": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "omega_equation": "omega^2-omega+6=0",
+    "order_of_2_mod_23": 11,
+    "quadratic_class_number": 3,
+    "quadratic_prime_class_order": 3,
+    "quadratic_prime_ideal": "(2,omega)",
+    "quadratic_reduced_forms": [
+      [
+        1,
+        1,
+        6
+      ],
+      [
+        2,
+        -1,
+        3
+      ],
+      [
+        2,
+        1,
+        3
+      ]
+    ],
+    "quadratic_subfield_discriminant": -23,
+    "relative_degree": 11
+  },
+  "unit_subgroups": [
+    {
+      "conductor": 7,
+      "degree": 6,
+      "embedding_and_reciprocal_integer_bounds": [
+        3,
+        3
+      ],
+      "embedding_exponents": [
+        1,
+        2,
+        3
+      ],
+      "energy_bound_coefficient_sU": 27,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -525454682123,
+        "upper_numerator": -525454682122
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 2,
+      "subgroup_balance_product_U": 9,
+      "unit_geometric_sum_lengths": [
+        2,
+        3
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 9,
+      "degree": 6,
+      "embedding_and_reciprocal_integer_bounds": [
+        3,
+        3
+      ],
+      "embedding_exponents": [
+        1,
+        2,
+        4
+      ],
+      "energy_bound_coefficient_sU": 27,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -849287450647,
+        "upper_numerator": -849287450646
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 2,
+      "subgroup_balance_product_U": 9,
+      "unit_geometric_sum_lengths": [
+        2,
+        4
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 11,
+      "degree": 10,
+      "embedding_and_reciprocal_integer_bounds": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "embedding_exponents": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "energy_bound_coefficient_sU": 1280,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": 1635694125589,
+        "upper_numerator": 1635694125590
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 4,
+      "subgroup_balance_product_U": 256,
+      "unit_geometric_sum_lengths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 15,
+      "degree": 8,
+      "embedding_and_reciprocal_integer_bounds": [
+        5,
+        4,
+        5
+      ],
+      "embedding_exponents": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "energy_bound_coefficient_sU": 400,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -2330910388649,
+        "upper_numerator": -2330910388648
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 3,
+      "subgroup_balance_product_U": 100,
+      "unit_geometric_sum_lengths": [
+        2,
+        4,
+        7
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 16,
+      "degree": 8,
+      "embedding_and_reciprocal_integer_bounds": [
+        5,
+        5,
+        6
+      ],
+      "embedding_exponents": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "energy_bound_coefficient_sU": 600,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -2441795006620,
+        "upper_numerator": -2441795006619
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 3,
+      "subgroup_balance_product_U": 150,
+      "unit_geometric_sum_lengths": [
+        3,
+        5,
+        7
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 20,
+      "degree": 8,
+      "embedding_and_reciprocal_integer_bounds": [
+        6,
+        6,
+        7
+      ],
+      "embedding_exponents": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "energy_bound_coefficient_sU": 1008,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -3705621127947,
+        "upper_numerator": -3705621127946
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 3,
+      "subgroup_balance_product_U": 252,
+      "unit_geometric_sum_lengths": [
+        3,
+        7,
+        9
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 24,
+      "degree": 8,
+      "embedding_and_reciprocal_integer_bounds": [
+        5,
+        7,
+        8
+      ],
+      "embedding_exponents": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "energy_bound_coefficient_sU": 1120,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": 5321797160380,
+        "upper_numerator": 5321797160381
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 3,
+      "subgroup_balance_product_U": 280,
+      "unit_geometric_sum_lengths": [
+        5,
+        7,
+        11
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "conductor": 23,
+      "degree": 22,
+      "embedding_and_reciprocal_integer_bounds": [
+        8,
+        7,
+        6,
+        7,
+        6,
+        8,
+        7,
+        7,
+        8,
+        8
+      ],
+      "embedding_exponents": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "energy_bound_coefficient_sU": 3894460416,
+      "format": "cyclotomic-independent-units-v1",
+      "interval_bits": 160,
+      "log_minor_interval": {
+        "denominator": 1000000000000,
+        "lower_numerator": -1014313305059151,
+        "upper_numerator": -1014313305059150
+      },
+      "proof": "Each unit is (1-zeta^a)/(1-zeta), a coprime to m; the certified nonzero log minor proves independence. Full unit index is not asserted.",
+      "rank": 10,
+      "subgroup_balance_product_U": 354041856,
+      "unit_geometric_sum_lengths": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "unit_polynomials": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ]
+}
