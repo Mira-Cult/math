@@ -1,16 +1,39 @@
 # Sude's First Conjecture
 
-*Mira-Cult research note · 2 November 2026*
+*Mira-Cult research note · updated 3 November 2026*
 
 Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that every row, column, and both main diagonals have prime sums?
 
-The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{4320}`$**. The full conjecture for every positive odd order is still open. This index collects three square manuscripts, qualitative and explicit cube proofs, a four-dimensional extension, and Gaussian/Eisenstein generalizations. The qualitative argument and the initial explicit bound remain readable in their original form.
+**Yes: the complete computer-assisted theorem covers every positive odd order.** The [resolution manuscript](resolution.md) combines exact certificates for all odd orders 1 through 1999 with the complete classical construction for every odd order from 2001 onward. It retains the prescribed prime pool and both diagonals. No finite range remains in the stated conjecture.
 
-## Results and proof manuscripts
+## Resolution and reproducible certificates
 
-1. **[I. Eventual existence](proof.md).** Every sufficiently large odd order works. This is the original qualitative argument: it constructs a placement but does not provide an effective numerical threshold. Supporting manuscripts: [centered controller](controller.md) and [prime targets with an exact total](prime-targets.md).
-2. **[II. The initial published explicit bound](explicit-bound.md).** Every odd $`n\ge2^{2^{40}}`$ works. This separate quantitative proof replaces the ineffective analytic inputs and pays all construction costs. Supporting manuscripts: [classical prime supplies](classical-primes.md), [finite controller](explicit-controller.md), and [exact prime targets](explicit-targets.md). This manuscript is preserved as the initial public numerical result.
-3. **[III. The optimized explicit bound](optimized-bound.md).** Every odd $`n\ge2^{4320}`$ works. The improvement changes the analytic estimates, reservoir allocation, graph degree, and target window together. Its full composition and linked supporting proofs are published here.
+- **[Resolution of Sude's First Conjecture](resolution.md).** The full statement, two-case proof, finite certificate specification, tail construction, exact order-band map, explicit analytic imports, and verification instructions.
+- **[Complete proof source and dependency map](https://github.com/Mira-Cult/math-wip/blob/965aadb77b4bf4e2487e10fd1e7d7edaf5fb73cc/problems/prime-line-sums/manuscripts/sude_all_odd_theorem.md).** The pinned research tree contains the full tail proof, source inputs and review records. The actual small-order certificates and a standalone checker are supplied here.
+- **[Actual witnesses for every odd order below 2001](certificates/odd-orders-1-1999.bin.gz).** A lossless 10,500,031-byte certificate reconstructs all 1,000 squares. The independent checker enumerates the exact primes and recomputes every required line sum.
+- **[Final composition review](https://github.com/Mira-Cult/math-wip/blob/965aadb77b4bf4e2487e10fd1e7d7edaf5fb73cc/problems/prime-line-sums/reviews/sude-all-odd-independent-review.md).** Exact scientific revision, review scope, and the distinction between conventional proof and computational checking.
+
+The theorem is conventional computer-assisted mathematics with internal nonauthor review and independently reproduced exact checks. It is not an end-to-end Lean proof or a claim of external referee acceptance. The named analytic results, including published finite zero verifications, remain explicit imports. See [the resolution's import map](resolution.md#5-explicit-external-imports) and [reproduction instructions](resolution.md#6-reproduce-the-proofs-computational-component).
+
+## Best reviewed bound for each family
+
+Bounds are sufficient, not claimed optimal. Research links below identify the latest reviewed result; older public expositions remain available below.
+
+| Family | Best reviewed bound | Scope / source |
+|---|---|---|
+| Ordinary prime squares | **1** | Every positive odd order; [resolution](resolution.md) |
+| Ordinary prime cubes | **2^1258** | Every odd order at or above the bound; [reviewed research theorem](https://github.com/Mira-Cult/math-wip/blob/e6943c1c52e3123f4404c2bd2dcb87cba0fa69f6/problems/prime-arrays-beyond-square/manuscripts/explicit_signed_refined_cutoff.md) |
+| Ordinary prime 4-hypercubes | **2^1693** | Every odd order at or above the bound; [reviewed research theorem](https://github.com/Mira-Cult/math-wip/blob/06bbebd8ce0217cebc7820de7d41edfe9c73e9ae/problems/prime-arrays-beyond-square/manuscripts/hyper4_graph_cutoff.md) |
+| Gaussian prime squares | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
+| Gaussian prime cubes | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
+| Eisenstein prime squares | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
+| Eisenstein prime cubes | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
+
+The cube and 4D research bounds retain the exact initial prime pools and every full signed-coordinate line. The public cube exposition below records the earlier 2^61750 bound; the public 4D exposition is qualitative. The smaller research bounds are linked, not silently substituted into those older proofs.
+
+## Generalizations
+
+The following are distinct theorems. The resolution of the original square conjecture does not remove their stated thresholds or extend their ranges.
 
 4. **[IV. The full signed-line prime cube](prime-cube.md).** For every sufficiently large odd $`n`$, exactly the first $`n^3`$ odd primes can be placed in a cube with prime sums on all $`3n^2+6n+4`$ full signed-coordinate lines: axes, both diagonals in every coordinate-parallel square slice, and the four body diagonals. The threshold is not evaluated. Its [supporting proofs](cube/README.md) establish integer compatibility, physical trades, and compatible prime targets.
 
@@ -19,8 +42,6 @@ The current proposed unconditional theorem answers yes for **every odd $`n\ge2^{
 6. **[VI. Full signed-line prime hypercubes in dimension four](prime-hypercube-4d.md).** For every sufficiently large odd $`n`$, exactly the first $`n^4`$ odd primes can be placed bijectively with all $`4n^3+12n^2+16n+8`$ full signed-coordinate line sums prime. The [four complete supporting proofs](hyper4/README.md) establish integer compatibility, joint prime targets and physical realization. No numerical cutoff is evaluated; the incidence threshold $`n\ge17`$ is not a prime-array cutoff.
 
 7. **[VII. Gaussian and Eisenstein prime squares and cubes](quadratic-prime-arrays/README.md).** With the prescribed canonical prime-element pools, Gaussian squares and full signed-line cubes exist at every sufficiently large odd order; Eisenstein squares and cubes exist at every sufficiently large integer order, including even orders and multiples of three. The note includes the complete proofs, small obstructions, exact examples and runnable checks. No numerical cutoffs are evaluated.
-
-These are conventional mathematical arguments with internal review and exact arithmetic checks. They are not end-to-end proof-assistant formalizations or claims of external peer acceptance. [Provenance](PROVENANCE.md) identifies the scientific snapshot, review scope, and verification limits; [References](REFERENCES.md) identifies the classical imports.
 
 ## The conjecture
 
@@ -64,19 +85,18 @@ The two diagonal sums are $`7+11+23=41`$ and $`19+11+17=47`$.
 All eight required sums are prime. Exact order-three examples predate this
 note; see the [example reference](REFERENCES.md#order-three-example).
 
-## Current theorem and remaining range
 
-**Optimized-threshold theorem.** For every odd integer
+## Historical appendix: earlier square proofs and bounds
 
-```math
-\boxed{n\ge2^{4320}},
-```
+These manuscripts are preserved as the successive proof stages, not as the current unresolved range. Their original arguments and supporting sources remain available; the complete all-odd resolution above supersedes their numerical cutoffs for the original square problem.
 
-there is a bijective placement of exactly the first $`n^2`$ odd primes in an $`n\times n`$ square for which all $`2n+2`$ required line sums are prime.
+1. **[I. Eventual existence](proof.md).** Every sufficiently large odd order works. This is the original qualitative argument: it constructs a placement but does not provide an effective numerical threshold. Supporting manuscripts: [centered controller](controller.md) and [prime targets with an exact total](prime-targets.md).
+2. **[II. The initial published explicit bound](explicit-bound.md).** Every odd $`n\ge2^{2^{40}}`$ works. This separate quantitative proof replaces the ineffective analytic inputs and pays all construction costs. Supporting manuscripts: [classical prime supplies](classical-primes.md), [finite controller](explicit-controller.md), and [exact prime targets](explicit-targets.md). This manuscript is preserved as the initial public numerical result.
+3. **[III. The optimized explicit bound](optimized-bound.md).** Every odd $`n\ge2^{4320}`$ works. The improvement changes the analytic estimates, reservoir allocation, graph degree, and target window together. Its full composition and linked supporting proofs are published here.
 
-The theorem covers the entire odd-order tail, not a subsequence. The line sums may repeat. The bound is sufficient and is not claimed optimal. There are finitely many smaller odd orders, but the remaining range is far beyond naive exhaustive checking; isolated examples do not settle it.
+The earlier [provenance record](PROVENANCE.md) and [reference list](REFERENCES.md) retain their historical scope. The resolution manuscript and complete packet give the current scientific pins and dependency boundary.
 
-## How the optimized proof works
+### How the historical optimized-bound proof works
 
 The proof reserves disjoint reversible moves inside the prescribed pool, chooses compatible nearby prime sums, and uses the moves to attain those targets without replacing or repeating any entry.
 
@@ -87,3 +107,5 @@ The proof reserves disjoint reversible moves inside the prescribed pool, chooses
 - **One coupled calculation for every larger order.** The final proof checks prime-supply scales, all reservations, floors and ceilings, centering, target size, and correction capacity together. Pointwise estimates and monotone envelopes establish persistence throughout the infinite tail.
 
 The [optimized composition](optimized-bound.md) supplies the exact dependency graph. Its most direct supporting arguments are the [constant-window analytic estimates](optimized/cutoff_constant_window_analytic.md), [constant-window controller](optimized/cutoff_constant_window_controller.md), [degree-10 graph](optimized/cutoff_degree10_graph.md), [seed and target-modulus refinement](optimized/cutoff_seed_density_refinement.md), and [finite target lemma](optimized/cutoff_target_optimization.md). Earlier quantitative lemmas remain linked where they supply a proof dependency; their historical numerical profiles are not substituted into the final theorem without checking their hypotheses.
+
+
