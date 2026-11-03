@@ -9,27 +9,27 @@ Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that ev
 ## Resolution and reproducible certificates
 
 - **[Resolution of Sude's First Conjecture](resolution.md).** The full statement, two-case proof, finite certificate specification, tail construction, exact order-band map, explicit analytic imports, and verification instructions.
-- **[Complete proof source and dependency map](https://github.com/Mira-Cult/math-wip/blob/965aadb77b4bf4e2487e10fd1e7d7edaf5fb73cc/problems/prime-line-sums/manuscripts/sude_all_odd_theorem.md).** The pinned research tree contains the full tail proof, source inputs and review records. The actual small-order certificates and a standalone checker are supplied here.
+- **[Complete proof source and dependency map](proof-source/problems/prime-line-sums/manuscripts/sude_all_odd_theorem.md).** The full tail proof, source inputs and review records are supplied in the [complete public replay packet](packet/README.md). The linked browsable manuscript is also copied here.
 - **[Actual witnesses for every odd order below 2001](certificates/odd-orders-1-1999.bin.gz).** A lossless 10,500,031-byte certificate reconstructs all 1,000 squares. The independent checker enumerates the exact primes and recomputes every required line sum.
-- **[Final composition review](https://github.com/Mira-Cult/math-wip/blob/965aadb77b4bf4e2487e10fd1e7d7edaf5fb73cc/problems/prime-line-sums/reviews/sude-all-odd-independent-review.md).** Exact scientific revision, review scope, and the distinction between conventional proof and computational checking.
+- **[Final composition review](proof-source/problems/prime-line-sums/reviews/sude-all-odd-independent-review.md).** Exact scientific revision, review scope, and the distinction between conventional proof and computational checking.
 
 The theorem is conventional computer-assisted mathematics with internal nonauthor review and independently reproduced exact checks. It is not an end-to-end Lean proof or a claim of external referee acceptance. The named analytic results, including published finite zero verifications, remain explicit imports. See [the resolution's import map](resolution.md#5-explicit-external-imports) and [reproduction instructions](resolution.md#6-reproduce-the-computational-component).
 
 ## Best reviewed bound for each family
 
-Bounds are sufficient, not claimed optimal. Research links below identify the latest reviewed result; older public expositions remain available below.
+Bounds are sufficient, not claimed optimal. The research bounds below are the latest internally reviewed results; the cube and 4D improved-bound manuscripts are not yet publicly reproduced. Their older public expositions remain available below.
 
 | Family | Best reviewed bound | Scope / source |
 |---|---|---|
 | Ordinary prime squares | **1** | Every positive odd order; [resolution](resolution.md) |
-| Ordinary prime cubes | **2^1258** | Every odd order at or above the bound; [reviewed research theorem](https://github.com/Mira-Cult/math-wip/blob/e6943c1c52e3123f4404c2bd2dcb87cba0fa69f6/problems/prime-arrays-beyond-square/manuscripts/explicit_signed_refined_cutoff.md) |
-| Ordinary prime 4-hypercubes | **2^1693** | Every odd order at or above the bound; [reviewed research theorem](https://github.com/Mira-Cult/math-wip/blob/06bbebd8ce0217cebc7820de7d41edfe9c73e9ae/problems/prime-arrays-beyond-square/manuscripts/hyper4_graph_cutoff.md) |
+| Ordinary prime cubes | **2^1258** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
+| Ordinary prime 4-hypercubes | **2^1693** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
 | Gaussian prime squares | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Gaussian prime cubes | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Eisenstein prime squares | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
 | Eisenstein prime cubes | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
 
-The cube and 4D research bounds retain the exact initial prime pools and every full signed-coordinate line. The public cube exposition below records the earlier 2^61750 bound; the public 4D exposition is qualitative. The smaller research bounds are linked, not silently substituted into those older proofs.
+The cube and 4D research bounds retain the exact initial prime pools and every full signed-coordinate line. The public cube exposition below records the earlier 2^61750 bound; the public 4D exposition is qualitative. The smaller research bounds are recorded as internally reviewed, not silently substituted into those older public proofs.
 
 ## Generalizations
 
