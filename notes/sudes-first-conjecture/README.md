@@ -22,7 +22,7 @@ Bounds are sufficient, not claimed optimal. The research bounds below are the la
 | Family | Best reviewed bound | Scope / source |
 |---|---|---|
 | Ordinary prime squares | **1** | Every positive odd order; [resolution](resolution.md) |
-| Ordinary prime cubes | **2^1258** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
+| Ordinary prime cubes | **2^192** | Every odd order at or above the bound; internally reviewed research result with unpublished proof; not an all-odd-order theorem |
 | Ordinary prime 4-hypercubes | **2^1693** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
 | Gaussian prime squares | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Gaussian prime cubes | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
