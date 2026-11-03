@@ -31,3 +31,7 @@ scientific source pins; the README links each dependency explicitly.
 This publication does not run the private research repository's fleet workflow
 or claim its skipped workflow was a pass. No repository integration/merge or
 formal PR approval is part of this mathematical publication.
+
+## Anonymous publication checks
+
+At public commit `9dab1ce77eb2984a28749bb8dc440e02e562aa7d`, all 86 package files were downloaded anonymously from GitHub and matched the staged bytes exactly. The main README and four general proof manuscripts were fetched as GitHub-rendered HTML: the README, analytic proof and controller contained rendered math elements with no reported math parse errors; normalization and composition use prose/code notation. A full browser screenshot was not obtained because Chromium could not launch in this execution environment. This is HTML/render-markup verification, not a visual screenshot review.
