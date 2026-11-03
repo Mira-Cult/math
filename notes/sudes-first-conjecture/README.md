@@ -28,6 +28,7 @@ Bounds are sufficient, not claimed optimal. The research bounds below are the la
 | Gaussian prime cubes | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Eisenstein prime squares | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
 | Eisenstein prime cubes | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
+| Canonical irreducible quadratic-polynomial arrays | **2^120 (D=2), 2^67 (D=3), 2^47 (D=4)**; all D≥2: **max{2^120, 2^24(D+1)^2}** | Both parities; every full signed-coordinate line; sums irreducible over Q; [complete public proof and controls](quadratic-polynomial-arrays/README.md) |
 
 The cube and 4D research bounds retain the exact initial prime pools and every full signed-coordinate line. The public cube exposition below records the earlier 2^61750 bound; the public 4D exposition is qualitative. The smaller research bounds are recorded as internally reviewed, not silently substituted into those older public proofs.
 
@@ -42,6 +43,8 @@ The following are distinct theorems. The resolution of the original square conje
 6. **[VI. Full signed-line prime hypercubes in dimension four](prime-hypercube-4d.md).** For every sufficiently large odd $`n`$, exactly the first $`n^4`$ odd primes can be placed bijectively with all $`4n^3+12n^2+16n+8`$ full signed-coordinate line sums prime. The [four complete supporting proofs](hyper4/README.md) establish integer compatibility, joint prime targets and physical realization. No numerical cutoff is evaluated; the incidence threshold $`n\ge17`$ is not a prime-array cutoff.
 
 7. **[VII. Gaussian and Eisenstein prime squares and cubes](quadratic-prime-arrays/README.md).** With the prescribed canonical prime-element pools, Gaussian squares and full signed-line cubes exist at every sufficiently large odd order; Eisenstein squares and cubes exist at every sufficiently large integer order, including even orders and multiples of three. The note includes the complete proofs, small obstructions, exact examples and runnable checks. No numerical cutoffs are evaluated.
+
+8. **[VIII. Irreducible quadratic-polynomial arrays in every dimension](quadratic-polynomial-arrays/README.md).** For every dimension D≥2, the first n^D primitive irreducible integer quadratics in the fixed height-and-coefficient order admit a bijective placement with all full signed-coordinate line sums irreducible over Q once the stated explicit bound holds. Both even and odd side lengths are covered. The result includes complete proof sources, exact controls, source hashes and independent review. It does not assert primitive sums in Z[X] or an efficient construction.
 
 ## The conjecture
 

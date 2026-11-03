@@ -1,0 +1,21 @@
+{
+  "PROVENANCE.md": "0738511f3d0f953d9c9993d54ce20eba0be418fd03443381974954a27fe128af",
+  "README.md": "81005e56014a3adb3bc18e864d357bd8f31dad3e57bb6f9907ca39268fa63891",
+  "REFERENCES.md": "adbc04da501da6456e69cc63f97537a4eede5d990e4eee910027c74222b45013",
+  "code/README.md": "b17eeb4adf7a2f0ca61f45d8849bdb33d1061e68cc9fbf7be06c61f753884a54",
+  "code/independent-results.json": "6749fe80de7a90d39c98aecefc513e5b900ce0a107ac62473996a441bc96e949",
+  "code/polynomial_bound_transfer.py": "a055792d25dc13567b15aa14eaab454b66eef100b22199c70f74cacbdc647e3c",
+  "code/polynomial_transfer_independent_oracle.py": "684b69ba9972cef9d291cbcd367f7b336d0081293bae574d380d35e7b077462d",
+  "code/q2-results.json": "1a6ef1cabe1c0d20a03cc19a03419d8580dd1c348e6d5d89a81a35e9ee4c5e28",
+  "code/test-results.json": "848381401035d6591c7def337ca4589faed41005155150b8f51aba6932250559",
+  "originals/README.md": "bf144449fade54259f01bef78cd4cebced8ab8ce4adb8201cc962dc1556c5caf",
+  "originals/characteristic_zero.md": "3865e5685c515261eb3426fc6c2d42795b68203f8a2b2264c6d13c2074140604",
+  "originals/permutation_bridge.md": "3eb52979c6a822f34a784180f18eca1e316c19eaba782671e1bdbaa57be323b3",
+  "originals/polynomial_bound_transfer.py": "a055792d25dc13567b15aa14eaab454b66eef100b22199c70f74cacbdc647e3c",
+  "originals/polynomial_transfer_independent_oracle.py": "3f48ef9f0f7981b9854c0a6dd3e54f55185a7ca85ef19b9b86a0fb1cbb88702d",
+  "originals/transfer.md": "269829f323333396a8b6abd9db422bf142f7d3c869a0789c1eba2d0f94d5d739",
+  "sources/characteristic_zero.md": "6e658fac8aed47bfa37b197c95e1c7a0c34b5dd9deed63d589df78622c8264dd",
+  "sources/permutation_bridge.md": "f13b45e5388eb51658280a7a821284bcd825a34acf843350a66953035d074c15",
+  "sources/review.md": "89a9e6fd5e9ad9ff29771ca7ccc8f49fb2497c57b7e4ccf2f9bdfd38b602a448",
+  "sources/transfer.md": "17c34dc492e592b2c61b6a6ca9185c21cdaf24770c988ff20bf1526a329a9926"
+}

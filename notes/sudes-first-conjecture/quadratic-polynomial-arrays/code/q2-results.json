@@ -1,0 +1,187 @@
+{
+  "dimensions": [
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 120,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 2,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^120",
+      "predecessor_failed_conditions": [
+        "nonzero_rational_root_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^3072",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 67,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 3,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^67",
+      "predecessor_failed_conditions": [
+        "nonzero_rational_root_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^4096",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 47,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 4,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^47",
+      "predecessor_failed_conditions": [
+        "nonzero_rational_root_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^5120",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 37,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 5,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^37",
+      "predecessor_failed_conditions": [
+        "nonzero_rational_root_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^6144",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 31,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 6,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^31",
+      "predecessor_failed_conditions": [
+        "nonzero_rational_root_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^7168",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 21,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 10,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^21",
+      "predecessor_failed_conditions": [
+        "fourier_exponential_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^11264",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 24,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 100,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^24",
+      "predecessor_failed_conditions": [
+        "fourier_exponential_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^103424",
+      "primitive_Z_conclusion": false
+    },
+    {
+      "conclusion": "all signed-line sums irreducible over Q; both order parities",
+      "controller_exponent": 27,
+      "controls": {
+        "actual_means_fit_window": true,
+        "canonical_height_at_least_two_to_fifteen": true,
+        "fourier_exponential_budget": true,
+        "leading_coefficient_dominates_window": true,
+        "monotonicity_and_sampling_domain": true,
+        "nonzero_rational_root_budget": true,
+        "zero_constant_term_budget": true
+      },
+      "dimension": 1000,
+      "efficient_constructor_claimed": false,
+      "new_sufficient_cutoff": "2^27",
+      "predecessor_failed_conditions": [
+        "fourier_exponential_budget"
+      ],
+      "previous_reviewed_sufficient_cutoff": "2^1025024",
+      "primitive_Z_conclusion": false
+    }
+  ],
+  "universal_controls": {
+    "binary_higher_dimensional_endpoint": true,
+    "binary_square_analytic_endpoint": true,
+    "dense_fiber_gap": true,
+    "exponential_remainder_constant": true,
+    "log_384_below_six": true,
+    "log_8704_below_ten": true,
+    "log_three_below_eleven_tenths": true,
+    "log_two_below_seven_tenths": true,
+    "max_norm_three_dimensional_integral_constant": true,
+    "one_dimensional_integral_constant": true,
+    "prefix_density_at_least_13_over_16": true,
+    "residual_density_margin": true,
+    "root_constant_seven": true
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "conditional_binary_oracle": [
+    {
+      "conditional_subsets": 28,
+      "n": 3,
+      "successes": 0
+    },
+    {
+      "conditional_subsets": 10626,
+      "n": 5,
+      "successes": 213
+    }
+  ],
+  "exact_budget_comparisons": 710,
+  "factorization_oracle": [
+    {
+      "examined": 2448,
+      "factorization_and_discriminant_count": 106,
+      "s": 8
+    },
+    {
+      "examined": 17952,
+      "factorization_and_discriminant_count": 457,
+      "s": 16
+    },
+    {
+      "examined": 194472,
+      "factorization_and_discriminant_count": 1893,
+      "s": 36
+    }
+  ],
+  "frobenius_shell_oracle": [
+    {
+      "degree": 1,
+      "frobenius_count": 2
+    },
+    {
+      "degree": 2,
+      "frobenius_count": 1
+    },
+    {
+      "degree": 3,
+      "frobenius_count": 2
+    },
+    {
+      "degree": 4,
+      "frobenius_count": 3
+    },
+    {
+      "degree": 5,
+      "frobenius_count": 6
+    },
+    {
+      "degree": 6,
+      "frobenius_count": 9
+    },
+    {
+      "degree": 7,
+      "frobenius_count": 18
+    },
+    {
+      "degree": 8,
+      "frobenius_count": 30
+    },
+    {
+      "degree": 9,
+      "frobenius_count": 56
+    },
+    {
+      "degree": 10,
+      "frobenius_count": 99
+    },
+    {
+      "degree": 11,
+      "frobenius_count": 186
+    },
+    {
+      "degree": 12,
+      "frobenius_count": 335
+    }
+  ],
+  "full_line_geometry_oracle": [
+    {
+      "D": 2,
+      "all_lines_enumerated": 20,
+      "crossings": 2,
+      "guaranteed_lines": 4,
+      "n": 9
+    },
+    {
+      "D": 2,
+      "all_lines_enumerated": 24,
+      "crossings": 2,
+      "guaranteed_lines": 4,
+      "n": 11
+    },
+    {
+      "D": 3,
+      "all_lines_enumerated": 109,
+      "crossings": 0,
+      "guaranteed_lines": 6,
+      "n": 5
+    },
+    {
+      "D": 3,
+      "all_lines_enumerated": 193,
+      "crossings": 0,
+      "guaranteed_lines": 6,
+      "n": 7
+    },
+    {
+      "D": 4,
+      "all_lines_enumerated": 2080,
+      "crossings": 0,
+      "guaranteed_lines": 8,
+      "n": 7
+    },
+    {
+      "D": 3,
+      "all_lines_enumerated": 301,
+      "crossings": 0,
+      "guaranteed_lines": 6,
+      "n": 9
+    },
+    {
+      "D": 4,
+      "all_lines_enumerated": 4040,
+      "crossings": 0,
+      "guaranteed_lines": 8,
+      "n": 9
+    },
+    {
+      "D": 5,
+      "all_lines_enumerated": 51001,
+      "crossings": 0,
+      "guaranteed_lines": 10,
+      "n": 9
+    }
+  ],
+  "independent_mobius_invoices": 188,
+  "linear_scan_exponents": [
+    {
+      "D": 2,
+      "least_controller_exponent": 120
+    },
+    {
+      "D": 3,
+      "least_controller_exponent": 67
+    },
+    {
+      "D": 4,
+      "least_controller_exponent": 47
+    },
+    {
+      "D": 5,
+      "least_controller_exponent": 37
+    },
+    {
+      "D": 6,
+      "least_controller_exponent": 31
+    },
+    {
+      "D": 7,
+      "least_controller_exponent": 27
+    },
+    {
+      "D": 8,
+      "least_controller_exponent": 24
+    },
+    {
+      "D": 9,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 10,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 11,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 12,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 13,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 14,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 15,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 16,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 17,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 18,
+      "least_controller_exponent": 21
+    },
+    {
+      "D": 19,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 20,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 21,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 22,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 23,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 24,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 25,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 26,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 27,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 28,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 29,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 30,
+      "least_controller_exponent": 22
+    },
+    {
+      "D": 50,
+      "least_controller_exponent": 23
+    },
+    {
+      "D": 100,
+      "least_controller_exponent": 24
+    },
+    {
+      "D": 1000,
+      "least_controller_exponent": 27
+    }
+  ],
+  "science": "e0cf4e8808f21c0633326f70f42a870086836320",
+  "scope": "proof-review regressions; no full large array constructed",
+  "source_sha256": {
+    "code/polynomial_bound_transfer.py": "a055792d25dc13567b15aa14eaab454b66eef100b22199c70f74cacbdc647e3c",
+    "manuscripts/polynomial_bound_transfer.md": "269829f323333396a8b6abd9db422bf142f7d3c869a0789c1eba2d0f94d5d739"
+  },
+  "status": "all independent finite controls passed",
+  "too_small_geometry_extra_lines": 1
+}
