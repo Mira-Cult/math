@@ -23,7 +23,8 @@ Bounds are sufficient, not claimed optimal. The research bounds below are the la
 |---|---|---|
 | Ordinary prime squares | **1** | Every positive odd order; [resolution](resolution.md) |
 | Ordinary prime cubes | **2^192** | Every odd order at or above the bound; internally reviewed research result with unpublished proof; not an all-odd-order theorem |
-| Ordinary prime 4-hypercubes | **2^1693** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
+| Ordinary prime 4-hypercubes | **2^1460** | Every odd order at or above the bound; internally reviewed research result; improved-bound proof not yet public |
+| Ordinary prime hypercubes, every fixed k≥2 | N(k), not numerically evaluated | Every sufficiently large odd order for each fixed dimension; all full signed-coordinate lines; [complete public proof and controls](integer-prime-hypercubes/README.md) |
 | Gaussian prime squares | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Gaussian prime cubes | Not numerically evaluated | Every sufficiently large odd order; [proof](quadratic-prime-arrays/README.md) |
 | Eisenstein prime squares | Not numerically evaluated | Every sufficiently large integer order; [proof](quadratic-prime-arrays/README.md) |
@@ -45,6 +46,8 @@ The following are distinct theorems. The resolution of the original square conje
 7. **[VII. Gaussian and Eisenstein prime squares and cubes](quadratic-prime-arrays/README.md).** With the prescribed canonical prime-element pools, Gaussian squares and full signed-line cubes exist at every sufficiently large odd order; Eisenstein squares and cubes exist at every sufficiently large integer order, including even orders and multiples of three. The note includes the complete proofs, small obstructions, exact examples and runnable checks. No numerical cutoffs are evaluated.
 
 8. **[VIII. Irreducible quadratic-polynomial arrays in every dimension](quadratic-polynomial-arrays/README.md).** For every dimension D≥2, the first n^D primitive irreducible integer quadratics in the fixed height-and-coefficient order admit a bijective placement with all full signed-coordinate line sums irreducible over Q once the stated explicit bound holds. Both even and odd side lengths are covered. The result includes complete proof sources, exact controls, source hashes and independent review. It does not assert primitive sums in Z[X] or an efficient construction.
+
+9. **[IX. Integer-prime hypercubes in every fixed dimension](integer-prime-hypercubes/README.md).** For every fixed k≥2, the exact first n^k odd primes admit a bijective placement with prime sums on all ((n+2)^k−n^k)/2 full signed-coordinate lines for every sufficiently large odd n. The complete proof, named analytic/probability imports, fixed-frame and integral-kernel arguments, source hashes, internal reviews and offline controls are public. No numerical N(k), all-small-order assertion, growing-dimension theorem, or section-sum claim is made.
 
 ## The conjecture
 
