@@ -1,0 +1,6 @@
+formalization/.lake/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.c.o

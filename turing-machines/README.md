@@ -4,6 +4,16 @@ A machine package includes its writeup, exact transition table, proof material,
 provenance, attribution, and verification instructions. Related machines are
 grouped into families.
 
+## P versus NP
+
+The [285-state beeper package](p-equals-np-285/README.md) contains a literal
+blank-tape binary machine with finitely many designated transition events iff
+P = NP, equivalently infinitely many iff P ≠ NP. It includes the table,
+proof guide, skeptic-facing interface map, pinned Lean dependency closure,
+provenance, and certificate generators. Execution never halts in either case.
+The [verification receipt](p-equals-np-285/VERIFICATION.md) distinguishes source
+checks, kernel-build evidence, and independent mathematical review.
+
 ## Collatz family
 
 [Browse the Collatz machines](collatz/README.md), including their shared

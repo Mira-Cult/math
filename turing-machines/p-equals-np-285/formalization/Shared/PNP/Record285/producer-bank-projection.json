@@ -1,0 +1,809 @@
+{
+  "after_grammar_sha256": "8a5810350dc88a1e2ce635626c3d2251965967b41d1f83c90f2da7b1c396413a",
+  "aliasing": "distinct retained cells remain distinct; no value-cell identification",
+  "before_grammar_sha256": "4df4f2f7c53a2aa36d4af47b8e1c922fe80746c8812d4cf31a4efdf878219ac1",
+  "bootstrap": "same counted all-zero producer; fresh literal entry required for this complete table",
+  "contextual_scope": "original carrier in pre-control grammar; finite-control scope ends at pre-projection grammar",
+  "domain": "all-zero source entry after contextual and finite-control rewriting",
+  "format": "np-conp-unused-zero-bank-projection-v1",
+  "native_operand_order": [
+    "$liveframe.0.11",
+    "$liveframe.0.12",
+    "$liveframe.0.8",
+    "$liveframe.0.9"
+  ],
+  "old_to_new": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    null,
+    null,
+    null,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "original_register_order": [
+    "$liveframe.0.11",
+    "$liveframe.0.12",
+    "$liveframe.0.8",
+    "$liveframe.0.9",
+    "$scratch.copy",
+    "$micro.a",
+    "$micro.b",
+    "$micro.q",
+    "$micro.r",
+    "$micro.c",
+    "$digit.index",
+    "$liveframe.0.0",
+    "$liveframe.0.1",
+    "$liveframe.0.2",
+    "$liveframe.0.3",
+    "$liveframe.0.4",
+    "$liveframe.0.5",
+    "$pool0.tmp0",
+    "$liveframe.0.6",
+    "$liveframe.0.7",
+    "$liveframe.0.10"
+  ],
+  "physical_rebuild": "all original INC/DECNZ index and entry rows regenerated before framework generation",
+  "removed_interpretation": {
+    "$digit.index": 0,
+    "$micro.c": 0,
+    "$micro.r": 0
+  },
+  "removed_registers": [
+    "$micro.r",
+    "$micro.c",
+    "$digit.index"
+  ],
+  "retained_primitives": [
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 0,
+      "operation": "3.$liveframe.0.2.decnz",
+      "register": "$liveframe.0.2"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 1,
+      "operation": "3.$liveframe.0.3.decnz",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 2,
+      "operation": "3.$liveframe.0.4.decnz",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 3,
+      "operation": "3.$liveframe.0.5.decnz",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 4,
+      "operation": "3.$pool0.tmp0.inc",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 4,
+      "operation": "3.$scratch.copy.inc",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 6,
+      "operation": "3.$liveframe.0.3.decnz",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 7,
+      "operation": "3.$liveframe.0.3.inc",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 8,
+      "operation": "3.$scratch.copy.decnz",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 10,
+      "operation": "3.$liveframe.0.6.decnz",
+      "register": "$liveframe.0.6"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 11,
+      "operation": "3.$liveframe.0.6.inc",
+      "register": "$liveframe.0.6"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 12,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 13,
+      "operation": "3.$liveframe.0.7.decnz",
+      "register": "$liveframe.0.7"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 14,
+      "operation": "3.$liveframe.0.8.decnz",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 15,
+      "operation": "3.$liveframe.0.9.decnz",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 16,
+      "operation": "3.$liveframe.0.2.decnz",
+      "register": "$liveframe.0.2"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 17,
+      "operation": "3.$liveframe.0.2.inc",
+      "register": "$liveframe.0.2"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 18,
+      "operation": "3.$scratch.copy.decnz",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 19,
+      "operation": "3.$liveframe.0.10.decnz",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 20,
+      "operation": "3.$liveframe.0.10.inc",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 21,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 22,
+      "operation": "3.$liveframe.0.6.decnz",
+      "register": "$liveframe.0.6"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 23,
+      "operation": "3.$scratch.copy.decnz",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 24,
+      "operation": "3.$liveframe.0.11.decnz",
+      "register": "$liveframe.0.11"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 25,
+      "operation": "3.$liveframe.0.11.inc",
+      "register": "$liveframe.0.11"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 26,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 27,
+      "operation": "3.$native-half:$liveframe.0.11.decnz",
+      "register": "$liveframe.0.11"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 27,
+      "operation": "3.$liveframe.0.9.inc",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 28,
+      "operation": "3.$micro.a.inc",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 28,
+      "operation": "3.$scratch.copy.inc",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 30,
+      "operation": "3.$liveframe.0.3.decnz",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 32,
+      "operation": "3.$liveframe.0.4.decnz",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 33,
+      "operation": "3.$liveframe.0.4.inc",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 34,
+      "operation": "3.$scratch.copy.decnz",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 36,
+      "operation": "3.$liveframe.0.12.decnz",
+      "register": "$liveframe.0.12"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 37,
+      "operation": "3.$liveframe.0.12.inc",
+      "register": "$liveframe.0.12"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 38,
+      "operation": "3.$micro.a.decnz",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 39,
+      "operation": "3.$native-half:$liveframe.0.12.decnz",
+      "register": "$liveframe.0.12"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 41,
+      "operation": "3.$liveframe.0.9.decnz",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 42,
+      "operation": "3.$liveframe.0.9.inc",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 43,
+      "operation": "3.$native-half:$liveframe.0.12.decnz",
+      "register": "$liveframe.0.12"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 44,
+      "operation": "3.$native-half:$liveframe.0.9.decnz",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 44,
+      "operation": "3.$micro.a.inc",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 45,
+      "operation": "3.$micro.a.inc",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 45,
+      "operation": "3.$micro.a.inc",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 47,
+      "operation": "3.$liveframe.0.8.decnz",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 48,
+      "operation": "3.$liveframe.0.8.inc",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 49,
+      "operation": "3.$liveframe.0.7.decnz",
+      "register": "$liveframe.0.7"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 52,
+      "operation": "3.$native-half:$liveframe.0.9.decnz",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 53,
+      "operation": "3.$liveframe.0.7.decnz",
+      "register": "$liveframe.0.7"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 55,
+      "operation": "3.$liveframe.0.7.inc",
+      "register": "$liveframe.0.7"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 56,
+      "operation": "3.$micro.a.decnz",
+      "register": "$micro.a"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 57,
+      "operation": "3.$liveframe.0.9.inc",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 57,
+      "operation": "3.$liveframe.0.9.inc",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 58,
+      "operation": "3.$native-half:$liveframe.0.8.decnz",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 60,
+      "operation": "3.$liveframe.0.9.decnz",
+      "register": "$liveframe.0.9"
+    },
+    {
+      "bit": 0,
+      "kind": "native-half",
+      "node": 61,
+      "operation": "3.$native-half:$liveframe.0.8.decnz",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 70,
+      "operation": "3.$liveframe.0.5.inc",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 79,
+      "operation": "3.$liveframe.0.10.decnz",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 92,
+      "operation": "3.$liveframe.0.6.decnz",
+      "register": "$liveframe.0.6"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 93,
+      "operation": "3.$micro.q.inc",
+      "register": "$micro.q"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 93,
+      "operation": "3.$scratch.copy.inc",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 95,
+      "operation": "3.$liveframe.0.2.decnz",
+      "register": "$liveframe.0.2"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 96,
+      "operation": "3.$micro.q.inc",
+      "register": "$micro.q"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 96,
+      "operation": "3.$micro.q.inc",
+      "register": "$micro.q"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 100,
+      "operation": "3.$liveframe.0.10.decnz",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 101,
+      "operation": "3.$micro.q.decnz",
+      "register": "$micro.q"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 103,
+      "operation": "3.$micro.b.inc",
+      "register": "$micro.b"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 105,
+      "operation": "3.$liveframe.0.1.decnz",
+      "register": "$liveframe.0.1"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 106,
+      "operation": "3.$liveframe.0.1.inc",
+      "register": "$liveframe.0.1"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 107,
+      "operation": "3.$micro.b.decnz",
+      "register": "$micro.b"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 108,
+      "operation": "3.$liveframe.0.8.inc",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 108,
+      "operation": "3.$scratch.copy.inc",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 110,
+      "operation": "3.$liveframe.0.3.decnz",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 112,
+      "operation": "3.$liveframe.0.8.decnz",
+      "register": "$liveframe.0.8"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 114,
+      "operation": "3.$micro.b.inc",
+      "register": "$micro.b"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 116,
+      "operation": "3.$liveframe.0.4.decnz",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 117,
+      "operation": "3.$micro.b.decnz",
+      "register": "$micro.b"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 118,
+      "operation": "3.$liveframe.0.0.decnz",
+      "register": "$liveframe.0.0"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 119,
+      "operation": "3.$liveframe.0.0.inc",
+      "register": "$liveframe.0.0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 120,
+      "operation": "3.$scratch.copy.decnz",
+      "register": "$scratch.copy"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 122,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 124,
+      "operation": "3.$liveframe.0.5.decnz",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 125,
+      "operation": "3.$liveframe.0.5.inc",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 132,
+      "operation": "3.$liveframe.0.10.decnz",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 133,
+      "operation": "3.$liveframe.0.5.inc",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 134,
+      "operation": "3.$liveframe.0.5.decnz",
+      "register": "$liveframe.0.5"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 135,
+      "operation": "3.$liveframe.0.4.decnz",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 136,
+      "operation": "3.$pool0.tmp0.inc",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 136,
+      "operation": "3.$pool0.tmp0.inc",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 138,
+      "operation": "3.$liveframe.0.3.decnz",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 139,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 140,
+      "operation": "3.$pool0.tmp0.decnz",
+      "register": "$pool0.tmp0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 141,
+      "operation": "3.$liveframe.0.4.decnz",
+      "register": "$liveframe.0.4"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 145,
+      "operation": "3.$liveframe.0.2.inc",
+      "register": "$liveframe.0.2"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 161,
+      "operation": "3.$liveframe.0.10.inc",
+      "register": "$liveframe.0.10"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 169,
+      "operation": "3.$liveframe.0.1.inc",
+      "register": "$liveframe.0.1"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 170,
+      "operation": "3.$liveframe.0.0.decnz",
+      "register": "$liveframe.0.0"
+    },
+    {
+      "bit": 0,
+      "kind": "decnz",
+      "node": 171,
+      "operation": "3.$liveframe.0.1.decnz",
+      "register": "$liveframe.0.1"
+    },
+    {
+      "bit": 1,
+      "kind": "inc",
+      "node": 172,
+      "operation": "3.$liveframe.0.1.inc",
+      "register": "$liveframe.0.1"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 176,
+      "operation": "3.$liveframe.0.3.inc",
+      "register": "$liveframe.0.3"
+    },
+    {
+      "bit": 0,
+      "kind": "inc",
+      "node": 181,
+      "operation": "3.$liveframe.0.1.inc",
+      "register": "$liveframe.0.1"
+    }
+  ],
+  "retained_register_order": [
+    "$liveframe.0.11",
+    "$liveframe.0.12",
+    "$liveframe.0.8",
+    "$liveframe.0.9",
+    "$scratch.copy",
+    "$micro.a",
+    "$micro.b",
+    "$micro.q",
+    "$liveframe.0.0",
+    "$liveframe.0.1",
+    "$liveframe.0.2",
+    "$liveframe.0.3",
+    "$liveframe.0.4",
+    "$liveframe.0.5",
+    "$pool0.tmp0",
+    "$liveframe.0.6",
+    "$liveframe.0.7",
+    "$liveframe.0.10"
+  ],
+  "simulation": "retained values agree; omitted cells stay zero because no retained operation references them"
+}

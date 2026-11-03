@@ -1,0 +1,11 @@
+import Shared.PNP.Record285.ReferenceVerifier
+
+#print axioms Shared.PNP.Record285.ReferenceVerifier.verifier_isPolyTime
+#print axioms Shared.PNP.Record285.ReferenceVerifier.verifier_sound_canonical
+#print axioms Shared.PNP.Record285.ReferenceVerifier.verifier_complete_canonical
+#print axioms Shared.PNP.Record285.ReferenceVerifier.reference_in_NP
+#print axioms Shared.PNP.Record285.ReferenceVerifier.reference_P_iff_P_eq_NP
+#print axioms Shared.PNP.Record285.ReferenceVerifier.literal_silent_iff_P_eq_NP_of_wrapper
+#print axioms Shared.PNP.Record285.ReferenceVerifier.literal_finiteEvents_iff_P_eq_NP_of_wrapper
+#print axioms Shared.PNP.Record285.ReferenceVerifier.literal_infinitelyMany_iff_P_ne_NP_of_wrapper
+#print Shared.PNP.Record285.ReferenceVerifier.literal_silent_iff_P_eq_NP_of_wrapper

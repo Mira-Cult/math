@@ -1,0 +1,6 @@
+import Shared.PNP.Record285.SourceGoodProgress
+
+#print axioms Shared.PNP.Record285.SourceGoodProgress.good_candidate_progress
+#print axioms Shared.PNP.Record285.SourceGoodProgress.finite_literal_events_imply_continued_comparisons
+#print axioms Shared.PNP.Record285.SourceGoodProgress.P_eq_NP_implies_continued_comparisons
+#print axioms Shared.PNP.Record285.SourceGoodProgress.finite_literal_events_have_cofinal_graph_comparisons

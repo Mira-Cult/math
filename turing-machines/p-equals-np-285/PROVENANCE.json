@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "publication_date": "2026-11-03",
+  "source_repository": "Mira-Cult/math-wip",
+  "formalization_revision": "576f0f2d69d37e4ba29d75ea712ddac6174832ca",
+  "formalization_path": "Shared/PNP/Record285",
+  "producer_revision": "db256d6ae59a47eb941a2f0c5cf3f37b3c4633c8",
+  "producer_path": "problems/p-np-horn-beeper/frontier/clocked/architecture_v2/late_zero/machines/all_completed",
+  "historical_internal_compression_review_revision": "78937562292b9fa3c686ae09f743e7a3d713247c",
+  "public_path": "turing-machines/p-equals-np-285",
+  "public_build_requires_private_repository": false,
+  "literal": {
+    "file": "events.tm",
+    "states": 285,
+    "rows": 570,
+    "initial_state": 0,
+    "initial_head": 0,
+    "blank_symbol": 0,
+    "tape": "integers",
+    "marked_row": [
+      121,
+      1,
+      0,
+      "L",
+      1,
+      1
+    ],
+    "time_convention": "t is the outgoing transition after t executed steps",
+    "first_event_index": 89844409,
+    "sha256": "1aeafb43c7a9a8f599476ea23bbb5723506d33ca26e5186771fb942a88ad19d7",
+    "git_blob": "b2d9ae79d7f4b22fc8ea0d542f69fafabbe70acb"
+  },
+  "companion": {
+    "file": "companion.tm",
+    "states": 286,
+    "rows": 572,
+    "exit_B_event_shift": 1,
+    "sha256": "12fba54d7e9c51ca6e149ae4103a3753378a7cff7cfb3e66bcda19804bfeb880"
+  },
+  "endpoint": "Shared.PNP.Record285.LiteralEndpoint.selected_literal_endpoint",
+  "claim": "Finitely many marked transitions iff canonical P=NP; infinitely many iff P!=NP; execution is total in either case.",
+  "source_scope": "Unchanged transitive proof source, selected audits, literal and certificate inputs, certificate generators, and pinned public dependencies. Historical machine compiler and Python AST translation are not certified here.",
+  "checks": {
+    "source_blob_identity": "passed",
+    "literal_integrity": "passed",
+    "local_import_closure": "passed",
+    "certificate_regeneration": "passed: 22 generators plus pre-control variant",
+    "source_interface_inspection": "completed, independent automated scope",
+    "fresh_project_kernel_build": "in progress; not claimed passed",
+    "fresh_axiom_audit": "in progress; not claimed passed",
+    "independent_human_mathematical_review": "not performed",
+    "remote_CI": "not claimed"
+  },
+  "modifications": "New public prose, integrity/regeneration scripts, inventory and narrow Shared.lean umbrella; scientific files unchanged."
+}

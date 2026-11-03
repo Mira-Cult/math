@@ -1,0 +1,11 @@
+import Shared.PNP.Record285.SourceCandidateClockTotal
+
+#check Shared.PNP.Record285.SourceCandidateClockTotal.clock_build_terminates
+#check Shared.PNP.Record285.SourceCandidateClockTotal.candidate_pipeline_terminates
+#check Shared.PNP.Record285.SourceCandidateClockTotal.comparison_compute_terminates
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.multiply_cycle_total
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.multiply_loop_total
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.power_loop_total
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.clock_build_terminates
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.candidate_pipeline_terminates
+#print axioms Shared.PNP.Record285.SourceCandidateClockTotal.comparison_compute_terminates
