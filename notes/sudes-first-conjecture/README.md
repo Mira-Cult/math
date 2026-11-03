@@ -13,7 +13,7 @@ Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that ev
 - **[Actual witnesses for every odd order below 2001](certificates/odd-orders-1-1999.bin.gz).** A lossless 10,500,031-byte certificate reconstructs all 1,000 squares. The independent checker enumerates the exact primes and recomputes every required line sum.
 - **[Final composition review](https://github.com/Mira-Cult/math-wip/blob/965aadb77b4bf4e2487e10fd1e7d7edaf5fb73cc/problems/prime-line-sums/reviews/sude-all-odd-independent-review.md).** Exact scientific revision, review scope, and the distinction between conventional proof and computational checking.
 
-The theorem is conventional computer-assisted mathematics with internal nonauthor review and independently reproduced exact checks. It is not an end-to-end Lean proof or a claim of external referee acceptance. The named analytic results, including published finite zero verifications, remain explicit imports. See [the resolution's import map](resolution.md#5-explicit-external-imports) and [reproduction instructions](resolution.md#6-reproduce-the-proofs-computational-component).
+The theorem is conventional computer-assisted mathematics with internal nonauthor review and independently reproduced exact checks. It is not an end-to-end Lean proof or a claim of external referee acceptance. The named analytic results, including published finite zero verifications, remain explicit imports. See [the resolution's import map](resolution.md#5-explicit-external-imports) and [reproduction instructions](resolution.md#6-reproduce-the-computational-component).
 
 ## Best reviewed bound for each family
 
