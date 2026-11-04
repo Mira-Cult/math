@@ -1,0 +1,6 @@
+import Shared.PNP.Record285.PayloadUniversalCoverage
+
+#check Shared.PNP.Record285.PayloadUniversalCoverage.polynomial_payload_candidate
+#check Shared.PNP.Record285.PayloadUniversalCoverage.polynomial_framed_candidate
+#print axioms Shared.PNP.Record285.PayloadUniversalCoverage.polynomial_payload_candidate
+#print axioms Shared.PNP.Record285.PayloadUniversalCoverage.polynomial_framed_candidate

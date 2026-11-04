@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
-  "publication_date": "2026-11-03",
+  "schema_version": 2,
+  "publication_date": "2026-11-04",
   "source_repository": "Mira-Cult/math-wip",
-  "formalization_revision": "576f0f2d69d37e4ba29d75ea712ddac6174832ca",
+  "formalization_revision": "d2352cd63de5840d05dcdc89e78dc9f7052ee32f",
   "formalization_path": "Shared/PNP/Record285",
   "producer_revision": "db256d6ae59a47eb941a2f0c5cf3f37b3c4633c8",
   "producer_path": "problems/p-np-horn-beeper/frontier/clocked/architecture_v2/late_zero/machines/all_completed",
@@ -35,21 +35,32 @@
     "states": 286,
     "rows": 572,
     "exit_B_event_shift": 1,
-    "sha256": "12fba54d7e9c51ca6e149ae4103a3753378a7cff7cfb3e66bcda19804bfeb880"
+    "sha256": "12fba54d7e9c51ca6e149ae4103a3753378a7cff7cfb3e66bcda19804bfeb880",
+    "designated_state": 1,
+    "observation": "configuration times occupying designated state; equivalent to exit events"
   },
   "endpoint": "Shared.PNP.Record285.LiteralEndpoint.selected_literal_endpoint",
   "claim": "Finitely many marked transitions iff canonical P=NP; infinitely many iff P!=NP; execution is total in either case.",
-  "source_scope": "Unchanged transitive proof source, selected audits, literal and certificate inputs, certificate generators, and pinned public dependencies. Historical machine compiler and Python AST translation are not certified here.",
+  "source_scope": "801 unchanged upstream files: local proof closure, selected audits and fixtures, typed listing and interpreter, certificate generators, frozen inputs and pinned public dependencies. CPython parsing/execution correspondence and historical compiler correctness are not assumed.",
   "checks": {
-    "source_blob_identity": "passed",
+    "source_blob_identity": "passed against exact d235 source tree",
     "literal_integrity": "passed",
     "local_import_closure": "passed",
-    "certificate_regeneration": "passed: 22 generators plus pre-control variant",
-    "source_interface_inspection": "completed, independent automated scope",
-    "fresh_project_kernel_build": "in progress; not claimed passed",
-    "fresh_axiom_audit": "in progress; not claimed passed",
+    "certificate_regeneration": "passed: 23 generators plus pre-control variant",
+    "finite_literal_replay": "passed: initialization at 89806142 executed steps and first marked event at zero-based transition 89844409",
+    "companion_quotient": "all 572 rows independently checked; zero mismatches",
+    "source_interface_review": "scoped assistant-led nonauthor automated source reviews at 6aef75e8 and d2352cd6; not exhaustive or external human-expert review",
+    "upstream_kernel_build": "owner reports successful incremental 2888-job build at d235; earlier fresh project build at 32386 reused 1216 mathlib cache artifacts",
+    "upstream_axiom_gate": "owner reports self-test and gate passed at d235, 42664 project declarations; standard propext, Classical.choice, Quot.sound only",
+    "independent_public_packet_kernel_rebuild": "not performed: Lean/Lake/Nix unavailable in publication environment",
+    "full_upstream_dependency_source_rebuild": "not claimed",
     "independent_human_mathematical_review": "not performed",
-    "remote_CI": "not claimed"
+    "remote_CI": "upstream exact-head integrity skipped; no public release CI pass claimed"
   },
-  "modifications": "New public prose, integrity/regeneration scripts, inventory and narrow Shared.lean umbrella; scientific files unchanged."
+  "modifications": "Refreshed public prose, integrity/regeneration scripts, finite replay source, inventory and narrow Shared.lean umbrella; scientific files unchanged.",
+  "previous_public_commit": "572ea55a51714ab08d335f37f2b08444c940bddc",
+  "public_endpoints": [
+    "Shared.PNP.Record285.PublicEndpoint.marked_finite_iff_P_eq_NP",
+    "Shared.PNP.Record285.PublicEndpoint.companion_finite_visits_iff_P_eq_NP"
+  ]
 }

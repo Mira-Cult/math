@@ -1,7 +1,7 @@
 {
   "source_repository": "Mira-Cult/math-wip",
-  "source_revision": "576f0f2d69d37e4ba29d75ea712ddac6174832ca",
-  "scope": "Exact unchanged scientific dependency closure and selected audit/fixture/generator sources; public Shared.lean umbrella and release prose are new. No generated build products.",
+  "source_revision": "d2352cd63de5840d05dcdc89e78dc9f7052ee32f",
+  "scope": "Byte-identical scientific dependency closure, selected audit and fixture modules, generators, frozen inputs and pinned build recipes. The public Shared.lean umbrella and release prose are new. No generated build products.",
   "files": [
     {
       "public_path": "formalization/Shared/Beeping/BinaryBlockScan.lean",
@@ -2743,16 +2743,16 @@
     {
       "public_path": "formalization/Shared/PNP/Record285/AlignedPhysical.lean",
       "upstream_path": "Shared/PNP/Record285/AlignedPhysical.lean",
-      "upstream_git_blob": "67fad360f7c6e7546e59a74cfab350aca50b85b4",
-      "sha256": "4a713c256045b9f2ebb3ba2960df76636c1bfc2cb629d00610e920266d35a36e",
-      "bytes": 6814
+      "upstream_git_blob": "a1e3515aeb1be13589b1cd5127db8e0293d508b9",
+      "sha256": "ffb67f62635551b22a4797a44bbf7647c993d244e073fcdf4888687aadab0336",
+      "bytes": 7991
     },
     {
       "public_path": "formalization/Shared/PNP/Record285/AlignedPhysicalAudit.lean",
       "upstream_path": "Shared/PNP/Record285/AlignedPhysicalAudit.lean",
-      "upstream_git_blob": "06e2ec8036a5a0fde36005591c49ca356b172c40",
-      "sha256": "23eb965a202aa386eb0557761ad8317bf2eb64203ac35018e68d9a0db76389bd",
-      "bytes": 1084
+      "upstream_git_blob": "a1e27ad8387db69fe50d9b15c6060525a8589ba2",
+      "sha256": "ca948a16a547910d7bbc064af182d4fcd4817c05726590a88255826e90383861",
+      "bytes": 1221
     },
     {
       "public_path": "formalization/Shared/PNP/Record285/AlignedPhysicalEvents.lean",
@@ -4421,6 +4421,20 @@
       "bytes": 2038
     },
     {
+      "public_path": "formalization/Shared/PNP/Record285/PayloadUniversalCoverage.lean",
+      "upstream_path": "Shared/PNP/Record285/PayloadUniversalCoverage.lean",
+      "upstream_git_blob": "470476ce822092c71837557b80e91951010b1262",
+      "sha256": "2b88b2c11fffd0d1dde34ef138b773aa3849b1442a4a6276806579f711ae3a70",
+      "bytes": 4133
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PayloadUniversalCoverageAudit.lean",
+      "upstream_path": "Shared/PNP/Record285/PayloadUniversalCoverageAudit.lean",
+      "upstream_git_blob": "6d7ddb863c1c4877bb0074f83304ea77377c1851",
+      "sha256": "a4b6605fb7cc35d6bfe9706ec25301a0bb3023cabfc9f5fd87919b2a37a134e8",
+      "bytes": 394
+    },
+    {
       "public_path": "formalization/Shared/PNP/Record285/PhysicalNumeric.lean",
       "upstream_path": "Shared/PNP/Record285/PhysicalNumeric.lean",
       "upstream_git_blob": "f2ee014087948b58cde6d9ad7c5db51c5cf8d4f9",
@@ -4500,9 +4514,9 @@
     {
       "public_path": "formalization/Shared/PNP/Record285/ProducerFullBoundary.lean",
       "upstream_path": "Shared/PNP/Record285/ProducerFullBoundary.lean",
-      "upstream_git_blob": "9735e60eef1109fa35ef50edb73c3f712401ca51",
-      "sha256": "f09714ef563cc5cf386eadf818bbe1b763132c8170295823d119296e3f7b7a0a",
-      "bytes": 20804
+      "upstream_git_blob": "993e226eb31f232264e3ceee82ec8d3ff4955290",
+      "sha256": "871e369ea15c0816ced148adbc6e941c78cb12e4c71a9eccd5ca8361a771ec79",
+      "bytes": 20939
     },
     {
       "public_path": "formalization/Shared/PNP/Record285/ProducerFullBoundaryAudit.lean",
@@ -4580,6 +4594,363 @@
       "upstream_git_blob": "d93f1818637fc860a57f3224197af2b568fd9b21",
       "sha256": "61c8d39eb92a1eb6d3c072cb2b8b8e25251e57eade6ea87963b364d7614da4ad",
       "bytes": 167567
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PublicEndpoint.lean",
+      "upstream_path": "Shared/PNP/Record285/PublicEndpoint.lean",
+      "upstream_git_blob": "0fa3676b7a13515401601733c916038ffc9dc595",
+      "sha256": "030e8ab4aa155d53eefcf72936b64cbba6e7f0e7099d9c2ed8108561b17209b7",
+      "bytes": 2383
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonCandidateSetup.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonCandidateSetup.lean",
+      "upstream_git_blob": "733747fb10ac31b4e5b5b8b9c0deaf914d501e05",
+      "sha256": "94d3b3e68c547ddc37221a069882bce0fb9f01f16fb3b0af4fdea82f8dd75d79",
+      "bytes": 3123
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControl.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControl.lean",
+      "upstream_git_blob": "d9fd7aee84e529f08ded789f626050d16a784870",
+      "sha256": "180fb7e1b73c9b827dab6d8ce2d9fcb06b3febb77445c17c86d88851177f7bc0",
+      "bytes": 4988
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlAction.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlAction.lean",
+      "upstream_git_blob": "77e0357cf26db162f7a72ac79001f447b6e90077",
+      "sha256": "288c117d4a8edb084aa05e00e4a86ae8ee8009a63d7e98231b1fd41e02390ffb",
+      "bytes": 13615
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlActionMeaning.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlActionMeaning.lean",
+      "upstream_git_blob": "adea41f2899ecb88a439d8df688e472486915247",
+      "sha256": "c204251ffb68a73c3650217a6b08d8876124b60c4180def4fce507023bc522b2",
+      "bytes": 5187
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlBegin.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlBegin.lean",
+      "upstream_git_blob": "5e88d98aac2d6bb6efa80d904388543ec3afa13e",
+      "sha256": "76a7f273d7f948449cdd25dfbcaba9b2b99d1e5a4db45812b75bf6958f237dd3",
+      "bytes": 2796
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlCandidate.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlCandidate.lean",
+      "upstream_git_blob": "fa4052dcee1b9ac0abd6a7e65aa2edbb4e02adf6",
+      "sha256": "e687c85cb7d07975a5c82505ed0e08049a87590191ab928b91de80236822d375",
+      "bytes": 4105
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlCandidateFrame.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlCandidateFrame.lean",
+      "upstream_git_blob": "f7564915b773af64a162ba2aed3d1719c11b103c",
+      "sha256": "a9f511e0dc35737c97a10f0d6c56835ad5f2ae2f2bfbfd99a3cc2916065bb0e1",
+      "bytes": 9251
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlClock.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlClock.lean",
+      "upstream_git_blob": "3f922b076305385922a959d236ed86506bce3864",
+      "sha256": "05c9e7e7c5b954d66117d2227f154cbc230ac5eb91262ddef783194ea753445f",
+      "bytes": 2312
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlComparison.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlComparison.lean",
+      "upstream_git_blob": "ca62169e29a9b3b67be8e132f54375aaa0ba5942",
+      "sha256": "b76da8d28241b4a963e4f5148b6cfd3916c71803da38eedf35d0fae4454062a2",
+      "bytes": 2435
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlDecode.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlDecode.lean",
+      "upstream_git_blob": "54c8013df0cfe6d5666a3642059b9ad10c3af7f4",
+      "sha256": "7e35cc77f801932ee6eab0b15c2e8ef179bd1899c4f57eb10cdf465d47f0e039",
+      "bytes": 11822
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlDispatch.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlDispatch.lean",
+      "upstream_git_blob": "441476772f51b6f35eac5ca9678beeb1cff3cd3f",
+      "sha256": "6299ae7b674925cf20aa42d19e0c7d0b98dcb268a5e1cf6cb3a4d306b3fb2310",
+      "bytes": 5509
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlEvaluator.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlEvaluator.lean",
+      "upstream_git_blob": "0ccb15105ae5ff03ab84c00b019016a65d167186",
+      "sha256": "246939026fb844d5d36b4772b51eb1bbc75b02a7f457c49f0d885f6fdd171a3a",
+      "bytes": 6515
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlGuarded.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlGuarded.lean",
+      "upstream_git_blob": "d81cfd1bbe4cf89f840a9e99cd52d5173cbd599f",
+      "sha256": "96785216bc98c1653918cfe633628f15653a91b666bcdb5e5c8811f87980271b",
+      "bytes": 8801
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlGuardedDecode.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlGuardedDecode.lean",
+      "upstream_git_blob": "ba9fe6c6d6bcc4fa620ff583deecb045b3f9be80",
+      "sha256": "5d6ac549e2841505c8430a7a3f639804b18405808e1a590ef3060de50dca21f5",
+      "bytes": 10117
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlLocal.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlLocal.lean",
+      "upstream_git_blob": "29538a0ba880ccda5c9cdc5251eb9d84024c6f78",
+      "sha256": "9d39d110adca89b05334ed4e22dd671a1ba6a68efcb86b23c84c6945bd927da5",
+      "bytes": 1312
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlProgress.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlProgress.lean",
+      "upstream_git_blob": "abf7dc007137ec9ad29352ab299086e426f612de",
+      "sha256": "f21c7a0515926812978bcb4adfd0ef7f310b5b731bf09b7449b988ea4306d9f1",
+      "bytes": 2081
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlProgressAudit.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlProgressAudit.lean",
+      "upstream_git_blob": "d69fcdae641f3c9e50f3d3aace136a0e3a2ea3ec",
+      "sha256": "ec4a5840901ed13a81aa6390e0a037fc51368941b020fe7d0a0569611bb0286d",
+      "bytes": 220
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlProgressEndpoint.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlProgressEndpoint.lean",
+      "upstream_git_blob": "6ba15f0e894543b94ab3c5f406eea63fcf9ec084",
+      "sha256": "6267412f7a563f77da04f887bac1f50102cb423293ac9c02d83bd20db80f095d",
+      "bytes": 1124
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceAction.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceAction.lean",
+      "upstream_git_blob": "3210a9646bbc3500f110f98177e6983480e29f3c",
+      "sha256": "c416190ff0a4a31cca06c4ec6fe04412177b47a5def9c909cd9a4e909e190526",
+      "bytes": 10019
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceActionMeaning.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceActionMeaning.lean",
+      "upstream_git_blob": "cc59754a78b2ad91e6faf0ce31dead8caa3960d4",
+      "sha256": "4a7b15ebf7a47c3f366b70a0ddca5cfdb1f538f504f7ae29c007199b8362d570",
+      "bytes": 4124
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceBranch.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceBranch.lean",
+      "upstream_git_blob": "e55fc21510d03d1cd3a72265a672c1b53e61ee69",
+      "sha256": "5f934785017df8f787f599fe5dda3d3f8bff0a2df507a063d5b2570e0f2ef81b",
+      "bytes": 2621
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceClock.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceClock.lean",
+      "upstream_git_blob": "304fcc46a6e93beefc7b9913661b3950717f0c2f",
+      "sha256": "979f1d1c8034e24a55f033b2a27569e8ff060eedd3feda8dc21a3dab5da91a6a",
+      "bytes": 3923
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceClockMeaning.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceClockMeaning.lean",
+      "upstream_git_blob": "1b88f3bec5ca35feb5a1fdde2ad38eaf421d793c",
+      "sha256": "f1b619f1512c8f273b0902eba69177b8304244a85ca8c45d0ce7accb627e0561",
+      "bytes": 1508
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceComplete.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceComplete.lean",
+      "upstream_git_blob": "d4ef67b75e1f4ed261d779a79cea1c471ea72b4e",
+      "sha256": "0254c95d669a120a0ebd018c84a9652106af29635a37c8590908a6cad64cd360",
+      "bytes": 2853
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceDecode.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceDecode.lean",
+      "upstream_git_blob": "19e09e551107b655216148205141215c0f5bb0f5",
+      "sha256": "7e890245efef3347329e1ad08edd92d5e8fb673d3c8a3430be51291809c85e31",
+      "bytes": 2864
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceEvaluator.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceEvaluator.lean",
+      "upstream_git_blob": "129569fdf6473088d63c56b6a5e9b7e03a4baafd",
+      "sha256": "9f488dd6f7850ad8fb89eacd7c38d3c16304510d45f1bae56b97c30ed4f8f25d",
+      "bytes": 2597
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceSearch.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceSearch.lean",
+      "upstream_git_blob": "48bf579826f5c3ee8610c2d215819ef9e07e429e",
+      "sha256": "ea939ab93e6cd9bdc55ca15b4e49eaf6cef6dea2078584f143a26cf3716e631c",
+      "bytes": 4325
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlReferenceTick.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlReferenceTick.lean",
+      "upstream_git_blob": "cb4801145dad504112724205bab5f4a975dbfd6c",
+      "sha256": "3c48e1fa4bb30f26884bb71f68de76ecdafc2ba9984e6019cfad3cad3431e5d9",
+      "bytes": 3471
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocation.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocation.lean",
+      "upstream_git_blob": "5d30def3b0f8a614bb2ad8eb9002ffc6ac7cd463",
+      "sha256": "d652ddbc2e0c8dce786cda3cb9b81feed8b07fe4b8aa5b3e03b1b377058325a2",
+      "bytes": 5080
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationActual.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationActual.lean",
+      "upstream_git_blob": "f853cd619e68ad931cff856ef789d3baf713bc18",
+      "sha256": "f28c4ef95343f5b68435d6c258cc05553561eaa716cef8618a23503e5b35dfb1",
+      "bytes": 2179
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationCandidate.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationCandidate.lean",
+      "upstream_git_blob": "75ee18bd1891e19bdacfdcfd15244b2e41a08101",
+      "sha256": "7f8a7369e2340a0cb3fb9419e18e8754ecc324fb9a59eb9c59e99d9876085d27",
+      "bytes": 3653
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationInside.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationInside.lean",
+      "upstream_git_blob": "03272c28cc3d064517b0bda0e34775fd9ef0af79",
+      "sha256": "83ed965d12ca68d7ea6c3bfa17855bf1b368b831324c273b2f9a760d061dce7e",
+      "bytes": 4087
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationInvariant.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationInvariant.lean",
+      "upstream_git_blob": "8eac1a4eaef094828e7ebf90b0913c98024479e9",
+      "sha256": "ba4ec155b8565db7520a3208b000bce54f215c290aba3844f094853119a7ab52",
+      "bytes": 2764
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationRegion.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationRegion.lean",
+      "upstream_git_blob": "84216ffd8e87efbda3133b31d2674e911eed7a65",
+      "sha256": "d845c2178db9c3de6337c7ad177cc67e3531e99f384d834c3c39321b1216a91a",
+      "bytes": 1801
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationRun.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationRun.lean",
+      "upstream_git_blob": "d6c87e216e1b6e9cf41cec0f3579049f9e9cabab",
+      "sha256": "5f89eedc506c4794768a83743117127e26a4c3b7db8b278261d481f30c6f5fa6",
+      "bytes": 4212
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationStep.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationStep.lean",
+      "upstream_git_blob": "edcd6ecd9c2a4084401e6b9a637412c6292c1c75",
+      "sha256": "b0be34e7501bdb861f9de3007d699489c1561ac20400e5815c0f63d59f37e5dd",
+      "bytes": 5040
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlRelocationTransfer.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlRelocationTransfer.lean",
+      "upstream_git_blob": "3b4d833c76df96360a61aaa22eeb8025ebba3d79",
+      "sha256": "1da41cb76e975eea8c8a06c1957c748ac20e95142f115291a04f326fa58a88e7",
+      "bytes": 3069
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlSettle.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlSettle.lean",
+      "upstream_git_blob": "128b91a4f0cda4c3ea7e119bbf1524a957140752",
+      "sha256": "e06ce5787f7983f17b4c9b640d80fc3cfcc59fae6b2a0e51ec62480dd6e47fb2",
+      "bytes": 1072
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlSimulation.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlSimulation.lean",
+      "upstream_git_blob": "09984c6ea6e6aebab85e465bb30226ec5cad0809",
+      "sha256": "cdd66d655270b0bb211f6815ec2ee01edb46b14856505d624cd1f9748226790a",
+      "bytes": 3351
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlSimulationCompare.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlSimulationCompare.lean",
+      "upstream_git_blob": "3c8104581c6fa9fe6b4dbcaa867a28f258a3384e",
+      "sha256": "a6f3bcc85da93bb21fa5f6c2cfc3383ef1bad3741571dd50dad985c11c2c5f1b",
+      "bytes": 3654
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlSimulationLocal.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlSimulationLocal.lean",
+      "upstream_git_blob": "97b6bb2f21d856ff556543dd2ba2f321c14c8597",
+      "sha256": "6dd2f3ad238614d21fe8eb700c74cca7d41a7eb4fcc2fbfc9f2cd4c7d4d0069f",
+      "bytes": 2047
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlSkip.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlSkip.lean",
+      "upstream_git_blob": "d66f79bcecfaf582d7a81f2df9a55451a5b09938",
+      "sha256": "84ec5199584d35a25bef987cb281bb1e05d673f251339ef6468a80e659317c94",
+      "bytes": 10596
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonControlTypedEndpoint.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonControlTypedEndpoint.lean",
+      "upstream_git_blob": "8bf65bdf94824e5880cffd94925ce23cc297a9d9",
+      "sha256": "74e6ca09b31dadc370d7a6c6833fde05b4fcee134a9ab96a4297bbc051faf9aa",
+      "bytes": 1848
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonDecoder.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonDecoder.lean",
+      "upstream_git_blob": "d344ea62e2ac1b83eed78cf9d80898abe0b68cf4",
+      "sha256": "0b5cb0f8792f4530e70f286554d68ea6a62fea2666996fa4b017c4e1f6ab1b26",
+      "bytes": 6928
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonInlineController.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonInlineController.lean",
+      "upstream_git_blob": "a328bd7ca600476dee1123d93bd48a4a57097b1f",
+      "sha256": "acd56c59fa232e1930bfff4be8648bb9824990c7dd079a259d140631cd932092",
+      "bytes": 3687
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonInlineDecoder.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonInlineDecoder.lean",
+      "upstream_git_blob": "8c05a76a79588bebe427d770ebe14de776c0fac8",
+      "sha256": "605d7d353a802dbafc310902d08565c08d586a0bb3c3a8b47cdbba561e5beb5f",
+      "bytes": 8108
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonStraight.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonStraight.lean",
+      "upstream_git_blob": "e8cc0e4500fc949c7f42da98286dd4d9d32a3120",
+      "sha256": "ffe311dd831b90f41bb463a50ed263d6b1e88c8b44dc8008141b60a6b932679a",
+      "bytes": 3203
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonSyntax.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonSyntax.lean",
+      "upstream_git_blob": "b73de03a8abd9a8efc881d327b035c76808aa274",
+      "sha256": "5ac7238dd70ca22e8e0b62d8ca31224a9c35451f1866d1775600a7e5d0d36420",
+      "bytes": 2915
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonSyntaxCertificate.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonSyntaxCertificate.lean",
+      "upstream_git_blob": "b6871fe78c5a33daa6dd91f242b5e64c94d45deb",
+      "sha256": "c6aed0d365f7247edda80fda036b60fe2452fce9057874007a32eeb764cb67ae",
+      "bytes": 50921
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/PythonSyntaxData.lean",
+      "upstream_path": "Shared/PNP/Record285/PythonSyntaxData.lean",
+      "upstream_git_blob": "12600943ae8f7624ff63a7d3be179555422b63c0",
+      "sha256": "648d5d61d128fd5c184c05be34834e69e484a5fb382d6bbfa743643ab5bc574d",
+      "bytes": 9066
     },
     {
       "public_path": "formalization/Shared/PNP/Record285/Quotient.lean",
@@ -4741,6 +5112,20 @@
       "upstream_git_blob": "d646540deee057f50c3da7f91cc8d97e5851b00b",
       "sha256": "070518744ae973d3b852b37c9532dc6abd89f7503f9ca7830a68973cfc67eae8",
       "bytes": 10296
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/SourceControllerTotal.lean",
+      "upstream_path": "Shared/PNP/Record285/SourceControllerTotal.lean",
+      "upstream_git_blob": "98efe7fe6656a5d582cea74e93dde41b86dc361d",
+      "sha256": "44a0847ef38ea1a57c889d975906a4d12682b3e9f1c6b948522f55c78182b47a",
+      "bytes": 3341
+    },
+    {
+      "public_path": "formalization/Shared/PNP/Record285/SourceControllerTotalAudit.lean",
+      "upstream_path": "Shared/PNP/Record285/SourceControllerTotalAudit.lean",
+      "upstream_git_blob": "ef550b7cce7a0c9ba3a92b8351abdc572b44cdc6",
+      "sha256": "944cc87ed160d901e1de4630e6901b9e6b6cc777908d334bb38e56dddaa0b067",
+      "bytes": 518
     },
     {
       "public_path": "formalization/Shared/PNP/Record285/SourceEndpoint.lean",
@@ -5079,6 +5464,13 @@
       "bytes": 6204
     },
     {
+      "public_path": "formalization/Shared/PNP/Record285/generate_python_syntax.py",
+      "upstream_path": "Shared/PNP/Record285/generate_python_syntax.py",
+      "upstream_git_blob": "9d10848732322a348e2d9bbcdb92a9b012523c58",
+      "sha256": "1eaab76e51a6441f08a460255ee4ae6ac91f88f7bbb0b17ef9d1abf3e4d7dae6",
+      "bytes": 7406
+    },
+    {
       "public_path": "formalization/Shared/PNP/Record285/generate_round_checks.py",
       "upstream_path": "Shared/PNP/Record285/generate_round_checks.py",
       "upstream_git_blob": "bee30c73b474201c268042e1f4cc482d467dc611",
@@ -5175,6 +5567,20 @@
       "upstream_git_blob": "2a34c7145fa5db68dc49a2e0f6a8aba6560cca4a",
       "sha256": "aab0334d32803d19a06595c97d77edf4a1fb6a1c248106cdea5102c85a3c34e0",
       "bytes": 5127
+    },
+    {
+      "public_path": "formalization/flake.lock",
+      "upstream_path": "flake.lock",
+      "upstream_git_blob": "464754b066078544d8d2a1c2b0357a6defe459f2",
+      "sha256": "0dd12d0dee75e66d975a7b392bb5175baaeb52dea4a1f316419f78670005ccb0",
+      "bytes": 2082
+    },
+    {
+      "public_path": "formalization/flake.nix",
+      "upstream_path": "flake.nix",
+      "upstream_git_blob": "4b1fb9ef1cb8471d347f9c73909e22d082984d42",
+      "sha256": "861385bf7fe2165eefb50022019caefcd428fa7796c9115ea58ca7ebf88d2cbd",
+      "bytes": 821
     },
     {
       "public_path": "formalization/lake-manifest.json",

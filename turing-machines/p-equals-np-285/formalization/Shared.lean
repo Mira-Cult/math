@@ -1,6 +1,7 @@
-/-! Public release umbrella. All imported scientific modules are unchanged
-from the pinned source revision. This replaces the unrelated upstream
-whole-repository umbrella for the self-contained release. -/
-import Shared.PNP.Record285.LiteralEndpoint
-import Shared.PNP.Record285.LiteralQuotient
+/-! Public-release umbrella. All scientific modules are byte-identical to the
+pinned source revision. This intentionally excludes unrelated upstream projects. -/
+import Shared.PNP.Record285.PublicEndpoint
 import Shared.PNP.Record285.SourceCandidateClockTotal
+import Shared.PNP.Record285.SourceControllerTotal
+import Shared.PNP.Record285.PayloadUniversalCoverage
+import Shared.PNP.Record285.PythonControlProgressEndpoint

@@ -44,7 +44,9 @@ theorem alignment (i : Nat) :
 
 /-- A semantic relation from a source search state to the entire literal
 configuration. All graph banks and rewrite phases are existentially recorded;
-the final predicate fixes the whole tape, absolute head and control word. -/
+the graph-to-pure relation connects the producer program counter to the
+represented control word, and the final predicate fixes the whole tape and
+absolute head. -/
 def Rel (s : Source.SearchState) (physical : Shared.Beeping.Machines.Config 285) : Prop :=
   ∃ (original expanded logical : OwnershipCore.State) (input producer : CoreState)
     (g : GrammarControlGraph.State) (p : GrammarPure.State)
@@ -55,10 +57,27 @@ def Rel (s : Source.SearchState) (physical : Shared.Beeping.Machines.Config 285)
     CoalescedRel logicalRows logicalMasks inputRows masks classMap graphMap logical input ∧
     RewriteRel inputRows producerRows masks retainedMap producer input ∧
     CoreRel producerRows producerPositions producer g ∧
-    g.fields = p.fields ∧ p.control = word++[marker] ∧ 163 ≤ gap ∧
+    GrammarControlGraph.Related g p ∧ p.control = word++[marker] ∧ 163 ≤ gap ∧
     PhysicalNumeric.Rel
       (denote (rightWord treeRoot (-(word.length:Int)) word marker rootLeft [false])
         origin leftTail (runPattern false gap true (2*blocksBits p.fields 0))) physical
+
+/-- A related literal configuration represents a control word whose decoded
+prefix is the producer graph's program counter. -/
+theorem related_control_word (s : Source.SearchState)
+    (physical : Shared.Beeping.Machines.Config 285) (h : Rel s physical) :
+    ∃ (producer : CoreState) (g : GrammarControlGraph.State) (p : GrammarPure.State)
+      (word : List Bool) (marker : Bool) (origin : Int) (leftTail gap : Nat),
+      CoreRel producerRows producerPositions producer g ∧
+      p.control = word++[marker] ∧
+      (∃ len, 0 < len ∧ g.pc = window (GrammarPure.pureBits p.control) 0 len) ∧
+      PhysicalNumeric.Rel
+        (denote (rightWord treeRoot (-(word.length:Int)) word marker rootLeft [false])
+          origin leftTail (runPattern false gap true (2*blocksBits p.fields 0))) physical := by
+  obtain ⟨_,_,_,_,producer,g,p,word,marker,origin,leftTail,gap,
+    _,_,_,_,_,hcore,hgp,hcontrol,_,htape⟩ := h
+  obtain ⟨_,_,_,len,_,hlen,_,_,hpc⟩ := hgp.2
+  exact ⟨producer,g,p,word,marker,origin,leftTail,gap,hcore,hcontrol,⟨len,hlen,hpc⟩,htape⟩
 
 noncomputable def boundary (i : Nat) : Nat := ProducerFullBoundary.boundary (producerIndex i)
 

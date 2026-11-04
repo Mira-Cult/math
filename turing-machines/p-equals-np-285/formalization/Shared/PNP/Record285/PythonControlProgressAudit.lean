@@ -1,0 +1,4 @@
+import Shared.PNP.Record285.PythonControlProgressEndpoint
+
+#print axioms Shared.PNP.Record285.PythonControlProgress.main_runs_live
+#print axioms Shared.PNP.Record285.PythonControlProgressEndpoint.typed_progress_endpoint

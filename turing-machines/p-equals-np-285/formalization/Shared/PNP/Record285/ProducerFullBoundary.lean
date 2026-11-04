@@ -31,12 +31,14 @@ theorem boundary_unbounded (t : Nat) : ∃ i, t < boundary i := by
 
 /-- At every producer action boundary the complete physical two-way tape,
 absolute head, control path and complete register bank have one common
-representation, starting from the actual blank-start run. -/
+representation, starting from the actual blank-start run. The graph-to-pure
+relation includes the correspondence between the graph program counter and
+the represented control word. -/
 theorem boundary_full_tape (i : Nat) :
     ∃ (g : GrammarControlGraph.State) (p : GrammarPure.State)
       (word : List Bool) (marker : Bool) (origin : Int) (leftTail gap : Nat),
       CoreRel producerRows producerPositions ((coreSystem producerRows).run i) g ∧
-      g.fields = p.fields ∧ p.control = word++[marker] ∧ 163 ≤ gap ∧
+      GrammarControlGraph.Related g p ∧ p.control = word++[marker] ∧ 163 ≤ gap ∧
       PhysicalNumeric.Rel
         (denote (rightWord treeRoot (-(word.length:Int)) word marker rootLeft [false])
           origin leftTail (runPattern false gap true (2*blocksBits p.fields 0)))
@@ -52,7 +54,7 @@ theorem boundary_full_tape (i : Nat) :
       Shared.PNP.Record285.machine.system.run (boundary i) := by
     exact restarted_run_offset Shared.PNP.Record285.machine.system 89806142 _
   rw [hphysical,hrun] at htape
-  exact ⟨g,p,word,marker,origin,leftTail,gap,hcore,hgp.1,hcontrol,hgap,htape⟩
+  exact ⟨g,p,word,marker,origin,leftTail,gap,hcore,hgp,hcontrol,hgap,htape⟩
 
 /-- At the corresponding pre-zero-elimination graph boundary, the checked
 rewrite relates the complete register list to the same complete physical
@@ -76,7 +78,7 @@ theorem input_graph_full_tape (i : Nat) :
     GrammarCoreZero.retainedMap ((coreSystem producerRows).run i)
       ((coreSystem GrammarCoreZero.inputRows).run (GrammarCoreZero.acceptedRewrite.boundary i)) at hr
   have heq := hr.2.2.1
-  exact ⟨g,p,word,marker,origin,leftTail,gap,hr,hcore,heq.symm.trans (hcore.2.1.trans hfields),
+  exact ⟨g,p,word,marker,origin,leftTail,gap,hr,hcore,heq.symm.trans (hcore.2.1.trans hfields.1),
     hcontrol,hgap,htape⟩
 
 /-- The same pre-elimination boundary lies inside one finite logical-graph

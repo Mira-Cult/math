@@ -1,12 +1,32 @@
 # Does the formalization say the right thing?
 
 This is a reading map for a skeptical reader who does not want to read the
-whole Lean development. It records an independent automated source/interface
-inspection of upstream revision `576f0f2d69d37e4ba29d75ea712ddac6174832ca`.
-It is not a full line-by-line proof review or independent human mathematical
-review. Actual build and axiom results belong in [VERIFICATION.md](VERIFICATION.md).
+whole Lean development. This map describes upstream revision `d2352cd63de5840d05dcdc89e78dc9f7052ee32f`.
+The scoped nonauthor automated reviews covered central interfaces, selected
+supporting proofs, and the later control/public-interface correction. They
+were not exhaustive proof-corpus reviews or independent Lean rebuilds. Actual build and axiom results belong in [VERIFICATION.md](VERIFICATION.md).
 
-## The single endpoint to inspect
+## The short public interfaces
+
+[`PublicEndpoint.lean`](formalization/Shared/PNP/Record285/PublicEndpoint.lean)
+contains two closed statements:
+
+```lean
+PublicEndpoint.marked_finite_iff_P_eq_NP :
+  Record285.machine.system.FiniteEventTimes ↔ ComplexityTheory.P = ComplexityTheory.NP
+
+PublicEndpoint.companion_finite_visits_iff_P_eq_NP :
+  (∃ times : List Nat, ∀ t,
+    (Companion.machine.system.run t).state = Companion.beepState → t ∈ times) ↔
+  ComplexityTheory.P = ComplexityTheory.NP
+```
+
+The second is finiteness of actual configuration times occupying state 1 in the
+286-state companion. The file also prints the upstream P and NP definitions and
+both axiom inventories. Its proof uses `Machine.exiting_beep_iff` and the checked
+one-step quotient; it does not redefine P or NP.
+
+## The bundled machine endpoint
 
 [`LiteralEndpoint.lean`](formalization/Shared/PNP/Record285/LiteralEndpoint.lean)
 contains `Shared.PNP.Record285.LiteralEndpoint.selected_literal_endpoint`.
@@ -28,7 +48,7 @@ that theorem's type. This is not a halting equivalence or a decision of P vs NP.
 [`Machines.lean`](formalization/Shared/Beeping/Machines.lean) defines
 `Machine.step`: read the current cell, select a fixed row, write, move one
 cell left or right, enter the next state, and return the row's Boolean event
-flag. The tape is `Int → Bool`. There is no oracle or unit-cost arithmetic
+flag. The observer flag does not change the next configuration. The tape is `Int → Bool`. There is no oracle or unit-cost arithmetic
 operation in a physical machine transition.
 
 [`Events.lean`](formalization/Shared/Beeping/Events.lean) defines `BeepAt t`
@@ -72,7 +92,12 @@ bank/scratch invariant and exact event count. `ExpansionBoundary` and
 [`AlignedPhysical.Rel`](formalization/Shared/PNP/Record285/AlignedPhysical.lean)
 composes source state, projected/expanded/coalesced/rewritten banks, grammar
 control, and `PhysicalNumeric.Rel`, which fixes every tape cell and the
-absolute head. `related_at_boundary` establishes this at every boundary.
+absolute head. Its full `GrammarControlGraph.Related` witness now explicitly
+retains register equality, successful control transfer, and agreement between
+the producer PC and the decoded control prefix. `related_control_word` exposes
+that consequence, including positive prefix length. `related_at_boundary`
+establishes the full relation at every boundary. This exported relation was
+strengthened after an earlier review found that it retained only register values.
 
 `boundary_strict` and `boundary_unbounded` supply positive progress and
 cofinality. `boundary_event_iff` and `boundary_event_unique` say that a
@@ -158,9 +183,15 @@ definitions, not a new acceptance convention.
 ## Remaining boundary and a minimal review plan
 
 The stronger historical `CanonicalPBridge.FrameEncodingWrapper` is not proved,
-but is not a premise of this endpoint. A checked translation of the producer's
-Python AST is still open; the direct theorem follows checked intermediate
-graphs to the Lean source. Historical comments about then-open downstream
+but is not a premise of this endpoint.
+[`PythonSyntaxCertificate.lean`](formalization/Shared/PNP/Record285/PythonSyntaxCertificate.lean)
+checks the literal source text against a typed listing;
+[`PythonControlSimulation.lean`](formalization/Shared/PNP/Record285/PythonControlSimulation.lean)
+proves positive-duration event-exact refinement for its Lean interpreter;
+[`PythonControlProgressEndpoint.lean`](formalization/Shared/PNP/Record285/PythonControlProgressEndpoint.lean)
+combines the endpoint with the no-fault/no-return property. A correspondence
+with CPython parsing and execution is still open. The direct literal theorem
+uses the checked graph-to-source path, not that missing correspondence. Historical comments about then-open downstream
 obligations remain unchanged in the imported sources and should not be
 mistaken for current theorem premises.
 

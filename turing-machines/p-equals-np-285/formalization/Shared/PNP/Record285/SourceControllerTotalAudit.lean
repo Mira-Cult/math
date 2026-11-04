@@ -1,0 +1,8 @@
+import Shared.PNP.Record285.SourceControllerTotal
+
+#check Shared.PNP.Record285.SourceControllerTotal.positive_dispatch
+#check Shared.PNP.Record285.SourceControllerTotal.dispatch_exit_terminates
+#check Shared.PNP.Record285.SourceControllerTotal.comparison_and_exit_terminate
+#print axioms Shared.PNP.Record285.SourceControllerTotal.positive_dispatch
+#print axioms Shared.PNP.Record285.SourceControllerTotal.dispatch_exit_terminates
+#print axioms Shared.PNP.Record285.SourceControllerTotal.comparison_and_exit_terminate
