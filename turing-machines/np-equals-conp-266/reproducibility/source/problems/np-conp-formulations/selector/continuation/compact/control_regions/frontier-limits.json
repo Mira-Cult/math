@@ -1,0 +1,86 @@
+{
+  "completion": {
+    "argument": "Every congruence class is pairwise compatible. Outside the sink only four states have any compatible partner, and they form a triangle-free four-cycle, allowing at most two merges. The sink can reduce the class count by at most one. The frozen 272-state B table attains the bound.",
+    "compatibility_rounds": 15,
+    "excluded_reads": [
+      [
+        9,
+        1
+      ],
+      [
+        51,
+        0
+      ],
+      [
+        52,
+        1
+      ],
+      [
+        70,
+        0
+      ],
+      [
+        274,
+        0
+      ],
+      [
+        274,
+        1
+      ]
+    ],
+    "maximum_non_sink_merges": 2,
+    "maximum_sink_merges": 1,
+    "minimum_B_states_in_this_fixed_domain": 272,
+    "non_sink_compatible_pairs": [
+      [
+        9,
+        51
+      ],
+      [
+        9,
+        70
+      ],
+      [
+        51,
+        52
+      ],
+      [
+        52,
+        70
+      ]
+    ],
+    "parent_states": 275,
+    "scope": "fixed 275-state table, these six holes, B singleton and same write/move/event semantics only",
+    "selected_B_states": 272
+  },
+  "format": "np-conp-fixed-frontier-bounds-v1",
+  "inputs": {
+    "machines/control_mode_parent/bank-coalescence.json": "de47db7058c04a36d3c858085ed7e6f2be5b6dff9b84902268338db3e2d7c07b",
+    "machines/control_mode_parent/machine.tm": "8610210d90997b98a882342c87be4233870238d739a8929221ad9afa3efaf786",
+    "machines/control_mode_selected/domain.json": "3cc6eee31d4860d3a8251c7c226cb11e3a157a117a53820d5288e58667f5d06a",
+    "machines/control_mode_selected/machine.tm": "1c9d10e6cab8236174b2901a0b91786cd9de3def2126ab5dcd6036c83630187f"
+  },
+  "limitation": "Neither result is a lower bound on NP=coNP machines, architectural replacements, or newly proved admitted domains.",
+  "predecessor_producer": "cc55f5e39a98b75062fdd8ad2029ae9a0efeef13",
+  "storage": {
+    "current_valid_coloring": 12,
+    "logical_vertices": 15,
+    "maximum_clique": 12,
+    "maximum_cliques": 5,
+    "scope": "this fixed abstract interference graph only; stronger ownership invariants or source-phase changes may permit a different graph",
+    "witness": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.q"
+    ]
+  }
+}

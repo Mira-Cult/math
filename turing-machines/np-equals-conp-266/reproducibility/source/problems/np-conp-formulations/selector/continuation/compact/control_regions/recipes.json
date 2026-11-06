@@ -1,0 +1,429 @@
+{
+  "equality_acceptance_first": {
+    "counts": [
+      279,
+      277,
+      276
+    ],
+    "events_sha256": "f1d4b2afab5391eda65aaf1a2427ded08241f3cc7c1aff75bf4c2b80bcd940d4",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/equality_acceptance_first.py"
+  },
+  "equality_candidate_first": {
+    "counts": [
+      279,
+      277,
+      276
+    ],
+    "events_sha256": "f1d4b2afab5391eda65aaf1a2427ded08241f3cc7c1aff75bf4c2b80bcd940d4",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/equality_candidate_first.py"
+  },
+  "equality_consumed": {
+    "counts": [
+      276,
+      274,
+      273
+    ],
+    "events_sha256": "9d958fc4c7b1c759fa0816d845c0f3afec19dcefc2c5e59fa4433c13efd24c99",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        274,
+        271,
+        270
+      ],
+      "events_sha256": "c8f858fcb143b5626965b6053699799ed4ab8075cfa40d731b2846a7cad112c4"
+    },
+    "source": "control_regions/sources/equality_consumed.py"
+  },
+  "equality_reference_first": {
+    "counts": [
+      278,
+      276,
+      275
+    ],
+    "events_sha256": "db9927df840461810f20cb6c7e26fe7b1625cbdbd87a05911fe7def99d138295",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/equality_reference_first.py"
+  },
+  "overflow_borrow": {
+    "counts": [
+      288,
+      286,
+      285
+    ],
+    "events_sha256": "75f1e406216a95394df13ff285d4d58215209688c692d22cc208be48b79276d9",
+    "options": {
+      "overflow": "borrow"
+    },
+    "source": "control_regions/sources/overflow_witness.py"
+  },
+  "overflow_native": {
+    "counts": [
+      290,
+      288,
+      287
+    ],
+    "events_sha256": "586b9925b0bcc2a176ca22606a9213fa7c33d67faa8016d1f9fcfe0faddd13d8",
+    "options": {
+      "overflow": "native"
+    },
+    "source": "control_regions/sources/overflow_witness.py"
+  },
+  "overflow_reuse_both": {
+    "counts": [
+      289,
+      287,
+      286
+    ],
+    "events_sha256": "3a8709bb3ff809a05827cd56438923513b0f23031bf0b4b392541a7fa0bc9b2e",
+    "options": {
+      "overflow": "borrow"
+    },
+    "source": "control_regions/sources/overflow_reuse_both.py"
+  },
+  "overflow_reuse_description": {
+    "counts": [
+      312,
+      310,
+      309
+    ],
+    "events_sha256": "b80d455081330b5c9391022b71bf24d5ed9be65d48ca7e69204b224b3d09efb1",
+    "options": {},
+    "source": "control_regions/sources/overflow_reuse_description.py"
+  },
+  "overflow_reuse_time": {
+    "counts": [
+      291,
+      289,
+      288
+    ],
+    "events_sha256": "7f513de8d738c8c3fc1b6b3d92aff071970de6ea96dceea8dd1779fe8d5bb978",
+    "options": {
+      "overflow": "borrow"
+    },
+    "source": "control_regions/sources/overflow_reuse_time.py"
+  },
+  "overflow_witness": {
+    "counts": [
+      304,
+      302,
+      301
+    ],
+    "events_sha256": "25916351eff8e83b835cf49f1d6c7a33bd3ac01a686f25ade56b293d8df21546",
+    "options": {},
+    "source": "control_regions/sources/overflow_witness.py"
+  },
+  "reuse_clock_roles": {
+    "counts": [
+      277,
+      275,
+      274
+    ],
+    "events_sha256": "1b7e7615e0a0f6a1b25f38378106289cf34bc1782e44e587fc29afc0357df0cc",
+    "options": {},
+    "selected": {
+      "counts": [
+        275,
+        272,
+        271
+      ],
+      "events_sha256": "e4ef4269f3d187f92fe0e13053781182af7992d379a3845f5e3be3631c7f31a8"
+    },
+    "source": "control_regions/sources/reuse_clock_roles.py"
+  },
+  "reuse_clock_roles_zero": {
+    "counts": [
+      272,
+      270,
+      269
+    ],
+    "events_sha256": "b04b94b954d8cf485b7f0e03d1c8cdcf543021e9d7547630345ba02690294032",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        270,
+        267,
+        266
+      ],
+      "events_sha256": "1811a241d2883d240ead3fb093ece06548b65f01c076f2611fa96566066693cf"
+    },
+    "source": "control_regions/sources/reuse_clock_roles.py"
+  },
+  "reuse_clock_roles_zero_geometry": {
+    "counts": [
+      272,
+      270,
+      269
+    ],
+    "events_sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        270,
+        267,
+        266
+      ],
+      "events_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c"
+    },
+    "source": "control_regions/sources/reuse_clock_roles.py"
+  },
+  "reuse_description": {
+    "counts": [
+      284,
+      282,
+      281
+    ],
+    "events_sha256": "bd499e4693a90898b2e7363fa8144a06009963d5ceb29826b50aec90085ddad0",
+    "options": {},
+    "source": "control_regions/sources/reuse_description.py"
+  },
+  "reuse_description_time": {
+    "counts": [
+      277,
+      275,
+      274
+    ],
+    "events_sha256": "78c7a3e34868850548336d71c981a3c79ada12f2fbf4539e1549d9cfefe6d7bf",
+    "options": {},
+    "selected": {
+      "counts": [
+        275,
+        272,
+        271
+      ],
+      "events_sha256": "445f2bedf48d43b0ba62022d2f322aeb09ef398cd4c1d89c489b1898656bfb17"
+    },
+    "source": "control_regions/sources/reuse_description_time.py"
+  },
+  "reuse_description_time_zero": {
+    "counts": [
+      273,
+      271,
+      270
+    ],
+    "events_sha256": "ac10aa595cfe5d3a79734de1520d7d4e5b6efe689b3141ff22355f424be9a848",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        271,
+        268,
+        267
+      ],
+      "events_sha256": "3cb5d09d41d4e92935dadc446c4469d93a9fb4273e293d7f60d2ebbe4753e350"
+    },
+    "source": "control_regions/sources/reuse_description_time.py"
+  },
+  "reuse_description_zero": {
+    "counts": [
+      281,
+      279,
+      278
+    ],
+    "events_sha256": "382b00fda61562396e27edacf4c40c03d724e6a6f8d1d9d1d1ed86a2bc9897b4",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/reuse_description.py"
+  },
+  "shared_expected_phase": {
+    "counts": [
+      283,
+      281,
+      280
+    ],
+    "events_sha256": "5fc957521030b7431010f7b0c4883655721e0d41d2e0b70a1e504f33fad3d0d9",
+    "options": {},
+    "source": "control_regions/sources/shared_expected_phase.py"
+  },
+  "shared_expected_phase_zero": {
+    "counts": [
+      277,
+      275,
+      274
+    ],
+    "events_sha256": "a81d4835bb86df7f0a4933ff82b99f10f87747a3dcbde1b618d5c8529febd06c",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/shared_expected_phase.py"
+  },
+  "shared_expected_roles": {
+    "counts": [
+      283,
+      281,
+      280
+    ],
+    "events_sha256": "2d23bd9929ca1409457a6d8a9f5bb2e335e9d77ea5443e64ec74d671e79181f3",
+    "options": {},
+    "source": "control_regions/sources/shared_expected_roles.py"
+  },
+  "shared_expected_roles_zero": {
+    "counts": [
+      276,
+      274,
+      273
+    ],
+    "events_sha256": "46b2a790c898523a3a7297123d3c1bda1de100d936bb4242e9eae7bbb067b628",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/shared_expected_roles.py"
+  },
+  "shared_phase": {
+    "counts": [
+      292,
+      290,
+      289
+    ],
+    "events_sha256": "1ceb9bfbfb61344adc05620c82076179797a895a6d552cb5eefb242b90c0d9a8",
+    "options": {},
+    "source": "control_regions/sources/shared_phase.py"
+  },
+  "shared_phase_late_clock": {
+    "counts": [
+      284,
+      282,
+      281
+    ],
+    "events_sha256": "5ed8d662961d360529b9a807fd6b3476f247f95139323cd9582efef59f696049",
+    "options": {},
+    "source": "control_regions/sources/shared_phase_late_clock.py"
+  },
+  "shared_phase_roles": {
+    "counts": [
+      284,
+      282,
+      281
+    ],
+    "events_sha256": "470362442365184916daf5df564db426dbccc0366ba22341504e7796a7d55b4f",
+    "options": {},
+    "source": "control_regions/sources/shared_phase_roles.py"
+  },
+  "shared_phase_roles_zero": {
+    "counts": [
+      278,
+      276,
+      275
+    ],
+    "events_sha256": "61da152b69fc70e0e0b840e4e5bb1fbc782c8804895bfdf1a313a63aac9b32df",
+    "options": {
+      "zero_context": true
+    },
+    "source": "control_regions/sources/shared_phase_roles.py"
+  },
+  "zero_context": {
+    "counts": [
+      274,
+      272,
+      271
+    ],
+    "events_sha256": "105731aed251b4ded8b0806f652648f56f381478c465c6967bf6a074d7018fb6",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        272,
+        269,
+        268
+      ],
+      "events_sha256": "a591b028c401dcbf7f1f80e00503b8123464b52c324b0ec134ddfded6d793a79"
+    },
+    "source": "phase_swap/source.py"
+  },
+  "zero_context_geometry": {
+    "counts": [
+      273,
+      271,
+      270
+    ],
+    "events_sha256": "ed0b25f7a3b375e6c19d8d304b4b35c994b992bce6c82f2ac70e605dcb74e96a",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        271,
+        268,
+        267
+      ],
+      "events_sha256": "8545902087c52ddd8ee9f01a7dc6cbe32ad0284c30261b3748db3a3061389b20"
+    },
+    "source": "phase_swap/source.py"
+  },
+  "zero_context_geometry_prefix": {
+    "counts": [
+      273,
+      271,
+      270
+    ],
+    "events_sha256": "87def8e3d9e251d454f0d1534e3495703219c7762126bd7ad0abf2388dc0ab2e",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        271,
+        268,
+        267
+      ],
+      "events_sha256": "2e25d2c51b8298246d98adce42a1cc1a7100f046169553b74db716b5e7fd6f73"
+    },
+    "source": "phase_swap/source.py"
+  },
+  "zero_neutral": {
+    "counts": [
+      274,
+      272,
+      271
+    ],
+    "events_sha256": "105731aed251b4ded8b0806f652648f56f381478c465c6967bf6a074d7018fb6",
+    "options": {},
+    "producer": "neutral",
+    "selected": {
+      "counts": [
+        272,
+        269,
+        268
+      ],
+      "events_sha256": "a591b028c401dcbf7f1f80e00503b8123464b52c324b0ec134ddfded6d793a79"
+    },
+    "source": "phase_swap/source.py"
+  },
+  "zero_pop": {
+    "counts": [
+      276,
+      274,
+      273
+    ],
+    "events_sha256": "49788889c3788787550525343d95b673340071831cb426f325d7b451c0b4f665",
+    "options": {
+      "zero_pop": true
+    },
+    "selected": {
+      "counts": [
+        274,
+        271,
+        270
+      ],
+      "events_sha256": "1a9ff33310b509660faeb50abd07eb7518087439c5f5f138823bbe6ef3d1c9fb"
+    },
+    "source": "phase_swap/source.py"
+  }
+}

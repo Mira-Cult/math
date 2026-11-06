@@ -1,0 +1,157 @@
+# One shared register selector
+
+## Obligation and scope
+
+This transformation removes the duplicated INC and DECNZ index-countdown chains
+from the inherited physical unary-register runtime. It preserves the source
+program, register numbering, arithmetic grammar, source event order and source
+values. Its equivalence domain is the standard clean grammar configurations,
+plus the separately checked blank bootstrap. It is **not** equivalence from
+arbitrary tape/head/state configurations, and physical event times change.
+
+The complete unchanged Horn source is
+`../../machines/horn-horner/source.py`, SHA-256
+`c4c24a5e70e6981f693b7886e55e0d44ecfdb10318dff07fb8ff82d200600fe6`.
+The inherited proof is [the compiler proof](../../proofs/COMPILER_PROOF.md),
+particularly Sections 9–13. The logical P=NP argument and candidate enumeration
+are unchanged. No new permanent claim IDs are allocated.
+
+## Physical contract
+
+At an ordinary clean primitive occurrence the finite binary control path is
+`p=110s`, the head is at `h=|p|`, and the bank begins at anchor `P`. The bank is
+`10 1^(r0+1)0 ... 1^(r(m-1)+1)0`, with `m >= N`, nonempty unary blocks,
+zero-valued reserve registers after the `N` actual registers, and blank exterior.
+The gap between the path and bank is zero. This variant requires `P >= h+3`.
+The inherited blank bootstrap supplies `P=3824`; the recipe checks every path
+has length below 3822 and `N <= 1909`.
+
+Entry and exit are the same clean grammar occurrence configurations as in the
+inherited runtime. The head, bank anchor, register values and control path after
+one completed operation agree with the inherited primitive semantics. Only
+finite internal trajectories differ. No data is supplied on the blank tape,
+and no fixed integer or register index is left outside the table.
+
+The input guard in `shared_selector.py` validates the rows listed in the pinned
+fixed `framework` string, all register-entry/index-selector rows, the entire
+dispatcher inventory, its depth computed from the actual grammar, bootstrap
+entry and a fresh namespace. It does **not** separately validate the added
+four-row beep adapter or the generated positive-depth break/continue rows.
+The stated precondition that these rows come unchanged from the pinned builder
+is therefore essential. Passing this guard alone does not establish that an
+arbitrarily edited runtime is correct, or that arbitrary source programs
+establish the clean physical invariant.
+
+This is a documentation clarification after local source checkpoint
+`e1ebfe523bad01747d9fa157488efb18452ac149`; it changes no producer or machine
+bytes. The independent review driver
+`../reviews/runtime_dependency_checks.py` directly validates the omitted event
+and control families in the selected 570-state construction. It checks 22 rows
+before and after selector application, confirms the required lexical tails,
+and rejects focused edits to rows outside the existing guard. The corresponding
+review records the frozen source and this later clarification separately.
+
+## Preparation and the mode bit
+
+A clean INC, DECNZ or BEEP first writes the usual prepared-invocation marker at
+`h`. The new preparation skips two zero cells instead of one, then fills the
+gap through the anchor with ones. The prepared representation is therefore:
+
+- the original path remains at positions below `h`;
+- `h` holds one;
+- `h+1` and `h+2` hold zero;
+- every cell from `h+3` through `P` holds one;
+- the bank separator and all register blocks are unchanged.
+
+Preparation redispatches to the same primitive. INC then writes zero at `h`,
+whereas DECNZ leaves one there. That bit records the operation. Both move right
+to the same counted selector for their register index. One extra separator zero
+requires one extra dispatcher countdown state. The generator recomputes the
+original depth and adds exactly that state; the dispatcher still goes left of
+the header before scanning right, so its decoded path is unchanged.
+
+## Selection, recovery of the mode, and restoration
+
+For register index `i`, the shared selector starts in countdown state `i+1` at
+`h+1`. It crosses ones and decrements its finite index at zeros. The first two
+zeros are `h+1,h+2`; the next is the bank separator. Subsequent zeros are register
+separators. State minus one crossing a zero enters the marking state on exactly
+the first one of register `i`. This is independent of all block lengths.
+
+The marking state changes that first one to zero, steps left across the previous
+separator, and scans left. Every earlier bank block is nonempty, and their
+separators are single zeros. The filled gap is one. Consequently the first
+adjacent zero pair encountered in this leftward scan is exactly `h+2,h+1`.
+The head then reaches `h`, where the preserved bit identifies INC or DECNZ.
+These scans terminate on finite represented intervals.
+
+The selected branch erases `h`, crosses `h+1`, changes `h+2` to one, and scans
+right. The gap now has exactly the inherited operation representation: zeros
+at `h,h+1` and ones through `P`. The first adjacent zero pair to the right is
+exactly the previous separator followed by the erased first one of the selected
+register. Earlier registers still have nonempty blocks.
+
+For INC, restore this first one and move right into the inherited increment
+scanner. This is precisely the old increment configuration after it has crossed
+the selected block's first one. For DECNZ, leave the first one erased and move
+right into the inherited decrement check. This is precisely the old decrement
+configuration after its first erase. Thus both branches join unchanged runtime
+states on an exactly matching whole tape/head configuration.
+
+The original increment/decrement proof now applies: exactly the selected value
+changes, other values are preserved, any additional zero reserve is permitted,
+and the ordinary success or zero-test continuation is selected. The original
+cleanup restores the clean gap. The PC and all source-level observations agree.
+
+## BEEP and lexical control
+
+The BEEP adapter's four rows are unchanged. It uses the new preparation, then
+enters B once at the same PC bit. The cleanup scans the finite zeros to the
+filled gap, erases that gap, and restores the bank anchor; starting the filled
+gap one cell later changes no logical output. No new state enters B.
+
+Break and continue rows are unchanged except for the additional dispatcher
+countdown state. They have the same finite decoded continuation. Therefore an
+induction on completed primitives preserves source event order and all source
+register values. Every new internal scan has a finite endpoint specified above.
+The complete never-halting Horn controller and its eventual-silence theorem are
+inherited through this finite simulation, with B-exit rather than transition-
+label events.
+
+## Why the bootstrap adapter is necessary
+
+The inherited five-state startup and `boot2` controller use register zero before
+ordinary source entry. Their temporary layouts do not satisfy the new two-zero
+preparation contract. The first prototype changed their entry implicitly and
+entered the silent sink before any event. Its nominal 696-state table was not
+a correct complete P=NP machine and is not a record.
+
+The repaired construction gives the three bootstrap call sites explicit copies
+of the original register-zero INC/DECNZ entries and original one-zero preparation
+step. Their old index-zero selector tails remain charged. Ordinary source calls
+to register zero use the new shared selector. The adapter, its old selector tails,
+the extra dispatcher state, every missing-row sink and all initialization states
+are included in the complete count.
+
+The blank-bootstrap lemma is checked against the exact new table. Inherited
+bootstrap timings are not reused as evidence. At first source entry, the two
+literal simulators must agree on the complete tape, head, state, no earlier B
+exit, and the expected header/bank. The admitted path/register bounds then give
+the invariant needed for the proof above.
+
+## Reproduction and limits
+
+From the family root, use fresh output paths:
+
+```sh
+python -B compression/compiler/selector_build.py --out /tmp/horn-selector-new
+python -B compression/compiler/test_shared_selector.py
+python -B compression/compiler/verify_selector.py --table /tmp/horn-selector-new/machine.tm --out /tmp/horn-selector-physical-new.json
+```
+
+The occurrence suite checks every unfolded primitive/control occurrence against
+an independently specified tape encoding and register/continuation oracle.
+The full audit additionally compares the complete blank tape in two literal
+simulators, source live-candidate observations, every primitive register, and all
+raw-to-quotient rows. These finite tests support the conventional unbounded proof;
+they are not kernel certification or an arbitrary-input machine-equivalence proof.

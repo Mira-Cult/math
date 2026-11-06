@@ -1,0 +1,121 @@
+{
+  "scope": "Direct external imports of the complete local endpoint closure; transitive package versions are fixed by formalization/lake-manifest.json.",
+  "checked_date": "2026-11-06",
+  "builtin_modules": [
+    "Std"
+  ],
+  "modules": [
+    {
+      "module": "FormalConjecturesForMathlib.Computability.BitstringEncoding",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "5a2fb85045c86e4a184b15ce7531ba199a3c4580",
+      "path": "FormalConjecturesForMathlib/Computability/BitstringEncoding.lean",
+      "git_blob": "f0924f556f7b64d236b33d5ff0564bb4bb812550"
+    },
+    {
+      "module": "FormalConjecturesForMathlib.Computability.Complexity",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "5a2fb85045c86e4a184b15ce7531ba199a3c4580",
+      "path": "FormalConjecturesForMathlib/Computability/Complexity.lean",
+      "git_blob": "9371e7702155d651bbd32ccff3e3bddf4146dcc6"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Normed",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Analysis/SpecificLimits/Normed.lean",
+      "git_blob": "deecc84a1b389905bfddde42a9aa08ebc8ed944a"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Computability/Partrec.lean",
+      "git_blob": "7d6f5466e870aacfac44994e965283ba3c84fb41"
+    },
+    {
+      "module": "Mathlib.Computability.TuringMachine.PostTuringMachine",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Computability/TuringMachine/PostTuringMachine.lean",
+      "git_blob": "5d510545c4cbbae60ff3bb3a6c0fa88df1b8021e"
+    },
+    {
+      "module": "Mathlib.Computability.TuringMachine.Tape",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Computability/TuringMachine/Tape.lean",
+      "git_blob": "6263e04e12114bc9a447d93b58b82c1850179eab"
+    },
+    {
+      "module": "Mathlib.Computability.TuringMachine.ToPartrec",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Computability/TuringMachine/ToPartrec.lean",
+      "git_blob": "b4854519e3bd01c2333a59617e872f757c694172"
+    },
+    {
+      "module": "Mathlib.Data.Int.Basic",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Int/Basic.lean",
+      "git_blob": "894581f3ab530a41fc7c20ddcee80e615724ad94"
+    },
+    {
+      "module": "Mathlib.Data.List.OfFn",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/List/OfFn.lean",
+      "git_blob": "e6c0003d5823216ebf07c2aab9b2a61a4998cde2"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bits",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Nat/Bits.lean",
+      "git_blob": "c86fb351bc5688de960c8c29b3e2da8434f1561b"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Nat/Bitwise.lean",
+      "git_blob": "4e490227eefbb8a7cf34e409fcd881793352feac"
+    },
+    {
+      "module": "Mathlib.Data.Nat.ModEq",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Nat/ModEq.lean",
+      "git_blob": "1ffd68b0527a5bd6d04b77b323b024bc9c0aba83"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Pairing",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Nat/Pairing.lean",
+      "git_blob": "eebe7c9f10f407214f68a67d10a2417581b67060"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Size",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Data/Nat/Size.lean",
+      "git_blob": "799901e248a4699e09db72ae7f4e77589c182a59"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Bool",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Logic/Equiv/Bool.lean",
+      "git_blob": "ed5ce83ab65afb4355c6ac6527e71eece211673a"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "Mathlib/Tactic.lean",
+      "git_blob": "32e81e1659ee120f8e716c0e905e6683656e0a63"
+    }
+  ]
+}

@@ -1,0 +1,2025 @@
+{
+  "adaptations": [
+    "Internal task-path labels replaced with neutral internal-model-reviewer labels; no external human attribution is asserted.",
+    "Reviewer dependency digest constants updated to match attribution-only changes.",
+    "The selected static checker verifies the two predecessor control files by immutable SHA-256 values instead of a Git-history lookup.",
+    "Links to omitted nonselected historical artifacts in proof documents are rendered as explicit historical references. Mathematical arguments are unchanged."
+  ],
+  "canonical_outputs": 54,
+  "files": [
+    {
+      "adapted": true,
+      "bytes": 13754,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "713a2017b9921523562ffaec6f5cb267cd698714",
+      "original_sha256": "30615b52b1c0b8ea4b07b0524ab11e1793d9e652327f82332ebe3646785d51bd",
+      "path": "reproducibility/source/problems/np-conp-formulations/dictionary/optimization/SOURCE_PROOF.md",
+      "sha256": "16b4e7ba9fe1d69814cc6ccbe13b74a162efc0aab81a8dc14df428ae8feb22f1"
+    },
+    {
+      "adapted": true,
+      "bytes": 13844,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "deac85df506bd8f1fb362d9611b9308c788ee62f",
+      "original_sha256": "786eb51c1c9a6805215e9eca7a4bdbfaa00f76b550ff5943f1298921aa9a5024",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/PROOF.md",
+      "sha256": "ed969e9f15ec780e2f9557ffdd5e2d51834a7f8f451695d7a2c54c7853909ce7"
+    },
+    {
+      "adapted": false,
+      "bytes": 4687,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ab16f3bf3629df1e28468f99e60551b76e175888",
+      "original_sha256": "2b9ef4f23e6a61feeb676ad36a47b6043d4a1da4168004ed96ee05fe812c8fb9",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/applicability.py",
+      "sha256": "2b9ef4f23e6a61feeb676ad36a47b6043d4a1da4168004ed96ee05fe812c8fb9"
+    },
+    {
+      "adapted": false,
+      "bytes": 9450,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "95e8742967183ac9a2c9b4ad85057f47724bdd6b",
+      "original_sha256": "d3db3fb4d2ed7ec20665077eeb4dfeb36d8fd2017f4584530e86672967f4d28a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/build.py",
+      "sha256": "d3db3fb4d2ed7ec20665077eeb4dfeb36d8fd2017f4584530e86672967f4d28a"
+    },
+    {
+      "adapted": true,
+      "bytes": 8722,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b51eddefbbcff6a521443c60f10f490da3408468",
+      "original_sha256": "f7e1ac35981651d152d623ff699f32e297cba4fe7682d9046389090a1f56e37f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/COMPOSITION.md",
+      "sha256": "0813c2ae2dfce3c9b75d942c60c27218d80bae51bac6a52bc39fd25050fd5d66"
+    },
+    {
+      "adapted": false,
+      "bytes": 4491,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e921629e020b7b7404c1966b220b6141bb42a6b4",
+      "original_sha256": "a8a1fd7e828e4b15d3bbe57bf70e6ffc7aebce351c33d6074d0cf0638b823761",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/GRAMMAR_PROOF.md",
+      "sha256": "a8a1fd7e828e4b15d3bbe57bf70e6ffc7aebce351c33d6074d0cf0638b823761"
+    },
+    {
+      "adapted": false,
+      "bytes": 5754,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0fd37aa879e30f6177d9611053ca281064f55dfa",
+      "original_sha256": "e2392aecdb01e668d93998eea8cf936de70b3ff7704d13ff408e80af874237ac",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/KERNEL_PROOF.md",
+      "sha256": "e2392aecdb01e668d93998eea8cf936de70b3ff7704d13ff408e80af874237ac"
+    },
+    {
+      "adapted": false,
+      "bytes": 10815,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "63af897c05c26331b33236e64533dc9f5e7dd432",
+      "original_sha256": "2dc549ed5417277666c58ba2154052e0a1e0921fc18909ab63c0b9b20dc111a1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/compiler/PROOF.md",
+      "sha256": "2dc549ed5417277666c58ba2154052e0a1e0921fc18909ab63c0b9b20dc111a1"
+    },
+    {
+      "adapted": false,
+      "bytes": 10560,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e8897e274ed712a3fe0e1c85091ad45bdfdfc9e5",
+      "original_sha256": "5cde1800459c879d77e85f3eb99f2471a213e13d4103dfa7c37518a26090513f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/compiler/lowerings.py",
+      "sha256": "5cde1800459c879d77e85f3eb99f2471a213e13d4103dfa7c37518a26090513f"
+    },
+    {
+      "adapted": false,
+      "bytes": 3193,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e8cc124a14ab1e28266b981f80d13f0a2233cea8",
+      "original_sha256": "1728c3c928a37d5567d55ad110c91053932ca9fb2847d51e098e9f387c6a72ff",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/compiler/mixed_tuples.py",
+      "sha256": "1728c3c928a37d5567d55ad110c91053932ca9fb2847d51e098e9f387c6a72ff"
+    },
+    {
+      "adapted": false,
+      "bytes": 7958,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "6b2af0912c10d3835e564d41776a1c117876a5c0",
+      "original_sha256": "64ebe30e04b399db1e9ef3e0746f3823dc0d5cec786d5e49deae91dff7638ec8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/grammar_rotations.py",
+      "sha256": "64ebe30e04b399db1e9ef3e0746f3823dc0d5cec786d5e49deae91dff7638ec8"
+    },
+    {
+      "adapted": false,
+      "bytes": 328,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "569fac3fdd4ebd19cf6b68d85d06874c67a1dad8",
+      "original_sha256": "49138ea083a4246c4fcaa0308d662a7459a061f1aacc389c6b562b633942378a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/half_kernel.py",
+      "sha256": "49138ea083a4246c4fcaa0308d662a7459a061f1aacc389c6b562b633942378a"
+    },
+    {
+      "adapted": false,
+      "bytes": 2997,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "eb41186bbcfdccf9e5798962c136905df80078a7",
+      "original_sha256": "68bb82a6dd21ac52a06eb3bb64c4e780fa657c9c4c14a0070a97d827d8355bfd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/integrated.py",
+      "sha256": "68bb82a6dd21ac52a06eb3bb64c4e780fa657c9c4c14a0070a97d827d8355bfd"
+    },
+    {
+      "adapted": false,
+      "bytes": 5177,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "2b47197adde84cebd3db22735d92789153286718",
+      "original_sha256": "c452a81bcd662aa0911a3a61d5dbca9042f2f99465a8f71f75d8585520a72529",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/lookup.py",
+      "sha256": "c452a81bcd662aa0911a3a61d5dbca9042f2f99465a8f71f75d8585520a72529"
+    },
+    {
+      "adapted": false,
+      "bytes": 4758,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9b20e6fc86ea36c2441dcab2507b5f776111d8d4",
+      "original_sha256": "f49895103a62d3f6bc6455a7e967541604eff46f751b2c78601d8af3e995c7cc",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/record_pop.py",
+      "sha256": "f49895103a62d3f6bc6455a7e967541604eff46f751b2c78601d8af3e995c7cc"
+    },
+    {
+      "adapted": true,
+      "bytes": 18336,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a3a6001b29eb3540005f79109623de4bbf4543e7",
+      "original_sha256": "5d6a0158d436fd6767c46b836ebc65399c27a39771bdde30c39cc7b6e0c128cb",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/arithmetic/source/PROOF.md",
+      "sha256": "02219775c356cb57c7b2f07bf76e1b23c98ad46eeba3a0e07c262506c06b52ff"
+    },
+    {
+      "adapted": false,
+      "bytes": 7820,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ff47ad3ef4797f0a22ca0dbbc58f5e25b6b1947d",
+      "original_sha256": "94201a48247b2890fc6e66fb04226edc65195cb59882da0007a5ca3e560c4d2b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/COMPOSITION.md",
+      "sha256": "94201a48247b2890fc6e66fb04226edc65195cb59882da0007a5ca3e560c4d2b"
+    },
+    {
+      "adapted": false,
+      "bytes": 5954,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7cb812902436c497af275302b04e0aea7051cfd6",
+      "original_sha256": "ea6e66fce94a997d3f84764c1d1868e1c2992fd07b0b738818e0344584af5808",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/GRAMMAR_PROOF.md",
+      "sha256": "ea6e66fce94a997d3f84764c1d1868e1c2992fd07b0b738818e0344584af5808"
+    },
+    {
+      "adapted": true,
+      "bytes": 9477,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a95d282bb301939220d406629b0acd4d7467955d",
+      "original_sha256": "010485be42fa1217a3a4f79381470271cbea9c7380f5b2100aa0809cd6ccf2c6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/PROOF.md",
+      "sha256": "b04ba8d482566ef965f923bdd9881a19e4a0b04971e3cd7d7c8ee9e3f71673f9"
+    },
+    {
+      "adapted": false,
+      "bytes": 13309,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c3480440a778a3b7f5bc662f1d7be296cf1f026d",
+      "original_sha256": "590884bf67996fcbcbb820dae508e55aea31ca7417779ae7390722988bedefe8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/control/PROOF.md",
+      "sha256": "590884bf67996fcbcbb820dae508e55aea31ca7417779ae7390722988bedefe8"
+    },
+    {
+      "adapted": false,
+      "bytes": 11750,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9760a2b2061501aca88e429d0a81b794e6250b9c",
+      "original_sha256": "f158b204dafbce0334b6429076ffb70a66b6e7dfc50d3220e1cc08da5b31bba6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/control/build_skip.py",
+      "sha256": "f158b204dafbce0334b6429076ffb70a66b6e7dfc50d3220e1cc08da5b31bba6"
+    },
+    {
+      "adapted": false,
+      "bytes": 6298,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9d4cb4e97ee2512b37d7c17f670af8a8c3049342",
+      "original_sha256": "a7353acc454b309a325795673211951ddb4040c71b3c7290ac9d17db86df99ae",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/control/parser/PROOF.md",
+      "sha256": "a7353acc454b309a325795673211951ddb4040c71b3c7290ac9d17db86df99ae"
+    },
+    {
+      "adapted": false,
+      "bytes": 3453,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a499d12b95ca21d6a6b38c457da39c231464c473",
+      "original_sha256": "cf08a6cde59ffe0f7ac62abe767214eb9e8cd7c5c07456ded935ee620ab9463f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/control/parser/build_parser.py",
+      "sha256": "cf08a6cde59ffe0f7ac62abe767214eb9e8cd7c5c07456ded935ee620ab9463f"
+    },
+    {
+      "adapted": false,
+      "bytes": 10754,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c23b3273c439bf5235ccaf62e3dc3a9ab29ed609",
+      "original_sha256": "710e1dc7f36b9d75047482f73bf3121ab2d2b406dc8470f0585b1e2e1cd87726",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/coordinator/select.py",
+      "sha256": "710e1dc7f36b9d75047482f73bf3121ab2d2b406dc8470f0585b1e2e1cd87726"
+    },
+    {
+      "adapted": false,
+      "bytes": 17482,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "39f16f9e19550b8701387611dd1b9111c33f9632",
+      "original_sha256": "8e465822aeea83486e9578564972685edb9d0afe4593ff8f00b672d259d7b625",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/review/binary/check_static_parser.py",
+      "sha256": "8e465822aeea83486e9578564972685edb9d0afe4593ff8f00b672d259d7b625"
+    },
+    {
+      "adapted": true,
+      "bytes": 13780,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e52a82d075979d23ea39f63ed88d86d9bcfdbb9a",
+      "original_sha256": "0602b4278180b8f3c99efc9a5f4e746222af57f07b7269278c25275354e4b9b3",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/binary_phase/review/phase_completion/check_completion.py",
+      "sha256": "7929ed3fc62ff2fff853b619474e69fb477b6800f0b3d3a5238cc096470a165e"
+    },
+    {
+      "adapted": false,
+      "bytes": 8718,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a42e23aba7318fb84bf29bd8ab6b7e769db63d43",
+      "original_sha256": "39264f723e68e8065b2db86a9ecb7dcf95d1ca3ec75eecad15d045e7d1d7547c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/PROOF.md",
+      "sha256": "39264f723e68e8065b2db86a9ecb7dcf95d1ca3ec75eecad15d045e7d1d7547c"
+    },
+    {
+      "adapted": false,
+      "bytes": 3549,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9074c3a6c591826765d8a6b4023dfe85771f56b9",
+      "original_sha256": "50f96ad581a643662d8a084ff0a98441dc028b79018a6f35ee4579834e71d2ea",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/build_compact.py",
+      "sha256": "50f96ad581a643662d8a084ff0a98441dc028b79018a6f35ee4579834e71d2ea"
+    },
+    {
+      "adapted": false,
+      "bytes": 5275,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b00a1f6ca1e85f313154a3a4ed940945fe480b0a",
+      "original_sha256": "e853cf24d8a549f34ca699061927a91e1d143b0ea61d5286c2eadfca489bdadd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/direct_calls.py",
+      "sha256": "e853cf24d8a549f34ca699061927a91e1d143b0ea61d5286c2eadfca489bdadd"
+    },
+    {
+      "adapted": false,
+      "bytes": 2340,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7904b11ad1886da00797df856bbe76a7d1c42b4e",
+      "original_sha256": "a4e2c34cf0127cfd3feaacd10dc25b238bf229fe29c31eaf32ef29f96c7df3e2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/direct_half.py",
+      "sha256": "a4e2c34cf0127cfd3feaacd10dc25b238bf229fe29c31eaf32ef29f96c7df3e2"
+    },
+    {
+      "adapted": false,
+      "bytes": 4056,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "6ae2bd3d29a6a4599e6a79006ef9f2373cf6f207",
+      "original_sha256": "8fad68ca3a2acd8a8f423e34aae8b9182ee060977a9e4b3d02591d0b04ae78b0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/BANK_PROOF.md",
+      "sha256": "8fad68ca3a2acd8a8f423e34aae8b9182ee060977a9e4b3d02591d0b04ae78b0"
+    },
+    {
+      "adapted": false,
+      "bytes": 7879,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "59a9e5504eafb43c482e5ae4ac1a20f698c151b4",
+      "original_sha256": "30906f53b39dada9c4402652b6954603291fc88e3b65b456e2c8f710408bfd5d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/COALESCENCE_PROOF.md",
+      "sha256": "30906f53b39dada9c4402652b6954603291fc88e3b65b456e2c8f710408bfd5d"
+    },
+    {
+      "adapted": false,
+      "bytes": 11743,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "75a7af577d2829f103d0e3a30e81e6685721526b",
+      "original_sha256": "89cb335e23f4d410989c7919c8999dcba8379ea1d8eef1b1799e6be1603f9751",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/PROOF.md",
+      "sha256": "89cb335e23f4d410989c7919c8999dcba8379ea1d8eef1b1799e6be1603f9751"
+    },
+    {
+      "adapted": false,
+      "bytes": 2420,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "1cd49592d5b3a1cad6089f1a115cb4d0f9a60cd6",
+      "original_sha256": "c9c5de805be2ea6b4e02b57329576258092cca44318b283715969502cc365de1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/SCALAR_PROOF.md",
+      "sha256": "c9c5de805be2ea6b4e02b57329576258092cca44318b283715969502cc365de1"
+    },
+    {
+      "adapted": false,
+      "bytes": 4963,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "429a19354f7809c8cfef24d21be4d8d9831ccc17",
+      "original_sha256": "e146700cc766168c9ae0435b095a76d1ee9fd548fdb6b0a99230680ee0dd304e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/abstract_half.py",
+      "sha256": "e146700cc766168c9ae0435b095a76d1ee9fd548fdb6b0a99230680ee0dd304e"
+    },
+    {
+      "adapted": false,
+      "bytes": 4501,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4eb638a16ff3263fb4bf66b8aed11823d448f758",
+      "original_sha256": "dfc390ae77d3316a5c783f933bd37bc8876d5d3fd04589b5778ad8bbf8158da9",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/bank_projection.py",
+      "sha256": "dfc390ae77d3316a5c783f933bd37bc8876d5d3fd04589b5778ad8bbf8158da9"
+    },
+    {
+      "adapted": false,
+      "bytes": 4244,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "913cab7149f584fe1455384fa09c356f79634f17",
+      "original_sha256": "bb127bbb680bcfe50cd092c03e2bd5afcf012c5bcc17f0eabd5e7163d938746c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/build_coalesced.py",
+      "sha256": "bb127bbb680bcfe50cd092c03e2bd5afcf012c5bcc17f0eabd5e7163d938746c"
+    },
+    {
+      "adapted": false,
+      "bytes": 6185,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "96447414db7b7e00353261d5da866f75257b73ab",
+      "original_sha256": "a8ca9ca77af3aedf7f3f965b7f15bfd311be7fbebef6f69315665c194eee800b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/build_native.py",
+      "sha256": "a8ca9ca77af3aedf7f3f965b7f15bfd311be7fbebef6f69315665c194eee800b"
+    },
+    {
+      "adapted": false,
+      "bytes": 9586,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "3ce6579c8f7b5f18ccfe6fd4a3cb443de13973ec",
+      "original_sha256": "6636eb3c1909275a47a9f73727acb5a5d04f69839e23993a48b858a53a42f779",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/check_contextual.py",
+      "sha256": "6636eb3c1909275a47a9f73727acb5a5d04f69839e23993a48b858a53a42f779"
+    },
+    {
+      "adapted": false,
+      "bytes": 5132,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4db6d7a96d2eb91965fc1cb8d823d9c356382fa4",
+      "original_sha256": "70c4d15c3dcf93a81ab8227fd119018a10f24af749f5a3c22b904bbeab0c9fd2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/half_engine.py",
+      "sha256": "70c4d15c3dcf93a81ab8227fd119018a10f24af749f5a3c22b904bbeab0c9fd2"
+    },
+    {
+      "adapted": false,
+      "bytes": 2733,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f684bdf7dc509e27e74272dad598bc7e808315a8",
+      "original_sha256": "f091f3897d8a9cbea8071fb04927a65d7997acfbb964d18bec5d694b22ef2a79",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/lower_half.py",
+      "sha256": "f091f3897d8a9cbea8071fb04927a65d7997acfbb964d18bec5d694b22ef2a79"
+    },
+    {
+      "adapted": false,
+      "bytes": 6706,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "caa13b532d34280514e59b1cdcec6e3857765043",
+      "original_sha256": "548612225f33f5dc558dc4ec7175a1ffe4e1ecdc93f96f60dfd35f135c6a6b80",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/native/zero_coalescence.py",
+      "sha256": "548612225f33f5dc558dc4ec7175a1ffe4e1ecdc93f96f60dfd35f135c6a6b80"
+    },
+    {
+      "adapted": false,
+      "bytes": 2699,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8ae397a95723846436adbe2ebc1d65cdefc2bc1a",
+      "original_sha256": "bf50b26a6910d7b70f96ab3fc2056cdf731c2ae3b23a28711c97659cd4ef9478",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/compiler/return_forward.py",
+      "sha256": "bf50b26a6910d7b70f96ab3fc2056cdf731c2ae3b23a28711c97659cd4ef9478"
+    },
+    {
+      "adapted": true,
+      "bytes": 30226,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "64718d30232c7448b0e58435216f1c6ec747a387",
+      "original_sha256": "b631e293cd90fb835461d14ffff8c5a4dd3b9344d439b1df771b8183df7bf6c5",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/PROOF.md",
+      "sha256": "1fd31424f05e12bf12011a7ec1de84aa176af3b67500fdd5937a650a5d5021ae"
+    },
+    {
+      "adapted": false,
+      "bytes": 3225,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "81386883c323d19bdce06e51eb8465093e28e7be",
+      "original_sha256": "967e7c6b2afc4595e563cbf7de509f58f80de8cef20d92859dba634b48198851",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/fixed.py",
+      "sha256": "967e7c6b2afc4595e563cbf7de509f58f80de8cef20d92859dba634b48198851"
+    },
+    {
+      "adapted": false,
+      "bytes": 2429,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0f36dc22d01477ce98f72ceda76efa2f8bd651b1",
+      "original_sha256": "a8aba89973d86b6ff7b856b15e30062ce0abe064f4fdc12df64734e4bc141a29",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/frontier-limits.json",
+      "sha256": "a8aba89973d86b6ff7b856b15e30062ce0abe064f4fdc12df64734e4bc141a29"
+    },
+    {
+      "adapted": false,
+      "bytes": 66573,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ac91f4309e5c315385da63ab9c3f7b0f9edecea5",
+      "original_sha256": "a706ec0ca55b98844e0629a7eee520f25133d6d672f17b3b96afc90b4698c0b0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/allocation.json",
+      "sha256": "a706ec0ca55b98844e0629a7eee520f25133d6d672f17b3b96afc90b4698c0b0"
+    },
+    {
+      "adapted": false,
+      "bytes": 19700,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5662a4ea2b6d9ddbd519fb3095a00a6aac295661",
+      "original_sha256": "91c0f66fd5cd751a624a013df93f2788a4b2cab971111d4881f4a483f635c6b3",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/bank-coalescence.json",
+      "sha256": "91c0f66fd5cd751a624a013df93f2788a4b2cab971111d4881f4a483f635c6b3"
+    },
+    {
+      "adapted": false,
+      "bytes": 16081,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7b4e530de76761b73b7ebe4da189ef3cde36063e",
+      "original_sha256": "b1713d10f55a5c0fb8430f948844c63ad1f250cdb8bfab7724a6f709f71b039a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/bank-projection.json",
+      "sha256": "b1713d10f55a5c0fb8430f948844c63ad1f250cdb8bfab7724a6f709f71b039a"
+    },
+    {
+      "adapted": false,
+      "bytes": 1153,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "cf78aa23511713e60f0d4b81360679e5b938738d",
+      "original_sha256": "ff8a4884269e86bc0b7c114e57bbeacee0135c9ebacf6a799e6da8cf94e38360",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/certificate-seed.json",
+      "sha256": "ff8a4884269e86bc0b7c114e57bbeacee0135c9ebacf6a799e6da8cf94e38360"
+    },
+    {
+      "adapted": false,
+      "bytes": 48844,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4112861fe71d8008fa615d2384602c03c18d8cb1",
+      "original_sha256": "77100803e4d6e1458b77ca06ccb21754f47732004d460f2dcfbac9a331430fbe",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/coalescence-invariant.json",
+      "sha256": "77100803e4d6e1458b77ca06ccb21754f47732004d460f2dcfbac9a331430fbe"
+    },
+    {
+      "adapted": false,
+      "bytes": 6098,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "bae6847e673278d2b26678f390604d2afcc3a399",
+      "original_sha256": "65927271d210c6636dadcb532a30d39bacd301b7bd2ebb5a7308ec6237de1030",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/consume-guard.json",
+      "sha256": "65927271d210c6636dadcb532a30d39bacd301b7bd2ebb5a7308ec6237de1030"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/consumed-seed.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 55908,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "3d87eb3415208908f4d887f90ffe16f2c3bf53b2",
+      "original_sha256": "5562fa7ee76a03b7dd2b543587cd8bdae65b667496eb629e469386de10f9b32c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/contextual-tree-certificate.json",
+      "sha256": "5562fa7ee76a03b7dd2b543587cd8bdae65b667496eb629e469386de10f9b32c"
+    },
+    {
+      "adapted": false,
+      "bytes": 3292,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fc4f4f43732082035a073b7b56503b23ed7e3c5f",
+      "original_sha256": "05fd1304c5f322dad0bed21779bfc7075ebc575e08e0c16e4d21e31d34df1708",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/control-certificate.json",
+      "sha256": "05fd1304c5f322dad0bed21779bfc7075ebc575e08e0c16e4d21e31d34df1708"
+    },
+    {
+      "adapted": false,
+      "bytes": 1187,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f0af3112ea97773b0d27f299116aa340b44100aa",
+      "original_sha256": "b7ad6fbf86df35acfb0f0c04377cb5b2634dd28e3da608d3a4b814fb14a6705d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/countdown.json",
+      "sha256": "b7ad6fbf86df35acfb0f0c04377cb5b2634dd28e3da608d3a4b814fb14a6705d"
+    },
+    {
+      "adapted": false,
+      "bytes": 717,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "097b6cfbe4f02eeac66cbec5ac5d70a4ab371871",
+      "original_sha256": "d29aa9179419828a6cd40a3791883715faa81eba2785be4fc711755d144bbc72",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/dead-entry-extension.json",
+      "sha256": "d29aa9179419828a6cd40a3791883715faa81eba2785be4fc711755d144bbc72"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/direct-calls.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 1030,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "aecbb2bba59140ae1cd7c373c0f4c9cf72374927",
+      "original_sha256": "82a2e5001adaad0ac4f8993203bf27a6eb6bade3891c8a61190eb34b1c45791a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/direct-clock.json",
+      "sha256": "82a2e5001adaad0ac4f8993203bf27a6eb6bade3891c8a61190eb34b1c45791a"
+    },
+    {
+      "adapted": false,
+      "bytes": 24425,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "127b1d49ef7b5d1bf22470150b05fb3531fa30a0",
+      "original_sha256": "399ef9367947ad2f54e3f5ad5dbd613e67908d5f98fd29e66082f68993ad7d0c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/dispatcher.json",
+      "sha256": "399ef9367947ad2f54e3f5ad5dbd613e67908d5f98fd29e66082f68993ad7d0c"
+    },
+    {
+      "adapted": false,
+      "bytes": 494,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4ce764b534405ef51847cf2e64303a9db61fe8e1",
+      "original_sha256": "a7a7557fb895cdf92295f116b0cbf95dc9caa3de1e8ff4226b7586eeeea38538",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/event-metadata.json",
+      "sha256": "a7a7557fb895cdf92295f116b0cbf95dc9caa3de1e8ff4226b7586eeeea38538"
+    },
+    {
+      "adapted": false,
+      "bytes": 2698,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e228e7aed807953a8a3ae5dce80af874d4c98f1c",
+      "original_sha256": "65aa002d28e12e165c58f1cf5307961a3429a0e30c8ec0dc834d6956bf14144d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/event-quotient.json",
+      "sha256": "65aa002d28e12e165c58f1cf5307961a3429a0e30c8ec0dc834d6956bf14144d"
+    },
+    {
+      "adapted": false,
+      "bytes": 8131,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a00bc68f8a5247ab83a7fd0124ee611ad5d2de5e",
+      "original_sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/events.tm",
+      "sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844"
+    },
+    {
+      "adapted": false,
+      "bytes": 888,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9e7e338f5696d1e0d050758adc1f5732e4d5514e",
+      "original_sha256": "735d323b306025def34454fbaea4f5f29050f67b5923ddfcff1c962daca9fa90",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/fixed-recipe.json",
+      "sha256": "735d323b306025def34454fbaea4f5f29050f67b5923ddfcff1c962daca9fa90"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/fusion.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 15196,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "578ba42ba62c3926d2fec2f0dab5cb5c3e8094bf",
+      "original_sha256": "b7a853524b72940c44e6b3215e54c8e9dcc77614243595d3e67cb7b1e0ed587a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/grammar.json",
+      "sha256": "b7a853524b72940c44e6b3215e54c8e9dcc77614243595d3e67cb7b1e0ed587a"
+    },
+    {
+      "adapted": false,
+      "bytes": 414,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5d313238f45ac845b3bb0007cd8b84fe328e96f7",
+      "original_sha256": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/groups.json",
+      "sha256": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/half-pairs.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/horner.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 8168,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4235b7b6a05613990b414eab0dcbc08f5ec9f6c4",
+      "original_sha256": "4f974575968477d311b0d5c0e3e45d13226afba6c03ab573cf35ff5f6b7948e5",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/ingress-prequotient.tm",
+      "sha256": "4f974575968477d311b0d5c0e3e45d13226afba6c03ab573cf35ff5f6b7948e5"
+    },
+    {
+      "adapted": false,
+      "bytes": 7091,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fa48fa054b2d272a923b61fdf42d2c007655100c",
+      "original_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/machine.tm",
+      "sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e"
+    },
+    {
+      "adapted": false,
+      "bytes": 7727,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "dc22f38c9177e7347a0ef7d9c11e5dc3e1f56e37",
+      "original_sha256": "539ea3a1f86d2da6056036e2bc1751807f75b2aa618644dd88d9d51bbfb23bca",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/metadata.json",
+      "sha256": "539ea3a1f86d2da6056036e2bc1751807f75b2aa618644dd88d9d51bbfb23bca"
+    },
+    {
+      "adapted": false,
+      "bytes": 321,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "bea9cca8fc33b41418d64ed431dc8a03378c3615",
+      "original_sha256": "a36edfa8bbfa1afb0a43e2b59e017b48c7c38ae6a7cd4836c6c086e67cdb7853",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/mixed-tuples.json",
+      "sha256": "a36edfa8bbfa1afb0a43e2b59e017b48c7c38ae6a7cd4836c6c086e67cdb7853"
+    },
+    {
+      "adapted": false,
+      "bytes": 7980,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f30ee6fce030bc76a0953e1ad316a7bfac4c7723",
+      "original_sha256": "96ec6f113402462717dcf095ddac9c618449e39ba6ac953bc77a1a9986adc384",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/names.json",
+      "sha256": "96ec6f113402462717dcf095ddac9c618449e39ba6ac953bc77a1a9986adc384"
+    },
+    {
+      "adapted": false,
+      "bytes": 1071,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f3272983bec472dc7da826534f33f6b29afa2cc9",
+      "original_sha256": "7593315f1d59340e623d51aec103f95175ef04a883184405bba7ad0a108c5d9c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/native-bank-permutation.json",
+      "sha256": "7593315f1d59340e623d51aec103f95175ef04a883184405bba7ad0a108c5d9c"
+    },
+    {
+      "adapted": false,
+      "bytes": 1713,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f8059cb08a1e8bf44b0ab5efe7859d0cd05a4f65",
+      "original_sha256": "8f859f67156b9ca7f9ebedf9a112ee852cce27ee3b01d8f00d87a4b892519538",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/native-half.json",
+      "sha256": "8f859f67156b9ca7f9ebedf9a112ee852cce27ee3b01d8f00d87a4b892519538"
+    },
+    {
+      "adapted": false,
+      "bytes": 760,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e940aef630824756f3a174b1e029aba7220f2a7f",
+      "original_sha256": "9171417c32300d8664930785d4a0cc31af6f3a54708c169ff8f910db94229aca",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/native-runtime.json",
+      "sha256": "9171417c32300d8664930785d4a0cc31af6f3a54708c169ff8f910db94229aca"
+    },
+    {
+      "adapted": false,
+      "bytes": 333,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "80d7f84f03c3f8a2310ce8f4beb6135abeb2d2b4",
+      "original_sha256": "0b7493aa2df65ae5eb26659ba9d46c3d660404f7424110b87b699bd3a3497dc8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/new-arithmetic.json",
+      "sha256": "0b7493aa2df65ae5eb26659ba9d46c3d660404f7424110b87b699bd3a3497dc8"
+    },
+    {
+      "adapted": false,
+      "bytes": 16185,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "791e2807f341c3bc3350d4ba1a9b9e57007ff3db",
+      "original_sha256": "430a6e9e3ab56ce086ac815252ee3780449b09c1e6cb70413b193de0f3e8902a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/pre-coalescence-grammar.json",
+      "sha256": "430a6e9e3ab56ce086ac815252ee3780449b09c1e6cb70413b193de0f3e8902a"
+    },
+    {
+      "adapted": false,
+      "bytes": 17499,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ed9166097093f1059038f81edd6e1960debed440",
+      "original_sha256": "4bb38c2eba624b31925bf1904553e3a53ad7a651511d8ecafecdddcaee832456",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/pre-control-grammar.json",
+      "sha256": "4bb38c2eba624b31925bf1904553e3a53ad7a651511d8ecafecdddcaee832456"
+    },
+    {
+      "adapted": false,
+      "bytes": 16253,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "472f9ebc444f54634792a2a2963bb2b92d111e90",
+      "original_sha256": "84993c15a211f13dce91290dccc7d3ef078aa0c482e16bd9ae58242dee0aad31",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/pre-projection-grammar.json",
+      "sha256": "84993c15a211f13dce91290dccc7d3ef078aa0c482e16bd9ae58242dee0aad31"
+    },
+    {
+      "adapted": false,
+      "bytes": 3588,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "60e5eabb9e835540e74fbfc52b8fbaa39095c329",
+      "original_sha256": "c107d1fc59b6c96e15c8b378af85b7c2bbcd621d352dd71dd7e02bf411214070",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/quotient.json",
+      "sha256": "c107d1fc59b6c96e15c8b378af85b7c2bbcd621d352dd71dd7e02bf411214070"
+    },
+    {
+      "adapted": false,
+      "bytes": 7152,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f4cf3a6e603860298e09bc76cd6813c5286207e1",
+      "original_sha256": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/raw.tm",
+      "sha256": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d"
+    },
+    {
+      "adapted": false,
+      "bytes": 321,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0c4b2746e28f78ec52819f3dce5d9646f5fb6f14",
+      "original_sha256": "926505d9726dd3a15e733cf2bce56b48005369f0531969abe0477aa4e9ef5551",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/refactoring.json",
+      "sha256": "926505d9726dd3a15e733cf2bce56b48005369f0531969abe0477aa4e9ef5551"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/return-forward.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 4438,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f211c2ca476e724ecd9689274d66e7d85e6a087f",
+      "original_sha256": "02b248b3232f33925be2284d779ded2a0fae3db425e320a80627abd8eed4195c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/selector.json",
+      "sha256": "02b248b3232f33925be2284d779ded2a0fae3db425e320a80627abd8eed4195c"
+    },
+    {
+      "adapted": false,
+      "bytes": 1843,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "81d1c75f3652a26eeaa985ce1dce536e6269e175",
+      "original_sha256": "c52019efc7f41cfeef3a1cd7686cb3e0e9c147fcc808a712f1ddc44e23571ca7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/three-move-swap.json",
+      "sha256": "c52019efc7f41cfeef3a1cd7686cb3e0e9c147fcc808a712f1ddc44e23571ca7"
+    },
+    {
+      "adapted": false,
+      "bytes": 9263,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9d6dbc6f3c87502fd65c8ec8e2de90d04939406f",
+      "original_sha256": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/weak-grammar-plan.json",
+      "sha256": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23"
+    },
+    {
+      "adapted": false,
+      "bytes": 3,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/whole-action.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "adapted": false,
+      "bytes": 115162,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e126fc13b882f1768cee7e87fa9583c8803b2ccf",
+      "original_sha256": "96e3c8afa3467eb30b356853acdf5710f0f1124d2318f7389f2d076a5afb13b7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry/zero-context.json",
+      "sha256": "96e3c8afa3467eb30b356853acdf5710f0f1124d2318f7389f2d076a5afb13b7"
+    },
+    {
+      "adapted": false,
+      "bytes": 1436,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0618813bb5a3e512c01936024aa14a2bb66969e9",
+      "original_sha256": "e93fd87e61c05eaeb0a4e4478af715e634e63d5698fb4dbb091f70c15b7eed24",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/completion.json",
+      "sha256": "e93fd87e61c05eaeb0a4e4478af715e634e63d5698fb4dbb091f70c15b7eed24"
+    },
+    {
+      "adapted": false,
+      "bytes": 1532,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b3ea8e24338446a01b49afa5da7d7c79d5958ccf",
+      "original_sha256": "0c680aedea3ac17584919c9623a7b5611e38009ad29cf25b2173ad84f7dd36e3",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/domain.json",
+      "sha256": "0c680aedea3ac17584919c9623a7b5611e38009ad29cf25b2173ad84f7dd36e3"
+    },
+    {
+      "adapted": false,
+      "bytes": 2671,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "bc852fbce5af3a94e0d1059c928121d35e5c2c87",
+      "original_sha256": "5ac2bd66291df669620ab3c2bb75bde2546600fa7e843a8c841845cb79ccce31",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/event-quotient.json",
+      "sha256": "5ac2bd66291df669620ab3c2bb75bde2546600fa7e843a8c841845cb79ccce31"
+    },
+    {
+      "adapted": false,
+      "bytes": 8032,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "150aabaa5f11e34bc2f3278370bd6d60f68a4cd9",
+      "original_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/events.tm",
+      "sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c"
+    },
+    {
+      "adapted": false,
+      "bytes": 8069,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "00c05d432a5f84242176f4bec707e7212a3dee8b",
+      "original_sha256": "a5f5d947e3d0474e7c2cfbdd0841b512d934fbbe9a9451a6d0bcff243153cef6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/ingress-prequotient.tm",
+      "sha256": "a5f5d947e3d0474e7c2cfbdd0841b512d934fbbe9a9451a6d0bcff243153cef6"
+    },
+    {
+      "adapted": false,
+      "bytes": 7004,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "fe4fb445384e4665a8f6ba41395f714dc3da1f2c",
+      "original_sha256": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/machine.tm",
+      "sha256": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712"
+    },
+    {
+      "adapted": false,
+      "bytes": 2063,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8369dd15a326163f45a9930827d04440ac72d26d",
+      "original_sha256": "737b3ff081b89e8e09b5772f5ab32628a4b3f4e4c87b4125af30a39a0d9dc3c4",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/metadata.json",
+      "sha256": "737b3ff081b89e8e09b5772f5ab32628a4b3f4e4c87b4125af30a39a0d9dc3c4"
+    },
+    {
+      "adapted": false,
+      "bytes": 16601,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8b98ff9630fd38045e0bafebe11f6d3a3ec8c55e",
+      "original_sha256": "9411374e4ffb5a6b71261a145a12d6dcb63dea3b2041e42c94fde9e401b22f24",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/physical-ledger.json",
+      "sha256": "9411374e4ffb5a6b71261a145a12d6dcb63dea3b2041e42c94fde9e401b22f24"
+    },
+    {
+      "adapted": false,
+      "bytes": 3558,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "89ec10a35a5a5e7bddb40fd2adfe54b7268652f2",
+      "original_sha256": "756fa24ad34140dcb1783d91430187c6a3c2ed25a2c18431a89c67efeb8c5c7f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/quotient.json",
+      "sha256": "756fa24ad34140dcb1783d91430187c6a3c2ed25a2c18431a89c67efeb8c5c7f"
+    },
+    {
+      "adapted": false,
+      "bytes": 7083,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "73e21497a141bf88f2ebcab7c7ef69a6a01f8fb6",
+      "original_sha256": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/machines/reuse_clock_roles_zero_geometry_selected/raw.tm",
+      "sha256": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d"
+    },
+    {
+      "adapted": false,
+      "bytes": 3371,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a58e6c7802fc3d9354b0b15829507e193d9c0c75",
+      "original_sha256": "60a602bb9946ed5f270bba41ceeaf68b0d36d73123deeac0d40488c7648d35ec",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/measure.py",
+      "sha256": "60a602bb9946ed5f270bba41ceeaf68b0d36d73123deeac0d40488c7648d35ec"
+    },
+    {
+      "adapted": false,
+      "bytes": 2306,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0e3cbb9626ed30af73af8a8ccb60d87bf40e8356",
+      "original_sha256": "326af9fe5191a7b6e56d74cafeca110ea269566207170d678a791b852faa0e5e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/measure_neutral.py",
+      "sha256": "326af9fe5191a7b6e56d74cafeca110ea269566207170d678a791b852faa0e5e"
+    },
+    {
+      "adapted": false,
+      "bytes": 4366,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "3ebb4ba62b7026274b82d13532da3f1b1668b359",
+      "original_sha256": "aefd8f5ff82a59a502108f52d93b6c38e95b6733aa863e474e6b325d0da6c128",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/neutral_context.py",
+      "sha256": "aefd8f5ff82a59a502108f52d93b6c38e95b6733aa863e474e6b325d0da6c128"
+    },
+    {
+      "adapted": false,
+      "bytes": 3962,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "08cc518c9529aa9abe962822a6430f9ed57d5ecc",
+      "original_sha256": "64ecbb839d878b6f99eedea26a01fd58cd5546c6f3df35f98219d5e653446516",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/overflow_region.py",
+      "sha256": "64ecbb839d878b6f99eedea26a01fd58cd5546c6f3df35f98219d5e653446516"
+    },
+    {
+      "adapted": false,
+      "bytes": 9522,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d7c00d5ed8a72181d02e4feab4885d0b6b558653",
+      "original_sha256": "d655fe8442b046b6f7ef1f8003e7152ed1729fdfcc47ecdda3144e2296be00a4",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/plans/reuse_clock_roles_zero_geometry/completion.json",
+      "sha256": "d655fe8442b046b6f7ef1f8003e7152ed1729fdfcc47ecdda3144e2296be00a4"
+    },
+    {
+      "adapted": false,
+      "bytes": 9263,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9d6dbc6f3c87502fd65c8ec8e2de90d04939406f",
+      "original_sha256": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/plans/reuse_clock_roles_zero_geometry/grammar.json",
+      "sha256": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23"
+    },
+    {
+      "adapted": false,
+      "bytes": 414,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5d313238f45ac845b3bb0007cd8b84fe328e96f7",
+      "original_sha256": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/plans/reuse_clock_roles_zero_geometry/groups.json",
+      "sha256": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78"
+    },
+    {
+      "adapted": false,
+      "bytes": 10274,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "19f43260703e70f31a3383d866b16f260add0654",
+      "original_sha256": "8abc16118518937a2af3717c1c4a58fcfe75083d7046b9b903b439d97d3bc0f2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/recipes.json",
+      "sha256": "8abc16118518937a2af3717c1c4a58fcfe75083d7046b9b903b439d97d3bc0f2"
+    },
+    {
+      "adapted": true,
+      "bytes": 1561,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "fc936822f25eaafbac5d596db3ca02b208006215",
+      "original_sha256": "7d4c91d2d3ebb4fc8f341c1bfc8f281036cc4446ab80ccbb65ec516ffbccff65",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/physical/check_fixtures.py",
+      "sha256": "5466ce6e3363c7b0753646673dec8156c940421fee0508cb3fa332b67f52c80d"
+    },
+    {
+      "adapted": true,
+      "bytes": 1427,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "55fa64c1af4554c0d1369844d165a4c817acff2b",
+      "original_sha256": "093e34b95fb4db65e50f464acc62da7eee4da9d1678abdf866bf276fe6343544",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/physical/check_rows.py",
+      "sha256": "b8493c866e55bda6c454d4a9f7aa090a730d65a5289a5bd6fd576777c083d43f"
+    },
+    {
+      "adapted": true,
+      "bytes": 25631,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "bf9aaf37586ae106d4286c58dcc52f72a0ad842a",
+      "original_sha256": "bb1ad0e063ea6213b8b7317d5e4bf0c217f6e736f870f6663ccd4161d27236f8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/physical/check_static.py",
+      "sha256": "d1f2e205604408c8ef59946e9224604ea428d4a2260c950c94835dd921b6ed08"
+    },
+    {
+      "adapted": true,
+      "bytes": 16431,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "2d130f245289656fa74a72de0423f181c97f7373",
+      "original_sha256": "3459e7e469ea52441064971ca104652ce77f1cd384a3664f3876b024a3eab188",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/source/check_control.py",
+      "sha256": "59152b0617d583480155aa167ee1ca603b4d4b13bc5e07868599598e3843ac83"
+    },
+    {
+      "adapted": true,
+      "bytes": 15466,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "70eb4384580593bbf14d73c31ea349fcac26a5e0",
+      "original_sha256": "0001f30393a1d0d1f5898380ad4b2c0bb6eabcd47ed1fc49dc0a138862237ec1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/source/check_regions.py",
+      "sha256": "33afee603d1765d59e7aac0a41d0e73c7906e416ec7288c3927e0511ffc39d63"
+    },
+    {
+      "adapted": true,
+      "bytes": 10066,
+      "original_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+      "original_git_blob": "a7469dae0f8d9dd4e207306d7b7edcf0be7db0f1",
+      "original_sha256": "9e22111734075c47eb4486ae356f8fdcd7827b7623c4d8f112d6cfed34d0251e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/review/source/check_source.py",
+      "sha256": "7bc0b7b96b5a0c02371e2d9da61b7b0b34efdb5c09b828da793d0e3436821d6e"
+    },
+    {
+      "adapted": false,
+      "bytes": 3337,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a8bad722be5d13b209c231b719a49f9dffadde1b",
+      "original_sha256": "1503ff1c8af65c5d082a1c121658b06c307754bc98103ea742cabdabfe7bac9e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/select.py",
+      "sha256": "1503ff1c8af65c5d082a1c121658b06c307754bc98103ea742cabdabfe7bac9e"
+    },
+    {
+      "adapted": false,
+      "bytes": 3155,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "159de47bb4a05a3e3c908fe40d83bd5dd680881e",
+      "original_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/sources/reuse_clock_roles.py",
+      "sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b"
+    },
+    {
+      "adapted": false,
+      "bytes": 2719,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "0a8eafabf5ca02771607fe228e27f387ec270db9",
+      "original_sha256": "e7f4808b60901e9389830cbf2299dfe47772b5ae2f35dd5fc91c8888296ad5f7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/zero_context.py",
+      "sha256": "e7f4808b60901e9389830cbf2299dfe47772b5ae2f35dd5fc91c8888296ad5f7"
+    },
+    {
+      "adapted": false,
+      "bytes": 2592,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d2445a772c334caf686cdd9b2bc9e03714cf6209",
+      "original_sha256": "250050029e49f5d35985d4a25e2e6a5f00e23eb81fb16c9ff1e7ae47119c6205",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/control_regions/zero_pop.py",
+      "sha256": "250050029e49f5d35985d4a25e2e6a5f00e23eb81fb16c9ff1e7ae47119c6205"
+    },
+    {
+      "adapted": false,
+      "bytes": 7450,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "524e7ad801bf00f1cc4129fec8fa3167cc935b75",
+      "original_sha256": "b8928e6cec1e5d9332943521862a0126ad14fa61d7fb9d5f11913e91720823a5",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/grammar.py",
+      "sha256": "b8928e6cec1e5d9332943521862a0126ad14fa61d7fb9d5f11913e91720823a5"
+    },
+    {
+      "adapted": true,
+      "bytes": 9887,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8f567dc6736dcd602c9df9969cc489e6c0a9c28e",
+      "original_sha256": "ae29f69d1811ebad205d3620226b28acdabe974a72f4c066add1a0b15d70bf24",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/native/COMPOSITION.md",
+      "sha256": "12b9ae16df1b728043e0efb12937c7be3dd1d37d594dc9e48aa8df90fc0d3d2e"
+    },
+    {
+      "adapted": false,
+      "bytes": 2843,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5cabd94d41fa3ad4e7bd5b4a65bbc960bfa2dfb1",
+      "original_sha256": "c8ba18f56c2a8025af66a779798f930071d44be01bbfad8aba17870d3b8ef17a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/native/cost_check.py",
+      "sha256": "c8ba18f56c2a8025af66a779798f930071d44be01bbfad8aba17870d3b8ef17a"
+    },
+    {
+      "adapted": true,
+      "bytes": 15272,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "40efad4188f0613e4413b0e249e978378a9dd1cb",
+      "original_sha256": "b146b0b5a425ae139582c572c30399770118f1cdf1e7c93f6fe645a4487c9f01",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/PROOF.md",
+      "sha256": "929614f7a23d1f0df550bc35034c5f2f097fe96f9076421878fccdb4cde399d2"
+    },
+    {
+      "adapted": false,
+      "bytes": 8144,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "851875e7ba4f3c58d232643ea83284acf14d32bb",
+      "original_sha256": "d296e840c9ba995c7bda7181e4f6eea48fa99f82eff49f5f4568e19102ece1dd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/machines/control_mode_parent/names.json",
+      "sha256": "d296e840c9ba995c7bda7181e4f6eea48fa99f82eff49f5f4568e19102ece1dd"
+    },
+    {
+      "adapted": false,
+      "bytes": 7293,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f07b36d3b3306eee8c4ecc300736f56baf95d716",
+      "original_sha256": "d35f7ebeef3b0198fc90de9d172da5202d74cf607dc315fe941fba5993ec8173",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/machines/control_mode_parent/raw.tm",
+      "sha256": "d35f7ebeef3b0198fc90de9d172da5202d74cf607dc315fe941fba5993ec8173"
+    },
+    {
+      "adapted": true,
+      "bytes": 3445,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7ea74e51cd74a2052f9a284e73c447918baf20b5",
+      "original_sha256": "6334f19be7e8fe9a4b116cf1ce0d7a66aee0d3d371e70e32200bfdb7188756d2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/review/physical/check_fixtures.py",
+      "sha256": "263895a6ad918574cb34caeb15e552485f98c0d673f72ebf89b745362b3a1216"
+    },
+    {
+      "adapted": true,
+      "bytes": 1343,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "be09688cc4b272b432d1e993ba93acef4cb7cb6f",
+      "original_sha256": "3972a5b50f82e17a87092b9cfeea56456e40f708abdab5466ddf45e749221580",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/review/physical/check_rows.py",
+      "sha256": "9a8a1b4c1cf8a2e3826b2c3429537899f47f8f6e8a73e7b7ae41bdfc20ce0f07"
+    },
+    {
+      "adapted": true,
+      "bytes": 9483,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "14ea0cdd9ddd462cffc90e586e1349d6dcce3bac",
+      "original_sha256": "ffd527a24a0b728d038c810a95d0f467e686c278b92d0bc81d8017c3f4daabcd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/review/physical/check_static.py",
+      "sha256": "f3e6f5f7b8ab2caa70640db6c21241cb5e9d32b774123c35a7b615e5245ad7ab"
+    },
+    {
+      "adapted": false,
+      "bytes": 2428,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "cf9d59e313054195d96d964bede729bac5362a7b",
+      "original_sha256": "79bbbffeb9ead3946e0082ffa9c5a0604c19148278a5a92b290ea9b35baad833",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/runtime.py",
+      "sha256": "79bbbffeb9ead3946e0082ffa9c5a0604c19148278a5a92b290ea9b35baad833"
+    },
+    {
+      "adapted": false,
+      "bytes": 2330,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "3a6a8e1e4712d8d9e147a11c1b2e83a5ebfc48a8",
+      "original_sha256": "078618d7800201955b42421cfdd8ea6d05b129ff7548ad91559c3d5d1c173eec",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/operand_dispatch/select.py",
+      "sha256": "078618d7800201955b42421cfdd8ea6d05b129ff7548ad91559c3d5d1c173eec"
+    },
+    {
+      "adapted": false,
+      "bytes": 14121,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "07dc2a551b914e119591c61b2bb35ca49ffa86ac",
+      "original_sha256": "8052d09944d9d3ce7097ace10e6d1b73e79e42d9d20a4ffdbd66c1e4a33f75f4",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_search/PROOF.md",
+      "sha256": "8052d09944d9d3ce7097ace10e6d1b73e79e42d9d20a4ffdbd66c1e4a33f75f4"
+    },
+    {
+      "adapted": false,
+      "bytes": 1452,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "2419af2529648a540ef87eac91baa53b5873904d",
+      "original_sha256": "7d98b2beb3676f7d0e4f0d6785a5a78d4817f05f23ec38c82635a3ea4b31a039",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_search/coordinator/pair_normalize.py",
+      "sha256": "7d98b2beb3676f7d0e4f0d6785a5a78d4817f05f23ec38c82635a3ea4b31a039"
+    },
+    {
+      "adapted": true,
+      "bytes": 27197,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "909b4064ebb2b2ae911119af55d185d453435ea3",
+      "original_sha256": "9e6c73551ccd174f23b5feeb051ce023c0450ac6a76b2c45d2f3dc7394c9dc0d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_search/review/certificate_engine/check_selected.py",
+      "sha256": "cdab69c3093773962de633e2dc945e2d2aa583bd7a629f575e3d22a6866aedca"
+    },
+    {
+      "adapted": true,
+      "bytes": 7025,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "6c9ff98b489ff2691eb91f16fda3d00649e0b276",
+      "original_sha256": "9186b8764ff44ddac003327284fef50c6f4e1207b6c9f4b72940a56d63ebf3e7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/COMPOSITION.md",
+      "sha256": "420f2bbcab86ad07d89d8cf88d48f1854d129233d845cf8ce958285082f46311"
+    },
+    {
+      "adapted": true,
+      "bytes": 12094,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c953e7c056eb8e0603b9aea85999bb96bbcf4a90",
+      "original_sha256": "0f29257bafefe7da49cf7d1e746f64a32f4f4fc4d3e4fa844b34392cc5956a26",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/PROOF.md",
+      "sha256": "e76095edfe10d58aec3c6df60059c2887c192e619fe8d53362a1987547bfc6f8"
+    },
+    {
+      "adapted": false,
+      "bytes": 7005,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "69f820d5fa32d8ac0311e61636b0b363e2b3f563",
+      "original_sha256": "ea98ac70a51ee36397a1536eb11a4b60bde1e8f0e1b4368dfd194c4854e4000c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/build.py",
+      "sha256": "ea98ac70a51ee36397a1536eb11a4b60bde1e8f0e1b4368dfd194c4854e4000c"
+    },
+    {
+      "adapted": false,
+      "bytes": 280,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "42ca6edaf8e62c8c6950333f01b983a040e05ffb",
+      "original_sha256": "ca9b489b590c3be1d3bfdedaf718b161c5cc2850b9aed42462b069140f382e69",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/recipes.json",
+      "sha256": "ca9b489b590c3be1d3bfdedaf718b161c5cc2850b9aed42462b069140f382e69"
+    },
+    {
+      "adapted": false,
+      "bytes": 2606,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c60d048f2c7930a156ba221ae38b96e964b450dc",
+      "original_sha256": "402cbcf47bbf85130a62ca3088f985ec9b4441a3b67f3b2891046abd52bfbe14",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/region.py",
+      "sha256": "402cbcf47bbf85130a62ca3088f985ec9b4441a3b67f3b2891046abd52bfbe14"
+    },
+    {
+      "adapted": true,
+      "bytes": 5480,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "277bdac04ae8758db93830b5666f68601baf3dca",
+      "original_sha256": "27f5949df0d7e6e0f7702731bb95e5d05749af448b44f03ad2ef1ca82cb01e11",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/review/binary/check_static.py",
+      "sha256": "15562eff1257f63333bc711a3c2acbb7c50de05e6a462053da28945d87f76187"
+    },
+    {
+      "adapted": false,
+      "bytes": 11239,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5af90cdd538792138e61a0e99512a7183210e5bc",
+      "original_sha256": "393eaaa34675fc38b2a2213412ea951b58391e4c1f105cc9c7b63e43b3723ed9",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/review/source/check_swap.py",
+      "sha256": "393eaaa34675fc38b2a2213412ea951b58391e4c1f105cc9c7b63e43b3723ed9"
+    },
+    {
+      "adapted": false,
+      "bytes": 3131,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ee6113f153716dbc54b9d95a8c0f0996ee1e54a5",
+      "original_sha256": "4f1f6f317eb196b8d09a67439893622a759c43ef4e02e30adae4e04b0eb39515",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/phase_swap/source.py",
+      "sha256": "4f1f6f317eb196b8d09a67439893622a759c43ef4e02e30adae4e04b0eb39515"
+    },
+    {
+      "adapted": false,
+      "bytes": 6141,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a946ea887a230a4e017850358a0752bda63c3a97",
+      "original_sha256": "e9e0ae16345630e7bce75968fe10241fda1b384fc4c0b08f7dac1d8c6090ad49",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/PROOF.md",
+      "sha256": "e9e0ae16345630e7bce75968fe10241fda1b384fc4c0b08f7dac1d8c6090ad49"
+    },
+    {
+      "adapted": false,
+      "bytes": 3412,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7320e286c414ff30cf18fa5b74a688cd42b44412",
+      "original_sha256": "8f6f077fbd5c27c43ebffc1605580482650bb86c1057d2821981f0c6ce7ec190",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/dispatcher.py",
+      "sha256": "8f6f077fbd5c27c43ebffc1605580482650bb86c1057d2821981f0c6ce7ec190"
+    },
+    {
+      "adapted": false,
+      "bytes": 3602,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d42ddf05d328f92dfc9079f979a4b73459ef2e3a",
+      "original_sha256": "c38f3672547679c21c72086b0040d1f451fd75179a5ff2c43c9e73d87022bc9a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/geometry/PROOF.md",
+      "sha256": "c38f3672547679c21c72086b0040d1f451fd75179a5ff2c43c9e73d87022bc9a"
+    },
+    {
+      "adapted": false,
+      "bytes": 7199,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b8d80c004b6d94c924c9e989011d23fea7bfbfe1",
+      "original_sha256": "863c80b73239b9370c7b0a83865eaddb962acfb4379ee925ef25360f2933e0dd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/geometry/compile.py",
+      "sha256": "863c80b73239b9370c7b0a83865eaddb962acfb4379ee925ef25360f2933e0dd"
+    },
+    {
+      "adapted": true,
+      "bytes": 8200,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "47984cb55a8f60c5ac85d8c285514617a9e8d541",
+      "original_sha256": "8bc3473c90e31d89e9abbc9fa8a15e3d32b33ef12b808c64600bb1cabdac0345",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/review/physical/check_rows.py",
+      "sha256": "60d9fdd8bde1e7826709de5b187e4152284540f895515a9f0e1988934ce6196a"
+    },
+    {
+      "adapted": true,
+      "bytes": 10639,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "bec1ee584cc9d49744f39c1f808ac939eb4f56be",
+      "original_sha256": "96bb4a40fc7508bfca6f4af80ddba478c469d5cd103fbb6881f6ced1487dbfd6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/repeated_control/review/physical/check_static.py",
+      "sha256": "96d45c10095cec2ad2f66e23f0906bc968ce386d002c2f9c6b8cd869e3d6a5e5"
+    },
+    {
+      "adapted": true,
+      "bytes": 14342,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4f4c0afb8e74e112571a286e77f29d5d2489f023",
+      "original_sha256": "099acccdea080cd2544f079e73aaa0bb7f1740de46b78a602caf6edac4246710",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/source/PROOF.md",
+      "sha256": "9e9b7732ce6c9718715c18eb7a581a7292c6376b23da699665ff408766b3ddf5"
+    },
+    {
+      "adapted": false,
+      "bytes": 1417,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "76ea1220292d8b6f205082baa84c514966110f3a",
+      "original_sha256": "96f254475ce226a2d5783b259abf0b414ae8d119c4e01430d48adf3fe3f60ac1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/source/certificate_popfirst_power.py",
+      "sha256": "96f254475ce226a2d5783b259abf0b414ae8d119c4e01430d48adf3fe3f60ac1"
+    },
+    {
+      "adapted": false,
+      "bytes": 7271,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "45dc4ce82a3d6df4895b66704f0089336bd41895",
+      "original_sha256": "b893ef3d9e0d2f3b75157bc7c6918d9b54bb3c68b2557f39b64db55088d4967a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/tape_local/completion/PROOF.md",
+      "sha256": "b893ef3d9e0d2f3b75157bc7c6918d9b54bb3c68b2557f39b64db55088d4967a"
+    },
+    {
+      "adapted": false,
+      "bytes": 9394,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9174f360d6e302cc2c2ea2d731f433b6fd285415",
+      "original_sha256": "ed902df3f7ca37f48d0fa0b227803aa2815e250ef583db590e6c784c2cdb0933",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/tape_local/completion/complete.py",
+      "sha256": "ed902df3f7ca37f48d0fa0b227803aa2815e250ef583db590e6c784c2cdb0933"
+    },
+    {
+      "adapted": false,
+      "bytes": 4299,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "208ea3388d8dcfd6c60b74415717580dbf033952",
+      "original_sha256": "a7ee2426f25feed2a80446628b562cf512bdac33c415465638ac43c40ff06535",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/tape_local/completion/plan.json",
+      "sha256": "a7ee2426f25feed2a80446628b562cf512bdac33c415465638ac43c40ff06535"
+    },
+    {
+      "adapted": true,
+      "bytes": 26505,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ed1caf5814161e93b6c7cf2654ca5df525e654c8",
+      "original_sha256": "3d616104e42079c1e7825a2b42a2ef259e99fdbbdbbd7f9f0c24aaa9cdd655b1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/tape_local/review/binary_kernel/check_endpoint.py",
+      "sha256": "dd4729fd95f39cdf3f60e313f68fd2a5a2ae70f1cc02294f87289a4bf193ba0c"
+    },
+    {
+      "adapted": false,
+      "bytes": 9421,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ba9bdaf5bd84dd58c7b3d61570f21790433f7a5e",
+      "original_sha256": "2b8c16084aeee7819447ed4963c1ca6d5bf1f20d789060a9404fbe9b446bfc94",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/PROOF.md",
+      "sha256": "2b8c16084aeee7819447ed4963c1ca6d5bf1f20d789060a9404fbe9b446bfc94"
+    },
+    {
+      "adapted": true,
+      "bytes": 14414,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7bbcf33709e870cc8087a36bb35d7fa24e91567f",
+      "original_sha256": "89c9bbc717cf26eae720218273d64c990fa16bc3d7aef6962bc10cfa1874da74",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/PROOF302.md",
+      "sha256": "cd9f5ed4422257e59bd2c15363eef41a15a7f94ed67b8a40bdfde4de895dade2"
+    },
+    {
+      "adapted": false,
+      "bytes": 8967,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e1a7769b16c4d793025d86c375f8f41e042e5c62",
+      "original_sha256": "b30202dd4fa17591035415a15b5f44c83805fd49e3e5e75b660eca267e21b1a9",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/control/PROOF.md",
+      "sha256": "b30202dd4fa17591035415a15b5f44c83805fd49e3e5e75b660eca267e21b1a9"
+    },
+    {
+      "adapted": false,
+      "bytes": 3131,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ee6113f153716dbc54b9d95a8c0f0996ee1e54a5",
+      "original_sha256": "4f1f6f317eb196b8d09a67439893622a759c43ef4e02e30adae4e04b0eb39515",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/control/attempt_reset/source.py",
+      "sha256": "4f1f6f317eb196b8d09a67439893622a759c43ef4e02e30adae4e04b0eb39515"
+    },
+    {
+      "adapted": false,
+      "bytes": 4874,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "79b4836c224d8ae9e869281cdf8485fd98742bda",
+      "original_sha256": "09cb639084c1853facc88407b46533019d558187c16bc95cd27e6b55d9f1af62",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/control/clock_region.py",
+      "sha256": "09cb639084c1853facc88407b46533019d558187c16bc95cd27e6b55d9f1af62"
+    },
+    {
+      "adapted": false,
+      "bytes": 4131,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ad95177602c1177be916cb92934f888e0b99dcc0",
+      "original_sha256": "cd6bb8f0b93b9fdbabcc1537c1dca94887c48d972902101979e8394dfc3f39db",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/control/seed_region.py",
+      "sha256": "cd6bb8f0b93b9fdbabcc1537c1dca94887c48d972902101979e8394dfc3f39db"
+    },
+    {
+      "adapted": false,
+      "bytes": 2868,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a709324aa057f993b2ee96e3018ea49fb2bf8d4d",
+      "original_sha256": "f159c1eeaa8b95188abbf12b139aed3d0ea1948a1f1feb00a994b8b7317d83cd",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/coordinator/build_experiment.py",
+      "sha256": "f159c1eeaa8b95188abbf12b139aed3d0ea1948a1f1feb00a994b8b7317d83cd"
+    },
+    {
+      "adapted": false,
+      "bytes": 2342,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4f4724bd54371e212c1f84acdf7e46105214cdc0",
+      "original_sha256": "e297353fc20aba646436557af81dd807f7cc27ad4274cb956555c0462cf3df42",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/coordinator/consume_guard.py",
+      "sha256": "e297353fc20aba646436557af81dd807f7cc27ad4274cb956555c0462cf3df42"
+    },
+    {
+      "adapted": false,
+      "bytes": 3039,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4371b7363e46167a9d0a1ea8dffc8e21f4422627",
+      "original_sha256": "75ec1f57e1be96626a2ab559c890ab420e820eb0983ff16cc967665a2d44db63",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/coordinator/source-consume.py",
+      "sha256": "75ec1f57e1be96626a2ab559c890ab420e820eb0983ff16cc967665a2d44db63"
+    },
+    {
+      "adapted": false,
+      "bytes": 9888,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "6e8cba134ee161a325622927734ff9f059fc60e5",
+      "original_sha256": "868446b580fad7e750daa13d53cbaeea9b3c4a2076832dea0150dc8ff1b575f8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/physical/PROOF.md",
+      "sha256": "868446b580fad7e750daa13d53cbaeea9b3c4a2076832dea0150dc8ff1b575f8"
+    },
+    {
+      "adapted": true,
+      "bytes": 11299,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c48ff1b7eb0da28090d915cf8285dd1b33305ef2",
+      "original_sha256": "e4adcede9c3c4cdae47a96e25b422256014bb05c9f512ed212693aa0c9480238",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/review/binary/check_fixtures.py",
+      "sha256": "7f74efa1cae809e38ceb1265035ef15e8e0d1397523381143459a74b35907940"
+    },
+    {
+      "adapted": true,
+      "bytes": 14622,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9f38f69c7ca3eab324216378e8e26ab7a7c798fc",
+      "original_sha256": "d117c58800c4e84c77fc8a10e641ea44d271085160aa626e69ef1915e7b5987b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/review/binary/check_static.py",
+      "sha256": "40a6aabb3bfb7fab72c667962bcccc3c86415841cb858f9dcc71fa0003cf9e5f"
+    },
+    {
+      "adapted": false,
+      "bytes": 5461,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "951089e4ea599311cea7f900522d1aae6e71ae96",
+      "original_sha256": "f09597a6fa5a5ca766152741421775274d2bd021bc1cf950ca6f4f1a8d8e0451",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/review/binary/check_static291.py",
+      "sha256": "f09597a6fa5a5ca766152741421775274d2bd021bc1cf950ca6f4f1a8d8e0451"
+    },
+    {
+      "adapted": false,
+      "bytes": 12993,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "df53d7a5a528ba97b077b69c25825b4891001abd",
+      "original_sha256": "3ccbb5ec6a08c6dad03bfce05a88c4da5a2420d5f48a9bf0b78a342c1c97fbd7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/transfer328/review/source/check_closed_regions.py",
+      "sha256": "3ccbb5ec6a08c6dad03bfce05a88c4da5a2420d5f48a9bf0b78a342c1c97fbd7"
+    },
+    {
+      "adapted": false,
+      "bytes": 7556,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "1466dfbe74ec9964d9ce9eb2fa30c6a96f315980",
+      "original_sha256": "af8c1bed720f5f8aaa65ec595a03bdbc82a9401ed2c04c430fae7fcfde0497b0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compact/weak_grammar.py",
+      "sha256": "af8c1bed720f5f8aaa65ec595a03bdbc82a9401ed2c04c430fae7fcfde0497b0"
+    },
+    {
+      "adapted": false,
+      "bytes": 12115,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "18aa116b6d3254145cac2456ea10a9e4399b33ac",
+      "original_sha256": "9c1427e60537df8318fac2bbda62f1f7d68077dc5bd6ed156fbe1abca8aca3cb",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compiler/PROOF.md",
+      "sha256": "9c1427e60537df8318fac2bbda62f1f7d68077dc5bd6ed156fbe1abca8aca3cb"
+    },
+    {
+      "adapted": false,
+      "bytes": 7335,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "4fee354a43f54a3a68c586a738f9ce4798a014c0",
+      "original_sha256": "c7ee117d3ddd3197ed802d136e8b6fa6412e17841d73ed063d8e7e490c57fbd6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compiler/build_live.py",
+      "sha256": "c7ee117d3ddd3197ed802d136e8b6fa6412e17841d73ed063d8e7e490c57fbd6"
+    },
+    {
+      "adapted": false,
+      "bytes": 1905,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9313c6a67b01bc81c648d17f0082fe82f1213124",
+      "original_sha256": "e21401756a36471e478b8256506dd560e60f42b967aff06e6f6f13cd5d5cb33b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compiler/half_pairs.py",
+      "sha256": "e21401756a36471e478b8256506dd560e60f42b967aff06e6f6f13cd5d5cb33b"
+    },
+    {
+      "adapted": false,
+      "bytes": 13322,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b85df8af8e29d84c754868ac8123b49a05320c5e",
+      "original_sha256": "b6a7d2effbcd9feb03c6720b7ad7acc7e8cbebdbef6b1201a08b22e536212945",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/compiler/live_registers.py",
+      "sha256": "b6a7d2effbcd9feb03c6720b7ad7acc7e8cbebdbef6b1201a08b22e536212945"
+    },
+    {
+      "adapted": false,
+      "bytes": 4671,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "5f3b8422f882babb2f4d74fa30b0619816c66a7e",
+      "original_sha256": "a2b3c85c4eb135f7567fc6e19badfab1ca9e5db2d50447dc9555f5f0c6e03fd7",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/continuation/cost_check.py",
+      "sha256": "a2b3c85c4eb135f7567fc6e19badfab1ca9e5db2d50447dc9555f5f0c6e03fd7"
+    },
+    {
+      "adapted": false,
+      "bytes": 8484,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "655f31636f24683209b957992966f60ac387528e",
+      "original_sha256": "201a017e26fe8e2ea74a8b9d0d0cff66e69aa2211f7219b03012346843f5809a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__compiler__CONTEXTUAL_QUOTIENT.md.txt",
+      "sha256": "201a017e26fe8e2ea74a8b9d0d0cff66e69aa2211f7219b03012346843f5809a"
+    },
+    {
+      "adapted": false,
+      "bytes": 8205,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7e9350948ed5215fb86b9a0a05ba530f5ac8ed72",
+      "original_sha256": "d2b0f6354a86888926afe720864bca9dadd5feb92eeeb9dfb36ae058548b99df",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__compiler__CONTEXTUAL_TREE.md.txt",
+      "sha256": "d2b0f6354a86888926afe720864bca9dadd5feb92eeeb9dfb36ae058548b99df"
+    },
+    {
+      "adapted": false,
+      "bytes": 8838,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d11a629ef7bef7ac97512f09052733e0461b718c",
+      "original_sha256": "334bf433df43b3f1aadc79abd05feb0842ef095691c5a9661fc96c8fbb5227c8",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__compiler__SHARED_SELECTOR.md.txt",
+      "sha256": "334bf433df43b3f1aadc79abd05feb0842ef095691c5a9661fc96c8fbb5227c8"
+    },
+    {
+      "adapted": false,
+      "bytes": 4557,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "2d87e87443cd9de715c0b97d11dcd5d2d8afd300",
+      "original_sha256": "b303ef3b5bfc128179e5216d029b92a1a01fd7c40a9fd3d74dbdfdf74c292161",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__grammar__HORNER.md.txt",
+      "sha256": "b303ef3b5bfc128179e5216d029b92a1a01fd7c40a9fd3d74dbdfdf74c292161"
+    },
+    {
+      "adapted": false,
+      "bytes": 9012,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "51d1ea82a221a12e16de8915777c1efcc224bbe2",
+      "original_sha256": "082a92fb0d883df709feadeabe27f1e67e7faf650affbd9850fd2a7c89db0d02",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__grammar__PROOF.md.txt",
+      "sha256": "082a92fb0d883df709feadeabe27f1e67e7faf650affbd9850fd2a7c89db0d02"
+    },
+    {
+      "adapted": false,
+      "bytes": 5999,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9cc8ad9cc107f5b840d6f9cf5542e5c8fa034962",
+      "original_sha256": "307a7601799b8bb48ab528685fe723ce24bce707d9bc907b6404e547c31f9502",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/compression__native__COUNTDOWN.md.txt",
+      "sha256": "307a7601799b8bb48ab528685fe723ce24bce707d9bc907b6404e547c31f9502"
+    },
+    {
+      "adapted": false,
+      "bytes": 5848,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d023447d5f869e45518d11acf62908aae92d4545",
+      "original_sha256": "030f74193736aef0d1c9875a525fd4c226501e152702144ea3f378863cca0285",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/proofs__COMPILER_APPLICABILITY.md.txt",
+      "sha256": "030f74193736aef0d1c9875a525fd4c226501e152702144ea3f378863cca0285"
+    },
+    {
+      "adapted": false,
+      "bytes": 34533,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "6fe005142b63e66f58a3ad42a70aa9f51b095242",
+      "original_sha256": "bc2e8b7167c6701b4f05445e5da97b770dfb740d512fef782ef907e90e573e26",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/proofs__COMPILER_PROOF.md.txt",
+      "sha256": "bc2e8b7167c6701b4f05445e5da97b770dfb740d512fef782ef907e90e573e26"
+    },
+    {
+      "adapted": false,
+      "bytes": 14512,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "06594bb593c33f7e8b741fc70e58600b2877f709",
+      "original_sha256": "ba865e17706549418625f7e3ca93aa438fed61915b45c4ea2fcf16d698da78b0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/proofs__dictionary-compression.md.txt",
+      "sha256": "ba865e17706549418625f7e3ca93aa438fed61915b45c4ea2fcf16d698da78b0"
+    },
+    {
+      "adapted": false,
+      "bytes": 12461,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "07bdf76651517fa83ca9069df036c8c9954843e0",
+      "original_sha256": "ce052087842034bec9b8226cce013cc506f83f3cf13521e5fd7c05ada1d2baa2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/proof-dependencies/proofs__frontier-compression.md.txt",
+      "sha256": "ce052087842034bec9b8226cce013cc506f83f3cf13521e5fd7c05ada1d2baa2"
+    },
+    {
+      "adapted": false,
+      "bytes": 18913,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7cbf57af1fe737629bbef6c0de3c5d712c3c348e",
+      "original_sha256": "bee67dee8b89bdb8ce14af1bbb7d5597d9d779297de09a3436e77187243d9254",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/provenance.json",
+      "sha256": "bee67dee8b89bdb8ce14af1bbb7d5597d9d779297de09a3436e77187243d9254"
+    },
+    {
+      "adapted": false,
+      "bytes": 2217,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e01b302fe03f4c4706169124b298d5ce085d4e62",
+      "original_sha256": "ae23de7359cefdd34c139e59418c54e26eddf9e207b9122cfb3473d0f52a380a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/source.py",
+      "sha256": "ae23de7359cefdd34c139e59418c54e26eddf9e207b9122cfb3473d0f52a380a"
+    },
+    {
+      "adapted": false,
+      "bytes": 7379,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "470dfe000b661dd295a74233c4f50bc8de3501e9",
+      "original_sha256": "331caa8ef1eef1dea1279e2dff84ebb0a33c21b9c6bd67dcb748144ff8b5962d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/events.py",
+      "sha256": "331caa8ef1eef1dea1279e2dff84ebb0a33c21b9c6bd67dcb748144ff8b5962d"
+    },
+    {
+      "adapted": false,
+      "bytes": 2808,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "cca98bea8aae7bebf7187888d244fdfbfaeb6a2c",
+      "original_sha256": "f60b373b7868e8c2f361c83f78a7c8deb2c23943ef0550920ba34fe8d7272e36",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/accumulator/consuming.py",
+      "sha256": "f60b373b7868e8c2f361c83f78a7c8deb2c23943ef0550920ba34fe8d7272e36"
+    },
+    {
+      "adapted": false,
+      "bytes": 3814,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b8256f09d922ad60d9a706caef119238f2e9e0fb",
+      "original_sha256": "77f6498d784b5832bf86489b88bd371eed9b54527eb187b723a718ef899dd56b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/accumulator/digits.py",
+      "sha256": "77f6498d784b5832bf86489b88bd371eed9b54527eb187b723a718ef899dd56b"
+    },
+    {
+      "adapted": false,
+      "bytes": 5254,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ae0027355d4d297153a5cc2d7a39ccaaf1ba97b4",
+      "original_sha256": "a161b309c987f1037dd6cd0854ae0a9a0d858cce1ee6ea3640dbaebccc56d64d",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/accumulator/intrinsics.py",
+      "sha256": "a161b309c987f1037dd6cd0854ae0a9a0d858cce1ee6ea3640dbaebccc56d64d"
+    },
+    {
+      "adapted": false,
+      "bytes": 3956,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "9e73ca6ab83affddfe5dffbe41a04922dcb17cb4",
+      "original_sha256": "eaf65ef520471518d09b806e246a04e2031f90bc33ae878103f3948771529985",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/accumulator/liveness.py",
+      "sha256": "eaf65ef520471518d09b806e246a04e2031f90bc33ae878103f3948771529985"
+    },
+    {
+      "adapted": false,
+      "bytes": 3493,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "c3bce2fc1cb5e04986f4a41e712fdd5f80c2bc98",
+      "original_sha256": "95364827975dea32d3dffa3a7d30c1d0bde575bfdefb6ddbe16b0e5df17ce65c",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/accumulator/positive.py",
+      "sha256": "95364827975dea32d3dffa3a7d30c1d0bde575bfdefb6ddbe16b0e5df17ce65c"
+    },
+    {
+      "adapted": false,
+      "bytes": 8913,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8f7bda808e3af11b586a0eee7ca223b574ae531f",
+      "original_sha256": "89789ed6a5ea4b8f9932e28ce457566fd3d294a05bee7e77e22e24247649612f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/check_contextual_quotient.py",
+      "sha256": "89789ed6a5ea4b8f9932e28ce457566fd3d294a05bee7e77e22e24247649612f"
+    },
+    {
+      "adapted": false,
+      "bytes": 8998,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "b9c73beb6b97afc068982085a0724167c59a3bc9",
+      "original_sha256": "9f18d105ba6e3a46341944c2f6cf65f869179c3ac625a672dc544c347cac601e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/check_contextual_tree.py",
+      "sha256": "9f18d105ba6e3a46341944c2f6cf65f869179c3ac625a672dc544c347cac601e"
+    },
+    {
+      "adapted": false,
+      "bytes": 9760,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "15ed10de87d4142ca7c6938309f9a11403c77286",
+      "original_sha256": "8cde584ef0a1ca9ccd21e264008866a83638743204805ee9d666a382a22d390b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/contextual_quotient.py",
+      "sha256": "8cde584ef0a1ca9ccd21e264008866a83638743204805ee9d666a382a22d390b"
+    },
+    {
+      "adapted": false,
+      "bytes": 5247,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "933602d80b685ead8b437af5fb523770c1ff3287",
+      "original_sha256": "65f39e9984a5a352a6b825d3086b41139f09429ec52be3dea300775e4a7db46f",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/contextual_tree.py",
+      "sha256": "65f39e9984a5a352a6b825d3086b41139f09429ec52be3dea300775e4a7db46f"
+    },
+    {
+      "adapted": false,
+      "bytes": 4667,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "85c41dba3e873df1c738ccdd008db54214f190e0",
+      "original_sha256": "e7a2d16b4e4853c17d3a0939c473fc1c2559c17a9ee98afbe23eb6d70fb69c52",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/contextual_tree_build.py",
+      "sha256": "e7a2d16b4e4853c17d3a0939c473fc1c2559c17a9ee98afbe23eb6d70fb69c52"
+    },
+    {
+      "adapted": false,
+      "bytes": 6519,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "baee7107b1c72db0a7233ddff338f7ee526833a7",
+      "original_sha256": "4b662d747924d080f2499e9d7dd5ed211beb582c6558425e5ca3ef8391081ab0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/compiler/shared_selector.py",
+      "sha256": "4b662d747924d080f2499e9d7dd5ed211beb582c6558425e5ca3ef8391081ab0"
+    },
+    {
+      "adapted": false,
+      "bytes": 7057,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "1b1f031aa23a029d4524543c9538371e4e2b6e9b",
+      "original_sha256": "9156162ae912b7b2d369226f03b345d226eb8b051140b9a29988e115a5386139",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/grammar/closed_sequences.py",
+      "sha256": "9156162ae912b7b2d369226f03b345d226eb8b051140b9a29988e115a5386139"
+    },
+    {
+      "adapted": false,
+      "bytes": 2762,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "43301e72c944626ba485c3759089f7688608dfcd",
+      "original_sha256": "4a662750dea4e1ec5d295f1c0fda4f0bdbc1792da2c786653d3d96395ea2eded",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/grammar/fused_horner.py",
+      "sha256": "4a662750dea4e1ec5d295f1c0fda4f0bdbc1792da2c786653d3d96395ea2eded"
+    },
+    {
+      "adapted": false,
+      "bytes": 6685,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "84aaa793f328273314666d0b8dbe970ca14092fe",
+      "original_sha256": "ad7905af661595bf7e110ace91e887be9154ed469c04bd85a82191896ac5d0a3",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/grammar/kernel_builder.py",
+      "sha256": "ad7905af661595bf7e110ace91e887be9154ed469c04bd85a82191896ac5d0a3"
+    },
+    {
+      "adapted": false,
+      "bytes": 6000,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "2c6e4b8a3eb22780e5cf4d7eeb8de2862b7c1a0e",
+      "original_sha256": "1a53e954015801b8215fffbe14d31907b90c6e3e16514133a63f9f54a633ea26",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/integrated_build.py",
+      "sha256": "1a53e954015801b8215fffbe14d31907b90c6e3e16514133a63f9f54a633ea26"
+    },
+    {
+      "adapted": false,
+      "bytes": 5162,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "309a80afb7058838da7b1a7efea39cbf677c5829",
+      "original_sha256": "0fdf891700a548a6144a4b6780483743ce5676b17e7f696f65ffeb4841e8c5e6",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/literal_bitset.c",
+      "sha256": "0fdf891700a548a6144a4b6780483743ce5676b17e7f696f65ffeb4841e8c5e6"
+    },
+    {
+      "adapted": false,
+      "bytes": 2273,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f4739a08d98f8cdd5d00e421a1ee7393ec4ba372",
+      "original_sha256": "af5403c6a00f3fa820cdaa90de5ceaf61db1e509fb754e7909208a9ba3ac43f0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/native/countdown.py",
+      "sha256": "af5403c6a00f3fa820cdaa90de5ceaf61db1e509fb754e7909208a9ba3ac43f0"
+    },
+    {
+      "adapted": false,
+      "bytes": 11354,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "380905196a2cf1d22954edd6eb0285a5ce27a082",
+      "original_sha256": "d7871a254dab5bf8851025d75bd736c7738de889e25075e9f23a26cc9074260e",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/reviews/runtime_dependency_checks.py",
+      "sha256": "d7871a254dab5bf8851025d75bd736c7738de889e25075e9f23a26cc9074260e"
+    },
+    {
+      "adapted": false,
+      "bytes": 11596,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "3d26893c9e48dba510c9beb9365ce7bda27f9ac3",
+      "original_sha256": "8db6b51421122851adf278269dc5d9a656583400812c06360783c552f905d770",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/source/intrinsic_build.py",
+      "sha256": "8db6b51421122851adf278269dc5d9a656583400812c06360783c552f905d770"
+    },
+    {
+      "adapted": false,
+      "bytes": 6561,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d52be94aa129a8f6e884b2c41409ca460366b572",
+      "original_sha256": "ed48733d27a0b1df3dde3fa8f88f1dff8b272a22b0edee88aeaf5aa5ffab77ee",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/compression/verify_integrated.py",
+      "sha256": "ed48733d27a0b1df3dde3fa8f88f1dff8b272a22b0edee88aeaf5aa5ffab77ee"
+    },
+    {
+      "adapted": false,
+      "bytes": 12688,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a48a20ae80bbd9e4160eaa5cc9e886b5d132870d",
+      "original_sha256": "19e659f7cefa19f8aca2b504f8deebfa233a0e8b68185e309ccd6f4c995d0da9",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/continuation/compiler.py",
+      "sha256": "19e659f7cefa19f8aca2b504f8deebfa233a0e8b68185e309ccd6f4c995d0da9"
+    },
+    {
+      "adapted": false,
+      "bytes": 4271,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ddc344e2c5adda5d5b5fef0d5ebacec7d7bb35a8",
+      "original_sha256": "26c909dc8e70818ba660a386f3e838fdc792fe3dfe242647bf944b690ec1416b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/assigned_natural.py",
+      "sha256": "26c909dc8e70818ba660a386f3e838fdc792fe3dfe242647bf944b690ec1416b"
+    },
+    {
+      "adapted": false,
+      "bytes": 3449,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8db49d12a813a2e0c34d18ca43ac8f2bb784e0f7",
+      "original_sha256": "c91309bf4d6cfe6cfaed017003cc6e363fc39365daedefae7410c5a9ce6319a4",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/backend.py",
+      "sha256": "c91309bf4d6cfe6cfaed017003cc6e363fc39365daedefae7410c5a9ce6319a4"
+    },
+    {
+      "adapted": false,
+      "bytes": 4050,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d1ef49a5ffa228b7afe9342ebcbcc7efa8ea8484",
+      "original_sha256": "109723da54c3c8730cfe12321dfa8906ec4f3f559683f13d426800658818c89a",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/build_baseline.py",
+      "sha256": "109723da54c3c8730cfe12321dfa8906ec4f3f559683f13d426800658818c89a"
+    },
+    {
+      "adapted": false,
+      "bytes": 4524,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a0191dd5ac6d001c89d9635b940bf4666f6239cf",
+      "original_sha256": "6f4f3494d698e7abd05e5c68231644e7320386f8cf8fa88fad028c1946ba6a35",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/frame_pool.py",
+      "sha256": "6f4f3494d698e7abd05e5c68231644e7320386f8cf8fa88fad028c1946ba6a35"
+    },
+    {
+      "adapted": false,
+      "bytes": 1649,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "737fb2f276ab41bb2caab180df0abff003fce7dc",
+      "original_sha256": "96afadfad6815fba503ec825140e8766daca6c521690f86c35c8128c4b73eae2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/literal_assign.py",
+      "sha256": "96afadfad6815fba503ec825140e8766daca6c521690f86c35c8128c4b73eae2"
+    },
+    {
+      "adapted": false,
+      "bytes": 4492,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "a9204b07a230dc6ea9f1be7fb2a6a62b8b5c2778",
+      "original_sha256": "3f9058985593b45169978d040ffd5dd99d614002b5360ccda6df6a1325206f59",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/machine.py",
+      "sha256": "3f9058985593b45169978d040ffd5dd99d614002b5360ccda6df6a1325206f59"
+    },
+    {
+      "adapted": false,
+      "bytes": 1215,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "19b5c7666488b5e12c29f98dc05fff7291b50e96",
+      "original_sha256": "3397fdb8b5d21ac667da04f189ea55ccdb73fdeb59853de4848196fb8700e827",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/namespace_safe.py",
+      "sha256": "3397fdb8b5d21ac667da04f189ea55ccdb73fdeb59853de4848196fb8700e827"
+    },
+    {
+      "adapted": false,
+      "bytes": 18409,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "e20edcb18db89b376646c58951e18ef3e024fee4",
+      "original_sha256": "ab7ff05b99de9e7fc9cfe96b2c3898853ca0927b526b01966c279a6a825dcd50",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/natural.py",
+      "sha256": "ab7ff05b99de9e7fc9cfe96b2c3898853ca0927b526b01966c279a6a825dcd50"
+    },
+    {
+      "adapted": false,
+      "bytes": 10779,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "2bec95e8de15948500cf03ac0ff79479adecd690",
+      "original_sha256": "e865a3d2be99170f08116eceb4b3f49173bc334fee44820adb5245858dc51359",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/optimized_natural.py",
+      "sha256": "e865a3d2be99170f08116eceb4b3f49173bc334fee44820adb5245858dc51359"
+    },
+    {
+      "adapted": false,
+      "bytes": 1511,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "1d5f59bde215a7f98cb8caf208b3415074cc8956",
+      "original_sha256": "e9ae17952fa217e6596997df77fb09bd95eae17886d98b36cd8ea2fa070e01ed",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/quotient.py",
+      "sha256": "e9ae17952fa217e6596997df77fb09bd95eae17886d98b36cd8ea2fa070e01ed"
+    },
+    {
+      "adapted": false,
+      "bytes": 3335,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f85bea643a39f6a34a424c0ae67b6918855e3b10",
+      "original_sha256": "abbefa10f20794bf9b4141b95dfd5353551da4fedefd5d3e0e5999c41a7f239b",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/simulate.cpp",
+      "sha256": "abbefa10f20794bf9b4141b95dfd5353551da4fedefd5d3e0e5999c41a7f239b"
+    },
+    {
+      "adapted": false,
+      "bytes": 4186,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "d624c7a4e12c6846e356286a4442a8ec2f9c4154",
+      "original_sha256": "84c0adda603943d7f90870d530471069fb4e2cbcab0ecf2cb96dd822bc9307d2",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/test_machine.py",
+      "sha256": "84c0adda603943d7f90870d530471069fb4e2cbcab0ecf2cb96dd822bc9307d2"
+    },
+    {
+      "adapted": false,
+      "bytes": 18867,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "8be33b0cd6d1ba86d883551a61f61455aff7fe5f",
+      "original_sha256": "aef94356a68430faa046dd925b923d099bcdbe1c146dab01e666f41abb59acac",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/test_natural.py",
+      "sha256": "aef94356a68430faa046dd925b923d099bcdbe1c146dab01e666f41abb59acac"
+    },
+    {
+      "adapted": false,
+      "bytes": 5961,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "7d830b625ebbf4871e8bab6d66cc17b836cdbc31",
+      "original_sha256": "5e11498bf83eb2481929a417f6b9927d45454b79f4969128af22333796538dd0",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/test_occurrences.py",
+      "sha256": "5e11498bf83eb2481929a417f6b9927d45454b79f4969128af22333796538dd0"
+    },
+    {
+      "adapted": false,
+      "bytes": 912,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "ae57e3688ce6763766f545ab3ebeb79ae5336ef8",
+      "original_sha256": "c1dffee77db98625debe39b47538e1d2f3b7956cbc7bcd6ed9363701b2177cfa",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/vendor/LICENSE",
+      "sha256": "c1dffee77db98625debe39b47538e1d2f3b7956cbc7bcd6ed9363701b2177cfa"
+    },
+    {
+      "adapted": false,
+      "bytes": 13339,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "f226ca44f524995fc7dcda108c50f94a07240582",
+      "original_sha256": "02b73292cd9e38501bce7de8695802a9f1dada34e6a45877fbd3519b03587a05",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/vendor/TMBuilder.py",
+      "sha256": "02b73292cd9e38501bce7de8695802a9f1dada34e6a45877fbd3519b03587a05"
+    },
+    {
+      "adapted": false,
+      "bytes": 1381,
+      "original_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+      "original_git_blob": "85ceb39189ce073b7af53d8d00ec6777d7afa39e",
+      "original_sha256": "fb1a2509165c4706a81ad6ecff504d35b75140051541cb3605c03d91dd21f1b1",
+      "path": "reproducibility/source/problems/np-conp-formulations/selector/vendor/pr44/shared/vendor/tm.py",
+      "sha256": "fb1a2509165c4706a81ad6ecff504d35b75140051541cb3605c03d91dd21f1b1"
+    }
+  ],
+  "format": "np-conp-266-selected-public-source-manifest-v1",
+  "producer_commit": "b6fb1987da70ac826fd8275e7726ee4e536af089",
+  "producer_tree": "e02554432cb76871bfd2ac6e339c342bdc0e3726",
+  "review_delivery_commit": "7a83222960fd1314668246fb5b4f549bea546059",
+  "review_delivery_tree": "4530a51482412198ce56dba39f212281920df944",
+  "scope": "Selected fixed producer, complete construction artifacts, proof dependencies and selected finite checks; no full historical experiment archive or private Git history is required.",
+  "selected_case": "reuse_clock_roles_zero_geometry"
+}

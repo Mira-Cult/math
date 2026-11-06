@@ -1,0 +1,285 @@
+{
+  "B": 1,
+  "B_event_convention": "machine.tm exits from B before applying its row",
+  "allocation": true,
+  "allocation_mode": "dsatur",
+  "alphabet": [
+    0,
+    1
+  ],
+  "backend": "operation-specific selectors with freshly derived zero-run dispatcher",
+  "blank": 0,
+  "bootstrap_bank_anchor_after_translation": 3824,
+  "bootstrap_verified_bounds": true,
+  "bootstrap_zero_register_capacity": 1909,
+  "consumed_seed": false,
+  "contextual_tree_certificate_scope": "original context pass to zero-context input; zero-context specialization and cleanup to pre-control-grammar",
+  "discovery_performed": false,
+  "dispatcher_sha256": "8f6f077fbd5c27c43ebffc1605580482650bb86c1057d2821981f0c6ce7ec190",
+  "event_convention": "events.tm sixth column marks the applied transition",
+  "event_rows": 538,
+  "event_states": 269,
+  "event_table_sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+  "format": "np-conp-control-region-complete-experiment-v1",
+  "generator_sha256": "60a602bb9946ed5f270bba41ceeaf68b0d36d73123deeac0d40488c7648d35ec",
+  "half_pairs": true,
+  "halt_states_excluded": 0,
+  "head": 0,
+  "inherited_producer": {
+    "applicability.py": "2b9ef4f23e6a61feeb676ad36a47b6043d4a1da4168004ed96ee05fe812c8fb9",
+    "build.py": "d3db3fb4d2ed7ec20665077eeb4dfeb36d8fd2017f4584530e86672967f4d28a",
+    "provenance.json": "bee67dee8b89bdb8ce14af1bbb7d5597d9d779297de09a3436e77187243d9254"
+  },
+  "initialization_proof_status": "new exact blank-entry evidence required",
+  "max_leaf_path": 29,
+  "moves": [
+    "L",
+    "R"
+  ],
+  "native_runtime": {
+    "entry": "ordinary prepared path; native old-ABI gap with one separator zero",
+    "format": "np-conp-native-half-runtime-v1",
+    "native_kernel_states": 15,
+    "native_operation_entries": 4,
+    "native_preparation_states": 1,
+    "native_selector_states": 5,
+    "operands": [
+      "$coalesced.9",
+      "$coalesced.0",
+      "$coalesced.1",
+      "$coalesced.2"
+    ],
+    "operation_names": [
+      "3.$native-half:$coalesced.9.decnz",
+      "3.$native-half:$coalesced.0.decnz",
+      "3.$native-half:$coalesced.1.decnz",
+      "3.$native-half:$coalesced.2.decnz"
+    ],
+    "result": "x <- floor(x/2); success iff x was odd; other blocks unchanged",
+    "selected_entry": "head at first 1 of block 1^(x+1)",
+    "unbounded": "all naturals; each cycle removes two remaining input units"
+  },
+  "options": {
+    "consume": true,
+    "digits": true,
+    "forward_results": false,
+    "pooled_temporaries": true,
+    "share": true,
+    "small_compare": false,
+    "small_half": true,
+    "small_ops": true,
+    "small_power": false,
+    "term_lookup": true,
+    "var_guards": true
+  },
+  "overflow_lowering": null,
+  "producer_sources": {
+    "build_live.py": "c7ee117d3ddd3197ed802d136e8b6fa6412e17841d73ed063d8e7e490c57fbd6",
+    "half_pairs.py": "e21401756a36471e478b8256506dd560e60f42b967aff06e6f6f13cd5d5cb33b",
+    "live_registers.py": "b6a7d2effbcd9feb03c6720b7ad7acc7e8cbebdbef6b1201a08b22e536212945"
+  },
+  "profile": {
+    "blank bootstrap": 5,
+    "compiled arithmetic and control": 154,
+    "event adapter": 2,
+    "register operation entries": 28,
+    "remaining engine and dispatch": 73,
+    "return delimiter scan": 7,
+    "totalization": 1
+  },
+  "proof_status": "experimental complete table; source proof and independent review required before promotion",
+  "raw_states": 272,
+  "raw_table_sha256": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d",
+  "register_order": [
+    "$coalesced.9",
+    "$coalesced.0",
+    "$coalesced.1",
+    "$coalesced.2",
+    "$coalesced.3",
+    "$coalesced.4",
+    "$coalesced.5",
+    "$coalesced.6",
+    "$coalesced.7",
+    "$coalesced.8",
+    "$coalesced.10",
+    "$coalesced.11"
+  ],
+  "registers": 12,
+  "reuse_returns": true,
+  "review_status": "unreviewed complete experiment; source and physical refinement require new review",
+  "rows": 540,
+  "source_changed": true,
+  "source_entry": "main().0",
+  "source_entry_final_state": 261,
+  "source_entry_raw_state": 263,
+  "source_identical_to_284": false,
+  "source_lowering": {
+    "clock": true,
+    "consume": true,
+    "seed": true
+  },
+  "source_name": "control_regions/sources/reuse_clock_roles.py",
+  "source_proof": "control_regions/PROOF.md",
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+  "start": 0,
+  "states": 270,
+  "table_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+  "tape_geometry": "two-way infinite",
+  "totalization_requests": [],
+  "tuple_positivity": {
+    "main": {
+      "divisors": [
+        {
+          "expression": "2",
+          "line": 17,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 10,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 11,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 15,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 13,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 32,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 43,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 47,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 72,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 83,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 87,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 30,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 38,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 40,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 42,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 45,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 70,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 78,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 80,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 82,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 85,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 36,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 37,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 44,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 44,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 76,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 77,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 84,
+          "lower_bound": 2
+        },
+        {
+          "expression": "2",
+          "line": 84,
+          "lower_bound": 2
+        }
+      ],
+      "tuple_call_arguments": "retained before assignments in analysis-only AST",
+      "tuple_call_outputs": "unknown naturals; lower bound zero",
+      "variables": {}
+    }
+  },
+  "zero_context_specialization": true,
+  "zero_pop_lowering": false
+}

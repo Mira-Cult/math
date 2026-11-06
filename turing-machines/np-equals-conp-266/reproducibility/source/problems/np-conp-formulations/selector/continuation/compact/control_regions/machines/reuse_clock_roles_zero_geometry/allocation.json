@@ -1,0 +1,3238 @@
+{
+  "format": "source-liveness-allocation-v1",
+  "frame_sizes": {
+    "main": 11
+  },
+  "functions": {
+    "main": {
+      "cfg": {
+        "closed_clock_interference": [
+          {
+            "line": 53,
+            "operands": [
+              "n",
+              "e",
+              "j"
+            ],
+            "reason": "closed clock resets output before its last master read; three simultaneous source operands"
+          }
+        ],
+        "closed_seed_interference": [
+          {
+            "line": 55,
+            "operands": [
+              "branch",
+              "steps",
+              "n"
+            ],
+            "reason": "simultaneous certificate count, clock restore counter and borrowed clock"
+          }
+        ],
+        "entry": 94,
+        "exit": 0,
+        "nodes": [
+          {
+            "defines": [],
+            "kind": "exit",
+            "line": 0,
+            "live_in": [],
+            "live_out": [],
+            "successors": [],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 5,
+            "live_in": [
+              "j"
+            ],
+            "live_out": [
+              "j"
+            ],
+            "successors": [
+              93,
+              0
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "j"
+            ],
+            "kind": "augment",
+            "line": 98,
+            "live_in": [
+              "j"
+            ],
+            "live_out": [
+              "j"
+            ],
+            "successors": [
+              1
+            ],
+            "uses": [
+              "j"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 8,
+            "live_in": [
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "i",
+              "j"
+            ],
+            "successors": [
+              91,
+              2
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "i"
+            ],
+            "kind": "augment",
+            "line": 97,
+            "live_in": [
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "i",
+              "j"
+            ],
+            "successors": [
+              3
+            ],
+            "uses": [
+              "i"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "break",
+            "line": 96,
+            "live_in": [
+              "j"
+            ],
+            "live_out": [
+              "j"
+            ],
+            "successors": [
+              2
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 95,
+            "live_in": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "i",
+              "j"
+            ],
+            "successors": [
+              5,
+              4
+            ],
+            "uses": [
+              "expected"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 60,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              40,
+              6
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "break",
+            "line": 94,
+            "live_in": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "successors": [
+              6
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "expected"
+            ],
+            "kind": "augment",
+            "line": 91,
+            "live_in": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "successors": [
+              8
+            ],
+            "uses": [
+              "expected"
+            ]
+          },
+          {
+            "defines": [
+              "expected"
+            ],
+            "kind": "assign",
+            "line": 93,
+            "live_in": [
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "successors": [
+              8
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 90,
+            "live_in": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j"
+            ],
+            "successors": [
+              9,
+              10
+            ],
+            "uses": [
+              "expected"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 89,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "state"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              11,
+              7
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 66,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              35,
+              12
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "left"
+            ],
+            "kind": "assign",
+            "line": 88,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              13
+            ],
+            "uses": [
+              "left",
+              "write"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 87,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              14
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "left",
+              "right"
+            ],
+            "kind": "assign",
+            "line": 86,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              15
+            ],
+            "uses": [
+              "left",
+              "right"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 85,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              16,
+              15
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "state",
+              "write"
+            ],
+            "kind": "assign",
+            "line": 84,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              17
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 83,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              18
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 80,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              22,
+              19
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 82,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              20
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 81,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              21
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "assign",
+            "line": 79,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              20
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 74,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              28,
+              23
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 78,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              24
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 76,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              27,
+              25
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 77,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              26
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 75,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              26
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "assign",
+            "line": 73,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              24
+            ],
+            "uses": [
+              "e"
+            ]
+          },
+          {
+            "defines": [
+              "right"
+            ],
+            "kind": "augment",
+            "line": 72,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              29
+            ],
+            "uses": [
+              "right"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 71,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              30
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 70,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              31,
+              30
+            ],
+            "uses": [
+              "right"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 69,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              32
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 68,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              33,
+              13
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "augment",
+            "line": 67,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              34
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "assign",
+            "line": 65,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              13
+            ],
+            "uses": [
+              "n"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "assign",
+            "line": 64,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state"
+            ],
+            "successors": [
+              36
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "right"
+            ],
+            "kind": "assign",
+            "line": 63,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right"
+            ],
+            "successors": [
+              37
+            ],
+            "uses": [
+              "i"
+            ]
+          },
+          {
+            "defines": [
+              "left"
+            ],
+            "kind": "assign",
+            "line": 62,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n"
+            ],
+            "successors": [
+              38
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [
+              "branch"
+            ],
+            "kind": "augment",
+            "line": 61,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              39
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 57,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "successors": [
+              43,
+              7
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "branch"
+            ],
+            "kind": "augment",
+            "line": 59,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "successors": [
+              41
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "augment",
+            "line": 58,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "successors": [
+              42
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "assign",
+            "line": 56,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "steps"
+            ],
+            "successors": [
+              41
+            ],
+            "uses": [
+              "n"
+            ]
+          },
+          {
+            "defines": [
+              "branch"
+            ],
+            "kind": "assign",
+            "line": 55,
+            "live_in": [
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              44
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "e"
+            ],
+            "kind": "assign",
+            "line": 54,
+            "live_in": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              45
+            ],
+            "uses": [
+              "j"
+            ]
+          },
+          {
+            "defines": [
+              "n"
+            ],
+            "kind": "assign",
+            "line": 53,
+            "live_in": [
+              "e",
+              "expected",
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              46
+            ],
+            "uses": [
+              "e",
+              "j"
+            ]
+          },
+          {
+            "defines": [
+              "e"
+            ],
+            "kind": "assign",
+            "line": 52,
+            "live_in": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "e",
+              "expected",
+              "i",
+              "j"
+            ],
+            "successors": [
+              47
+            ],
+            "uses": [
+              "n"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 20,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              80,
+              48
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "break",
+            "line": 51,
+            "live_in": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              48
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "expected"
+            ],
+            "kind": "assign",
+            "line": 50,
+            "live_in": [
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              50
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 49,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n",
+              "state"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              51,
+              49
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 26,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              75,
+              52
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "left"
+            ],
+            "kind": "assign",
+            "line": 48,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              53
+            ],
+            "uses": [
+              "left",
+              "write"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 47,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              54
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "left",
+              "right"
+            ],
+            "kind": "assign",
+            "line": 46,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              55
+            ],
+            "uses": [
+              "left",
+              "right"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 45,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              56,
+              55
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "state",
+              "write"
+            ],
+            "kind": "assign",
+            "line": 44,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps",
+              "write"
+            ],
+            "successors": [
+              57
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 43,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              58
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 40,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              62,
+              59
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 42,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              60
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 41,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              61
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "assign",
+            "line": 39,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              60
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 34,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              68,
+              63
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 38,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              64
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 36,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              67,
+              65
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "augment",
+            "line": 37,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              66
+            ],
+            "uses": [
+              "digit"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 35,
+            "live_in": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              66
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "digit"
+            ],
+            "kind": "assign",
+            "line": 33,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "digit",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              64
+            ],
+            "uses": [
+              "e"
+            ]
+          },
+          {
+            "defines": [
+              "right"
+            ],
+            "kind": "augment",
+            "line": 32,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              69
+            ],
+            "uses": [
+              "right"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 31,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              70
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 30,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              71,
+              70
+            ],
+            "uses": [
+              "right"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "augment",
+            "line": 29,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              72
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 28,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              73,
+              53
+            ],
+            "uses": [
+              "state"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "augment",
+            "line": 27,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              74
+            ],
+            "uses": [
+              "steps"
+            ]
+          },
+          {
+            "defines": [
+              "steps"
+            ],
+            "kind": "assign",
+            "line": 25,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state",
+              "steps"
+            ],
+            "successors": [
+              53
+            ],
+            "uses": [
+              "n"
+            ]
+          },
+          {
+            "defines": [
+              "state"
+            ],
+            "kind": "assign",
+            "line": 24,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right",
+              "state"
+            ],
+            "successors": [
+              76
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "right"
+            ],
+            "kind": "assign",
+            "line": 23,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n",
+              "right"
+            ],
+            "successors": [
+              77
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "left"
+            ],
+            "kind": "assign",
+            "line": 22,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "left",
+              "n"
+            ],
+            "successors": [
+              78
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [
+              "branch"
+            ],
+            "kind": "augment",
+            "line": 21,
+            "live_in": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              79
+            ],
+            "uses": [
+              "branch"
+            ]
+          },
+          {
+            "defines": [
+              "branch"
+            ],
+            "kind": "assign",
+            "line": 19,
+            "live_in": [
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "branch",
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              49
+            ],
+            "uses": [
+              "e"
+            ]
+          },
+          {
+            "defines": [
+              "expected"
+            ],
+            "kind": "assign",
+            "line": 18,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n"
+            ],
+            "live_out": [
+              "e",
+              "expected",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              81
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "scan"
+            ],
+            "kind": "augment",
+            "line": 17,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n"
+            ],
+            "successors": [
+              82
+            ],
+            "uses": [
+              "scan"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "while",
+            "line": 10,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              90,
+              83
+            ],
+            "uses": [
+              "scan"
+            ]
+          },
+          {
+            "defines": [
+              "n"
+            ],
+            "kind": "augment",
+            "line": 16,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              84
+            ],
+            "uses": [
+              "n"
+            ]
+          },
+          {
+            "defines": [
+              "scan"
+            ],
+            "kind": "augment",
+            "line": 15,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              85
+            ],
+            "uses": [
+              "scan"
+            ]
+          },
+          {
+            "defines": [
+              "e"
+            ],
+            "kind": "augment",
+            "line": 14,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              86
+            ],
+            "uses": [
+              "e"
+            ]
+          },
+          {
+            "defines": [],
+            "kind": "if",
+            "line": 13,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              87,
+              86
+            ],
+            "uses": [
+              "scan"
+            ]
+          },
+          {
+            "defines": [
+              "e"
+            ],
+            "kind": "augment",
+            "line": 12,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              88
+            ],
+            "uses": [
+              "e"
+            ]
+          },
+          {
+            "defines": [
+              "scan"
+            ],
+            "kind": "augment",
+            "line": 11,
+            "live_in": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              89
+            ],
+            "uses": [
+              "scan"
+            ]
+          },
+          {
+            "defines": [
+              "e",
+              "n",
+              "scan"
+            ],
+            "kind": "assign",
+            "line": 9,
+            "live_in": [
+              "i",
+              "j"
+            ],
+            "live_out": [
+              "e",
+              "i",
+              "j",
+              "n",
+              "scan"
+            ],
+            "successors": [
+              84
+            ],
+            "uses": [
+              "i"
+            ]
+          },
+          {
+            "defines": [
+              "i"
+            ],
+            "kind": "assign",
+            "line": 7,
+            "live_in": [
+              "j"
+            ],
+            "live_out": [
+              "i",
+              "j"
+            ],
+            "successors": [
+              3
+            ],
+            "uses": []
+          },
+          {
+            "defines": [],
+            "kind": "beep",
+            "line": 6,
+            "live_in": [
+              "j"
+            ],
+            "live_out": [
+              "j"
+            ],
+            "successors": [
+              92
+            ],
+            "uses": []
+          },
+          {
+            "defines": [
+              "j"
+            ],
+            "kind": "assign",
+            "line": 4,
+            "live_in": [],
+            "live_out": [
+              "j"
+            ],
+            "successors": [
+              1
+            ],
+            "uses": []
+          }
+        ]
+      },
+      "colours": {
+        "branch": 5,
+        "digit": 10,
+        "e": 3,
+        "expected": 4,
+        "i": 1,
+        "j": 0,
+        "left": 6,
+        "n": 2,
+        "right": 7,
+        "scan": 4,
+        "state": 8,
+        "steps": 9,
+        "write": 10
+      },
+      "graph": {
+        "branch": [
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "state",
+          "steps",
+          "write"
+        ],
+        "digit": [
+          "branch",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "state",
+          "steps"
+        ],
+        "e": [
+          "branch",
+          "digit",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "scan",
+          "state",
+          "steps",
+          "write"
+        ],
+        "expected": [
+          "branch",
+          "digit",
+          "e",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "state",
+          "steps",
+          "write"
+        ],
+        "i": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "j",
+          "left",
+          "n",
+          "right",
+          "scan",
+          "state",
+          "steps",
+          "write"
+        ],
+        "j": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "left",
+          "n",
+          "right",
+          "scan",
+          "state",
+          "steps",
+          "write"
+        ],
+        "left": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "n",
+          "right",
+          "state",
+          "steps",
+          "write"
+        ],
+        "n": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "right",
+          "scan",
+          "state",
+          "steps",
+          "write"
+        ],
+        "right": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "state",
+          "steps",
+          "write"
+        ],
+        "scan": [
+          "e",
+          "i",
+          "j",
+          "n"
+        ],
+        "state": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "steps",
+          "write"
+        ],
+        "steps": [
+          "branch",
+          "digit",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "state",
+          "write"
+        ],
+        "write": [
+          "branch",
+          "e",
+          "expected",
+          "i",
+          "j",
+          "left",
+          "n",
+          "right",
+          "state",
+          "steps"
+        ]
+      },
+      "parameters": [],
+      "retained_resets": [],
+      "returns": []
+    }
+  },
+  "heights": {
+    "main": 0
+  },
+  "logical_registers": 21,
+  "mapping": {
+    "$digit.index": "$digit.index",
+    "$micro.a": "$micro.a",
+    "$micro.b": "$micro.b",
+    "$micro.c": "$micro.c",
+    "$micro.q": "$micro.q",
+    "$micro.r": "$micro.r",
+    "$pool0.tmp0": "$pool0.tmp0",
+    "$scratch.copy": "$scratch.copy",
+    "main.branch": "$liveframe.0.5",
+    "main.digit": "$liveframe.0.10",
+    "main.e": "$liveframe.0.3",
+    "main.expected": "$liveframe.0.4",
+    "main.i": "$liveframe.0.1",
+    "main.j": "$liveframe.0.0",
+    "main.left": "$liveframe.0.6",
+    "main.n": "$liveframe.0.2",
+    "main.right": "$liveframe.0.7",
+    "main.scan": "$liveframe.0.4",
+    "main.state": "$liveframe.0.8",
+    "main.steps": "$liveframe.0.9",
+    "main.write": "$liveframe.0.10"
+  },
+  "mode": "dsatur",
+  "physical_registers": 19,
+  "reuse_returns": true
+}

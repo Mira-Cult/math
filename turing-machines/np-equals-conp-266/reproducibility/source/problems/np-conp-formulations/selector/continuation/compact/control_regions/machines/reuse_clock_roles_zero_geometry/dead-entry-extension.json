@@ -1,0 +1,24 @@
+{
+  "added_rows": [],
+  "added_states": [],
+  "after_named_sha256": "11cf1176d00828455c6c6c7fbb809dbe93d1a6deec8dbe34235d9c627f42aa26",
+  "before_named_sha256": "11cf1176d00828455c6c6c7fbb809dbe93d1a6deec8dbe34235d9c627f42aa26",
+  "equivalence": "identical old-state trajectories before subsequent selector representation change",
+  "format": "np-conp-dead-register-entry-extension-v1",
+  "old_incoming_to_added_states": 0,
+  "original_rows": 553,
+  "register_order": [
+    "$coalesced.9",
+    "$coalesced.0",
+    "$coalesced.1",
+    "$coalesced.2",
+    "$coalesced.3",
+    "$coalesced.4",
+    "$coalesced.5",
+    "$coalesced.6",
+    "$coalesced.7",
+    "$coalesced.8",
+    "$coalesced.10",
+    "$coalesced.11"
+  ]
+}

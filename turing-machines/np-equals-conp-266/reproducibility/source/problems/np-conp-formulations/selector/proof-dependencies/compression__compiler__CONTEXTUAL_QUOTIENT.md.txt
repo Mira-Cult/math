@@ -1,0 +1,149 @@
+# A checked contextual quotient for the blank run
+
+## Result and boundary
+
+The unchanged 707-state Horn source and its original runtime admit a **702-state**
+contextual quotient. The shared-selector runtime admits 697 states with the same
+analysis. The integrated source and compiler recipe selected by the parent work
+measured **651 -> 643 states**. These are complete linked tables, not fragment
+sums. The exact selected integrated artifact and its evidence are maintained by
+the parent build; the 707-source comparison is retained here as a control.
+
+The transformation preserves every physical transition's write, move and B-exit
+label along the admitted blank run, under an explicit state map. Therefore it
+preserves physical event times as well as eventual silence. It is **not**
+all-configuration equivalence. `check_contextual_quotient.py` checks the supplied
+abstract invariant and map without rerunning fixed-point or partition search.
+The source/runtime refinement theorem and the exact blank-initialization lemma
+remain separate premises, checked and proved by the complete construction.
+No proof-assistant or kernel certification is claimed.
+
+## Unfolded finite occurrence graph
+
+The physical source grammar is a finite binary DAG. Unfolding its shared nodes
+produces finitely many primitive occurrences, each identified by the binary
+control path `110s`. Distinct occurrences of one shared grammar node are kept
+separate; their register invariants may differ. This distinction is necessary:
+constant facts at one invocation do not establish facts at every invocation.
+
+A path resolves to one of INC, DECNZ, BEEP, `break(k)` or `continue(k)`. Its
+successor paths use the inherited lexical semantics: successful INC/DECNZ/BEEP
+carry to the next zero ancestor; zero DECNZ skips one further zero; break skips
+its explicit number of zero ancestors; continue clears its explicit number of
+one ancestors. Missing suffix bits are zero and a whole-root wrap restarts at
+`110`. The independent tuple-path interpreter reconstructs these successors.
+
+There is no bounded runtime execution in this graph construction. The graph is
+finite because the source grammar is finite, even though its execution can have
+unbounded register values and infinitely many steps.
+
+## Register abstract domain
+
+Each register is represented by any nonempty union of these three classes:
+
+| Bit mask | Concrete class |
+|---|---|
+| 1 | `{0}` |
+| 2 | `{1}` |
+| 4 | `{2,3,...}` |
+
+Bitwise OR denotes union. A `null` occurrence means unreachable; it does not
+mean zero-valued registers. A vector of masks describes a Cartesian product,
+so the analysis is conservative and need not preserve correlations.
+
+At the first clean source entry every counted register is zero. The supplied
+invariant must include that vector. INC maps zero to one and either positive
+class to the class at least two. DECNZ has two successors: its zero branch is
+possible precisely when zero is admitted and leaves zero; its positive branch
+maps one to zero and maps at least two to the union of one and at least two.
+Control-only operations and BEEP leave the vector unchanged.
+
+The producer joins incoming vectors and iterates these transfers to a fixed
+point. The verifier does not trust that computation. For every supplied reached
+occurrence and each possible successor, it checks that the transfer image is
+contained in the supplied successor vector. The verifier computes transfers by
+separately enumerating representatives 0, 1, 2 and 3. Representatives 2 and 3
+cover the two possible decrement classes from the unbounded `>=2` class; all
+larger values have the same abstract images. This is a symbolic class argument,
+not an assumption that register values are bounded by three.
+
+**Invariant lemma.** Induct on primitive steps from the zero-register entry.
+The entry vector is included. If a concrete valuation lies in one claimed
+vector, its next primitive branch is among the checked successors and the
+concrete resulting valuation lies in that successor's vector. The post-fixed-
+point inclusion therefore covers every concrete primitive execution forever.
+No `null` occurrence can be reached. Leastness or optimality of the certificate
+is unnecessary; larger valid invariants are accepted and merely save less.
+
+## From unreachable occurrences to unreachable physical rows
+
+For every supplied reached occurrence, retain every grammar state/read row on
+its path from the root. A shared row is discarded only if **no reached occurrence
+at any invocation** uses it. The verifier computes this union independently.
+It also validates each abstract binary grammar edge against its exact emitted
+raw transition, including the different left/right formulas for break and
+continue. A rehashed but unrelated grammar cannot justify ignoring rows in an
+unchanged table.
+
+The clean-runtime theorem states that grammar dispatch visits precisely the
+prefixes of the resolved primitive path. Preparation redispatches to the same
+path. Hence the invariant lemma proves that the excluded grammar rows are never
+read in a clean source execution. Before the first source entry, the finite
+bootstrap uses only runtime states; the complete build verifies its exact
+trajectory and initial configuration. No unproved bootstrap behavior is inferred
+from the source-level analysis.
+
+After removing those impossible edges, ordinary graph reachability from the
+blank start can additionally exclude physical states. Rows of those unreachable
+states may also be ignored. The verifier recomputes this finite closure and
+requires the certificate's ignored-row list to equal the justified list exactly.
+It does not accept caller assertions of extra unreachable rows.
+
+## Partial-row quotient and physical simulation
+
+The producer starts from the exact event-colored quotient, then greedily tries
+compatible merges involving classes with an ignored row. A merge propagates
+required equalities of successors. Conflicting writes, moves or B colors reject
+it. Finally the ordinary exact quotient is applied. This search is only a way
+to find a map; it is not trusted or claimed optimal.
+
+The certificate contains a total, onto state map `h`. The verifier checks:
+
+1. The exact source grammar and raw/selected table digests match.
+2. `h` sends the raw start to the selected start and B to B.
+3. A state is B if and only if its image is B.
+4. For every raw row not justified as unreachable, the selected row at
+   `(h(q), read)` has the same write and move and target `h(target)`.
+5. The selected table is total and uses only binary writes and L/R moves.
+
+**Physical simulation lemma.** Start the two machines on the same blank tape
+with states related by `h`. At each time, the raw run cannot use an ignored row,
+by the bootstrap and invariant arguments above. The checked row equality gives
+the same tape update and head move, and relates the next states. Induction on
+physical time proves exact tape/head equality and related states at every step.
+The B-color check gives the same event indicator at every step. Totality and
+infinite running are inherited from the complete raw machine.
+
+This lemma is stronger than preservation of eventual silence on the admitted
+blank run, but says nothing about arbitrary tapes or alternate entry states.
+The output cannot be advertised as an all-input quotient.
+
+## Reproducibility, adversarial checks and ownership
+
+`contextual_quotient.apply(builder, raw, names)` returns a selected complete
+machine and certificate. `check_contextual_quotient.check(builder, raw, selected,
+names, certificate)` independently replays the certificate. The latter never
+runs the producer's abstract search or partition search; the test suite disables
+both to check that boundary.
+
+The tests also reject omitted entry states, unsound invariant entries, extra
+ignored bootstrap rows, missing or out-of-range map entries, B/silent merges,
+rehashed wrong physical rows, and rehashed grammar/table mismatches. Complete
+small fixtures are compared transition by transition from translated clean
+zero-register entries. These are finite implementation tests; the two lemmas
+above provide the unbounded argument and state their external proof premises.
+
+This adapter is new compiler research local to PR44. It does not modify the
+historical runtime or implicitly migrate its semantics to Python Beaver.
+A reusable package contribution requires binding to that package's actual
+control/runtime interface and reviewing that boundary separately.

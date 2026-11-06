@@ -1,0 +1,582 @@
+# Portable correctness proof for the frozen natural-register compiler
+
+## 1. Status, exact implementation, and theorem
+
+This is a conventional mathematical proof, newly assembled for the portable
+Order 18 package from the actual frozen implementations. It is not a Lean
+development, a proof-assistant certificate, or a theorem about an unspecified
+universal compiler. A separate implementation reviewer must review these new
+proof bytes before the package freeze.
+
+`COMPILER_BINDING.json` supplies full SHA-256 identities for the local modules.
+The proof concerns the following chain, with no runtime dependency on an old
+repository or a preloaded interpreter:
+
+1. `natural.py`: finite natural-valued source to unary-register/control grammar.
+2. `optimized_natural.py`: the stated arithmetic and temporary optimizations.
+3. `assigned_natural.py`: conservative entry-reset omission.
+4. `namespace_safe.py` and `frame_pool.py`: safe internal names and active-frame
+   storage sharing.
+5. `literal_assign.py`: direct pure-literal assignments and returns.
+6. `vendor/TMBuilder.py`, `vendor/tm.py`, and `backend.py`: complete binary tape
+   rows, counted initialization, exit-based beep adapter, and totalization.
+7. Canonical state renaming and `quotient.py`: an exact beep-colored quotient.
+
+The common build uses the live repaired frame pass, SHA-256
+`6f4f3494d698e7abd05e5c68231644e7320386f8cf8fa88fad028c1946ba6a35`,
+through `LiteralAssignBuilder`, with temporary pooling and grammar sharing.
+The safe namespace wrapper is
+`3397fdb8b5d21ac667da04f189ea55ccdb73fdeb59853de4848196fb8700e827`.
+The older standalone optimizer has a narrower namespace domain and is not
+substitutable for this complete chain.
+
+The preserved first baseline uses the shorter chain `NaturalBuilder` followed
+by the literal initializer, beep adapter, totalization and canonical renaming.
+Sections 3–4 and 8–15 apply to it directly; Sections 5–7 are optional compiler
+transformations, not presumed stages of that baseline. Its source names do
+not collide with the baseline scratch or temporary namespaces. Its final
+table is not passed through the quotient stage.
+
+**Compiler theorem.** Let S be a finite source in the admitted semantics below,
+with the designated entry `main()` taking no arguments and never returning.
+Require an acyclic reachable call graph, correct expression/result arities,
+the frame-alias and grammar-closure conditions below, a generated table that
+instantiates the specified transition patterns, and a verified blank-entry
+initialization lemma for that table. Then every finite source computation
+has a finite physical simulation. It preserves procedure results, values of
+source-defined/live active variables, and the number and order of source beep
+events. One source beep produces exactly one exit from B; no other source
+operation produces a beep. For the research controllers, unbounded source
+progress therefore yields continuing physical execution, including during
+eventual silence. Every physical state and transition belongs to the supplied
+counted table.
+
+The theorem's source-side hypotheses must be checked for each artifact.
+`COMPILER_APPLICABILITY.md` does that for its explicitly bound sources. A source
+change is not admitted merely because the same compiler files were used.
+
+The expression, procedure-result and finite-prefix simulation contracts also
+apply to returning procedures, up to the root's first return. A returning root
+is physically restarted by the backend root continuation. Moreover,
+`NaturalBuilder.main` with a different entry or supplied entry arguments adds
+a fixture wrapper with its own beep. A complete-run event theorem for either
+case must include that wrapper explicitly; no such extra event is identified
+with an event of the unwrapped procedure. The research sources use exactly the
+nonreturning, argument-free `main()` case above.
+
+## 2. Admitted source semantics
+
+Every variable is a mathematical natural. Addition, multiplication and powers
+have their ordinary meanings, with `0**0=1`; subtraction saturates at zero.
+Division by zero has the explicit meanings quotient zero and remainder equal
+to the dividend. Comparisons and Boolean operators return 0 or 1. `and` and
+`or` short-circuit left to right but return normalized truth values. These
+are the compiler's defined semantics, not all of Python's semantics: Python's
+operand-returning Boolean operators, negative subtraction, division errors,
+and unbound-local errors must not be silently imported into this theorem.
+The research sources separately prove positive divisors, nonnegative
+subtractions, initialized reads and matching Boolean uses, so their Python
+reference executions agree on the required inputs.
+
+Sources have finite, distinct, fixed-arity procedure definitions, natural
+constants, variable names, fixed positional calls, scalar or fixed tuple
+results, assignments, supported augmented assignments, `if`, `while`, scoped
+`break`/`continue`, `return`, and the distinguished statement `beep()`.
+The parser/compiler rejects unsupported constructs and recursive call cycles.
+The theorem requires distinct formal parameters and no user procedure
+redefinition of the event primitive. Names beginning `tmp` or `ret` are reserved
+for locals and parameters. Function-local annotations have no runtime meaning.
+There is no runtime reflection, dynamic procedure lookup, external state,
+source evaluation on the build host, or hidden input.
+
+At a baseline call, parameter values are supplied and other locals and internal
+return slots initially have value zero. A fallthrough returns the appropriate
+zero tuple. The reset-omission optimization changes dead storage, not this
+observable source convention. Source variables of inactive procedures are
+not separately observable. Each expression evaluates its operands once in
+the specified order; all right sides of a tuple assignment are evaluated
+before target writes, which then occur left to right.
+
+## 3. Unary primitives and arithmetic invariants
+
+The abstract runtime uses finitely many named registers, each holding an
+unbounded natural. Its instructions are INC, DECNZ, BEEP and resolved lexical
+transfers in a finite binary syntax DAG. INC increments and takes the normal
+continuation. DECNZ decrements a positive register and takes that continuation;
+on zero it leaves zero and skips the following structured subtree. Thus
+`[DECNZ(r), body]` is a conditional structured block. It is not an ordinary
+flat branch instruction. The source compiler uses an explicit lexical exit
+for a saturating single decrement; it does not use the legacy `.dec` wrapper.
+
+At every completed arithmetic boundary the global copy scratch is zero.
+Every allocated expression temporary is distinct from other simultaneously
+live temporaries and source storage; a free temporary is zero. Each macro
+requires its documented source/output/work operands to be distinct. The
+allocator and the later alias certificate establish these premises.
+
+The following contracts are proved over arbitrary naturals. Capital letters
+denote entry values. A repeated decrement consumes a finite natural counter,
+so each loop mentioned here terminates.
+
+| Macro | Contract and invariant |
+|---|---|
+| `clear(x)` | Repeated DECNZ leaves x=0. |
+| `move(o,x)` | After t units, x=X-t and o=O+t; final x=0, o=O+X. |
+| `copy(o,x)` | Move each unit of x to both o and zero scratch, then move scratch back to x. Final o=O+X, x=X, scratch=0. The three registers are distinct. |
+| `dec(x)` | The explicit paired lexical exit preserves the conditional shape and implements max(X-1,0). |
+| `if_nz`, `if_zero` | A positive guard unit is restored before either branch; the body runs exactly under the indicated condition. |
+| `truth(o,x)` | From o=0, consume x and leave o=[X>0]. |
+| `subtract(a,b)` | After t units, a=max(A-t,0), b=B-t; final a=max(A-B,0), b=0. |
+| `multiply(o,a,b)` | From o=0, add a to o once per consumed b unit using preserving copy. After t units o=tA; finally o=AB and a=b=0. |
+| `power(o,a,b,work)` | Start o=1. After t completed exponent iterations, o=A^t, a=A, b=B-t and work=0. Consume o copies of A into work and move back each iteration. Finally o=A^B, a=b=work=0. |
+
+For `divmod(q,r,a,b,c)`, start q=r=c=0. If B>0, fill c with B. After consuming
+t dividend units,
+
+`a=A-t, q=floor(t/B), r=t mod B, c=B-r, b=B`.
+
+One iteration increases r and decreases c; when c reaches zero, increment q,
+clear r and restore c to B. This establishes the invariant for t+1. At t=A,
+clear b and c, leaving the desired quotient/remainder and zero work. If B=0,
+the guarded loop is skipped and the remaining a is moved to r; q remains zero.
+
+Equality consumes paired units. If b becomes empty while a still has a unit,
+the lexical exit bypasses the equality assignment; otherwise equality holds
+exactly when both become empty. Both operands finish zero. Strict order tests
+the positivity of saturated b-a; nonstrict order uses b+1-a. Greater-than
+variants swap the operands. Every comparison consumes its operand temporaries
+and produces a Boolean.
+
+The arithmetic macros never recursively invoke copy while an earlier copy's
+scratch restoration is unfinished. Calls at the source level occur between
+completed emitted arithmetic operations. The scratch-zero invariant is
+therefore preserved under all compositions.
+
+## 4. Expressions, structured statements, and calls
+
+Induct on finite expression trees. A variable copies into a fresh zero
+temporary; a constant uses finitely many counted increments. Binary operators
+evaluate left, then right, into distinct temporaries and apply the preceding
+contracts. The result owns one live temporary; all other allocated work is
+zero before release. Negation consumes its operand and returns its zero test.
+Short-circuit Boolean code normalizes the first value, executes a later
+operand only when required, consumes its result into the retained Boolean,
+and leaves skipped-branch temporaries zero. Source events inside calls retain
+their original order.
+
+Assignments evaluate every right component before changing any source target,
+then clear and fill targets in source order. This includes swaps, self-dependent
+updates and repeated targets. An augmented assignment is its corresponding
+read/operator/write operation unless one of the separately proved pure rules
+below applies. An `if` consumes a normalized condition and chooses precisely
+one block. Its lexical exit bypasses the other block after completion.
+
+A nonconstant `while` regenerates and consumes its condition every iteration.
+On zero it exits; on one it executes the body and restarts at the condition.
+A constant-true loop has the corresponding explicit restart. Break and
+continue resolve to the innermost source-loop label, including through nested
+conditionals. Return evaluates every result, places it in the procedure's
+internal return slots, then exits the procedure's lexical region. The relative
+transfer implementation is proved in Section 8.
+
+Calls are nonrecursive and have fixed arity. All argument expressions finish
+in caller temporaries before any callee parameter is written. Parameters are
+then cleared and filled, and the callee body runs. On return, results transfer
+to fresh caller temporaries before another call may reuse the callee's frame.
+The finite acyclic call graph makes the induction on procedures well founded.
+It also bounds the number of simultaneously active frames by a fixed finite
+number independent of input. This is a property of the finite source, not a
+bounded runtime tape or integer representation.
+
+No expression contains an abrupt source return: those are statements after
+complete expressions. Conditions have been consumed before entering bodies;
+results have been moved before a return's lexical transfer. Consequently an
+early return or break cannot strand a live expression temporary. The finite
+allocation check that every compiled frame ends with an empty `used` set
+supports, but does not replace, this runtime-zero induction.
+
+## 5. Arithmetic specializations and literal lowering
+
+The optimizer recognizes only explicit, finite syntax patterns. For a literal
+c from 0 through 4, addition is c increments and subtraction c saturating
+decrements. Multiplication by zero still evaluates and consumes the other
+operand; multiplication by one preserves it; multiplication by 2,3,4 consumes
+one input unit and appends c output units. Moving a pure literal past the other
+operand of addition or multiplication cannot reorder any event.
+
+Equality to c uses c guarded decrements followed by a zero test and then
+clears the remainder; this succeeds exactly at c. For >c and <=c, inspect
+max(a-c,0); for >=c and <c with c>0, inspect max(a-(c-1),0). At c=0 the last
+two predicates are constant, but their operand is still evaluated and
+consumed. Negation of a comparison consumes the old result.
+
+`halve(q,r,a)` begins q=r=0. Each pair of consumed input units increments q
+and restores r to zero; a final single unit leaves r=1. It ends with
+`q=floor(A/2), r=A mod 2, a=0`. Dividing by four applies halving twice, clearing
+unused remainders. The power-of-two rule starts at one and doubles into zero
+work once per consumed exponent unit, giving `2^A` and zero work even when
+A=0.
+
+In-place literal augmented assignments are safe because the literal has no
+effect or variable read that could observe an intermediate value. The narrow
+fused tuple rule is exactly `r,x=x%2,x//2`, with distinct source names r and x
+and literal divisor 2. One halve consumes x, then the two fresh results replace
+r and x. No effectful or wider tuple pattern matches this rule. Same-frame
+injectivity preserves the distinctness of r and x after frame pooling.
+
+Consuming return transfer replaces copies of the callee's completed internal
+results by moves. Those slots are dead after transfer; each explicit later
+return overwrites them, and possible implicit-return paths retain their entry
+clears as proved below. Caller results remain live in a different temporary
+pool until consumed by the enclosing expression.
+
+`literal_assign.py` directly lowers only assignments and returns whose values
+are all literal naturals at most four. Clearing and incrementing destinations
+implements the same ordered writes, including repeated targets. Literal
+returns fill every return slot before the unchanged exit. Every other form
+falls back to the preceding compiler; no variable or call expression is
+reordered by this extension.
+
+## 6. Definite assignment and internal namespaces
+
+The entry-reset analysis begins with the parameter names definitely assigned.
+It checks an assignment's complete right side before adding targets; augmented
+assignment also reads its target. It conservatively checks all expression
+operands. Conditional normal exits are intersected; branches that return or
+transfer out do not contribute a nonexistent sequential exit. A loop's body
+is checked from the incoming set, and the loop exports only that incoming
+set. It never assumes a loop executes or terminates.
+
+Induction on these rules establishes: a local not recorded as possibly read
+before assignment is overwritten before its first possible read on every
+actual invocation. Its entry clear may be omitted. Required clears remain
+for all other locals. Return slots may omit clears only if no normal
+fallthrough is possible; otherwise clears remain to implement implicit zero
+results. This changes dead storage but not source observations.
+
+Temporary entry clears are also unnecessary by the free-zero invariant.
+Initialization makes them zero; every terminating procedure invocation leaves
+its temporary pool zero, including early returns. This statement concerns
+runtime values; it is stronger than the allocator merely releasing names.
+
+The safe wrapper installs global copy scratch as `$scratch.copy` before source
+compilation. Temporary names are `$pool<height>.tmp<index>` or, without pooling,
+`$temporary.<function>.tmp<index>`. These prefixes are impossible source Python
+identifiers. They cannot be captured by the baseline local-reset prefix scan.
+Internal result names cannot collide with source locals because `ret` is
+reserved. This repairs the historical `scratch.copy` and `pool0`/`pool1`
+collisions; those older standalone passes are not the subject of this theorem.
+
+## 7. Active-frame and temporary pooling
+
+Assign each reachable procedure the height zero if it is a leaf and otherwise
+one plus the maximum callee height. Every actual call strictly decreases
+height. Thus simultaneously active procedures have different heights.
+Temporary slots may be reused by procedures of equal height: distinct live
+temporaries within one procedure retain distinct indices, and a completed
+procedure leaves its entire temporary pool zero. Caller temporaries survive
+calls in a different height pool.
+
+Source-frame pooling happens after source/control compilation. Ownership is
+derived from runtime-body AST variable occurrences, excluding call targets
+and ignored annotations, together with parameters and internal result slots.
+It is not guessed from register-name prefixes. Every source register in a
+procedure receives an injective slot at that procedure's height. Distinct
+procedures of equal height may share slots. Scratch and temporaries retain
+their identities. Physical frame names start `$frame` and cannot collide
+with source names.
+
+The certificate must cover every logical register, be surjective onto the
+actual physical register list, be injective within each frame, preserve
+non-source identities, and permit an alias only between distinct procedures
+of equal height. Every actual call edge is checked. For a custom layout,
+the same conditions apply; a lower table count is not a substitute for them.
+
+Relate a source-defined/live register of an active frame to its physical slot,
+and each live temporary and scratch register by identity. This relation is
+injective over all simultaneously active values. Each renamed INC, DECNZ and
+arithmetic operand therefore denotes the same value. Arguments activate a
+callee only after their evaluation; completed results leave the callee before
+its bank can be reused. Induction over primitives and call/return boundaries
+proves preservation. Inactive frames and dead before-first-assignment slots
+can contain overwritten values: their contents are deliberately not included
+in the theorem's observations.
+
+The pass rewrites all primitive operands and rebuilds the physical selector
+bank. It does not change the finite control leaves or edges. No runtime stack,
+extra input, finite-width arithmetic, or invisible register allocator is
+introduced.
+
+## 8. Lexical resolution, sharing and binary composition
+
+Sequences use right association. In a binary pair, descent into the left child
+adds one zero ancestor and descent into the right child one one ancestor.
+The label resolver applies this recurrence through interned subroutines and
+normalizes finite singleton/multi-entry lists before calculating depths.
+Induction on the enclosing syntax therefore resolves each named exit or
+restart to exactly its source region. Interning an identical subtree changes
+its representation but not any unfolded occurrence or its local transfers.
+
+General consecutive-subsequence factoring needs an additional condition.
+Before sharing, every entry of every reachable sequence of length greater
+than two must be closed: each break or conditional-decrement failure has its
+needed zero ancestors inside that entry, and each restart has its required
+*cleared* one ancestors there. Ordinary INC/BEEP require no extra zero ancestor, DECNZ failure
+requires one, `_break.k` requires k zeros and `_continue.k` requires k ones.
+In a right-associated list, child i has i one ancestors and one zero ancestor
+unless it is the last child. This gives either the recursive demand checker
+or an equivalent independent local-ancestor check.
+
+A closed entry may finish normally or restart at its own beginning. In the
+boundary restart case, `_continue.0` can preserve the nearest outer one after
+crossing only zero edges; those zero edges select the entry's leftmost
+descendant. The demand counts cleared internal ones, not the final preserved
+one. This is the same entry restart after regrouping. A closed transfer cannot
+jump to a sibling's interior or skip past the entry's ordinary continuation.
+Grouping consecutive closed entries
+preserves internal transfers, their order and the outer continuation.
+Induction on the factored group, then on successive factoring operations,
+proves preservation. Agreement of flattened leaf lists would not establish
+this property. The actual build must run the closure check before factoring.
+
+After reduction, each live grammar node has two branches. It writes the chosen
+branch bit and either moves right to a child/primitive or performs a resolved
+transfer. For an encountered transfer, the generator's exact adjustments are:
+
+| Leaf on branch | Break | Restart |
+|---|---|---|
+| Left, bit 0 | k=0 writes 1 and redispatches; k>0 clears the bit and enters break(k-1) | Clears bit and enters continue(k) |
+| Right, bit 1 | Clears bit and enters break(k) | Clears bit and enters continue(k-1), requiring k>=1 |
+
+The adjustments account for the current branch already written or erased.
+Together with the ancestor recurrence they prove the same lexical targets.
+Source compilation and factoring leave no unresolved label in the live tree.
+
+## 9. Binary tape representation
+
+The machine has one two-way infinite tape over {0,1}; every transition writes
+one bit and moves exactly L or R. Use coordinates relative to a fixed syntax
+origin. At a clean primitive occurrence, the tape-resident control path is
+`p=110s`, including that occurrence's final branch bit, and the head is at
+`h=|p|`. Positions 0 and 1 hold the header ones; position 2 is the root reset
+bit. The syntax DAG is in the counted finite-control table, not on an
+uncharged preloaded tape.
+
+Fix a bank anchor P with `P >= max |p| + 2`. The finite bank is
+
+`10 1^(r0+1)0 1^(r1+1)0 ... 1^(r(m-1)+1)0`, starting at P,
+
+followed by blank zeros. There are N logical physical registers, m>=N, and
+all slots N through m-1 are zero reserves. Each unary block is nonempty;
+its value is its length minus one. All cells left of the syntax origin and
+outside the finite represented bank are blank. Between the path and anchor
+the clean gap is zero. Register values and the number of reserve blocks have
+no fixed maximum.
+
+Prepared invocation is a second phase of the relation: the PC is unchanged,
+cell h is 1, cell h+1 is 0, cells h+2 through P are 1, and the separator P+1
+and register blocks are unchanged. The next sections show that every primitive
+passes from clean to prepared to clean while preserving the logical relation.
+
+## 10. Preparation, finite redispatch, and register selection
+
+INC, DECNZ and BEEP enter on zero by writing 1 and moving right to
+`1b.reg.prep_1`. The next cell is zero by the clean-gap bound. `prep_1` crosses
+it, and `prep_2` fills the remaining gap until it encounters the anchor one.
+It then returns left through the continuation/dispatcher engine. This creates
+the prepared representation without changing a register or PC path. Redispatch
+decodes the same finite path, reaching the same primitive on its read-one row.
+This is preparation of one instruction, not a second source instruction.
+
+Let z be the maximum number of zero branch bits in any unfolded source path.
+The actual generator sets dispatcher depth `D=z+2` and counts D+1 zeros while
+ignoring ones. To the left of the prepared return point there are at most the
+root zero, z path zeros and the preparation separator: at most D nonblank-
+region zeros. It must reach a blank zero strictly left of the syntax origin
+before switching to its rightward scan. That scan finds the header's first
+one; the root states enter the grammar. Both scans terminate on finite
+intervals. D is recomputed from the actual grammar, never copied from an
+unrelated artifact.
+
+On the prepared read-one branch, a register primitive erases cell h and moves
+right into its counted selector. The adjacent zeros h,h+1 mark the left end
+of the filled gap. The selector crosses ones and decreases its finite index
+on each zero: first h+1, then P+1, then successive block separators. The
+special -1/-2 selectors consequently enter exactly the selected register's
+first one. This remains true for arbitrarily long blocks; no runtime value
+is stored in the selector's finite state index.
+
+## 11. Increment, decrement, cleanup and control continuation
+
+Increment scans the target's ones and changes its terminating zero to one.
+The two shift states propagate the separator through the finite suffix:
+each later block's old first position becomes zero, its remaining ones are
+crossed, and its old separator becomes one. Thus following blocks shift right
+one cell without changing their represented values; the target gains one.
+The finite blank tail ends the shift.
+
+Decrement erases the target's first one temporarily. If the next cell is zero,
+the target was a zero-valued one-cell block; its one is restored and the zero
+continuation is selected. If the next cell is one, the value was positive.
+The scan reaches the finite bank's trailing adjacent zeros, and the reverse
+shift propagates separators left until the erased target marker is reached
+and restored. The target loses one represented unit; all later logical values
+are preserved. A trailing zero-valued reserve block can be added. This is why
+the relation permits a growing finite reserve rather than requiring equality
+with the shortest bank encoding.
+
+Both operations then scan left through nonempty unary blocks and single
+separators until the first adjacent zero pair, which is exactly h,h+1 in the
+prepared gap. Success reaches `6.break.0` at the last PC bit; DECNZ zero reaches
+`6.break.1`. Every scan has the explicit finite endpoint just identified.
+
+At that PC bit, `break.0` performs binary carry: ones clear while moving left,
+and the next zero becomes one. Decoding that prefix with trailing zeros gives
+the next structured leaf. `break.k` skips k additional zero ancestors before
+the carry, hence exits the required enclosing region. `continue.k` clears k
+encountered one bits, crosses zeros, then preserves the next one and
+redispatches; it restarts at the leftmost descendant of the selected region.
+The adjustments and label induction in Section 8 identify precisely those
+regions. The header supplies the defined root continuation if the entire
+body returns; the research controllers themselves have infinite outer loops.
+
+Cleanup scans the now-zero suffix of the PC to the filled gap, erases that run
+of ones including the anchor, and restores the anchor via `0b.boot2.0`.
+The separator and register blocks are unchanged. Redispatch reaches the next
+clean primitive configuration. At a whole-body wrap the root reset bit is
+cleared by `5.root.2` before entry. These arguments prove the primitive and
+lexical contracts for arbitrary naturals and every finite bank size; they
+are not extrapolations from small-value traces.
+
+## 12. Counted blank initialization as an instance lemma
+
+The selected common recipe retains the concrete five-state bootstrap and
+its continuation adapters. They are part of the counted transition table.
+For each frozen artifact, the required finite lemma is:
+
+> Starting at the specified blank configuration, after H transitions the
+> machine first reaches the source entry with head -3818 and exactly the one
+> cells `{-3821,-3820} union {3,5,7,...,3821}`, and it has made no exit from B.
+
+The value H is table-specific. It must be recorded with the exact source/table
+hash and verified against that table. Local per-artifact `verification.json`
+receipts, produced by the shipped literal simulators, record these checks.
+For example, the separately bound coarse CNF state-clock receipt records
+H=61,131,622. That number is not assumed for the NTM or for a future source.
+Full configuration agreement, not just head/one count, is required.
+
+Translate the syntax origin by -3821. The resulting header is at 0,1, the
+entry head at 3, the bank anchor at 3824, and there are exactly 1,909
+zero-valued blocks. Thus the lemma supplies Section 9's initial invariant if
+the actual grammar has N<=1909 and every primitive path has length <3822.
+Those two finite syntax inequalities are independently checked. They do not
+bound runtime values or subsequent bank growth.
+
+This is a finite computational initialization lemma. Checking that particular
+prefix does not prove unbounded source semantics; Sections 3–11 and 13–15
+provide the latter. Conversely, merely satisfying the syntax inequalities
+does not establish the bootstrap trajectory. If the exact lemma is absent
+or fails, this compact-initializer artifact has not discharged its proof.
+
+The package also includes a direct literal-writer alternative in `backend.py`.
+For any admitted finite N and P, it writes ones exactly at
+`{0,1} union {P+2i:0<=i<=N}`, through P+2N+1, and uses a four-state return
+scanner to locate the unique adjacent header ones and enter at head 3. Its
+writer uses P+2N+2 states and the return scanner four; every state is counted.
+That direct construction proves the same initial invariant without relying
+on the compact bootstrap, but its larger table must be measured separately.
+
+For the preserved 2,505-state Order 16 baseline, the bound grammar has N=68
+registers and maximum primitive-path length 259. The literal recipe chooses
+P=262. It therefore uses 400 writer states and four scanner states: exactly
+404 counted startup states. Its entry configuration has head 3 and one cells
+`{0,1} union {262,264,266,...,398}`. The source, grammar, table and initialization
+metadata are separately identified in `COMPILER_BINDING.json`; the table
+SHA-256 is
+`7d922f96832d4cc9d282cdab1479afcb7249cbeb179ed49e05d730b220e58ca5`.
+The unbounded simulation argument starts from this literal configuration,
+not from the compact-bootstrap configuration used by the later controls.
+
+## 13. Exactly one exit from B per source beep
+
+The beep adapter's four rows are exact:
+
+```text
+beep 0 1 R 1b.reg.prep_1
+beep 1 0 L B
+B    0 1 R 2e.reg.cleanup_1
+B    1 0 L 6.break.0
+```
+
+The zero branch uses the proved preparation pass. The prepared branch erases
+its marker and enters B at the final PC bit. B performs exactly one step of
+ordinary carry/continuation. Its read-one successor is `6.break.0`, not B, so
+a carry across many ones does not produce extra beeps. Registers are unchanged.
+
+Time zero is the blank initial configuration. Transition t>=1 emits a beep
+iff its pretransition state is B. The displayed rows prove one source beep
+corresponds to exactly one such exit after finitely many steps. No other source
+primitive enters B. The initialization lemma excludes earlier B exits. An
+initial source beep therefore gives a nonempty physical event set after its
+fully counted initialization.
+
+## 14. Totalization, state accounting, canonicalization and quotient
+
+Undefined rows are redirected to a counted silent state preserving the read
+symbol and moving right forever. Legal simulation configurations never use
+those rows by the phase/control invariants. In the reviewed common artifacts,
+the missing preparation read-one row is unreachable because h+1 is zero.
+Every artifact must retain its actual missing-row inventory; a new missing
+row is not justified by this particular observation alone.
+
+The resulting table is total. Directed-graph reachability can remove a state
+only when no path from the start reaches it under either symbol. Renaming
+states canonically is a graph isomorphism preserving start and beep labels.
+Neither operation assumes that a state is unreachable merely because a finite
+trace did not visit it.
+
+For the exact quotient, supply a total surjection f from raw states onto final
+states. It must map starts, preserve the predicate q=B in both directions, and
+for each raw q and read bit b satisfy
+
+`raw(q,b)=(w,d,q')  =>  final(f(q),b)=(w,d,f(q'))`.
+
+The independent checker tests every row, color, start and surjectivity condition.
+Induction on physical transitions proves identical tapes, heads and beep
+indicators for corresponding configurations, on every initial tape. This
+quotient alone preserves exact physical transition times; source arithmetic,
+storage and layout changes generally preserve only event correspondence.
+
+All states in the final total table count, including B, bootstrapping,
+register selectors, dispatch, grammar interpretation, arithmetic and silent
+totalization. The syntax is represented by those counted rows; initialization
+does not preload it as free data. Metadata, proof certificates and test
+oracles are verification artifacts, never runtime assistance to the machine.
+
+## 15. Composition, evidence and remaining scope
+
+Expression/statement induction gives a finite unary execution for every
+completed finite source computation. Each unary operation and legal lexical
+transfer has a finite binary simulation by the located endpoints and finite
+bank invariants. Their composition establishes the compiler theorem and
+beep bijection for arbitrary natural configurations in the simulation relation.
+In the research controllers every silent test completes and the input counter
+advances without bound; in the other case each next rejection completes. These
+source facts rule out an infinite quiet partial test and ensure continuing
+simulated progress. The total physical table never halts.
+
+Finite independent source comparisons, raw/final row checks, all-occurrence
+backend tests, source/register event checkpoints and dual literal startup
+simulations support implementation accuracy and establish finite instance
+lemmas. They do not substitute for the universal invariants above. No complete
+independently generated source CFG certificate is claimed: lexical correctness
+rests on the explicit structural induction, with selected independent traces
+and occurrence checks as supporting evidence.
+
+Final recovery must ship the bound compiler modules and vendor license, full
+source, grammar, raw/final tables, quotient and frame mappings, deterministic
+build/check recipes, proof text and initialization receipts. Old external
+repository availability is unnecessary once those bytes are supplied. A
+changed source, layout, table, compiler stage or proof must receive a new
+binding and the checks appropriate to the changed claim; this document does
+not silently certify future artifacts.

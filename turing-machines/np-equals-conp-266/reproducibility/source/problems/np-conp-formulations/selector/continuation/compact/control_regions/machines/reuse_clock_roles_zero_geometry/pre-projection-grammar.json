@@ -1,0 +1,1322 @@
+{
+  "nodes": [
+    [
+      {
+        "op": "3.$liveframe.0.1.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "op": "beep"
+      },
+      {
+        "node": 0
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.inc"
+      },
+      {
+        "op": "3.$scratch.copy.inc"
+      }
+    ],
+    [
+      {
+        "node": 2
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.1.decnz"
+      },
+      {
+        "node": 3
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.1.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$scratch.copy.decnz"
+      },
+      {
+        "node": 5
+      }
+    ],
+    [
+      {
+        "node": 4
+      },
+      {
+        "node": 6
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.4.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 7
+      },
+      {
+        "node": 8
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.4.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 10
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 11
+      },
+      {
+        "node": 12
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 13
+      },
+      {
+        "node": 14
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.inc"
+      },
+      {
+        "op": "3.$pool0.tmp0.inc"
+      }
+    ],
+    [
+      {
+        "node": 16
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.decnz"
+      },
+      {
+        "node": 17
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 19
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.4.decnz"
+      },
+      {
+        "op": "3.$liveframe.0.3.inc"
+      }
+    ],
+    [
+      {
+        "node": 21
+      },
+      {
+        "op": "3.$liveframe.0.2.inc"
+      }
+    ],
+    [
+      {
+        "node": 20
+      },
+      {
+        "node": 22
+      }
+    ],
+    [
+      {
+        "node": 18
+      },
+      {
+        "node": 23
+      }
+    ],
+    [
+      {
+        "node": 24
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.4.decnz"
+      },
+      {
+        "node": 25
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.inc"
+      },
+      {
+        "node": 26
+      }
+    ],
+    [
+      {
+        "node": 15
+      },
+      {
+        "node": 27
+      }
+    ],
+    [
+      {
+        "node": 28
+      },
+      {
+        "node": 8
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.decnz"
+      },
+      {
+        "node": 3
+      }
+    ],
+    [
+      {
+        "op": "3.$scratch.copy.decnz"
+      },
+      {
+        "node": 19
+      }
+    ],
+    [
+      {
+        "node": 30
+      },
+      {
+        "node": 31
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 32
+      },
+      {
+        "node": 33
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 35
+      }
+    ],
+    [
+      {
+        "node": 34
+      },
+      {
+        "node": 36
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.decnz"
+      },
+      {
+        "node": 3
+      }
+    ],
+    [
+      {
+        "op": "3.$scratch.copy.decnz"
+      },
+      {
+        "node": 35
+      }
+    ],
+    [
+      {
+        "node": 38
+      },
+      {
+        "node": 39
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.6.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 40
+      },
+      {
+        "node": 41
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.6.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 43
+      }
+    ],
+    [
+      {
+        "node": 42
+      },
+      {
+        "node": 44
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.7.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.decnz"
+      },
+      {
+        "node": 3
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$scratch.copy.decnz"
+      },
+      {
+        "node": 49
+      }
+    ],
+    [
+      {
+        "node": 48
+      },
+      {
+        "node": 50
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.inc"
+      },
+      {
+        "node": 51
+      }
+    ],
+    [
+      {
+        "node": 47
+      },
+      {
+        "node": 52
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.9.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 54
+      }
+    ],
+    [
+      {
+        "node": 53
+      },
+      {
+        "node": 55
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.7.decnz"
+      },
+      {
+        "op": "3.$liveframe.0.8.inc"
+      }
+    ],
+    [
+      {
+        "node": 57
+      },
+      {
+        "node": 32
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.10.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 59
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.10.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 61
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.decnz"
+      },
+      {
+        "node": 62
+      }
+    ],
+    [
+      {
+        "node": 60
+      },
+      {
+        "node": 63
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.10.decnz"
+      },
+      {
+        "node": 65
+      }
+    ],
+    [
+      {
+        "node": 64
+      },
+      {
+        "node": 66
+      }
+    ],
+    [
+      {
+        "node": 58
+      },
+      {
+        "node": 67
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.10.decnz"
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.8.decnz"
+      },
+      {
+        "op": "3.$liveframe.0.10.inc"
+      }
+    ],
+    [
+      {
+        "node": 69
+      },
+      {
+        "node": 70
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.6.decnz"
+      },
+      {
+        "node": 72
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.7.decnz"
+      },
+      {
+        "node": 43
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.7.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.decnz"
+      },
+      {
+        "node": 75
+      }
+    ],
+    [
+      {
+        "node": 74
+      },
+      {
+        "node": 76
+      }
+    ],
+    [
+      {
+        "node": 73
+      },
+      {
+        "node": 77
+      }
+    ],
+    [
+      {
+        "op": "3.$native-half:$liveframe.0.8.decnz"
+      },
+      {
+        "node": 78
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.6.decnz"
+      },
+      {
+        "node": 17
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.10.decnz"
+      },
+      {
+        "node": 81
+      }
+    ],
+    [
+      {
+        "node": 82
+      },
+      {
+        "node": 44
+      }
+    ],
+    [
+      {
+        "node": 80
+      },
+      {
+        "node": 83
+      }
+    ],
+    [
+      {
+        "node": 79
+      },
+      {
+        "node": 84
+      }
+    ],
+    [
+      {
+        "node": 71
+      },
+      {
+        "node": 85
+      }
+    ],
+    [
+      {
+        "node": 68
+      },
+      {
+        "node": 86
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.decnz"
+      },
+      {
+        "node": 87
+      }
+    ],
+    [
+      {
+        "node": 88
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.9.decnz"
+      },
+      {
+        "node": 89
+      }
+    ],
+    [
+      {
+        "node": 56
+      },
+      {
+        "node": 90
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.inc"
+      },
+      {
+        "op": "_break.1"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.8.decnz"
+      },
+      {
+        "node": 92
+      }
+    ],
+    [
+      {
+        "node": 91
+      },
+      {
+        "node": 93
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.4.inc"
+      },
+      {
+        "op": "_break.1"
+      }
+    ],
+    [
+      {
+        "node": 94
+      },
+      {
+        "node": 95
+      }
+    ],
+    [
+      {
+        "node": 46
+      },
+      {
+        "node": 96
+      }
+    ],
+    [
+      {
+        "node": 45
+      },
+      {
+        "node": 97
+      }
+    ],
+    [
+      {
+        "node": 98
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.decnz"
+      },
+      {
+        "node": 99
+      }
+    ],
+    [
+      {
+        "node": 37
+      },
+      {
+        "node": 100
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.decnz"
+      },
+      {
+        "node": 81
+      }
+    ],
+    [
+      {
+        "node": 14
+      },
+      {
+        "node": 20
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.inc"
+      },
+      {
+        "op": "3.$scratch.copy.inc"
+      }
+    ],
+    [
+      {
+        "node": 104
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.3.decnz"
+      },
+      {
+        "node": 105
+      }
+    ],
+    [
+      {
+        "node": 31
+      },
+      {
+        "op": "3.$micro.q.inc"
+      }
+    ],
+    [
+      {
+        "node": 106
+      },
+      {
+        "node": 107
+      }
+    ],
+    [
+      {
+        "node": 108
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.decnz"
+      },
+      {
+        "node": 109
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.decnz"
+      },
+      {
+        "node": 49
+      }
+    ],
+    [
+      {
+        "node": 110
+      },
+      {
+        "node": 111
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.b.inc"
+      },
+      {
+        "node": 112
+      }
+    ],
+    [
+      {
+        "node": 113
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.0.decnz"
+      },
+      {
+        "node": 114
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.inc"
+      },
+      {
+        "node": 115
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.0.inc"
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.b.decnz"
+      },
+      {
+        "node": 117
+      }
+    ],
+    [
+      {
+        "node": 116
+      },
+      {
+        "node": 118
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.0.decnz"
+      },
+      {
+        "node": 3
+      }
+    ],
+    [
+      {
+        "op": "3.$scratch.copy.decnz"
+      },
+      {
+        "node": 117
+      }
+    ],
+    [
+      {
+        "node": 120
+      },
+      {
+        "node": 121
+      }
+    ],
+    [
+      {
+        "node": 119
+      },
+      {
+        "node": 122
+      }
+    ],
+    [
+      {
+        "node": 103
+      },
+      {
+        "node": 123
+      }
+    ],
+    [
+      {
+        "node": 102
+      },
+      {
+        "node": 124
+      }
+    ],
+    [
+      {
+        "node": 103
+      },
+      {
+        "node": 33
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.inc"
+      },
+      {
+        "op": "3.$micro.q.inc"
+      }
+    ],
+    [
+      {
+        "node": 127
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.decnz"
+      },
+      {
+        "node": 128
+      }
+    ],
+    [
+      {
+        "op": "3.$micro.q.decnz"
+      },
+      {
+        "node": 35
+      }
+    ],
+    [
+      {
+        "node": 129
+      },
+      {
+        "node": 130
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.9.inc"
+      },
+      {
+        "node": 131
+      }
+    ],
+    [
+      {
+        "node": 132
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.2.decnz"
+      },
+      {
+        "node": 133
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.inc"
+      },
+      {
+        "node": 134
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.9.decnz"
+      },
+      {
+        "node": 49
+      }
+    ],
+    [
+      {
+        "node": 135
+      },
+      {
+        "node": 136
+      }
+    ],
+    [
+      {
+        "node": 126
+      },
+      {
+        "node": 137
+      }
+    ],
+    [
+      {
+        "node": 125
+      },
+      {
+        "node": 138
+      }
+    ],
+    [
+      {
+        "op": "3.$pool0.tmp0.decnz"
+      },
+      {
+        "node": 75
+      }
+    ],
+    [
+      {
+        "node": 46
+      },
+      {
+        "node": 140
+      }
+    ],
+    [
+      {
+        "node": 7
+      },
+      {
+        "node": 141
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.4.decnz"
+      },
+      {
+        "op": "_break.1"
+      }
+    ],
+    [
+      {
+        "node": 143
+      },
+      {
+        "op": "3.$liveframe.0.4.inc"
+      }
+    ],
+    [
+      {
+        "node": 144
+      },
+      {
+        "op": "_break.1"
+      }
+    ],
+    [
+      {
+        "node": 94
+      },
+      {
+        "node": 145
+      }
+    ],
+    [
+      {
+        "node": 142
+      },
+      {
+        "node": 146
+      }
+    ],
+    [
+      {
+        "node": 45
+      },
+      {
+        "node": 147
+      }
+    ],
+    [
+      {
+        "node": 148
+      },
+      {
+        "op": "_continue.2"
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.5.decnz"
+      },
+      {
+        "node": 149
+      }
+    ],
+    [
+      {
+        "op": "3.$liveframe.0.4.decnz"
+      },
+      {
+        "node": 95
+      }
+    ],
+    [
+      {
+        "node": 151
+      },
+      {
+        "op": "_break.2"
+      }
+    ],
+    [
+      {
+        "node": 152
+      },
+      {
+        "op": "3.$liveframe.0.1.inc"
+      }
+    ],
+    [
+      {
+        "node": 150
+      },
+      {
+        "node": 153
+      }
+    ],
+    [
+      {
+        "node": 139
+      },
+      {
+        "node": 154
+      }
+    ],
+    [
+      {
+        "node": 101
+      },
+      {
+        "node": 155
+      }
+    ],
+    [
+      {
+        "node": 29
+      },
+      {
+        "node": 156
+      }
+    ],
+    [
+      {
+        "node": 9
+      },
+      {
+        "node": 157
+      }
+    ],
+    [
+      {
+        "node": 158
+      },
+      {
+        "op": "_continue.1"
+      }
+    ],
+    [
+      {
+        "node": 159
+      },
+      {
+        "op": "3.$liveframe.0.0.inc"
+      }
+    ],
+    [
+      {
+        "node": 1
+      },
+      {
+        "node": 160
+      }
+    ]
+  ],
+  "registers": [
+    "$liveframe.0.10",
+    "$liveframe.0.4",
+    "$liveframe.0.7",
+    "$liveframe.0.8",
+    "$scratch.copy",
+    "$micro.a",
+    "$micro.b",
+    "$micro.q",
+    "$micro.r",
+    "$micro.c",
+    "$digit.index",
+    "$liveframe.0.0",
+    "$liveframe.0.1",
+    "$pool0.tmp0",
+    "$liveframe.0.2",
+    "$liveframe.0.3",
+    "$liveframe.0.5",
+    "$liveframe.0.6",
+    "$liveframe.0.9"
+  ],
+  "root": 161
+}

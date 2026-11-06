@@ -1,0 +1,36 @@
+[
+  {
+    "boundaries": [
+      "(L,R,Q)=(0,old_R,old_L)",
+      "(L,R,Q)=(old_R,0,old_L)",
+      "(L,R,Q)=(old_R,old_L,0)"
+    ],
+    "entry": "three distinct logical carriers; arbitrary natural left and right; work zero",
+    "exact_ast": "Assign(targets=[Tuple(elts=[Name(id='left', ctx=Store()), Name(id='right', ctx=Store())], ctx=Store())], value=Tuple(elts=[Name(id='right', ctx=Load()), Name(id='left', ctx=Load())], ctx=Load()))",
+    "function": "main",
+    "left": "main.left",
+    "line": 46,
+    "ownership": "source simultaneous destinations remain distinct; fresh intermediate zero-peer/class-sum checks include work",
+    "primitives": "three existing terminating additive transfers; no new physical primitive or atomic alias",
+    "progress": "each transfer decreases its finite source; no event or source escape; all other logical cells preserved",
+    "right": "main.right",
+    "work": "$micro.q"
+  },
+  {
+    "boundaries": [
+      "(L,R,Q)=(0,old_R,old_L)",
+      "(L,R,Q)=(old_R,0,old_L)",
+      "(L,R,Q)=(old_R,old_L,0)"
+    ],
+    "entry": "three distinct logical carriers; arbitrary natural left and right; work zero",
+    "exact_ast": "Assign(targets=[Tuple(elts=[Name(id='left', ctx=Store()), Name(id='right', ctx=Store())], ctx=Store())], value=Tuple(elts=[Name(id='right', ctx=Load()), Name(id='left', ctx=Load())], ctx=Load()))",
+    "function": "main",
+    "left": "main.left",
+    "line": 86,
+    "ownership": "source simultaneous destinations remain distinct; fresh intermediate zero-peer/class-sum checks include work",
+    "primitives": "three existing terminating additive transfers; no new physical primitive or atomic alias",
+    "progress": "each transfer decreases its finite source; no event or source escape; all other logical cells preserved",
+    "right": "main.right",
+    "work": "$micro.q"
+  }
+]

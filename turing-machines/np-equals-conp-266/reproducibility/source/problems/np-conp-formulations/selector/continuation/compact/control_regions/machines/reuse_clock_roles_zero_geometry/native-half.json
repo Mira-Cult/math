@@ -1,0 +1,81 @@
+[
+  {
+    "function": "main",
+    "kind": "parity-branch",
+    "line": 13,
+    "source": "main.scan"
+  },
+  {
+    "contract": "HALF consumes successful marker before body and consumes failed terminator before exit",
+    "function": "main",
+    "kind": "marker-phase-loop",
+    "line": 10,
+    "source": "main.scan"
+  },
+  {
+    "function": "main",
+    "kind": "parity-branch",
+    "line": 30,
+    "source": "main.right"
+  },
+  {
+    "contract": "HALF consumes successful marker before body and consumes failed terminator before exit",
+    "function": "main",
+    "kind": "marker-phase-loop",
+    "line": 36,
+    "source": "main.digit"
+  },
+  {
+    "function": "main",
+    "kind": "record-pop",
+    "line": 39,
+    "result": "main.state",
+    "source": "main.digit"
+  },
+  {
+    "function": "main",
+    "kind": "quotient-remainder",
+    "line": 44,
+    "remainder": "main.write",
+    "source": "main.state"
+  },
+  {
+    "function": "main",
+    "kind": "parity-branch",
+    "line": 45,
+    "source": "main.state"
+  },
+  {
+    "function": "main",
+    "kind": "parity-branch",
+    "line": 70,
+    "source": "main.right"
+  },
+  {
+    "contract": "HALF consumes successful marker before body and consumes failed terminator before exit",
+    "function": "main",
+    "kind": "marker-phase-loop",
+    "line": 76,
+    "source": "main.digit"
+  },
+  {
+    "function": "main",
+    "kind": "record-pop",
+    "line": 79,
+    "result": "main.state",
+    "source": "main.digit"
+  },
+  {
+    "function": "main",
+    "kind": "quotient-remainder",
+    "line": 84,
+    "remainder": "main.write",
+    "source": "main.state"
+  },
+  {
+    "function": "main",
+    "kind": "parity-branch",
+    "line": 85,
+    "source": "main.state"
+  }
+]

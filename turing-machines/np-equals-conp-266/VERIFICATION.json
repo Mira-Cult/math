@@ -1,0 +1,890 @@
+{
+  "checks": {
+    "control": {
+      "checker_sha256": "59152b0617d583480155aa167ee1ca603b4d4b13bc5e07868599598e3843ac83",
+      "cleanup": {
+        "admitted_occurrences": 294,
+        "edges": 391,
+        "local_rules": 181,
+        "nontrivial_rules": 5,
+        "occurrences": 303,
+        "primitive_branch_images": {
+          "decnz:0": 85,
+          "decnz:1": 85,
+          "half:0": 12,
+          "half:1": 12,
+          "inc:0": 91
+        },
+        "zero_rows": 0
+      },
+      "core_sha256": "b61e555aeaa2e60bcf782cb6df7d15d9285d63bebbb3133e46b9e8047b615227",
+      "every_administrative_cycle_checked": true,
+      "exact_mask_transfer_cases": 21,
+      "format": "np-conp-control-independent-occurrence-v1",
+      "inputs": {
+        "contextual-tree-certificate.json": "5562fa7ee76a03b7dd2b543587cd8bdae65b667496eb629e469386de10f9b32c",
+        "control-certificate.json": "05fd1304c5f322dad0bed21779bfc7075ebc575e08e0c16e4d21e31d34df1708",
+        "pre-control-grammar.json": "4bb38c2eba624b31925bf1904553e3a53ad7a651511d8ecafecdddcaee832456",
+        "pre-projection-grammar.json": "84993c15a211f13dce91290dccc7d3ef078aa0c482e16bd9ae58242dee0aad31",
+        "weak-grammar-plan.json": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23",
+        "zero-context.json": "96e3c8afa3467eb30b356853acdf5710f0f1124d2318f7389f2d076a5afb13b7"
+      },
+      "maximum_administrative_chain": [
+        2,
+        2
+      ],
+      "mutations_rejected": [
+        "input grammar binding",
+        "missing selected occurrence",
+        "wrong logical operand",
+        "zero invariant replaced by positive one",
+        "selected operand admits nonzero many",
+        "false branch redirected to success",
+        "cleanup output binding",
+        "source-context predecessor binding",
+        "administrative-only cycle"
+      ],
+      "occurrence_invariant": {
+        "admitted_occurrences": 294,
+        "edges": 391,
+        "occurrences": 303,
+        "primitive_branch_images": {
+          "decnz:0": 85,
+          "decnz:1": 94,
+          "half:0": 12,
+          "half:1": 12,
+          "inc:0": 91
+        }
+      },
+      "original_context": {
+        "admitted_occurrences": 297,
+        "edges": 394,
+        "local_rules": 184,
+        "nontrivial_rules": 4,
+        "occurrences": 310,
+        "primitive_branch_images": {
+          "decnz:0": 85,
+          "decnz:1": 98,
+          "half:0": 12,
+          "half:1": 12,
+          "inc:0": 91
+        },
+        "zero_rows": 2
+      },
+      "removed_occurrences": 9,
+      "retained_primitives": 189,
+      "reviewer": "internal-model-reviewer",
+      "scope": "all source-entry contexts and admitted primitive branches; exact occurrence rewrites and ordered retained core; no physical timing or bootstrap claim",
+      "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b"
+    },
+    "fixtures": {
+      "checker_sha256": "7f74efa1cae809e38ceb1265035ef15e8e0d1397523381143459a74b35907940",
+      "checkpoint_digest": "01407979387178817fec8011d77d259b50ae2fff9f154dd8350b443c71cd00f2",
+      "constrained_states_covered": 5,
+      "excluded_rows_taken": 0,
+      "explicit_reviewed_adaptations": [
+        "ordinary/native one-zero preparation; removed shared bootstrap adapter",
+        "all operation fixture gaps have one separator zero"
+      ],
+      "format": "np-conp-occurrence-control-independent-injected-v1",
+      "grammar_occurrences": {
+        "entry": "actual main().0 control rows at head 3 with independently encoded 110 path",
+        "injected_cases": 511,
+        "per_kind": {
+          "beep": 1,
+          "break": 7,
+          "continue": 85,
+          "decnz": 255,
+          "half": 72,
+          "inc": 91
+        },
+        "physical_steps": 150355,
+        "relation": "Every primitive and lexical leaf has its independently expected whole tape, continuation, event count and selected state maps.",
+        "unfolded_occurrences": 281
+      },
+      "helper_sha256": "40a6aabb3bfb7fab72c667962bcccc3c86415841cb858f9dcc71fa0003cf9e5f",
+      "injected_cases": 1126,
+      "largest_operand": 128,
+      "literal_steps": 1190786,
+      "operations": 28,
+      "pinned_harness_sha256": "7f74efa1cae809e38ceb1265035ef15e8e0d1397523381143459a74b35907940",
+      "pinned_helper_sha256": "40a6aabb3bfb7fab72c667962bcccc3c86415841cb858f9dcc71fa0003cf9e5f",
+      "pinned_one_zero_harness_sha256": "263895a6ad918574cb34caeb15e552485f98c0d673f72ebf89b745362b3a1216",
+      "primitive_cases": {
+        "decnz": 480,
+        "half": 160,
+        "inc": 480,
+        "preparation": 6
+      },
+      "reviewer": "internal-model-reviewer; nonauthor of selected producer",
+      "scope": "Injected finite whole-table paid preparation/selector/kernel segments, including whole tapes, both returns, exact appended zero reserves and composed state maps at every step. Actual blank startup and conventional all-natural domain proof are separate.",
+      "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+      "tables": {
+        "parent": {
+          "events.tm": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+          "machine.tm": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+          "raw.tm": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d"
+        },
+        "selected": {
+          "events.tm": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+          "machine.tm": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712",
+          "raw.tm": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d"
+        }
+      },
+      "wrapper_sha256": "5466ce6e3363c7b0753646673dec8156c940421fee0508cb3fa332b67f52c80d"
+    },
+    "regions": {
+      "changed_clock_roles": {
+        "exponent_master": "main.j",
+        "length_master": "main.e",
+        "output": "main.n"
+      },
+      "checker_sha256": "33afee603d1765d59e7aac0a41d0e73c7906e416ec7288c3927e0511ffc39d63",
+      "dependency_pins": {
+        "phase_swap/review/source/check_swap.py": "393eaaa34675fc38b2a2213412ea951b58391e4c1f105cc9c7b63e43b3723ed9",
+        "transfer328/review/source/check_closed_regions.py": "3ccbb5ec6a08c6dad03bfce05a88c4da5a2420d5f48a9bf0b78a342c1c97fbd7"
+      },
+      "format": "np-conp-control-independent-regions-v1",
+      "inherited_kernel_contracts_freshly_checked": {
+        "all_occurrences": 281,
+        "certificate_seed": {
+          "entry": "11010011101010",
+          "entry_zero_carriers": [
+            "$liveframe.0.9",
+            "$micro.q"
+          ],
+          "fixtures": 33,
+          "logical_carriers": [
+            "$liveframe.0.5",
+            "$liveframe.0.9",
+            "$liveframe.0.2",
+            "$micro.q"
+          ],
+          "outside_entries": 1,
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.7",
+            "$coalesced.11",
+            "$coalesced.5",
+            "$coalesced.10"
+          ],
+          "primitive_steps": 44120,
+          "rows": 11
+        },
+        "clock": {
+          "entry": "1101001110011000",
+          "entry_zero_carriers": [
+            "$liveframe.0.2",
+            "$micro.b",
+            "$micro.q",
+            "$scratch.copy"
+          ],
+          "fixtures": 28,
+          "logical_carriers": [
+            "$liveframe.0.2",
+            "$liveframe.0.3",
+            "$liveframe.0.0",
+            "$micro.b",
+            "$micro.q",
+            "$scratch.copy"
+          ],
+          "necessary_zero_counterexample": {
+            "actual_output": 2,
+            "exponent_initial": 0,
+            "length_initial": 2,
+            "output_initial": 1,
+            "required_output": 1
+          },
+          "output_clear_removed": true,
+          "outside_entries": 1,
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.5",
+            "$coalesced.6",
+            "$coalesced.3",
+            "$coalesced.11",
+            "$coalesced.10",
+            "$coalesced.9"
+          ],
+          "primitive_steps": 21343,
+          "rows": 14
+        },
+        "description_copy": {
+          "entry": "1101001110011100",
+          "entry_is_clock_exit": true,
+          "exit_is_seed_entry": true,
+          "fixtures": 36,
+          "logical_carriers": [
+            "$liveframe.0.3",
+            "$liveframe.0.0",
+            "$pool0.tmp0",
+            "$scratch.copy"
+          ],
+          "outside_entries": 1,
+          "outside_entry_scratch_images": {
+            "$pool0.tmp0": [
+              1
+            ],
+            "$scratch.copy": [
+              1
+            ]
+          },
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.6",
+            "$coalesced.3",
+            "$coalesced.10",
+            "$coalesced.9"
+          ],
+          "primitive_steps": 8976,
+          "relation": "e<-j while j, clock and every other logical value are preserved; T=C=0 restored",
+          "rows": 8
+        },
+        "mutations_rejected": [
+          "clock exponent restoration",
+          "certificate doubling",
+          "candidate index restoration"
+        ],
+        "postfixed_edges": 378,
+        "reached_operation_ownership_checks": 188,
+        "retained_occurrences": 189,
+        "role_copy": {
+          "entry": "1101001110000",
+          "exit_is_clock_entry": true,
+          "fixtures": 36,
+          "joined_loop_temporary_mask": "7",
+          "logical_carriers": [
+            "$liveframe.0.2",
+            "$liveframe.0.3",
+            "$pool0.tmp0"
+          ],
+          "outside_entries": 2,
+          "outside_entry_temporary_images": [
+            1,
+            1
+          ],
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.5",
+            "$coalesced.6",
+            "$coalesced.10"
+          ],
+          "primitive_steps": 5916,
+          "relation": "(old_n,old_e,T=0) -> (0,old_n,0); old source n is dead until overwritten by the clock",
+          "rows": 5
+        }
+      },
+      "inputs": {
+        "allocation.json": "a706ec0ca55b98844e0629a7eee520f25133d6d672f17b3b96afc90b4698c0b0",
+        "bank-coalescence.json": "91c0f66fd5cd751a624a013df93f2788a4b2cab971111d4881f4a483f635c6b3",
+        "certificate-seed.json": "ff8a4884269e86bc0b7c114e57bbeacee0135c9ebacf6a799e6da8cf94e38360",
+        "coalescence-invariant.json": "77100803e4d6e1458b77ca06ccb21754f47732004d460f2dcfbac9a331430fbe",
+        "direct-clock.json": "82a2e5001adaad0ac4f8993203bf27a6eb6bade3891c8a61190eb34b1c45791a",
+        "pre-coalescence-grammar.json": "430a6e9e3ab56ce086ac815252ee3780449b09c1e6cb70413b193de0f3e8902a",
+        "three-move-swap.json": "c52019efc7f41cfeef3a1cd7686cb3e0e9c147fcc808a712f1ddc44e23571ca7"
+      },
+      "mutations_rejected": [
+        "wrong final transfer destination",
+        "nonzero outside-entry scratch possible",
+        "work aliases left",
+        "even turn enters swap"
+      ],
+      "reviewer": "internal-model-reviewer",
+      "scope": "fresh actual caller and intermediate logical ownership review; dirty unrelated logical coordinates in prepared fixtures; no literal physical or blank-start claim",
+      "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+      "swap_fixtures": 134,
+      "swap_primitive_steps": 106830,
+      "swaps": [
+        {
+          "entry": "11010011011011001101110100",
+          "entry_zero_images": [
+            1
+          ],
+          "fixtures": 67,
+          "logical_carriers": [
+            "$liveframe.0.6",
+            "$liveframe.0.7",
+            "$micro.q"
+          ],
+          "outside_entries": 1,
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.8",
+            "$coalesced.1",
+            "$coalesced.10"
+          ],
+          "primitive_steps": 53415
+        },
+        {
+          "entry": "110100111101011001101110100",
+          "entry_zero_images": [
+            1
+          ],
+          "fixtures": 67,
+          "logical_carriers": [
+            "$liveframe.0.6",
+            "$liveframe.0.7",
+            "$micro.q"
+          ],
+          "outside_entries": 1,
+          "outside_exits": 1,
+          "physical_carriers": [
+            "$coalesced.8",
+            "$coalesced.1",
+            "$coalesced.10"
+          ],
+          "primitive_steps": 53415
+        }
+      ]
+    },
+    "rows": {
+      "checker_sha256": "60d9fdd8bde1e7826709de5b187e4152284540f895515a9f0e1988934ce6196a",
+      "completion": {
+        "actually_different_rows": 6,
+        "declared_holes": 6,
+        "raw_preimage_row_occurrences": 7,
+        "retained_row_equations": 534,
+        "scope": "hole inventory and every raw preimage; semantic unreachability is a separate obligation"
+      },
+      "deliberate_mutations_rejected": [
+        "marked row component 0",
+        "marked row component 1",
+        "marked row component 2",
+        "marked row component 3",
+        "missing marked branch",
+        "wrong initial quotient map"
+      ],
+      "format": "np-conp-occurrence-control-independent-rows-v1",
+      "parent": {
+        "hashes": {
+          "event-quotient.json": "65aa002d28e12e165c58f1cf5307961a3429a0e30c8ec0dc834d6956bf14144d",
+          "events.tm": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+          "ingress-prequotient.tm": "4f974575968477d311b0d5c0e3e45d13226afba6c03ab573cf35ff5f6b7948e5",
+          "machine.tm": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+          "quotient.json": "c107d1fc59b6c96e15c8b378af85b7c2bbcd621d352dd71dd7e02bf411214070",
+          "raw.tm": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d"
+        },
+        "ingress_row_equations": 540,
+        "ordinary_row_equations": 544,
+        "sole_or_multiple_marked_rows": [
+          [
+            106,
+            1,
+            0,
+            "L",
+            1,
+            1
+          ]
+        ],
+        "states": {
+          "B": 270,
+          "marked": 269,
+          "raw": 272
+        }
+      },
+      "pinned_reader_sha256": "9a8a1b4c1cf8a2e3826b2c3429537899f47f8f6e8a73e7b7ae41bdfc20ce0f07",
+      "reviewer": "internal-model-reviewer; nonauthor of selected producer",
+      "scope": "complete literal structure, all ordinary and ingress-event row equations, retained completion rows and raw fibers; no reachability or mathematical endpoint inferred",
+      "selected": {
+        "hashes": {
+          "event-quotient.json": "5ac2bd66291df669620ab3c2bb75bde2546600fa7e843a8c841845cb79ccce31",
+          "events.tm": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+          "ingress-prequotient.tm": "a5f5d947e3d0474e7c2cfbdd0841b512d934fbbe9a9451a6d0bcff243153cef6",
+          "machine.tm": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712",
+          "quotient.json": "756fa24ad34140dcb1783d91430187c6a3c2ed25a2c18431a89c67efeb8c5c7f",
+          "raw.tm": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d"
+        },
+        "ingress_row_equations": 534,
+        "ordinary_row_equations": 540,
+        "sole_or_multiple_marked_rows": [
+          [
+            104,
+            1,
+            0,
+            "L",
+            1,
+            1
+          ]
+        ],
+        "states": {
+          "B": 267,
+          "marked": 266,
+          "raw": 270
+        }
+      },
+      "wrapper_sha256": "b8493c866e55bda6c454d4a9f7aa090a730d65a5289a5bd6fd576777c083d43f"
+    },
+    "source": {
+      "actual_clock_cases": 120,
+      "all_ones_virtual_terminators": 258,
+      "attempts_per_source": 1965,
+      "checker_sha256": "7bc0b7b96b5a0c02371e2d9da61b7b0b34efdb5c09b828da793d0e3436821d6e",
+      "comparison_outcomes": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "even_input_prefix_cases": 1024,
+      "exact_attempt_traces_compared": true,
+      "exact_delta": {
+        "clock_loads_redirected": 2,
+        "description_loads_redirected": 1,
+        "new_assignments": [
+          "e = n",
+          "n = (e + 1) ** j",
+          "e = j"
+        ]
+      },
+      "fixtures_sha256": "31d3d85d1d106c94052821585994fa8faaccef6f6619493086cc3fa3652e90aa",
+      "format": "np-conp-control-independent-source-v1",
+      "mutations_rejected": [
+        "length copied too late",
+        "wrong normalized base",
+        "wrong exponent",
+        "wrong candidate master",
+        "candidate high input bits lost",
+        "reference certificate bound shrunk",
+        "simulator state reset removed"
+      ],
+      "prepared_clock_cases": 416,
+      "reference_sha256": "4f1f6f317eb196b8d09a67439893622a759c43ef4e02e30adae4e04b0eb39515",
+      "reviewer": "internal-model-reviewer",
+      "scope": "exact AST carrier substitution and finite source-call evidence; conventional universal argument recorded separately; no physical or blank execution claim",
+      "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b"
+    },
+    "static": {
+      "artifacts": {
+        "parent": {
+          "allocation.json": "a706ec0ca55b98844e0629a7eee520f25133d6d672f17b3b96afc90b4698c0b0",
+          "bank-coalescence.json": "91c0f66fd5cd751a624a013df93f2788a4b2cab971111d4881f4a483f635c6b3",
+          "bank-projection.json": "b1713d10f55a5c0fb8430f948844c63ad1f250cdb8bfab7724a6f709f71b039a",
+          "certificate-seed.json": "ff8a4884269e86bc0b7c114e57bbeacee0135c9ebacf6a799e6da8cf94e38360",
+          "coalescence-invariant.json": "77100803e4d6e1458b77ca06ccb21754f47732004d460f2dcfbac9a331430fbe",
+          "consume-guard.json": "65927271d210c6636dadcb532a30d39bacd301b7bd2ebb5a7308ec6237de1030",
+          "consumed-seed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "contextual-tree-certificate.json": "5562fa7ee76a03b7dd2b543587cd8bdae65b667496eb629e469386de10f9b32c",
+          "control-certificate.json": "05fd1304c5f322dad0bed21779bfc7075ebc575e08e0c16e4d21e31d34df1708",
+          "countdown.json": "b7ad6fbf86df35acfb0f0c04377cb5b2634dd28e3da608d3a4b814fb14a6705d",
+          "dead-entry-extension.json": "d29aa9179419828a6cd40a3791883715faa81eba2785be4fc711755d144bbc72",
+          "direct-calls.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "direct-clock.json": "82a2e5001adaad0ac4f8993203bf27a6eb6bade3891c8a61190eb34b1c45791a",
+          "dispatcher.json": "399ef9367947ad2f54e3f5ad5dbd613e67908d5f98fd29e66082f68993ad7d0c",
+          "event-metadata.json": "a7a7557fb895cdf92295f116b0cbf95dc9caa3de1e8ff4226b7586eeeea38538",
+          "event-quotient.json": "65aa002d28e12e165c58f1cf5307961a3429a0e30c8ec0dc834d6956bf14144d",
+          "events.tm": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+          "fixed-recipe.json": "735d323b306025def34454fbaea4f5f29050f67b5923ddfcff1c962daca9fa90",
+          "fusion.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "grammar.json": "b7a853524b72940c44e6b3215e54c8e9dcc77614243595d3e67cb7b1e0ed587a",
+          "groups.json": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78",
+          "half-pairs.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "horner.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "ingress-prequotient.tm": "4f974575968477d311b0d5c0e3e45d13226afba6c03ab573cf35ff5f6b7948e5",
+          "machine.tm": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+          "metadata.json": "539ea3a1f86d2da6056036e2bc1751807f75b2aa618644dd88d9d51bbfb23bca",
+          "mixed-tuples.json": "a36edfa8bbfa1afb0a43e2b59e017b48c7c38ae6a7cd4836c6c086e67cdb7853",
+          "names.json": "96ec6f113402462717dcf095ddac9c618449e39ba6ac953bc77a1a9986adc384",
+          "native-bank-permutation.json": "7593315f1d59340e623d51aec103f95175ef04a883184405bba7ad0a108c5d9c",
+          "native-half.json": "8f859f67156b9ca7f9ebedf9a112ee852cce27ee3b01d8f00d87a4b892519538",
+          "native-runtime.json": "9171417c32300d8664930785d4a0cc31af6f3a54708c169ff8f910db94229aca",
+          "new-arithmetic.json": "0b7493aa2df65ae5eb26659ba9d46c3d660404f7424110b87b699bd3a3497dc8",
+          "pre-coalescence-grammar.json": "430a6e9e3ab56ce086ac815252ee3780449b09c1e6cb70413b193de0f3e8902a",
+          "pre-control-grammar.json": "4bb38c2eba624b31925bf1904553e3a53ad7a651511d8ecafecdddcaee832456",
+          "pre-projection-grammar.json": "84993c15a211f13dce91290dccc7d3ef078aa0c482e16bd9ae58242dee0aad31",
+          "quotient.json": "c107d1fc59b6c96e15c8b378af85b7c2bbcd621d352dd71dd7e02bf411214070",
+          "raw.tm": "ac25fb6eb76ebc8c35eca1461605370fee20e8aa4f6028258362082e4437d44d",
+          "refactoring.json": "926505d9726dd3a15e733cf2bce56b48005369f0531969abe0477aa4e9ef5551",
+          "return-forward.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "selector.json": "02b248b3232f33925be2284d779ded2a0fae3db425e320a80627abd8eed4195c",
+          "three-move-swap.json": "c52019efc7f41cfeef3a1cd7686cb3e0e9c147fcc808a712f1ddc44e23571ca7",
+          "weak-grammar-plan.json": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23",
+          "whole-action.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "zero-context.json": "96e3c8afa3467eb30b356853acdf5710f0f1124d2318f7389f2d076a5afb13b7"
+        },
+        "selected": {
+          "completion.json": "e93fd87e61c05eaeb0a4e4478af715e634e63d5698fb4dbb091f70c15b7eed24",
+          "domain.json": "0c680aedea3ac17584919c9623a7b5611e38009ad29cf25b2173ad84f7dd36e3",
+          "event-quotient.json": "5ac2bd66291df669620ab3c2bb75bde2546600fa7e843a8c841845cb79ccce31",
+          "events.tm": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+          "ingress-prequotient.tm": "a5f5d947e3d0474e7c2cfbdd0841b512d934fbbe9a9451a6d0bcff243153cef6",
+          "machine.tm": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712",
+          "metadata.json": "737b3ff081b89e8e09b5772f5ab32628a4b3f4e4c87b4125af30a39a0d9dc3c4",
+          "physical-ledger.json": "9411374e4ffb5a6b71261a145a12d6dcb63dea3b2041e42c94fde9e401b22f24",
+          "quotient.json": "756fa24ad34140dcb1783d91430187c6a3c2ed25a2c18431a89c67efeb8c5c7f",
+          "raw.tm": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d"
+        }
+      },
+      "authorship": "author of separate losing record_tail experiments; conceptually suggested inspecting known-zero clears, but authored none of the selected source, specializer, grammar plan, compiler, completion or tables",
+      "checker_sha256": "d1f2e205604408c8ef59946e9224604ea428d4a2260c950c94835dd921b6ed08",
+      "completion": {
+        "B_states": 267,
+        "actual_completed_row_changes": 6,
+        "completion_equations": 540,
+        "event_equations": 534,
+        "marked_rows": [
+          [
+            104,
+            1,
+            0,
+            "L",
+            1,
+            1
+          ]
+        ],
+        "marked_states": 266,
+        "named_exclusions": 5,
+        "parent_states": 270,
+        "projected_holes": [
+          [
+            9,
+            1
+          ],
+          [
+            51,
+            0
+          ],
+          [
+            52,
+            1
+          ],
+          [
+            70,
+            0
+          ],
+          [
+            269,
+            0
+          ],
+          [
+            269,
+            1
+          ]
+        ],
+        "raw_rows": 544,
+        "raw_states": 272,
+        "retained_parent_rows": 534
+      },
+      "damaged_certificates_rejected": [
+        "remove raw preimage",
+        "add unconstrained row",
+        "remove named semantic exclusion",
+        "merge B into start",
+        "erase event shift",
+        "damage selected write",
+        "damage selected move",
+        "damage selected target",
+        "damage selected event",
+        "erase ingress event",
+        "change retained completion row",
+        "false contextual entry",
+        "false sharing entry with updated digest",
+        "nonzero projected-away coordinate",
+        "live source state/right alias",
+        "incorrect clock region mode",
+        "wrong consuming guard operand",
+        "wrong borrowed seed clock",
+        "occurrence input binding",
+        "omitted occurrence",
+        "wrong occurrence operand",
+        "wrong occurrence path",
+        "false occurrence zero mask",
+        "changed false return with updated digest",
+        "cleanup output binding",
+        "disconnected cleanup with valid identity closure",
+        "compiled grammar write",
+        "delimiter fails to reset",
+        "aliased or wrong swap work certificate"
+      ],
+      "format": "np-conp-occurrence-control-independent-physical-static-v1",
+      "physical_ledger": {
+        "all_raw_origins": 272,
+        "complete_state_fibers": 266,
+        "disjoint_partition": {
+          "blank bootstrap": 4,
+          "blank bootstrap + totalization": 1,
+          "compiled arithmetic and control": 154,
+          "event adapter": 1,
+          "event adapter + remaining engine and dispatch": 1,
+          "native half kernel": 13,
+          "native half kernel + native half selection and preparation + remaining engine and dispatch": 1,
+          "native half operation entries": 4,
+          "native half selection and preparation": 5,
+          "operation-specific operand selectors": 24,
+          "register operation entries": 24,
+          "remaining engine and dispatch": 27,
+          "return delimiter scan": 7
+        },
+        "rows": 532,
+        "source_table_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+        "states": 266
+      },
+      "pinned_predecessor_checker_sha256": "f3e6f5f7b8ab2caa70640db6c21241cb5e9d32b774123c35a7b615e5245ad7ab",
+      "plan_sha256": "d655fe8442b046b6f7ef1f8003e7152ed1729fdfcc47ecdda3144e2296be00a4",
+      "reused_checkers": {
+        "binary_phase/review/binary/check_static_parser.py": "8e465822aeea83486e9578564972685edb9d0afe4593ff8f00b672d259d7b625",
+        "binary_phase/review/phase_completion/check_completion.py": "7929ed3fc62ff2fff853b619474e69fb477b6800f0b3d3a5238cc096470a165e",
+        "phase_search/review/certificate_engine/check_selected.py": "cdab69c3093773962de633e2dc945e2d2aa583bd7a629f575e3d22a6866aedca"
+      },
+      "reviewer": "internal-model-reviewer; nonauthor of selected control_regions producer",
+      "runtime": {
+        "complete_disjoint_raw_row_coverage": {
+          "added_lexical_return_rows": 0,
+          "bootstrap_calls": 3,
+          "delimiter": 15,
+          "grammar": 308,
+          "inherited_runtime": 162,
+          "operation_entries": 56
+        },
+        "delimiter_geometry": {
+          "checked_return_prefixes": 5035,
+          "delimiter_length": 7,
+          "maximum_native_prepared_zero_run": 6,
+          "maximum_ordinary_prepared_zero_run": 6,
+          "maximum_path_zero_count": 13,
+          "maximum_prepared_path": 29,
+          "terminal_occurrences": 281
+        },
+        "exact_inherited_named_runtime_rows": 162,
+        "excluded_named_reads": [
+          [
+            "1b.reg.prep_1",
+            1
+          ],
+          [
+            "2h.native_half.begin",
+            0
+          ],
+          [
+            "2h.native_half.boundary",
+            1
+          ],
+          [
+            "2h.native_half.prep",
+            1
+          ],
+          [
+            "2h.native_half.undo",
+            0
+          ]
+        ],
+        "frozen_runtime_producer": "cc55f5e39a98b75062fdd8ad2029ae9a0efeef13",
+        "independently_checked_grammar_rows": 308,
+        "native_entries": 4,
+        "operation_entries": 24,
+        "paid_bootstrap_fields": 1909,
+        "physical_classes": 12,
+        "startup_scope": "must be established on this exact new raw table by independent literal execution"
+      },
+      "scope": "independent conventional domain review and all-row/full-fiber/storage/allocation checks; source theorem, literal replay and immutable-object binding have separately recorded scopes",
+      "source_allocation": {
+        "cfg": {
+          "main": {
+            "frame_size": 11,
+            "nodes": 95,
+            "variables": 13
+          }
+        },
+        "clock_and_seed_three_operand_interference": true,
+        "closed_clock_regions": 1,
+        "closed_seed_regions": 1,
+        "consuming_guard_regions": 3,
+        "scope": "actual source CFG/liveness and extra simultaneous clock operands; closed region arithmetic and entry-zero premises reviewed separately",
+        "three_transfer_swap": {
+          "actual_source_swap_sites": [
+            {
+              "line": 46,
+              "logical": [
+                "$liveframe.0.6",
+                "$liveframe.0.7",
+                "$micro.q"
+              ],
+              "physical": [
+                "$coalesced.8",
+                "$coalesced.1",
+                "$coalesced.10"
+              ]
+            },
+            {
+              "line": 86,
+              "logical": [
+                "$liveframe.0.6",
+                "$liveframe.0.7",
+                "$micro.q"
+              ],
+              "physical": [
+                "$coalesced.8",
+                "$coalesced.1",
+                "$coalesced.10"
+              ]
+            }
+          ],
+          "scope": "source tuple sites, declared operands and simultaneous distinct carriers; actual entry-zero premise and exact transfer refinement are separately reviewed; full intermediate ownership closure is checked below"
+        }
+      },
+      "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+      "storage": {
+        "allocated": 19,
+        "checked_operations": 188,
+        "core_preserving_moves": 41,
+        "independent_core_sha256": "8ebf6c76b48fb312f22a0d4ca1632829aaf66e60382d91f7b8283edd81f87e23",
+        "occurrence_chain": {
+          "cleanup": {
+            "closure": {
+              "closed_edges": 391,
+              "occurrences": 303
+            },
+            "output_grammar_sha256": "bc1bd75c9db004c74e04ee358a701d4d34f4594386bd2119867d18811a536d01",
+            "retained_core_sha256": "8ebf6c76b48fb312f22a0d4ca1632829aaf66e60382d91f7b8283edd81f87e23",
+            "shared_zero_rows": 0
+          },
+          "first_context": {
+            "closure": {
+              "closed_edges": 394,
+              "occurrences": 310
+            },
+            "output_grammar_sha256": "4d995fd27548df06955d775af1bba292f91d79592f19868f3bd4805cd73d2e79",
+            "retained_core_sha256": "ddf4a5cc8a5bf74acacc16cc2d19b02b2ce81658e702963cfe02f49870f60915",
+            "shared_zero_rows": 2
+          },
+          "postfixed_closure": {
+            "closed_edges": 391,
+            "occurrences": 303
+          },
+          "replaced_occurrences": 9,
+          "replacements": {
+            "110011001111111111101011111111101011100": {
+              "index": 86,
+              "operation": "3.$liveframe.0.10.decnz",
+              "register": "$liveframe.0.10",
+              "state": "1177111111177777777"
+            },
+            "110011001111111111101011111111101011111100": {
+              "index": 95,
+              "operation": "3.$liveframe.0.8.decnz",
+              "register": "$liveframe.0.8",
+              "state": "7171111111177177777"
+            },
+            "1100110011111111111010111111111010111111111111100": {
+              "index": 121,
+              "operation": "3.$liveframe.0.6.decnz",
+              "register": "$liveframe.0.6",
+              "state": "1177111111177777717"
+            },
+            "11001100111111111110101111111111100": {
+              "index": 130,
+              "operation": "3.$liveframe.0.4.decnz",
+              "register": "$liveframe.0.4",
+              "state": "1171111111177177771"
+            },
+            "1100110011111111111111100": {
+              "index": 143,
+              "operation": "3.$liveframe.0.2.decnz",
+              "register": "$liveframe.0.2",
+              "state": "1377111111177117771"
+            },
+            "110011001111111111111111111111111110101111111111101011100": {
+              "index": 244,
+              "operation": "3.$liveframe.0.10.decnz",
+              "register": "$liveframe.0.10",
+              "state": "1377111111177777777"
+            },
+            "110011001111111111111111111111111110101111111111101011111100": {
+              "index": 253,
+              "operation": "3.$liveframe.0.8.decnz",
+              "register": "$liveframe.0.8",
+              "state": "7371111111177177777"
+            },
+            "1100110011111111111111111111111111101011111111111010111111111111100": {
+              "index": 279,
+              "operation": "3.$liveframe.0.6.decnz",
+              "register": "$liveframe.0.6",
+              "state": "1377111111177777717"
+            },
+            "1100110011111111111111111111111111101011111111111110100": {
+              "index": 290,
+              "operation": "3.$liveframe.0.4.decnz",
+              "register": "$liveframe.0.4",
+              "state": "1171111111177177771"
+            }
+          },
+          "scope": "all finite source-entry runs by inductive closure; no blank bootstrap inferred",
+          "specialized_core_sha256": "8ebf6c76b48fb312f22a0d4ca1632829aaf66e60382d91f7b8283edd81f87e23"
+        },
+        "physical_classes": 12,
+        "projected": 15,
+        "projected_away_zero_coordinates": [
+          "$micro.a",
+          "$micro.r",
+          "$micro.c",
+          "$digit.index"
+        ],
+        "retained_core_rows": 189,
+        "sharing_closure": {
+          "closed_edges": 378,
+          "occurrences": 281
+        },
+        "zero_peer_obligations": 85,
+        "zero_peer_sites": 85
+      }
+    }
+  },
+  "exported_source_files_verified": 223,
+  "format": "np-conp-266-public-verification-v1",
+  "literal": {
+    "events": {
+      "complete_configuration_sha256": "6b8220bd89f8f75fd67f977512747ac388a72b1e0bacd25393dfa6f8e02255ce",
+      "engines_agree_on_all_one_cells": true,
+      "events": [
+        89844341,
+        99174101,
+        112620825
+      ],
+      "head": -3816,
+      "one_cells": 5992,
+      "state": 49,
+      "steps": 112620826
+    },
+    "machine": {
+      "complete_configuration_sha256": "274ced451d87f42358322a997dabd24b6068ac33e367301f77f9c5ed2d148d81",
+      "engines_agree_on_all_one_cells": true,
+      "events": [
+        89844342,
+        99174102,
+        112620826
+      ],
+      "head": -3816,
+      "one_cells": 5992,
+      "state": 49,
+      "steps": 112620826
+    }
+  },
+  "python_version": "3.12.14",
+  "scope": "Finite reproducibility, source/control/certificate checks and optional literal prefix; not a Lean theorem, new independent review, or decision of eventual silence.",
+  "source_manifest_sha256": "68cfe7afb95bf1caca740a5d8854e1d17ddf42cb37689f212fd6d194258da038",
+  "status": "passed",
+  "tables": {
+    "B_exit": {
+      "rows": 534,
+      "sha256": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712",
+      "states": 267
+    },
+    "marked": {
+      "rows": 532,
+      "sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+      "states": 266
+    }
+  },
+  "wrapper_sha256": "cb3a427292c965e8a706595eccae24158566cc18f22039af60a134e9323100e7"
+}

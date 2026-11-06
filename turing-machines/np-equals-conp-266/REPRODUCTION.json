@@ -1,0 +1,14 @@
+{
+  "canonical_artifacts_byte_identical": 54,
+  "case": "reuse_clock_roles_zero_geometry",
+  "exported_source_files_verified": 223,
+  "format": "np-conp-266-public-selected-reproduction-v1",
+  "optimization_search": false,
+  "original_all_experiment_replay": false,
+  "source_manifest_sha256": "68cfe7afb95bf1caca740a5d8854e1d17ddf42cb37689f212fd6d194258da038",
+  "table_sha256": {
+    "events.tm": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+    "machine.tm": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712"
+  },
+  "wrapper_sha256": "70ebba2c7d3f40e3fb32a3ca47f98d962e9830c6d6bbe8aef2b49c990813d309"
+}

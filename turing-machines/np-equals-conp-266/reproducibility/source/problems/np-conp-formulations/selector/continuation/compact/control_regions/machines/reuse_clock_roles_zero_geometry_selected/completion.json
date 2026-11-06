@@ -1,0 +1,104 @@
+{
+  "changes": [
+    {
+      "after": [
+        1,
+        "R",
+        63,
+        0
+      ],
+      "before": [
+        1,
+        "R",
+        269,
+        0
+      ],
+      "read": 1,
+      "state": 9
+    },
+    {
+      "after": [
+        0,
+        "R",
+        10,
+        0
+      ],
+      "before": [
+        0,
+        "R",
+        269,
+        0
+      ],
+      "read": 0,
+      "state": 51
+    },
+    {
+      "after": [
+        0,
+        "R",
+        40,
+        0
+      ],
+      "before": [
+        1,
+        "R",
+        269,
+        0
+      ],
+      "read": 1,
+      "state": 52
+    },
+    {
+      "after": [
+        1,
+        "R",
+        62,
+        0
+      ],
+      "before": [
+        0,
+        "R",
+        269,
+        0
+      ],
+      "read": 0,
+      "state": 70
+    },
+    {
+      "after": [
+        1,
+        "R",
+        2,
+        0
+      ],
+      "before": [
+        0,
+        "R",
+        269,
+        0
+      ],
+      "read": 0,
+      "state": 269
+    },
+    {
+      "after": [
+        1,
+        "L",
+        3,
+        0
+      ],
+      "before": [
+        1,
+        "R",
+        269,
+        0
+      ],
+      "read": 1,
+      "state": 269
+    }
+  ],
+  "format": "np-conp-unreachable-row-completion-v1",
+  "retained_rows": 534,
+  "source_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+  "target_sha256": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d"
+}

@@ -1,0 +1,360 @@
+{
+  "files": [
+    {
+      "git_blob": "cca98bea8aae7bebf7187888d244fdfbfaeb6a2c",
+      "origin_path": "problems/p-np-horn-beeper/accumulator/consuming.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/accumulator/consuming.py",
+      "sha256": "f60b373b7868e8c2f361c83f78a7c8deb2c23943ef0550920ba34fe8d7272e36"
+    },
+    {
+      "git_blob": "b8256f09d922ad60d9a706caef119238f2e9e0fb",
+      "origin_path": "problems/p-np-horn-beeper/accumulator/digits.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/accumulator/digits.py",
+      "sha256": "77f6498d784b5832bf86489b88bd371eed9b54527eb187b723a718ef899dd56b"
+    },
+    {
+      "git_blob": "ae0027355d4d297153a5cc2d7a39ccaaf1ba97b4",
+      "origin_path": "problems/p-np-horn-beeper/accumulator/intrinsics.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/accumulator/intrinsics.py",
+      "sha256": "a161b309c987f1037dd6cd0854ae0a9a0d858cce1ee6ea3640dbaebccc56d64d"
+    },
+    {
+      "git_blob": "9e73ca6ab83affddfe5dffbe41a04922dcb17cb4",
+      "origin_path": "problems/p-np-horn-beeper/accumulator/liveness.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/accumulator/liveness.py",
+      "sha256": "eaf65ef520471518d09b806e246a04e2031f90bc33ae878103f3948771529985"
+    },
+    {
+      "git_blob": "c3bce2fc1cb5e04986f4a41e712fdd5f80c2bc98",
+      "origin_path": "problems/p-np-horn-beeper/accumulator/positive.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/accumulator/positive.py",
+      "sha256": "95364827975dea32d3dffa3a7d30c1d0bde575bfdefb6ddbe16b0e5df17ce65c"
+    },
+    {
+      "git_blob": "8f7bda808e3af11b586a0eee7ca223b574ae531f",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/check_contextual_quotient.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/check_contextual_quotient.py",
+      "sha256": "89789ed6a5ea4b8f9932e28ce457566fd3d294a05bee7e77e22e24247649612f"
+    },
+    {
+      "git_blob": "b9c73beb6b97afc068982085a0724167c59a3bc9",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/check_contextual_tree.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/check_contextual_tree.py",
+      "sha256": "9f18d105ba6e3a46341944c2f6cf65f869179c3ac625a672dc544c347cac601e"
+    },
+    {
+      "git_blob": "15ed10de87d4142ca7c6938309f9a11403c77286",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/contextual_quotient.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/contextual_quotient.py",
+      "sha256": "8cde584ef0a1ca9ccd21e264008866a83638743204805ee9d666a382a22d390b"
+    },
+    {
+      "git_blob": "933602d80b685ead8b437af5fb523770c1ff3287",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/contextual_tree.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/contextual_tree.py",
+      "sha256": "65f39e9984a5a352a6b825d3086b41139f09429ec52be3dea300775e4a7db46f"
+    },
+    {
+      "git_blob": "85c41dba3e873df1c738ccdd008db54214f190e0",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/contextual_tree_build.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/contextual_tree_build.py",
+      "sha256": "e7a2d16b4e4853c17d3a0939c473fc1c2559c17a9ee98afbe23eb6d70fb69c52"
+    },
+    {
+      "git_blob": "baee7107b1c72db0a7233ddff338f7ee526833a7",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/shared_selector.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/compiler/shared_selector.py",
+      "sha256": "4b662d747924d080f2499e9d7dd5ed211beb582c6558425e5ca3ef8391081ab0"
+    },
+    {
+      "git_blob": "1b1f031aa23a029d4524543c9538371e4e2b6e9b",
+      "origin_path": "problems/p-np-horn-beeper/compression/grammar/closed_sequences.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/grammar/closed_sequences.py",
+      "sha256": "9156162ae912b7b2d369226f03b345d226eb8b051140b9a29988e115a5386139"
+    },
+    {
+      "git_blob": "43301e72c944626ba485c3759089f7688608dfcd",
+      "origin_path": "problems/p-np-horn-beeper/compression/grammar/fused_horner.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/grammar/fused_horner.py",
+      "sha256": "4a662750dea4e1ec5d295f1c0fda4f0bdbc1792da2c786653d3d96395ea2eded"
+    },
+    {
+      "git_blob": "84aaa793f328273314666d0b8dbe970ca14092fe",
+      "origin_path": "problems/p-np-horn-beeper/compression/grammar/kernel_builder.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/grammar/kernel_builder.py",
+      "sha256": "ad7905af661595bf7e110ace91e887be9154ed469c04bd85a82191896ac5d0a3"
+    },
+    {
+      "git_blob": "2c6e4b8a3eb22780e5cf4d7eeb8de2862b7c1a0e",
+      "origin_path": "problems/p-np-horn-beeper/compression/integrated_build.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/integrated_build.py",
+      "sha256": "1a53e954015801b8215fffbe14d31907b90c6e3e16514133a63f9f54a633ea26"
+    },
+    {
+      "git_blob": "309a80afb7058838da7b1a7efea39cbf677c5829",
+      "origin_path": "problems/p-np-horn-beeper/compression/literal_bitset.c",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/literal_bitset.c",
+      "sha256": "0fdf891700a548a6144a4b6780483743ce5676b17e7f696f65ffeb4841e8c5e6"
+    },
+    {
+      "git_blob": "f4739a08d98f8cdd5d00e421a1ee7393ec4ba372",
+      "origin_path": "problems/p-np-horn-beeper/compression/native/countdown.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/native/countdown.py",
+      "sha256": "af5403c6a00f3fa820cdaa90de5ceaf61db1e509fb754e7909208a9ba3ac43f0"
+    },
+    {
+      "git_blob": "380905196a2cf1d22954edd6eb0285a5ce27a082",
+      "origin_path": "problems/p-np-horn-beeper/compression/reviews/runtime_dependency_checks.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/reviews/runtime_dependency_checks.py",
+      "sha256": "d7871a254dab5bf8851025d75bd736c7738de889e25075e9f23a26cc9074260e"
+    },
+    {
+      "git_blob": "3d26893c9e48dba510c9beb9365ce7bda27f9ac3",
+      "origin_path": "problems/p-np-horn-beeper/compression/source/intrinsic_build.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/source/intrinsic_build.py",
+      "sha256": "8db6b51421122851adf278269dc5d9a656583400812c06360783c552f905d770"
+    },
+    {
+      "git_blob": "d52be94aa129a8f6e884b2c41409ca460366b572",
+      "origin_path": "problems/p-np-horn-beeper/compression/verify_integrated.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/compression/verify_integrated.py",
+      "sha256": "ed48733d27a0b1df3dde3fa8f88f1dff8b272a22b0edee88aeaf5aa5ffab77ee"
+    },
+    {
+      "git_blob": "ddc344e2c5adda5d5b5fef0d5ebacec7d7bb35a8",
+      "origin_path": "problems/p-np-horn-beeper/shared/assigned_natural.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/assigned_natural.py",
+      "sha256": "26c909dc8e70818ba660a386f3e838fdc792fe3dfe242647bf944b690ec1416b"
+    },
+    {
+      "git_blob": "8db49d12a813a2e0c34d18ca43ac8f2bb784e0f7",
+      "origin_path": "problems/p-np-horn-beeper/shared/backend.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/backend.py",
+      "sha256": "c91309bf4d6cfe6cfaed017003cc6e363fc39365daedefae7410c5a9ce6319a4"
+    },
+    {
+      "git_blob": "d1ef49a5ffa228b7afe9342ebcbcc7efa8ea8484",
+      "origin_path": "problems/p-np-horn-beeper/shared/build_baseline.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/build_baseline.py",
+      "sha256": "109723da54c3c8730cfe12321dfa8906ec4f3f559683f13d426800658818c89a"
+    },
+    {
+      "git_blob": "a0191dd5ac6d001c89d9635b940bf4666f6239cf",
+      "origin_path": "problems/p-np-horn-beeper/shared/frame_pool.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/frame_pool.py",
+      "sha256": "6f4f3494d698e7abd05e5c68231644e7320386f8cf8fa88fad028c1946ba6a35"
+    },
+    {
+      "git_blob": "737fb2f276ab41bb2caab180df0abff003fce7dc",
+      "origin_path": "problems/p-np-horn-beeper/shared/literal_assign.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/literal_assign.py",
+      "sha256": "96afadfad6815fba503ec825140e8766daca6c521690f86c35c8128c4b73eae2"
+    },
+    {
+      "git_blob": "a9204b07a230dc6ea9f1be7fb2a6a62b8b5c2778",
+      "origin_path": "problems/p-np-horn-beeper/shared/machine.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/machine.py",
+      "sha256": "3f9058985593b45169978d040ffd5dd99d614002b5360ccda6df6a1325206f59"
+    },
+    {
+      "git_blob": "19b5c7666488b5e12c29f98dc05fff7291b50e96",
+      "origin_path": "problems/p-np-horn-beeper/shared/namespace_safe.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/namespace_safe.py",
+      "sha256": "3397fdb8b5d21ac667da04f189ea55ccdb73fdeb59853de4848196fb8700e827"
+    },
+    {
+      "git_blob": "e20edcb18db89b376646c58951e18ef3e024fee4",
+      "origin_path": "problems/p-np-horn-beeper/shared/natural.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/natural.py",
+      "sha256": "ab7ff05b99de9e7fc9cfe96b2c3898853ca0927b526b01966c279a6a825dcd50"
+    },
+    {
+      "git_blob": "2bec95e8de15948500cf03ac0ff79479adecd690",
+      "origin_path": "problems/p-np-horn-beeper/shared/optimized_natural.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/optimized_natural.py",
+      "sha256": "e865a3d2be99170f08116eceb4b3f49173bc334fee44820adb5245858dc51359"
+    },
+    {
+      "git_blob": "1d5f59bde215a7f98cb8caf208b3415074cc8956",
+      "origin_path": "problems/p-np-horn-beeper/shared/quotient.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/quotient.py",
+      "sha256": "e9ae17952fa217e6596997df77fb09bd95eae17886d98b36cd8ea2fa070e01ed"
+    },
+    {
+      "git_blob": "f85bea643a39f6a34a424c0ae67b6918855e3b10",
+      "origin_path": "problems/p-np-horn-beeper/shared/simulate.cpp",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/simulate.cpp",
+      "sha256": "abbefa10f20794bf9b4141b95dfd5353551da4fedefd5d3e0e5999c41a7f239b"
+    },
+    {
+      "git_blob": "d624c7a4e12c6846e356286a4442a8ec2f9c4154",
+      "origin_path": "problems/p-np-horn-beeper/shared/test_machine.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/test_machine.py",
+      "sha256": "84c0adda603943d7f90870d530471069fb4e2cbcab0ecf2cb96dd822bc9307d2"
+    },
+    {
+      "git_blob": "8be33b0cd6d1ba86d883551a61f61455aff7fe5f",
+      "origin_path": "problems/p-np-horn-beeper/shared/test_natural.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/test_natural.py",
+      "sha256": "aef94356a68430faa046dd925b923d099bcdbe1c146dab01e666f41abb59acac"
+    },
+    {
+      "git_blob": "7d830b625ebbf4871e8bab6d66cc17b836cdbc31",
+      "origin_path": "problems/p-np-horn-beeper/shared/test_occurrences.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/test_occurrences.py",
+      "sha256": "5e11498bf83eb2481929a417f6b9927d45454b79f4969128af22333796538dd0"
+    },
+    {
+      "git_blob": "ae57e3688ce6763766f545ab3ebeb79ae5336ef8",
+      "origin_path": "problems/p-np-horn-beeper/shared/vendor/LICENSE",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/vendor/LICENSE",
+      "sha256": "c1dffee77db98625debe39b47538e1d2f3b7956cbc7bcd6ed9363701b2177cfa"
+    },
+    {
+      "git_blob": "f226ca44f524995fc7dcda108c50f94a07240582",
+      "origin_path": "problems/p-np-horn-beeper/shared/vendor/TMBuilder.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/vendor/TMBuilder.py",
+      "sha256": "02b73292cd9e38501bce7de8695802a9f1dada34e6a45877fbd3519b03587a05"
+    },
+    {
+      "git_blob": "85ceb39189ce073b7af53d8d00ec6777d7afa39e",
+      "origin_path": "problems/p-np-horn-beeper/shared/vendor/tm.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/shared/vendor/tm.py",
+      "sha256": "fb1a2509165c4706a81ad6ecff504d35b75140051541cb3605c03d91dd21f1b1"
+    },
+    {
+      "git_blob": "e01b302fe03f4c4706169124b298d5ce085d4e62",
+      "origin_path": "problems/np-conp-formulations/dictionary/optimization/sources/unary_local--equality_inline--fused.py",
+      "origin_revision": "ab28403d4cfaf9f71219b602a03650a71392d0f4",
+      "path": "source.py",
+      "sha256": "ae23de7359cefdd34c139e59418c54e26eddf9e207b9122cfb3473d0f52a380a"
+    },
+    {
+      "git_blob": "470dfe000b661dd295a74233c4f50bc8de3501e9",
+      "origin_path": "problems/np-conp-formulations/microcode/code/events.py",
+      "origin_revision": "ab28403d4cfaf9f71219b602a03650a71392d0f4",
+      "path": "vendor/events.py",
+      "sha256": "331caa8ef1eef1dea1279e2dff84ebb0a33c21b9c6bd67dcb748144ff8b5962d"
+    },
+    {
+      "git_blob": "a48a20ae80bbd9e4160eaa5cc9e886b5d132870d",
+      "origin_path": "problems/p-np-horn-beeper/continuation/compiler.py",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "vendor/pr44/continuation/compiler.py",
+      "sha256": "19e659f7cefa19f8aca2b504f8deebfa233a0e8b68185e309ccd6f4c995d0da9"
+    },
+    {
+      "git_blob": "6fe005142b63e66f58a3ad42a70aa9f51b095242",
+      "origin_path": "problems/p-np-horn-beeper/proofs/COMPILER_PROOF.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/proofs__COMPILER_PROOF.md.txt",
+      "sha256": "bc2e8b7167c6701b4f05445e5da97b770dfb740d512fef782ef907e90e573e26"
+    },
+    {
+      "git_blob": "d023447d5f869e45518d11acf62908aae92d4545",
+      "origin_path": "problems/p-np-horn-beeper/proofs/COMPILER_APPLICABILITY.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/proofs__COMPILER_APPLICABILITY.md.txt",
+      "sha256": "030f74193736aef0d1c9875a525fd4c226501e152702144ea3f378863cca0285"
+    },
+    {
+      "git_blob": "06594bb593c33f7e8b741fc70e58600b2877f709",
+      "origin_path": "problems/p-np-horn-beeper/proofs/dictionary-compression.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/proofs__dictionary-compression.md.txt",
+      "sha256": "ba865e17706549418625f7e3ca93aa438fed61915b45c4ea2fcf16d698da78b0"
+    },
+    {
+      "git_blob": "07bdf76651517fa83ca9069df036c8c9954843e0",
+      "origin_path": "problems/p-np-horn-beeper/proofs/frontier-compression.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/proofs__frontier-compression.md.txt",
+      "sha256": "ce052087842034bec9b8226cce013cc506f83f3cf13521e5fd7c05ada1d2baa2"
+    },
+    {
+      "git_blob": "51d1ea82a221a12e16de8915777c1efcc224bbe2",
+      "origin_path": "problems/p-np-horn-beeper/compression/grammar/PROOF.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__grammar__PROOF.md.txt",
+      "sha256": "082a92fb0d883df709feadeabe27f1e67e7faf650affbd9850fd2a7c89db0d02"
+    },
+    {
+      "git_blob": "2d87e87443cd9de715c0b97d11dcd5d2d8afd300",
+      "origin_path": "problems/p-np-horn-beeper/compression/grammar/HORNER.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__grammar__HORNER.md.txt",
+      "sha256": "b303ef3b5bfc128179e5216d029b92a1a01fd7c40a9fd3d74dbdfdf74c292161"
+    },
+    {
+      "git_blob": "9cc8ad9cc107f5b840d6f9cf5542e5c8fa034962",
+      "origin_path": "problems/p-np-horn-beeper/compression/native/COUNTDOWN.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__native__COUNTDOWN.md.txt",
+      "sha256": "307a7601799b8bb48ab528685fe723ce24bce707d9bc907b6404e547c31f9502"
+    },
+    {
+      "git_blob": "d11a629ef7bef7ac97512f09052733e0461b718c",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/SHARED_SELECTOR.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__compiler__SHARED_SELECTOR.md.txt",
+      "sha256": "334bf433df43b3f1aadc79abd05feb0842ef095691c5a9661fc96c8fbb5227c8"
+    },
+    {
+      "git_blob": "7e9350948ed5215fb86b9a0a05ba530f5ac8ed72",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/CONTEXTUAL_TREE.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__compiler__CONTEXTUAL_TREE.md.txt",
+      "sha256": "d2b0f6354a86888926afe720864bca9dadd5feb92eeeb9dfb36ae058548b99df"
+    },
+    {
+      "git_blob": "655f31636f24683209b957992966f60ac387528e",
+      "origin_path": "problems/p-np-horn-beeper/compression/compiler/CONTEXTUAL_QUOTIENT.md",
+      "origin_revision": "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f",
+      "path": "proof-dependencies/compression__compiler__CONTEXTUAL_QUOTIENT.md.txt",
+      "sha256": "201a017e26fe8e2ea74a8b9d0d0cff66e69aa2211f7219b03012346843f5809a"
+    }
+  ],
+  "format": "np-conp-selector-inputs-v1",
+  "origin_availability": {
+    "ab28403d": "published PR53 control; full revision in individual entries",
+    "b79b23a76ce7463d8e4cb211060db71e6d6d1d1f": "exact Git objects and clean worktree in accessible local P=NP continuation; remote availability not established. These generic bytes are published by the NP=coNP transfer, not by modifying PR44."
+  },
+  "repository": "Mira-Cult/math-wip"
+}

@@ -1,0 +1,16 @@
+name = "beepingShared"
+version = "0.1.0"
+defaultTargets = ["Shared"]
+
+[[lean_lib]]
+name = "Shared"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures.git"
+rev = "5a2fb85045c86e4a184b15ce7531ba199a3c4580"

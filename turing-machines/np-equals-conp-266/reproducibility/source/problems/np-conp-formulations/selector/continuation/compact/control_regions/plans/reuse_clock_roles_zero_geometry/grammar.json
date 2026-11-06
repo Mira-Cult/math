@@ -1,0 +1,697 @@
+{
+  "after": [
+    162,
+    12,
+    26
+  ],
+  "all_jump_only_cycles_rejected": true,
+  "before": [
+    176,
+    11,
+    63
+  ],
+  "broad_patterns": false,
+  "discarded_trailing_height_only_moves": 0,
+  "examined": 784,
+  "format": "np-conp-finite-jump-contraction-v1",
+  "geometry_discovery": {
+    "after": [
+      168,
+      162,
+      6,
+      26,
+      12
+    ],
+    "before": [
+      168,
+      162,
+      6,
+      53,
+      11
+    ],
+    "examined": 6384,
+    "moves": [
+      {
+        "action": [
+          "rotate",
+          "R",
+          "3.$liveframe.0.2.inc",
+          105
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          52,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          "3.$liveframe.0.3.inc",
+          22
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          51,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          "3.$liveframe.0.5.inc",
+          120
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          50,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          "beep",
+          0
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          49,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          10,
+          11
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          48,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          109,
+          111
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          47,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          112,
+          115
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          46,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          12,
+          13
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          45,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          126,
+          127
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          44,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          14,
+          26
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          43,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          27,
+          8
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          42,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          31,
+          32
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          41,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          100,
+          120
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          40,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          100,
+          32
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          39,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          122,
+          133
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          38,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          33,
+          35
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          37,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          100,
+          122
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          36,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          36,
+          99
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          35,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          45,
+          138
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          34,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          56,
+          31
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          33,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          59,
+          62
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          32,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          63,
+          65
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          31,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          67,
+          68
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          30,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          7,
+          139
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          29,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          7,
+          8
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          28,
+          11
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          125,
+          138
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          27,
+          12
+        ]
+      },
+      {
+        "action": [
+          "rotate",
+          "R",
+          58,
+          67
+        ],
+        "score": [
+          168,
+          162,
+          6,
+          26,
+          12
+        ]
+      }
+    ],
+    "rejected_core_changes": 1345,
+    "score": "pair nodes + longest prepared zero run; then nodes, run, height, left depth"
+  },
+  "graph_sha256": "b61e555aeaa2e60bcf782cb6df7d15d9285d63bebbb3133e46b9e8047b615227",
+  "metric": "pair nodes + left depth, then nodes, left depth, height",
+  "moves": [
+    [
+      "drop",
+      175,
+      0
+    ],
+    [
+      "rotate",
+      "R",
+      11,
+      16
+    ],
+    [
+      "rotate",
+      "R",
+      "3.$liveframe.0.8.inc",
+      40
+    ],
+    [
+      "rotate",
+      "R",
+      "_break.0",
+      43
+    ],
+    [
+      "rotate",
+      "R",
+      31,
+      32
+    ],
+    [
+      "rotate",
+      "R",
+      33,
+      35
+    ],
+    [
+      "rotate",
+      "R",
+      38,
+      43
+    ],
+    [
+      "rotate",
+      "R",
+      44,
+      47
+    ],
+    [
+      "drop",
+      141,
+      1
+    ],
+    [
+      "drop",
+      148,
+      1
+    ],
+    [
+      "rotate",
+      "R",
+      48,
+      82
+    ],
+    [
+      "drop",
+      47,
+      1
+    ],
+    [
+      "drop",
+      86,
+      1
+    ],
+    [
+      "rotate",
+      "R",
+      82,
+      84
+    ],
+    [
+      "rotate",
+      "R",
+      "3.$liveframe.0.2.inc",
+      105
+    ],
+    [
+      "rotate",
+      "R",
+      "3.$liveframe.0.3.inc",
+      22
+    ],
+    [
+      "rotate",
+      "R",
+      "3.$liveframe.0.5.inc",
+      120
+    ],
+    [
+      "rotate",
+      "R",
+      "beep",
+      0
+    ],
+    [
+      "rotate",
+      "R",
+      10,
+      11
+    ],
+    [
+      "rotate",
+      "R",
+      109,
+      111
+    ],
+    [
+      "rotate",
+      "R",
+      112,
+      115
+    ],
+    [
+      "rotate",
+      "R",
+      12,
+      13
+    ],
+    [
+      "rotate",
+      "R",
+      126,
+      127
+    ],
+    [
+      "rotate",
+      "R",
+      14,
+      26
+    ],
+    [
+      "rotate",
+      "R",
+      27,
+      8
+    ],
+    [
+      "rotate",
+      "R",
+      31,
+      32
+    ],
+    [
+      "rotate",
+      "R",
+      100,
+      120
+    ],
+    [
+      "rotate",
+      "R",
+      100,
+      32
+    ],
+    [
+      "rotate",
+      "R",
+      122,
+      133
+    ],
+    [
+      "rotate",
+      "R",
+      33,
+      35
+    ],
+    [
+      "rotate",
+      "R",
+      100,
+      122
+    ],
+    [
+      "rotate",
+      "R",
+      36,
+      99
+    ],
+    [
+      "rotate",
+      "R",
+      45,
+      138
+    ],
+    [
+      "rotate",
+      "R",
+      56,
+      31
+    ],
+    [
+      "rotate",
+      "R",
+      59,
+      62
+    ],
+    [
+      "rotate",
+      "R",
+      63,
+      65
+    ],
+    [
+      "rotate",
+      "R",
+      67,
+      68
+    ],
+    [
+      "rotate",
+      "R",
+      7,
+      139
+    ],
+    [
+      "rotate",
+      "R",
+      7,
+      8
+    ],
+    [
+      "rotate",
+      "R",
+      125,
+      138
+    ],
+    [
+      "rotate",
+      "R",
+      58,
+      67
+    ]
+  ],
+  "normalized": [
+    176,
+    11,
+    63
+  ],
+  "rejected_graph_changes": 675,
+  "relation": "ordered INC/DECNZ/beep with both DECNZ outcomes; finite control steps may differ",
+  "retained_primitives": 189,
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b"
+}

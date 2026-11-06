@@ -1,0 +1,20 @@
+[
+  {
+    "borrow_exponent": true,
+    "copy_scratch": "$scratch.copy",
+    "entry": "six distinct logical operands; arbitrary natural F,N,K; B=Q=C=0",
+    "exact_ast": "Assign(targets=[Name(id='n', ctx=Store())], value=BinOp(left=BinOp(left=Name(id='e', ctx=Load()), op=Add(), right=Constant(value=1)), op=Pow(), right=Name(id='j', ctx=Load())))",
+    "exit": "F=(old_N+1)^old_K; N,K restored; B=Q=C=0; other logical cells preserved",
+    "exponent_master": "main.j",
+    "exponent_work": "$micro.b",
+    "function": "main",
+    "invariant": "after t iterations F=(N+1)^t, K=old_K-t, B=t, Q=C=0",
+    "length_master": "main.e",
+    "line": 53,
+    "output": "main.n",
+    "product_work": "$micro.q",
+    "progress": "finite stale-output reset, finite outer countdown, finite inner countdown, preserving copies and restoration",
+    "source_allocation": "explicit three-operand interference before frame pooling",
+    "source_scope": "same normalized clock on all naturals, including N=0 and K=0; no new physical primitive"
+  }
+]

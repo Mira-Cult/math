@@ -1,0 +1,223 @@
+# Horner/diagonal frontier: source coverage and compiler preservation
+
+## Status and scope
+
+This is a producer-authored conventional proof for `machines/horn-horner/source.py`
+and the `frontier/build.py` pipeline. It is not independent review, a kernel
+certificate, or a lower bound. Its dependencies are the unchanged Horn capture,
+one-relation normalization and finite-graph conventions in `horn-reduction.md`,
+and the unchanged unary-register physical simulation in `COMPILER_PROOF.md`.
+The separate new compiler tests and literal tape observations are evidence for
+implementations, not substitutes for the unbounded arguments below.
+
+The table is total, binary, single-tape, initially blank, with a two-way infinite
+tape and only left/right moves. Its header specifies start state 0, B=1 and head
+0. Transition t>=1 emits exactly when its pretransition state is B. No formal
+axiom about P versus NP or about a proof system's completeness for P=NP is used.
+
+## 1. Changed candidate enumeration
+
+Candidates are pairs (k,p), k>=2 and p>=0. Start at (2,0). After a rejection,
+replace (2,p) by (p+3,0), and replace (k,p), k>2, by (k-1,p+1).
+Put s=k+p-2 and
+
+    rank(k,p) = s(s+1)/2 + p.
+
+For k>2 the successor keeps s and increases p by one. At k=2, p=s;
+its rank is the last rank on diagonal s and its successor is the first on
+s+1. Thus the rank increases by exactly one. Conversely every nonnegative
+rank has a unique diagonal and an offset 0<=p<=s, giving k=s-p+2.
+The enumeration is a bijection and uses unbounded naturals, not a fixed-width
+counter. No search cap occurs in the executable specification.
+
+This changes candidate order relative to the 783-state machine. Equality of
+its physical beep times, least successful index, or total finite beep count
+with the old machine is NOT claimed. The target theorem is the same.
+
+## 2. Horner atom encoding and soundness
+
+Retain the previous radix 8(k+2)^k+1, the signed atom kinds and the convention
+that only the first literal of a clause can be a positive guessed-relation
+atom. All codes therefore denote Horn clauses, including codes whose signs
+would otherwise have made later guessed-relation atoms positive.
+
+Let the term-word's nonzero-length base-(k+2) expansion, least significant
+digit first, be t_0,...,t_(r-1); r<=k. The old evaluator built an index using
+place weights. The new evaluator starts at index=0 and applies
+
+    index <- n*index + value(t_i).
+
+Consequently its little-endian tuple is
+(value(t_(r-1)),...,value(t_0),0,...,0). The zero word is the all-zero tuple.
+The source reference `frontier/reference.py` constructs this tuple explicitly;
+it does not duplicate the arithmetic evaluation loop.
+
+A fixed candidate remains a fixed existential second-order Horn sentence on
+finite successor graphs. Its k-ary guessed relation has n^k Boolean entries;
+grounding the fixed clauses gives only polynomially many Horn variables and
+clauses as a function of the input graph size. Ordinary Horn propagation decides
+its truth in polynomial time. The research machine instead enumerates all
+relation interpretations. That implementation is finite but need not be
+polynomial, and is not the reason for candidate soundness.
+
+## 3. Coverage despite loss of leading zero term digits
+
+A Horner word directly represents any k-tuple of term *codes* whose first
+coordinate is nonzero, and also the all-zero tuple. This restriction cannot
+just be ignored. The following explicit guarded translation restores coverage
+of every sentence in the old candidate language.
+
+For an old k-ary candidate, add a new universally quantified variable z=x_k and
+use new arity k'=k+1. Its term code is k+2. In every original atom replace every
+occurrence of the first-element term (code zero) by z, and append z as the last
+tuple coordinate. Add the input literal NOT(z=first) at the END of every clause.
+The guessed relation is now R'(x_0,...,x_(k-1),z). The extra coordinates of edge,
+successor and equality atoms are ignored, as specified by the original engine.
+
+All transformed atoms have a nonzero first term code. The guard's first term
+is also z. Thus reverse all k' term codes to obtain a base-(k'+2) term word with
+nonzero highest digit: the new evaluator reads exactly the desired full tuple.
+The guard is extensional and appended, so the original head remains first and
+the Horn restriction is preserved. An empty clause becomes just the guard;
+an empty conjunction remains empty.
+
+If z differs from the first element, the guard is true and imposes no condition.
+At z=first, the guard is false, every replacement of zero by z has its old
+meaning, and the slice R'(-,first) must satisfy exactly the old clauses. Hence
+an interpretation of R' exists iff an interpretation of the old R exists.
+An old model extends arbitrarily to other slices; a new model restricts to the
+old one. This proves coverage for every n>=2, not just the tested finite cases.
+The existing mixed-arity/nullary normalization composes with this translation.
+
+The reference construction `lift` implements this map. Its tests compare
+truth by independently grounded Horn closure; their finite number is not the
+coverage proof.
+
+## 4. Total comparison, progress and eventual silence
+
+For each candidate the source enumerates n=2,3,... and all n*n-bit directed
+edge matrices in increasing integer order. Loops and self-loops are allowed.
+This is the same NP-complete graph language and input convention as the
+preserved baseline. A new arity k is fixed during this whole graph scan.
+
+For each graph, the evaluator tries at most 2^(n^k) relation interpretations,
+at most n^k variable assignments per interpretation, and finitely many code
+digits per clause. All nested divisions have positive divisors. Horner term
+scans strictly decrease a finite natural. The independent coloring routine
+tries at most 3^n color assignments and finitely many edge bits. Every graph
+comparison terminates for arbitrarily large n,k,p.
+
+By Sections 2-3 and the inherited capture theorem, a candidate agrees with
+three-colorability on all graphs iff it defines that property, and some such
+candidate exists iff P=NP. Every unsuccessful candidate has a finite-index
+graph counterexample. The sequential controller reaches it, emits one beep,
+advances the pair, and restarts the graph enumeration.
+
+If P!=NP, every candidate is rejected and infinitely many beeps occur. If P=NP,
+the least successful diagonal rank j is reached after finitely many terminating
+tests; thereafter every finite graph index is reached in finite time without
+another beep. Including the initial beep, the finite count is 1+j. Both cases
+continue running. This is quasihalting/eventual silence, not ordinary halting,
+and no finite quiet trace identifies the successful candidate.
+
+## 5. Shared radix-digit kernel
+
+The generic compiler recognizes pure, call-free expressions
+
+    (a // (b**d)) % b.
+
+With A=a, B=b and D=d, it performs D+1 divisions. Before each division, Q=R=C=0.
+After a division by positive B, Q=floor(A/B), R=A mod B, A=C=0, and B is unchanged.
+If D>0, it clears R, moves Q to A, decrements D and repeats. Otherwise it clears
+Q and B and returns R. Induction gives the requested radix digit.
+
+The generic zero-divisor convention is also preserved: quotient by zero is zero
+and remainder is the dividend. At b=0,d=0 the expression is a (0**0=1); at b=0,
+d>0 it is zero. The generic loop has exactly these outcomes. All iterations
+terminate, including base zero and one. The extra index register is zero on
+return, as are all shared arithmetic cells other than the returned result.
+
+The recognized term expression
+
+    (n*(n-1+n*a) // (n**t)) % n
+
+has digits 0,n-1,a_0,a_1,... for n>=1. It therefore returns zero at t=0, n-1 at
+t=1, and the (t-2)-nd digit of a otherwise. Saturating natural subtraction makes
+the original expression zero when n=0; the generic kernel includes that case.
+Calls inside either matched expression disable the optimization, because
+repeated evaluation of a base could emit events. Equal syntax alone is not a
+license to delete effects.
+
+## 6. Checked positive-divisor specialization
+
+`accumulator/positive.py` establishes a sufficient static precondition rather
+than accepting a caller-supplied assertion. It starts with no positive variable
+invariants. Parameters and variables that may be read before assignment cannot
+receive an invariant. A new lower bound is admitted only when every assignment
+has that lower bound using previously established invariants, and every update
+preserves it. Addition of naturals and multiplication by an expression bounded
+below by one preserve the bound. Unsupported/destructive updates prevent it.
+
+Bounds propagate through natural constants, addition, multiplication, safe
+constant subtraction, positive-base powers, and division by positive constants.
+All ordinary AND augmented divisions/remainders must have a proved divisor
+bound at least one. The proof is induction over the finite order in which
+invariants were admitted, followed by induction over source execution. It also
+covers loop iterations; it does not infer that a loop executes.
+
+For the selected source, n>=2 and the encoded clause radix is positive. Removing
+the zero-divisor arms therefore preserves its mathematical execution. The
+positive term kernel is safe because its base is also a checked modulus divisor.
+The complete generic fallback table (716 states) is preserved separately.
+Nine adversarial source mutations are rejected; these tests supplement rather
+than prove this abstract argument.
+
+## 7. Consuming dead reads and direct guards
+
+The backwards analysis unions branch successors and solves each loop's finite
+variable-set liveness equation to a fixed point. Break and continue have explicit
+successors. A read can be moved rather than copied only when its source cell is
+dead afterward. Unknown/effectful expression forms are treated conservatively.
+
+Operand(Name) can defer a load until other operand computations have finished.
+Accordingly the implementation further excludes a name occurring more than
+once anywhere in a simultaneous expression group, including a tuple assignment
+and an augmented assignment's implicit left read. This prevents a nested last
+read from consuming a value required by an earlier deferred reference. Values
+live across calls, branches, loop backedges and candidate updates remain intact.
+The guarantee concerns source-live values, not stale dead storage.
+
+A direct variable guard uses DECNZ followed immediately by INC in the nonzero
+case before entering the body. Thus it tests the source value without copying
+it and restores it before either successor; zero remains zero. Loop and
+inverted-guard branches use the same invariant and the resolved lexical
+break/continue semantics. No arithmetic dictionary register remains live across
+the body solely to hold a guard.
+
+## 8. Physical compilation and event preservation
+
+The new compiler emits only the unchanged INC/DECNZ/BEEP and structured-control
+primitives. Closure, assignment/reset requirements, frame mapping, maximum
+control-path depth and static register count are checked for each selected
+build. The 26 registers fit inside the counted initializer's 1,909 empty slots;
+this bounds their NUMBER, never their natural values or tape use. Register
+operations shift the finite occupied suffix as needed and remain valid for
+arbitrarily large values.
+
+The inherited simulation theorem therefore maps every finite source operation
+to finitely many physical transitions and every source beep to exactly one exit
+from B. The colored quotient is checked row by row. Totalization sends only
+invalid/unreachable physical branches to a silent sink. All those states,
+including startup and B, are counted.
+
+At source events the live candidate pair is compared with the physical run.
+Discarded graph/evaluator scratch is not falsely advertised as source-observable.
+Independently, EVERY physical register, the entire tape, state and head agree
+with the separate primitive interpreter and two literal simulators at the
+checked events. This is a stronger implementation check than matching beep
+counts alone, but still finite evidence.
+
+The result is a complete locally checked 707-state table with the stated
+unbounded conventional proof. Independent review of this proof and the frozen
+implementation remains outstanding. The older tables and their event bindings
+are preserved; no Diophantine representation is changed or claimed here.

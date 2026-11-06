@@ -1,0 +1,28 @@
+{
+  "case": "reuse_clock_roles_zero_geometry",
+  "generator_sha256": "967e7c6b2afc4595e563cbf7de509f58f80de8cef20d92859dba634b48198851",
+  "grammar_sha256": "60c4dbae12ec56b5ace0500dc59f09024f4f27a149f633474f42041d7aaf1b23",
+  "groups_sha256": "81bfba619feacbd71e0fc3c6bbb0edd0ebb53813ca0b4ba0c396917078600c78",
+  "optimization_search": false,
+  "recipe": {
+    "counts": [
+      272,
+      270,
+      269
+    ],
+    "events_sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844",
+    "options": {
+      "zero_context": true
+    },
+    "selected": {
+      "counts": [
+        270,
+        267,
+        266
+      ],
+      "events_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c"
+    },
+    "source": "control_regions/sources/reuse_clock_roles.py"
+  },
+  "recipes_sha256": "8abc16118518937a2af3717c1c4a58fcfe75083d7046b9b903b439d97d3bc0f2"
+}

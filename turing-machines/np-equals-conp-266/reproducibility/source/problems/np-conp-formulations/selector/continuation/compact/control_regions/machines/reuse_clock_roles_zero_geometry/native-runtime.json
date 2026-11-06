@@ -1,0 +1,23 @@
+{
+  "entry": "ordinary prepared path; native old-ABI gap with one separator zero",
+  "format": "np-conp-native-half-runtime-v1",
+  "native_kernel_states": 15,
+  "native_operation_entries": 4,
+  "native_preparation_states": 1,
+  "native_selector_states": 5,
+  "operands": [
+    "$coalesced.9",
+    "$coalesced.0",
+    "$coalesced.1",
+    "$coalesced.2"
+  ],
+  "operation_names": [
+    "3.$native-half:$coalesced.9.decnz",
+    "3.$native-half:$coalesced.0.decnz",
+    "3.$native-half:$coalesced.1.decnz",
+    "3.$native-half:$coalesced.2.decnz"
+  ],
+  "result": "x <- floor(x/2); success iff x was odd; other blocks unchanged",
+  "selected_entry": "head at first 1 of block 1^(x+1)",
+  "unbounded": "all naturals; each cycle removes two remaining input units"
+}

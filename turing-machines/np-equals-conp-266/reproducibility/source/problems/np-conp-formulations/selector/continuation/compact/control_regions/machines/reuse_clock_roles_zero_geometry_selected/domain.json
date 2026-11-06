@@ -1,0 +1,77 @@
+{
+  "control_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+  "convention": "B",
+  "format": "np-conp-binary-phase-fresh-domain-v1",
+  "holes": [
+    [
+      9,
+      1
+    ],
+    [
+      51,
+      0
+    ],
+    [
+      52,
+      1
+    ],
+    [
+      70,
+      0
+    ],
+    [
+      269,
+      0
+    ],
+    [
+      269,
+      1
+    ]
+  ],
+  "names_sha256": "96ec6f113402462717dcf095ddac9c618449e39ba6ac953bc77a1a9986adc384",
+  "preimages": {
+    "269": [
+      271
+    ],
+    "51": [
+      52
+    ],
+    "52": [
+      53
+    ],
+    "70": [
+      72
+    ],
+    "9": [
+      9,
+      65
+    ]
+  },
+  "premise": "The source equivalence proof and fresh storage/control certificates establish the one-zero unary-bank boundary. The existing INC/DECNZ and native HALF segment contracts exclude the five named reads. All raw quotient preimages are checked; membership in totalization metadata alone is not a proof. See ../../PROOF.md.",
+  "raw_quotient_sha256": "c107d1fc59b6c96e15c8b378af85b7c2bbcd621d352dd71dd7e02bf411214070",
+  "requests": [
+    [
+      "1b.reg.prep_1",
+      "1"
+    ],
+    [
+      "2h.native_half.begin",
+      "0"
+    ],
+    [
+      "2h.native_half.boundary",
+      "1"
+    ],
+    [
+      "2h.native_half.prep",
+      "1"
+    ],
+    [
+      "2h.native_half.undo",
+      "0"
+    ]
+  ],
+  "sink": 269,
+  "source_request_file_sha256": "02b248b3232f33925be2284d779ded2a0fae3db425e320a80627abd8eed4195c",
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b"
+}

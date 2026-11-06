@@ -1,0 +1,251 @@
+# Arithmetic dictionary and Horn-source compression
+
+**Status:** producer-authored conventional preservation proof; separate
+mathematical and implementation review is pending. No new claim identifier or
+proof-assistant certificate is asserted. This proof concerns the four complete
+continuation artifacts identified in `evidence/continuation/measurements.json`.
+The exact source and table hashes, not a state count alone, identify an instance.
+
+## 1. Specification and inherited boundary
+
+The [Horn reduction](horn-reduction.md) fixes the total radix-coded candidate
+language, graph enumeration, single-relation normal form, successor structures,
+and finite-rejection controller. None of these definitions changes here.
+Candidates use an unbounded arity k >= 2. Graph domains have n >= 2 elements.
+The external capture theorem and the normal-form argument remain dependencies;
+this continuation does not supply a new independent review of them.
+
+The [physical compiler proof](COMPILER_PROOF.md) establishes arbitrary-natural
+register semantics, lexical control, a growing unary bank on a binary tape,
+finite simulation of every finite primitive computation, and one source beep
+per exit from B. Its eighteen bound implementation modules are unchanged.
+The new compiler in `continuation/compiler.py` emits only the inherited
+INC/DECNZ and lexical-control grammar. It does not install a free interpreter,
+preloaded input, fixed-width register, or uncounted bootstrap.
+
+The accepted source is a nonrecursive natural-number program with disjoint
+active procedure frames and no mutable source-level globals. Addition,
+multiplication, power and comparisons are ordinary natural operations;
+subtraction saturates at zero. As in the inherited compiler, division by zero
+means quotient zero and remainder the dividend. The production Horn source has
+positive divisors; zero-divisor behavior is also tested as a compiler contract.
+
+## 2. Reserved dictionary registers
+
+Five source-inexpressible names, `$micro.a`, `$micro.b`, `$micro.q`, `$micro.r`,
+and `$micro.c`, denote A, D, Q, R and C below. The existing copy scratch is
+separate. They cannot alias a Python source identifier or its frame. The
+inherited physical mapping checker leaves them individually allocated.
+
+At the start and end of every completed source expression and statement,
+all five registers are zero, with one precisely identified exception: a guard
+has just produced its Boolean bit, which the immediately following dispatch
+consumes before executing either successor. Caller-owned expression temporaries
+may remain live across a nested procedure; they never occupy the dictionary.
+No dictionary kernel calls a source procedure or emits a beep.
+
+Operands are loaded into A and D, with Q = R = C = 0. These are the kernel
+postconditions; unlisted dictionary registers are zero:
+
+| Kernel | Result before the adapter moves it out |
+|---|---|
+| Addition | A = a+d |
+| Saturating subtraction | A = max(a-d,0) |
+| Multiplication | Q = ad |
+| Power | Q = a^d, including 0^0 = 1 |
+| Division, d > 0 | Q = floor(a/d), R = a mod d |
+| Division, d = 0 | Q = 0, R = a |
+| Equality | Q = [a=d] |
+| Less-than | Q = [a<d] |
+| Truth | Q = [a>0], with D initially zero |
+| Halving | Q = floor(a/2), R = a mod 2, with D initially zero |
+
+All wrappers consume their old input temporaries and move the named results to
+empty output temporaries, clearing unwanted quotient/remainder results. The
+unused work/countdown arguments of inherited macro signatures remain zero.
+
+For division by d > 0, after h consumed dividend units the invariant is
+Q = floor(h/d), R = h mod d, and C = d-R (with C=d when R=0). The next unit
+increments R and decrements C; C=0 resets R and reloads C while incrementing Q.
+Exactly a units are consumed. For d=0, the guarded counting loop is skipped and
+the whole dividend is moved to R. Clearing D and C establishes the postcondition.
+
+Multiplication consumes D one unit at a time and copies the unchanged A into Q
+on each iteration, then clears A. Power starts Q=1; each consumed exponent unit
+moves every unit of Q into R as a copy of A, then moves R back to Q. The loop
+invariant is Q=a^h and R=0 after h exponent units. Equality cancels equal units,
+returning false as soon as exactly one input has units left. Less-than consumes
+A while saturating-decrementing D, then returns the truth of the residual D.
+Halving consumes pairs into Q and leaves the last odd unit in R.
+
+Each inner unary scan is finite, and every outer loop consumes a fixed finite
+operand or has the stated finite induction index. Values can be arbitrarily
+large; no overflow or workspace cap is used. The inherited copy operation
+restores its own scratch after every invocation.
+
+## 3. Late loading and expression induction
+
+A simple source variable is recorded as a reference; a literal as a constant;
+a compound operand is evaluated left-to-right into an owned temporary. Only
+after both compound operand computations finish are references copied and owned
+temporaries moved into A and D. Source procedures cannot mutate a caller's
+variables, and the checked frame mapping separates simultaneously active
+frames. Thus delaying a reference load does not change its value. Side effects
+of compound operands, including source beeps, retain their original order.
+
+Nested computations finish with the dictionary empty by induction. Therefore
+neither a live left-hand operand nor an unfinished caller computation is
+clobbered by a right-hand nested computation. Once A and D are loaded, owned
+operand temporaries are empty and may be reused for the output. All kernel
+outputs are moved out before another expression begins.
+
+Literal construction uses the finite binary expansion of the supplied natural
+constant. Starting from zero, each bit applies x -> 2x+b. The prefix-value
+invariant proves the resulting literal exactly; the doubling work cell is
+empty after each bit. The entire construction appears in counted control
+states. No enormous unspecified coefficient is introduced.
+
+The two wrappers for `!=` and reversed inequalities move only between reserved
+registers, with a proved empty intermediate. Equality negation produces one
+bit in A and clears Q. Swapping A,D through the empty Q changes their order
+without changing other registers. Incrementing the right operand converts a
+non-strict comparison to a strict one on naturals.
+
+## 4. Consumed guards and control flow
+
+A comparison guard is produced directly in Q, or A for inequality. A general
+guard is loaded into A and consumed by the truth kernel, producing Q in {0,1}.
+All other dictionary registers are zero. The inherited structured conditional
+first executes DECNZ on that bit. If false, it stays zero; if true, the unit is
+consumed. Therefore **both successors begin with the whole dictionary empty**.
+The bit is not needed during either successor or throughout a nested loop.
+
+This justifies eliminating copied Boolean condition temporaries. It is not
+permission to reuse an arbitrary non-Boolean cell after decrementing it once.
+The range proof above is essential. A while-loop re-evaluates the guard before
+every iteration. The body's `break`, `continue` and return still refer to the
+same lexical labels. The closure checker is run before sharing/factoring and
+rejects a movable sequence whose control jumps escape its admitted context.
+
+## 5. One division for simultaneous quotient and remainder
+
+The fused pattern is exactly `r,q = x % b, x // b`, where x is a source variable,
+b is a variable or natural literal, and the two targets are distinct variables.
+The divisor expressions must be syntactically identical and pure. Both operands
+are loaded before either target is cleared. One division kernel then stores R
+and Q in the respective targets.
+
+This is simultaneous-assignment semantics even when a target aliases x or b,
+or x and b are the same source variable. Distinct target registers cannot alias
+within a checked active frame. The zero-divisor convention agrees with the
+unfused compiler. A separate result-forwarding peephole was implemented and
+tested but made this table larger; the selected recipe disables it.
+
+## 6. Inlining and phase-specific scratch reuse
+
+The 822-state source inlines the published model evaluator and coloring
+reference into the controller without changing the candidate coding or graph
+order. It preserves `candidate`, k, `program`, n and `edges` across both phases.
+`expected` initially receives exactly the model evaluator's return value.
+Registers formerly used for model interpretations, assignments, clause state,
+and term indices are overwritten for the coloring phase only after their
+previous values are dead. Each next model test initializes them before reading.
+
+The inner break structure is unchanged: an unsatisfied ground clause rejects
+that assignment; a rejected assignment rejects that interpretation; a fully
+satisfying interpretation sets the candidate truth value and exits the finite
+interpretation search. Coloring tries every base-three coloring and returns
+whether one satisfies all graph edges. The local aliasing is not a claim that
+stale, inactive scratch values remain observable.
+
+## 7. Three further source transformations
+
+### 7.1 Direct base-n term lookup
+
+For 0 <= a < n^k define V=n(n-1+n a). Its base-n digits are
+
+    0, n-1, a_0, a_1, ..., a_(k-1).
+
+Consequently `(V // n**t) % n` is exactly: first element for t=0, last element
+for t=1, and variable t-2 for 2 <= t <= k+1. These are precisely the term selectors
+of the inherited radix. The replacement does not change the candidate language.
+The consumed term-selector cell can hold its value, and later the atom truth
+bit, because the old selector and value are dead at those phase transitions.
+The old all-zero trailing term padding is unchanged.
+
+### 7.2 Reusing the final coloring clause flag
+
+There are 3^n > 0 colorings to attempt. Each attempt initializes its validity
+flag `clause` to one and sets it to zero only on a monochromatic edge. The
+reference loop stops either on a valid coloring, with clause=1, or after every
+coloring fails, with clause=0 from the final attempted coloring. Thus the flag
+already equals the reference answer; the separate assignment to `first` is
+unnecessary. `first` retains its independent role in enforcing the Horn head
+restriction during the model phase.
+
+### 7.3 Reusing the expected-answer cell for the tuple count
+
+For nonzero programs, keep `expected=n**k` throughout the model search instead
+of allocating a separate tuple-count cell. A successful interpretation exits
+with `assignment==expected`; a failed interpretation exits its assignment loop
+strictly below expected. Since n>=2 and k>=2, the tuple count is positive and
+at least one interpretation and assignment attempt occur. After all failures,
+the last assignment count is still strictly below expected. The final test
+`expected = (assignment == expected)` therefore restores exactly the desired
+Boolean answer. Program zero retains its immediate true answer.
+
+Together these transformations preserve every finite comparison and hence every
+rejection and source-beep ordinal. They need not preserve runtime or the values
+of dead scratch cells.
+
+## 8. Physical composition and total execution
+
+The dictionary extension emits a finite closed instance of the unchanged
+register/control grammar. Every emitted arithmetic primitive is one of the
+previously proved INC/DECNZ/control operations. The static frame, assignment,
+closure, finite PC-path and register-count checks are rerun on each artifact.
+The conservative definite-assignment analysis does not export assignments from
+loops. Accordingly, it retains entry resets for `assignment` and `clause` in
+the selected source. Recovery checks that every required reset is present and
+none is marked omitted; it does not demand that this conservative warning set
+be empty. The positivity arguments in Section 7 additionally justify the actual
+source reads. The maximum selected leaf path is 146; the selected register count is 27.
+These syntax bounds concern initialization only, not later data or tape growth.
+
+For the selected table, the independently implemented literal C++ and Python
+simulators establish the same complete initialization configuration after
+61,374,534 transitions: head -3818 and one-cells exactly
+`{-3821,-3820} union {3,5,...,3821}`, with no prior exit from B. All registers
+are zero. The counted five-state bootstrap and its adapters supply this prefix;
+it is a finite instance lemma, not a proof of general program behavior.
+
+Apply the inherited unbounded tape invariant and primitive simulation theorem
+from that configuration. Each finite source computation then has a finite
+physical simulation. Each source beep reaches and exits B once; no kernel or
+bootstrap creates another exit. Only the inherited unreachable preparation
+read-one row is totalized into the counted silent sink. Every raw transition is
+checked against the exact beep-colored quotient. Thus the quotient preserves
+all physical transitions and beep times of the raw machine, on every tape.
+
+Every finite graph comparison terminates by finite candidate parsing, finite
+interpretation/assignment/coloring enumeration, and terminating arithmetic.
+Every failed candidate has a finite-index counterexample. If none succeeds,
+infinitely many rejection beeps occur. If a successful candidate exists, its
+least index j* is reached and thereafter every graph is tested in finite time
+without another beep. There are then exactly 1+j* beeps. The inherited capture
+and normalization theorem makes this existence equivalent to P=NP. Execution
+continues forever in both cases; silence is not a finite recognition procedure.
+
+## 9. Evidence and review boundary
+
+The [continuation report](../continuation/README.md) binds commands, complete
+tables, generator hashes, the kernel/source checks, the finite initial prefix,
+and clean recovery. Source/IR tests include nonempty candidate formulas; the
+first three physical beeps alone reject empty-conjunction candidates and do
+not exercise the full model evaluator. All-occurrence physical tests check
+finite representative primitive configurations, not arbitrary-value semantics.
+
+The mathematical and implementation arguments here are producer-authored.
+Independent review of the new compiler, source transformations, and their
+interaction with the inherited proof remains required. The prior reviewed
+803-state clocked-program machine is not relabeled as a reviewed Horn result.

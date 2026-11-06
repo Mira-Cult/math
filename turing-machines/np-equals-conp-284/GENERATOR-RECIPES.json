@@ -1,0 +1,720 @@
+[
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_table284_data.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_table284_source_chars.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_table284_row_shards.py",
+    "arguments": [
+      "--output-dir",
+      "Shared/Beeping/NPcoNP/"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_table284_clean_shards.py",
+    "arguments": [
+      "--output-dir",
+      "Shared/Beeping/NPcoNP/"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar284_data.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar284_trace.py",
+    "arguments": [
+      "Shared/Beeping/NPcoNP/ExpansionTrace"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_candidate_graph.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_full_rows.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_numbering.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_contract_shards.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_full_row_shards.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_graph_candidate_shards.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_source_chars.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_source_tails.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_source_nodes.py",
+    "arguments": [
+      "--output-dir",
+      "Shared/Beeping/NPcoNP/"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_grammar_source_composition.py",
+    "arguments": [
+      "--output",
+      "Shared/Beeping/NPcoNP/Grammar284SourceComposition.lean"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_parent290_mask.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_parent290_mask_shards.py",
+    "arguments": [
+      "--output-dir",
+      "Shared/Beeping/NPcoNP/"
+    ]
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_parent290_ownership_shards.py",
+    "arguments": [
+      "--output-dir",
+      "Shared/Beeping/NPcoNP/"
+    ]
+  },
+  {
+    "script": "scripts/generate_np284_continue_two_shapes.py",
+    "arguments": []
+  },
+  {
+    "script": "scripts/generate_np284_successor_shapes.py",
+    "arguments": []
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_trace.py",
+    "arguments": [
+      "--lean"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284TraceData.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_chunks.py",
+    "arguments": [
+      "--end",
+      "1024",
+      "--base",
+      "-512",
+      "--span",
+      "520",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedChunks1024.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "1024",
+      "--end",
+      "1280",
+      "--old-base",
+      "-512",
+      "--old-span",
+      "520",
+      "--base",
+      "-1024",
+      "--span",
+      "1032",
+      "--parent-kind",
+      "Chunks",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedContinue1280.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "1280",
+      "--end",
+      "1536",
+      "--old-base",
+      "-1024",
+      "--old-span",
+      "1032",
+      "--base",
+      "-1024",
+      "--span",
+      "1032",
+      "--parent-kind",
+      "Continue",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedContinue1536.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "1536",
+      "--end",
+      "1792",
+      "--old-base",
+      "-1024",
+      "--old-span",
+      "1032",
+      "--base",
+      "-1024",
+      "--span",
+      "1032",
+      "--parent-kind",
+      "Continue",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedContinue1792.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "1792",
+      "--end",
+      "2048",
+      "--old-base",
+      "-1024",
+      "--old-span",
+      "1032",
+      "--base",
+      "-1024",
+      "--span",
+      "1032",
+      "--parent-kind",
+      "Continue",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedContinue2048.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "2048",
+      "--end",
+      "2304",
+      "--old-base",
+      "-1024",
+      "--old-span",
+      "1032",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "Continue",
+      "--rec-depth",
+      "131072"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284PackedContinue2304.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "2304",
+      "--end",
+      "2560",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "Continue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue2560.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "2560",
+      "--end",
+      "2816",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue2816.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "2816",
+      "--end",
+      "3072",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue3072.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "3072",
+      "--end",
+      "3328",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue3328.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "3328",
+      "--end",
+      "3584",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue3584.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "3584",
+      "--end",
+      "3840",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue3840.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "3840",
+      "--end",
+      "4096",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-2048",
+      "--span",
+      "2056",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue4096.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "4096",
+      "--end",
+      "4352",
+      "--old-base",
+      "-2048",
+      "--old-span",
+      "2056",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue4352.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "4352",
+      "--end",
+      "4608",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue4608.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "4608",
+      "--end",
+      "4864",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue4864.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "4864",
+      "--end",
+      "5120",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue5120.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "5120",
+      "--end",
+      "5376",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue5376.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "5376",
+      "--end",
+      "5632",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue5632.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "5632",
+      "--end",
+      "5888",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue5888.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "5888",
+      "--end",
+      "6144",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue6144.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "6144",
+      "--end",
+      "6400",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue6400.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "6400",
+      "--end",
+      "6656",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue6656.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "6656",
+      "--end",
+      "6912",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue6912.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "6912",
+      "--end",
+      "7168",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue7168.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "7168",
+      "--end",
+      "7424",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue7424.lean"
+  },
+  {
+    "script": "Shared/Beeping/NPcoNP/generate_bootstrap284_packed_continue.py",
+    "arguments": [
+      "--start",
+      "7424",
+      "--end",
+      "7665",
+      "--old-base",
+      "-4096",
+      "--old-span",
+      "4104",
+      "--base",
+      "-4096",
+      "--span",
+      "4104",
+      "--parent-kind",
+      "BulkContinue",
+      "--rec-depth",
+      "131072",
+      "--bulk"
+    ],
+    "stdout": "Shared/Beeping/NPcoNP/Bootstrap284BulkContinue7665.lean"
+  }
+]

@@ -1,0 +1,938 @@
+{
+  "after_grammar_sha256": "0119cc14f173818e5709f631db6c81db9dc8ded1805423132d9f55d04a678500",
+  "all_reached_operations_checked": 188,
+  "before_grammar_sha256": "51354b2b6cb44af8b7e0ee19f2f4c293489248ec566be7bb2e2f7c002010b627",
+  "domain": "all-zero source entry; post-control and post-projection carrier",
+  "format": "np-conp-zero-partner-coalescence-v1",
+  "groups": {
+    "$coalesced.0": [
+      "$liveframe.0.4"
+    ],
+    "$coalesced.1": [
+      "$liveframe.0.7"
+    ],
+    "$coalesced.10": [
+      "$micro.q",
+      "$pool0.tmp0"
+    ],
+    "$coalesced.11": [
+      "$micro.b",
+      "$liveframe.0.9"
+    ],
+    "$coalesced.2": [
+      "$liveframe.0.8"
+    ],
+    "$coalesced.3": [
+      "$liveframe.0.0"
+    ],
+    "$coalesced.4": [
+      "$liveframe.0.1"
+    ],
+    "$coalesced.5": [
+      "$liveframe.0.2"
+    ],
+    "$coalesced.6": [
+      "$liveframe.0.3"
+    ],
+    "$coalesced.7": [
+      "$liveframe.0.5"
+    ],
+    "$coalesced.8": [
+      "$liveframe.0.6"
+    ],
+    "$coalesced.9": [
+      "$liveframe.0.10",
+      "$scratch.copy"
+    ]
+  },
+  "interference": {
+    "$liveframe.0.0": [
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.1": [
+      "$liveframe.0.0",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.10": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.q",
+      "$pool0.tmp0"
+    ],
+    "$liveframe.0.2": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.3": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.4": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.5": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.6": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.7": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.8": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$liveframe.0.9": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$micro.q",
+      "$pool0.tmp0",
+      "$scratch.copy"
+    ],
+    "$micro.b": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$micro.q",
+      "$scratch.copy"
+    ],
+    "$micro.q": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$scratch.copy"
+    ],
+    "$pool0.tmp0": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.10",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$scratch.copy"
+    ],
+    "$scratch.copy": [
+      "$liveframe.0.0",
+      "$liveframe.0.1",
+      "$liveframe.0.2",
+      "$liveframe.0.3",
+      "$liveframe.0.4",
+      "$liveframe.0.5",
+      "$liveframe.0.6",
+      "$liveframe.0.7",
+      "$liveframe.0.8",
+      "$liveframe.0.9",
+      "$micro.b",
+      "$micro.q",
+      "$pool0.tmp0"
+    ]
+  },
+  "invariant_sha256": "c520b39d1409838ab93c9e9ea63ca0467281f31ef442ce9ea200750070f6d7b5",
+  "mapped_core_graph_sha256": "4b37087d306ca36ffcfb21b94b48607a4eda63e791db28a27f1d6200d3f250cf",
+  "mapping": {
+    "$liveframe.0.0": "$coalesced.3",
+    "$liveframe.0.1": "$coalesced.4",
+    "$liveframe.0.10": "$coalesced.9",
+    "$liveframe.0.2": "$coalesced.5",
+    "$liveframe.0.3": "$coalesced.6",
+    "$liveframe.0.4": "$coalesced.0",
+    "$liveframe.0.5": "$coalesced.7",
+    "$liveframe.0.6": "$coalesced.8",
+    "$liveframe.0.7": "$coalesced.1",
+    "$liveframe.0.8": "$coalesced.2",
+    "$liveframe.0.9": "$coalesced.11",
+    "$micro.b": "$coalesced.11",
+    "$micro.q": "$coalesced.10",
+    "$pool0.tmp0": "$coalesced.10",
+    "$scratch.copy": "$coalesced.9"
+  },
+  "native_operand_order": [
+    "$coalesced.9",
+    "$coalesced.0",
+    "$coalesced.1",
+    "$coalesced.2"
+  ],
+  "obligations": [
+    {
+      "occurrence": 4,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 5,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 7,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 12,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 22,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 23,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 25,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 35,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 36,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 38,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 43,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 48,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 49,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 51,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 56,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 65,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 66,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 68,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 71,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 72,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 74,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 79,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 80,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 82,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 85,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 86,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 89,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 92,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 95,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 98,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 101,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 106,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 110,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 111,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 113,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 114,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 116,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 127,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 131,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 136,
+      "operation_register": "$micro.b",
+      "zero_partners": [
+        "$liveframe.0.9"
+      ]
+    },
+    {
+      "occurrence": 139,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 140,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 142,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 145,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 147,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 151,
+      "operation_register": "$micro.b",
+      "zero_partners": [
+        "$liveframe.0.9"
+      ]
+    },
+    {
+      "occurrence": 155,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 156,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 158,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 163,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 170,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 172,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 173,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 175,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 179,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 184,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 185,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 187,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 192,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 196,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 197,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 199,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 204,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 211,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 212,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 214,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 217,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 218,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 220,
+      "operation_register": "$liveframe.0.9",
+      "zero_partners": [
+        "$micro.b"
+      ]
+    },
+    {
+      "occurrence": 225,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 226,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 228,
+      "operation_register": "$scratch.copy",
+      "zero_partners": [
+        "$liveframe.0.10"
+      ]
+    },
+    {
+      "occurrence": 231,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 232,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 235,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 238,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 241,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 244,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 247,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 252,
+      "operation_register": "$micro.q",
+      "zero_partners": [
+        "$pool0.tmp0"
+      ]
+    },
+    {
+      "occurrence": 256,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 257,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 259,
+      "operation_register": "$liveframe.0.10",
+      "zero_partners": [
+        "$scratch.copy"
+      ]
+    },
+    {
+      "occurrence": 260,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    },
+    {
+      "occurrence": 262,
+      "operation_register": "$pool0.tmp0",
+      "zero_partners": [
+        "$micro.q"
+      ]
+    }
+  ],
+  "observation": "old logical cells are ghost values, not unconditional aliases of the physical cell",
+  "original_core_graph_sha256": "b61e555aeaa2e60bcf782cb6df7d15d9285d63bebbb3133e46b9e8047b615227",
+  "original_register_order": [
+    "$liveframe.0.10",
+    "$liveframe.0.4",
+    "$liveframe.0.7",
+    "$liveframe.0.8",
+    "$scratch.copy",
+    "$micro.b",
+    "$micro.q",
+    "$liveframe.0.0",
+    "$liveframe.0.1",
+    "$pool0.tmp0",
+    "$liveframe.0.2",
+    "$liveframe.0.3",
+    "$liveframe.0.5",
+    "$liveframe.0.6",
+    "$liveframe.0.9"
+  ],
+  "physical_register_order": [
+    "$coalesced.9",
+    "$coalesced.0",
+    "$coalesced.1",
+    "$coalesced.2",
+    "$coalesced.3",
+    "$coalesced.4",
+    "$coalesced.5",
+    "$coalesced.6",
+    "$coalesced.7",
+    "$coalesced.8",
+    "$coalesced.10",
+    "$coalesced.11"
+  ],
+  "progress": "same retained primitive sequence and branch outcomes; finite physical primitive execution",
+  "representation": "each physical class cell equals the sum of its old logical cells",
+  "retained_primitives": 189
+}

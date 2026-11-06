@@ -1,0 +1,56 @@
+[
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 34,
+    "variable": "state",
+    "while_else": false
+  },
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 26,
+    "variable": "steps",
+    "while_else": false
+  },
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 20,
+    "variable": "branch",
+    "while_else": false
+  },
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 74,
+    "variable": "state",
+    "while_else": false
+  },
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 66,
+    "variable": "steps",
+    "while_else": false
+  },
+  {
+    "body_reassignments_allowed": true,
+    "decrement": 1,
+    "function": "main",
+    "guard": "named natural variable",
+    "line": 60,
+    "variable": "branch",
+    "while_else": false
+  }
+]

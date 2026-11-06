@@ -1,0 +1,54 @@
+{
+  "B": 1,
+  "event_rows": 532,
+  "event_states": 266,
+  "event_table_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+  "event_trace_relation": "same source comparison bits and ordered events; physical timing changes; marked ingress one step before B exit",
+  "fixed_plan": true,
+  "format": "np-conp-control-region-selected-v1",
+  "generator_sha256": "1503ff1c8af65c5d082a1c121658b06c307754bc98103ea742cabdabfe7bac9e",
+  "halt_states_excluded": 0,
+  "independent_review": "pending; no predecessor acceptance inherited onto changed literal bytes",
+  "inherited_completion_generator_sha256": "710e1dc7f36b9d75047482f73bf3121ab2d2b406dc8470f0585b1e2e1cd87726",
+  "initial": {
+    "alphabet": [
+      0,
+      1
+    ],
+    "blank": 0,
+    "head": 0,
+    "moves": [
+      "L",
+      "R"
+    ],
+    "start": 0,
+    "tape": "two-way infinite"
+  },
+  "marked_rows": [
+    [
+      104,
+      1,
+      0,
+      -1,
+      1,
+      1
+    ]
+  ],
+  "optimization_search": false,
+  "parent_table_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+  "plan_sha256": "d655fe8442b046b6f7ef1f8003e7152ed1729fdfcc47ecdda3144e2296be00a4",
+  "raw_rows": 540,
+  "raw_states": 270,
+  "raw_table_sha256": "776a1b4001052b848a9beb4758e885e5addb1657ff61dc8c7aa60ee052389a8d",
+  "registers": 12,
+  "rows": 534,
+  "source_change": "proved post-reference phase ownership: reuse e,n for candidate description and numerical clock; occurrence-specific proved-zero tests eliminated; fixed full-control geometry preserving every retained branch and event",
+  "source_changed": true,
+  "source_entry_final_state": 259,
+  "source_event_contract": "finite marks iff NP=coNP; infinite physical run in both cases",
+  "source_name": "control_regions/sources/reuse_clock_roles.py",
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+  "source_theorem": "../../PROOF.md and ../../../phase_swap/COMPOSITION.md",
+  "states": 267,
+  "table_sha256": "668c5c91d2510aadc0fac6342f80fc3f4d248d6a2fd828d375a45b57e780e712"
+}

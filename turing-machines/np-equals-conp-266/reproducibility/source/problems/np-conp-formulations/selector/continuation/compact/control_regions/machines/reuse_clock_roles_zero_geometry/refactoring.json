@@ -1,0 +1,16 @@
+{
+  "closed_words": 18,
+  "commute": false,
+  "decisions": [
+    {
+      "uses": 2
+    }
+  ],
+  "equivalence": "same closed-word normal form; primitive trace and all registers preserved",
+  "new_nodes": 184,
+  "old_reachable_nodes": 186,
+  "rounds": 10000,
+  "scoring": "prefer-right",
+  "seed": 0,
+  "shared_pairs": 1
+}

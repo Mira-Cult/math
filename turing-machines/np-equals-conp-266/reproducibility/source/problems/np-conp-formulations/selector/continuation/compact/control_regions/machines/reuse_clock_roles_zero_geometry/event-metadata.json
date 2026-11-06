@@ -1,0 +1,22 @@
+{
+  "B_exit_parent_sha256": "c52f52eade186cc1bd3f67f44e715dee1bff3551b2c379f9e9e4488784cc442e",
+  "B_exit_parent_states": 270,
+  "blank": 0,
+  "event_rows": [
+    [
+      106,
+      1,
+      0,
+      -1,
+      1,
+      1
+    ]
+  ],
+  "halt_states_excluded": 0,
+  "head": 0,
+  "rows": 538,
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+  "start": 0,
+  "states": 269,
+  "table_sha256": "0f560ddb16f4bf01e78e319a13e0073f6fe8524d70e94f1d133f3b4cf7812844"
+}

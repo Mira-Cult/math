@@ -1,0 +1,22 @@
+[
+  {
+    "coefficients": [
+      2,
+      1
+    ],
+    "expression": "2 * left + write",
+    "function": "main",
+    "kind": "affine-expression",
+    "line": 48
+  },
+  {
+    "coefficients": [
+      2,
+      1
+    ],
+    "expression": "2 * left + write",
+    "function": "main",
+    "kind": "affine-expression",
+    "line": 88
+  }
+]

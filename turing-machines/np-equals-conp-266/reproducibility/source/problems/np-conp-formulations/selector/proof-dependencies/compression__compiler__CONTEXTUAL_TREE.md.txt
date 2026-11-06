@@ -1,0 +1,139 @@
+# Contextual removal of finite empty control
+
+This optional pass changes the complete compiled grammar after ordinary
+closed-sequence refactoring. It uses the zero/one/many invariant from
+[contextual quotienting](CONTEXTUAL_QUOTIENT.md), then removes finite control
+whose only register tests have certified zero inputs. Its source entry is the
+all-zero register store reached by the separately verified blank bootstrap.
+It is not an arbitrary-input or arbitrary-configuration equivalence.
+
+The source, register order, arithmetic kernels, event primitive, and runtime
+remain the caller's checked dependencies. This pass preserves the ordered
+event sequence and every retained register-changing primitive. Primitive step
+counts, physical transition counts, and physical B-exit times can change.
+
+## Interface and representation
+
+`contextual_tree.apply(builder)` accepts a finished finite acyclic binary
+grammar with a named `main().0` root and the inherited INC, DECNZ, break,
+continue and beep leaves. It changes only `sequences` and `sequence_lookup`.
+It must run before physical generation. Registers, source data, scratch
+ownership, and emitted register-engine rows are untouched. The output still
+has a nontrivial binary root; the final root pair is retained when a tiny
+fixture would otherwise reduce to one leaf. The bootstrap interface is kept.
+
+`ContextualTreeMixin` installs this pass after its superclass `build_tree`.
+The complete recipe in `contextual_tree_build.py` supplies both an ordinary
+countdown/Horner constructor and a constructor composed with the unchanged
+pinned `SelectedIntrinsicBuilder`. Its `--selected` mode calls the existing
+source recipe and retains all source-byte, duplicate-divisor, and actual
+selected-pattern checks. It does not merely assume that a supplied site list
+was visited. Temporary constructor bindings are restored on all exits.
+
+The certificate contains the original canonical grammar, its supplied
+post-fixed invariant, the selected zero-test rows, a complete target DAG,
+and an image and local rewrite rule for every original grammar node. The
+target DAG includes nodes constructed before an unreachable branch was
+discarded. The checker binds its reachable canonical subgraph to the actual
+output grammar. Unreachable construction nodes are not charged as physical
+states; the complete final table is counted after generation and quotienting.
+
+## Admission of zero tests
+
+Unfold the finite grammar into primitive occurrences, retaining the full
+binary invocation path of each shared leaf. The abstract state gives each
+register a nonempty subset of `{0}`, `{1}`, and `{2,3,...}`, or marks an
+occurrence unreachable. The entry includes the all-zero store. The checker
+replays every feasible INC, DECNZ, lexical transfer and beep edge and requires
+its image to lie in the supplied successor state. Thus induction on the
+primitive execution proves that every reached occurrence lies in its supplied
+state. Leastness of the producer's fixed point is unnecessary.
+
+For each selected physical grammar row `(node, bit)`, the checker requires
+that it is a DECNZ leaf and that **every reached unfolded occurrence** of that
+row has the tested register exactly zero. It requires at least one reached
+occurrence; vacuous admission is unnecessary. A zero DECNZ has no register or
+event effect and performs the same lexical transfer as `_break.1`. This
+replacement is valid at all admitted invocations of the shared row, not just
+one sampled path.
+
+The union of all prefixes of reached occurrence paths records the grammar
+rows that can be traversed on the admitted run. In particular, a missing right
+row means that no admitted entry or reentry into any unfolded invocation of
+that shared node reaches its right branch.
+
+## Local reductions
+
+After recursively rewriting both children, the checker admits exactly these
+rules. Ordinary pairs are retained when no rule is selected.
+
+1. A pair `(_break.k, R)` with `k >= 1` becomes `_break.(k-1)` when its original
+   right row has no reached invocation. Executing the first child places one
+   additional zero on the lexical path; eliminating the pair removes that zero
+   and reduces the number of skipped zeroes by one. The discarded right
+   branch is unreachable across every admitted invocation. Its contents may
+   contain events, but none of those events occurred on the admitted run.
+2. A pair `(_break.0, S)` becomes `S` when `S` is closed. The first child is a
+   finite normal return with no effects, after which the original pair enters
+   `S`. The rewritten pair enters that same closed computation immediately.
+3. A pair `(S, _break.0)` becomes `S` when `S` is closed. If `S` returns normally,
+   the original suffix contributes only one finite silent return. If `S`
+   diverges, neither version reaches that suffix.
+
+Here closedness is the same lexical condition used by the retained
+closed-sequence proof. For every leaf, let `z` and `o` count the zero and one
+edges from the operand's root to that leaf. A break depth must be between zero
+and `z`; a continue depth must be between zero and `o`; a DECNZ requires
+`z >= 1`; INC and beep require no extra boundary. This means transfers remain
+inside the operand or implement its normal return or internal restart. It
+allows silent closed divergence, including `_continue.0`; the pass never
+replaces such a surviving operand by an empty computation.
+
+The producer computes equivalent bottom-up maximum demands. The checker
+instead checks these bounds on actual leaf paths of the **rewritten** surviving
+operand. Checking only the old operand would be insufficient after an inner
+reduction. All output DAG edges must point backwards, independently certifying
+acyclic construction and making this path check finite.
+
+## Event and progress preservation
+
+The first substitution changes a zero test to its identical lexical transfer.
+The escape fold removes one finite descent/transfer, and each identity fold
+removes a known finite normal return. Their correspondence applies to admitted
+entries and reentries; the invariant's right-row exclusion prevents a new
+shortcut from hiding an originally reachable right branch. The closed operand
+contract ensures identity removal does not retarget an escaping continuation.
+Induction through the finite rewrite DAG gives the corresponding retained
+INC, positive DECNZ and beep operations with the same whole register stores.
+
+Every erased local computation is finite. Closed operands with an infinite
+execution survive intact. Consequently the transformation cannot turn an
+infinite event-free tail into a finite execution by erasing an infinite chain
+of computations, or erase infinitely many events. After the caller's total
+runtime and separately checked startup are composed, the complete machines
+have the same finite-versus-infinite event behavior. Physical B-exit times
+must be audited for the new table and are not inherited from the old table.
+
+## Verification and measured scope
+
+`check_contextual_tree.check(before, after, certificate)` performs no fixed-point
+search, rewrite search, or quotient search. It uses the independent tuple-path
+interpreter for invariant closure, then verifies each local node image and the
+output grammar binding. It does not establish the source theorem or bootstrap
+theorem; those remain explicit composition premises. This is a conventional
+argument with executable certificate replay, not kernel certification.
+
+The complete streamed source/countdown/Horner recipe measures 572 states after
+this pass, from 578 before it. Composition with the checked four-site intrinsic
+recipe measures 570 states, from 576. These counts include startup, register
+engine, dispatch, event adapter, and totalization. Standalone node savings are
+not being added to fragment counts. Literal audits and independent review are
+recorded separately and must bind the exact generator/table bytes.
+
+From the family root, use fresh output directories:
+
+```sh
+python -B compression/compiler/contextual_tree_build.py --out /tmp/horn-tree-new
+python -B compression/compiler/contextual_tree_build.py --selected --out /tmp/horn-tree-selected-new
+python -B compression/compiler/test_contextual_tree.py
+```

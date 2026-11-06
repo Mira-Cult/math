@@ -1,0 +1,159 @@
+# Checked arithmetic kernels and closed-sequence sharing
+
+## Scope
+
+These changes lower the same natural-number source language to the inherited
+INC/DECNZ/BEEP tree grammar. They do not supply an oracle, alter a candidate's
+meaning, or place data on the initial tape. The complete compiler's existing
+assignment, liveness, frame, positive-divisor and physical-runtime obligations
+remain in force. The selected physical counts come from complete builds in
+`../integrated_build.py`; standalone savings must not be added together.
+
+The selected recipe uses `KernelBuilder`, the original copy order, compact
+equality, countdown division, consuming quotient/remainder fusion, and
+closed-sequence factoring with `scoring='prefer-right'` and `commute=False`.
+The optional commutation and alternative copy orders are size experiments,
+not part of this selected equivalence claim. `GenericKernelBuilder` retains
+the inherited zero-divisor semantics and rejects countdown specialization.
+
+## Equality by paired consumption
+
+Entry has A=a, B=b, Q=0, with the shared scratch cells zero. The new equality
+kernel consumes one unit from A and then one from B. If B is zero after a
+successful A decrement, it clears the rest of A and returns Q=0. Otherwise
+the pair is consumed and the loop repeats. When A is zero, Q is incremented
+exactly when B is zero. The remaining B is cleared.
+
+After t successful pairs, A=a-t and B=b-t. Thus the early mismatch branch
+occurs exactly when a>b; exhausting A with residual B occurs exactly when a<b;
+and simultaneous exhaustion occurs exactly when a=b. Both inputs are zero
+on return and Q is the equality bit. Each pair decreases A, so this is total
+for all natural a,b. The other arithmetic registers are unchanged and zero.
+The kernel emits no events.
+
+## Positive division with a decremented countdown
+
+The selected positive compiler proves every source divisor positive before
+lowering. In `division_preserve_base`, entry is A=a, B=b>=1, Q=R=C=0. Temporarily
+decrement B to b-1, and copy it into C. For each consumed unit of A:
+
+- If C is positive, decrement C and increment R.
+- If C is zero, increment Q, clear R, and reload C from B=b-1.
+
+After t consumed units, write t=qb+r with 0<=r<b. The invariant is
+Q=q, R=r, C=b-1-r, and B=b-1. The first branch takes r to r+1<b. The second
+branch occurs at r=b-1 and starts the next quotient block with remainder zero.
+This includes b=1: C is always zero, every consumed unit increments Q, and R
+remains zero. Once A is exhausted, increment B and clear C. Consequently the
+return values are Q=floor(a/b), R=a mod b, A=C=0, and the original B=b.
+All loops terminate on finite natural values. No event is emitted.
+
+The inherited digit and term kernels may call this operation repeatedly, but
+each call restores B before the next iteration. Their existing induction over
+the digit index therefore still applies. The generic compiler explicitly keeps
+the old convention at divisor zero; it cannot select this countdown kernel.
+
+## Consuming fused quotient and remainder
+
+Consider a simultaneous assignment
+
+    u, v = x % d, x // d
+
+with distinct named targets, a named dividend x, syntactically equal divisors,
+and no call anywhere in d. The ordinary source expressions are pure natural
+arithmetic, so evaluating d once preserves its value and emits the same empty
+event sequence as evaluating it twice. Unsupported effectful divisors are
+excluded; differing divisors are excluded.
+
+The inherited compiler fused only a named or constant divisor. The new rule
+also accepts a pure compound divisor such as k+2. It computes that divisor
+before any target write. If the divisor operand is the deferred reference x
+itself, it first copies the old x into B. This explicit case is necessary:
+requesting an operand does not by itself read a named source register.
+
+If x is one of u,v, its old value is dead after the simultaneous assignment.
+The compiler moves it to A rather than copying it. If x is not a target, it
+copies x and preserves the original. The divisor is loaded into B; complex
+divisor values have already been saved in a separate temporary. All argument
+values are therefore the preassignment values, including divisors that depend
+on x or on an overwritten target.
+
+The division kernel returns R and Q. Before storing them, clear each target
+except a consumed x: that cell has just been moved to A and is already zero.
+Move R to u and Q to v. Distinct targets and the reserved arithmetic namespace
+ensure these writes do not overwrite one another or the pending result. All
+shared arithmetic and temporary cells return to their required zero state.
+
+This proves simultaneous assignment semantics, preservation of other source
+values, and event preservation. The generic counterpart also works for d=0
+because it uses the inherited division result (Q,R)=(0,a). Tests include both
+target orders, an overwritten divisor, a complex self-dependent divisor,
+preserved inputs, a deferred self-divisor, zero divisors, and effectful exclusions.
+
+## Closed sequential constituents
+
+The control grammar is a binary DAG. A primitive occurrence carries a path
+from its subtree entry. Let z and o be the numbers of zero and one edges on
+that local path. A break(k) needs k skipped zero ancestors before the ordinary
+return; a continue(k) clears k one ancestors before resuming. Zero DECNZ is a
+break(1), and successful INC/DECNZ/BEEP is a break(0).
+
+For each subtree, the structural analysis computes the maximum of k-z over
+break requirements, and the maximum of k-o over continue requirements. A missing
+kind of requirement has a negative sentinel. At a pair, its left edge subtracts
+one from the break requirement and its right edge subtracts one from the
+continue requirement. This recurrence is exactly the local path count.
+
+Call a constituent closed when both maxima are at most zero. For a break in
+a closed constituent, either k<z and control stays inside, or k=z and control
+returns normally from the constituent. For a continue, k<o resumes inside;
+k=o clears its internal right edges and resumes its entry. The caller's trailing
+zero descent may be erased, but resolving that canonical prefix pads the same
+zero descent and reaches the same entry. In particular a bare continue(0) is
+a silent self-loop, not a jump into unrelated caller code. No continuation
+reaches a preceding or following constituent.
+
+Thus a closed constituent can be entered as a sequential operation independently
+of its caller's binary parenthesization. It may return, emit a sequence of
+events, or continue forever internally; those behaviors and register effects
+are unchanged by adding a sequential grouping around it.
+
+## Factoring and its replay condition
+
+The pass recursively normalizes the grammar. A pair is flattened into an ordered
+word only when both children are closed. A nonclosed pair retains its exact
+left/right structure and control primitives. Nested closed words are flattened
+without changing their constituent order. This is a finite acyclic computation.
+
+Repeated adjacent pairs in these words may then be represented by shared binary
+rules. Each replacement has exactly the original ordered expansion. The chosen
+pair scoring affects size only. The selected deterministic `prefer-right` score
+favors repeated suffixes because the inherited physical dispatcher pays for
+left-edge depth. All remaining words are emitted as right-associated pairs.
+
+Finally the pass recomputes the closed-word normal form of the emitted grammar
+and compares it with the original normal form. A mismatch rejects the output.
+Induction on closed sequential constituents and the unchanged nonclosed pairs
+therefore gives the same primitive operations, with the same register values
+and event sequence, from every admitted source-entry valuation. The binary
+control paths and physical event times can change. The maximum path and register
+inventory are checked again against the counted blank bootstrap's bounds.
+
+This is a conventional grammar-refinement proof, not all-head/all-tape machine
+equivalence. It does not establish the independent contextual quotient's
+unreachable-row premise by itself; that later pass replays its own invariant.
+
+## Evidence and limits
+
+`test_kernels.py` compares the inherited independent source evaluator with the
+new primitive execution. The retained run contains 1,474 cases and 602,817
+primitive steps, including 196 generic zero-divisor/self-alias cases. Independent
+review adds its own source/alias fixtures and randomly generated finite binary
+control DAGs, with exact primitive/register traces. That separate evidence and
+its source pins are in `../reviews/`.
+
+Finite tests do not prove unbounded division, label closure, or the P=NP
+characterization. Those claims use the arguments above together with the named
+inherited and new source/runtime proofs. Complete physical replay belongs to
+the exact linked table identified by its own digest; none is inferred by adding
+these component tests or standalone state counts.

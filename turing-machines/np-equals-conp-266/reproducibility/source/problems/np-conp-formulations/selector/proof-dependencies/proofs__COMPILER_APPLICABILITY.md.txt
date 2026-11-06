@@ -1,0 +1,102 @@
+# Compiler applicability to the four Horn sources
+
+This supplies the source-specific premises for [COMPILER_PROOF.md](COMPILER_PROOF.md).
+It is producer-authored conventional mathematics, not a separate review. Exact
+source, grammar and table hashes appear in each machine's `table/metadata.json`
+and [the measurement ledger](../evidence/measurements.json). The inherited
+compiler and proof files are unchanged. No generality beyond their stated
+contract is assumed.
+
+## Source hypotheses
+
+Each runtime is a finite program in the admitted natural-number AST fragment.
+Its entry is the argument-free, nonreturning `main()`. The call graph is acyclic:
+main calls models/color (or models twice); models calls matrix/repair where
+present; these call atom where present. There is no recursive call. Each return
+has the declared fixed arity. The source uses only finite arithmetic and loops;
+Python execution is a reference interpretation, not a runtime resource.
+
+Every value is a mathematical natural. Booleans in source comparisons are the
+naturals 0 and 1. Runtime subtraction is genuinely nonnegative: digit-1 is
+executed only for a positive digit; n-1 has n>=2; term-2 occurs only at term>=2;
+closure result-2 occurs only at result>1; destructive term decrements occur
+above 2. The shared reference's offsets are guarded by their position cases.
+All divisors are positive: n>=2, k+2>=4, radix>=129, and powers have positive
+base. Other divisions use fixed 2,3,4,8. Source `%` and `//` therefore match the
+compiler's arithmetic contract, and no divide-by-zero convention is relied on.
+
+Assignments, parameters, and procedure-local temporaries use the recovered
+impossible-identifier internal namespace and conservative active-frame sharing.
+The generated assignment certificates have no read-before-assignment entries
+for any function. The build checks lexical factorable-entry closure. Argument
+copying, source-defined active values and consumed-return invariants are those
+proved for the unchanged repaired compiler; inactive stale registers are not
+asserted preserved. The emitted frame and assignment certificates are retained
+in the table metadata, rather than inferred from short source length.
+
+The reference and model-checking loops terminate on each fixed finite argument
+by [horn-reduction.md](horn-reduction.md). Thus every finite input/candidate
+comparison is a finite source computation. During the silent phase the
+controller advances through every finite graph index. It does not get stuck
+in an unbounded partial candidate calculation.
+
+## Tape and arithmetic invariants
+
+The runtime uses a unary register bank on a single binary tape. Its number of
+register identities is finite, but values and the occupied tape interval have
+no fixed upper bound. Growing counters shift delimiters according to the
+inherited tape invariant. In particular, k, the graph size, relation values,
+formula codes, and tuple bounds are not bounded by the initializer or a host
+word size. The initializer supplies zero registers, not fixed-width cells.
+
+The generated parameter checks are:
+
+| Machine | Registers | Maximum control-path length |
+|---|---:|---:|
+| Exhaustive | 75 | 225 |
+| Closure | 77 | 215 |
+| Fused | 42 | 171 |
+| Shared reference | 49 | 204 |
+
+Each is within the initializer's 1,909 available zero-register identities and
+control-path bound 3,822. These are finite syntax checks, not a runtime workspace
+limit. The inherited arbitrary-value increment/decrement, arithmetic, grammar
+transfer and source-event invariants apply.
+
+## Finite blank-entry lemma
+
+For each full table, [finite-initialization.json](../evidence/finite-initialization.json)
+binds its source and table hashes to a finite literal simulation. At the stated
+source-entry transition count, the head is -3818, no beep has occurred, and the
+one-cells are exactly {-3821,-3820} union {3,5,7,...,3821}. Both the independently
+implemented Python sparse-tape simulator and the C++ literal simulator agree on
+the entire configuration. This is the finite initialization premise, not a claim
+that bounded traces establish arbitrary-source correctness.
+
+The chosen fused table reaches entry after 61,283,502 transitions. The entry
+configurations initialize the register/control representation assumed by the
+unbounded compiler theorem. The event adapter then produces the initial source
+beep exactly once. Finite all-occurrence checks additionally exercise the
+arithmetic/control transition patterns but do not replace their unbounded proof.
+
+## Totalization, exact quotient and events
+
+For all four generated raw machines the sole missing branch before totalization
+is `1b.reg.prep_1` reading 1. The preparation invariant in the inherited proof
+excludes this branch from every well-formed simulated configuration. It is
+filled by a silent total sink. This does not supply termination by assumption:
+termination/progress comes from the source proof and its valid simulation.
+
+The raw machine is renamed canonically and reduced by the exact beep-colored
+quotient. The retained map sends every raw read/write/move/successor row to the
+corresponding quotient row, preserving start state and the distinguished beep
+color. The checker verifies every row (3,700 / 3,766 / 2,982 / 3,206 for the four
+raw tables). No heuristic behavioral equivalence is substituted for that finite
+certificate. Both original and quotient tables are complete.
+
+Every finite source operation therefore finishes its physical simulation. Each
+source beep creates one exit from B after finitely many transitions, and no
+other operation exits B. The physical machine never halts. Combining the
+compiler theorem with the source rejection argument gives finite physical
+beeping iff P=NP. This composition remains subject to separate mathematical
+and implementation review of these new frozen source/proof bytes.

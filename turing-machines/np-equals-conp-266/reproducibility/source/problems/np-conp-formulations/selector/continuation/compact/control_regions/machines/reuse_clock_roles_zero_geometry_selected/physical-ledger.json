@@ -1,0 +1,827 @@
+{
+  "classes": {
+    "0": [
+      "blank bootstrap",
+      "totalization"
+    ],
+    "1": [
+      "event adapter",
+      "remaining engine and dispatch"
+    ],
+    "10": [
+      "remaining engine and dispatch"
+    ],
+    "100": [
+      "remaining engine and dispatch"
+    ],
+    "101": [
+      "remaining engine and dispatch"
+    ],
+    "102": [
+      "remaining engine and dispatch"
+    ],
+    "103": [
+      "remaining engine and dispatch"
+    ],
+    "104": [
+      "event adapter"
+    ],
+    "105": [
+      "compiled arithmetic and control"
+    ],
+    "106": [
+      "compiled arithmetic and control"
+    ],
+    "107": [
+      "compiled arithmetic and control"
+    ],
+    "108": [
+      "compiled arithmetic and control"
+    ],
+    "109": [
+      "compiled arithmetic and control"
+    ],
+    "11": [
+      "remaining engine and dispatch"
+    ],
+    "110": [
+      "compiled arithmetic and control"
+    ],
+    "111": [
+      "compiled arithmetic and control"
+    ],
+    "112": [
+      "compiled arithmetic and control"
+    ],
+    "113": [
+      "compiled arithmetic and control"
+    ],
+    "114": [
+      "compiled arithmetic and control"
+    ],
+    "115": [
+      "compiled arithmetic and control"
+    ],
+    "116": [
+      "compiled arithmetic and control"
+    ],
+    "117": [
+      "compiled arithmetic and control"
+    ],
+    "118": [
+      "compiled arithmetic and control"
+    ],
+    "119": [
+      "compiled arithmetic and control"
+    ],
+    "12": [
+      "remaining engine and dispatch"
+    ],
+    "120": [
+      "compiled arithmetic and control"
+    ],
+    "121": [
+      "compiled arithmetic and control"
+    ],
+    "122": [
+      "compiled arithmetic and control"
+    ],
+    "123": [
+      "compiled arithmetic and control"
+    ],
+    "124": [
+      "compiled arithmetic and control"
+    ],
+    "125": [
+      "compiled arithmetic and control"
+    ],
+    "126": [
+      "compiled arithmetic and control"
+    ],
+    "127": [
+      "compiled arithmetic and control"
+    ],
+    "128": [
+      "compiled arithmetic and control"
+    ],
+    "129": [
+      "compiled arithmetic and control"
+    ],
+    "13": [
+      "remaining engine and dispatch"
+    ],
+    "130": [
+      "compiled arithmetic and control"
+    ],
+    "131": [
+      "compiled arithmetic and control"
+    ],
+    "132": [
+      "compiled arithmetic and control"
+    ],
+    "133": [
+      "compiled arithmetic and control"
+    ],
+    "134": [
+      "compiled arithmetic and control"
+    ],
+    "135": [
+      "compiled arithmetic and control"
+    ],
+    "136": [
+      "compiled arithmetic and control"
+    ],
+    "137": [
+      "compiled arithmetic and control"
+    ],
+    "138": [
+      "compiled arithmetic and control"
+    ],
+    "139": [
+      "compiled arithmetic and control"
+    ],
+    "14": [
+      "remaining engine and dispatch"
+    ],
+    "140": [
+      "compiled arithmetic and control"
+    ],
+    "141": [
+      "compiled arithmetic and control"
+    ],
+    "142": [
+      "compiled arithmetic and control"
+    ],
+    "143": [
+      "compiled arithmetic and control"
+    ],
+    "144": [
+      "compiled arithmetic and control"
+    ],
+    "145": [
+      "compiled arithmetic and control"
+    ],
+    "146": [
+      "compiled arithmetic and control"
+    ],
+    "147": [
+      "compiled arithmetic and control"
+    ],
+    "148": [
+      "compiled arithmetic and control"
+    ],
+    "149": [
+      "compiled arithmetic and control"
+    ],
+    "15": [
+      "operation-specific operand selectors"
+    ],
+    "150": [
+      "compiled arithmetic and control"
+    ],
+    "151": [
+      "compiled arithmetic and control"
+    ],
+    "152": [
+      "compiled arithmetic and control"
+    ],
+    "153": [
+      "compiled arithmetic and control"
+    ],
+    "154": [
+      "compiled arithmetic and control"
+    ],
+    "155": [
+      "compiled arithmetic and control"
+    ],
+    "156": [
+      "compiled arithmetic and control"
+    ],
+    "157": [
+      "compiled arithmetic and control"
+    ],
+    "158": [
+      "compiled arithmetic and control"
+    ],
+    "159": [
+      "compiled arithmetic and control"
+    ],
+    "16": [
+      "operation-specific operand selectors"
+    ],
+    "160": [
+      "compiled arithmetic and control"
+    ],
+    "161": [
+      "compiled arithmetic and control"
+    ],
+    "162": [
+      "compiled arithmetic and control"
+    ],
+    "163": [
+      "compiled arithmetic and control"
+    ],
+    "164": [
+      "compiled arithmetic and control"
+    ],
+    "165": [
+      "compiled arithmetic and control"
+    ],
+    "166": [
+      "compiled arithmetic and control"
+    ],
+    "167": [
+      "compiled arithmetic and control"
+    ],
+    "168": [
+      "compiled arithmetic and control"
+    ],
+    "169": [
+      "compiled arithmetic and control"
+    ],
+    "17": [
+      "operation-specific operand selectors"
+    ],
+    "170": [
+      "compiled arithmetic and control"
+    ],
+    "171": [
+      "compiled arithmetic and control"
+    ],
+    "172": [
+      "compiled arithmetic and control"
+    ],
+    "173": [
+      "compiled arithmetic and control"
+    ],
+    "174": [
+      "compiled arithmetic and control"
+    ],
+    "175": [
+      "compiled arithmetic and control"
+    ],
+    "176": [
+      "compiled arithmetic and control"
+    ],
+    "177": [
+      "compiled arithmetic and control"
+    ],
+    "178": [
+      "compiled arithmetic and control"
+    ],
+    "179": [
+      "compiled arithmetic and control"
+    ],
+    "18": [
+      "operation-specific operand selectors"
+    ],
+    "180": [
+      "compiled arithmetic and control"
+    ],
+    "181": [
+      "compiled arithmetic and control"
+    ],
+    "182": [
+      "compiled arithmetic and control"
+    ],
+    "183": [
+      "compiled arithmetic and control"
+    ],
+    "184": [
+      "compiled arithmetic and control"
+    ],
+    "185": [
+      "compiled arithmetic and control"
+    ],
+    "186": [
+      "compiled arithmetic and control"
+    ],
+    "187": [
+      "compiled arithmetic and control"
+    ],
+    "188": [
+      "compiled arithmetic and control"
+    ],
+    "189": [
+      "compiled arithmetic and control"
+    ],
+    "19": [
+      "operation-specific operand selectors"
+    ],
+    "190": [
+      "compiled arithmetic and control"
+    ],
+    "191": [
+      "compiled arithmetic and control"
+    ],
+    "192": [
+      "compiled arithmetic and control"
+    ],
+    "193": [
+      "compiled arithmetic and control"
+    ],
+    "194": [
+      "compiled arithmetic and control"
+    ],
+    "195": [
+      "compiled arithmetic and control"
+    ],
+    "196": [
+      "compiled arithmetic and control"
+    ],
+    "197": [
+      "compiled arithmetic and control"
+    ],
+    "198": [
+      "compiled arithmetic and control"
+    ],
+    "199": [
+      "compiled arithmetic and control"
+    ],
+    "2": [
+      "blank bootstrap"
+    ],
+    "20": [
+      "operation-specific operand selectors"
+    ],
+    "200": [
+      "compiled arithmetic and control"
+    ],
+    "201": [
+      "compiled arithmetic and control"
+    ],
+    "202": [
+      "compiled arithmetic and control"
+    ],
+    "203": [
+      "compiled arithmetic and control"
+    ],
+    "204": [
+      "compiled arithmetic and control"
+    ],
+    "205": [
+      "compiled arithmetic and control"
+    ],
+    "206": [
+      "compiled arithmetic and control"
+    ],
+    "207": [
+      "compiled arithmetic and control"
+    ],
+    "208": [
+      "compiled arithmetic and control"
+    ],
+    "209": [
+      "compiled arithmetic and control"
+    ],
+    "21": [
+      "operation-specific operand selectors"
+    ],
+    "210": [
+      "compiled arithmetic and control"
+    ],
+    "211": [
+      "compiled arithmetic and control"
+    ],
+    "212": [
+      "compiled arithmetic and control"
+    ],
+    "213": [
+      "compiled arithmetic and control"
+    ],
+    "214": [
+      "compiled arithmetic and control"
+    ],
+    "215": [
+      "compiled arithmetic and control"
+    ],
+    "216": [
+      "compiled arithmetic and control"
+    ],
+    "217": [
+      "compiled arithmetic and control"
+    ],
+    "218": [
+      "compiled arithmetic and control"
+    ],
+    "219": [
+      "compiled arithmetic and control"
+    ],
+    "22": [
+      "operation-specific operand selectors"
+    ],
+    "220": [
+      "compiled arithmetic and control"
+    ],
+    "221": [
+      "compiled arithmetic and control"
+    ],
+    "222": [
+      "compiled arithmetic and control"
+    ],
+    "223": [
+      "compiled arithmetic and control"
+    ],
+    "224": [
+      "compiled arithmetic and control"
+    ],
+    "225": [
+      "compiled arithmetic and control"
+    ],
+    "226": [
+      "compiled arithmetic and control"
+    ],
+    "227": [
+      "compiled arithmetic and control"
+    ],
+    "228": [
+      "compiled arithmetic and control"
+    ],
+    "229": [
+      "compiled arithmetic and control"
+    ],
+    "23": [
+      "operation-specific operand selectors"
+    ],
+    "230": [
+      "compiled arithmetic and control"
+    ],
+    "231": [
+      "compiled arithmetic and control"
+    ],
+    "232": [
+      "compiled arithmetic and control"
+    ],
+    "233": [
+      "compiled arithmetic and control"
+    ],
+    "234": [
+      "compiled arithmetic and control"
+    ],
+    "235": [
+      "compiled arithmetic and control"
+    ],
+    "236": [
+      "compiled arithmetic and control"
+    ],
+    "237": [
+      "compiled arithmetic and control"
+    ],
+    "238": [
+      "compiled arithmetic and control"
+    ],
+    "239": [
+      "compiled arithmetic and control"
+    ],
+    "24": [
+      "operation-specific operand selectors"
+    ],
+    "240": [
+      "compiled arithmetic and control"
+    ],
+    "241": [
+      "compiled arithmetic and control"
+    ],
+    "242": [
+      "compiled arithmetic and control"
+    ],
+    "243": [
+      "compiled arithmetic and control"
+    ],
+    "244": [
+      "compiled arithmetic and control"
+    ],
+    "245": [
+      "compiled arithmetic and control"
+    ],
+    "246": [
+      "compiled arithmetic and control"
+    ],
+    "247": [
+      "compiled arithmetic and control"
+    ],
+    "248": [
+      "compiled arithmetic and control"
+    ],
+    "249": [
+      "compiled arithmetic and control"
+    ],
+    "25": [
+      "operation-specific operand selectors"
+    ],
+    "250": [
+      "compiled arithmetic and control"
+    ],
+    "251": [
+      "compiled arithmetic and control"
+    ],
+    "252": [
+      "compiled arithmetic and control"
+    ],
+    "253": [
+      "compiled arithmetic and control"
+    ],
+    "254": [
+      "compiled arithmetic and control"
+    ],
+    "255": [
+      "compiled arithmetic and control"
+    ],
+    "256": [
+      "compiled arithmetic and control"
+    ],
+    "257": [
+      "compiled arithmetic and control"
+    ],
+    "258": [
+      "compiled arithmetic and control"
+    ],
+    "259": [
+      "return delimiter scan"
+    ],
+    "26": [
+      "operation-specific operand selectors"
+    ],
+    "260": [
+      "return delimiter scan"
+    ],
+    "261": [
+      "return delimiter scan"
+    ],
+    "262": [
+      "return delimiter scan"
+    ],
+    "263": [
+      "return delimiter scan"
+    ],
+    "264": [
+      "return delimiter scan"
+    ],
+    "265": [
+      "return delimiter scan"
+    ],
+    "27": [
+      "operation-specific operand selectors"
+    ],
+    "28": [
+      "operation-specific operand selectors"
+    ],
+    "29": [
+      "operation-specific operand selectors"
+    ],
+    "3": [
+      "blank bootstrap"
+    ],
+    "30": [
+      "operation-specific operand selectors"
+    ],
+    "31": [
+      "operation-specific operand selectors"
+    ],
+    "32": [
+      "operation-specific operand selectors"
+    ],
+    "33": [
+      "operation-specific operand selectors"
+    ],
+    "34": [
+      "operation-specific operand selectors"
+    ],
+    "35": [
+      "operation-specific operand selectors"
+    ],
+    "36": [
+      "operation-specific operand selectors"
+    ],
+    "37": [
+      "operation-specific operand selectors"
+    ],
+    "38": [
+      "operation-specific operand selectors"
+    ],
+    "39": [
+      "remaining engine and dispatch"
+    ],
+    "4": [
+      "blank bootstrap"
+    ],
+    "40": [
+      "remaining engine and dispatch"
+    ],
+    "41": [
+      "remaining engine and dispatch"
+    ],
+    "42": [
+      "remaining engine and dispatch"
+    ],
+    "43": [
+      "remaining engine and dispatch"
+    ],
+    "44": [
+      "remaining engine and dispatch"
+    ],
+    "45": [
+      "remaining engine and dispatch"
+    ],
+    "46": [
+      "remaining engine and dispatch"
+    ],
+    "47": [
+      "remaining engine and dispatch"
+    ],
+    "48": [
+      "remaining engine and dispatch"
+    ],
+    "49": [
+      "remaining engine and dispatch"
+    ],
+    "5": [
+      "blank bootstrap"
+    ],
+    "50": [
+      "remaining engine and dispatch"
+    ],
+    "51": [
+      "native half kernel"
+    ],
+    "52": [
+      "native half kernel"
+    ],
+    "53": [
+      "native half kernel"
+    ],
+    "54": [
+      "native half kernel"
+    ],
+    "55": [
+      "native half kernel"
+    ],
+    "56": [
+      "native half kernel"
+    ],
+    "57": [
+      "native half kernel"
+    ],
+    "58": [
+      "native half kernel"
+    ],
+    "59": [
+      "native half kernel"
+    ],
+    "6": [
+      "remaining engine and dispatch"
+    ],
+    "60": [
+      "native half kernel"
+    ],
+    "61": [
+      "native half kernel"
+    ],
+    "62": [
+      "native half kernel"
+    ],
+    "63": [
+      "native half kernel"
+    ],
+    "64": [
+      "native half selection and preparation"
+    ],
+    "65": [
+      "native half selection and preparation"
+    ],
+    "66": [
+      "native half selection and preparation"
+    ],
+    "67": [
+      "native half selection and preparation"
+    ],
+    "68": [
+      "native half selection and preparation"
+    ],
+    "69": [
+      "register operation entries"
+    ],
+    "7": [
+      "remaining engine and dispatch"
+    ],
+    "70": [
+      "register operation entries"
+    ],
+    "71": [
+      "register operation entries"
+    ],
+    "72": [
+      "register operation entries"
+    ],
+    "73": [
+      "register operation entries"
+    ],
+    "74": [
+      "register operation entries"
+    ],
+    "75": [
+      "register operation entries"
+    ],
+    "76": [
+      "register operation entries"
+    ],
+    "77": [
+      "register operation entries"
+    ],
+    "78": [
+      "register operation entries"
+    ],
+    "79": [
+      "register operation entries"
+    ],
+    "8": [
+      "remaining engine and dispatch"
+    ],
+    "80": [
+      "register operation entries"
+    ],
+    "81": [
+      "register operation entries"
+    ],
+    "82": [
+      "register operation entries"
+    ],
+    "83": [
+      "register operation entries"
+    ],
+    "84": [
+      "register operation entries"
+    ],
+    "85": [
+      "register operation entries"
+    ],
+    "86": [
+      "register operation entries"
+    ],
+    "87": [
+      "register operation entries"
+    ],
+    "88": [
+      "register operation entries"
+    ],
+    "89": [
+      "register operation entries"
+    ],
+    "9": [
+      "native half kernel",
+      "native half selection and preparation",
+      "remaining engine and dispatch"
+    ],
+    "90": [
+      "register operation entries"
+    ],
+    "91": [
+      "register operation entries"
+    ],
+    "92": [
+      "register operation entries"
+    ],
+    "93": [
+      "native half operation entries"
+    ],
+    "94": [
+      "native half operation entries"
+    ],
+    "95": [
+      "native half operation entries"
+    ],
+    "96": [
+      "native half operation entries"
+    ],
+    "97": [
+      "remaining engine and dispatch"
+    ],
+    "98": [
+      "remaining engine and dispatch"
+    ],
+    "99": [
+      "remaining engine and dispatch"
+    ]
+  },
+  "disjoint_event_partition": {
+    "blank bootstrap": 4,
+    "blank bootstrap + totalization": 1,
+    "compiled arithmetic and control": 154,
+    "event adapter": 1,
+    "event adapter + remaining engine and dispatch": 1,
+    "native half kernel": 13,
+    "native half kernel + native half selection and preparation + remaining engine and dispatch": 1,
+    "native half operation entries": 4,
+    "native half selection and preparation": 5,
+    "operation-specific operand selectors": 24,
+    "register operation entries": 24,
+    "remaining engine and dispatch": 27,
+    "return delimiter scan": 7
+  },
+  "event_table_sha256": "c5b0a16ce6edba5df3372ab9d6290db8d7ca747a6660a9d10f3a9d1fc8e5331c",
+  "format": "np-conp-binary-phase-disjoint-cost-v1",
+  "rows": 532,
+  "scope": "one count per actual quotient state, with all construction origins retained; no global lower bound",
+  "source_sha256": "0b0bf4045fec4392de646047d65db90f1959b8086156a418aa40f45e355bb11b",
+  "states": 266
+}

@@ -1,0 +1,81 @@
+# Destructive Horner assignment
+
+`fused_horner.py` adds an optional local lowering to the selected natural
+compiler. It matches only `t = x*y+z` where x, y and z are three distinct
+named source variables and t is x or y. Other syntax, repeated names,
+nonmultiplicand targets, constants and function calls retain the inherited
+lowering. `integrated_build.py --horner` selects this pass; the earlier build
+recipe remains available without that flag.
+
+## Entry and lowering
+
+The inherited expression-entry invariant supplies zero arithmetic cells
+A, B, Q, R and C, zero copy scratch, and disjoint source and arithmetic
+namespaces. Distinct variables in the same source frame occupy distinct
+physical registers; frame pooling does not coalesce them. Source-variable
+values are natural numbers. The target's old value becomes dead when the
+assignment commits.
+
+For each operand the compiler retains the inherited liveness decision to
+copy or consume it, except that the overwritten target is always consumed.
+It moves or copies the two multiplicands into A and B. The selected recipe
+loads y into A and x into B (`horner_reverse=True`). Both reads precede the
+product. All operands are distinct names, so changing their load order has
+no effect on any operand value or on an event. Natural multiplication is
+commutative. The original load order is also supported and tested.
+
+The existing product kernel computes Q=x*y and clears A and B. Its loops
+terminate because they consume finite natural counters. Neither R nor C
+is changed. The source target is zero after its value was moved into A or
+B. The old z remains available because z is distinct from both inputs.
+
+The compiler then copies or moves z into the **nonzero** Q. These named
+operand operations add one unit to the destination for every consumed
+source unit; they do not require a zero destination. A copy restores z
+using the shared zero scratch, while a move leaves z zero when liveness
+proves its old value dead. The resulting Q is x*y+z. Finally moving Q into
+the zero target implements the assignment and clears Q.
+
+## Exit, preservation and exclusions
+
+All arithmetic and copy scratch cells are zero on exit. Source variables
+other than the target retain their values unless the inherited liveness
+proof permits consuming a dead operand. The return convention, head and
+control transitions are those of the same compiled INC/DECNZ operations;
+this pass introduces no new physical runtime or tape representation.
+
+All matched operations are pure and total on natural inputs. They emit no
+events. The lowering therefore preserves source values and the event
+sequence from every admitted source-entry valuation. Primitive operation
+counts and physical event times may change. It is not an equivalence for
+arbitrary dirty scratch or arbitrary tape/head entries.
+
+The restriction to distinct names is material. For example, consuming x
+before a second occurrence of x would change a deferred read. Calls are
+also excluded because their execution order and event behavior would need
+a different argument. A constant operand is excluded because the inherited
+binary constant loader is not additive into a nonzero destination.
+
+## Measurement and verification
+
+On the complete modular/counting source the ordinary integrated build has
+635 raw, 633 exact-quotient and 624 contextually quotiented physical states.
+With this fusion and the original multiplier order it has 634, 632 and 623.
+With the selected reversed multiplier order it has 633, 631 and **622**.
+Every count includes the blank bootstrap, selector, arithmetic, controller,
+event adapter and totalization. This is a measured linked difference;
+no standalone fragment sizes are added together.
+
+`test_horner.py` compares the inherited independent source evaluator with
+the compiled primitive execution. It covers both orders, both factoring
+choices, overwriting either multiplicand, live and dead other operands,
+two successive assignments, zeros, larger operands, generic compilation
+and excluded repeated-name/constant/compound/effectful syntax. Return
+scratch is checked explicitly. A source call inside an excluded expression
+may legitimately emit while a caller's pooled expression temporary is live;
+the test requires that temporary zero only at the final return.
+
+Independent review, full-build reproduction and literal physical checks
+are recorded separately with their exact file and table hashes. These
+finite checks supplement the local argument and inherited unbounded
+runtime/source proofs; they are not kernel certification.

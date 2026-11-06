@@ -1,0 +1,91 @@
+import Shared.Beeping.NPcoNP.Bootstrap284BulkContinue4096
+import Shared.Beeping.NPcoNP.Bootstrap284PackedRebase
+import Shared.Beeping.NPcoNP.Bootstrap284BulkReplay
+
+/-! Generated continuation; each asserted block requires Lean checking. -/
+namespace Shared.Beeping.NPcoNP.Bootstrap284BulkContinue4352
+open Shared.Beeping Shared.Beeping.Machines PASoundness
+open Shared.Beeping.NPcoNP.Table284
+open Shared.Beeping.NPcoNP.NativeHalfScan
+open Shared.Beeping.NPcoNP.Bootstrap284PackedStep
+open Shared.Beeping.NPcoNP.Bootstrap284PackedScans
+open Shared.Beeping.NPcoNP.Bootstrap284PackedRebase
+open Shared.Beeping.NPcoNP.Bootstrap284TraceData
+open Shared.Beeping.NPcoNP.Bootstrap284BulkContinue4096
+open Shared.Beeping.NPcoNP.Bootstrap284BulkReplay
+set_option maxRecDepth 131072
+set_option maxHeartbeats 20000000
+
+def startConfig : Packed := extendLeft 2048 output4096
+theorem start_segment : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 startConfig) 423358 := by
+  have h : toConfig (-4096) 4104 startConfig=toConfig (-2048) 2056 output4096 := by
+    simpa [startConfig] using toConfig_extendLeft (-2048) 2056 2048 output4096
+  rw [h]
+  exact blank_start_4096
+
+def output4128 : Packed := ⟨4,-1062,0xf7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4128 : replayBulk (-4096) 4104 ((ops.drop 4096).take 32) startConfig = some (output4128,6902) := by decide
+theorem segment4128 : silentSegment machine (toConfig (-4096) 4104 startConfig) (toConfig (-4096) 4104 output4128) 6902 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4096).take 32) startConfig output4128 6902 checked4128).2
+theorem blank_start_4128 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4128) 430260 := by
+  have h := segAdd machine _ _ _ 423358 6902 start_segment segment4128
+  simpa using h
+
+def output4160 : Packed := ⟨2,-1051,0xf7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4160 : replayBulk (-4096) 4104 ((ops.drop 4128).take 32) output4128 = some (output4160,6077) := by decide
+theorem segment4160 : silentSegment machine (toConfig (-4096) 4104 output4128) (toConfig (-4096) 4104 output4160) 6077 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4128).take 32) output4128 output4160 6077 checked4160).2
+theorem blank_start_4160 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4160) 436337 := by
+  have h := segAdd machine _ _ _ 430260 6077 blank_start_4128 segment4160
+  simpa using h
+
+def output4192 : Packed := ⟨0,-2089,0xf7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4192 : replayBulk (-4096) 4104 ((ops.drop 4160).take 32) output4160 = some (output4192,7266) := by decide
+theorem segment4192 : silentSegment machine (toConfig (-4096) 4104 output4160) (toConfig (-4096) 4104 output4192) 7266 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4160).take 32) output4160 output4192 7266 checked4192).2
+theorem blank_start_4192 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4192) 443603 := by
+  have h := segAdd machine _ _ _ 436337 7266 blank_start_4160 segment4192
+  simpa using h
+
+def output4224 : Packed := ⟨0,-2104,0xf7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4224 : replayBulk (-4096) 4104 ((ops.drop 4192).take 32) output4192 = some (output4224,6389) := by decide
+theorem segment4224 : silentSegment machine (toConfig (-4096) 4104 output4192) (toConfig (-4096) 4104 output4224) 6389 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4192).take 32) output4192 output4224 6389 checked4224).2
+theorem blank_start_4224 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4224) 449992 := by
+  have h := segAdd machine _ _ _ 443603 6389 blank_start_4192 segment4224
+  simpa using h
+
+def output4256 : Packed := ⟨2,-2120,0xf7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4256 : replayBulk (-4096) 4104 ((ops.drop 4224).take 32) output4224 = some (output4256,6534) := by decide
+theorem segment4256 : silentSegment machine (toConfig (-4096) 4104 output4224) (toConfig (-4096) 4104 output4256) 6534 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4224).take 32) output4224 output4256 6534 checked4256).2
+theorem blank_start_4256 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4256) 456526 := by
+  have h := segAdd machine _ _ _ 449992 6534 blank_start_4224 segment4256
+  simpa using h
+
+def output4288 : Packed := ⟨4,-1014,0xf7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4288 : replayBulk (-4096) 4104 ((ops.drop 4256).take 32) output4256 = some (output4288,7798) := by decide
+theorem segment4288 : silentSegment machine (toConfig (-4096) 4104 output4256) (toConfig (-4096) 4104 output4288) 7798 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4256).take 32) output4256 output4288 7798 checked4288).2
+theorem blank_start_4288 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4288) 464324 := by
+  have h := segAdd machine _ _ _ 456526 7798 blank_start_4256 segment4288
+  simpa using h
+
+def output4320 : Packed := ⟨2,-1003,0xf7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4320 : replayBulk (-4096) 4104 ((ops.drop 4288).take 32) output4288 = some (output4320,6845) := by decide
+theorem segment4320 : silentSegment machine (toConfig (-4096) 4104 output4288) (toConfig (-4096) 4104 output4320) 6845 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4288).take 32) output4288 output4320 6845 checked4320).2
+theorem blank_start_4320 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4320) 471169 := by
+  have h := segAdd machine _ _ _ 464324 6845 blank_start_4288 segment4320
+  simpa using h
+
+def output4352 : Packed := ⟨0,-2169,0xf7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩
+theorem checked4352 : replayBulk (-4096) 4104 ((ops.drop 4320).take 32) output4320 = some (output4352,8162) := by decide
+theorem segment4352 : silentSegment machine (toConfig (-4096) 4104 output4320) (toConfig (-4096) 4104 output4352) 8162 :=
+  (replayBulk_sound (-4096) 4104 ((ops.drop 4320).take 32) output4320 output4352 8162 checked4352).2
+theorem blank_start_4352 : silentSegment machine (machine.system.run 0) (toConfig (-4096) 4104 output4352) 479331 := by
+  have h := segAdd machine _ _ _ 471169 8162 blank_start_4320 segment4352
+  simpa using h
+end Shared.Beeping.NPcoNP.Bootstrap284BulkContinue4352
+
+#print axioms Shared.Beeping.NPcoNP.Bootstrap284BulkContinue4352.blank_start_4352

@@ -1,0 +1,19 @@
+[
+  {
+    "captured_rhs": 1,
+    "elided_literal_temporaries": 2,
+    "evaluation": "all nonliteral RHS captured left-to-right before any destination write",
+    "function": "main",
+    "line": 9,
+    "literal_values": [
+      null,
+      0,
+      1
+    ],
+    "targets": [
+      "scan",
+      "n",
+      "e"
+    ]
+  }
+]

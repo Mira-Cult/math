@@ -1,0 +1,20 @@
+[
+  {
+    "clock_master": "main.n",
+    "double_work": "$micro.q",
+    "entry": "four distinct logical operands; arbitrary old output/restore; clock natural; double work zero",
+    "exact_ast": [
+      "Assign(targets=[Name(id='branch', ctx=Store())], value=Constant(value=1))",
+      "Assign(targets=[Name(id='steps', ctx=Store())], value=Name(id='n', ctx=Load()))",
+      "While(test=Name(id='steps', ctx=Load()), body=[AugAssign(target=Name(id='steps', ctx=Store()), op=Sub(), value=Constant(value=1)), AugAssign(target=Name(id='branch', ctx=Store()), op=Mult(), value=Constant(value=2))], orelse=[])"
+    ],
+    "exit": "output=2^old_clock; clock restored; restore/work zero; all other logical cells preserved",
+    "function": "main",
+    "invariant": "after t doublings output=2^t, clock=old_clock-t, restore=t, work=0",
+    "line": 55,
+    "output": "main.branch",
+    "progress": "finite output/restore resets; decreasing clock; finite old-output doubling; finite clock restoration",
+    "restore_counter": "main.steps",
+    "scope": "exact three-statement source block; C=0 gives one empty-certificate attempt; no new physical primitive"
+  }
+]

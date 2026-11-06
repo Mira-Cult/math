@@ -1,0 +1,119 @@
+# Countdown-loop entry fusion
+
+This opt-in source lowering uses the already counted native DECNZ operation.
+It replaces only a loop of the form
+
+```python
+while x:
+    x -= 1
+    body
+```
+
+where the guard is a named variable, the first statement subtracts the literal
+integer one from that same name, and the loop has no else suite. The matcher
+checks these conditions. All other syntax uses the inherited compiler; the
+unsupported while-else form is still rejected there. Body assignments to x,
+break, continue and return are allowed.
+
+## Source and physical contract
+
+At the source boundary x is a natural number in its ordinary source register.
+The surrounding compiler's frame, owned-temporary and scratch contracts apply.
+This pass allocates no register and no tape region. It neither changes the
+source AST nor strengthens the existing liveness analysis.
+
+The lowered structured control is
+
+```text
+label loop:
+    DECNZ x
+        body
+        continue loop
+```
+
+Here DECNZ's nonzero successor executes the right branch, and its zero
+successor leaves the local loop. The body is compiled with the fresh loop
+label on the ordinary lexical loop stack. Break exits that label; continue
+returns to its guard. A nested loop pushes its own label. Return retains the
+enclosing procedure's normal exit. This is the same binary control shape as
+the inherited decrement-loop primitive.
+
+On a zero entry, the original named guard is false and executes neither the
+decrement nor the body. Native DECNZ likewise leaves zero unchanged and takes
+its zero exit. On a positive entry x=v, the original guard succeeds and the
+first source statement changes x to v-1. The native entry directly produces
+that same register valuation before the remaining body. Both prefixes are
+silent. No operation in the removed prefix affects another source variable.
+
+The remaining body therefore starts in the same semantic state. If it breaks
+or returns, both computations take the same source exit. If it falls through
+or continues, both return to the same guard with the body's current x value.
+This argument also covers a body which resets or increases x: the rule does
+not assume the whole loop terminates. Induction over completed iterations and
+the same body-prefix simulation give identical terminating outcomes or
+nonterminating event sequences. Every replaced guard/decrement prefix itself
+terminates on the inherited valid register bank.
+
+Literal execution uses the unchanged binary unary-register-bank layout,
+head/PC entry convention, DECNZ implementation and return machinery. The
+[shared selector contract](../compiler/SHARED_SELECTOR.md) and the inherited
+backend proof supply their tape invariants. The rule adds no loader, marker,
+scratch ownership or physical port. It preserves all non-counter source cells
+at loop entry; any later destructive effect belongs to the unchanged body.
+It emits no events and keeps the B1-exit event convention. Primitive counts,
+dispatch paths and event times can change. This is admitted-source-entry
+equivalence, not arbitrary-tape equivalence.
+
+## Complete measured construction
+
+`countdown.py` exposes `CountdownMixin`, `CountdownHornerBuilder`, and its
+generic arithmetic counterpart. The `countdown_loops` bool can disable the
+rule. `countdown_build.py` temporarily selects the subclass only during the
+existing integrated build, then restores the original constructor. It writes
+all raw/final tables and quotient artifacts through that existing generator.
+No frozen compiler or historical default is modified by this standalone recipe.
+
+From the family root:
+
+```sh
+python -B compression/native/test_countdown_loop.py
+python -B compression/native/countdown_build.py --out /tmp/horn-countdown-new
+python -B compression/native/countdown_build.py --disable-countdown --out /tmp/horn-countdown-disabled-new
+```
+
+Output directories must be fresh. On `source_head_uniform.py`, exactly one
+loop matches: main's assignment countdown. The complete enabled table has
+601 raw, 599 exact-quotient and **592 contextual final states**, 1,184 rows and
+22 registers. Its final SHA-256 is
+`3eafc364d3055231ff801181fd3817b6172568b277b86ec65b1b0820e59e4eb1`.
+Disabling the rule exactly reproduces the preceding 595-state final table,
+SHA-256 `918cfb2f55682452fdde4c4cd01b58b9a6e3bd020cff04312031bc274041bbdd`.
+
+The enabled complete ledger is five bootstrap states, two event-adapter
+states, 60 remaining engine/dispatch states, 44 register-operation entries,
+40 shared-selector/adapter states, 439 arithmetic/control states, one state
+shared between engine and control, and one totalization state. All fixed
+program data, candidate/graph enumeration and initialization remain counted.
+The difference of three states is measured after full linking and quotienting;
+no standalone fragment sizes are added to obtain it.
+
+The two provisional input-prefix-tag layouts were also actually linked with
+this rule. Each gives 593 final states, so neither replaces the 592-state
+candidate. These layout measurements do not themselves prove those alternate
+source languages equivalent or supply a new coverage argument.
+
+## Verification status
+
+The producer suite compares source execution with compiled primitive execution
+on 1,120 finite cases, using enabled/disabled lowering, generic/positive
+constructors, and factored/unfactored control. It covers zero entry, no remaining
+body, descending sums, nested loops, continue, break, early return, counter
+reassignment, internal events, and explicit exclusions. Eight additional finite
+event prefixes come from a deliberately nonterminating counter-restoring loop;
+four while-else constructions are rejected. The suite performs 427,364 primitive
+steps and checks return scratch.
+
+Those checks support the conventional local proof. Independent review,
+complete-source observation checks and literal physical prefixes are recorded
+separately with exact hashes. Neither a sub-400 construction nor kernel
+certification is asserted by this component work.
