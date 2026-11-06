@@ -9,7 +9,7 @@ transitions**. It runs forever, with one designated transition event:
 
 This result has a **conventional proof with scoped internal nonauthor model
 reviews**. It is not a Lean theorem for this table. The separately formalized
-[284-state machine](../np-equals-conp-284/README.md) does not certify the
+[284-state machine](../beeper284/README.md) does not certify the
 changed 266-state implementation.
 
 ## Start here
@@ -18,7 +18,7 @@ changed 266-state implementation.
 - [Exact marked table](events.tm) and [267-state B-exit companion](machine.tm).
 - [Reproducible source package](reproducibility/).
 - [Verification status and evidence limits](VERIFICATION.md).
-- [Overview of both machines](../np-equals-conp/README.md).
+- [Overview of both machines](../README.md).
 
 [Attribution and license status](ATTRIBUTION.md).
 

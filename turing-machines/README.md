@@ -14,6 +14,13 @@ provenance, and certificate generators. Execution never halts in either case.
 The [verification receipt](p-equals-np-285/VERIFICATION.md) distinguishes source
 checks, kernel-build evidence, and independent mathematical review.
 
+## NP versus coNP
+
+The [NP versus coNP family](np-equals-conp/README.md) contains the 284-state
+marked-table machine and its Lean guide, alongside the smaller 266-state
+machine and its conventional proof. Each package records its own verification
+limits; neither machine resolves NP versus coNP.
+
 ## Collatz family
 
 [Browse the Collatz machines](collatz/README.md), including their shared

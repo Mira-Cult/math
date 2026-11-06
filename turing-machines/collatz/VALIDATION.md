@@ -12,7 +12,9 @@ proof of Collatz. The pre-migration public snapshot is
 - Original Lean import inventory and internal module closure match the new
   canonical-path map.
 - All three `.tm` files are byte-identical to their previous public versions.
-  Compatibility copies at the old raw-table paths remain byte-identical.
+  At the time, compatibility copies at the old raw-table paths were also
+  byte-identical; the later [migration note](MIGRATION.md#earlier-links-and-commands)
+  records removal of the redundant 17-state copy.
 - The 17-state Python and C++ checker files retain their original Git blobs.
   Its ordinary proof text changes only in navigation links; its source manifest
   records the new navigation and local-attribution hashes.

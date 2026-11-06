@@ -13,8 +13,8 @@ candidate from one whose counterexample has not yet been reached.
 
 | Machine | Marked table | B-exit companion | Proof status |
 | --- | ---: | ---: | --- |
-| [284-state machine](../np-equals-conp-284/README.md) | 284 states, 568 rows | 285 states, 570 rows | Lean theorem for the exact marked table and blank start |
-| [266-state machine](../np-equals-conp-266/README.md) | 266 states, 532 rows | 267 states, 534 rows | Conventional proof with scoped internal nonauthor reviews |
+| [284-state machine](beeper284/README.md) | 284 states, 568 rows | 285 states, 570 rows | Lean theorem for the exact marked table and blank start |
+| [266-state machine](beeper266/README.md) | 266 states, 532 rows | 267 states, 534 rows | Conventional proof with scoped internal nonauthor reviews |
 
 The smaller machine saves eighteen complete states, but its literal-table
 theorem has not been formalized in Lean. The 284-state proof does not certify
@@ -54,12 +54,12 @@ with P = NP.
 
 ## Reading and checking
 
-- Start with the [284-state proof guide](../np-equals-conp-284/PROOF.md).
-- Use its [Lean interface guide](../np-equals-conp-284/INTERFACE.md) to trace the
+- Start with the [284-state proof guide](beeper284/PROOF.md).
+- Use its [Lean interface guide](beeper284/INTERFACE.md) to trace the
   exact table, blank start, physical simulation and canonical complexity classes.
-- Read [how the 266-state construction saves states](../np-equals-conp-266/PROOF.md).
-- Keep the separate verification receipts in view: [284](../np-equals-conp-284/VERIFICATION.md)
-  and [266](../np-equals-conp-266/VERIFICATION.md). Source identity, finite tests,
+- Read [how the 266-state construction saves states](beeper266/PROOF.md).
+- Keep the separate verification receipts in view: [284](beeper284/VERIFICATION.md)
+  and [266](beeper266/VERIFICATION.md). Source identity, finite tests,
   kernel checking, and mathematical review are different kinds of evidence.
 
 The headline counts use a marked-transition observer. A beep is the flag of
@@ -68,3 +68,6 @@ larger companion in each case. In the conventional companion construction,
 the corresponding B exit is one transition later. The 284-state Lean endpoint
 described here concerns its marked table, not a new formal theorem for the
 companion.
+
+The [layout history](MIGRATION.md) maps the original public paths to these
+packages and links the earlier snapshot.

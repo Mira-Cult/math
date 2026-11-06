@@ -62,9 +62,6 @@ def verify():
     for name, identity in source["files"].items():
         require(hashlib.sha256((beeper / name).read_bytes()).hexdigest() ==
                 identity["published_sha256"], "Beeper source hash differs: " + name)
-    require((beeper / "collatz_beeping17.tm").read_bytes() ==
-            (ROOT.parent / "collatz-beeping17/collatz_beeping17.tm").read_bytes(),
-            "Beeper compatibility table differs")
     print("Verified 22 exact Lean sources, module/import mapping, three exact tables, "
           "local provenance, beeper source hashes, compatibility copies and toolchain.")
     return manifest

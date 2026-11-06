@@ -24,12 +24,20 @@ products. Run the [new verification commands](README.md#verify-locally).
 
 ## Earlier links and commands
 
-The old machine catalogue headings and 17-state README remain as navigation
-pointers. All three old `.tm` URLs are retained as checked compatibility copies.
-The two old Python verification commands forward to the canonical family
-scripts. Direct old Lean-source and checker-file URLs have moved; the complete
-[path map](MIGRATION.json) records every move. Pinned historical URLs remain
+The 2026-11-03 migration retained the old machine catalogue headings, 17-state
+README and all three old `.tm` URLs as compatibility pointers or copies. The
+12- and 16-state compatibility tables and the two forwarding Python commands
+remain. Direct old Lean-source and checker-file URLs moved; the complete
+[path map](MIGRATION.json) records those moves. Pinned historical URLs remain
 available in [the previous public snapshot](https://github.com/Mira-Cult/math/tree/334212df64a1d7c3d0f4b1227b882d15e9c85166/turing-machines).
+
+On 2026-11-06, the redundant `collatz-beeping17/` directory was removed. It
+contained only a navigation page and a table byte-identical to the canonical
+[17-state table](beeping17/collatz_beeping17.tm); the complete machine package
+remains in [beeping17/](beeping17/README.md). The old unpinned directory and
+table URLs no longer resolve, but both remain available in the
+[pre-consolidation snapshot](https://github.com/Mira-Cult/math/tree/b5e76264e419939d1c9ca48ac9dfe8ebf862cffb/turing-machines/collatz-beeping17).
+No history was rewritten.
 
 `cd turing-machines/proofs && lake build` is replaced by the assembler command;
 the old proof directory contains a migration guide, not a second proof tree.

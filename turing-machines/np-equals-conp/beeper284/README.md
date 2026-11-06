@@ -18,7 +18,7 @@ coNP. No finite quiet observation establishes NP = coNP.
 - [Exact marked table](events.tm) and [285-state B-exit companion](companion.tm).
 - [Formalization](formalization/): the selected source and its local dependencies.
 - [Reproduction and verification status](VERIFICATION.md).
-- [The smaller 266-state machine](../np-equals-conp-266/README.md), whose proof
+- [The smaller 266-state machine](../beeper266/README.md), whose proof
   is conventional rather than Lean-checked.
 
 [Attribution and license status](ATTRIBUTION.md).

@@ -1,7 +1,7 @@
 # Proof and compression guide for the 266-state machine
 
 The 266-state machine implements the same complement-verifier search as the
-284-state machine. The [284-state proof guide](../np-equals-conp-284/PROOF.md)
+284-state machine. The [284-state proof guide](../beeper284/PROOF.md)
 explains the mathematical reduction to NP = coNP. The smaller table requires
 new conventional source and physical arguments: the 284-state Lean endpoint
 does not transfer automatically across these changes.
