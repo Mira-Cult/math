@@ -20,6 +20,7 @@ all-odd-order square theorem.
 
 | Result | Exact scope | Sources and verification |
 | --- | --- | --- |
+| Arithmetic progression circulant permanents | An exact, division-free recurrence for M[i,j] = u[i] + v[j] + t·1[j<i], including C[i,j] = A + B((j−i) mod n), in O(n^5) ring operations and O(n^4) stored ring elements. | [Theorem, direct proof and code](notes/combinatorics/ap-circulant-permanent/README.md), [relation to known weighted matching theory](notes/combinatorics/ap-circulant-permanent/PRIOR_ART.md), and [verification scope](notes/combinatorics/ap-circulant-permanent/VERIFICATION.md). No priority, optimality, formal-verification or external-referee claim. |
 | Partial Latin square completions as one exact permanent | An explicit matrix over {−1, 0, 1/2, 1} has permanent exactly equal to the labeled completion count. After forced-cell propagation, a nonterminal instance with h holes and t candidates gives order t+2h and exactly 5t+h nonzeros. | [Construction, complete proof and code](notes/combinatorics/latin-completion-permanent/README.md), with [finite checks and review scope](notes/combinatorics/latin-completion-permanent/VERIFICATION.md). A conventional proof with exact-arithmetic tests; no novelty, zero-elimination, optimality, formal-verification or general counting-speedup claim. |
 
 ## Turing machines and tilings
