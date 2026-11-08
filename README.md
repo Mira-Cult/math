@@ -16,6 +16,12 @@ also records higher-dimensional and other-field generalizations, each with
 its own range and proof status. Those ranges are not enlarged by the
 all-odd-order square theorem.
 
+## Counting and combinatorics
+
+| Result | Exact scope | Sources and verification |
+| --- | --- | --- |
+| Partial Latin square completions as one exact permanent | An explicit matrix over {−1, 0, 1/2, 1} has permanent exactly equal to the labeled completion count. After forced-cell propagation, a nonterminal instance with h holes and t candidates gives order t+2h and exactly 5t+h nonzeros. | [Construction, complete proof and code](notes/combinatorics/latin-completion-permanent/README.md), with [finite checks and review scope](notes/combinatorics/latin-completion-permanent/VERIFICATION.md). A conventional proof with exact-arithmetic tests; no novelty, zero-elimination, optimality, formal-verification or general counting-speedup claim. |
+
 ## Turing machines and tilings
 
 | Result | Exact scope | Sources and verification |

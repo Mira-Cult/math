@@ -1,0 +1,210 @@
+{
+  "generator_sha256": "e3caf396755c862731742090d979102fd1ed5ba813bc5b01078a32b34de33cd4",
+  "reviewer_verifier_sha256": "532603712ffc170230dce691ff7b569929f500a61c5a6e18db3ac92c9b067b51",
+  "arithmetic": "exact integers and rational fractions",
+  "permanent_method": "dynamic minimum-degree row/column expansion with memoization",
+  "latin_method": "independent enumeration of row permutations with column uniqueness",
+  "malformed_inputs_rejected": 14,
+  "exhaustive": [
+    {
+      "n": 1,
+      "grids": 2,
+      "outcomes": {
+        "zero": 0,
+        "one": 2,
+        "residual": 0
+      },
+      "max_dimension": 1,
+      "latin_squares": 1
+    },
+    {
+      "n": 2,
+      "grids": 81,
+      "outcomes": {
+        "zero": 50,
+        "one": 30,
+        "residual": 1
+      },
+      "max_dimension": 16,
+      "latin_squares": 2
+    },
+    {
+      "n": 3,
+      "grids": 262144,
+      "outcomes": {
+        "zero": 256308,
+        "one": 5592,
+        "residual": 244
+      },
+      "max_dimension": 45,
+      "latin_squares": 12
+    }
+  ],
+  "larger_two_row_hole_cases": [
+    {
+      "n": 4,
+      "missing_rows": [
+        0,
+        1
+      ],
+      "order": 32,
+      "count": 2
+    },
+    {
+      "n": 4,
+      "missing_rows": [
+        0,
+        2
+      ],
+      "order": 32,
+      "count": 4
+    },
+    {
+      "n": 4,
+      "missing_rows": [
+        0,
+        3
+      ],
+      "order": 32,
+      "count": 2
+    },
+    {
+      "n": 5,
+      "missing_rows": [
+        0,
+        1
+      ],
+      "order": 40,
+      "count": 2
+    },
+    {
+      "n": 5,
+      "missing_rows": [
+        0,
+        2
+      ],
+      "order": 40,
+      "count": 2
+    },
+    {
+      "n": 5,
+      "missing_rows": [
+        0,
+        3
+      ],
+      "order": 40,
+      "count": 2
+    },
+    {
+      "n": 5,
+      "missing_rows": [
+        0,
+        4
+      ],
+      "order": 40,
+      "count": 2
+    },
+    {
+      "n": 6,
+      "missing_rows": [
+        0,
+        1
+      ],
+      "order": 48,
+      "count": 2
+    },
+    {
+      "n": 6,
+      "missing_rows": [
+        0,
+        2
+      ],
+      "order": 48,
+      "count": 4
+    },
+    {
+      "n": 6,
+      "missing_rows": [
+        0,
+        3
+      ],
+      "order": 48,
+      "count": 8
+    },
+    {
+      "n": 6,
+      "missing_rows": [
+        0,
+        4
+      ],
+      "order": 48,
+      "count": 4
+    },
+    {
+      "n": 6,
+      "missing_rows": [
+        0,
+        5
+      ],
+      "order": 48,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        1
+      ],
+      "order": 56,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        2
+      ],
+      "order": 56,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        3
+      ],
+      "order": 56,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        4
+      ],
+      "order": 56,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        5
+      ],
+      "order": 56,
+      "count": 2
+    },
+    {
+      "n": 7,
+      "missing_rows": [
+        0,
+        6
+      ],
+      "order": 56,
+      "count": 2
+    }
+  ],
+  "status": "passed",
+  "total_completion_permanent_comparisons": 262245,
+  "skipped_well_formed_test_inputs": 0
+}

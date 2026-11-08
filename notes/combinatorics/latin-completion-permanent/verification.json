@@ -1,0 +1,117 @@
+{
+  "arithmetic": "exact integers and fractions",
+  "completion_permanent_comparisons": 808,
+  "cyclic_identity_q_1_through_8": "passed",
+  "distinct_matrices_evaluated": 14,
+  "empty_order_three": {
+    "independent_latin_count": 12,
+    "matrix_order": 45,
+    "nonzeros": 144,
+    "permanent_evaluated": false
+  },
+  "examples": {
+    "complete_order_one": {
+      "count": 1,
+      "h": 0,
+      "matrix_order": 1,
+      "nonzeros": 1,
+      "outcome": "one",
+      "t": 0
+    },
+    "consistent_but_infeasible": {
+      "count": 0,
+      "matrix_order": 1,
+      "nonzeros": 0,
+      "outcome": "zero"
+    },
+    "duplicate_column_clues": {
+      "count": 0,
+      "matrix_order": 1,
+      "nonzeros": 0,
+      "outcome": "zero"
+    },
+    "duplicate_row_clues": {
+      "count": 0,
+      "matrix_order": 1,
+      "nonzeros": 0,
+      "outcome": "zero"
+    },
+    "empty_order_one": {
+      "count": 1,
+      "h": 0,
+      "matrix_order": 1,
+      "nonzeros": 1,
+      "outcome": "one",
+      "t": 0
+    },
+    "empty_order_two": {
+      "count": 2,
+      "h": 4,
+      "matrix_order": 16,
+      "nonzeros": 44,
+      "outcome": "residual",
+      "t": 8
+    },
+    "order_four_intercalate": {
+      "count": 2,
+      "h": 4,
+      "matrix_order": 16,
+      "nonzeros": 44,
+      "outcome": "residual",
+      "t": 8
+    },
+    "singleton_chain": {
+      "count": 1,
+      "h": 0,
+      "matrix_order": 1,
+      "nonzeros": 1,
+      "outcome": "one",
+      "t": 0
+    },
+    "two_missing_order_three_rows": {
+      "count": 2,
+      "h": 6,
+      "matrix_order": 24,
+      "nonzeros": 66,
+      "outcome": "residual",
+      "t": 12
+    }
+  },
+  "exhaustive_grids": [
+    {
+      "grids": 2,
+      "n": 1
+    },
+    {
+      "grids": 81,
+      "n": 2
+    }
+  ],
+  "independent_latin_enumeration": {
+    "1": 1,
+    "2": 2,
+    "3": 12,
+    "4": 576
+  },
+  "malformed_inputs_rejected": 8,
+  "order_three_erasures": {
+    "considered": 512,
+    "evaluated": 493,
+    "not_evaluated_above_order_28": 19
+  },
+  "schema_version": 1,
+  "second_permanent_algorithm": {
+    "algorithm": "Ryser inclusion-exclusion",
+    "cases": [
+      "empty_order_two",
+      "order_four_intercalate"
+    ]
+  },
+  "seeded_random_grids": {
+    "considered": 240,
+    "evaluated": 223,
+    "not_evaluated_above_order_28": 17,
+    "seed": 20261108
+  },
+  "status": "passed"
+}
