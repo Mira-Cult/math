@@ -2,7 +2,7 @@
 
 The direct recurrence in [README.md](README.md) gives a short proof for
 arithmetic progression circulants and, more generally,
-$`M_{ij}=u_i+v_j+t\mathbf{1}_{j<i}`$. This note explains why polynomial-time
+$`M_{ij}=u_i+v_j+t\mathbf{1}_{j\lt i}`$. This note explains why polynomial-time
 tractability also follows from established weighted matching theory. The
 reduction and the explicit same-exponent specialization below are derived
 here; they are not statements attributed verbatim to the cited paper.
@@ -50,7 +50,7 @@ path are its ports. Add weight-one external edges
 \begin{aligned}
 R_U(i)&-C_U(j) &&\text{for all }i,j,\\
 R_V(i)&-C_V(j) &&\text{for all }i,j,\\
-R_T(i)&-C_T(j) &&\text{exactly when }j<i.
+R_T(i)&-C_T(j) &&\text{exactly when }j\lt i.
 \end{aligned}
 ```
 
@@ -86,7 +86,7 @@ Process indices in increasing order.
 No later edge operation touches $`D`$. A row's $`T`$ port can be retired
 immediately because future columns are ineligible. Rows are inserted before
 the same-index columns, so the $`T`$ edges have precisely the strict
-inequality $`j<i`$. All label-pair joins use one uniform weight. The
+inequality $`j\lt i`$. All label-pair joins use one uniform weight. The
 construction has constant many operations per index and is a valid weighted
 clique expression, not just an unweighted support description.
 

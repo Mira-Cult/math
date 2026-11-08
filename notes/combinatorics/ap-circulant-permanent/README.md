@@ -3,12 +3,12 @@
 We give an explicit, division-free algorithm for the permanent of
 
 ```math
-C_{ij}=A+B((j-i)\bmod n),\qquad 0\leq i,j<n.
+C_{ij}=A+B((j-i)\bmod n),\qquad 0\leq i,j\lt n.
 ```
 
 It uses $`O(n^5)`$ arithmetic operations and $`O(n^4)`$ stored ring elements.
 The proof applies to the larger family
-$`M_{ij}=u_i+v_j+t\mathbf{1}_{j<i}`$. Four counters suffice: open staircase
+$`M_{ij}=u_i+v_j+t\mathbf{1}_{j\lt i}`$. Four counters suffice: open staircase
 columns, completed staircase edges, row-type rows, and row-type columns.
 The other matchings are counted at the end by two factorials.
 
@@ -42,7 +42,7 @@ write
 permanent of
 
 ```math
-M_{ij}=u_i+v_j+t\mathbf{1}_{j<i}
+M_{ij}=u_i+v_j+t\mathbf{1}_{j\lt i}
 ```
 
 can be computed with $`O(n^5)`$ ring operations and $`O(n^4)`$ ring elements of
@@ -54,7 +54,7 @@ is needed.
 For $`n\geq1`$,
 
 ```math
-(j-i)\bmod n=j-i+n\mathbf{1}_{j<i},
+(j-i)\bmod n=j-i+n\mathbf{1}_{j\lt i},
 ```
 
 so substitute
@@ -86,7 +86,7 @@ state of weight $`w=D_i(h,k,r,c)`$, perform the following additive updates:
 
 ```math
 \begin{aligned}
-E_i(h-1,k+1,r,c)&\mathrel{+}=htw &&(h>0),\\
+E_i(h-1,k+1,r,c)&\mathrel{+}=htw &&(h\gt 0),\\
 E_i(h,k,r+1,c)&\mathrel{+}=u_iw,\\
 E_i(h,k,r,c)&\mathrel{+}=w.
 \end{aligned}
@@ -118,7 +118,7 @@ canonical map from the integers. Thus this formula also works in positive
 characteristic, even when a factorial vanishes.
 
 **Optional pruning.** After a column step, with $`m=n-i-1`$ indices left,
-discard any new state with $`h>m`$ or $`|r-c|>m`$. The implementation uses both
+discard any new state with $`h\gt m`$ or $`|r-c|\gt m`$. The implementation uses both
 tests. Neither is necessary for correctness or the asymptotic bound.
 
 ## 3. Proof by colored endpoints
@@ -128,7 +128,7 @@ three types:
 
 - $`U`$: use its row contribution $`u_i`$;
 - $`V`$: use its column contribution $`v_j`$;
-- $`T`$: use $`t`$, allowed only when $`j<i`$.
+- $`T`$: use $`t`$, allowed only when $`j\lt i`$.
 
 The $`T`$ entries form a partial matching in the strict lower triangle.
 Every remaining row and column is assigned type $`U`$ or $`V`$. For these
@@ -189,9 +189,9 @@ these data specify such a monomial. Summing the terminal weights with the
 two factorials proves the formula. The proof is a polynomial identity over
 the integers and therefore remains valid over every commutative ring.
 
-For pruning, each open column needs a different later row, so $`h>m`$ cannot
+For pruning, each open column needs a different later row, so $`h\gt m`$ cannot
 be completed. Each remaining row-column pair changes $`r-c`$ by at most one,
-so $`|r-c|>m`$ cannot be completed either. These are only necessary conditions;
+so $`|r-c|\gt m`$ cannot be completed either. These are only necessary conditions;
 leaving other dead states in the table causes no problem.
 
 ## 4. Complexity and exact computation
@@ -225,7 +225,7 @@ O(n^6D^2)\text{ bit operations},\qquad
 O(n^5D)\text{ bits of working storage}.
 ```
 
-For AP parameters $`|A|,|B|<2^L`$, the transformed inputs acquire only
+For AP parameters $`|A|,|B|\lt 2^L`$, the transformed inputs acquire only
 $`O(\log(n+1))`$ extra bits, so the same displayed bounds hold with this
 definition of $`D`$, up to constants.
 
