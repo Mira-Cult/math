@@ -105,6 +105,30 @@ that the smaller primary suite intentionally leaves unevaluated. It does not
 assert exhaustive coverage at order four or above, nor efficient evaluation
 of arbitrary larger permanent instances.
 
+## GitHub mathematical rendering
+
+The initial mathematical source was correct but its GitHub preview had rendering
+defects: rejected operator macros, Markdown-consumed escapes, malformed matrix
+row breaks, and unrendered inline expressions. The rendering-only correction
+uses protected inline math, fenced math blocks, and supported upright operator
+text. No construction or verifier source was changed.
+
+The corrected note (SHA-256
+`ead6e54f5353062b9ac378d56f962047023b72e6c86d81731210cc8286fc0436`)
+was checked in the actual GitHub Preview in a browser on 8 November 2026:
+
+- all 177 expressions rendered as mathematical elements: 156 inline and 21 display;
+- no math error boxes or leftover dollar-delimited/raw TeX expressions;
+- all three displayed matrices have two rows and two columns;
+- the entrywise definition has three correctly aligned rows;
+- the seven expressions using set braces visibly retain those braces.
+
+Screenshots were inspected at the opening statement and the cyclic/cofactor
+and matrix-definition sections. These are rendering checks, separate from the
+mathematical proof review and numerical tests above. The historical reviewed
+manuscript hash is preserved in the review record, with a rendering-only
+comparison recorded separately.
+
 ## Publication boundary
 
 The public package contains the proof, construction source, verification

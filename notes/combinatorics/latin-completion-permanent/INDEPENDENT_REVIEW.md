@@ -105,3 +105,24 @@ or later and only the standard library are required.
 No exhaustive claim is made at order four or above. The tests do not certify
 novelty, optimality, the feasibility of eliminating zero, or an improved general
 counting algorithm. No claim depends on an unproved complexity separation.
+## Rendering-only revision addendum
+
+The original mathematical review and its source pins above remain unchanged.
+A separate source-equivalence check compared the reviewed `README.md`
+(SHA-256 `ac8d4ebe45d72b5d37516de29d28337a91e1185082ebb62e9eaf9d6ecf3a28af`)
+with the rendering revision
+(SHA-256 `ead6e54f5353062b9ac378d56f962047023b72e6c86d81731210cc8286fc0436`).
+
+All 177 mathematical expressions remain identical in order and content after
+normalizing the 13 replacements of `\operatorname` by `\mathrm`. The revision
+changes 21 display blocks to fenced math and 156 inline expressions to
+GitHub's protected inline-math syntax. Three adjacent prose phrases were
+reworded without changing meaning: a partial square of order n, an empty grid
+of order n, and a matrix of order O(n³). After these presentation changes and
+prose rewrites are accounted for, all remaining source text is unchanged.
+
+The pinned construction and independent verifier retain their original hashes,
+and the saved independent verification report is unchanged. No theorem,
+assumption, formula, proof step, size bound, example or computational claim was
+changed. This addendum establishes source-content equivalence only; it does
+not replace the original review or independently certify browser rendering.
