@@ -1,0 +1,138 @@
+/-
+Reusable Lean 4 interface for the common omega observer.
+
+STATUS: source interface and generic proofs, NOT compiled in this environment.
+No Lean executable was installed when this file was produced. No instantiated
+PA, framing, scheduler or literal-table certificate is claimed. In particular,
+the fields of NormalizationCertificate and ProducerCertificate are obligations,
+not axioms silently discharged by a constant all-zero producer.
+
+The actual mathematical semantics lives in Lean's external Prop/type theory;
+it is not claimed to be a full truth predicate definable inside PA.
+-/
+import Mathlib
+
+namespace OmegaSoundness
+
+inductive Event where
+  | silent
+  | bit0
+  | bit1
+  deriving DecidableEq
+
+abbrev PhysicalTrace := Nat → Event
+abbrev RecordValues := Nat → Nat → List Nat → Bool
+
+inductive Polarity where
+  | ex
+  | all
+
+def prefix : Polarity → Nat → (List Nat → Prop) → Prop
+  | _, 0, matrix => matrix []
+  | .ex, n + 1, matrix => ∃ x : Nat, prefix .all n (fun xs => matrix (x :: xs))
+  | .all, n + 1, matrix => ∀ x : Nat, prefix .ex n (fun xs => matrix (x :: xs))
+
+def Bad (values : RecordValues) (rank : Nat) : Prop :=
+  ∃ proofCode : Nat, prefix .all rank (fun xs => values rank proofCode xs = true)
+
+structure TraceSemantics (Trace : Type) where
+  wellFormedTotal : Trace → Prop
+  values : Trace → RecordValues
+
+def Accept {Trace : Type} (observer : TraceSemantics Trace) (trace : Trace) : Prop :=
+  observer.wellFormedTotal trace ∧
+    ∀ n : Nat, 0 < n → ¬ Bad (observer.values trace) n
+
+def SameDecodedData {Trace : Type} (observer : TraceSemantics Trace)
+    (left right : Trace) : Prop :=
+  (observer.wellFormedTotal left ↔ observer.wellFormedTotal right) ∧
+    observer.values left = observer.values right
+
+theorem bad_congr (left right : RecordValues) (h : left = right) (n : Nat) :
+    Bad left n ↔ Bad right n := by
+  cases h
+  exact Iff.rfl
+
+theorem acceptance_preserved {Trace : Type} (observer : TraceSemantics Trace)
+    (left right : Trace) (h : SameDecodedData observer left right) :
+    Accept observer left ↔ Accept observer right := by
+  rcases h with ⟨hGuard, hValues⟩
+  unfold Accept
+  rw [hValues]
+  exact and_congr hGuard Iff.rfl
+
+structure ArithmeticPresentation where
+  Sentence : Type
+  proves : Sentence → Prop
+  trueInN : Sentence → Prop
+  validNormalizedProof : Nat → Nat → Prop
+  matrixTrue : Nat → Nat → List Nat → Prop
+
+def Sound (theory : ArithmeticPresentation) : Prop :=
+  ∀ sentence : theory.Sentence, theory.proves sentence → theory.trueInN sentence
+
+/-
+The two directions are separated deliberately. Coverage transforms *every*
+arithmetic theorem, including universal-leading and quantifier-free sentences.
+Normalized provenance prevents an unproved or theory-specific matrix from being
+silently inserted among the proof channels. Both are syntactic/semantic bridge
+obligations and neither assumes Sound(theory).
+-/
+structure NormalizationCertificate (theory : ArithmeticPresentation) where
+  normalizedProvenance :
+    ∀ n p : Nat, theory.validNormalizedProof n p →
+      ∃ sentence : theory.Sentence,
+        theory.proves sentence ∧
+        (theory.trueInN sentence ↔ prefix .ex n (theory.matrixTrue n p))
+  completeCoverage :
+    ∀ sentence : theory.Sentence, theory.proves sentence →
+      ∃ n : Nat, 0 < n ∧ ∃ p : Nat,
+        theory.validNormalizedProof n p ∧
+        (theory.trueInN sentence ↔ prefix .ex n (theory.matrixTrue n p))
+
+/-
+wellFormedTotal must come from framing, total proof/matrix evaluation, fair
+scheduling and the physical simulation, including positive finite blocks.
+records must come from source/compiler correctness. failureExact is the generic
+finite-rank quantifier-duality lemma instantiated with those record equations;
+its field is retained explicitly until a compiled finite-rank Lean proof exists.
+-/
+structure ProducerCertificate {Trace : Type} (observer : TraceSemantics Trace)
+    (theory : ArithmeticPresentation) (trace : Trace) where
+  wellFormedTotal : observer.wellFormedTotal trace
+  records :
+    ∀ n p : Nat, ∀ xs : List Nat, 0 < n → xs.length = n →
+      (observer.values trace n p xs = true ↔
+        theory.validNormalizedProof n p ∧ ¬ theory.matrixTrue n p xs)
+  failureExact :
+    ∀ n : Nat, 0 < n →
+      (Bad (observer.values trace) n ↔
+        ∃ p : Nat, theory.validNormalizedProof n p ∧
+          ¬ prefix .ex n (theory.matrixTrue n p))
+
+/- The generic composition theorem requires no hypothesis Sound(theory). -/
+theorem full_soundness_reduction {Trace : Type} (observer : TraceSemantics Trace)
+    (theory : ArithmeticPresentation) (trace : Trace)
+    (normalization : NormalizationCertificate theory)
+    (producer : ProducerCertificate observer theory trace) :
+    Accept observer trace ↔ Sound theory := by
+  classical
+  constructor
+  · intro hAccept sentence hProved
+    obtain ⟨n, hPositive, p, hValid, hTruth⟩ :=
+      normalization.completeCoverage sentence hProved
+    apply hTruth.mpr
+    by_contra hFalse
+    have hBad : Bad (observer.values trace) n :=
+      (producer.failureExact n hPositive).mpr ⟨p, hValid, hFalse⟩
+    exact hAccept.2 n hPositive hBad
+  · intro hSound
+    refine ⟨producer.wellFormedTotal, ?_⟩
+    intro n hPositive hBad
+    obtain ⟨p, hValid, hFalse⟩ :=
+      (producer.failureExact n hPositive).mp hBad
+    obtain ⟨sentence, hProved, hTruth⟩ :=
+      normalization.normalizedProvenance n p hValid
+    exact hFalse (hTruth.mp (hSound sentence hProved))
+
+end OmegaSoundness

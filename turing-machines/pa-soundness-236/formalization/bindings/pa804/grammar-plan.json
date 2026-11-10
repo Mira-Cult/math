@@ -1,0 +1,487 @@
+{
+  "format": "all-branch-grammar-reassociation-v1",
+  "base_class": "FactoredOneStack",
+  "source_sha256": "715bcfe1704f372bf3bdc436eee798501a780d50fe3028d52e0a0129b58c7247",
+  "unfolded_leaves": 4970,
+  "graph_sha256": "01b0ae3cf0119652d48956b006aa76a88c15e519e45fd7c0feb4edd5f59cb6b9",
+  "baseline_metric": [
+    668,
+    [
+      83,
+      36
+    ]
+  ],
+  "selected_metric": [
+    650,
+    [
+      81,
+      36
+    ]
+  ],
+  "transforms": [
+    {
+      "pattern": [
+        "3.k.selector.inc",
+        "3.k.data.decnz"
+      ],
+      "occurrences": 8,
+      "grammar": 661
+    },
+    {
+      "pattern": [
+        "3.k.selector.inc",
+        "3.k.top.decnz"
+      ],
+      "occurrences": 3,
+      "grammar": 659
+    },
+    {
+      "pattern": [
+        "3.k.tag.inc",
+        "3.k.a.decnz"
+      ],
+      "occurrences": 3,
+      "grammar": 657
+    },
+    {
+      "pattern": [
+        "3.k.tag.inc",
+        "3.k.data.decnz"
+      ],
+      "occurrences": 3,
+      "grammar": 655
+    },
+    {
+      "pattern": [
+        "3.k.tag.inc",
+        "3.k.top.decnz"
+      ],
+      "occurrences": 3,
+      "grammar": 653
+    },
+    {
+      "pattern": [
+        180,
+        186
+      ],
+      "occurrences": 2,
+      "grammar": 652
+    },
+    {
+      "pattern": [
+        40,
+        316
+      ],
+      "occurrences": 2,
+      "grammar": 651
+    },
+    {
+      "pattern": [
+        472,
+        474
+      ],
+      "occurrences": 1,
+      "grammar": 650
+    }
+  ],
+  "tested_candidates": 95,
+  "rejected_examples": [
+    {
+      "pattern": [
+        "3.k.data.decnz",
+        "3.k.selector.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 194,
+        "old": [
+          "3.k.data.decnz",
+          195,
+          212
+        ],
+        "new": [
+          "3.k.data.decnz",
+          195,
+          196
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.a.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4427,
+        "old": [
+          "3.k.a.decnz",
+          4428,
+          4435
+        ],
+        "new": [
+          "3.k.a.decnz",
+          4428,
+          4429
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.c.decnz",
+        "3.k.c.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4280,
+        "old": [
+          "3.k.c.decnz",
+          4281,
+          4283
+        ],
+        "new": [
+          "3.k.c.decnz",
+          4281,
+          4282
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.data.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 66,
+        "old": [
+          "3.k.data.decnz",
+          67,
+          74
+        ],
+        "new": [
+          "3.k.data.decnz",
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.tag.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4243,
+        "old": [
+          "3.k.tag.decnz",
+          4244,
+          4246
+        ],
+        "new": [
+          "3.k.tag.decnz",
+          4244,
+          4245
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.selector.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 120,
+        "old": [
+          "3.k.top.decnz",
+          121,
+          128
+        ],
+        "new": [
+          "3.k.top.decnz",
+          121,
+          122
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4228,
+        "old": [
+          "3.k.top.decnz",
+          4229,
+          4236
+        ],
+        "new": [
+          "3.k.top.decnz",
+          4229,
+          4230
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.top.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4493,
+        "old": [
+          "3.k.top.decnz",
+          4494,
+          4496
+        ],
+        "new": [
+          "3.k.top.decnz",
+          4494,
+          4495
+        ]
+      }
+    },
+    {
+      "pattern": [
+        347,
+        336
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 146,
+        "old": [
+          "jump",
+          154
+        ],
+        "new": [
+          "jump",
+          153
+        ]
+      }
+    },
+    {
+      "pattern": [
+        725,
+        725
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 194,
+        "old": [
+          "3.k.data.decnz",
+          195,
+          212
+        ],
+        "new": [
+          "3.k.data.decnz",
+          195,
+          197
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.a.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4427,
+        "old": [
+          "3.k.a.decnz",
+          4428,
+          4435
+        ],
+        "new": [
+          "3.k.a.decnz",
+          4428,
+          4429
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.c.decnz",
+        "3.k.c.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4280,
+        "old": [
+          "3.k.c.decnz",
+          4281,
+          4283
+        ],
+        "new": [
+          "3.k.c.decnz",
+          4281,
+          4282
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.data.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 66,
+        "old": [
+          "3.k.data.decnz",
+          67,
+          74
+        ],
+        "new": [
+          "3.k.data.decnz",
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.tag.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4243,
+        "old": [
+          "3.k.tag.decnz",
+          4244,
+          4246
+        ],
+        "new": [
+          "3.k.tag.decnz",
+          4244,
+          4245
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.selector.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 120,
+        "old": [
+          "3.k.top.decnz",
+          121,
+          128
+        ],
+        "new": [
+          "3.k.top.decnz",
+          121,
+          122
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4228,
+        "old": [
+          "3.k.top.decnz",
+          4229,
+          4236
+        ],
+        "new": [
+          "3.k.top.decnz",
+          4229,
+          4230
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.top.decnz",
+        "3.k.top.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4493,
+        "old": [
+          "3.k.top.decnz",
+          4494,
+          4496
+        ],
+        "new": [
+          "3.k.top.decnz",
+          4494,
+          4495
+        ]
+      }
+    },
+    {
+      "pattern": [
+        347,
+        336
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 146,
+        "old": [
+          "jump",
+          154
+        ],
+        "new": [
+          "jump",
+          153
+        ]
+      }
+    },
+    {
+      "pattern": [
+        725,
+        725
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 194,
+        "old": [
+          "3.k.data.decnz",
+          195,
+          212
+        ],
+        "new": [
+          "3.k.data.decnz",
+          195,
+          197
+        ]
+      }
+    },
+    {
+      "pattern": [
+        "3.k.a.decnz",
+        "3.k.tag.inc"
+      ],
+      "mismatch": {
+        "kind": "control-edge",
+        "leaf": 4427,
+        "old": [
+          "3.k.a.decnz",
+          4428,
+          4435
+        ],
+        "new": [
+          "3.k.a.decnz",
+          4428,
+          4429
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 5.2124137790000304
+}

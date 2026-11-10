@@ -1,0 +1,15 @@
+{
+  "name": "M236 PA soundness machine",
+  "machine_sha256": "bcf4a1fd22e9959a4145688d05ec20591d97967050ad1a16beeb22a187edaedc",
+  "raw_sha256": "e73b3c7fbcbbc4614e4ee33a6e33cacfb3b8e2dc32822591db2afdfedf01a9e8",
+  "formal_repository": "Mira-Cult/math-wip",
+  "formal_commit": "f312d4eb53d92a2a49c941ea26d1ef91fad946d7",
+  "formal_pull_request": "https://github.com/Mira-Cult/math-wip/pull/89",
+  "producer_commit": "bad500e2d22c3f8b7c6420f5c5b1a504a6a57b30",
+  "artifact_delivery_commit": "60c6f2c22ddd50d3ba40e2ca94a4a63a87e74a0c",
+  "last_reported_upstream_aggregate_revision": "60e9d76399dee09c01c3cecdb37c3830b3ce2612",
+  "lean": "leanprover/lean4:v4.33.1",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "public_payload_prepared_on": "2026-11-10",
+  "no_independent_publication_lean_rebuild": true
+}

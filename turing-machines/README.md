@@ -4,6 +4,16 @@ A machine package includes its writeup, exact transition table, proof material,
 provenance, attribution, and verification instructions. Related machines are
 grouped into families.
 
+## PA soundness
+
+The [236-state PA soundness package](pa-soundness-236/README.md) includes the
+literal blank-tape binary machine, precise guarded ω-acceptance definition,
+construction and proof guide, full pinned Lean source, original producer and
+reproducible finite checks. The observer asks for a separate winning strategy
+for every positive-rank natural-number game. Its equivalence to ordinary PA
+soundness is a theorem of the ambient formalization, not PA proving itself
+sound or a finite decision procedure.
+
 ## P versus NP
 
 The [285-state beeper package](p-equals-np-285/README.md) contains a literal

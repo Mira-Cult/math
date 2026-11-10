@@ -1,0 +1,12 @@
+{
+  "baseline/code/build.py": "f902c965c7598ebde12aed24708d2b3f9148ffbc1f1346d71d726cab01195c41",
+  "baseline/code/compact/direct.py": "11dc0140d9301ecbbfc033eccdbc990f8f5841c8480d7b7ce27dbbc210c062b6",
+  "baseline/code/compact/source.py": "715bcfe1704f372bf3bdc436eee798501a780d50fe3028d52e0a0129b58c7247",
+  "baseline/code/shared/backend.py": "2c1c5fa0f290ed801c83a9d0335ccaf01f73d46c7ecb7a6b5efae218ce48f4f0",
+  "baseline/code/shared/vendor/TMBuilder.py": "02b73292cd9e38501bce7de8695802a9f1dada34e6a45877fbd3519b03587a05",
+  "baseline/code/shared/vendor/tm.py": "fb1a2509165c4706a81ad6ecff504d35b75140051541cb3605c03d91dd21f1b1",
+  "build_selected.py": "2b61a1d4cf2b2775f51f41d3cbd534f57d73f59e0e373774f879ffc300b1a094",
+  "grammar-plan.json": "a1932a90a9069ba84044cee10ceeaeed6b99dcc72f4d0bbaa3d149e848f7aa52",
+  "grammar_search.py": "b310ef85f2364ba21660678285935a8a13d535a7eba6f1bab07958f98aa5da66",
+  "optimize.py": "12e7fef6c5572c6946455d6e3938c48c749b4eddd78e6c0a59af1ae142c5f233"
+}

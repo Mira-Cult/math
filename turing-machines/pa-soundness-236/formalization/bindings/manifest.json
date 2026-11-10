@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "bindings/pa926/machine.tm",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "eedb98409a6c64f9d89bed774cd763f6702ca84c",
+      "source_path": "problems/omega-arithmetical-soundness/recovery/pa-successor/machines/compact-direct-boot/quotient/machine.tm",
+      "bytes": 28959,
+      "sha256": "2358b4847410f8ec69d0b51d7e7fe93fb5aa1c47877a650de8bd2d9b82356969",
+      "git_blob": "6e15abbe7b55678758c35263259dff2d86335f98"
+    },
+    {
+      "path": "bindings/pa926/producer.py",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "eedb98409a6c64f9d89bed774cd763f6702ca84c",
+      "source_path": "problems/omega-arithmetical-soundness/recovery/pa-successor/code/compact/source.py",
+      "bytes": 6419,
+      "sha256": "715bcfe1704f372bf3bdc436eee798501a780d50fe3028d52e0a0129b58c7247",
+      "git_blob": "0c27136fe0c9cb71b0d60713508871f5d53ffabc"
+    },
+    {
+      "path": "bindings/pa926/trace_semantics.py",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "eedb98409a6c64f9d89bed774cd763f6702ca84c",
+      "source_path": "problems/omega-arithmetical-soundness/recovery/pa-successor/code/trace_semantics.py",
+      "bytes": 5416,
+      "sha256": "2b936b7c080d8dbc8e5d61e1ea91ddb349731548d53e75d8e974bcc7e6359cf3",
+      "git_blob": "a874ac8a89c2bb03a7613696b73960f93bfd74ff"
+    },
+    {
+      "path": "bindings/predecessor/OmegaSoundnessInterface.lean.txt",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "50930a28d1f2d9b6f88170beb0c343307ed64fec",
+      "source_path": "problems/pa-full-soundness/formal/OmegaSoundnessInterface.lean",
+      "bytes": 5556,
+      "sha256": "9e3421536e98e0293d24f877bd236f231ca757bbc983203da6bbbf34ae951d2a",
+      "git_blob": "d68ab1a91b0840ac105c7fab45c4283c76e4970d"
+    },
+    {
+      "path": "lean/Shared/Beeping/Events.lean",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "bd891a9e27c73103b3ce76b61617585ab82382ac",
+      "source_path": "Shared/Beeping/Events.lean",
+      "bytes": 2324,
+      "sha256": "0307ae66bbf99f80c24ddcb3b46a4cb1b52f72b82fc04b4f4f44e8d7d4940b6e",
+      "git_blob": "246e2213bc6fbb8f541a9197023ccf97339ad773"
+    },
+    {
+      "path": "lean/Shared/Beeping/Machines.lean",
+      "repository": "Mira-Cult/math-wip",
+      "commit": "bd891a9e27c73103b3ce76b61617585ab82382ac",
+      "source_path": "Shared/Beeping/Machines.lean",
+      "bytes": 10061,
+      "sha256": "cb9e34411607911dc1f0b009c0346de725603df7e5a46f995cd05fcfae2a62b1",
+      "git_blob": "88a876dfe9f6a74638261e981e175e8095473b27"
+    }
+  ]
+}

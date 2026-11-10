@@ -1,0 +1,156 @@
+{
+  "archive": {
+    "bytes": 234667,
+    "delivery_commit": null,
+    "library_file_id": "libfile_101240e6d08c8191ab15c8d73370785b",
+    "name": "pa804_checkpoint.zip",
+    "producer_commit": null,
+    "publication_status_at_recovery": "Archive reports unpublished; PR54 still at repository_baseline when checked.",
+    "repository_baseline": "266a3116fd8662ce118051ee1e85616cf3200947",
+    "sha256": "b1cb4f1fdbcc5e183a049c2e57adcfa1b28df80e91c0962301b6f1388601f9e9"
+  },
+  "canonical_admission": false,
+  "files": [
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/build.py",
+      "bytes": 7568,
+      "git_blob": "f064ea6b8e5d05b79f5cf2b9536bddaef5c2fdaa",
+      "path": "baseline/code/build.py",
+      "sha256": "f902c965c7598ebde12aed24708d2b3f9148ffbc1f1346d71d726cab01195c41"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/compact/direct.py",
+      "bytes": 15140,
+      "git_blob": "6b53550db9fd8ce5f5c53aaf16e2498698ff0050",
+      "path": "baseline/code/compact/direct.py",
+      "sha256": "11dc0140d9301ecbbfc033eccdbc990f8f5841c8480d7b7ce27dbbc210c062b6"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/compact/source.py",
+      "bytes": 6419,
+      "git_blob": "0c27136fe0c9cb71b0d60713508871f5d53ffabc",
+      "path": "baseline/code/compact/source.py",
+      "sha256": "715bcfe1704f372bf3bdc436eee798501a780d50fe3028d52e0a0129b58c7247"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/shared/backend.py",
+      "bytes": 553,
+      "git_blob": "95b33581e2717b34ee7ef78d04fb3115906d32e9",
+      "path": "baseline/code/shared/backend.py",
+      "sha256": "2c1c5fa0f290ed801c83a9d0335ccaf01f73d46c7ecb7a6b5efae218ce48f4f0"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/shared/vendor/LICENSE",
+      "bytes": 912,
+      "git_blob": "ae57e3688ce6763766f545ab3ebeb79ae5336ef8",
+      "path": "baseline/code/shared/vendor/LICENSE",
+      "sha256": "c1dffee77db98625debe39b47538e1d2f3b7956cbc7bcd6ed9363701b2177cfa"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/shared/vendor/TMBuilder.py",
+      "bytes": 13339,
+      "git_blob": "f226ca44f524995fc7dcda108c50f94a07240582",
+      "path": "baseline/code/shared/vendor/TMBuilder.py",
+      "sha256": "02b73292cd9e38501bce7de8695802a9f1dada34e6a45877fbd3519b03587a05"
+    },
+    {
+      "archive_path": "pa804-checkpoint/baseline/code/shared/vendor/tm.py",
+      "bytes": 1381,
+      "git_blob": "85ceb39189ce073b7af53d8d00ec6777d7afa39e",
+      "path": "baseline/code/shared/vendor/tm.py",
+      "sha256": "fb1a2509165c4706a81ad6ecff504d35b75140051541cb3605c03d91dd21f1b1"
+    },
+    {
+      "archive_path": "pa804-checkpoint/build_selected.py",
+      "bytes": 2332,
+      "git_blob": "06829c60abed550c8431c8de14d31ce6a2034abc",
+      "path": "build_selected.py",
+      "sha256": "2b61a1d4cf2b2775f51f41d3cbd534f57d73f59e0e373774f879ffc300b1a094"
+    },
+    {
+      "archive_path": "pa804-checkpoint/grammar-plan.json",
+      "bytes": 8127,
+      "git_blob": "90dc51d196d78c1f8056f434fd2622736f5a4899",
+      "path": "grammar-plan.json",
+      "sha256": "a1932a90a9069ba84044cee10ceeaeed6b99dcc72f4d0bbaa3d149e848f7aa52"
+    },
+    {
+      "archive_path": "pa804-checkpoint/grammar_search.py",
+      "bytes": 5838,
+      "git_blob": "7b69a8d9138a30602b4a587ea0824873adae9ac8",
+      "path": "grammar_search.py",
+      "sha256": "b310ef85f2364ba21660678285935a8a13d535a7eba6f1bab07958f98aa5da66"
+    },
+    {
+      "archive_path": "pa804-checkpoint/artifacts/selected/input-manifest.json",
+      "bytes": 993,
+      "git_blob": "830b708b60d79d50817fde61c3e0e2fb75251256",
+      "path": "input-manifest.json",
+      "sha256": "1c07d8bf684e6480b07df3049bd32ebb758da64e2b2d415a6d05464af89bac86"
+    },
+    {
+      "archive_path": "pa804-checkpoint/artifacts/selected/machine/boot/quotient/machine.tm",
+      "bytes": 25051,
+      "git_blob": "11819b9308238c72c7f74ef6aaf8448814a1c58f",
+      "path": "machine.tm",
+      "sha256": "ba5ecf486757f55aa872d1a10fc5360cbed2070cde2d975fa2ee1c54fc536df8"
+    },
+    {
+      "archive_path": "pa804-checkpoint/artifacts/selected/machine/boot/quotient/metadata.json",
+      "bytes": 9344,
+      "git_blob": "9d3fcbb2e9fee4a8b2c97458551e31a83fc12af8",
+      "path": "metadata.json",
+      "sha256": "4abdd6cb54ea77fba1af21fc10162d967637242f8b3521513a1e41c044816343"
+    },
+    {
+      "archive_path": "pa804-checkpoint/artifacts/one-stack-parent-metadata.json",
+      "bytes": 76162,
+      "git_blob": "c29cd2efda5902f48835d9fdd28da5fb7e6b3431",
+      "path": "one-stack-parent-metadata.json",
+      "sha256": "ada43a5cb8c4621f93d60b59edf9383eb7e2a663a7851168a2f8e36f692f7e3d"
+    },
+    {
+      "archive_path": "pa804-checkpoint/optimize.py",
+      "bytes": 14165,
+      "git_blob": "9aa8c4058e1454a010eab881e29d0b21917ca681",
+      "path": "optimize.py",
+      "sha256": "12e7fef6c5572c6946455d6e3938c48c749b4eddd78e6c0a59af1ae142c5f233"
+    },
+    {
+      "archive_path": "pa804-checkpoint/verify.py",
+      "bytes": 10393,
+      "git_blob": "dd2552f561648d6044ad2083f2151f602389322e",
+      "path": "verify.py",
+      "sha256": "6ca6f8a1b0fb5204cc64c8fa20a646a7d713c2d095f6028c54e7623766ebf8c5"
+    }
+  ],
+  "machine": {
+    "blank": 0,
+    "event_timing": "exit row",
+    "events": [
+      {
+        "bit": 0,
+        "read": 1,
+        "state": 174
+      },
+      {
+        "bit": 1,
+        "read": 1,
+        "state": 175
+      }
+    ],
+    "head": 0,
+    "rows": 1608,
+    "sha256": "ba5ecf486757f55aa872d1a10fc5360cbed2070cde2d975fa2ee1c54fc536df8",
+    "start": 0,
+    "states": 804
+  },
+  "reference_source": {
+    "path": "baseline/code/compact/source.py",
+    "same_bytes_as": "../pa926/producer.py",
+    "sha256": "715bcfe1704f372bf3bdc436eee798501a780d50fe3028d52e0a0129b58c7247"
+  },
+  "schema": 1,
+  "scope": "Exact recovered successor binding; no Lean source-to-table certificate is asserted.",
+  "selected_class": "ReassociatedOneStack"
+}
