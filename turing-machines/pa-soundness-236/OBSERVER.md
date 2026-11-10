@@ -13,9 +13,9 @@ Discard silent transitions but preserve the order of all emitted bits.
 Encode a natural number by unary `u(k) = 1^k 0`, so `u(0)=0`, `u(1)=10`,
 and `u(2)=110`. A record is
 
-\[
+$$
 u(n)\,u(p)\,u(x_1)\cdots u(x_n)\,u(b),
-\]
+$$
 
 where `n>0`, `p,x₁,…,xₙ` are arbitrary natural numbers, and `b` is `0` or
 `1`. Its **address** is `(n,p,[x₁,…,xₙ])`, and its value is `b`. After reading
@@ -66,19 +66,19 @@ chooses the second, and they alternate. Moves are unrestricted natural numbers.
 The existential player wins precisely when the completed address has value
 `0`. The observer requires a winning strategy for every one of these games:
 
-\[
+$$
 \forall n>0\ \forall p\quad
 \exists x_1\ \forall x_2\ \exists x_3\ \cdots Q_n x_n:
 B(n,p,[x_1,\ldots,x_n])=0.
-\]
+$$
 
 Each existential choice may depend on the preceding universal moves. An
 equivalent formulation is
 
-\[
+$$
 \forall n>0\ \forall p\ \exists S_{n,p}\quad
 \text{every play consistent with }S_{n,p}\text{ ends in a zero record}.
-\]
+$$
 
 The strategy is a finite-height, possibly infinitely branching tree. There is
 no requirement of computability, one first move for all games, one finite

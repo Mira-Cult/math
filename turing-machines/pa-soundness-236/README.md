@@ -6,12 +6,12 @@ Its fixed, explicitly defined infinite-output observer accepts exactly when
 every theorem of first-order Peano arithmetic is true in the standard natural
 numbers:
 
-\[
+$$
 \operatorname{OmegaAccept}(M236)
 \quad\Longleftrightarrow\quad
 \forall \varphi\text{ a PA sentence},\quad
 \mathrm{PA}\vdash\varphi\ \Longrightarrow\ \mathbb N\models\varphi.
-\]
+$$
 
 Here **ω-acceptance is a property of the entire output**, not halting, an
 accepting state, infinitely many beeps, or a decision procedure for truth.
