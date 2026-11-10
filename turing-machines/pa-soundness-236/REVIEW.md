@@ -33,6 +33,11 @@ literal simulation or Lean; those evidence categories remain separate.
 
 ## Exact reviewed document identities
 
+These hashes identify the original publication at
+[`33c755a`](https://github.com/Mira-Cult/math/commit/33c755adb8081b1eda611ca92cd8d1322747f1f2),
+before the rendering-only follow-up below. They are retained as the original
+review receipt, not as hashes of the current formatted guides.
+
 | File | SHA-256 |
 | --- | --- |
 | README.md | `97e83054bbd0ec57e5934dcec33decd66e6eb9fd10348e6b361d9a930a20068f` |
@@ -46,3 +51,26 @@ The reviewed source manifest SHA-256 is
 `546b57497a12990b7221c78506f4324ccdd6409257daf9627049f4b74eb5b101`.
 This receipt records a bounded source/exposition check, not a new mathematical
 assumption or a guarantee about uninspected code.
+
+## GitHub rendering follow-up
+
+On 2026-11-10, the public README, observer definition and proof guide were
+checked in GitHub's rendered preview. Their nine display formulas initially
+appeared as literal TeX because GitHub did not recognize the `\[` and `\]`
+delimiters. Ordinary dollar blocks also consumed TeX spacing escapes, and
+GitHub rejected `\operatorname`. The final repair at
+[`c2d75e5`](https://github.com/Mira-Cult/math/commit/c2d75e5215f014e2083d66911a2dbb70e18d2f3c)
+uses fenced `math` blocks, upright `\mathrm` names and line breaks in long
+formulas. All nine rendered as math with no error messages or horizontal
+overflow in the inspected desktop layout.
+
+A normalized comparison confirmed that all nine expressions differ only in
+presentation; the surrounding prose is unchanged. All 52 relative links across
+the seven release-facing Markdown documents resolve in the public checkout,
+as do the PA entries in both repository indexes. The original review hashes
+above remain historical identities.
+
+`python3 verify.py` passed again, including all 2,335 upstream file identities,
+and the 100,000-transition literal smoke test reproduced the documented final
+configuration. The optional finite Lean game check could not run because
+`lake` was unavailable. No Lean rebuild or new kernel check is claimed.
