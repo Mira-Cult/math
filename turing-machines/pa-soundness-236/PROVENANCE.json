@@ -11,5 +11,28 @@
   "lean": "leanprover/lean4:v4.33.1",
   "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
   "public_payload_prepared_on": "2026-11-10",
-  "no_independent_publication_lean_rebuild": true
+  "no_independent_publication_lean_rebuild": false,
+  "publication_lean_verification": {
+    "date": "2026-11-10",
+    "verified_public_commit": "33c755adb8081b1eda611ca92cd8d1322747f1f2",
+    "platform": "x86_64-unknown-linux-gnu",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mode": "clean project build from zero local .olean files reusing 8689 manifest-pinned mathlib cache files (mathlib not rebuilt from source)",
+    "lake_build_jobs": 5275,
+    "project_modules_built": 2238,
+    "transitive_axiom_theorems": 42446,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "structural_audit_roots": 8429,
+    "leanchecker_fresh_pasoundness": "passed (same Lean 4.33.1 kernel)",
+    "finite_game_cases_lean": 128,
+    "pa926_reference_vectors": {
+      "matrix": 192,
+      "postfix": 64,
+      "axioms": 144
+    }
+  }
 }

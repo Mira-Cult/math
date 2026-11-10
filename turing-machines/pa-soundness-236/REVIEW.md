@@ -74,3 +74,30 @@ above remain historical identities.
 and the 100,000-transition literal smoke test reproduced the documented final
 configuration. The optional finite Lean game check could not run because
 `lake` was unavailable. No Lean rebuild or new kernel check is claimed.
+
+## Post-publication kernel verification addendum
+
+On 2026-11-10, in a separate Lean-capable environment (`leanprover/lean4:v4.33.1`,
+`x86_64-unknown-linux-gnu`), an isolated clean checkout of
+[`33c755a`](https://github.com/Mira-Cult/math/commit/33c755adb8081b1eda611ca92cd8d1322747f1f2)
+passed a full local-project build (`lake build PASoundness PASoundness.Audit`,
+5,275 jobs across all 2,238 local modules from zero project `.olean` files,
+reusing 8,689 manifest-pinned `mathlib` cache files), the aggregate transitive
+axiom audit (42,446 theorems using only `propext`, `Classical.choice`, and
+`Quot.sound`) and structural non-shortcut audit (8,429 roots), a fresh
+same-kernel `lake env leanchecker --fresh PASoundness` replay, the 128-case
+finite Lean game check (`check_m236_game.py`), and the 192/64/144-case PA926
+reference vector check (`review_source.py --axioms`).
+
+All 2,335 upstream source files in `SOURCE-MANIFEST.json`, all machine tables
+and generators, and `OBSERVER.md`, `PROOF.md`, `producer/README.md`, and
+`ATTRIBUTION.md` are unchanged from
+[`a54b6ec`](https://github.com/Mira-Cult/math/commit/a54b6ec0d151fa2e85cd20307b212e686d840e2f).
+Only the verification-status prose in `README.md` (updated SHA-256
+`f0c165d974edb3c17d8670ab4487a016067d6afde845b80d4f31d5c9da565931`),
+`VERIFICATION.md` (updated SHA-256
+`5e82a4936f540dc2f69be0f2725d633c329e68f7dfab06b95bf2c9dff51e5364`),
+`PROVENANCE.json`, and this addendum were updated to record that verification
+receipt and its boundaries (`mathlib` cache reuse rather than a from-source
+`mathlib` rebuild, and replay in the same Lean 4.33.1 kernel rather than an
+independent kernel implementation).

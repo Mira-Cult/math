@@ -57,16 +57,51 @@ On 2026-11-10, using Python 3.12.14:
   ending at state 76, head −768, 621 nonzero cells and zero output events.
   This is only a finite smoke test.
 
-No full independent Lean/Lake rebuild or independent reproduction of the
-transitive axiom inventory was performed in this publication environment,
-which has no Lean toolchain. No independent literal 89,821,408-step replay
-is claimed. The scoped publication review is recorded in [REVIEW.md](REVIEW.md).
+On 2026-11-10, in an isolated clean checkout of public commit
+`33c755adb8081b1eda611ca92cd8d1322747f1f2` on `x86_64-unknown-linux-gnu` using
+pinned `leanprover/lean4:v4.33.1` (commit
+`819816b2e0a3bf405af45ae5c7af2491d8f5bee6`, Lake `5.0.0-src+819816b`):
 
-## Upstream reports, not rerun here
+- Starting from zero project `.olean` files, `lake exe cache get Mathlib`
+  unpacked 8,689 manifest-pinned `mathlib` cache files (`mathlib`
+  `0df444a360eaa60ab8c11dca51a86af692955474` was not rebuilt from source).
+  [lean-toolchain](formalization/lean/lean-toolchain) and
+  [lake-manifest.json](formalization/lean/lake-manifest.json) remained
+  byte-identical throughout.
+- `lake build PASoundness PASoundness.Audit` passed across 5,275 jobs,
+  compiling all 2,238 local Lean modules with zero `sorry` warnings.
+- `PASoundness.Audit` verified 42,446 transitive theorem declarations using
+  only `[propext, Classical.choice, Quot.sound]`, checked `#print axioms`
+  across 13,521 declarations (11,466 using subsets of those three standard
+  axioms and 2,055 axiom-free), and verified all 8,429 structural dependency
+  roots independent of `Peano.soundness`, `Peano.formula_soundness`,
+  `CompactSemantics.derivation_sound`, `CompactSemantics.proves_sound`,
+  `CompactSemantics.axiom_sound`, and `CompactSemantics.finite_comprehension`.
+- Direct `lake env lean` checks on
+  [PAtoCompactEndToEndProofTranslation.lean](formalization/lean/PASoundness/PAtoCompactEndToEndProofTranslation.lean)
+  and
+  [M236HistoricalPASoundness.lean](formalization/lean/PASoundness/M236HistoricalPASoundness.lean)
+  confirmed that all exported endpoint theorems depend only on
+  `[propext, Classical.choice, Quot.sound]`.
+- `lake env leanchecker --fresh PASoundness` (and `lake env leanchecker PASoundness.Audit`)
+  passed, replaying all transitive declarations in a fresh environment using
+  the **same Lean 4.33.1 kernel** (not an independent kernel implementation).
+- `python3.12 -B formalization/code/check_m236_game.py` passed all 128 finite
+  source-reference game cases in Lean (21 with rejection bit 1), and
+  `python3.12 -B formalization/code/review_source.py --axioms` matched all 192
+  matrix cases, 64 postfix certificates, and 144 axiom selector cases against
+  the pinned PA926 source (`all_equal: true`).
+
+No from-source rebuild of `mathlib`, independent third-party kernel check, or
+independent literal 89,821,408-step replay outside the Lean chunk proofs is
+claimed. The scoped publication review is recorded in [REVIEW.md](REVIEW.md).
+
+## Upstream workbench records
 
 The [PR #89 description](https://github.com/Mira-Cult/math-wip/pull/89) and
-exact-source records report the following. The original workbench may require
-access; the required proof and input sources are included in this public packet.
+exact-source records report the following prior workbench runs. The original
+workbench may require access; the required proof and input sources are included
+in this public packet.
 
 - At `7b551f1722cb62876c04195b6ad1059ac8116e0a`, two independent private
   **incremental** `lake build PASoundness PASoundness.Audit` runs passed,
@@ -90,9 +125,11 @@ access; the required proof and input sources are included in this public packet.
 - An isolated Python 3.11 workbench integrity check passed 44 tests. Those are
   repository-integrity/tool tests, not mathematical proofs.
 
-These are upstream reports, not this release's own kernel execution. Exact-head
-lookup returned no PR-triggered workflow runs. No remote CI pass is claimed;
-the source PR remained open and draft at inspection.
+The 44-test workbench integrity suite above was not rerun here; the public
+packet's own clean-project build, audit, and `leanchecker --fresh` replay are
+recorded in the previous section. Exact-head lookup returned no PR-triggered
+workflow runs. No remote CI pass is claimed; the source PR remained open and
+draft at inspection.
 
 ## Trust boundary
 

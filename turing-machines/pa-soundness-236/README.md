@@ -61,11 +61,13 @@ compact calculus, and then to genuine syntactic PA derivability and standard
 translations; it does not manufacture an equivalence by independently assuming
 or proving the two soundness statements.
 
-Upstream reports kernel-checked builds, transitive axiom/dependency audits,
-and scoped independent source reviews. This public release distinguishes those
-reports from its own reproducible source and finite checks in
-[VERIFICATION.md](VERIFICATION.md). It does **not** claim an independent full
-Lean rebuild, an independent kernel implementation, or external human referee
+On the published packet, an independent clean-checkout project build (reusing
+manifest-pinned `mathlib` cache artifacts), the aggregate transitive axiom and
+structural non-shortcut audits, a fresh same-kernel
+`leanchecker --fresh PASoundness` replay, finite Lean reference checks, and
+conventional source/generator checks all passed; see
+[VERIFICATION.md](VERIFICATION.md). It does **not** claim a from-source rebuild
+of `mathlib`, an independent kernel implementation, or external human referee
 certification.
 
 This is not PA proving its own soundness. The theorem and the available
