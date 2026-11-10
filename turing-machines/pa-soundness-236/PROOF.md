@@ -25,9 +25,9 @@ quotient map are also frozen under
 
 Use this orientation of Cantor pairing:
 
-$$
+```math
 \langle a,b\rangle=\frac{(a+b)(a+b+1)}2+b.
-$$
+```
 
 At stage `s=0,1,2,…`, unpair `s` into `(r,z)`, unpair `z` into `(p,w)`,
 and set `n=r+1`. Unpair `w` repeatedly `n` times, taking each first coordinate
@@ -37,9 +37,9 @@ tail. This yields the address `(n,p,[x₁,…,xₙ])`.
 For a legal address `a` and any residual tail `q`, recursively pair its moves
 onto `q`, then form
 
-$$
-s_q=\langle n-1,\langle p,\operatorname{pack}(xs,q)\rangle\rangle.
-$$
+```math
+s_q=\langle n-1,\langle p,\mathrm{pack}(xs,q)\rangle\rangle.
+```
 
 Decoding `s_q` returns exactly `a`, and `s_q≥q`. Thus every legal address
 occurs beyond every bound, not merely once. The repetition is deliberate and
@@ -58,9 +58,9 @@ The selected game syntax is unusually small. Unpair a natural code `f` into
   positions have value zero.
 - Otherwise put `a=tag−1`, `b=payload`. The semantic H-constructor is
 
-$$
+```math
 T(f,E)=\neg T(a,0::E)\ \lor\ \exists x\,\neg T(b,x::E).
-$$
+```
 
 Both children are smaller than `f`, so this defines a finite syntax. The
 membership atoms have strictly ordered *positions*, not bounded values.
@@ -103,11 +103,14 @@ finite experimentation but is not the formal proof.
 Let `T(f,[y])` be the standard semantic truth of the H-formula above. The key
 intermediate property is
 
-$$
+```math
+\begin{gathered}
 \forall f,A\in\mathbb N\ \exists C\in\mathbb N\ \forall y\le A,
-\qquad \operatorname{bit}(C,y)=1\ \Longleftrightarrow\ T(f,[y]).
+\\
+\qquad \mathrm{bit}(C,y)=1\ \Longleftrightarrow\ T(f,[y]).
+\end{gathered}
 \tag{FT}
-$$
+```
 
 A new finite `C` may be chosen for each formula and bound. This is not a single
 truth set for all formulas and values.
@@ -163,10 +166,13 @@ In the reverse direction, K soundness supplies the ninth axiom's truth; a
 fresh-variable translation and double-negation padding recover pointed support
 and then (FT). Thus
 
-$$
-\operatorname{TraceAccept}(\operatorname{Source}(\operatorname{selectedValue}))
-\quad\Longleftrightarrow\quad\operatorname{CompactSound}.
-$$
+```math
+\begin{gathered}
+\mathrm{TraceAccept}(\mathrm{Source}(\mathrm{selectedValue}))
+\\
+\quad\Longleftrightarrow\quad\mathrm{CompactSound}.
+\end{gathered}
+```
 
 The exact result is `source_accept_iff_compact_sound` in
 [M236Reverse](formalization/lean/PASoundness/M236Reverse.lean).
