@@ -1,0 +1,2150 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black,pdftitle={Normal dovetails: analytic admission and quantitative constructions},pdfauthor={}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape Normal dovetails}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 0.15em minus 0.1em}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=1.8em}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.2ex plus 1ex minus .2ex}{0.8ex}
+\titlespacing*{\subsection}{0pt}{1.8ex plus .5ex minus .2ex}{0.5ex}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\DeclareMathOperator{\dist}{dist}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\allowdisplaybreaks[2]
+\widowpenalty=10000
+\clubpenalty=10000
+\title{\vspace{-1.5em}\LARGE\bfseries Normal dovetails\par\vspace{0.35em}\large Analytic admission and quantitative constructions}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-3em}
+\begin{abstract}
+
+We concatenate the complete first $A_rD_r$ fractional radix digits of an analytic function at all affine inputs $(bj+1)b^{-A_r}$ in each stage $b^{r-1}\le j< b^r$. An exponential upper bound and a finite-window, factorial-scale lower bound on Taylor coefficients suffice for normality through every output prefix. A single computable schedule works pointwise for all nonpolynomial real D-finite germs on a common positive-radius disk. The schedule can meet any specified computable, nondecreasing, divergent overhead budgets above logarithmic input precision and copied length. Uniformity of the discrepancy estimate requires uniform coefficient-window data; uniformity of the schedule alone does not provide it.
+
+The construction admits rational, algebraic and transcendental analytic source functions. For $(1+x)^\alpha$ the exact exceptional parameters are the nonnegative integers; for $(1-x)^{-\theta}$ they are the nonpositive integers. These are results about newly constructed digit streams, not a claim that normality implies transcendence or a normality theorem for the sampled function values or their limit.
+
+The coefficient-window theorem is the broadest analytic admission result in this account, so we state it first. Singular and flat functions need different derivative estimates and schedules; they are treated afterward rather than being silently included in its hypotheses.
+
+\end{abstract}
+\vspace{1em}
+\tableofcontents
+\newpage
+
+\section*{Introduction}
+
+A real number is normal to base \(b\) if each word \(w\) of length \(W\)
+occurs in its fractional expansion with limiting frequency \(b^{-W}\).
+Equivalently, its radix orbit is uniformly distributed modulo one. We
+ask when many short observations of a function, assembled as consecutive
+digit blocks, yield a normal number. The observations here use inputs
+approaching zero; each block contains a complete initial segment of the
+fractional expansion, and no row is omitted.
+
+The central mechanism is cancellation in the phases at every actual
+digit offset. A finite window of Taylor coefficients prevents all the
+relevant high derivatives from becoming too small. An order-uniform
+derivative estimate then controls exponential sums, and a Fourier
+approximation converts cancellation into word counts. Estimates for
+incomplete row intervals are what extend the conclusion from stage
+endpoints to every output prefix.
+
+This model differs from the integer-part concatenations studied by
+Madritsch, Thuswaldner and Tichy \cite{madritsch}, where an entire
+function is sampled at natural numbers or primes tending to infinity. We
+use the growing-order derivative estimate of Arias de Reyna
+\cite{arias}. Normality and transcendence remain separate questions: the
+classical fixed-base normal Liouville construction in Appendix C is
+included as background, while Becher, Heiber and Slaman \cite{becher}
+construct a computable absolutely normal Liouville number.
+
+Theorem A gives the general analytic criterion. Sections 3 and 4 derive
+D-finite and exact power-family consequences. Sections 5--7 treat
+singular sources, two flat kernels, and the scale of approach to
+polynomial exceptions. Section 8 compares different quantitative
+objectives. The appendices supply the derivative estimate, endpoint-safe
+Fourier transfer, and elementary transfer and obstruction arguments.
+
+\section{Construction and the coefficient-window
+theorem}\label{construction-and-the-coefficient-window-theorem}
+
+Fix an integer \(b\ge2\). Stage \(r\ge1\) contains every row index
+\(b^{r-1}\le j< b^r\). Choose positive integers \(A_r,D_r\) and put
+\(K_r=A_rD_r\). For a row \(j\) in stage \(r\), use the aliases
+\(A_j=A_r\), \(D_j=D_r\), and \(K_j=K_r\). The source input is
+
+\[
+x_j=(bj+1)b^{-A_r},\qquad b^{r-1}\le j< b^r.
+\]
+
+For each fixed parameter \(u\) in a set \(U\), reduce the real source
+value \(h_u(x_j)\) modulo 1 and copy its complete first \(K_r\)
+fractional digits. Use the terminating expansion at ambiguous endpoints.
+Concatenating these blocks in increasing \(j\) gives a number \(Y_u\).
+For a word \(w\) of length \(W\), let \(C_w(N;u)\) count occurrences
+starting at the first \(N\) positions of this infinite output, including
+words that end beyond position \(N\). Counting only words completed by
+\(N\) changes the count by at most \(W-1\). The parameter is fixed
+within each output; it never varies from row to row.
+
+An \textbf{admissible schedule} retains all rows in their original
+order, uses positive integers \(A_r,D_r\), copies each full prefix of
+\(K_r\) digits, and satisfies \(x_j\to0\) and \(D_r\to\infty\). Every
+sampled value must lie in the stated real domain of the source.
+Additional budget or regularity conditions are imposed only where
+explicitly stated.
+
+A \textbf{common schedule} does not depend on \(u\). \textbf{Pointwise
+normality} means that every fixed parameter gives a normal output.
+\textbf{Uniform normality on \(U\)} means that the normalized word-count
+error tends to zero uniformly over \(u\in U\); compact-uniform normality
+requires this on each specified compact parameter set. A common schedule
+need not give uniform error near exceptional parameters. A computable
+schedule also does not by itself make the copied digits computable from
+arbitrary real input data.
+
+In applications, a parameterized source may be written as
+\(h_\theta(x)=\mathcal B(\theta,g(x))\). The operation \(\mathcal B\)
+acts before digits are copied; it is not applied to an already normal
+output.
+
+\subsection{Coefficient-window
+hypotheses}\label{coefficient-window-hypotheses}
+
+A family of real analytic germs \(h_u\) on a common complex disk
+\(|x|< \rho\) around zero is \textbf{window admissible on a parameter
+set \(U\)} if, writing
+
+\(h_u'(x)=\sum_{n\ge 0} c_n(u) x^n\), it admits a specified positive
+rational lower bound \(\rho\) for the common analytic radius, numbers
+\(M\ge 1\), \(C\ge 1\), integers \(d\ge 1\), \(n_0\ge 0\), independent
+of \(u \in U\), such that, with the shared exponential scale
+\(S=\max(2,2/\rho)\):
+
+(W1) \(|c_n(u)| \le  M S^n\) for all \(n\ge 0\) and all \(u \in U\);
+
+(W2) for every \(n\ge n_0\),
+
+\[
+\max_{0\le i< d} |c_{n+i}(u)| \ge  \exp(-C(n+d+1) \log(n+d+2))
+\]
+
+The coefficients and the germs are real, and their Taylor series
+represent the actual source functions on this disk. Cauchy's estimate on
+the one interior disk \(|x|\le \rho/2\) gives this shared exponential
+scale \(S\); a uniform bound there supplies \(M\) in (W1). Pointwise,
+\(M\) may depend on the germ. The other window constants may be merely
+existential for qualitative statements, or computably supplied for an
+effective explicit onset and compact-uniform bound. No rationality
+hypothesis is imposed on coefficients or parameters.
+
+\Needspace{6\baselineskip}
+\textbf{Theorem A (window admission, strong all-prefix version).} Let
+\(h_u\) satisfy (W1)-(W2) on \(U\) with the specified common
+analytic-radius lower bound \(\rho\). Let
+\(F,G:\mathbb N_{>0}\longrightarrow\mathbb N_{>0}\) be computable
+nondecreasing functions tending to infinity. There is one computable
+schedule, depending only on \(b,F,G,\rho\) and \textbf{not on \(u\) or
+the remaining window data}, with:
+
+\[
+x_j\longrightarrow0,\qquad D_j\longrightarrow\infty,\qquad \frac{A_j}{\log_bj}\longrightarrow1,
+\]
+
+and, eventually,
+
+\[
+A_j-\log_bj\le G(j),\qquad K_j\le F(j)\log_bj.
+\]
+
+such that, for every fixed word \(w\), uniformly in \(u \in U\),
+
+\[
+\left|C_w(N;u)-Nb^{-W}\right|\le C_{U,b,W}N\frac{B_{r(N)}}{r(N)D_{r(N)}}
+\]
+
+for all sufficiently large \(N\). Here \(r(N)\) is the stage containing
+the last observed output digit and \(B_r=A_r-r\), as defined precisely
+below. In particular the concatenation is normal uniformly on \(U\). For
+any shared positive domain radius, the same schedule works
+\emph{pointwise} for every germ having some finite data satisfying
+(W1)-(W2) on that common domain, even when the coefficient-window
+constants cannot be chosen uniformly across the germs. Without a fixed
+positive radius lower bound, a domain-dependent finite initial
+adjustment is required for each germ: a fixed early sample may be
+outside its domain. This adjustment leaves all eventual budgets and
+discrepancy bounds unchanged.
+
+The theorem holds equally for \(h_u(x)\) with an additive integration
+constant or an additional additive center, because these only rotate
+each harmonic sum at a common digit offset. That observation is a proof
+convenience, not a replacement of \(\mathcal B(u,g(x))\) by an additive
+center.
+
+\section{Proof of the coefficient-window
+theorem}\label{proof-of-the-coefficient-window-theorem}
+
+The arithmetic of a rational Taylor series can support fresh-prime
+grids, but it is not the only way to obtain cancellation. Here the phase
+is differentiated without truncating the source. The order of
+differentiation grows, so a derivative estimate with constants uniform
+in that order is essential.
+
+A lower bound on every coefficient would exclude functions such as
+cosine. A lower bound on the largest coefficient in each fixed-width
+window allows zeros and cancellations. An invertible
+polynomial-coefficient recurrence supplies precisely this weaker
+condition by running the recurrence backwards. This is the mechanism
+behind the D-finite corollary.
+
+Here ``rational'', ``algebraic'' and ``transcendental'' describe source
+functions, not their output numbers. Whether any algebraic irrational is
+normal remains open, and no implication from normality to transcendence
+is used.
+
+\subsection{Explicit schedule without a prescribed convergence
+modulus}\label{explicit-schedule-without-a-prescribed-convergence-modulus}
+
+Set
+
+\[
+S=\max\left(2,\frac2\rho\right),\qquad B_0=3+\left\lceil\log_b(4S)\right\rceil.
+\]
+
+For \(r\ge2\), define
+
+\[
+B_r=\max\left\lbrace B_0,\,
+\min\left(\left\lfloor\sqrt r\right\rfloor,
+\left\lfloor\frac{G(b^{r-1})}{4}\right\rfloor\right)\right\rbrace,
+\]
+
+\[
+\begin{aligned}
+D_1&=1,\\
+D_r&=\min\left\lbrace D_{r-1}+1,
+\max\left(1,\left\lfloor\frac{\log_2B_r}{8}\right\rfloor\right),
+\max\left(1,\left\lfloor\frac{F(b^{r-1})}{4}\right\rfloor\right)
+\right\rbrace,\\
+A_r&=r+B_r,\qquad K_r=A_rD_r.
+\end{aligned}
+\]
+
+All floors, ceilings and thresholds can be evaluated by integer or
+rational comparisons. No rate of divergence for \(F\) or \(G\) is
+needed.
+
+For stage 1 take \(B_1=B_0, A_1=1+B_0, D_1=1\) (only a finite
+adjustment). This ensures \(x_j\le b^{2-B_0}< 1/(2S)\) from the first
+row. These are nondecreasing, divergent \(B\) and \(D\) profiles,
+\(B_r\le \sqrt{r}\) for all sufficiently large \(r\),
+\(D_r\le 1+(\log_2 B_r)/8\), and \(2^D=O(B^{1/8})\). The
+min-with-previous-plus-one guarantees \(D_r\le D_{r-1}+1\) and no
+downward jumps. For \(j\) in stage \(r\), \(\log_b j\) lies in
+\([r-1,r)\), so the two eventual budgets follow from the caps. Since
+\(x_j\le b^{2-B_r}\), the source lies in the domain and tends to zero.
+Since \(K_r=(r+B_r)D_r\), both \(A_r/\log_b j \longrightarrow  1\) and
+\(K_r/\log_b j \longrightarrow  \infty\) hold, and
+\(B_r/(rD_r)\longrightarrow 0\).
+
+\subsection{Uniform analytic derivative
+lemma}\label{uniform-analytic-derivative-lemma}
+
+For \(k\ge 1\), let \(c_{k-1}\) be a usable coefficient furnished by
+(W2). For \(0\le x< 1/S\), the Taylor remainder identity gives
+
+\[
+\frac{h_u^{(k)}(x)}{(k-1)!}=c_{k-1}+\sum_{\ell\ge1}\binom{k+\ell-1}{\ell}c_{k+\ell-1}x^\ell
+\]
+
+Therefore, if \(2k S x\le 1\),
+
+\[
+\left|\frac{h_u^{(k)}(x)}{(k-1)!}-c_{k-1}\right|\le4MkS^kx \tag{2.1}
+\]
+
+This follows from the majorant \(M S^{k-1}[(1-Sx)^{-k}-1]\),
+\(-\log(1-z)\le 2z\), and \(e^v-1\le 2v\) for \(0\le v\le 1\). Condition
+(W2) converts the absolute error to a relative error at most \(1/2\)
+whenever
+
+\[
+B_r\ge B_*(M,S,C,d,n_0,b)+4Ck\log(k+2)
+\]
+
+Only \(k\le D_r+n_0+2d+12=O(\log B_r)\) is needed, so this inequality
+holds for all sufficiently large \(r\), uniformly on \(U\). Consequently
+\(h_u^{(k)}\) has one fixed sign throughout every required real row
+interval, and lies between one half and three halves of
+\((k-1)! c_{k-1}\) in signed magnitude. Furthermore, for every selected
+order,
+
+\[
+\left|\log_b\bigl((k-1)!\,|c_{k-1}|\bigr)\right|\le\frac{B_r}{16} \tag{2.2}
+\]
+
+for all sufficiently large \(r\). When effective upper and nonzero lower
+bounds for the window data are supplied, these thresholds can be found
+by finite integer/rational bounds. With merely existential data the
+thresholds are existential; the common schedule is still computable from
+\(b,F,G,\rho\). No hidden order-dependent van der Corput constant is
+used.
+
+\subsection{Actual-phase Fourier
+calculation}\label{actual-phase-fourier-calculation}
+
+Fix a late stage, abbreviate \(B=B_r\), \(A=r+B\), \(D=D_r\), \(K=AD\),
+\(m_{\mathrm{full}}=(b-1)b^{r-1}\); include a real interval containing
+\(b^{r-1}-1 \le  y \le  b^r\). For the word length \(W\), discard the
+first \(T B\) offsets of each copied row and the final \(W-1\) crossing
+offsets, with
+
+\(L_0=n_0+d+10\), \(L_1=L_0+d+1\), \(T=8(L_1+1)\).
+
+For each retained integer offset \(TB\le t\le K-W\), set
+\(z=\left\lfloor t/(A-1)\right\rfloor\). Condition (W2) supplies some
+index \(n\) in \([z+L_0,z+L_0+d-1]\) with \(c_n \ne  0\) and the stated
+lower bound; take \(k=n+1\). Then
+
+\(3\le k\le D+L_1\), \(t-k(A-1)\le -L_0(A-1)\),
+
+\(t-kB \ge  t(1-B/r)-L_1 B \ge  5t/8\) for \(B/r\le 1/4\). (2.3)
+
+For harmonic \(h\ge 1\), define the \textbf{untruncated actual phase}
+
+\[
+f_{t,h}(y)=h b^t h_u((by+1)b^{-A})
+\]
+
+(The letter h in the subscript is a harmonic integer, not the source
+germ.) The chain rule and (2.1)-(2.3) give derivatives of one sign and
+\(\lambda_h \le  |f^{(k)}| \le  \Lambda_h\) with
+\(\Lambda_h/\lambda_h=3\). For \(h=1\) and all sufficiently large
+stages,
+
+\(\lambda_1 m_{\mathrm{full}}^k \ge  b^{t/2}\),
+\(\Lambda_1 \le  b^{-8r}\). (2.4)
+
+The first inequality uses \((k-1)!|c_{k-1}| \ge  b^{-B/16}\) and
+\(m_{\mathrm{full}}\ge b^{r-1}\). The second uses \(k\ge z+L_0+1\),
+\(L_0\ge 11\), and the upper side of (2.2). No value of \(u\) enters
+(2.3)-(2.4) except through constants already uniform in (W1)-(W2).
+
+Put \(Q_r=2^{D+L_1}\) and \(s_t=\min(t,r)\). Choose a \textbf{separate
+integer Fejér cutoff at every actual offset}:
+
+\[
+H_t=\max(1,\left\lfloor b^{s_t/(8 Q_r)}\right\rfloor)
+\]
+
+For \(1\le h\le H_t\), \(\Lambda_h\le b^{-7r}\),
+\(\lambda_h m_{\mathrm{full}}^k\ge b^{t/2}\), and
+\(\Lambda_h/\lambda_h=3\). Applying the growing-order derivative
+estimate in Appendix A to any consecutive row subinterval with more than
+k terms, and evaluating its absolute upper bound at
+\(m_{\mathrm{full}}\), yields
+
+\[
+|\sum_{j \in I} \exp(2 \pi i h b^t h_u(x_j))| \le  12 m_{\mathrm{full}} b^{-s_t/Q_r} \tag{2.5}
+\]
+
+Indeed the three derivative expressions are bounded by \(b^{-r/2^k}\),
+\(b^{-6r/2^k}\), and \(b^{-t/2^k}\). The bound holds also for intervals
+with at most \(k\) terms by the trivial estimate
+\(k\le 12 m_{\mathrm{full}} b^{-s_t/Q_r}\), valid uniformly after
+another effective finite stage threshold. Importantly, (2.5) applies at
+each \textbf{actual} offset, to the \textbf{complete untruncated phase},
+for all required harmonics and every incomplete consecutive row
+interval. No selected-row reindexing or independent digit approximation
+is made.
+
+\subsection{Offset-dependent Fourier-to-words and
+summation}\label{offset-dependent-fourier-to-words-and-summation}
+
+Use the endpoint-safe Fejér transfer proved in Appendix B: for \(m\)
+circle phases \(z_1,\ldots,z_m\) and any interval of length \(b^{-W}\),
+the word error is at most
+
+\[
+\frac{2m}{\sqrt{H+1}}+\frac2\pi\sum_{h=1}^H\frac{\left|\sum_j e(hz_j)\right|}{h}
+\]
+
+A word beginning at offset \(t\) within a row is exactly membership of
+\(\lbrace b^t h_u(x_j)\rbrace\) in its radix cylinder in base \(b\); no
+digit-near-boundary implication is used. From (2.5) and the chosen
+\(H_t\), the retained-offset word contribution is
+
+\[
+\le  2m b^{-s_t/(16 Q_r)} + 8 m_{\mathrm{full}} b^{-s_t/Q_r}(1+(\log b)s_t/(8Q_r)) \tag{2.6}
+\]
+
+For fixed \(b\ge 2\), geometric summation over \emph{all} offsets
+\(TB\le t\le K-W\) gives
+
+\[
+\sum_t b^{-s_t/(16Q_r)} \le  C_b Q_r + K b^{-r/(16Q_r)}
+\]
+
+\[
+\sum_t b^{-s_t/Q_r}(1+s_t/Q_r) \le  C_b Q_r + K(1+r/Q_r)b^{-r/Q_r}
+\]
+
+Because \(Q_r=O(B_r^{1/8})=O(r^{1/16})\) and \(K_r=O(r \log r)\), each
+final tail is \(O(Q_r)\) after an effective stage threshold. Thus the
+total bound on any \textbf{nonempty} consecutive subbatch of \(m\) rows
+(in particular the original initial segment of that stage) is
+
+\[
+\text{error}\le m(TB_r+W+C_bQ_r)+m_{\mathrm{full}}C_bQ_r \tag{2.7}
+\]
+
+An empty subbatch contributes zero. A single incomplete final copied row
+is charged its actual number \(z\le K_r\) of observed starts. All
+crossing starts are charged inside the \(W\) term. Equation (2.7),
+rather than a batch-endpoint-only assertion, is the source of the
+all-prefix theorem.
+
+\subsection{Every output prefix}\label{every-output-prefix}
+
+For \(N\) whose last digit lies in stage \(r\), sum (2.7) over all
+completed stages and the completed portion of stage \(r\), with only
+trivial \(m_s K_s\) charges for the finitely many early stages preceding
+the analytic onset. Because \(B_s\) and \(D_s\) are nondecreasing,
+\(Q_s\le Q_r\), and the full row counts grow geometrically, this gives
+
+\[
+\left|C_w(N;u)-Nb^{-W}\right|=O_{U,b,W}\!\left(b^r(B_r+Q_r+W)+K_r\right) \tag{2.8}
+\]
+
+For \(r\ge 3\), the preceding full stage is already part of the prefix
+and gives
+
+\[
+N \ge  (b-1)b^{r-2} K_{r-1} \ge  c_b b^r r D_r
+\]
+
+using \(D_r\le D_{r-1}+1\le 2 D_{r-1}\) and \(K_{r-1}\ge (r-1)D_{r-1}\).
+Since \(K_r=O(rD_r)\) and \(Q_r=O(B_r^{1/8})=O(B_r)\), dividing (2.8) by
+\(N\) proves Theorem A with \(O(N B_r/(rD_r))\). This argument includes
+all original source rows, all word lengths fixed in advance, any
+incomplete last stage, and any incomplete last row. The early-stage
+contribution is finite and uniform on \(U\) when its admission constants
+are uniform.
+
+For example, let \(L_r\) be the least integer with \(2^{L_r} \ge  r+2\)
+and use the unbudgeted exact-integer choice
+\(B_r=\max(B_0,\min\lbrace m\ge 1: m^3\ge L_r\rbrace )\) and the
+\textbf{maximal bounded-increment} depth recurrence
+
+\(D_1=1\),
+\(D_r=\min(D_{r-1}+1,\max(1,\left\lfloor (\log_2 B_r)/8\right\rfloor))\),
+
+with no additional smaller F cap. This gives \(D_r=\Theta(\log B_r)\)
+eventually and therefore the quantitative uniform rate
+
+\[
+O_{U,b,W}\!\left(\frac{N(\log\log N)^{1/3}}{\log N\,\log\log\log N}\right)
+\]
+
+here all iterated logarithms are used only in the sufficiently large
+\(r\)egime. An unspecified increasing depth merely lying below that cap
+need not have this rate. Using
+\(B_r=\max(B_0,\min\lbrace m\ge 1: m^2\ge L_r\rbrace )\) with the same
+maximal recurrence gives the weaker but cleaner
+\(O\!\left(\frac{N\sqrt{\log\log N}}{\log N}\right)\). The
+arbitrary-budget rule above can make B diverge even more slowly, with an
+exact profile-dependent envelope.
+
+\textbf{Scope caution.} This theorem is proved for functions meeting
+(W1)-(W2). It is not a blanket theorem for all analytic functions:
+deliberately sparse or super-small coefficient sequences can violate the
+window estimate.
+
+\section{D-finite functions and the rational-derivative
+classification}\label{d-finite-functions-and-the-rational-derivative-classification}
+
+\Needspace{6\baselineskip}
+\textbf{Lemma B (quantitative recurrence window).} Suppose, for every
+\(n\ge n_0\), the sequence of Taylor coefficients satisfies
+
+\[
+q_d(n,u)c_{n+d}(u)+ \ldots + q_0(n,u)c_n(u)=0
+\]
+
+where both endpoint coefficients \(q_0(n,u)\) and \(q_d(n,u)\) are
+nonzero for every indicated \(n\) and \(u\). Suppose \(d,n_0\) are fixed
+on \(U\), and for constants \(P\ge 1\), \(s\ge 0\) shared on \(U\),
+
+\[
+\sum_{i=1}^d |q_i(n,u)/q_0(n,u)| \le  P(n+2)^s
+\]
+
+and the initial window vector
+\(V_{n_0}(u)=(c_{n_0}(u),\ldots,c_{n_0+d-1}(u))\) has supremum norm at
+least \(\nu>0\) uniformly on \(U\). Then for \(n\ge n_0\),
+
+\[
+\max_{0\le i< d}|c_{n+i}(u)| \ge  \nu P^{-(n-n_0)} ((n+1)!)^{-s} \tag{3.1}
+\]
+
+and hence (W2) holds with a uniform constant \(C\) depending on
+\(\nu,P,s,n_0,d\), computable when effective upper bounds for \(P,s\)
+and a positive lower bound for \(\nu\) are supplied.
+
+\textbf{Proof.} Let \(V_n=(c_n,\ldots,c_{n+d-1})\). The companion step
+\(V_{n+1}=T_n V_n\) is invertible because both endpoint recurrence
+coefficients are nonzero. Its inverse shifts all but the recovered first
+coordinate; the first coordinate is \(-\sum_{i=1}^d(q_i/q_0)c_{n+i}\).
+Hence
+\(\lVert T_n^{-1}\rVert_\infty\le\max\left(1,\sum_{i=1}^d|q_i/q_0|\right)\le P(n+2)^s\).
+Iterating \textbf{backwards} from \(V_n\),
+
+\[
+\nu\le\lVert V_{n_0}\rVert_\infty\le\left(\prod_{t=n_0}^{n-1}P(t+2)^s\right)\lVert V_n\rVert_\infty
+\]
+
+which gives (3.1) by bounding the product by \(((n+1)!)^s\). The
+factorial logarithm is at most \((n+1)\log(n+1)\), giving (W2). This
+proof bounds the window norm, not each coefficient; cancellations in
+individual coefficients are allowed. \(\square\)
+
+\Needspace{6\baselineskip}
+\textbf{Corollary C (real analytic D-finite derivatives).} Let \(h\) be
+real analytic on a neighborhood of zero and suppose its derivative
+\(h'\) is D-finite over \(\mathbb R(x)\) (equivalently \(h\) itself is
+D-finite), and \(h'\) is not a polynomial. Then \(h\) meets (W1)-(W2)
+for some finite constants. In particular Theorem A gives a computable
+schedule for every such \(h\) once a positive rational analytic-radius
+lower bound is fixed; that schedule needs no recurrence computation. On
+a class with fixed positive common analytic radius, a single schedule
+can be selected \textbf{without knowing its D-finite recurrence} and
+works pointwise for that entire class.
+
+\textbf{Proof.} A linear differential equation with polynomial
+coefficients for \(h'\) induces a finite-width recurrence with
+polynomial coefficients in \(n\), valid for all sufficiently large
+\(n\). Remove identically zero outer coefficient polynomials and shift
+the recurrence so that its first and last coefficients are not
+identically zero. Each has only finitely many integer roots, so past a
+finite \(n_0\) both are nonzero. For arbitrary real recurrence
+coefficients this cutoff is existential. Computing it requires effective
+coefficient bounds and certified nonzero lower bounds for the leading
+nonzero coefficients (or equivalent effective root-bound data); a
+symbolic real recurrence alone does not supply those. Effective window
+constants also require effective initial-vector nondegeneracy and
+analytic upper bounds. Ratios \(q_i/q_0\) are at most a constant times
+\((n+2)^s\), because these are real polynomials in \(n\), and the
+initial window cannot be identically zero: otherwise the nonzero leading
+\(q_d\) forces all later coefficients to vanish and \(h'\) would be
+polynomial. An analytic radius provides (W1) by Cauchy's estimate. For
+compact parameter families whose recurrence coefficients, radius and
+initial vector obey shared nondegeneracy and bound conditions, this
+argument supplies the same constants uniformly. On any class with a
+specified common analytic disk, the theorem's schedule uses only
+\(b,F,G,\rho\), through \(S=\max(2,2/\rho)\), so it applies pointwise
+even if the remaining coefficient-window constants vary arbitrarily
+between individual sources. Without a common disk, individual schedules
+may be chosen; a single fixed finite first input need not lie in every
+germ's domain. \(\square\)
+
+The D-finite hypothesis alone does \textbf{not} provide uniformity
+across a degenerating parameter family: the first/last recurrence
+coefficients or the initial window may tend to zero, and a common
+coefficient lower bound can fail. Composition of arbitrary D-finite
+functions is not asserted to be D-finite. Products of D-finite germs and
+algebraic substitutions in suitable analytic domains furnish standard
+structured examples; explicit recurrences should be checked rather than
+assumed.
+
+Examples covered by Corollary C include analytic primitives of \(e^x\),
+\(\cos x\), \(\log^2(1+x)\) and their nonpolynomial real linear
+combinations (if a combination becomes polynomial, it leaves the
+admitted class). For \(\cos x\), every other Taylor coefficient
+vanishes, but the recurrence \(c_{n+2}=-c_n/((n+1)(n+2))\) has an
+invertible two-dimensional window.
+
+\subsection{Exact rational-derivative
+admission}\label{exact-rational-derivative-admission}
+
+\Needspace{6\baselineskip}
+\textbf{Corollary D (rational-derivative admission).} Let
+\(R\in\mathbb Q(x)\) be regular at zero, and let \(g(0)=0\), \(g'=R\).
+In the complete-prefix affine-input model, some schedule normalizes
+\(\theta+g(x_j)\) uniformly over all additive centers \(\theta\) if and
+only if \(R\) is not a polynomial. In the positive case the schedule in
+Theorem A meets any chosen budgets \(F,G\) there.
+
+\textbf{Proof.} A nonpolynomial rational function is D-finite and
+analytic on a disk about zero; so is its primitive. Corollary C and
+Theorem A apply. Additive centers do not change the derivative
+coefficients and multiply each harmonic sum at a common offset by a
+complex number of modulus one. Thus the discrepancy estimate is uniform
+in the center. A positive rational radius bound is effective from the
+rational numerator and denominator after cancellation: if
+\(Q(x)=q_0+\sum_{i\ge1}q_ix^i\) with \(q_0\ne0\), choose rational
+\(0< \rho\le1\) with \(\rho\sum_{i\ge1}|q_i|< |q_0|\). Then \(Q\) has no
+zero on \(|x|\le\rho\).
+
+Conversely, if \(R\) is polynomial, \(g\) is a rational-coefficient
+polynomial of some degree \(m\) (including the zero polynomial). Choose
+a positive integer \(q\) clearing its coefficients and set the center to
+zero. For every row in stage \(r\) and integer offset \(t\ge mA_r\), the
+number \(q b^t g(x_j)\) is an integer. Every deep source phase therefore
+belongs to the fixed grid \(q^{-1}\mathbb Z/\mathbb Z\). Choose a fixed
+word length \(W\) with \(b^W>q\). Some canonical radix cylinder of
+length \(W\) misses that grid, and that word never starts at any deep
+within-row position. The fraction of remaining positions at
+completed-stage endpoints tends to zero: each row loses at most
+\(mA_r+W\) starts out of \(A_rD_r\), and \(D_r\to\infty\). The finitely
+many early rows are negligible. The omitted word has frequency zero
+rather than \(b^{-W}\), contradicting normality. Thus center-uniform
+normality is impossible. \(\square\)
+
+This is a function-class classification for existence of a schedule, not
+a classification of all schedules. The primitive \(g(x)=x/(1-x)\) is
+admitted, despite being rational. At the same time, the inverse
+operation \(g/(1+g)=x\) destroys admission at center zero. Arbitrary
+nonlinear composition therefore does not preserve the property.
+
+\section{Parameterized operations and exact power
+exceptions}\label{parameterized-operations-and-exact-power-exceptions}
+
+For a specified parameter set \(U\), call \(\mathcal B\)
+\textbf{normalization-surviving for g} if some admissible common
+schedule makes every \(Y_u\), \(u \in U\), normal; call it
+\textbf{compact-uniformly surviving} if each prescribed compact subset
+has a uniform \(o(N)\) bound under that same schedule. A parameter is a
+\textbf{structural exception} if no admissible schedule normalizes its
+source. \textbf{Schedule suppression} means a particular schedule
+produces a nonnormal output at the parameter, without asserting
+structural failure. \textbf{Exact cancellation} means an
+algebraic/functional identity eliminates high derivatives, while
+\textbf{near-cancellation} refers to a quantitative, observation-scale
+loss; the last three notions are not interchangeable.
+
+\Needspace{6\baselineskip}
+\textbf{Theorem E (two regular powers).} In the observation model of
+Section 1 the following classifications hold, each with a single
+computable schedule independent of its parameter, normal pointwise for
+every listed nonexceptional real parameter and uniform on compact sets
+disjoint from the listed exceptions:
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  \(\mathcal B(\theta,y)=\theta^y\), \(\theta>0\), \(g(x)=\log(1+x)\):
+  write \(\alpha=\log \theta\), take the positive real branch;
+  \(h_\theta(x)=(1+x)^\alpha\). The exact exception set is
+  \(\theta=e^m\), \(m=0,1,2,\ldots\).
+\item
+  \(\mathcal B(\theta,y)=(1+y)^\theta\), \(g(x)=x/(1-x)\) on
+  \(0< x< 1\): \(h_\theta(x)=(1-x)^{-\theta}\). The exact exception set
+  is \(\theta=0,-1,-2,\ldots\).
+\end{enumerate}
+
+\textbf{Proof.} For (i), \(h'(x)=\sum c_n x^n\) with
+
+\(c_0=\alpha\), \(c_{n+1}/c_n=(\alpha-1-n)/(n+1)\).
+
+For \(\alpha\) not a nonnegative integer, \(c_0\ne 0\) and no recurrence
+factor vanishes. The one-dimensional backward recurrence on any compact
+parameter set avoiding these integers supplies (W2); a common disk
+\(|x|< 1/2\) supplies (W1). For \(\alpha=m\ge 0\), \((1+x)^m\) is an
+integer-coefficient polynomial. In every row, at offsets \(t\ge m A_r\),
+\(b^t h(x_j)\) is an integer; therefore all but \(m A_r+O(W)\) of its
+\(K_r=A_rD_r\) digit starts are strings of zeros. Since
+\(D_r\longrightarrow \infty\), a fixed all-zero word has frequency
+tending to 1 at completed-stage endpoints rather than \(b^{-W}\).
+
+For (ii), \(h'(x)=\theta(1-x)^{-\theta-1}\), with
+
+\(c_0=\theta\), \(c_{n+1}/c_n=(\theta+n+1)/(n+1)\).
+
+The same argument applies; at \(\theta=-m\) the value \((1-x)^m\) is an
+integer-coefficient polynomial, with exactly the same fixed-center
+obstruction. The classification is exact in the sense of existence of a
+schedule in this model: these polynomial endpoints fail for
+\textbf{every} admissible schedule, not just the theorem's one.
+\(\square\)
+
+The classification concerns these explicit compositions, not an
+arbitrary complex or negative-base real power. Parameter \(\theta\) is
+held fixed along each output.
+
+\section{Singular powers on positive
+inputs}\label{singular-powers-on-positive-inputs}
+
+Consider \(\mathcal B(\theta,y)=y^\theta\), \(g(x)=x/(1-x)\) and
+\(x>0\). Choose the positive real branch
+\(y^\theta=\exp(\theta \log y)\) for every real \(\theta\). Then
+
+\[
+h_\theta(x)=x^\theta (1-x)^{-\theta}.
+\]
+
+\Needspace{6\baselineskip}
+\textbf{Theorem F (singular powers).} There is one computable stage
+schedule of the form in Theorem A for which every fixed
+\textbf{\(\theta\ne 0\)} produces a normal concatenation, all original
+rows and cutoffs included. For compact \(J\) avoiding the nonnegative
+integers, the discrepancy estimate of Theorem A is uniform on \(J\). The
+positive integer parameters are also admitted by the analytic
+rational-derivative theorem, using the \textbf{same source schedule},
+but a bound uniform while crossing those integers is not established
+here. At \(\theta=0\) the source equals 1 and every fractional digit is
+zero.
+
+\textbf{Proof on compact \(J\) disjoint from nonnegative integers.} Set
+\(u_\theta(x)=(1-x)^{-\theta}\) and
+\(p_k(\theta)=\theta(\theta-1)\cdots(\theta-k+1)\). The quantity
+
+\[
+\delta=\min_{\substack{\theta\in J\\ \ell\in\mathbb Z_{\ge 0}}}|\theta-\ell|
+\]
+
+is strictly positive. Leibniz's formula gives, for \(k\ge 1\),
+
+\[
+h_\theta^{(k)}(x)=p_k(\theta) x^{\theta-k} u_\theta(x) [1+E_{k,\theta,x}],
+\]
+
+where
+
+\[
+|E_{k,\theta,x}| \le  \exp(C_J k^2 x/\delta)-1.\tag{5.1}
+\]
+
+To check (5.1), divide the Leibniz term of order \(\ell\) by the
+\(\ell=0\) term: the ratio of falling factorials contributes at most
+\(\delta^{-\ell}\), while
+\(u_\theta^{(\ell)}/u_\theta=(\theta)^{\overline{\ell}}(1-x)^{-\ell}\)
+contributes at most \((\ell+C_J)^\ell(1-x)^{-\ell}\). Together with
+\(\binom{k}{\ell}\le k^\ell/\ell!\) the sum is bounded by an exponential
+in \(C_J k^2 x/\delta\). Since \(x\le b^{2-B_r}\) and
+\(k\le D_r+L_1=O(\log B_r)\), it is at most 1/2 for large \(r\),
+uniformly on \(J\). Thus the derivative has one sign. The lower product
+satisfies \(|p_k(\theta)|\ge \min(1,\delta)^k\); the upper satisfies
+\(|p_k(\theta)|\le (k+C_J)^k\).
+
+On the real source interval \(b^{r-1}-1\le y\le b^r\), the input
+\(x=(by+1)b^{-A_r}\) lies between \(b^{-B_r-1}\) and \(b^{2-B_r}\) for
+large \(r\). Consequently the variation ratio of the derivative of order
+\(k\) is at most \(6 b^{3(k+C_J)}\). This is \textbf{not} a constant 3,
+but \(\log_b\) of it is \(O_J(k)=o(r)\). Taking
+\(k=\left\lfloor t/(A_r-1)\right\rfloor+L_1\) with a sufficiently large
+fixed \(L_1=L_1(J)\) gives \(3\le k\le D_r+L_1\) for all sufficiently
+large \(r\) and all retained \(t\ge T_J B_r\). The floor gives precisely
+
+\[
+t-k r \le  -(L_1-1)r+O(D_r B_r),
+\]
+
+because \(\left\lfloor t/(A_r-1)\right\rfloor\ge t/(A_r-1)-1\); the
+stronger \(-L_1 r\) is not justified. A sufficiently large fixed \(L_1\)
+absorbs this one-unit loss, and \(D_r B_r=o(r)\). First apply the
+derivative estimates to harmonic 1:
+
+\[
+\lambda_1 m_{\mathrm{full}}^k \ge  b^{t/2},\qquad \Lambda_1\le b^{-8r},\qquad
+\frac{\Lambda_1}{\lambda_1} \le  6b^{3(k+C_J)}.\tag{5.2}
+\]
+
+The lower estimate reflects cancellation of \(x^{-k}\) against the
+\(b^{-k B}\) factor:
+\(\log_b(\lambda_1 m_{\mathrm{full}}^k) = t - \theta B_r + O_J(k \log(k+2))\),
+uniformly on the interval. The upper follows from the floor inequality
+and a sufficiently large \(L_1\). Choose \(0< c_J\le 1\) small enough
+for the derivative saving, and put
+
+\[
+H_t=\max(1,\left\lfloor b^{c_J \min(t,r)/(8\cdot 2^{D_r+L_1})}\right\rfloor)
+\]
+
+Then \(H_t\le b^{r/8}\), so \textbf{only for \(1\le h\le H_t\)} one has
+\(\Lambda_h\le b^{-7r}\), \(\lambda_h m_{\mathrm{full}}^k\ge b^{t/2}\),
+and the same variation ratio as in (5.2). The three terms of Appendix A
+are bounded by \(b^{-c_J \min(t,r)/2^k}\) after decreasing \(c_J\) if
+needed; the first ratio's polynomial in \(B\) factor is paid by
+\(m_{\mathrm{full}}\asymp b^r\). Repeating the geometric offset
+summation and exact all-prefix assembly in Section 2 gives
+\(O_J(N B_r/(rD_r))\) for every fixed word.
+
+For \(\theta=m\) positive integer, \(h_m(x)=x^m/(1-x)^m\) is analytic at
+zero and has nonpolynomial rational derivative, so its Taylor
+coefficients satisfy (W1)-(W2). The universal schedule from Section 2
+applies without alteration, proving pointwise normality at these
+isolated parameters. For \(\theta=0\), \(h_0=1\). Hence one schedule
+works for the full punctured real axis; claimed compact uniformity is
+restricted as stated. \(\square\)
+
+\textbf{Important distinction.} For negative \(\theta\) the input
+function diverges as \(x\to 0\), but its \textbf{fractional part} still
+obeys the phase derivative argument; singularity is not a proof of
+failure. At a positive integer, the fractional function itself is
+rational and admitted, whereas its leading singular-power derivative
+approximation vanishes and the separate analytic proof is needed. No
+claim that mere nonpolynomiality of an arbitrary nonsmooth germ suffices
+is made.
+
+\section{Flat sources: suppression and
+rescue}\label{flat-sources-suppression-and-rescue}
+
+For \(g(x)=x/(1-x)\), the compositions
+
+\[
+\mathcal B_1(g(x))=\frac{g(x)}{1+g(x)}=x,\qquad \mathcal B_2(g(x))=\frac1{1+g(x)}=1-x
+\]
+
+are exact polynomial identities. Likewise \(\exp(\log(1+x))=1+x\). For
+an integer-coefficient polynomial \(P\), the source values have at most
+\(\deg(P)A_r+O(W)\) potentially nonconstant starts per copied row. All
+these examples therefore fail in this observation model at the stated
+fixed center for \textbf{every} admissible schedule with
+\(D_r\to \infty\). Invertibility and a nonzero first derivative are
+plainly insufficient.
+
+\Needspace{6\baselineskip}
+\textbf{Theorem G (flat, schedule-dependent survival).} Fix
+\(g(x)=x/(1-x)>0\) for \(0< x< 1\) and
+\(\mathcal B(\theta,y)=\exp(-\theta/y)\), with real \(\theta\ne 0\).
+There exists one computable schedule independent of \(\theta\),
+satisfying all source limits, for which every fixed nonzero \(\theta\)
+produces a normal output. Convergence is uniform on each compact
+interval avoiding zero. By contrast, under a \emph{balanced} schedule,
+which has \(K_r=O(r \log r)\) and precision gap
+\(B_r^{\mathrm{bal}}\ge c r/\log r\) for some fixed \(c>0\), the output
+for each fixed \(\theta>0\) eventually consists entirely of zero copied
+rows. Thus suppression by one schedule is not impossibility for the
+operation.
+
+\textbf{Proof.} The exact composite is
+\(h_\theta(x)=\exp(\theta-\theta/x)\). Choose the following exact
+integer schedule, for sufficiently large \(r\),
+
+\[
+B_r=3+\min\lbrace m\ge 1: b^{b^m}\ge r+4\rbrace ,\qquad A_r=r+B_r,
+\]
+
+\[
+D_r=\max(1,\left\lfloor (\log_2 B_r)/8\right\rfloor).
+\]
+
+Use a bounded-increment smoothing of \(D\) and copy \(K_r=A_rD_r\)
+digits. The threshold comparisons involve integers only, so this
+schedule is computable without deciding equality of transcendental real
+expressions. Then \(b^{B_r}=\Theta_b(\log r)\) and \(D_r\to \infty\).
+
+Write the logarithm of the source as \(q(y)=\theta-\theta b^A/(by+1)\).
+Its first derivative is \(q'(y)=\theta b^{A+1}/(by+1)^2\), of sign
+\(\theta\), and its normalized higher derivatives satisfy
+
+\[
+\frac{|q^{(\ell)}(y)|}{|q'(y)|^\ell} \le  \ell! (C_b/(|\theta| b^{B_r}))^{\ell-1},\qquad \ell\ge 2,
+\]
+
+throughout the stage, with a fixed constant depending on \(b\).
+Expanding \(\frac{d^k}{dy^k}\exp(q)\) by the elementary Bell partition
+formula, the sum of terms containing an \(\ell\ge 2\) block has relative
+magnitude at most
+
+\[
+\exp(C_b k^2/(|\theta|b^{B_r}))-1.\tag{6.1}
+\]
+
+For \(k\le D_r+12=O(\log B_r)\) this is below 1/2 eventually, uniformly
+on \(\delta\le |\theta|\le M\). Hence its derivative of order \(k\) has
+the sign of \(\theta^k\), and is comparable to \(\exp(q)|q'|^k\) by
+factors between 1/2 and 3/2. Since
+\(|q|=O_{\theta,b}(b^{B_r})=O_\theta(\log r)\) and
+\(\log_b |q'|=-r+B_r+O_{\theta,b}(1)\), with stage variation bounded by
+\(\exp(O_\theta(b^{B_r}))=r^{O_\theta(1)}\), the explicit choice
+\(L=10\) in
+
+\[
+k=\left\lfloor t/(A_r-1)\right\rfloor+10
+\]
+
+supplies \(3\le k\le D_r+10\le D_r+12\) and, for
+\(t\ge T_\theta b^{B_r}\), the harmonic-one bounds
+
+\[
+\lambda_1 m_{\mathrm{full}}^k \ge  b^{t/2},\qquad \Lambda_1\le b^{-8r},\qquad
+\log_b(\frac{\Lambda_1}{\lambda_1})=O_\theta(\log r)
+\]
+
+Indeed \(t-k r\le -9r+O(D_r B_r)\) and the remaining logarithmic
+derivative terms are \(O_\theta(D_r B_r+\log r)=o(r)\), leaving the
+claimed \(-8r\) margin. Choose \(0< c\le 1\) small enough and
+
+\[
+H_t=\max(1,\left\lfloor b^{c \min(t,r)/(8\cdot 2^{D_r+12})}\right\rfloor)
+\]
+
+Since \(H_t\le b^{r/8}\), the upper bound \(\Lambda_h\le b^{-7r}\) is
+asserted \textbf{only for \(1\le h\le H_t\)}; in that range the same
+variation ratio and the lower bound
+\(\lambda_h m_{\mathrm{full}}^k\ge b^{t/2}\) hold.
+
+The order is at most \(D+12\), the growing-order estimate in Appendix A
+applies, and its three terms are bounded by \(b^{-c \min(t,r)/2^k}\) for
+a fixed positive \(c\) once \(r\) is large. Offset-dependent Fejér
+cutoffs and summation as in Section 2, with
+\(T_\theta b^{B_r}=O_\theta(\log r)\) early offsets, give the all-prefix
+estimate
+
+\[
+|C_w(N;\theta)-Nb^{-W}| = O_{\theta,b,W}\left(\frac{N\log r(N)}{r(N)D_{r(N)}}\right).\tag{6.2}
+\]
+
+The constants and onset are uniform on compact subsets of
+\(\mathbb R\setminus\lbrace 0\rbrace\). On that balanced schedule,
+\(x_j\le b^{2-B_r^{\mathrm{bal}}}\), so
+\(0< h_\theta(x_j)\le \exp(\theta-\theta b^{B_r^{\mathrm{bal}}-2})\) for
+\(\theta>0\). Under the two comparison bounds stated above,
+\(K_r=O(r \log r)\) and \(B_r^{\mathrm{bal}}\ge c r/\log r\), so
+\(b^{B_r^{\mathrm{bal}}}/K_r\to \infty\). Hence this is eventually
+smaller than \(b^{-K_r}\) for every row, forcing its full block of \(K\)
+digits to zero. This suppression statement is restricted to that
+schedule; it does not cover arbitrary copied lengths allowed to grow
+faster than this exponential shrinkage. At \(\theta=0\) the source is
+the integer 1. \(\square\)
+
+\textbf{Reciprocal-square kernel, with the Bell estimate expanded.} For
+\(\mathcal B(\theta,y)=\exp(-\theta/y^2)\), set
+
+\[
+z=by+1,\qquad a=b^A,\qquad v=a/z=1/x,\qquad q(y)=-\theta(v-1)^2
+\]
+
+Direct differentiation of \(-\theta(a^2 z^{-2}-2a z^{-1}+1)\) gives, for
+every \(\ell\ge 1\),
+
+\[
+q^{(\ell)}=(-1)^{\ell+1} \theta \ell! b^\ell z^{-\ell} [(\ell+1)v^2-2v]
+\]
+
+In particular \(q'=2\theta(b/z)v(v-1)\) has sign \(\theta\) when
+\(v\ge 2\). For \(\ell\ge 2\), using \(2v(v-1)\ge v^2\) and
+\(\ell+1\le 4^{\ell-1}\),
+
+\[
+\frac{|q^{(\ell)}|}{|q'|^\ell} \le  \ell! [4/(|\theta|v^2)]^{\ell-1}
+\le  \ell! [C_b/(|\theta|b^{2B_r})]^{\ell-1}
+\]
+
+To justify the summed Bell remainder, write
+\(\eta=C_b/(|\theta|b^{2B_r})\). In the complete Bell partition formula
+the leading term is \((q')^k\). Group all other terms by their number
+\(j\) of blocks. The normalized absolute sum is bounded by
+
+\[
+\sum_{j=1}^{k-1} \frac{k!}{j!} \binom{k-1}{j-1} \eta^{k-j}
+\le  \sum_{s=1}^{k-1} \frac{(k^2\eta)^s}{s!} \le  \exp(k^2 \eta)-1
+\]
+
+The coefficient in the first sum is the unsigned Lah number: it follows
+by taking \(k!\) times the coefficient of degree \(k\) in
+\(\exp(\sum_{\ell\ge 1} \eta^{\ell-1} u^\ell)\) in a formal variable
+\(u\). Thus the relative remainder is at most
+
+\[
+\exp(C_b k^2/(|\theta|b^{2B_r}))-1,
+\]
+
+uniformly on compact parameter sets avoiding zero. This also justifies
+(6.1) with \(\eta=C_b/(|\theta|b^{B_r})\) for the reciprocal kernel.
+
+Choose
+
+\[
+B_r=3+\min\lbrace m\ge 1: b^{b^{2m}}\ge r+4\rbrace ,\qquad A_r=r+B_r,
+\]
+
+and the same bounded-increment depth with \(k\le D_r+12\). This
+threshold again uses integer comparisons only. Then
+\(b^{2B_r}=\Theta_b(\log r)\), the Bell remainder tends to zero,
+\(|q|=O_\theta(\log r)\), and \(\log_b|q'|=-r+2B_r+O_\theta(1)\). The
+same \(k=\left\lfloor t/(A_r-1)\right\rfloor+10\) gives
+\(\Lambda_1\le b^{-8r}\) and
+\(\lambda_1 m_{\mathrm{full}}^k\ge b^{t/2}\) after discarding
+\(O_\theta(\log r)\) offsets; \(D_r B_r=o(r)\) pays the extra
+\(2k B_r\). With the preceding \(H_t\), \(\Lambda_h\le b^{-7r}\) for
+\(1\le h\le H_t\), and the variation logarithm is \(O_\theta(\log r)\).
+The derivative estimate, offset sum and all-prefix assembly therefore
+give (6.2) for this kernel as well. \textbf{This is a second flat-kernel
+instance, not a blanket theorem for arbitrary \(C^\infty\) flat
+operations.}
+
+\section{The near-polynomial parameter
+scale}\label{the-near-polynomial-parameter-scale}
+
+Here \(\theta\) remains fixed along each output, but in a
+\textbf{triangular comparison} we may choose a different parameter for a
+different output cutoff \(N\); these are distinct infinite outputs, not
+row-varying \(\theta_j\). Fix a nonnegative integer \(m\), a regular
+stage schedule in Section 2 with \(K_{r-1}/K_r \to  1\), and
+\(\alpha=m+\epsilon\) where \(0< |\epsilon|\le 1/2\). Let
+\(E(\epsilon)=\max(0,\log_b(1/|\epsilon|))\). Offsets are zero-based:
+offset \(t\) starts at digit \(t+1\), and a within-row word must satisfy
+\(t\le K_r-W\). The sign of \(\epsilon\) is held fixed when taking a
+sign-specific subsequence.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition H (sharp scale for this schedule).} For any family
+\(\epsilon_N\) with \(0< |\epsilon_N|\le 1/2\), the triangular word
+frequencies of the outputs generated from
+\(h_{m+\epsilon_N}(x)=(1+x)^{m+\epsilon_N}\) satisfy
+
+\[
+\frac{C_w(N;m+\epsilon_N)}{N} \to  b^{-|w|}\qquad\text{for every fixed }w
+\]
+
+\textbf{if and only if} \(E(\epsilon_N)/K_{r(N)} \to  0\). The analogous
+statement holds in family (ii) with \(\theta=-m+\epsilon_N\), so the
+actual exponent is \(m-\epsilon_N\) and the source is
+\((1-x)^{m-\epsilon_N}\). In this convention positive \(\epsilon\) again
+gives a positive perturbation and zero words, and negative \(\epsilon\)
+gives borrowed \((b-1)\) words. The parameters are not allowed to vary
+within one output.
+
+\textbf{Sufficient direction.} For derivatives of order \(k>m\), the
+exact identity
+
+\[
+\frac{d^k}{dx^k} (1+x)^{m+\epsilon} = (m+\epsilon)_{\underline{k}}(1+x)^{m+\epsilon-k}
+\]
+
+has magnitude bounded above and below, on \(0\le x\le b^{2-B_r}\), by
+\(|\epsilon| \exp(\pm C_m k \log(k+2))\). For the derivative orders used
+below, \(m+2< k\le D_r+L_m=O(\log B_r)\), the ratio of the maximum
+magnitude to the minimum is at most \(\exp(C_m k b^{2-B_r})\) and is
+therefore uniformly bounded at all sufficiently late stages, for
+\(|\epsilon|\le1/2\). Choose explicitly \(L_m\ge \max(m+3,12)\) and
+\(k=\left\lfloor t/(A_r-1)\right\rfloor+L_m\), so \textbf{every chosen
+derivative order exceeds \(m\)}, and \(k\le D_r+L_m\) at all
+sufficiently large stages. The whole high-derivative Taylor remainder
+retains the \(\epsilon\) factor: define
+
+\[
+R_\epsilon(x)=\frac{(1+x)^{m+\epsilon}-(1+x)^m}{\epsilon}
+\]
+
+This has a uniformly bounded analytic derivative on a fixed interior
+disk for \(|\epsilon|\le 1/2\), extending continuously at
+\(\epsilon=0\). For every coefficient index \(n\ge m\),
+\(c_n(\epsilon)=\epsilon a_n(\epsilon)\) with
+\(|a_n(\epsilon)|\le M_m S_m^n\). Since \(k>m\), all coefficients in the
+derivative remainder have that form, and (2.1) becomes
+
+\[
+\left|\frac{h^{(k)}(x)}{(k-1)!}-c_{k-1}(\epsilon)\right| \le  |\epsilon| 4 M_m k S_m^k x
+\]
+
+Thus the relative remainder estimate has no spurious factor
+\(1/|\epsilon|\). Equivalently the exact derivative identity above
+supplies the same uniform sign and variation bounds. The growing
+derivative calculation in Section 2 works after discarding
+\(O_m(B_r+E(\epsilon))\) actual offsets: take
+\(t\ge T_m B_r+2 E(\epsilon)\) with a sufficiently large fixed \(T_m\).
+The lower bound needed is the safe one
+
+\[
+\lambda_1 m_{\mathrm{full}}^k\ge b^{t/16}
+\]
+
+The harmonic-one upper bound is \(\Lambda_1\le b^{-8r}\); with an
+offset-dependent cutoff as in Section 2 (and a sufficiently small fixed
+saving constant), \(\Lambda_h\le b^{-7r}\) only for \(1\le h\le H_t\).
+Fourier and harmonic summation pay \(O_m(B_r+E+2^D)\) starts per row and
+the same ambient-row contribution. This bound is harmless even if the
+retained range is empty: charge the row trivially, at most the
+discarded-offset contribution. Summing with geometric row counts gives,
+for all prefixes with \(r\) large and \(E=o(K_r)\),
+
+\[
+\frac{|C_w(N;m+\epsilon_N)-Nb^{-W}|}{N} \le  O_{m,b,W}\left(\frac{B_r}{rD_r}+\frac{E(\epsilon_N)}{K_r}\right)+o(1).\tag{7.1}
+\]
+
+For family (ii), replace the numerator defining \(R_\epsilon\) by
+\((1-x)^{m-\epsilon}-(1-x)^m\); the same analytic \(\epsilon\) factor
+and derivative argument apply.
+
+This uses exact phases and Fejér intervals, so \textbf{no} numerical
+digit-stability assumption is made near a carry boundary.
+
+\textbf{Necessary direction and the borrow.} Let \(P_m(x)=(1+x)^m\) and
+\(\Delta=(1+x)^{m+\epsilon}-P_m(x)\). For \(0< x\le 1/2\) and
+\(|\epsilon|\le 1/2\),
+
+\[
+0< |\Delta|\le C_m |\epsilon| x,\qquad \mathrm{sgn} \Delta=\mathrm{sgn} \epsilon
+\]
+
+For row \(j\) in a late stage, \(P_m(x_j)\) is a rational polynomial
+with denominator dividing \(b^{m A_r}\) and \(x_j\le b^{2-B_r}\). At
+offsets \(t\ge m A_r\), \(b^t P_m(x_j)\) is an integer. Fix
+\(C_{\ast}>2+\log_b C_m\). For any actual within-row offset satisfying
+
+\[
+m A_r\le t\le K_r-W,\qquad t+W\le E(\epsilon)+B_r-C_{\ast},
+\]
+
+one has \(b^t P_m(x_j)\) integer and the strict bound
+
+\[
+0< b^t|\Delta|\le C_m b^{t-E+2-B_r}< b^{-W}
+\]
+
+For \(\epsilon>0\) the fractional part of \(b^t(P_m+\Delta)\) lies in
+the cylinder of \(W\) zeros. For \(\epsilon< 0\) it is \(1-b^t|\Delta|\)
+and lies strictly inside the cylinder of \(W\) digits \(b-1\): this is
+the \textbf{borrow}, with strict endpoint slack. This proves a digit
+statement at a terminating rational endpoint, not a general inference
+from closeness of two reals. The number of forced constant-word starts
+per row is at least
+
+\[
+\max(0, \min(K_r,E+B_r-C_{\ast}-W)-m A_r-O(W)).\tag{7.2}
+\]
+
+If \(\limsup E(\epsilon_N)/K_{r(N)}>0\), pass to a sign-constant
+subsequence with \(E\ge \rho K_r\). The regular schedule gives
+\(N\le C_b b^r K_r\). Because \(D_r\to \infty\), \(m A_r=o(K_r)\),
+\(B_r=o(K_r)\), \(K_{r-1}/K_r\to 1\), and the \textbf{entire previous
+stage} is present at every such cutoff, (7.2) forces a positive fraction
+\(\eta(\rho,b)>0\) of its starts to be the same constant word of any
+fixed length \(W\). The preceding-stage proportion is bounded below
+independently of each fixed \(W\); using \(K_{r-1}/K_r\to 1\), its
+forced length is at least \(\min(1,\rho)K_{r-1}/2\) eventually. Choosing
+one fixed \(W\) with \(b^{-W}< \eta/2\) contradicts normality. Thus
+\(E/K_r\to 0\) is necessary. In family (ii),
+\(\Delta=(1-x)^{m-\epsilon}-(1-x)^m\) also has sign \(\epsilon\) and
+\(0< |\Delta|\le C_m|\epsilon|x\), so the same integer-endpoint and
+borrow proof applies with this stated parameter convention. The proof
+uses a \emph{long constant word}, not merely an excess of single zeros
+that might in principle be compensated elsewhere. \(\square\)
+
+For a \textbf{fixed} \(\epsilon\ne 0\), \(E\) is constant and the
+criterion gives survival. For \(\epsilon_N\) exponentially small in
+\(K\), a positive density of long constant blocks survives. This is a
+scale threshold for these specified outputs, \textbf{not} a
+classification of all imaginable schedules or a theorem about parameter
+sequences \(\theta_j\) varying from row to row.
+
+\section{Quantitative resources and local
+normality}\label{quantitative-resources-and-local-normality}
+
+This section records results for the same complete-prefix model as
+Sections 1--7. Fix an integer base \(b\ge2\), positive integer schedules
+\(A_j,D_j\), and
+
+\[
+x_j=(bj+1)b^{-A_j},\qquad K_j=A_jD_j.
+\]
+
+The output is the concatenation of the first \(K_j\) canonical
+fractional base \(b\) digits of \(\theta+g(x_j)\). Write
+\(S_J=\sum_{j\le J}K_j\), and let \(C_w(N;\theta)\) count occurrences of
+a fixed word \(w\) of length \(W\) whose starts are below \(N\),
+including starts whose words end later. Set \(E_w=C_w-Nb^{-W}\). All
+center-uniform statements below concern \(\sup_\theta\), using one
+schedule for every center. They do not assert normality of the center or
+of an individual sampled value.
+
+The results use several different schedules. In particular, minimizing
+digits copied from each source and minimizing the number of admitted
+sources are different objectives and are not asserted simultaneously.
+
+\subsection{Exact grids, full-prefix rates, and signed logarithmic
+mixtures}\label{exact-grids-full-prefix-rates-and-signed-logarithmic-mixtures}
+
+For each of
+
+\[
+g_1(x)=\log(1+x),\quad g_2(x)=4\arctan x,\quad
+g_3(x)=\log(1+x)+\log(1+x/2)+\log(1+x/3),
+\]
+
+define
+
+\[
+q_b=4\!\prod_{p\in\lbrace 2,3\rbrace ,\,p\nmid b}p,
+\qquad \lambda_b=2\lceil\log_2q_b\rceil.
+\]
+
+On the dyadic stage \(2^{r-1}\le j< 2^r\), use
+
+\[
+\ell_r=\min\lbrace \ell:b^\ell\ge(b+1)2^r\rbrace ,\quad
+A_r=(D_r+1)^2(\ell_r+r+4),\quad K_r=A_rD_r,
+\]
+
+where \(D_r\to\infty\), \(0\le D_{r+1}-D_r\le1\), and
+\(D_r\le\max(1,\lfloor r/\lambda_b\rfloor)\). Then, at every output
+cutoff,
+
+\[
+\sup_\theta\max_{|w|=W}|E_w(N;\theta)|
+       =O_{b,W}(N/D_{r(N)}).
+\tag{R1}
+\]
+
+The fastest allowed depth gives \(A_j\asymp(\log j)^3\),
+\(K_j\asymp(\log j)^4\), and error \(O(N/\log N)\). A depth of order
+\(\log r\) gives \(K_j\asymp\log j(\log\log j)^3\) and error
+\(O(N/\log\log N)\).
+
+Here is the finite arithmetic underlying this conclusion. If \(a_k\) are
+the Taylor coefficients of one of the kernels, let \(H_d\) be their
+reduced denominator lcm through degree \(d\), let \(Q_d\) be its factor
+coprime to \(b\), and put
+
+\[
+P_d=\prod_{d/2< p\le d,\ p\nmid66b}p.
+\]
+
+Then \(Q_d\le q_b^d\), \(H_d/Q_d\mid b^{d+\lfloor\log_2d\rfloor}\), and
+\(\sum_dP_d^{-1}< \infty\). At a common actual offset \(t\), with
+constant \(A\), the truncated phase is the polynomial
+
+\[
+\sum_{k\le d}a_k(bj+1)^kb^{t-kA}.
+\]
+
+For each selected prime \(p\), only the coefficient of degree \(p\) has
+a denominator divisible by \(p\), and its primary polynomial is a
+nonzero affine function modulo \(p\). The prime 11 is genuinely excluded
+for \(g_3\), since \(pa_p\equiv11/6\pmod p\). Conditional on the other
+prime-power coordinates, CRT therefore gives an exactly uniform
+translated \(P_d\)-point circle grid. Its interval-count error is at
+most one, for either endpoint convention. Over any \(m\) consecutive
+rows, the corresponding interval error is at most \(m/P_d+Q_d\). No
+Euler alignment of \(A\) is required.
+
+For a rational \(\eta>0\), choose \(\tau\) with \(2b^{-\tau}\le\eta\).
+In a batch with numerator height at most \(b^\ell\), retain
+
+\[
+dA+\beta\le t\le(d+1)A-(d+1)\ell-\tau-W,
+\quad 1\le d< D,\quad \beta=D+\lfloor\log_2D\rfloor.
+\]
+
+Writing \(L_d=\max(0,A-\beta-(d+1)\ell-\tau-W+1)\) and
+\(G=\sum_{d< D}L_d\), the exact batch error is bounded by
+
+\[
+mU+V,\qquad
+U=AD-G+2\eta G+\sum_{d< D}L_d/P_d,
+\quad V=\sum_{d< D}L_dQ_d.
+\tag{R2}
+\]
+
+All row-crossing words are already included in \(AD-G\). The Taylor
+error is at most \(\eta\); expanded and contracted circle intervals pay
+its effect without excluding digit-boundary centers. Summing these batch
+bounds and charging the actually consumed part of the last partial row
+proves a finite all-prefix certificate.
+
+For the stated stages, \(U_r/K_r=O(1/D_r)\),
+\(V_r\le A_rq_b^{D_r}/(q_b-1)\), \(K_r/K_{r-1}\le6\), and
+\(N\asymp2^rK_r\). The degree cap makes \(q_b^{D_r}=O_b(2^{r/2})\).
+Bounded depth increments and a geometric sum give
+\(\sum_{s\le r}2^{s-r}/D_s=O(1/D_r)\). These bounds prove (R1) through
+every cutoff, including incomplete batches and the final row.
+
+The same method extends to every nonempty rational logarithmic mixture
+
+\[
+g(x)=\sum_{i=1}^s c_i\log(1+x/a_i),
+\]
+
+with distinct positive integers \(a_i\) and nonzero rational \(c_i\).
+Vanishing initial moments are allowed. If \(r_0\) is the first index
+with \(\sum_i c_i a_i^{-r_0}\ne0\), Vandermonde invertibility gives
+\(r_0\le s\). Suitable fresh primes yield nonconstant primary
+polynomials of degree at most \(2r_0-1\). Repeated Cauchy--Schwarz, with
+zero differencing shifts explicitly paid, gives cancellation at every
+unit multiplier. With the exact nonunit factor
+\((\gcd(P_d,h)/P_d)^{2^{-(2r_0-1)}}\), the elementary prime-product
+bound and an endpoint-safe Fejer inequality yield a summable full-period
+interval discrepancy. Substitution in (R2) proves the same rate families
+with input-dependent constants. This is a proof sketch of the extension;
+its additional ingredient is the summable full-period discrepancy for
+the nonlinear primary polynomials. Separate normality of the summands is
+not used.
+
+\subsection{A sharp qualitative window
+scale}\label{a-sharp-qualitative-window-scale}
+
+For a window beginning at \(M\) in dyadic stage \(r\), the preceding
+schedule satisfies, for \(1\le L\le M\),
+
+\[
+\sup_\theta\frac{|E_w(M+L;\theta)-E_w(M;\theta)|}{L}
+\le C_{b,W}\left(\frac1{D_r}+\frac{A_rq_b^{D_r}}L\right).
+\tag{R3}
+\]
+
+Indeed complete-stage endpoints grow by a factor greater than two, so
+this window meets at most two consecutive stages. The complete rows form
+consecutive intervals, to which (R2) applies; at most two edge rows cost
+\(2K_{r+1}\). Since \(A_{r+1}/A_r\le3\), \(D_{r+1}\le D_r+1\), and
+\(D\le q_b^D\), the two period contributions and edge rows are absorbed
+in the second term of (R3).
+
+For every computable nondecreasing integer \(F(M)\to\infty\), one may
+choose the depth so that every window of length
+
+\[
+L\ge F(M)\log(M+2)
+\]
+
+has uniformly correct fixed-word frequencies as \(M\to\infty\). To see
+this, let \(d_r^*\) be the largest positive integer with
+\(d^3q_b^d\le F(2^{\max(r-2,0)})\), using 1 if no such integer exists,
+and take the minimum of \(d_r^*\), the preceding depth plus one, and the
+usual degree cap. These caps are nondecreasing and divergent. Since
+\(A_r=O_b(rD_r^2)\), the second term in (R3) is \(O_b(1/D_r)\) at the
+specified threshold. For \(L>M\), subtract the two global prefix bounds
+instead. Thus all longer windows are included, not only those contained
+within one row batch.
+
+Conversely no admissible schedule with \(x_j\to0\) and \(D_j\to\infty\)
+can have this center-uniform conclusion for all windows with length
+\(O(\log(M+2))\). These limits force \(K_j/\log j\to\infty\). For every
+constant \(C\), infinitely many rows satisfy \(K_j>C\log(S_j+2)\):
+otherwise \(S_j\le C_0+Cj\log(S_j+2)\), which first implies \(S_j< j^2\)
+eventually and then \(K_j=O(\log j)\), a contradiction. At
+\(M=S_{j-1}\), choosing \(\theta=-g(x_j)\) makes the entire row zero. A
+window contained there has zero-digit error exactly \(1-1/b\). The
+obstructing center may depend on the window, as permitted by the
+supremum. This does not rule out smaller windows at a particular fixed
+center.
+
+\subsection{Prescribed large growth and source
+admissions}\label{prescribed-large-growth-and-source-admissions}
+
+For each of the three kernels, a positive integer demand \(h(j)\) can be
+met by a center-uniformly normal schedule with \(K_j\ge h(j)\) at every
+original index if and only if
+
+\[
+\log h(j)=o(j).
+\tag{R4}
+\]
+
+The construction can in fact satisfy \(A_j\ge h(j)\). If \(h\) is
+computable and satisfies the promise, the schedule is computable without
+a supplied convergence modulus. The theorem does not decide whether an
+input program is total or satisfies the promise.
+
+For necessity, row zeroing gives the exact inequality
+
+\[
+(1-1/b)K_j\le \mathcal R_0(S_j)+\mathcal R_0(S_{j-1}),
+\quad \mathcal R_0(N)=\sup_\theta|E_0(N;\theta)|.
+\]
+
+Uniform normality implies \(K_j/S_{j-1}\to0\). Hence
+\(\log S_j=O(1)+\sum_{i=2}^j\log(1+K_i/S_{i-1})=o(j)\), and
+\(\log K_j=o(j)\).
+
+For sufficiency, put \(q_n=\max_{i\le2^{n+2}}\lceil\log_2h(i)\rceil\).
+Let \(G\) linearly interpolate \(G(2^n)=q_n\), and set
+
+\[
+k_j=\lceil G(j)+\sqrt j\rceil,\qquad A_j=8\cdot2^{k_j}.
+\]
+
+Partition the row indices into maximal constant-height runs, of lengths
+\(m_s\) and heights \(k_s\). Put \(m_0=D_0=1\), and on run \(s\) use
+
+\[
+D_s=\min\left\lbrace D_{s-1}+1,
+\max\left(1,\left\lfloor\log_{576}\min(m_{s-1},m_s)\right\rfloor\right)\right\rbrace .
+\]
+
+All choices are finite exact operations; a run of height \(k\) ends by
+row \(k^2\). The promise implies \(q_n=o(2^n)\), so the slopes of \(G\)
+tend to zero. Therefore the height increments are eventually one and
+\(m_s\to\infty\); consequently \(D_s\to\infty\). Also \(A_j\ge h(j)\),
+all source arguments lie in the analytic domain, and tend to zero. The
+inequalities
+
+\[
+Q_{D_s}\le24\sqrt{\min(m_{s-1},m_s)},\qquad
+K_s/K_{s-1}\le4
+\]
+
+hold eventually. In (R2), the nonperiod relative error tends to zero,
+since the last index in run \(s\) is at most \(k_s^2\), the depth is
+\(O(\log k_s)\), and \(A_s=8\cdot2^{k_s}\). Completed-run period errors
+have relative size \(O(Q_{D_s}/m_s)\to0\). At any partial current run,
+its period and edge error divided by the length of the preceding
+complete run is at most \(4(24\sqrt{m_{s-1}}+1)/m_{s-1}\to0\). Weighted
+averaging proves normality at every original cutoff.
+
+The same criterion applies to eventual demands and to demands on
+\(A_j\). On a specified cofinal set \(J\), the condition is
+\(\log h(j)=o(j)\) along \(J\); impose demand 1 elsewhere. If the
+cofinal set may be chosen, the exact condition is
+\(\liminf_j\log h(j)/j=0\). Choose increasing indices \(j_r\) with
+\(h(j_r)^r\le2^{j_r}\), then use the preceding construction. This search
+terminates under the promise. In contrast, the reindexed demand
+\(K_{j_r}\ge h(r)\) is always achievable by passing to a sufficiently
+sparse subsequence. Prescribing \(D_j\) itself remains a different,
+unresolved classification.
+
+Let \(J(N)=\min\lbrace j:S_j\ge N\rbrace\). Every center-uniform
+normalizer satisfies
+
+\[
+J(N)/\log N\to\infty.
+\tag{R5}
+\]
+
+This follows immediately from \(\log S_j=o(j)\). Conversely, for each
+computable nondecreasing integer \(F(N)\to\infty\), the three kernels
+admit a schedule with \(J(N)\le F(N)\log N\) eventually. Set
+\(G(j)=\max(1,\min(F(j),\lfloor\sqrt j\rfloor))\) and demand
+\(h(j)=2^{\lceil4j/G(j)\rceil}\). This is subexponential. For
+\(S_j\le N< S_{j+1}\),
+
+\[
+F(N)\log N\ge F(j)\log h(j)
+ \ge4(\log2)j\,F(j)/G(j)\ge j+1\ge J(N).
+\]
+
+These very long copied rows minimize admissions; they are not the
+short-block construction below.
+
+\subsection{Balanced near-logarithmic copied
+length}\label{balanced-near-logarithmic-copied-length}
+
+For every nonpolynomial rational derivative \(R\in\mathbb Q(x)\) regular
+at zero, with primitive \(g(0)=0\), and every computable nondecreasing
+integer \(F(j)\to\infty\), there is an effective schedule with
+
+\[
+A_j/\log_bj\to1,\qquad K_j\le F(j)\log_bj
+\quad\text{eventually},
+\]
+
+\[
+\sup_\theta\max_{|w|=W}|E_w(N;\theta)|
+       =O_{R,b,W}(N/\log\log N).
+\tag{R6}
+\]
+
+The implied constant is independent of \(F\). The argument uses the
+growing-order derivative estimate in Appendix A. The mechanism is to
+balance the derivative order against the precision gap.
+
+\textbf{Proof outline.} The balancing mechanism is useful to state
+explicitly. On the base \(b\) stage \(b^{r-1}\le j< b^r\), set
+\(L_r=\max(1,\lfloor\log_2r\rfloor)\), choose nondecreasing divergent
+depths with increments at most one and
+\(D_r\le\max(1,\lfloor L_r/16\rfloor)\), and use
+
+\[
+a_r=\max(1,\lfloor L_r/(16D_r)\rfloor),\quad
+B_r=c_0+\lceil r/a_r\rceil,\quad A_r=r+B_r.
+\]
+
+Here \(c_0\) is an explicit input-dependent analytic-radius guard. The
+effective derivative order is at most \(\kappa_r=(a_r+1)D_r\le L_r/8\),
+whereas \(a_rD_r\ge L_r/32\). Thus the discarded low offsets have
+relative mass \(O(1/L_r)\), even when the copied depth diverges much
+more slowly. Put \(R_r=b^{r-1}\) and \(M_r=(b-1)R_r\). The harmonic
+cutoff is \(L_r^2\), and the actual-phase saving is
+\(12M_rR_r^{-1/(a_r2^{\kappa_r})}\), uniformly on every consecutive row
+subinterval. The coefficient recurrence gives an exponential upper
+bound, a nonzero coefficient in each fixed-width window, and an
+exponential lower bound for every nonzero coefficient. These control the
+derivative sign and magnitude on the shrinking input interval. Applying
+Appendix A at each retained offset, and Appendix B with cutoff
+\(L_r^2\), gives the stated estimate after summing the discarded
+offsets, the Fourier error, and the two edge rows.
+
+Floors can make \(A_r\) decrease. The valid comparisons are
+\(K_s\le2K_r\) for \(s\le r\) and \(K_r/K_{r-1}\le4\), not monotonicity
+of precision. These suffice for every-prefix assembly. Adding the depth
+caps \(\sqrt{L_r}\) and \(F(b^{r-1})/(c_0+4)\) forces \(a_r\to\infty\),
+yielding \(A_r/r\to1\) and the prescribed copied-length bound without
+changing the discrepancy constant.
+
+The source limits alone imply \(K_j/\log j\to\infty\), so (R6)
+approaches but does not attain a constant-overhead boundary. In the
+class defined only by eventual limits and normality, there is no
+coordinatewise minimal or lexicographically least schedule: decrease one
+depth greater than one to one. Only a finite word is shortened; the
+later sequence differs by a fixed shift, so all normality and limit
+conditions survive. This observation does not apply after imposing extra
+monotonicity, a fixed recurrence, or a finite accuracy constraint.
+
+\subsection{Matching rate lower bounds and a genuine failure
+regime}\label{matching-rate-lower-bounds-and-a-genuine-failure-regime}
+
+The following exact center-averaging lemma prevents the early zero
+excess from being dismissed as something that later digits might cancel.
+If a batch of \(m\) equal-length rows has copied length \(K\), source
+values \(\theta+y_j\), and \(\max y_j-\min y_j\le b^{-s}\) with integer
+\(2\le s\le K\), then
+
+\[
+\sup_\theta E_{0,\mathrm{batch}}(\theta)
+ \ge m[(1-1/b)s-1].
+\tag{R7}
+\]
+
+Average \(\theta\) over \([-\min y_j,-\min y_j+b^{-s}]\). The first
+\(s-1\) digits of every row are zero almost everywhere. The next
+centered digit contributes at worst \(-1/b\). At every deeper offset the
+center phase traverses an integer number of periods, so its centered
+mean is exactly zero. Canonical endpoint choices affect only a null set.
+Summing proves (R7).
+
+Let \(N_r=S_{b^r-1}\) be the cumulative endpoint of stage \(r\). Then
+the exact one-digit identity implies
+\(\mathcal R_0(N_r)+\mathcal R_0(N_{r-1})\ge\sup_\theta E_{0,\mathrm{batch}}\).
+For balanced schedules, bounded \(g'\) permits \(s=B_r-O_R(1)\). Since
+\(B_r/K_r\ge1/\kappa_r\ge8/L_r\) and adjacent cumulative lengths are
+\(O_b(M_rK_r)\), at least one of each sufficiently late pair of
+endpoints satisfies
+
+\[
+\mathcal R_0(N)/N\ge (b-1)^2/(b^2L_r).
+\]
+
+Thus (R6) has matching order \(N/\log\log N\) infinitely often within
+this family. For the dyadic CRT family, \(|g'|\le4\) and
+\(s=A_r-\ell_r-\lceil\log_b4\rceil\) give the analogous lower bound
+\((1-1/b)/(8D_r)\) at one of the two endpoints. Consequently its
+\(N/D_r\) upper rate, including the fast \(N/\log N\) rate, also has
+matching order. These are center-supremum, infinitely-often,
+family-specific bounds. They are not lower bounds at a fixed center, at
+every cutoff, or over all schedules.
+
+Admission of a function does not mean every growth profile works. For
+\(g(x)=x/(1-x)\), which is admitted by (R6), suppose
+
+\[
+D_j\log_b(bj+1)/A_j\to0.
+\tag{R8}
+\]
+
+At center zero its zero-digit frequency tends to one at completed-row
+endpoints, so the output is not normal. Put \(n=bj+1\), \(A=A_j\),
+\(D=D_j\). Eventually \(2n^{D+1}< b^A\), and the positive geometric tail
+is less than one after multiplying by \(b^{AD}\). Hence
+
+\[
+\lfloor b^{AD}g(n/b^A)\rfloor
+       =\sum_{m=1}^D n^m b^{(D-m)A}.
+\]
+
+Each \(n^m\) fits in one field of \(A\) digits, with no interfield
+carry. The number of nonzero digits is at most \(D(D+1)\log_b n/2+D\),
+whose fraction of \(AD\) tends to zero. Weighted averaging proves the
+endpoint claim. In particular the CRT precision geometry
+\(A\asymp\log j\,D^2\) fails for this admitted kernel. The
+prescribed-growth/window theorems above must not be generalized to all
+rational derivatives merely by citing admission.
+
+\subsection{An exact finite optimum with a stopping
+proof}\label{an-exact-finite-optimum-with-a-stopping-proof}
+
+For one fixed complete dyadic batch, put \(m=2^{r-1}\), \(\ell=\ell_r\),
+\(\eta=2^{-r}\), and choose the least \(\tau\) with
+\(2b^{-\tau}\le\eta\), and set \(\beta_D=D+\lfloor\log_2D\rfloor\).
+Define
+
+\[
+\Gamma_D=1+\sum_{d< D}P_d^{-1},\qquad
+T_D=(D-1)(\beta_D+\tau+W)+(D-1)(D+2)\ell/2.
+\]
+
+The sufficient certificate is
+
+\[
+\Phi(A,D)=\Gamma_D/D+2\eta+
+ \frac{\sum_{d< D}Q_d}{mD}+\frac{T_D}{AD},
+\quad A\ge\ell+1.
+\tag{R9}
+\]
+
+For target \(0< \epsilon< 1\), let \(\sigma_D\) be \(\epsilon\) minus
+the first three terms. A depth is feasible exactly when \(\sigma_D>0\),
+and its least precision is
+
+\[
+A_{\min}(D)=\max\lbrace \ell+1,\lceil T_D/(D\sigma_D)\rceil\rbrace .
+\]
+
+Zero slack cannot be attained: for \(D\ge2\), \(T_D>0\), while \(D=1\)
+already has fixed contribution exceeding one. The period contribution
+\(B_D=(\sum_{d< D}Q_d)/(mD)\) is strictly increasing, since
+
+\[
+B_{D+1}-B_D=
+\frac{DQ_D-\sum_{d< D}Q_d}{mD(D+1)}>0.
+\]
+
+It diverges because \(Q_d\ge P_d\to\infty\). Thus stopping at the first
+\(B_D+2\eta\ge\epsilon\) excludes every later depth and proves a genuine
+minimum of \(AD\) over all positive integer depths in (R9).
+
+For the binary three-pole kernel, stage \(r=128\), \(W=3\), and
+\(\epsilon=1/2\), this optimum is
+
+\[
+A=8205,\qquad D=19,\qquad K=155895.
+\]
+
+There are 36 feasible depths, 12 through 47; depth 48 triggers the
+stopping rule. The sample count is \(2^{127}\) sources and is part of
+the certificate. This optimizes a sufficient finite certificate, not
+actual discrepancy or all analytic methods, and does not justify
+optimizing infinitely many stages without a separate all-prefix assembly
+proof.
+
+\subsection{Limits and open
+questions}\label{limits-and-open-questions}
+
+A classification of prescribed depth and joint optimality of precision,
+copied length, and source count remain open. The results concern newly
+assembled digit streams. Identifying an output with an unchanged
+traditional constant requires a separate argument; ordinary convergence
+of sampled values does not transfer normality. Appendix C gives a
+sufficient shifted-orbit condition and several obstructions.
+
+\appendix
+
+\section{Growing-order derivative
+estimate}\label{growing-order-derivative-estimate}
+
+Write \(e(t)=\exp(2\pi i t)\).
+
+Arias de Reyna
+\cite[Theorem 11, equation (15), and Remark 14, equation (19)]{arias}
+proves the estimate below.
+
+In the following weaker formulation all three constants are replaced by
+12. If \(k\ge3\) and \(m>k\), and a real \(C^k\) phase satisfies
+
+\[
+0< \lambda\le f^{(k)}(x)\le\Lambda,
+\]
+
+on an interval containing m consecutive integer sampling points and the
+unit intervals immediately preceding them, then, putting \(v=2^k\),
+
+\[
+\left|\sum e(f(j))\right|
+ \le12m\max\left\lbrace 
+  (\Lambda/(\lambda m))^{2/v},\quad
+  (\Lambda^2/\lambda)^{1/(v-2)},\quad
+  (\lambda m^k)^{-2/v}\right\rbrace .                 \tag{V1}
+\]
+
+The constants in that result are all below 11, uniformly in k. The
+uniformity in k is essential here. A fixed-order derivative theorem
+would not justify the construction. A derivative of constant negative
+sign is handled by replacing f by -f.
+
+The absolute right side of (V1) is nondecreasing as a function of m: the
+three powers of m are respectively \(1-2/v\), \(1\), and \(1-2k/v\), all
+nonnegative for \(k\ge3\). Thus replacing m by a larger ambient M is
+valid. Short intervals \(m\le k\) are handled separately by the trivial
+bound. This resolves the incomplete-stage issue without a lower bound on
+the sampled row count.
+
+\section{Endpoint-safe Fourier-to-words
+lemma}\label{endpoint-safe-fourier-to-words-lemma}
+
+For any \(n\ge1\) circle points \(z_1,\ldots,z_n\), any interval \(I\),
+and \(H\ge1\), write \(F_h=\sum_{i=1}^n e(hz_i)\). Then
+
+\[
+\left|\frac{\#\lbrace i:z_i\in I\rbrace }n-|I|\right|
+ \le\frac2{\sqrt{H+1}}+\frac2\pi\sum_{h=1}^H\frac{|F_h|}{hn}.
+\tag{B.1}
+\]
+
+This intentionally elementary version is sufficient; no sharp
+Erdős--Turán theorem is imported.
+
+To prove it, use the Fejér kernel
+
+\[
+\mathcal F_H(t)=\frac1{H+1}\left|\sum_{a=0}^He(at)\right|^2.
+\]
+
+It is nonnegative, has mass one, and has Fourier coefficients
+\(1-|h|/(H+1)\) for \(|h|\le H\). Since \(\sin(\pi t)\ge2t\) for
+\(0\le t\le1/2\), its mass \(\alpha\) outside circle distance \(\delta\)
+obeys
+
+\[
+\alpha\le[2(H+1)\delta]^{-1}.
+\]
+
+Convolve the closed expansion of \(I\) by \(\delta\) with
+\(\mathcal F_H\), then add \(\alpha\); convolve the open contraction,
+then subtract \(\alpha\). These are pointwise majorant and minorant,
+including all endpoint conventions. Their constant terms differ from
+\(|I|\) by at most \(2\delta+\alpha\); every nonzero Fourier coefficient
+is at most \(1/(\pi|h|)\). Integrating against the empirical measure and
+pairing the positive and negative frequencies gives (B.1) after taking
+\(\delta=1/[2\sqrt{H+1}]\).
+
+\section{Transfer and obstruction
+principles}\label{transfer-and-obstruction-principles}
+
+Normality of a constructed output does not prove normality of its
+center. Ordinary convergence of source values does not supply the
+shifted orbit comparison required below. Likewise, function-theoretic
+transcendence and transcendence of a number are distinct questions.
+
+Throughout, \(b\ge2\) is an integer, \(e(t)=\exp(2\pi i t)\),
+\(\mathbb T=\mathbb R/\mathbb Z\), and
+\(\lVert t\rVert =\mathrm{dist}(t,\mathbb Z)\). All digit expansions use
+the terminating convention at radix-rational endpoints.
+
+\subsection{Average orbit distance}\label{average-orbit-distance}
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.1 (Mean orbit equivalence).} The set
+
+\[
+\mathcal H_b=\left\lbrace z\in\mathbb T:
+\frac1N\sum_{n< N}\lVert b^nz\rVert \longrightarrow0\right\rbrace
+\]
+
+is an additive subgroup. If \(x-y\in\mathcal H_b\), every fixed integer
+character has the same limiting averages along the two radix orbits
+whenever either limit exists. In particular, \(x\) is normal if and only
+if \(y\) is normal.
+
+\textbf{Proof.} The circle triangle inequality gives closure under
+addition, and \(\lVert -z\rVert =\lVert z\rVert\) gives closure under
+inverses. Also
+
+\[
+|e(hb^nx)-e(hb^ny)|\le2\pi|h|\lVert b^n(x-y)\rVert .
+\]
+
+Averaging and applying the Weyl criterion proves the conclusion.
+\(\square\)
+
+This is a valid statistical equivalence relation. It does not make the
+set of normal numbers a subgroup: for any normal \(x\), both \(x\) and
+\(-x\) are normal while their sum is zero.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.2 (Shifted shadowing).} Suppose a real \(F\) is
+made by concatenating complete prefixes, of lengths \(K_j\), of source
+numbers \(s_j\). Put \(S_j=\sum_{i\le j}K_i\). For a prescribed target
+\(C\), define
+
+\[
+\delta_j=\lVert b^{S_{j-1}}C-s_j\rVert ,
+\qquad \ell_j=-\log_b\delta_j
+\]
+
+with \(\ell_j=+\infty\) if \(\delta_j=0\). Assume the number of rows is
+\(o(N)\), the terminal row is negligible \(K_j/S_{j-1}\to0\), and
+
+\[
+\sum_{j\le J}(K_j-\ell_j)_+=o(S_J).
+\tag{C.1}
+\]
+
+Then \(C-F\in\mathcal H_b\). Hence normality of \(F\) transfers to
+\(C\).
+
+\textbf{Proof.} The output and its row source have the same first
+\(K_j\) digits at the row start. At local time \(0\le r< K_j\), their
+circle distance is at most \(b^{r-K_j}\); summing this bound gives at
+most \(1/(b-1)\) for that row. For the target and source, multiplication
+by \(b\) is Lipschitz with constant \(b\) on the circle, so the distance
+at time \(r\) is at most \(\min(1/2,b^r\delta_j)\). A geometric series
+up to \(r\approx\ell_j\), followed by the trivial bound, yields
+
+\[
+\sum_{r< K_j}\min(1/2,b^r\delta_j)
+\le C_b+(K_j-\ell_j)_+.
+\]
+
+The row triangle inequality, (C.1), and the \(o(N)\) row count prove
+zero mean distance at row endpoints. An incomplete terminal row costs at
+most \(K_j/2=o(N)\), proving the same for every prefix. \(\square\)
+
+The start \(b^{S_{j-1}}C\) is essential. Replacing it by the unshifted
+\(C\) changes the assertion. Ordinary numerical convergence \(s_j\to C\)
+gives no such shifted shadowing estimate.
+
+\subsection{An exact arithmetic grid for logarithmic
+sources}\label{an-exact-arithmetic-grid-for-logarithmic-sources}
+
+The following calculation explains the arithmetic mechanism for
+logarithmic sources without imposing normality on the center.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.3 (Logarithmic grids).} Fix integers
+\(D\ge d\ge2\), let \(L_d=\mathrm{lcm}(1,\ldots,d)\), and let \(A\) be a
+positive multiple of \(L_D\). Put
+
+\[
+n_j=bj+1,\quad x_j=n_jb^{-A},\quad
+F_d(z)=\sum_{k=1}^d\frac{(-1)^{k-1}z^k}{k}.
+\]
+
+Let \(B\) be a nonnegative integer satisfying \(k_{(b)}\mid b^B\) for
+all \(1\le k\le d\), where \(k_{(b)}\) is the part of \(k\) supported on
+primes dividing \(b\). For \(t\ge dA+B\),
+
+\[
+b^tF_d(n_jb^{-A})\equiv b^tF_d(n_j)\pmod1.
+\tag{C.2}
+\]
+
+For \(0< x_j\le1/2\) and \(t\le(d+1)A-E\),
+
+\[
+\left|b^t\log(1+x_j)-b^tF_d(x_j)\right|
+\le2n_j^{d+1}b^{-E}.
+\tag{C.3}
+\]
+
+Set
+
+\[
+P_d=\prod_{\substack{d/2< p\le d\\p\nmid b}}p.
+\]
+
+For any circle interval \(I\), any real \(\vartheta\), any integer
+\(t\ge0\), and any consecutive interval \(T\) of integer row indices,
+
+\[
+\left|\#\lbrace j\in T:\lbrace \vartheta+b^tF_d(n_j)\rbrace \in I\rbrace 
+-|T|\,|I|\right|
+\le \frac{2|T|}{P_d}+2L_d.
+\tag{C.4}
+\]
+
+The empty product is one. Equations (C.2) and (C.3), followed by
+interval enlargement by the right side of (C.3), give a finite estimate
+for the literal logarithmic phases.
+
+\textbf{Proof.} Write \(k=k_{(b)}k_c\), where \((k_c,b)=1\). Since
+\(\varphi(k_c)\le k\le D\), its value divides \(L_D\), so
+\(b^A\equiv1\pmod{k_c}\). Both \(b^{t-Ak}\) and \(b^t\) vanish modulo
+\(k_{(b)}\), and they agree modulo \(k_c\). Their difference is
+therefore divisible by \(k\). Multiplying by \(n_j^k/k\) and summing
+proves (C.2). Taylor's convergent series gives remainder at most
+\(2x_j^{d+1}\); multiplication by \(b^t\) gives (C.3).
+
+Write \(L_d=P_dQ\). Each prime in \(P_d\) occurs to the first power in
+\(L_d\), since \(p>d/2\) and \(p^2>d\). In the integer polynomial
+\(L_dF_d(z)\) modulo such a \(p\), every summand vanishes except
+\(k=p\). Consequently it is a nonzero scalar multiple of
+\(z^p\equiv z\pmod p\). Since \(p\nmid b\), the map \(j\mapsto n_j\) is
+a permutation modulo \(p\). Conditional on a residue \(j\pmod Q\), all
+the primary phase coordinates for \(p\) are independent uniform residues
+by CRT. Their sum is a translated uniform grid of \(P_d\) points on the
+circle. An interval contains \(|I|P_d+O(2)\) of those points. Thus (C.4)
+holds over each complete period of length \(L_d\). The at most two
+incomplete pieces of a consecutive row interval have total length below
+\(2L_d\), proving the stated bound. \(\square\)
+
+No statement about the digits of \(\vartheta\) entered this proof. All
+denominator parts and the base factors were retained. An irregular row
+subset would need its own discrepancy estimate modulo \(L_d\); (C.4)
+does not automatically apply to it.
+
+For a word of length \(\ell\), use the radix interval of length
+\(b^{-\ell}\). A phase perturbation of size \(\eta\) changes membership
+only within \(\eta\) of its two endpoints. Applying (C.4) to those
+boundary intervals pays an additional \(O(\eta |T|+|T|/P_d+L_d)\). This
+is a word-frequency argument with explicit boundary cost, rather than a
+claim that approximate real values always share digits.
+
+\subsection{Approximation and source count
+barriers}\label{approximation-and-source-count-barriers}
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.4 (The complete-prefix row barrier).} Consider any
+uniform-center whole-prefix construction
+
+\[
+X(\theta)=0.\mathrm{pref}_{b,K_1}(\theta+\delta_1)
+\mathrm{pref}_{b,K_2}(\theta+\delta_2)\cdots
+\]
+
+with a schedule independent of \(\theta\). If fixed-word discrepancy
+tends to zero uniformly in \(\theta\) through all prefixes, then
+\(K_J/S_J\to0\). Consequently \(\log S_J=o(J)\) and
+\(J/\log S_J\to\infty\).
+
+\textbf{Proof.} Choose \(\theta_J=-\delta_J\pmod1\); the entire row
+\(J\) consists of zeros. Uniform one-digit convergence at both \(S_J\)
+and \(S_{J-1}\) gives
+
+\[
+(1-1/b)K_J=o(S_J)+o(S_{J-1})=o(S_J).
+\]
+
+This proves the first assertion. For \(J\ge2\),
+
+\[
+\log S_J-\log S_{J-1}=-\log(1-K_J/S_J)\longrightarrow0.
+\]
+
+Summing these increments and using Cesàro averaging yields
+\(\log S_J=o(J)\). Since \(S_J\to\infty\), the last conclusion follows.
+\(\square\)
+
+This constrains the number of rows in this particular uniform
+whole-prefix architecture. It is not a lower bound on the number of
+distinct sources in all normal-number constructions, and says nothing
+against a fixed normal number having a short independent definition.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.5 (The initial-zero barrier).} Suppose
+\(0< \epsilon_j< 1\), \(\epsilon_j\to0\), and \(X\) concatenates the
+complete prefixes of \(K_j\) digits of \(\epsilon_j\) at center zero.
+Set \(L_j=\max(0,\lceil\log_b(1/\epsilon_j)\rceil-1)\). If the row count
+is \(o(S_J)\) and \(X\) is normal, then
+
+\[
+\sum_{j\le J}\min(K_j,L_j)=o(S_J).
+\tag{C.5}
+\]
+
+\textbf{Proof.} The first \(L_j\) source digits are zero. Fix a word
+length \(\ell\). There are at least
+\(\sum_{j\le J}(\min(K_j,L_j)-\ell+1)_+\) starts of \(0^\ell\) in these
+initial zero segments. If the left side of (C.5), divided by \(S_J\),
+has limsup \(\rho>0\), these starts have limsup at least \(\rho\),
+because \(\ell J=o(S_J)\). Normality gives the limit \(b^{-\ell}\).
+Taking fixed \(\ell\) arbitrarily large forces \(\rho=0\). \(\square\)
+
+For the logarithmic schedule, \(\epsilon_j\asymp j b^{-A_j}\), so the
+closeness horizon is \(A_j-O(\log j)\), while the copied length is
+\(A_jD_j\). Since \(D_j\to\infty\), most copied digits occur after this
+horizon. Uniform normality of the output is therefore compatible with a
+completely nonnormal center.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.6 (Analytic rigidity).} Let \(g\) and \(h\) be
+distinct real analytic germs at zero, with \(g(0)=h(0)=0\). Let
+\(x_j=(bj+1)b^{-A_j}\to0\), and suppose \(A_j\to\infty\),
+\(\log j=o(A_j)\), and \(K_j/A_j\to\infty\). Then \(g(x_j)\) and
+\(h(x_j)\) cannot have identical first \(K_j\) fractional digits in base
+\(b\) for infinitely many sufficiently large \(j\).
+
+\textbf{Proof.} Their difference has a first nonzero Taylor term
+\(cx^m\). Hence \(|g(x_j)-h(x_j)|\ge c'|x_j|^m\) for large \(j\).
+Identical prefixes give circle distance at most \(b^{-K_j}\). Both
+values tend to zero, so for large \(j\) their small real difference
+equals their circle distance. But
+
+\[
+-\log_b(c'|x_j|^m)=mA_j-O(\log j)=O(A_j)=o(K_j),
+\]
+
+a contradiction. \(\square\)
+
+Analytic interpolation cannot freely prescribe infinitely many long
+blocks at these inputs. A proposed representation of a traditional
+constant must supply the actual Taylor coefficients, their arithmetic
+constraints, convergence, and the exponentially fine residual bounds.
+
+\subsection{Local inverse approximation and arithmetic
+separation}\label{local-inverse-approximation-and-arithmetic-separation}
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.7 (Local inverse approximation).} Let \(g\) be a
+real \(C^1\) function on an interval, with \(g'(x_0)\ne0\), and let
+\(\xi=g(x_0)\). On a sufficiently small compact neighborhood of \(x_0\),
+superapproximation
+
+\[
+0< |\xi-g(p_n/q_n)|< H(p_n/q_n)^{-M_n},\quad
+H\to\infty,\quad M_n\to\infty
+\]
+
+by reduced rationals of height \(H(p/q)=\max(|p|,q)\), with \(q>0\), is
+equivalent to \(x_0\) being Liouville. Here all inputs must remain in
+the regular inverse branch and converge to \(x_0\).
+
+\textbf{Proof.} Continuity of the derivative and its nonvanishing give
+constants \(0< c< C\) with
+
+\[
+c|r-x_0|\le |g(r)-g(x_0)|\le C|r-x_0|
+\]
+
+on that neighborhood. Since it is bounded, \(q\le H(p/q)\le C' q\) for
+rational inputs in it. The fixed constants are absorbed by decreasing
+each unbounded approximation exponent by a fixed factor. The positivity
+of the error excludes \(r=x_0\). These observations prove both
+implications. \(\square\)
+
+For \(g=\log\) on positive inputs, this says that \(\xi\) is
+superapproximable by rational logarithms exactly when \(e^\xi\) is
+Liouville. At a fixed rational \(r=a/c>0\), distinct reduced \(p/q\)
+satisfy
+
+\[
+|r-p/q|\ge1/(cq).
+\]
+
+The local lower Lipschitz bound for the logarithm therefore forbids such
+superapproximation to \(\log r\). A construction requiring it cannot
+identify its output with that prescribed logarithm.
+
+\subsection{Classical normal Liouville
+construction}\label{classical-normal-liouville-construction}
+
+\subsubsection{Finite normal packets}\label{finite-normal-packets}
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.8 (Finite normal packets).} For each \(j\ge1\),
+there is an effectively specified cyclic word \(W_j\) of length
+\(L_j=b^j\) in which every word of length \(j\) appears exactly once
+cyclically. Every word of length \(\ell\le j\) appears \(b^{j-\ell}\)
+times cyclically. In the ordinary, noncyclic word its count differs by
+at most \(\ell-1\).
+
+\textbf{Proof.} Form the directed graph whose vertices are words of
+length \(j-1\), including the single empty word when \(j=1\). Each word
+of length \(j\) is an edge from its first \(j-1\) letters to its last
+\(j-1\) letters. Each vertex has indegree and outdegree \(b\). The graph
+is strongly connected: append the letters of a desired vertex in order.
+A finite balanced connected directed graph has an Euler circuit. One
+proof follows unused outgoing edges until a circuit closes, then splices
+in a new circuit at any visited vertex with unused edges; balance
+prevents getting stuck elsewhere, and finiteness terminates the process.
+Choosing starting vertex and edges in lexicographic order makes the
+construction effective.
+
+Read one letter per traversed edge around the circuit. Each word of
+length \(j\) is one edge, proving the first statement. A fixed word of
+length \(\ell\) has \(b^{j-\ell}\) extensions to a word of length \(j\),
+proving the second. Only the last \(\ell-1\) cyclic starts cross the end
+of the ordinary word. \(\square\)
+
+These classical de Bruijn packets provide explicit finite words for the
+following argument.
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.9 (Repetition criterion).} Let \(W_j\) be words of
+lengths \(L_j\to\infty\) such that the cyclic frequency of every fixed
+word in \(W_j\) tends to its uniform value. Choose positive repetition
+counts \(R_j\), and set
+
+\[
+U_j=\sum_{i< j}R_iL_i,
+\qquad Y=0.W_1^{R_1}W_2^{R_2}\cdots.
+\]
+
+If \(L_j/U_j\to0\), then \(Y\) is normal through every prefix. The
+finitely many initial stages with \(U_j=0\) are irrelevant.
+
+\textbf{Proof.} Fix a word of length \(\ell\). The count in \(q\)
+consecutive copies of \(W_j\) differs from its expected value by at most
+
+\[
+qL_j\epsilon_j+O(\ell),
+\]
+
+where \(\epsilon_j\to0\) is the cyclic frequency error; this follows by
+considering the periodic sequence \(W_j^\infty\) and deleting its last
+\(\ell-1\) starts. At a prefix inside stage \(j\), at most one
+unfinished copy costs \(L_j\) starts. Stage joins contribute at most
+\(\ell\) per stage. Because \(L_i\to\infty\) and \(R_i\ge1\), the number
+of stages divided by the total length tends to zero. The weighted sum of
+\(\epsilon_i\) over complete copies is \(o(N)\): discard finitely many
+initial stages, then bound every later \(\epsilon_i\) by a common
+arbitrary tolerance. The unfinished copy contributes at most
+\(L_j/N\le L_j/U_j\to0\). These estimates hold at every prefix \(N\),
+including the first few copies of a new packet. \(\square\)
+
+\Needspace{6\baselineskip}
+\textbf{Proposition C.10 (Normal Liouville numbers).} There is an
+explicitly computable Liouville number normal in base \(b\).
+
+\textbf{Proof.} Use the packets of Proposition C.8. Having computed
+their lengths, choose \(R_j\) effectively large enough that, with
+\(T_j=U_j+R_jL_j\),
+
+\[
+T_j>(j+1)(U_j+L_j),\qquad T_j\ge j L_{j+1}.
+\]
+
+Then \(L_{j+1}/U_{j+1}\le1/j\), so Proposition C.9 gives normality of
+\(Y\). Let \(y_j\) be the rational with the first \(U_j\) digits of
+\(Y\) and then the packet \(W_j\) repeated forever. It has a denominator
+dividing
+
+\[
+Q_j=b^{U_j}(b^{L_j}-1)< b^{U_j+L_j}.
+\]
+
+Since \(Y\) and \(y_j\) agree for \(T_j\) digits,
+
+\[
+|Y-y_j|\le b^{-T_j}< Q_j^{-(j+1)}.
+\]
+
+Normality implies irrationality: an eventually periodic digit sequence
+omits some sufficiently long word, since a period of length \(P\) has at
+most \(P\) distinct starts of any given length in its tail. Thus the
+displayed errors are nonzero. Reducing the denominators only strengthens
+the approximation; the reduced denominators must be unbounded, since
+otherwise a subsequence of these rational approximants would be constant
+while converging to the irrational \(Y\). Therefore \(Y\) is Liouville.
+\(\square\)
+
+The factors \(b^{L_j}-1\) allow very long repetitions of packets which
+already have the right finite statistics. Approximants with denominator
+only \(b^n\) instead force long constant runs. This distinction is why
+an excellent rational approximation need not obstruct normality.
+
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{References}
+\bibitem{arias} Juan Arias de Reyna, \emph{Explicit van der Corput's d-th derivative estimate}, arXiv:2407.02094v1 (2024), Theorem 11 and Remark 14. \url{https://arxiv.org/abs/2407.02094v1}.
+\bibitem{becher} Ver\'onica Becher, Pablo Ariel Heiber and Theodore A. Slaman, \emph{A computable absolutely normal Liouville number}, manuscript, 30 January 2014. \url{https://math.berkeley.edu/~slaman/papers/liouville.pdf}.
+\bibitem{madritsch} Manfred G. Madritsch, J\"org M. Thuswaldner and Robert F. Tichy, \emph{Normality of numbers generated by the values of entire functions}, Journal of Number Theory \textbf{128} (2008), 1127--1145. \url{https://madritsch.perso.math.cnrs.fr/downloads/papers/entireFinal.pdf}.
+\end{thebibliography}
+\end{document}
