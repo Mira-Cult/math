@@ -31,9 +31,9 @@ Its separate quantitative research includes near-logarithmic copied length, pres
 
 ## 4. Real D-finite functions and parameterized operations
 
-The corrected October 20 coefficient-window paper is the principal source of the [main manuscript](MANUSCRIPT.md). Its key observation is that an invertible polynomial-coefficient recurrence gives a factorial-scale lower bound on the norm of each coefficient window. This replaces rational-coefficient arithmetic by a reusable analytic hypothesis and allows a common computable schedule for an entire common-radius class.
+The corrected October 20 coefficient-window paper is the principal source of the [unified manuscript](MANUSCRIPT.md). Its key observation is that an invertible polynomial-coefficient recurrence gives a factorial-scale lower bound on the norm of each coefficient window. This replaces rational-coefficient arithmetic by a reusable analytic hypothesis and allows a common computable schedule for an entire common-radius class.
 
-The [extension drafts](EXTENSIONS.md) distinguish three phenomena:
+The [later manuscript sections](MANUSCRIPT.md#5-singular-powers-on-positive-inputs) distinguish three phenomena:
 
 1. Structural failure: an exact polynomial cancellation defeats every admissible schedule in the stated model.
 2. Schedule suppression: a flat positive source can produce all-zero copied rows under one schedule.

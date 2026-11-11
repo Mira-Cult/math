@@ -2,31 +2,36 @@
 
 A connected account of the Mira-Cult dovetail work, from the older logarithmic constructions to the coefficient-window theory. Public proof-source release, 11 November 2026.
 
-The main result constructs a normal digit stream by concatenating complete fractional prefixes of function values at a shrinking sequence of rational inputs. It works for nonpolynomial real D-finite functions, including rational, algebraic and transcendental examples. The proofs retain every row and control every output prefix, not just selected stage endpoints.
+The principal result constructs a normal digit stream by concatenating complete fractional prefixes of function values at a shrinking sequence of rational inputs. It works for nonpolynomial real D-finite functions, including rational, algebraic and transcendental examples. The proofs retain every row and control every output prefix, not just selected stage endpoints.
 
 ## Read the mathematics
 
-- **[Main manuscript](MANUSCRIPT.md):** full coefficient-window proof, common schedules for real D-finite germs, exact power exceptions, and the rational-derivative admission dichotomy. Includes the precise imported derivative estimate and a proof of the Fourier-to-word estimate.
+- **[Unified manuscript](MANUSCRIPT.md):** full coefficient-window proof, common schedules for real D-finite germs, exact power exceptions, and the rational-derivative admission dichotomy. It starts with the general coefficient-window theorem, then develops D-finite consequences, exact power exceptions, singular powers, flat sources, and the near-polynomial scale. The weaker review scope of the later sections is explicit. The analytic and Fourier estimates are included.
 - **[Transfer and obstructions](TRANSFER_AND_OBSTRUCTIONS.md):** the older logarithmic CRT grid, the necessary source-count bound, a sufficient shifted-orbit transfer theorem, analytic interpolation rigidity, and the classical normal Liouville construction.
-- **[Further producer-proof drafts](EXTENSIONS.md):** singular powers, normalizing selected flat functions by changing the schedule, and the exact near-polynomial parameter scale. These retain their stated review limits.
 - **[History and open directions](HISTORY.md):** how the older and newer results fit together, and which recent branches are not part of this release.
 - **[References](REFERENCES.md), [provenance](PROVENANCE.md), and [verification](VERIFICATION.md).**
 
-## What the main theorem says
+## What the general theorem says
 
 Fix an integer base $b\ge2$. At stage $r$ retain every $b^{r-1}\le j<b^r$, set
 
-$$x_j=(bj+1)b^{-A_r},\qquad K_r=A_rD_r,$$
+```math
+x_j=(bj+1)b^{-A_r},\qquad K_r=A_rD_r,
+```
 
-and copy the **complete first $K_r$ canonical fractional base-$b$ digits** of $h(x_j)$. Terminating expansions are used at ambiguous endpoints. No favorable fragment, row subset, or reordering is allowed.
+and copy the complete first $K_r$ canonical fractional digits in base $b$ of $h(x_j)$. Terminating expansions are used at ambiguous endpoints. No favorable fragment, row subset, or reordering is allowed.
 
 If the derivative coefficients of $h$ obey the upper and finite-window lower bounds in the manuscript, there is a schedule with
 
-$$A_r/r\longrightarrow1,\quad D_r\longrightarrow\infty,\quad x_j\longrightarrow0,$$
+```math
+A_r/r\longrightarrow1,\quad D_r\longrightarrow\infty,\quad x_j\longrightarrow0,
+```
 
 whose concatenation is normal. For any computable nondecreasing divergent integer budgets $F,G$, it can also satisfy
 
-$$K_j\le F(j)\log_bj,\qquad A_j-\log_bj\le G(j)$$
+```math
+K_j\le F(j)\log_bj,\qquad A_j-\log_bj\le G(j)
+```
 
 eventually. Every fixed word has discrepancy $O(NB_r/(rD_r))$ through every output prefix, with $B_r=A_r-r$ and $r$ the last observed stage. The constants and onset depend on the coefficient-window data. The theorem gives a common schedule on a common-radius class; a uniform error estimate over parameters requires shared bounds and nondegeneracy.
 

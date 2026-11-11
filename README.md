@@ -18,7 +18,7 @@ all-odd-order square theorem.
 
 ## Normality and constructed numbers
 
-- **[Normal dovetails from analytic functions](notes/number-theory/normal-dovetails/README.md):** a full proof manuscript for coefficient-window admission, common schedules for nonpolynomial real D-finite germs, exact regular-power exceptions, and the rational-derivative dichotomy. Includes older logarithmic-grid and shifted-transfer proofs, separately qualified extension drafts, public source provenance, and 1,332 exact finite checks. Scoped nonauthor model review; no formal verification, external referee acceptance, priority claim, or normality theorem for an unchanged traditional constant.
+- **[Normal dovetails from analytic functions](notes/number-theory/normal-dovetails/README.md):** a full proof manuscript for coefficient-window admission, common schedules for nonpolynomial real D-finite germs, exact regular-power exceptions, and the rational-derivative dichotomy. Includes older logarithmic-grid and shifted-transfer proofs, explicit review qualifications for its later sections, public source provenance, and 1,332 exact finite checks. Scoped nonauthor model review; no formal verification, external referee acceptance, priority claim, or normality theorem for an unchanged traditional constant.
 
 ## Counting and combinatorics
 

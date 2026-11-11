@@ -4,9 +4,9 @@ Prepared 11 November 2026.
 
 ## Mathematical review
 
-[REVIEW.md](REVIEW.md) records a fresh nonauthor model review, its actual scope, findings, fixes, and SHA-256 fingerprints of the mathematical files. The reviewer did not write those arguments or perform a formal GitHub approval. This is scoped automated mathematical review, not an external human expert/referee report and not a formal proof.
+[REVIEW.md](REVIEW.md) records a fresh nonauthor model review, its actual scope, findings, fixes, and SHA-256 fingerprints of the mathematical files and their publication versions. The reviewer did not write those arguments or perform a formal GitHub approval. This is scoped automated mathematical review, not an external human expert/referee report and not a formal proof.
 
-The main coefficient-window argument, recurrence lemma, D-finite reduction, regular-power exceptions, rational-derivative dichotomy, and elementary companion proofs were read at their stated scopes. The singular/flat/near-exception material remains labeled as producer-proof drafts with the review qualifications recorded separately. Neither a source merge nor a finite checker certifies every analytic statement.
+The main coefficient-window argument, recurrence lemma, D-finite reduction, regular-power exceptions, rational-derivative dichotomy, and elementary companion proofs were read at their stated scopes. The singular/flat/near-exception material remains labeled at its sections as producer-proof work with a narrower review scope. Neither a source merge nor a finite checker certifies every analytic statement.
 
 The primary Arias de Reyna theorem was checked for the exact order, interval, sign, and constant hypotheses used here. This is a statement-and-application check, not an independent reproving of its deep analytic estimate. The recent draft composition/splicing/fractional/Gaussian branches and the whole older gist corpus are outside this release's mathematical review.
 

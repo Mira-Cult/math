@@ -14,7 +14,7 @@ This public release was prepared from mathematical source files, not from privat
 
 The source recorded scoped maintainer review on 20 October 2026 and a pending external audit. This release keeps that distinction. Its fresh review is recorded separately in [REVIEW.md](REVIEW.md).
 
-The public main manuscript preserves the central coefficient-window, recurrence, D-finite and regular-power arguments, adding an accessible introduction and explicit analytic/Fourier appendices. Those appendices come from the same snapshot's `docs/research-notes/multiscale-fourier-20261019/derivative-proof.md` §1 and `docs/research-notes/multiscale-fourier-batches-20261019.md` §8. The short rational-derivative dichotomy is rederived directly from the main theorem and the polynomial finite-grid obstruction, rather than importing unreviewed resource bounds.
+The public manuscript preserves the central coefficient-window, recurrence, D-finite and regular-power arguments, adding an accessible introduction and explicit analytic/Fourier appendices. Those appendices come from the same snapshot's `docs/research-notes/multiscale-fourier-20261019/derivative-proof.md` §1 and `docs/research-notes/multiscale-fourier-batches-20261019.md` §8. The short rational-derivative dichotomy is rederived directly from the main theorem and the polynomial finite-grid obstruction, rather than importing unreviewed resource bounds.
 
 ## Explicit successor corrections
 
@@ -22,7 +22,7 @@ The public text is an edited successor, not a byte-identical republication of PA
 
 1. Private navigation, lane instructions and integration history were removed from the mathematical exposition. The essential source identifiers and actual review limits remain here.
 2. The growing-order derivative contract and the endpoint-safe Fejér proof are reproduced explicitly, replacing otherwise inaccessible local references.
-3. Flat-kernel schedules previously written using ceilings of transcendental logarithmic expressions now use exact integer threshold tests. For the reciprocal kernel, $B_r=3+\min\{m\ge1:b^{b^m}\ge r+4\}$; for reciprocal-square, $B_r=3+\min\{m\ge1:b^{b^{2m}}\ge r+4\}$. These preserve the stated asymptotic comparisons and make computability immediate.
+3. Flat-kernel schedules previously written using ceilings of transcendental logarithmic expressions now use exact integer threshold tests. For the reciprocal kernel, $B_r=3+\min\lbrace m\ge1:b^{b^m}\ge r+4\rbrace$; for reciprocal-square, $B_r=3+\min\lbrace m\ge1:b^{b^{2m}}\ge r+4\rbrace$. These preserve the stated asymptotic comparisons and make computability immediate.
 4. The optional cube-root and square-root growth examples in the main theorem use integer roots of the binary bit-length of $r+2$, preserving their stated asymptotic orders.
 5. The old extraction's notation for circle distance, integer offsets and nonnegative guard exponents is restated. Statements about transcendence are phrased as proof limitations, not as a purported counterexample to the open normality/transcendence implication.
 
@@ -44,3 +44,9 @@ The November 11 inventory identified additional draft branches for Gaussian cons
 ## Attribution and licensing
 
 These are Mira-Cult research sources with external mathematical dependencies credited in the references. No new license or transfer of third-party rights is declared by this release. Earlier sources retain their own attribution and terms.
+
+## Unified notation edition
+
+The rendering revision combines the former main and extension files into one manuscript, states the coefficient-window theorem first, and uses GitHub-supported TeX notation throughout. Mathematical review scope remains section-specific. The singular, flat, and near-polynomial arguments are not promoted by moving them into the same file. The separate `EXTENSIONS.md` file is removed only after its full content is incorporated.
+
+Result labels in the unified edition are: A (window theorem), B (recurrence lemma), C (D-finite corollary), D (rational-derivative dichotomy), E (regular powers), F (singular powers), G (flat sources), H (near-polynomial scale). The initial edition used D for regular powers, H for rational derivatives, and E/F/G for the last three results. The equations are renumbered to match their sections. No endpoint, estimate, or parameter range is enlarged by this reorganization.
