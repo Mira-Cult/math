@@ -1,0 +1,540 @@
+import Sude.FiniteTwinCheckpointTwoHundredFortyFour
+import Sude.FiniteTwinCheckpointTwoHundredThirtySix
+import Sude.FiniteTwinCheckpointTwoHundredTwentyEight
+import Sude.FiniteTwinCheckpointTwoHundredTwenty
+import Sude.FiniteTwinCheckpointTwoHundredTwelve
+import Sude.FiniteTwinCheckpointTwoHundredFour
+import Sude.FiniteTwinCheckpointOneHundredNinetySix
+import Sude.FiniteTwinCheckpointOneHundredEightyEight
+import Sude.FiniteTwinCheckpointOneHundredEighty
+import Sude.FiniteTwinCheckpointOneHundredSeventyTwo
+import Sude.FiniteTwinCheckpointOneHundredSixtyFour
+import Sude.FiniteTwinCheckpointOneHundredFiftySix
+import Sude.FiniteTwinCheckpointOneHundredFortyEight
+import Sude.FiniteTwinCheckpointOneHundredForty
+import Sude.FiniteTwinCheckpointOneHundredThirtyTwo
+import Sude.FiniteTwinCheckpointOneHundredTwentyFour
+import Sude.FiniteTwinCheckpointOneHundredSixteen
+import Sude.FiniteTwinCheckpointOneHundredEight
+import Sude.FiniteTwinCheckpointOneHundred
+import Sude.FiniteTwinCheckpointNinetyTwo
+import Sude.FiniteTwinCheckpointSeventySix
+import Sude.FiniteTwinCheckpointSeventyFive
+import Sude.FiniteTwinCheckpointSeventyFour
+import Sude.FiniteTwinCheckpointSeventyThree
+import Sude.FiniteTwinAdaptivePrefix
+import Sude.FiniteTwinCheckpointSeventyTwo
+import Sude.FiniteTwinFilteredBase
+import Sude.FiniteTwinCheckpointSeventyOne
+import Sude.FiniteTwinCheckpointSeventy
+import Sude.FiniteTwinCheckpointSixtyNine
+import Sude.FiniteTwinCheckpointSixtyEight
+import Sude.FiniteTwinCheckpointSixtySeven
+import Sude.FiniteTwinCheckpointSixtySix
+import Sude.FiniteTwinCheckpointSixtyFive
+import Sude.FiniteTwinCheckpointSixtyFour
+import Sude.FiniteTwinCheckpointSixtyThree
+import Sude.FiniteTwinCheckpointSixtyTwo
+import Sude.FiniteTwinCheckpointSixtyOne
+import Sude.FiniteTwinCheckpointSixty
+import Sude.FiniteTwinCheckpointFiftyNine
+import Sude.FiniteTwinCheckpointFiftyEight
+import Sude.FiniteTwinCheckpointFiftySeven
+import Sude.FiniteTwinCheckpointFiftySix
+import Sude.FiniteTwinCheckpointFiftyFive
+import Sude.FiniteTwinCheckpointFiftyFour
+import Sude.FiniteTwinCheckpointFiftyThree
+import Sude.FiniteTwinCheckpointFiftyTwo
+import Sude.FiniteTwinCheckpointFiftyOne
+import Sude.FiniteTwinCheckpointFifty
+import Sude.FiniteTwinCheckpointFortyNine
+import Sude.FiniteTwinCheckpointFortyEight
+import Sude.FiniteTwinCheckpointFortySeven
+import Sude.FiniteTwinCheckpointFortySix
+import Sude.FiniteTwinCheckpointFortyFive
+import Sude.FiniteTwinCheckpointFortyFour
+import Sude.FiniteTwinCheckpointFortyThree
+import Sude.FiniteTwinCheckpointFortyTwo
+import Sude.FiniteTwinCheckpointFortyOne
+import Sude.FiniteTwinCheckpointForty
+import Sude.FiniteTwinCheckpointThirtyNine
+import Sude.FiniteTwinCheckpointThirtyEight
+import Sude.FiniteTwinCheckpointThirtySeven
+import Sude.FiniteTwinCheckpointThirtySix
+import Sude.FiniteTwinCheckpointThirtyFive
+import Sude.FiniteTwinCheckpointThirtyFour
+import Sude.FiniteTwinCheckpointThirtyThree
+import Sude.FiniteTwinCheckpointThirtyTwo
+import Sude.FiniteTwinCheckpointThirtyOne
+import Sude.TwinStrideSixCompressed
+import Sude.FiniteTwinCheckpointThirty
+import Sude.FiniteTwinCheckpointTwentyNine
+import Sude.TwinStrideSixScan
+import Sude.FiniteTwinCheckpointTwentyEight
+import Sude.FiniteTwinCheckpointTwentySeven
+import Sude.FiniteTwinCheckpointTwentySix
+import Sude.FiniteTwinCheckpointTwentyFive
+import Sude.FiniteTwinCheckpointTwentyFour
+import Sude.FiniteTwinCheckpointTwentyThree
+import Sude.FiniteTwinCheckpointTwentyTwo
+import Sude.FiniteTwinCheckpointTwentyOne
+import Sude.FiniteTwinCheckpointTwenty
+import Sude.FiniteTwinCheckpointNineteen
+import Sude.FiniteTwinCheckpointEighteen
+import Sude.FiniteTwinCheckpointSeventeen
+import Sude.FiniteTwinCheckpointSixteen
+import Sude.FiniteTwinCheckpointEight
+import Sude.FiniteTwinCheckpointNine
+import Sude.FiniteTwinCheckpointTen
+import Sude.FiniteTwinCheckpointEleven
+import Sude.FiniteTwinCheckpointTwelve
+import Sude.FiniteTwinCheckpointThirteen
+import Sude.FiniteTwinCheckpointFourteen
+import Sude.FiniteTwinCheckpointFifteen
+
+/-! Audit the certificate-backed partial finite twin population. -/
+
+#check Sude.strideSixCompressedIntervalScan_spec
+#print axioms Sude.strideSixCompressedIntervalScan_spec
+#check Sude.strideSixCompressedBoundary_mathematical
+#print axioms Sude.strideSixCompressedBoundary_mathematical
+#check Sude.strideSixIntervalScan_spec
+#print axioms Sude.strideSixIntervalScan_spec
+#check Sude.strideSixBoundaryExample_mathematical
+#print axioms Sude.strideSixBoundaryExample_mathematical
+#check Sude.finiteTwinFirstFiftySegments
+#print axioms Sude.finiteTwinFirstFiftySegments
+#check Sude.finiteTwinSeeds_at_least_472818
+#print axioms Sude.finiteTwinSeeds_at_least_472818
+#check Sude.finiteTwinFirstFortyNineSegments
+#print axioms Sude.finiteTwinFirstFortyNineSegments
+#check Sude.finiteTwinSeeds_at_least_464594
+#print axioms Sude.finiteTwinSeeds_at_least_464594
+#check Sude.finiteTwinFirstFortyEightSegments
+#print axioms Sude.finiteTwinFirstFortyEightSegments
+#check Sude.finiteTwinSeeds_at_least_456565
+#print axioms Sude.finiteTwinSeeds_at_least_456565
+#check Sude.finiteTwinFirstFortySevenSegments
+#print axioms Sude.finiteTwinFirstFortySevenSegments
+#check Sude.finiteTwinSeeds_at_least_448344
+#print axioms Sude.finiteTwinSeeds_at_least_448344
+#check Sude.finiteTwinFirstFortySixSegments
+#print axioms Sude.finiteTwinFirstFortySixSegments
+#check Sude.finiteTwinSeeds_at_least_440142
+#print axioms Sude.finiteTwinSeeds_at_least_440142
+#check Sude.finiteTwinFirstFortyFiveSegments
+#print axioms Sude.finiteTwinFirstFortyFiveSegments
+#check Sude.finiteTwinSeeds_at_least_431944
+#print axioms Sude.finiteTwinSeeds_at_least_431944
+#check Sude.finiteTwinFirstFortyFourSegments
+#print axioms Sude.finiteTwinFirstFortyFourSegments
+#check Sude.finiteTwinSeeds_at_least_423764
+#print axioms Sude.finiteTwinSeeds_at_least_423764
+#check Sude.finiteTwinFirstFortyThreeSegments
+#print axioms Sude.finiteTwinFirstFortyThreeSegments
+#check Sude.finiteTwinSeeds_at_least_415439
+#print axioms Sude.finiteTwinSeeds_at_least_415439
+#check Sude.finiteTwinFirstFortyTwoSegments
+#print axioms Sude.finiteTwinFirstFortyTwoSegments
+#check Sude.finiteTwinSeeds_at_least_407200
+#print axioms Sude.finiteTwinSeeds_at_least_407200
+#check Sude.finiteTwinFirstFortyOneSegments
+#print axioms Sude.finiteTwinFirstFortyOneSegments
+#check Sude.finiteTwinSeeds_at_least_398865
+#print axioms Sude.finiteTwinSeeds_at_least_398865
+#check Sude.finiteTwinFirstFortySegments
+#print axioms Sude.finiteTwinFirstFortySegments
+#check Sude.finiteTwinSeeds_at_least_390566
+#print axioms Sude.finiteTwinSeeds_at_least_390566
+#check Sude.finiteTwinFirstThirtyNineSegments
+#print axioms Sude.finiteTwinFirstThirtyNineSegments
+#check Sude.finiteTwinSeeds_at_least_382249
+#print axioms Sude.finiteTwinSeeds_at_least_382249
+#check Sude.finiteTwinFirstThirtyEightSegments
+#print axioms Sude.finiteTwinFirstThirtyEightSegments
+#check Sude.finiteTwinSeeds_at_least_373890
+#print axioms Sude.finiteTwinSeeds_at_least_373890
+#check Sude.finiteTwinFirstThirtySevenSegments
+#print axioms Sude.finiteTwinFirstThirtySevenSegments
+#check Sude.finiteTwinSeeds_at_least_365574
+#print axioms Sude.finiteTwinSeeds_at_least_365574
+#check Sude.finiteTwinFirstThirtySixSegments
+#print axioms Sude.finiteTwinFirstThirtySixSegments
+#check Sude.finiteTwinSeeds_at_least_357141
+#print axioms Sude.finiteTwinSeeds_at_least_357141
+#check Sude.finiteTwinFirstThirtyFiveSegments
+#print axioms Sude.finiteTwinFirstThirtyFiveSegments
+#check Sude.finiteTwinSeeds_at_least_348696
+#print axioms Sude.finiteTwinSeeds_at_least_348696
+#check Sude.finiteTwinFirstThirtyFourSegments
+#print axioms Sude.finiteTwinFirstThirtyFourSegments
+#check Sude.finiteTwinSeeds_at_least_340322
+#print axioms Sude.finiteTwinSeeds_at_least_340322
+#check Sude.finiteTwinFirstThirtyThreeSegments
+#print axioms Sude.finiteTwinFirstThirtyThreeSegments
+#check Sude.finiteTwinSeeds_at_least_331828
+#print axioms Sude.finiteTwinSeeds_at_least_331828
+#check Sude.finiteTwinFirstThirtyTwoSegments
+#print axioms Sude.finiteTwinFirstThirtyTwoSegments
+#check Sude.finiteTwinSeeds_at_least_323213
+#print axioms Sude.finiteTwinSeeds_at_least_323213
+#check Sude.finiteTwinFirstThirtyOneSegments
+#print axioms Sude.finiteTwinFirstThirtyOneSegments
+#check Sude.finiteTwinSeeds_at_least_314668
+#print axioms Sude.finiteTwinSeeds_at_least_314668
+#check Sude.finiteTwinFirstThirtySegments
+#print axioms Sude.finiteTwinFirstThirtySegments
+#check Sude.finiteTwinSeeds_at_least_306066
+#print axioms Sude.finiteTwinSeeds_at_least_306066
+#check Sude.finiteTwinFirstTwentyNineSegments
+#print axioms Sude.finiteTwinFirstTwentyNineSegments
+#check Sude.finiteTwinSeeds_at_least_297568
+#print axioms Sude.finiteTwinSeeds_at_least_297568
+#check Sude.finiteTwinFirstTwentyEightSegments
+#print axioms Sude.finiteTwinFirstTwentyEightSegments
+#check Sude.finiteTwinSeeds_at_least_288952
+#print axioms Sude.finiteTwinSeeds_at_least_288952
+#check Sude.finiteTwinFirstTwentySevenSegments
+#print axioms Sude.finiteTwinFirstTwentySevenSegments
+#check Sude.finiteTwinSeeds_at_least_280266
+#print axioms Sude.finiteTwinSeeds_at_least_280266
+#check Sude.finiteTwinFirstTwentySixSegments
+#print axioms Sude.finiteTwinFirstTwentySixSegments
+#check Sude.finiteTwinSeeds_at_least_271526
+#print axioms Sude.finiteTwinSeeds_at_least_271526
+#check Sude.finiteTwinSeeds_at_least_78762
+#print axioms Sude.finiteTwinSeeds_at_least_78762
+#check Sude.finiteTwinSeeds_at_least_85524
+#print axioms Sude.finiteTwinSeeds_at_least_85524
+#check Sude.finiteTwinFirstSevenSegments
+#print axioms Sude.finiteTwinFirstSevenSegments
+#check Sude.finiteTwinSeeds_at_least_95755
+#print axioms Sude.finiteTwinSeeds_at_least_95755
+#check Sude.finiteTwinFirstEightSegments
+#print axioms Sude.finiteTwinFirstEightSegments
+#check Sude.finiteTwinSeeds_at_least_105898
+#print axioms Sude.finiteTwinSeeds_at_least_105898
+#check Sude.finiteTwinFirstNineSegments
+#print axioms Sude.finiteTwinFirstNineSegments
+#check Sude.finiteTwinSeeds_at_least_115872
+#print axioms Sude.finiteTwinSeeds_at_least_115872
+#check Sude.finiteTwinFirstTenSegments
+#print axioms Sude.finiteTwinFirstTenSegments
+#check Sude.finiteTwinSeeds_at_least_125618
+#print axioms Sude.finiteTwinSeeds_at_least_125618
+#check Sude.finiteTwinFirstElevenSegments
+#print axioms Sude.finiteTwinFirstElevenSegments
+#check Sude.finiteTwinSeeds_at_least_135279
+#print axioms Sude.finiteTwinSeeds_at_least_135279
+#check Sude.finiteTwinFirstTwelveSegments
+#print axioms Sude.finiteTwinFirstTwelveSegments
+#check Sude.finiteTwinSeeds_at_least_144905
+#print axioms Sude.finiteTwinSeeds_at_least_144905
+#check Sude.finiteTwinFirstThirteenSegments
+#print axioms Sude.finiteTwinFirstThirteenSegments
+#check Sude.finiteTwinSeeds_at_least_154363
+#print axioms Sude.finiteTwinSeeds_at_least_154363
+
+#check Sude.finiteTwinFirstFourteenSegments
+#print axioms Sude.finiteTwinFirstFourteenSegments
+#check Sude.finiteTwinSeeds_at_least_163705
+#print axioms Sude.finiteTwinSeeds_at_least_163705
+
+#check Sude.finiteTwinFirstFifteenSegments
+#print axioms Sude.finiteTwinFirstFifteenSegments
+#check Sude.finiteTwinSeeds_at_least_173039
+#print axioms Sude.finiteTwinSeeds_at_least_173039
+
+#check Sude.finiteTwinFirstSixteenSegments
+#print axioms Sude.finiteTwinFirstSixteenSegments
+#check Sude.finiteTwinSeeds_at_least_182269
+#print axioms Sude.finiteTwinSeeds_at_least_182269
+
+#check Sude.finiteTwinFirstSeventeenSegments
+#print axioms Sude.finiteTwinFirstSeventeenSegments
+#check Sude.finiteTwinSeeds_at_least_191386
+#print axioms Sude.finiteTwinSeeds_at_least_191386
+
+#check Sude.finiteTwinFirstEighteenSegments
+#print axioms Sude.finiteTwinFirstEighteenSegments
+#check Sude.finiteTwinSeeds_at_least_200638
+#print axioms Sude.finiteTwinSeeds_at_least_200638
+
+#check Sude.finiteTwinFirstNineteenSegments
+#print axioms Sude.finiteTwinFirstNineteenSegments
+#check Sude.finiteTwinSeeds_at_least_209759
+#print axioms Sude.finiteTwinSeeds_at_least_209759
+
+#check Sude.finiteTwinFirstTwentySegments
+#print axioms Sude.finiteTwinFirstTwentySegments
+#check Sude.finiteTwinSeeds_at_least_218671
+#print axioms Sude.finiteTwinSeeds_at_least_218671
+
+#check Sude.finiteTwinFirstTwentyOneSegments
+#print axioms Sude.finiteTwinFirstTwentyOneSegments
+#check Sude.finiteTwinSeeds_at_least_227558
+#print axioms Sude.finiteTwinSeeds_at_least_227558
+
+#check Sude.finiteTwinFirstTwentyTwoSegments
+#print axioms Sude.finiteTwinFirstTwentyTwoSegments
+#check Sude.finiteTwinSeeds_at_least_236470
+#print axioms Sude.finiteTwinSeeds_at_least_236470
+
+#check Sude.finiteTwinFirstTwentyThreeSegments
+#print axioms Sude.finiteTwinFirstTwentyThreeSegments
+#check Sude.finiteTwinSeeds_at_least_245295
+#print axioms Sude.finiteTwinSeeds_at_least_245295
+
+#check Sude.finiteTwinFirstTwentyFourSegments
+#print axioms Sude.finiteTwinFirstTwentyFourSegments
+#check Sude.finiteTwinSeeds_at_least_254073
+#print axioms Sude.finiteTwinSeeds_at_least_254073
+
+#check Sude.finiteTwinFirstTwentyFiveSegments
+#print axioms Sude.finiteTwinFirstTwentyFiveSegments
+#check Sude.finiteTwinSeeds_at_least_262738
+#print axioms Sude.finiteTwinSeeds_at_least_262738
+
+#check Sude.finiteTwinFirstFiftyOneSegments
+#print axioms Sude.finiteTwinFirstFiftyOneSegments
+#check Sude.finiteTwinSeeds_at_least_481021
+#print axioms Sude.finiteTwinSeeds_at_least_481021
+#check Sude.finiteTwinFirstFiftyTwoSegments
+#print axioms Sude.finiteTwinFirstFiftyTwoSegments
+#check Sude.finiteTwinSeeds_at_least_489133
+#print axioms Sude.finiteTwinSeeds_at_least_489133
+#check Sude.finiteTwinFirstFiftyThreeSegments
+#print axioms Sude.finiteTwinFirstFiftyThreeSegments
+#check Sude.finiteTwinSeeds_at_least_497254
+#print axioms Sude.finiteTwinSeeds_at_least_497254
+#check Sude.finiteTwinFirstFiftyFourSegments
+#print axioms Sude.finiteTwinFirstFiftyFourSegments
+#check Sude.finiteTwinSeeds_at_least_505238
+#print axioms Sude.finiteTwinSeeds_at_least_505238
+#check Sude.finiteTwinFirstFiftyFiveSegments
+#print axioms Sude.finiteTwinFirstFiftyFiveSegments
+#check Sude.finiteTwinSeeds_at_least_513295
+#print axioms Sude.finiteTwinSeeds_at_least_513295
+#check Sude.finiteTwinFirstFiftySixSegments
+#print axioms Sude.finiteTwinFirstFiftySixSegments
+#check Sude.finiteTwinSeeds_at_least_521319
+#print axioms Sude.finiteTwinSeeds_at_least_521319
+#check Sude.finiteTwinFirstFiftySevenSegments
+#print axioms Sude.finiteTwinFirstFiftySevenSegments
+#check Sude.finiteTwinSeeds_at_least_529280
+#print axioms Sude.finiteTwinSeeds_at_least_529280
+#check Sude.finiteTwinFirstFiftyEightSegments
+#print axioms Sude.finiteTwinFirstFiftyEightSegments
+#check Sude.finiteTwinSeeds_at_least_537193
+#print axioms Sude.finiteTwinSeeds_at_least_537193
+#check Sude.finiteTwinFirstFiftyNineSegments
+#print axioms Sude.finiteTwinFirstFiftyNineSegments
+#check Sude.finiteTwinSeeds_at_least_545201
+#print axioms Sude.finiteTwinSeeds_at_least_545201
+#check Sude.finiteTwinFirstSixtySegments
+#print axioms Sude.finiteTwinFirstSixtySegments
+#check Sude.finiteTwinSeeds_at_least_553149
+#print axioms Sude.finiteTwinSeeds_at_least_553149
+#check Sude.finiteTwinFirstSixtyOneSegments
+#print axioms Sude.finiteTwinFirstSixtyOneSegments
+#check Sude.finiteTwinSeeds_at_least_561097
+#print axioms Sude.finiteTwinSeeds_at_least_561097
+#check Sude.finiteTwinFirstSixtyTwoSegments
+#print axioms Sude.finiteTwinFirstSixtyTwoSegments
+#check Sude.finiteTwinSeeds_at_least_569123
+#print axioms Sude.finiteTwinSeeds_at_least_569123
+#check Sude.finiteTwinFirstSixtyThreeSegments
+#print axioms Sude.finiteTwinFirstSixtyThreeSegments
+#check Sude.finiteTwinSeeds_at_least_577066
+#print axioms Sude.finiteTwinSeeds_at_least_577066
+#check Sude.finiteTwinFirstSixtyFourSegments
+#print axioms Sude.finiteTwinFirstSixtyFourSegments
+#check Sude.finiteTwinSeeds_at_least_584965
+#print axioms Sude.finiteTwinSeeds_at_least_584965
+#check Sude.finiteTwinFirstSixtyFiveSegments
+#print axioms Sude.finiteTwinFirstSixtyFiveSegments
+#check Sude.finiteTwinSeeds_at_least_592884
+#print axioms Sude.finiteTwinSeeds_at_least_592884
+#check Sude.finiteTwinFirstSixtySixSegments
+#print axioms Sude.finiteTwinFirstSixtySixSegments
+#check Sude.finiteTwinSeeds_at_least_600804
+#print axioms Sude.finiteTwinSeeds_at_least_600804
+#check Sude.finiteTwinFirstSixtySevenSegments
+#print axioms Sude.finiteTwinFirstSixtySevenSegments
+#check Sude.finiteTwinSeeds_at_least_616493
+#print axioms Sude.finiteTwinSeeds_at_least_616493
+#check Sude.finiteTwinSeeds_at_least_608699
+#print axioms Sude.finiteTwinSeeds_at_least_608699
+
+#check Sude.finiteTwinFirstSixtyNineSegments
+#print axioms Sude.finiteTwinFirstSixtyNineSegments
+#check Sude.finiteTwinSeeds_at_least_624427
+#print axioms Sude.finiteTwinSeeds_at_least_624427
+
+#check Sude.finiteTwinFirstSeventySegments
+#print axioms Sude.finiteTwinFirstSeventySegments
+
+#check Sude.finiteTwinSeeds_at_least_632193
+#print axioms Sude.finiteTwinSeeds_at_least_632193
+
+#check Sude.finite_twin_filtered_base_complete
+#print axioms Sude.finite_twin_filtered_base_complete
+
+#check Sude.finite_twin_filtered_compressed_interval_spec
+#print axioms Sude.finite_twin_filtered_compressed_interval_spec
+
+#check Sude.finiteTwinFirstSeventyOneSegments
+#print axioms Sude.finiteTwinFirstSeventyOneSegments
+
+#check Sude.finiteTwinSeeds_at_least_639985
+#print axioms Sude.finiteTwinSeeds_at_least_639985
+
+#check Sude.finiteTwinCheckedBase_takeWhile_complete
+#print axioms Sude.finiteTwinCheckedBase_takeWhile_complete
+
+#check Sude.finiteTwinTakeWhile_compressed_interval_spec
+#print axioms Sude.finiteTwinTakeWhile_compressed_interval_spec
+
+#check Sude.finite_twin_scan_sqrt_lookahead
+#print axioms Sude.finite_twin_scan_sqrt_lookahead
+
+#check Sude.finite_twin_adaptive_prefix_interval_spec
+#print axioms Sude.finite_twin_adaptive_prefix_interval_spec
+
+#check Sude.finiteTwinFirstSeventyTwoSegments
+#print axioms Sude.finiteTwinFirstSeventyTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_647708
+#print axioms Sude.finiteTwinSeeds_at_least_647708
+
+#check Sude.finiteTwinFirstSeventyThreeSegments
+#print axioms Sude.finiteTwinFirstSeventyThreeSegments
+
+#check Sude.finiteTwinSeeds_at_least_655417
+#print axioms Sude.finiteTwinSeeds_at_least_655417
+
+#check Sude.finiteTwinFirstSeventyFourSegments
+#print axioms Sude.finiteTwinFirstSeventyFourSegments
+
+#check Sude.finiteTwinSeeds_at_least_663216
+#print axioms Sude.finiteTwinSeeds_at_least_663216
+
+#check Sude.finiteTwinFirstNinetySegments
+#print axioms Sude.finiteTwinFirstNinetySegments
+
+#check Sude.finiteTwinSeeds_at_least_786122
+#print axioms Sude.finiteTwinSeeds_at_least_786122
+
+#check Sude.finiteTwinFirstNinetyEightSegments
+#print axioms Sude.finiteTwinFirstNinetyEightSegments
+
+#check Sude.finiteTwinSeeds_at_least_846807
+#print axioms Sude.finiteTwinSeeds_at_least_846807
+
+#check Sude.finiteTwinFirstOneHundredSixSegments
+#print axioms Sude.finiteTwinFirstOneHundredSixSegments
+
+#check Sude.finiteTwinSeeds_at_least_906870
+#print axioms Sude.finiteTwinSeeds_at_least_906870
+
+#check Sude.finiteTwinFirstOneHundredFourteenSegments
+#print axioms Sude.finiteTwinFirstOneHundredFourteenSegments
+
+#check Sude.finiteTwinSeeds_at_least_966527
+#print axioms Sude.finiteTwinSeeds_at_least_966527
+
+#check Sude.finiteTwinFirstOneHundredTwentyTwoSegments
+#print axioms Sude.finiteTwinFirstOneHundredTwentyTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_1025868
+#print axioms Sude.finiteTwinSeeds_at_least_1025868
+
+#check Sude.finiteTwinFirstOneHundredThirtySegments
+#print axioms Sude.finiteTwinFirstOneHundredThirtySegments
+
+#check Sude.finiteTwinSeeds_at_least_1084642
+#print axioms Sude.finiteTwinSeeds_at_least_1084642
+
+#check Sude.finiteTwinFirstOneHundredThirtyEightSegments
+#print axioms Sude.finiteTwinFirstOneHundredThirtyEightSegments
+
+#check Sude.finiteTwinSeeds_at_least_1143362
+#print axioms Sude.finiteTwinSeeds_at_least_1143362
+
+#check Sude.finiteTwinFirstOneHundredFortySixSegments
+#print axioms Sude.finiteTwinFirstOneHundredFortySixSegments
+
+#check Sude.finiteTwinSeeds_at_least_1201581
+#print axioms Sude.finiteTwinSeeds_at_least_1201581
+
+#check Sude.finiteTwinFirstOneHundredFiftyFourSegments
+#print axioms Sude.finiteTwinFirstOneHundredFiftyFourSegments
+
+#check Sude.finiteTwinSeeds_at_least_1259539
+#print axioms Sude.finiteTwinSeeds_at_least_1259539
+
+#check Sude.finiteTwinFirstOneHundredSixtyTwoSegments
+#print axioms Sude.finiteTwinFirstOneHundredSixtyTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_1317156
+#print axioms Sude.finiteTwinSeeds_at_least_1317156
+
+#check Sude.finiteTwinFirstOneHundredSeventySegments
+#print axioms Sude.finiteTwinFirstOneHundredSeventySegments
+
+#check Sude.finiteTwinSeeds_at_least_1374286
+#print axioms Sude.finiteTwinSeeds_at_least_1374286
+
+#check Sude.finiteTwinFirstOneHundredSeventyEightSegments
+#print axioms Sude.finiteTwinFirstOneHundredSeventyEightSegments
+
+#check Sude.finiteTwinSeeds_at_least_1431148
+#print axioms Sude.finiteTwinSeeds_at_least_1431148
+
+#check Sude.finiteTwinFirstOneHundredEightySixSegments
+#print axioms Sude.finiteTwinFirstOneHundredEightySixSegments
+
+#check Sude.finiteTwinSeeds_at_least_1487968
+#print axioms Sude.finiteTwinSeeds_at_least_1487968
+
+#check Sude.finiteTwinFirstOneHundredNinetyFourSegments
+#print axioms Sude.finiteTwinFirstOneHundredNinetyFourSegments
+
+#check Sude.finiteTwinSeeds_at_least_1544368
+#print axioms Sude.finiteTwinSeeds_at_least_1544368
+
+#check Sude.finiteTwinFirstTwoHundredTwoSegments
+#print axioms Sude.finiteTwinFirstTwoHundredTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_1600771
+#print axioms Sude.finiteTwinSeeds_at_least_1600771
+
+#check Sude.finiteTwinFirstTwoHundredTenSegments
+#print axioms Sude.finiteTwinFirstTwoHundredTenSegments
+
+#check Sude.finiteTwinSeeds_at_least_1656868
+#print axioms Sude.finiteTwinSeeds_at_least_1656868
+
+#check Sude.finiteTwinFirstTwoHundredEighteenSegments
+#print axioms Sude.finiteTwinFirstTwoHundredEighteenSegments
+
+#check Sude.finiteTwinSeeds_at_least_1712757
+#print axioms Sude.finiteTwinSeeds_at_least_1712757
+
+#check Sude.finiteTwinFirstTwoHundredTwentySixSegments
+#print axioms Sude.finiteTwinFirstTwoHundredTwentySixSegments
+
+#check Sude.finiteTwinSeeds_at_least_1768125
+#print axioms Sude.finiteTwinSeeds_at_least_1768125
+
+#check Sude.finiteTwinFirstTwoHundredThirtyFourSegments
+#print axioms Sude.finiteTwinFirstTwoHundredThirtyFourSegments
+
+#check Sude.finiteTwinSeeds_at_least_1823340
+#print axioms Sude.finiteTwinSeeds_at_least_1823340
+
+#check Sude.finiteTwinFirstTwoHundredFortyTwoSegments
+#print axioms Sude.finiteTwinFirstTwoHundredFortyTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_1878370
+#print axioms Sude.finiteTwinSeeds_at_least_1878370

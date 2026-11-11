@@ -1,0 +1,4 @@
+import Sude.FWSeedActiveMidpointsOfTheta
+
+#check Sude.bmor_fw_seed_fresh_active_role_midpoints_of_theta
+#print axioms Sude.bmor_fw_seed_fresh_active_role_midpoints_of_theta

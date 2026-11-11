@@ -1,0 +1,959 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "scope": "Complete audited import inventory for Sude.sude_first_theorem and Sude.sude_first_theorem_values (Lean-checked proof relative to Sude.FiniteWitness for positive odd n < 2000 and 15 verbatim published analytic hypotheses from Rosser-Schoenfeld 1962, Bennett-Martin-O'Bryant-Rechnitzer 2018, and Montgomery-Vaughan 1973). Also retains the unused legacy Sude.BMORFinitePiFour record for historical provenance.",
+  "scientific_revision": "67647907ad0693631f42c169df61cbe46a13a3ff",
+  "source_normalization": {
+    "prime_enumeration": "p_j is the j-th prime including p_1 = 2; j is a positive integer. Lean's primeOneBased j := Nat.nth Nat.Prime (j - 1) satisfies primeOneBased 1 = 2 and primeOneBased 2 = 3.",
+    "odd_prime_pool": "oddPrime i := Nat.nth Nat.Prime (i + 1), starting at oddPrime 0 = 3; pool n := Set.range (fun i : Fin (n*n) => oddPrime i.val) contains the first n^2 odd primes.",
+    "prime_count_real": "primeCountReal x := (((Finset.range (Nat.floor x + 1)).filter Nat.Prime).card : ℝ) counts primes p <= x on x >= 0, matching pi(x) in RS62 equation (1.1), p. 65.",
+    "logarithm": "natural logarithm (Real.log in Mathlib)",
+    "pool_maximum": "X = poolMaximum n := Nat.nth Nat.Prime (n*n) = p_(n^2+1) for n > 0",
+    "theta_ap": "thetaAP x q a := sum over p in Finset.range (Nat.floor x + 1) of (if Nat.Prime p and (p : ℤ) % q = a % q then Real.log p else 0), matching theta(x;q,a) in BMOR (1.5), p. 429 and theta(x) = thetaAP x 1 0 in RS62 (1.2), p. 65 on x >= 1.",
+    "bmor_x2": "bmorLimit q implements x_2(q) in BMOR (1.18), p. 435 on 1 <= q <= 10^5: x_2(1)=10^12; if q = 2 (mod 4) then x_2(q)=x_2(q/2); otherwise x_2(3)=x_2(4)=x_2(5)=4*10^13, x_2(q)=10^13 for 5<q<=100, x_2(q)=10^12 for 100<q<=10^4, and x_2(q)=10^11 for 10^4<q<=10^5.",
+    "chebyshev_psi_ap": "chebyshevPsiAP x q a := sum over n in Finset.Icc 1 (Nat.floor x) of (if (n : ℤ) % q = a % q then ArithmeticFunction.vonMangoldt n else 0), matching psi(x;q,a) in BMOR (1.6), p. 430; proved equal to psiAP x q a for x >= 2 in Sude.chebyshevPsiAP_eq_psiAP.",
+    "bmor_critical_zeros": "bmorIsCriticalZero χ ρ := 0 < ρ.re ∧ ρ.re < 1 ∧ DirichletCharacter.LFunction χ ρ = 0 (excluding Re ρ = 0 so imprimitive Euler factors never vanish, matching Z(χ) in BMOR Section 2.1, p. 438); bmorZeroMult χ ρ uses analyticOrderNatAt inside 0 < Re ρ < 1; bmorZeroCount χ T sums bmorZeroMult over |Im ρ| <= T (matching N(T,χ) in BMOR Definition 2.2, p. 440); bmorSatisfiesGRH χ H asserts Re ρ = 1/2 for all critical zeros with |Im ρ| <= H.",
+    "bmor_explicit_formula_terms": "bmorSmoothFactor r τ = τ^(-r) * sum_{j=0}^r C(r,j)*(1 + j*τ)^(r+1) matches A_m(δ) in BMOR (2.4), p. 439; bmorU, bmorV, bmorW match U_{q,m}(x;δ,H), V_{q,m}(x;δ,H), W_q(x) in BMOR (2.5)-(2.7), p. 439 (with 67/5 = 13.4); bmorC1 = 399/1000 = 0.399, bmorC2 = 5338/1000 = 5.338 (Definition 2.4, p. 441); bmorVerifiedHeight d = 30610046000 for d=1 and 10^8/d for 1<d<=100000 (Definition 2.6, p. 441); bmorZeroFreeR = 28/5 = 5.6 (Proposition 4.34, pp. 478-479).",
+    "mv_pi": "pi(x+y;k,a) - pi(x;k,a) for x > 0, y > 0 is counted exactly by (apInterval x (x+y) k (a : ℤ)).card, which filters primes p with x < p <= x+y and p = a (mod k).",
+    "bmor_pi_four": "Legacy hypothesis Sude.BMORFinitePiFour in Sude/BMORFinitePiFour.lean:36 (NOT used by Sude.sude_first_theorem, Sude.sude_first_theorem_values, or Sude.tail_hasSquare; the file is imported only for the definitions liFromTwo and oddPrimeCountReal)."
+  },
+  "exempt_finite_family": {
+    "lean_proposition": "Sude.FiniteWitness",
+    "lean_file": "Sude/Statement.lean:45",
+    "statement": "∀ n, 0 < n → Odd n → n < 2000 → Sude.HasSquare n",
+    "provenance": "Corresponds to the 1,000 positive odd orders 1 <= n <= 1999 in problems/prime-line-sums/manuscripts/cutoff2_finite_remainder_squares.md (compressed witness SHA-256 5f8be996b548afac76e276088da5a094e3ff4375075ecea14aec77c71522b27c); retained as an explicit exempt premise per project trust boundary."
+  },
+  "published_sources": {
+    "RS62": {
+      "citation": "J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois Journal of Mathematics 6 (1962), 64-94",
+      "doi": "10.1215/ijm/1255631807",
+      "source_url": "https://denisevellachemla.eu/Rosser-Schoenfeld-1962.pdf",
+      "inspected_pdf_sha256": "8e37b06f82e09421bceb2502578c47b61469141f0287e6acedb70e01765ab556",
+      "locator": "printed pp. 69-70: Theorem 2 (3.3)-(3.4), Corollary 1 (3.5)-(3.6), Theorem 3 (3.10)-(3.11), Corollary (3.12)-(3.13), and Theorem 4 (3.15)"
+    },
+    "BMOR": {
+      "citation": "Michael A. Bennett, Greg Martin, Kevin O'Bryant and Andrew Rechnitzer, Explicit bounds for primes in arithmetic progressions, Illinois Journal of Mathematics 62 (2018), 427-532 (arXiv:1802.00085v3)",
+      "source_url": "https://personal.math.ubc.ca/~bennett/BeMaObRe-IJM-2018.pdf",
+      "inspected_pdf_sha256": "958b0390475236b68afdec28ce006b1a1d6ac59484eea9443e0b287e9f61a541",
+      "locator": "Theorem 1.9 theta conjunct and (1.18), pp. 434-435; Proposition 2.1 (2.3)-(2.7), pp. 438-439; Proposition 2.5 (2.10), p. 441; Definition 2.6 and Proposition 2.7, p. 441; Definition 3.1 (p. 451) and Proposition 4.34, pp. 478-479",
+      "finite_computation": "The published finite computations supporting Theorem 1.9 and Proposition 2.7 are imported as part of those published statements; they are not reconstructed in Lean and do not introduce any global RH or GRH assumption."
+    },
+    "MV73": {
+      "citation": "H. L. Montgomery and R. C. Vaughan, The large sieve, Mathematika 20 (1973), 119-134",
+      "doi": "10.1112/S0025579300004708",
+      "source_url": "https://personal.science.psu.edu/rcv4/personal/Publications/large_sieve.pdf",
+      "locator": "Theorem 2, equation (1.10), printed p. 121, PDF page 3",
+      "source_note": "The primary paper was inspected; equation (1.11) and its unspecified constant are not used."
+    }
+  },
+  "fields": [
+    {
+      "lean_name": "Sude.FiniteWitness",
+      "lean_proposition": "Sude.FiniteWitness",
+      "lean_file": "Sude/Statement.lean:45",
+      "used_in_final_theorem": true,
+      "kind": "exempt_finite_family_assumption",
+      "source": "exempt_finite_family",
+      "locator": "Positive odd orders n < 2000 (1,000 finite instances, FR1-FR5 in cutoff2_finite_remainder_squares.md)",
+      "statement": "For all n : Nat, 0 < n -> Odd n -> n < 2000 -> Sude.HasSquare n.",
+      "domain_and_exceptions": "Covers positive odd n < 2000 only; n = 1 is also unconditionally proved in Lean as Sude.square_one.",
+      "applications": [
+        {
+          "lean": "Sude.sude_first_theorem",
+          "purpose": "Discharges the finite small-order case n < 2000 in compose_finite_and_open_tail."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSPrimeCountLowerSharp",
+      "lean_proposition": "Sude.RSPrimeCountLowerSharp",
+      "lean_file": "Sude/RSPrimeCountImports.lean:56",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 2, equation (3.3), printed p. 69",
+      "statement": "For every real x >= 67, x / (ln(x) - 1/2) < primeCountReal x.",
+      "domain_and_exceptions": "x >= 67; strict inequality; primeCountReal x counts primes p <= x including 2.",
+      "applications": [
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Supplies sharp prime-count lower bounds for pool-mean enclosures in FC2KT75AnalyticSupply."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Supplies sharp prime-count lower bounds in UpperTailAnalytic pool-mean and scale enclosures."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSPrimeCountUpperSharp",
+      "lean_proposition": "Sude.RSPrimeCountUpperSharp",
+      "lean_file": "Sude/RSPrimeCountImports.lean:61",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 2, equation (3.4), printed p. 69",
+      "statement": "For every real x > exp(3/2), primeCountReal x < x / (ln(x) - 3/2).",
+      "domain_and_exceptions": "Strict domain x > exp(3/2) where ln(x) - 3/2 > 0; strict upper inequality.",
+      "applications": [
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Supplies sharp prime-count upper bounds for pool-mean enclosures in FC2KT75AnalyticSupply."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Supplies sharp prime-count upper bounds in UpperTailAnalytic."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSPrimeCountLower",
+      "lean_proposition": "Sude.RSPrimeCountLower",
+      "lean_file": "Sude/RSPrimeCountImports.lean:66",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 2 Corollary 1, equation (3.5), printed p. 69",
+      "statement": "For every real x >= 17, x / ln(x) < primeCountReal x.",
+      "domain_and_exceptions": "x >= 17; strict inequality.",
+      "applications": [
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Bundled in RSPrimeCountImports for pool-mean integration bounds."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Supplies all-scale prime-count lower bounds on [17, X] in UpperTailAnalytic."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSPrimeCountUpper",
+      "lean_proposition": "Sude.RSPrimeCountUpper",
+      "lean_file": "Sude/RSPrimeCountImports.lean:71",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 2 Corollary 1, equation (3.6), printed p. 69",
+      "statement": "For every real x > 1, primeCountReal x < (62753 / 50000) * x / ln(x).",
+      "domain_and_exceptions": "x > 1; 62753/50000 = 1.25506 exact printed constant; strict inequality.",
+      "applications": [
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Controls low-range integral of pi(t) in pool-mean enclosures."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Controls low-range integral of pi(t) and prefix prime counts in UpperTailAnalytic and UpperTailGrowth."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSIndexLowerSharp",
+      "lean_proposition": "Sude.RSIndexLowerSharp",
+      "lean_file": "Sude/FWSharpIndex.lean:10",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 3, equation (3.10), printed p. 69",
+      "statement": "For every integer j >= 2, j*(ln(j)+ln(ln(j))-3/2) < p_j.",
+      "domain_and_exceptions": "j is a natural number at least 2; no assertion is imported for j < 2. This is the separate sharp lower estimate, not the weaker Corollary (3.12).",
+      "applications": [
+        {
+          "lean": "Sude.fw_poolMaximum_gt_twenty_one_sq",
+          "purpose": "Substitute j=n*n+1 and derive 21*n*n < X for n>=19485."
+        },
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Sharp lower bound on poolMaximum n across 2001 <= n <= 19483."
+        },
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Sharp lower bound on poolMaximum n across 19485 <= n <= 35733."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Sharp lower bound on poolMaximum n for n >= 35735."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSIndexImports.upper_sharp",
+      "lean_proposition": "Sude.RSIndexUpperSharp",
+      "lean_file": "Sude/PrimeIndex.lean:39",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 3, equation (3.11), printed p. 69",
+      "statement": "For every integer j >= 20, p_j < j*(ln(j)+ln(ln(j))-1/2).",
+      "domain_and_exceptions": "j is a natural number at least 20; no assertion is imported for j < 20.",
+      "applications": [
+        {
+          "lean": "Sude.poolMaximum_upper_sharp",
+          "purpose": "Substitute the exact pool index j=n*n+1."
+        },
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Sharp upper bound on poolMaximum n in FC2K band."
+        },
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Sharp upper bound on poolMaximum n in FW/EW bands."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSIndexImports.lower",
+      "lean_proposition": "Sude.RSIndexLower",
+      "lean_file": "Sude/PrimeIndex.lean:43",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 3 Corollary, equation (3.12), printed p. 69",
+      "statement": "For every integer j >= 1, j*ln(j) < p_j.",
+      "domain_and_exceptions": "j is a positive natural number; no assertion is imported at j=0.",
+      "applications": [
+        {
+          "lean": "Sude.poolMaximum_lower",
+          "purpose": "Substitute the exact pool index j=n*n+1."
+        },
+        {
+          "lean": "Sude.poolMaximum_log_lower",
+          "purpose": "Lower logarithmic scale for poolMaximum n."
+        },
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Pool containment of twin-prime seed pool and logarithmic bounds."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "All-scale logarithmic lower bounds for n >= 35735."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSIndexImports.upper",
+      "lean_proposition": "Sude.RSIndexUpper",
+      "lean_file": "Sude/PrimeIndex.lean:46",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 3 Corollary, equation (3.13), printed p. 69",
+      "statement": "For every integer j >= 6, p_j < j*(ln(j)+ln(ln(j))).",
+      "domain_and_exceptions": "j is a natural number at least 6; no assertion is imported for j < 6.",
+      "applications": [
+        {
+          "lean": "Sude.poolMaximum_below_two_pow_41",
+          "purpose": "Prove X < 2^41 uniformly on 3 <= n <= 2^18."
+        },
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Upper bound on poolMaximum n for BMOR cutoff verification."
+        },
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Upper bound on poolMaximum n for BMOR cutoff verification."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "All-scale upper bound X < n^3 and log(X) bounds for n >= 35735."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.RSThetaUpper",
+      "lean_proposition": "Sude.RSThetaUpper",
+      "lean_file": "Sude/BMORExplicitFormulaImports.lean:56",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "RS62",
+      "locator": "Theorem 4, equation (3.15), printed p. 70",
+      "statement": "For every real t > 1, thetaAP t 1 0 < t + t / (2 * ln(t)).",
+      "domain_and_exceptions": "Strict domain t > 1; thetaAP t 1 0 sums ln(p) over all primes p <= t.",
+      "applications": [
+        {
+          "lean": "Sude.bmorExplicitFormulaImports_of_published",
+          "purpose": "Bounds proper prime powers psi(x;q,a) - theta(x;q,a) when passing from explicit-formula psi bounds to theta bounds."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORFiniteImports.theta",
+      "lean_proposition": "Sude.BMORFiniteTheta",
+      "lean_file": "Sude/BMORFinite.lean:68",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "BMOR",
+      "locator": "Theorem 1.9 theta conjunct and (1.18), printed pp. 434-435",
+      "statement": "For each integer q with 1<=q<=10^5, integer a with gcd(a,q)=1, and reals 1<=y<=x<=x2(q), abs(theta(y;q,a)-y/phi(q)) <= (259/125)*sqrt(x). This is the pointwise form of the printed maximum over y in [1,x].",
+      "domain_and_exceptions": "1 <= q <= 10^5, Nat.Coprime q a.natAbs, 1 <= y <= x <= bmorLimit q. Retains exact modulus-dependent cutoff x_2(q) including x_2(2)=10^12 and x_2(4)=4*10^13.",
+      "applications": [
+        {
+          "lean": "Sude.bmor_theta_pointwise",
+          "purpose": "Pointwise theta bound on [1, x_2(q)]."
+        },
+        {
+          "lean": "Sude.bmor_theta_two_via_four",
+          "purpose": "Modulus-two theta bound up to 4*10^13 via disjoint classes mod 4."
+        },
+        {
+          "lean": "Sude.fc2k_hasSquare",
+          "purpose": "Finite-scale bridge, wide, central-stock, and target prime-progression supplies."
+        },
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Finite-scale bridge, wide, growth, central-stock, and target prime-progression supplies."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Covers scales below the explicit-formula crossover (up to 4*10^13 / 10^13) in UpperTailAnalytic."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORProp2_1",
+      "lean_proposition": "Sude.BMORProp2_1",
+      "lean_file": "Sude/BMORPublishedExplicitFormula.lean:644",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "BMOR",
+      "locator": "Proposition 2.1, equations (2.3)-(2.7), printed pp. 438-439",
+      "statement": "For q >= 1, gcd(q,a)=1, x > 2, H >= 1, m >= 1, 0 < delta < (x-2)/(m*x), if every Dirichlet character mod q satisfies GRH(1), then (phi(q)/x)*|chebyshevPsiAP x q a - x/phi(q)| < U_{q,m}(x;delta,H) + m*delta/2 + V_{q,m}(x;delta,H) + W_q(x).",
+      "domain_and_exceptions": "Verbatim smoothed explicit formula with U_{q,m}, V_{q,m}, W_q defined exactly as in BMOR (2.4)-(2.7), p. 439 (including 67/5 = 13.4 and critical-strip zero multiset Z(χ) on 0 < Re ρ < 1).",
+      "applications": [
+        {
+          "lean": "Sude.bmorExplicitFormulaImports_of_published",
+          "purpose": "Primary explicit-formula input used to prove BMORSmoothedPsiSmallModuli and BMORSmoothedPsiModTwo in Lean."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORProp2_5",
+      "lean_proposition": "Sude.BMORProp2_5",
+      "lean_file": "Sude/BMORPublishedExplicitFormula.lean:655",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "BMOR",
+      "locator": "Proposition 2.5, equation (2.10), printed p. 441",
+      "statement": "For q >= 1, Dirichlet character χ mod q with primitive conductor d = χ.conductor, and T >= 1, |N(T,χ) - (T/pi)*ln(d*T/(2*pi*e))| < 0.399*ln(d*T) + 5.338.",
+      "domain_and_exceptions": "T >= 1; retains primitive conductor d = χ.conductor as printed in BMOR Definition 2.2 and Proposition 2.5, p. 440-441.",
+      "applications": [
+        {
+          "lean": "Sude.bmorExplicitFormulaImports_of_published",
+          "purpose": "Controls finite Stieltjes summation by parts over low-zero and high-zero ordinates in BMORPublishedExplicitFormula."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORProp2_7",
+      "lean_proposition": "Sude.BMORProp2_7",
+      "lean_file": "Sude/BMORPublishedExplicitFormula.lean:664",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "BMOR",
+      "locator": "Definition 2.6 and Proposition 2.7, printed p. 441 (citing Platt 2016, 2017)",
+      "statement": "Every primitive Dirichlet character χ of conductor d <= 100000 satisfies GRH(H_0(d)), where H_0(1) = 30610046000 and H_0(d) = 10^8 / d for 1 < d <= 100000.",
+      "domain_and_exceptions": "1 <= d <= 100000, χ.IsPrimitive; extended to imprimitive characters in Lean via Sude.bmorSatisfiesGRH_of_primitive.",
+      "applications": [
+        {
+          "lean": "Sude.bmorExplicitFormulaImports_of_published",
+          "purpose": "Establishes GRH(1) premise of Proposition 2.1 and Re ρ = 1/2 up to verified critical-line height H_0(d)."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORProp4_34",
+      "lean_proposition": "Sude.BMORProp4_34",
+      "lean_file": "Sude/BMORPublishedExplicitFormula.lean:673",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "BMOR",
+      "locator": "Definition 3.1 (p. 451) and Proposition 4.34, printed pp. 478-479",
+      "statement": "For 1 <= q <= 100000 and any critical-strip zero ρ of L(s,χ) (χ mod q), either |Im ρ| <= 10^8/q and Re ρ = 1/2, or |Im ρ| > 10^8/q and Re ρ <= 1 - 1 / (5.6 * ln(χ.conductor * |Im ρ|)).",
+      "domain_and_exceptions": "1 <= q <= 100000; unconditional zero-free constant R = 5.6 = 28/5; retains primitive conductor χ.conductor.",
+      "applications": [
+        {
+          "lean": "Sude.bmorExplicitFormulaImports_of_published",
+          "purpose": "Bounds Re ρ <= 1 - 1 / (5.6 * ln(χ.conductor * |Im ρ|)) for high critical-strip zeros |Im ρ| > H inside U_{q,m}(x;δ,H) (bmorU)."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.MVBrunTitchmarsh",
+      "lean_proposition": "Sude.MVBrunTitchmarsh",
+      "lean_file": "Sude/MontgomeryVaughan.lean:12",
+      "used_in_final_theorem": true,
+      "kind": "published_theorem_assumption",
+      "source": "MV73",
+      "locator": "Theorem 2, equation (1.10), printed p. 121",
+      "statement": "For all positive real x,y and positive integers k,a with gcd(k,a)=1 and y>k, the number of primes p in (x,x+y] congruent to a mod k is strictly less than 2*y/(phi(k)*ln(y/k)).",
+      "domain_and_exceptions": "x>0, y>0, k>0, a>0, gcd(k,a)=1, y>k. No extra scale threshold or unspecified constant. Natural logarithm. The published (1.11) is not imported.",
+      "applications": [
+        {
+          "lean": "Sude.fw_and_ew_hasSquare",
+          "purpose": "Upper-bounds short-interval neighbour counts in Brun-Titchmarsh prefix growth across 19485 <= n <= 35733."
+        },
+        {
+          "lean": "Sude.upper_tail_hasSquare",
+          "purpose": "Upper-bounds short-interval neighbour counts in all-scale Brun-Titchmarsh prefix growth for n >= 35735."
+        }
+      ]
+    },
+    {
+      "lean_name": "Sude.BMORFinitePiFour",
+      "lean_proposition": "Sude.BMORFinitePiFour",
+      "lean_file": "Sude/BMORFinitePiFour.lean:36",
+      "used_in_final_theorem": false,
+      "kind": "unused_legacy_hypothesis",
+      "source": "BMOR",
+      "locator": "Appendix A.3, (A.2)-(A.3) and Table 4, printed pp. 513-516; Li definition (1.4), p. 429",
+      "statement": "For a=1 or 3 and 2<=x<=4*10^13, abs(pi(x;4,a)-Li(x)/2) <= (281649/125000)*sqrt(x)/ln(x), where Li(x)=integral from 2 to x of 1/ln(t).",
+      "domain_and_exceptions": "NOT USED by Sude.sude_first_theorem, Sude.sude_first_theorem_values, or Sude.tail_hasSquare; while Sude/BMORFinitePiFour.lean is imported for the benign definitions liFromTwo and oddPrimeCountReal, the proposition BMORFinitePiFour itself is retained solely as a legacy declaration. All prime-progression and pool-mean estimates in the final proof are derived using BMORFiniteTheta, BMORProp2_1/2_5/2_7/4_34, and RS62 without BMORFinitePiFour.",
+      "applications": []
+    }
+  ],
+  "not_yet_mapped": [],
+  "library_theorems": [
+    {
+      "lean_name": "Real.log_two_lt_d9",
+      "statement": "ln(2)<0.6931471808, as an exact rational inequality",
+      "source": "mathlib Mathlib/Analysis/Complex/ExponentialBounds.lean at revision 0df444a360eaa60ab8c11dca51a86af692955474",
+      "application": "Sude.poolMaximum_below_two_pow_41 and Sude.poolMaximum_below_two_pow_44",
+      "status": "already proved in mathlib; no external assumption"
+    },
+    {
+      "lean_name": "Equiv.Perm.exists_extending_pair",
+      "statement": "For two injections from a finite type into one common type, a permutation maps the first injection pointwise to the second.",
+      "source": "mathlib Mathlib/Logic/Equiv/Fintype.lean at revision 0df444a360eaa60ab8c11dca51a86af692955474",
+      "application": "Sude.place_distinct_pool_entries and Sude.place_distinct_pool_entries_preserving",
+      "status": "already proved in mathlib; no external assumption; uses classical choice"
+    },
+    {
+      "lean_name": "lucas_primality",
+      "statement": "If a modulo p has (p-1)-st power 1 and its ((p-1)/q)-th power is not 1 for each prime divisor q of p-1, then p is prime.",
+      "source": "mathlib Mathlib/NumberTheory/LucasPrimality.lean at revision 0df444a360eaa60ab8c11dca51a86af692955474",
+      "application": "Sude.Lucas.nodeValid_prime",
+      "status": "already proved in mathlib; no external assumption"
+    },
+    {
+      "lean_name": "Finset.all_card_le_biUnion_card_iff_existsInjective'",
+      "statement": "For a finite family of finite sets, Hall cardinality inequalities are equivalent to the existence of an injective choice of representatives.",
+      "source": "mathlib Mathlib/Combinatorics/Hall/Finite.lean at revision 0df444a360eaa60ab8c11dca51a86af692955474",
+      "application": "Sude.LayerPacking.dense_allowed_matching",
+      "status": "already proved in mathlib; no external assumption"
+    }
+  ],
+  "pending_selected_source_statements": [],
+  "project_lemmas": [
+    {
+      "lean_name": "Sude.RectanglePacking.rp1_exact_packing",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1",
+      "scope": "Explicit cyclic construction for J>=3 and 2J+1<=n, arbitrary main/anti choices; all row and column slots distinct, each four-cell rectangle has the required diagonal exclusions, center avoidance and disjoint supports. No prime supplies or controller conclusions."
+    },
+    {
+      "lean_name": "Sude.RectanglePacking.packed_main_then_anti",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1-RP2",
+      "scope": "Connects constructed disjoint coordinates to two physical diagonal trades, conditional on actual equal-gap values already occupying those coordinates."
+    },
+    {
+      "lean_name": "Sude.place_distinct_pool_entries_preserving",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP2-RP3; finite permutation completion interface",
+      "scope": "Extends any injective assignment of actual pool values at distinct cells while preserving reserved cells, conditional on cell and value disjointness; does not prove balanced completion."
+    },
+    {
+      "lean_name": "Sude.RectanglePacking.place_and_trade_packed_pairs",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1-RP2",
+      "scope": "Composes placement, reservation preservation and two trades, conditional on a supplied injective family of equal-gap pool values; no prime-pair existence or controller conclusion."
+    },
+    {
+      "lean_name": "Sude.binary_even_grid",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF1 and FPF3",
+      "scope": "All even subset sums through 2^(P+1)-2 for the distinct labelled binary gaps; does not establish any prime pairs."
+    },
+    {
+      "lean_name": "Sude.completeEvenGrid_insert",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 3; finite-prefix bridge rule",
+      "scope": "A fresh even gap no larger than R+2 extends an existing complete even grid through R+gap. Physical bridge pairs and finite numerical gates remain open."
+    },
+    {
+      "lean_name": "Sude.verticalPairs_toggle_subset",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 3",
+      "scope": "Any subset of already supplied, distinct-column physical row pairs is switched while tracking all row effects and preserving columns, diagonals, reservations and unselected entries."
+    },
+    {
+      "lean_name": "Sude.vertical_binary_correction",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF3; cutoff2_controller_finite2001.md section 3",
+      "scope": "Binary grid is realized by actual swaps under explicit physical pair and gap hypotheses. Prime-pair existence, placement and controller routing remain open."
+    },
+    {
+      "lean_name": "Sude.vertical_grid_correction",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 3",
+      "scope": "Connects any proved complete subset-sum grid, including an extended bridge grid, to actual row swaps under explicit physical pair and reservation hypotheses; does not establish bridge pairs or finite numerical gates."
+    },
+    {
+      "lean_name": "Sude.binary_prime_family_disjoint",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF2",
+      "scope": "Proves disjoint endpoints for arbitrary actual primes above three with a common power-of-two gap, using the modulo-three obstruction; no finite population counts are proved."
+    },
+    {
+      "lean_name": "Sude.pairFootprint_card",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF1-FPF2",
+      "scope": "A supplied positive-gap matching has exactly two distinct endpoints per pair."
+    },
+    {
+      "lean_name": "Sude.availablePairs_card_lower",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF2-FPF3",
+      "scope": "Each previously reserved value eliminates at most one pair in a supplied matching; cross-stage population generation remains open."
+    },
+    {
+      "lean_name": "Sude.select_available_pairs",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF1-FPF3",
+      "scope": "Selects an exact requested number of matching pairs after charging earlier reservations, conditional on a sufficient candidate count."
+    },
+    {
+      "lean_name": "Sude.place_pair_family_preserving",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF2; cutoff2_controller_finite2001.md section 3",
+      "scope": "Installs a supplied positive-gap matching in supplied distinct cells of an exact pool permutation, preserving earlier reservations; actual pool membership and cell geometry are explicit hypotheses."
+    },
+    {
+      "lean_name": "Sude.prime_mem_pool_of_oddPrefix_card_le",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF1",
+      "scope": "For B>=2, proves every odd prime through B belongs to the first n² odd primes when the exact odd-prime count through B is <=n²; the five reported numerical counts are not yet certified."
+    },
+    {
+      "lean_name": "Sude.select_binary_pool_pairs",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_prefix_family.md FPF1-FPF3",
+      "scope": "Composes a conditional odd-prefix bound, actual candidate primality, fixed-gap matching, reservation depletion and exact Q selection into 2Q distinct actual-pool entries; no large finite count is assumed as an import."
+    },
+    {
+      "lean_name": "Sude.Lucas.checkCertificate_sound",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/code/cutoff2_finite_target_table.py verify_primes",
+      "scope": "Soundness of recursively checked Lucas node factorization and modular gcd conditions, starting without assumed primes; acceptance of the full table is not established."
+    },
+    {
+      "lean_name": "Sude.Lucas.firstTargets_prime",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json, row n=2001 and its recursive Lucas closure",
+      "scope": "All three actual first-row targets are prime by kernel evaluation of the 25-node Lucas closure. Actual pool maximum and total, all other rows and the controller remain unproved."
+    },
+    {
+      "lean_name": "Sude.Lucas.targetRowValid_real_radius",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT4-FTT5",
+      "scope": "Translates the exact natural absolute-difference gate to the real target-radius bound with an explicitly positive order; row X and T remain literal."
+    },
+    {
+      "lean_name": "Sude.Lucas.Generated.firstHundred_cover",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json rows 2001 through 2199; cutoff2_finite_target_table.md FTT1-FTT5",
+      "scope": "Kernel checks 1052 recursive Lucas nodes and row primality, compatibility, radius and mean arithmetic for the first 100 odd orders. Pool maximum and total identities are open; see first250_cover for the larger checked interval."
+    },
+    {
+      "lean_name": "Sude.Lucas.Generated.first250_cover",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json rows 2001 through 2499; cutoff2_finite_target_table.md FTT1-FTT5",
+      "scope": "Kernel checks 2418 recursive Lucas nodes and row arithmetic for the first 250 odd orders. Pool identities remain open; see first425_cover for the larger checked interval."
+    },
+    {
+      "lean_name": "Sude.Lucas.pool_target_system",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT1-FTT5; cutoff2_controller_finite2001.md section 1",
+      "scope": "Constructs the repeated q/P/R labelled prime target list, proves oddness, actual-pool real radius, both axis-total identities and the prime diagonal target, conditional on identifying the row X and T with the actual pool. Individual diagonal corrections and the pool-prefix computation remain open."
+    },
+    {
+      "lean_name": "Sude.Lucas.Generated.first425_cover",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json rows 2001 through 2849; cutoff2_finite_target_table.md FTT1-FTT5",
+      "scope": "Kernel checks 3918 recursive Lucas nodes and row primality, oddness, compatibility, radius, mean and integer-domain arithmetic for all first 425 odd orders. Pool maximum and total identities and remaining 8317 rows are open."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.physical_balanced_layer",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md PB section 4, PB8-PB9",
+      "scope": "Constructs an off-diagonal derangement layer, disjoint from reservations, with exactly two distinct cells per row and column, under explicit load and size bounds; no prime supplies."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.place_physical_balanced_layer",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md PB section 4, PB8-PB9",
+      "scope": "Installs explicitly supplied distinct pool entries and pair gaps into a balanced physical layer, preserving earlier reserved cells and entries."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.physical_two_layers",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md PB section 4, PB8-PB9",
+      "scope": "Packs two successive balanced layers without cell reuse; see pack_and_install_two_networks for arbitrary finite row and column sequences under explicit supplied-value hypotheses."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.pack_and_install_finite_layers",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md section 4, PB8-PB9",
+      "scope": "Arbitrary finite row layers of supplied derangements, with pairwise-disjoint actual cells, exact aggregate row/column counts, all supplied distinct pool values and gap equations, and preservation of initial reservations; supply and load premises explicit."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.pack_and_install_column_layers",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md section 4, PB8-PB9",
+      "scope": "Transposes the construction to original coordinates and avoids both diagonals for network cells. Transposition itself preserves the labelled diagonal sums; installation preserves initial reserved entries but may rearrange unreserved diagonal entries."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.pack_and_install_two_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md section 4, PB8-PB9",
+      "scope": "Composes row and column layer networks with separate globally injective and mutually disjoint pool-value families, retaining all actual placements and gaps and exact combined per-line counts; no supplies or flow theorem are assumed as imports."
+    },
+    {
+      "lean_name": "Sude.LayerPacking.pb9_capacity_for_two_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md section 4, PB8-PB9",
+      "scope": "Proves the integer PB8--PB9 capacity substitution given the exact count of d*S layers; numerical premises remain open."
+    },
+    {
+      "lean_name": "Sude.toggle_two_installed_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/Physical pair-switch identities from explicit_controller.md section 4",
+      "scope": "Performs arbitrary selected installed row and column swaps with exact signed line effects, preserving columns during row switches, rows during column switches, both diagonals, prior reservations and pool; does not construct the selected sets."
+    },
+    {
+      "lean_name": "Sude.square_of_selected_network_transfers",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/explicit_controller.md sections 3–4",
+      "scope": "Derives the exact public square only from an actual installed placement, prime targets and diagonals, and actual selected subsets satisfying every displayed transfer; selection and controller remain open."
+    },
+    {
+      "lean_name": "Sude.centered_even_grid",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/explicit_controller.md section 4; cutoff2_finite_prefix_family.md FPF3",
+      "scope": "Proves signed even subset sums relative to the lower even midpoint and its exact rounding bound, assuming an actual complete even grid."
+    },
+    {
+      "lean_name": "Sude.vertical_centered_reference",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/explicit_controller.md section 4",
+      "scope": "Constructs a fixed physical reference orientation with all stated even signed transfers available through actual swaps; this handles one supplied reservoir, not a multi-edge flow."
+    },
+    {
+      "lean_name": "Sude.simultaneous_centered_subsets",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3 and 7; explicit_controller.md section 4",
+      "scope": "Finite disjoint reservoirs have one fixed reference and simultaneously chosen subsets for any supplied bounded even transfers, assuming each complete grid and pairwise block disjointness."
+    },
+    {
+      "lean_name": "Sude.twoNetworks_centered_transfers",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3 and 7; explicit_controller.md section 4",
+      "scope": "Realizes supplied even row and column edge transfers simultaneously by actual disjoint pair swaps from one reference, with exact line effects and reservation/diagonal/pool preservation; no flow existence."
+    },
+    {
+      "lean_name": "Sude.twoNetworks_realize_bounded_integer_flows",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3 and 7; explicit_controller.md section 4",
+      "scope": "Realizes any supplied integral flows bounded by floor(N/2) when each explicit reservoir grid has coverage >=2N; all line corrections are twice directed divergences. Does not establish the needed flows, reservoirs or midpoint identity."
+    },
+    {
+      "lean_name": "Sude.fc2k_floor_capacity_gate",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3 and 7; explicit_controller.md section 4",
+      "scope": "Proves the precise integer floor inequality for the 999/1000, 199/200 and KX>=2000 FC2K rounding gate; does not establish a controller or cut inequality."
+    },
+    {
+      "lean_name": "Sude.twoNetworks_square_from_integral_flows",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7; explicit_controller.md section 4",
+      "scope": "From an installed physical network and complete disjoint even grids, selects one reference first and derives HasSquare n for any supplied bounded integer flows satisfying all prime-target divergence equations, assuming the starting diagonals prime. Existence of the flows, installed supply and prime diagonals remains open."
+    },
+    {
+      "lean_name": "Sude.fc2k_cut_inequalities",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7, FC2K14 and its following paragraph",
+      "scope": "Every cut satisfies its integer capacity bound given zero-total uniformly bounded demand, N>=2000, the exact FC2K rounding gate, and 199/200 expansion. Parallel edges are counted separately; neither expansion nor integral flow existence is established."
+    },
+    {
+      "lean_name": "Sude.bounded_flow_necessary_conditions",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7; explicit_controller.md section 4",
+      "scope": "Any supplied bounded integer flow has zero total divergence and satisfies all cut bounds under the exact signed edgeTransfer convention used by the physical switches. This is the necessary direction only, not max-flow/min-cut sufficiency."
+    },
+    {
+      "lean_name": "Sude.residual_positive_reaches_negative",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7, integral max-flow/min-cut step",
+      "scope": "From all cut inequalities, a bounded flow and positive residual demand, proves a directed residual path from some positive to some negative residual vertex. Does not construct a simultaneous path adjustment."
+    },
+    {
+      "lean_name": "Sude.routing_of_residual_path_adjustments",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7, integral max-flow/min-cut step",
+      "scope": "Conditional routing theorem; its path-to-adjustment premise is now discharged by Sude.residual_path_adjustment. See Sude.integer_flow_of_cut_inequalities."
+    },
+    {
+      "lean_name": "Sude.integer_flow_of_cut_inequalities",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7, integral max-flow/min-cut step",
+      "scope": "Proves integral flow existence for any finite indexed edge family with uniform integer capacity, zero-total demand and all cut inequalities. Includes parallel edges and loops; no flow or path construction assumption."
+    },
+    {
+      "lean_name": "Sude.twoNetworks_realize_fc2k_demands",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 7, FC2K14",
+      "scope": "Under explicit installed physical reservoirs, centered grids, graph expansion, rounding gate and zero-total bounded integer demands, constructs actual row and column switches from a fixed reference, preserving diagonals, reservations and exact pool. Does not construct the graphs, reservoirs, targets, completion or controller."
+    },
+    {
+      "lean_name": "Sude.extend_even_gap_chain_actual_total",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3-4, FC2K3; explicit_controller.md section 4",
+      "scope": "A complete grid of distinct physical even gaps extends through the actual sum of all gaps when each appended gap satisfies the joining inequality at its stage; the gap supply and joining hypotheses remain explicit."
+    },
+    {
+      "lean_name": "Sude.complete_grid_has_true_midpoint_reference",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/explicit_controller.md section 4; cutoff2_controller_finite2001.md section 7",
+      "scope": "Actual low and high pair entries, even gaps, and a complete grid through their total admit a physical subset orientation within one unit of the true aggregate midpoint; the displayed error is doubled."
+    },
+    {
+      "lean_name": "Sude.fc2k_square_of_ftt_targets",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 1 and 7; cutoff2_finite_target_table.md",
+      "scope": "Proves the public square from an FTT target row and explicit pool-total identity, installed networks, complete grids, expansion and numerical gates, baseline bounds and prime diagonals. The controller hypotheses and pool identity remain unproved; no tail conclusion is assumed."
+    },
+    {
+      "lean_name": "Sude.pool_identities_of_oddPrefix_certificate",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "A proved prime endpoint, exact count and sum for the full odd-prime prefix identify the prescribed pool maximum and total, including order zero. Tail-sized count and sum proofs remain open."
+    },
+    {
+      "lean_name": "Sude.checkedOddSegment_spec",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "An alternative bounded prime-base trial-division checker is proved exact for a half-open odd-prime segment below the base square-root domain. This is not a verification of the source C++ sieve or acceptance of any tail-sized prefix."
+    },
+    {
+      "lean_name": "Sude.Lucas.Generated.first_ftt_max_prime",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json, row 2001",
+      "scope": "A Lean-checked Lucas certificate proves the recorded first endpoint 67939607 prime. Its position among primes and the associated prefix sum remain unproved."
+    },
+    {
+      "lean_name": "Sude.factor_certificate_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "A checked Lucas graph and an accepted proper-divisor certificate for every consecutive odd candidate determine the exact odd-prime segment, count and sum; this is a proved alternative certificate format, not an import or proof of the source C++ implementation."
+    },
+    {
+      "lean_name": "Sude.GeneratedPrefix.firstTailPrimeSegment_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/inputs/cutoff2_finite_target_table_data.json, row 2001; scripts/generate_first_tail_segment.py",
+      "scope": "Lean checks every certificate for the 54 odd candidates in [67939501, 67939609) and proves its seven odd primes sum to 475576967. This is not the whole 2001 prefix or any complete tail route."
+    },
+    {
+      "lean_name": "Sude.markingIndices_spec",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Proves the source's first odd multiple, p-squared lower bound, exact finite segment index count and p-stride marking are equivalent to the intended odd composite divisibility condition."
+    },
+    {
+      "lean_name": "Sude.markedSieve_pool_identities",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "A proved finite-set progression-marking sieve equals the mathematical prime segment and its accepted full-prefix count and sum identify the exact prescribed pool. No tail-sized count or sum has been accepted and full-scale feasibility is not established."
+    },
+    {
+      "lean_name": "Sude.uniformScan_pool_identities",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Proves correctness and exact segment composition of a finite-set marking scan, with a final remainder, conditional on kernel acceptance of the full prefix and an explicit complete prime base. No tail-order acceptance is established."
+    },
+    {
+      "lean_name": "Sude.first512PrimeSegment_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Kernel evaluation checks 512 odd candidates in [3,1027), establishing 171 odd primes and sum 80187. This is only an initial portion of the 2001 prefix."
+    },
+    {
+      "lean_name": "Sude.latePrefixPrimeSegment_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Kernel evaluation checks 512 odd candidates in [7171,8195), establishing 112 odd primes and sum 859924. A separate bitset theorem checks the earlier intervening interval; the rest of the first tail prefix remains unverified."
+    },
+    {
+      "lean_name": "Sude.bitsetSegmentScan_eq",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "A kernel-reducible natural-number bitset over explicit prime lists is proved equivalent to the finite-set progression-marking scan for every finite segment plan; full-prefix acceptance remains open."
+    },
+    {
+      "lean_name": "Sude.bitsetFirst4096_prime_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Kernel reduction checks the first 4096 odd candidates in 64 segments and proves that [3,8195) contains 1027 odd primes summing to 3908639. This is a small part of the 2001 prefix."
+    },
+    {
+      "lean_name": "Sude.bitsetFirst8192_prime_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Combines two separately kernel-checked 4096-candidate bitset scans to prove that [3,16387) contains 1899 odd primes summing to 14584639. The rest of the first tail prefix remains unverified."
+    },
+    {
+      "lean_name": "Sude.streamingSegmentScan_eq",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Proves a one-pass bitset count-and-sum traversal extensionally equal to the previously verified bitset scan for every finite segment plan; full-prefix acceptance and full-scale efficiency remain open."
+    },
+    {
+      "lean_name": "Sude.streamingFirst16384_prime_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Kernel reduction checks the first 16384 odd candidates and proves [3,32771) contains 3511 odd primes summing to 54056761. The remainder of the 2001 prefix remains unverified."
+    },
+    {
+      "lean_name": "Sude.prunedSegmentScan_eq",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Proves that discarding marking-base entries with square at or above each segment's exclusive upper endpoint preserves the entire scan from any odd start; no certificate acceptance is assumed."
+    },
+    {
+      "lean_name": "Sude.prunedFirst32768_prime_count_sum",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_finite_target_table.md FTT2",
+      "scope": "Combines separately kernel-accepted scans to prove [3,65539) has 6542 odd primes summing to 202353622. The remainder of the 2001 prefix remains unverified."
+    },
+    {
+      "lean_name": "Sude.select_pool_double_pairs_after_deletions",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K5",
+      "scope": "Proves a sequential batch of mutually disjoint double pairs from actual pool entries, conditional on ordered side stocks, an integer even-gap span, the square gate and separately budgeted prior and current deletions. Derivation of those bounds from real windows and prime counts is open."
+    },
+    {
+      "lean_name": "Sude.select_pool_double_pairs_fc2k",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K5",
+      "scope": "Composes the source's real-width difference span and real square gate with sequential selection from actual pool entries. The concrete window geometry and stock estimates remain open."
+    },
+    {
+      "lean_name": "Sude.install_double_pair_sequence",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K5; problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md",
+      "scope": "Installs all selected equal-gap blocks in supplied injective physical cells, with globally distinct actual-pool entries and prior reserved cells preserved. Actual geometry and diagonal repairs remain explicit obligations."
+    },
+    {
+      "lean_name": "Sude.bmor_bridge_select_pool_blocks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K3-FC2K5",
+      "scope": "Derives the bridge windows and actual prime-stock bound from the explicit BMOR theta and Rosser-Schoenfeld upper-index hypotheses; selects disjoint pool blocks after exact same-side reservation intersections, conditional on the numerical stock-budget and square-gate inequalities."
+    },
+    {
+      "lean_name": "Sude.bridgeIteration_completes_grid",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K3",
+      "scope": "Proves finite termination of the exact bridge-radius recurrence and full even-grid preservation through X, conditional on fresh admissible even gaps at each preterminal stage; it does not establish the stage supplies or numerical gates."
+    },
+    {
+      "lean_name": "Sude.stagedReservation_inter_card_le",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K5",
+      "scope": "Proves the same-side overlap depletion budget with no independence assumption, charging the initial protected intersection and at most 2k entries per overlapping earlier stage."
+    },
+    {
+      "lean_name": "Sude.select_bridge_and_grow_grids",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K3-FC2K5",
+      "scope": "From explicit BMOR and RS inputs, per-stage geometric numerical budgets and initial complete grids, selects mutually disjoint actual-pool bridge blocks at every stage and extends each indexed grid through X using its actual selected gaps. Numerical certificate acceptance and physical placement remain open."
+    },
+    {
+      "lean_name": "Sude.select_grow_install_bridge_stages",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K3-FC2K5; problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md",
+      "scope": "Composes selected pool blocks, indexed even-grid growth and simultaneous distinct-cell installation under explicit published inputs, numerical budgets, initial grids and total cell capacity. Line-specific geometry and correspondence of initial abstract grids to installed reservoirs remain open."
+    },
+    {
+      "lean_name": "Sude.install_and_trade_selected_bridge_rectangles",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4, FC2K3-FC2K5; problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1-RP3",
+      "scope": "Installs an injectively selected subset of actual bridge blocks in supplied RP1 rectangle labels and proves exact row, column, full-diagonal, center and reservation effects for every duplicate-free forward trade subset. Ordinary pair geometry, actual label selection and numerical gates remain open."
+    },
+    {
+      "lean_name": "Sude.selected_bridge_orientation_difference",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP2",
+      "scope": "Compares two physical rectangle orientations, proving signed diagonal differences and preservation of all row and column sums, the center, reservations and exact pool. Choice of subsets to meet targets remains open."
+    },
+    {
+      "lean_name": "Sude.install_allocated_bridge_diagonal_blocks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md section 4; problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1-RP4",
+      "scope": "Constructs the source's 4d distinct bridge-block and rectangle-label allocations per stage, splits them into 2d per diagonal, and installs them in the RP1 packing under explicit packing and reservation hypotheses. Other rectangle choices are preserved; ordinary-pair geometry and numerical controller gates remain open."
+    },
+    {
+      "lean_name": "Sude.install_bridge_diagonal_and_ordinary_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_controller_finite2001.md sections 3-4; problems/prime-line-sums/manuscripts/cutoff2_prefix_balance_experiment.md PB8-PB9; problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP1-RP4",
+      "scope": "Splits actual bridge blocks between diagonal rectangles and both ordinary networks, derives the two-cell RP1 line loads and installs all selected pairs in one pool permutation under explicit derangement, reservation and capacity hypotheses. Numerical gates and graph expansion remain open."
+    },
+    {
+      "lean_name": "Sude.allocatedBridgeTrades_preserve_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP2-RP3",
+      "scope": "Proves that duplicate-free diagonal rectangle trade sequences have their exact full-line effects and preserve every actual row- and column-network entry when those supports avoid the allocated rectangles."
+    },
+    {
+      "lean_name": "Sude.allocatedBridgeOrientations_preserve_networks",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "problems/prime-line-sums/manuscripts/cutoff2_rectangle_packing.md RP2-RP3",
+      "scope": "Compares two actual diagonal orientations with exact signed changes on both diagonals while preserving every row and column, the center, prior reserved cells and all ordinary network entries. Choice of target corrections remains open."
+    },
+    {
+      "lean_name": "Sude.bmorExplicitFormulaImports_of_published",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/BMORPublishedExplicitFormula.lean",
+      "scope": "Proves BMORExplicitFormulaImports (both small-moduli and mod-2 explicit-formula psi/theta error bounds) directly in Lean from the four verbatim published BMOR (2018) Propositions 2.1, 2.5, 2.7, and 4.34 plus RS62 Theorem 4 (3.15), including von Mangoldt equivalence, imprimitive critical-strip zero invariance, functional-equation symmetry, summability of high-zero series, and finite Stieltjes summation by parts."
+    },
+    {
+      "lean_name": "Sude.fc2k_hasSquare",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/FC2KBandTheorem.lean",
+      "scope": "Proves Sude.HasSquare n for every odd order 2001 <= n <= 19483 from only the exempt published analytic inputs, discharging all 8,742 Lucas target rows, prefix sieves, bridge/wide supplies, central completion, and expander routing in Lean."
+    },
+    {
+      "lean_name": "Sude.fw_and_ew_hasSquare",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/FWFirstBandTheorem.lean",
+      "scope": "Proves Sude.HasSquare n for every odd order 19485 <= n <= 35733 (including fw_first_band_hasSquare for 19485 <= n <= 21248) from only the exempt published analytic inputs, using the kernel-verified 3,650,551-pair twin-prime pool in FastTwinFullPool."
+    },
+    {
+      "lean_name": "Sude.upper_tail_hasSquare",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/UpperTailTheorem.lean",
+      "scope": "Proves Sude.HasSquare n for every odd order n >= 35735 at all unbounded scales from only the exempt published analytic inputs via unified all-scale Brun-Titchmarsh growth, dyadic bridge, wide, central completion, and prime-target constructions."
+    },
+    {
+      "lean_name": "Sude.tail_hasSquare",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/AllOddTheorem.lean",
+      "scope": "Proves Sude.TailObligation (for all n >= 2001, Odd n -> Sude.HasSquare n) from the 15 flat verbatim published analytic inputs alone."
+    },
+    {
+      "lean_name": "Sude.sude_first_theorem",
+      "kind": "project_lemma_proved_in_lean",
+      "source": "Sude/AllOddTheorem.lean",
+      "scope": "Complete Lean-checked proof of Sude's First Theorem (for all n, 0 < n -> Odd n -> Sude.HasSquare n) relative to Sude.FiniteWitness (0 < n < 2000, odd n) and the 15 verbatim published analytic inputs; accompanied by Sude.sude_first_theorem_values via Sude.hasSquare_iff_values."
+    }
+  ]
+}

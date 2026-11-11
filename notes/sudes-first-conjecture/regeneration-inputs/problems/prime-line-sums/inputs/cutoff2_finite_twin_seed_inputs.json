@@ -1,0 +1,3605 @@
+{
+  "parameters": {
+    "bound": 1073741824,
+    "expected_first_lower": 59,
+    "expected_last_lower": 1073741717,
+    "expected_pairs": 3650551,
+    "expected_pi": 54400028,
+    "lower_endpoint_strictly_above": 43,
+    "odd_segment_size": 1048576
+  },
+  "schema": "sude-finite-twin-seed-v1",
+  "scope": "A finite disjoint gap-two matching and a conditional bounded-order seed specialization; no square cutoff or infinite twin-prime claim.",
+  "segments": [
+    {
+      "hi": 2097195,
+      "lo": 45,
+      "pairs_crossing": 0,
+      "pairs_internal": 15494,
+      "primes": 155598
+    },
+    {
+      "hi": 4194347,
+      "lo": 2097197,
+      "pairs_crossing": 0,
+      "pairs_internal": 12495,
+      "primes": 140337
+    },
+    {
+      "hi": 6291499,
+      "lo": 4194349,
+      "pairs_crossing": 0,
+      "pairs_internal": 11535,
+      "primes": 135555
+    },
+    {
+      "hi": 8388651,
+      "lo": 6291501,
+      "pairs_crossing": 0,
+      "pairs_internal": 11109,
+      "primes": 132663
+    },
+    {
+      "hi": 10485803,
+      "lo": 8388653,
+      "pairs_crossing": 0,
+      "pairs_internal": 10823,
+      "primes": 130552
+    },
+    {
+      "hi": 12582955,
+      "lo": 10485805,
+      "pairs_crossing": 0,
+      "pairs_internal": 10410,
+      "primes": 129033
+    },
+    {
+      "hi": 14680107,
+      "lo": 12582957,
+      "pairs_crossing": 0,
+      "pairs_internal": 10231,
+      "primes": 127601
+    },
+    {
+      "hi": 16777259,
+      "lo": 14680109,
+      "pairs_crossing": 0,
+      "pairs_internal": 10143,
+      "primes": 126519
+    },
+    {
+      "hi": 18874411,
+      "lo": 16777261,
+      "pairs_crossing": 0,
+      "pairs_internal": 9974,
+      "primes": 125700
+    },
+    {
+      "hi": 20971563,
+      "lo": 18874413,
+      "pairs_crossing": 0,
+      "pairs_internal": 9746,
+      "primes": 124660
+    },
+    {
+      "hi": 23068715,
+      "lo": 20971565,
+      "pairs_crossing": 0,
+      "pairs_internal": 9661,
+      "primes": 124084
+    },
+    {
+      "hi": 25165867,
+      "lo": 23068717,
+      "pairs_crossing": 0,
+      "pairs_internal": 9626,
+      "primes": 123347
+    },
+    {
+      "hi": 27263019,
+      "lo": 25165869,
+      "pairs_crossing": 0,
+      "pairs_internal": 9458,
+      "primes": 122758
+    },
+    {
+      "hi": 29360171,
+      "lo": 27263021,
+      "pairs_crossing": 0,
+      "pairs_internal": 9342,
+      "primes": 122228
+    },
+    {
+      "hi": 31457323,
+      "lo": 29360173,
+      "pairs_crossing": 0,
+      "pairs_internal": 9334,
+      "primes": 121739
+    },
+    {
+      "hi": 33554475,
+      "lo": 31457325,
+      "pairs_crossing": 0,
+      "pairs_internal": 9230,
+      "primes": 121303
+    },
+    {
+      "hi": 35651627,
+      "lo": 33554477,
+      "pairs_crossing": 0,
+      "pairs_internal": 9117,
+      "primes": 120567
+    },
+    {
+      "hi": 37748779,
+      "lo": 35651629,
+      "pairs_crossing": 0,
+      "pairs_internal": 9252,
+      "primes": 120399
+    },
+    {
+      "hi": 39845931,
+      "lo": 37748781,
+      "pairs_crossing": 0,
+      "pairs_internal": 9121,
+      "primes": 120253
+    },
+    {
+      "hi": 41943083,
+      "lo": 39845933,
+      "pairs_crossing": 0,
+      "pairs_internal": 8912,
+      "primes": 119495
+    },
+    {
+      "hi": 44040235,
+      "lo": 41943085,
+      "pairs_crossing": 0,
+      "pairs_internal": 8887,
+      "primes": 119250
+    },
+    {
+      "hi": 46137387,
+      "lo": 44040237,
+      "pairs_crossing": 0,
+      "pairs_internal": 8912,
+      "primes": 119152
+    },
+    {
+      "hi": 48234539,
+      "lo": 46137389,
+      "pairs_crossing": 0,
+      "pairs_internal": 8825,
+      "primes": 118503
+    },
+    {
+      "hi": 50331691,
+      "lo": 48234541,
+      "pairs_crossing": 0,
+      "pairs_internal": 8778,
+      "primes": 118508
+    },
+    {
+      "hi": 52428843,
+      "lo": 50331693,
+      "pairs_crossing": 0,
+      "pairs_internal": 8665,
+      "primes": 118095
+    },
+    {
+      "hi": 54525995,
+      "lo": 52428845,
+      "pairs_crossing": 0,
+      "pairs_internal": 8788,
+      "primes": 117691
+    },
+    {
+      "hi": 56623147,
+      "lo": 54525997,
+      "pairs_crossing": 0,
+      "pairs_internal": 8740,
+      "primes": 117639
+    },
+    {
+      "hi": 58720299,
+      "lo": 56623149,
+      "pairs_crossing": 0,
+      "pairs_internal": 8686,
+      "primes": 117413
+    },
+    {
+      "hi": 60817451,
+      "lo": 58720301,
+      "pairs_crossing": 0,
+      "pairs_internal": 8616,
+      "primes": 117138
+    },
+    {
+      "hi": 62914603,
+      "lo": 60817453,
+      "pairs_crossing": 0,
+      "pairs_internal": 8498,
+      "primes": 116784
+    },
+    {
+      "hi": 65011755,
+      "lo": 62914605,
+      "pairs_crossing": 0,
+      "pairs_internal": 8602,
+      "primes": 116623
+    },
+    {
+      "hi": 67108907,
+      "lo": 65011757,
+      "pairs_crossing": 0,
+      "pairs_internal": 8545,
+      "primes": 116609
+    },
+    {
+      "hi": 69206059,
+      "lo": 67108909,
+      "pairs_crossing": 0,
+      "pairs_internal": 8615,
+      "primes": 116236
+    },
+    {
+      "hi": 71303211,
+      "lo": 69206061,
+      "pairs_crossing": 0,
+      "pairs_internal": 8494,
+      "primes": 116110
+    },
+    {
+      "hi": 73400363,
+      "lo": 71303213,
+      "pairs_crossing": 0,
+      "pairs_internal": 8374,
+      "primes": 115986
+    },
+    {
+      "hi": 75497515,
+      "lo": 73400365,
+      "pairs_crossing": 0,
+      "pairs_internal": 8445,
+      "primes": 115681
+    },
+    {
+      "hi": 77594667,
+      "lo": 75497517,
+      "pairs_crossing": 0,
+      "pairs_internal": 8433,
+      "primes": 115455
+    },
+    {
+      "hi": 79691819,
+      "lo": 77594669,
+      "pairs_crossing": 0,
+      "pairs_internal": 8316,
+      "primes": 115213
+    },
+    {
+      "hi": 81788971,
+      "lo": 79691821,
+      "pairs_crossing": 0,
+      "pairs_internal": 8359,
+      "primes": 115315
+    },
+    {
+      "hi": 83886123,
+      "lo": 81788973,
+      "pairs_crossing": 0,
+      "pairs_internal": 8317,
+      "primes": 115004
+    },
+    {
+      "hi": 85983275,
+      "lo": 83886125,
+      "pairs_crossing": 0,
+      "pairs_internal": 8299,
+      "primes": 114757
+    },
+    {
+      "hi": 88080427,
+      "lo": 85983277,
+      "pairs_crossing": 0,
+      "pairs_internal": 8335,
+      "primes": 114713
+    },
+    {
+      "hi": 90177579,
+      "lo": 88080429,
+      "pairs_crossing": 0,
+      "pairs_internal": 8239,
+      "primes": 114457
+    },
+    {
+      "hi": 92274731,
+      "lo": 90177581,
+      "pairs_crossing": 0,
+      "pairs_internal": 8325,
+      "primes": 114459
+    },
+    {
+      "hi": 94371883,
+      "lo": 92274733,
+      "pairs_crossing": 0,
+      "pairs_internal": 8180,
+      "primes": 114186
+    },
+    {
+      "hi": 96469035,
+      "lo": 94371885,
+      "pairs_crossing": 0,
+      "pairs_internal": 8198,
+      "primes": 114248
+    },
+    {
+      "hi": 98566187,
+      "lo": 96469037,
+      "pairs_crossing": 0,
+      "pairs_internal": 8202,
+      "primes": 114124
+    },
+    {
+      "hi": 100663339,
+      "lo": 98566189,
+      "pairs_crossing": 0,
+      "pairs_internal": 8221,
+      "primes": 113654
+    },
+    {
+      "hi": 102760491,
+      "lo": 100663341,
+      "pairs_crossing": 0,
+      "pairs_internal": 8029,
+      "primes": 113945
+    },
+    {
+      "hi": 104857643,
+      "lo": 102760493,
+      "pairs_crossing": 0,
+      "pairs_internal": 8224,
+      "primes": 113659
+    },
+    {
+      "hi": 106954795,
+      "lo": 104857645,
+      "pairs_crossing": 0,
+      "pairs_internal": 8203,
+      "primes": 113349
+    },
+    {
+      "hi": 109051947,
+      "lo": 106954797,
+      "pairs_crossing": 0,
+      "pairs_internal": 8112,
+      "primes": 113626
+    },
+    {
+      "hi": 111149099,
+      "lo": 109051949,
+      "pairs_crossing": 0,
+      "pairs_internal": 8121,
+      "primes": 113253
+    },
+    {
+      "hi": 113246251,
+      "lo": 111149101,
+      "pairs_crossing": 0,
+      "pairs_internal": 7984,
+      "primes": 113154
+    },
+    {
+      "hi": 115343403,
+      "lo": 113246253,
+      "pairs_crossing": 0,
+      "pairs_internal": 8057,
+      "primes": 112756
+    },
+    {
+      "hi": 117440555,
+      "lo": 115343405,
+      "pairs_crossing": 0,
+      "pairs_internal": 8024,
+      "primes": 112946
+    },
+    {
+      "hi": 119537707,
+      "lo": 117440557,
+      "pairs_crossing": 0,
+      "pairs_internal": 7961,
+      "primes": 112655
+    },
+    {
+      "hi": 121634859,
+      "lo": 119537709,
+      "pairs_crossing": 0,
+      "pairs_internal": 7913,
+      "primes": 112679
+    },
+    {
+      "hi": 123732011,
+      "lo": 121634861,
+      "pairs_crossing": 0,
+      "pairs_internal": 8008,
+      "primes": 112595
+    },
+    {
+      "hi": 125829163,
+      "lo": 123732013,
+      "pairs_crossing": 0,
+      "pairs_internal": 7948,
+      "primes": 112609
+    },
+    {
+      "hi": 127926315,
+      "lo": 125829165,
+      "pairs_crossing": 0,
+      "pairs_internal": 7948,
+      "primes": 112375
+    },
+    {
+      "hi": 130023467,
+      "lo": 127926317,
+      "pairs_crossing": 0,
+      "pairs_internal": 8026,
+      "primes": 112410
+    },
+    {
+      "hi": 132120619,
+      "lo": 130023469,
+      "pairs_crossing": 0,
+      "pairs_internal": 7943,
+      "primes": 112166
+    },
+    {
+      "hi": 134217771,
+      "lo": 132120621,
+      "pairs_crossing": 0,
+      "pairs_internal": 7899,
+      "primes": 111969
+    },
+    {
+      "hi": 136314923,
+      "lo": 134217773,
+      "pairs_crossing": 0,
+      "pairs_internal": 7919,
+      "primes": 111935
+    },
+    {
+      "hi": 138412075,
+      "lo": 136314925,
+      "pairs_crossing": 0,
+      "pairs_internal": 7920,
+      "primes": 111930
+    },
+    {
+      "hi": 140509227,
+      "lo": 138412077,
+      "pairs_crossing": 0,
+      "pairs_internal": 7895,
+      "primes": 111846
+    },
+    {
+      "hi": 142606379,
+      "lo": 140509229,
+      "pairs_crossing": 0,
+      "pairs_internal": 7794,
+      "primes": 111770
+    },
+    {
+      "hi": 144703531,
+      "lo": 142606381,
+      "pairs_crossing": 0,
+      "pairs_internal": 7934,
+      "primes": 111901
+    },
+    {
+      "hi": 146800683,
+      "lo": 144703533,
+      "pairs_crossing": 0,
+      "pairs_internal": 7766,
+      "primes": 111494
+    },
+    {
+      "hi": 148897835,
+      "lo": 146800685,
+      "pairs_crossing": 0,
+      "pairs_internal": 7792,
+      "primes": 111507
+    },
+    {
+      "hi": 150994987,
+      "lo": 148897837,
+      "pairs_crossing": 0,
+      "pairs_internal": 7723,
+      "primes": 111186
+    },
+    {
+      "hi": 153092139,
+      "lo": 150994989,
+      "pairs_crossing": 0,
+      "pairs_internal": 7709,
+      "primes": 111256
+    },
+    {
+      "hi": 155189291,
+      "lo": 153092141,
+      "pairs_crossing": 0,
+      "pairs_internal": 7799,
+      "primes": 111249
+    },
+    {
+      "hi": 157286443,
+      "lo": 155189293,
+      "pairs_crossing": 0,
+      "pairs_internal": 7866,
+      "primes": 111222
+    },
+    {
+      "hi": 159383595,
+      "lo": 157286445,
+      "pairs_crossing": 0,
+      "pairs_internal": 7850,
+      "primes": 110953
+    },
+    {
+      "hi": 161480747,
+      "lo": 159383597,
+      "pairs_crossing": 0,
+      "pairs_internal": 7565,
+      "primes": 111000
+    },
+    {
+      "hi": 163577899,
+      "lo": 161480749,
+      "pairs_crossing": 0,
+      "pairs_internal": 7651,
+      "primes": 111032
+    },
+    {
+      "hi": 165675051,
+      "lo": 163577901,
+      "pairs_crossing": 0,
+      "pairs_internal": 7692,
+      "primes": 110625
+    },
+    {
+      "hi": 167772203,
+      "lo": 165675053,
+      "pairs_crossing": 0,
+      "pairs_internal": 7748,
+      "primes": 110942
+    },
+    {
+      "hi": 169869355,
+      "lo": 167772205,
+      "pairs_crossing": 0,
+      "pairs_internal": 7689,
+      "primes": 110822
+    },
+    {
+      "hi": 171966507,
+      "lo": 169869357,
+      "pairs_crossing": 0,
+      "pairs_internal": 7659,
+      "primes": 110722
+    },
+    {
+      "hi": 174063659,
+      "lo": 171966509,
+      "pairs_crossing": 0,
+      "pairs_internal": 7622,
+      "primes": 110628
+    },
+    {
+      "hi": 176160811,
+      "lo": 174063661,
+      "pairs_crossing": 0,
+      "pairs_internal": 7740,
+      "primes": 110457
+    },
+    {
+      "hi": 178257963,
+      "lo": 176160813,
+      "pairs_crossing": 0,
+      "pairs_internal": 7680,
+      "primes": 110656
+    },
+    {
+      "hi": 180355115,
+      "lo": 178257965,
+      "pairs_crossing": 0,
+      "pairs_internal": 7651,
+      "primes": 110352
+    },
+    {
+      "hi": 182452267,
+      "lo": 180355117,
+      "pairs_crossing": 0,
+      "pairs_internal": 7542,
+      "primes": 109904
+    },
+    {
+      "hi": 184549419,
+      "lo": 182452269,
+      "pairs_crossing": 0,
+      "pairs_internal": 7600,
+      "primes": 110268
+    },
+    {
+      "hi": 186646571,
+      "lo": 184549421,
+      "pairs_crossing": 0,
+      "pairs_internal": 7649,
+      "primes": 110280
+    },
+    {
+      "hi": 188743723,
+      "lo": 186646573,
+      "pairs_crossing": 0,
+      "pairs_internal": 7702,
+      "primes": 109992
+    },
+    {
+      "hi": 190840875,
+      "lo": 188743725,
+      "pairs_crossing": 0,
+      "pairs_internal": 7586,
+      "primes": 110038
+    },
+    {
+      "hi": 192938027,
+      "lo": 190840877,
+      "pairs_crossing": 0,
+      "pairs_internal": 7575,
+      "primes": 109759
+    },
+    {
+      "hi": 195035179,
+      "lo": 192938029,
+      "pairs_crossing": 0,
+      "pairs_internal": 7663,
+      "primes": 110148
+    },
+    {
+      "hi": 197132331,
+      "lo": 195035181,
+      "pairs_crossing": 0,
+      "pairs_internal": 7561,
+      "primes": 109576
+    },
+    {
+      "hi": 199229483,
+      "lo": 197132333,
+      "pairs_crossing": 0,
+      "pairs_internal": 7611,
+      "primes": 109552
+    },
+    {
+      "hi": 201326635,
+      "lo": 199229485,
+      "pairs_crossing": 0,
+      "pairs_internal": 7683,
+      "primes": 109826
+    },
+    {
+      "hi": 203423787,
+      "lo": 201326637,
+      "pairs_crossing": 0,
+      "pairs_internal": 7440,
+      "primes": 109675
+    },
+    {
+      "hi": 205520939,
+      "lo": 203423789,
+      "pairs_crossing": 0,
+      "pairs_internal": 7566,
+      "primes": 109596
+    },
+    {
+      "hi": 207618091,
+      "lo": 205520941,
+      "pairs_crossing": 0,
+      "pairs_internal": 7531,
+      "primes": 109586
+    },
+    {
+      "hi": 209715243,
+      "lo": 207618093,
+      "pairs_crossing": 0,
+      "pairs_internal": 7619,
+      "primes": 109519
+    },
+    {
+      "hi": 211812395,
+      "lo": 209715245,
+      "pairs_crossing": 0,
+      "pairs_internal": 7548,
+      "primes": 109347
+    },
+    {
+      "hi": 213909547,
+      "lo": 211812397,
+      "pairs_crossing": 0,
+      "pairs_internal": 7520,
+      "primes": 109169
+    },
+    {
+      "hi": 216006699,
+      "lo": 213909549,
+      "pairs_crossing": 0,
+      "pairs_internal": 7542,
+      "primes": 109465
+    },
+    {
+      "hi": 218103851,
+      "lo": 216006701,
+      "pairs_crossing": 0,
+      "pairs_internal": 7361,
+      "primes": 109154
+    },
+    {
+      "hi": 220201003,
+      "lo": 218103853,
+      "pairs_crossing": 0,
+      "pairs_internal": 7412,
+      "primes": 109108
+    },
+    {
+      "hi": 222298155,
+      "lo": 220201005,
+      "pairs_crossing": 0,
+      "pairs_internal": 7530,
+      "primes": 109192
+    },
+    {
+      "hi": 224395307,
+      "lo": 222298157,
+      "pairs_crossing": 0,
+      "pairs_internal": 7622,
+      "primes": 109304
+    },
+    {
+      "hi": 226492459,
+      "lo": 224395309,
+      "pairs_crossing": 0,
+      "pairs_internal": 7357,
+      "primes": 108882
+    },
+    {
+      "hi": 228589611,
+      "lo": 226492461,
+      "pairs_crossing": 0,
+      "pairs_internal": 7361,
+      "primes": 108858
+    },
+    {
+      "hi": 230686763,
+      "lo": 228589613,
+      "pairs_crossing": 0,
+      "pairs_internal": 7445,
+      "primes": 109072
+    },
+    {
+      "hi": 232783915,
+      "lo": 230686765,
+      "pairs_crossing": 0,
+      "pairs_internal": 7342,
+      "primes": 108857
+    },
+    {
+      "hi": 234881067,
+      "lo": 232783917,
+      "pairs_crossing": 0,
+      "pairs_internal": 7437,
+      "primes": 108691
+    },
+    {
+      "hi": 236978219,
+      "lo": 234881069,
+      "pairs_crossing": 0,
+      "pairs_internal": 7573,
+      "primes": 108928
+    },
+    {
+      "hi": 239075371,
+      "lo": 236978221,
+      "pairs_crossing": 0,
+      "pairs_internal": 7520,
+      "primes": 108869
+    },
+    {
+      "hi": 241172523,
+      "lo": 239075373,
+      "pairs_crossing": 0,
+      "pairs_internal": 7492,
+      "primes": 108849
+    },
+    {
+      "hi": 243269675,
+      "lo": 241172525,
+      "pairs_crossing": 0,
+      "pairs_internal": 7425,
+      "primes": 108416
+    },
+    {
+      "hi": 245366827,
+      "lo": 243269677,
+      "pairs_crossing": 0,
+      "pairs_internal": 7480,
+      "primes": 108765
+    },
+    {
+      "hi": 247463979,
+      "lo": 245366829,
+      "pairs_crossing": 0,
+      "pairs_internal": 7295,
+      "primes": 108400
+    },
+    {
+      "hi": 249561131,
+      "lo": 247463981,
+      "pairs_crossing": 0,
+      "pairs_internal": 7365,
+      "primes": 108566
+    },
+    {
+      "hi": 251658283,
+      "lo": 249561133,
+      "pairs_crossing": 0,
+      "pairs_internal": 7373,
+      "primes": 108525
+    },
+    {
+      "hi": 253755435,
+      "lo": 251658285,
+      "pairs_crossing": 0,
+      "pairs_internal": 7413,
+      "primes": 108197
+    },
+    {
+      "hi": 255852587,
+      "lo": 253755437,
+      "pairs_crossing": 0,
+      "pairs_internal": 7498,
+      "primes": 108535
+    },
+    {
+      "hi": 257949739,
+      "lo": 255852589,
+      "pairs_crossing": 0,
+      "pairs_internal": 7219,
+      "primes": 108199
+    },
+    {
+      "hi": 260046891,
+      "lo": 257949741,
+      "pairs_crossing": 0,
+      "pairs_internal": 7329,
+      "primes": 108216
+    },
+    {
+      "hi": 262144043,
+      "lo": 260046893,
+      "pairs_crossing": 0,
+      "pairs_internal": 7575,
+      "primes": 108364
+    },
+    {
+      "hi": 264241195,
+      "lo": 262144045,
+      "pairs_crossing": 0,
+      "pairs_internal": 7320,
+      "primes": 107982
+    },
+    {
+      "hi": 266338347,
+      "lo": 264241197,
+      "pairs_crossing": 0,
+      "pairs_internal": 7399,
+      "primes": 108331
+    },
+    {
+      "hi": 268435499,
+      "lo": 266338349,
+      "pairs_crossing": 0,
+      "pairs_internal": 7223,
+      "primes": 107847
+    },
+    {
+      "hi": 270532651,
+      "lo": 268435501,
+      "pairs_crossing": 0,
+      "pairs_internal": 7357,
+      "primes": 107975
+    },
+    {
+      "hi": 272629803,
+      "lo": 270532653,
+      "pairs_crossing": 0,
+      "pairs_internal": 7352,
+      "primes": 107945
+    },
+    {
+      "hi": 274726955,
+      "lo": 272629805,
+      "pairs_crossing": 0,
+      "pairs_internal": 7272,
+      "primes": 108050
+    },
+    {
+      "hi": 276824107,
+      "lo": 274726957,
+      "pairs_crossing": 0,
+      "pairs_internal": 7299,
+      "primes": 107939
+    },
+    {
+      "hi": 278921259,
+      "lo": 276824109,
+      "pairs_crossing": 0,
+      "pairs_internal": 7324,
+      "primes": 107744
+    },
+    {
+      "hi": 281018411,
+      "lo": 278921261,
+      "pairs_crossing": 0,
+      "pairs_internal": 7431,
+      "primes": 107913
+    },
+    {
+      "hi": 283115563,
+      "lo": 281018413,
+      "pairs_crossing": 0,
+      "pairs_internal": 7333,
+      "primes": 107809
+    },
+    {
+      "hi": 285212715,
+      "lo": 283115565,
+      "pairs_crossing": 0,
+      "pairs_internal": 7312,
+      "primes": 107450
+    },
+    {
+      "hi": 287309867,
+      "lo": 285212717,
+      "pairs_crossing": 0,
+      "pairs_internal": 7366,
+      "primes": 107779
+    },
+    {
+      "hi": 289407019,
+      "lo": 287309869,
+      "pairs_crossing": 0,
+      "pairs_internal": 7383,
+      "primes": 107630
+    },
+    {
+      "hi": 291504171,
+      "lo": 289407021,
+      "pairs_crossing": 0,
+      "pairs_internal": 7306,
+      "primes": 107602
+    },
+    {
+      "hi": 293601323,
+      "lo": 291504173,
+      "pairs_crossing": 0,
+      "pairs_internal": 7338,
+      "primes": 107659
+    },
+    {
+      "hi": 295698475,
+      "lo": 293601325,
+      "pairs_crossing": 0,
+      "pairs_internal": 7345,
+      "primes": 107533
+    },
+    {
+      "hi": 297795627,
+      "lo": 295698477,
+      "pairs_crossing": 0,
+      "pairs_internal": 7223,
+      "primes": 107513
+    },
+    {
+      "hi": 299892779,
+      "lo": 297795629,
+      "pairs_crossing": 0,
+      "pairs_internal": 7189,
+      "primes": 107463
+    },
+    {
+      "hi": 301989931,
+      "lo": 299892781,
+      "pairs_crossing": 0,
+      "pairs_internal": 7226,
+      "primes": 107527
+    },
+    {
+      "hi": 304087083,
+      "lo": 301989933,
+      "pairs_crossing": 0,
+      "pairs_internal": 7203,
+      "primes": 107089
+    },
+    {
+      "hi": 306184235,
+      "lo": 304087085,
+      "pairs_crossing": 0,
+      "pairs_internal": 7389,
+      "primes": 107579
+    },
+    {
+      "hi": 308281387,
+      "lo": 306184237,
+      "pairs_crossing": 0,
+      "pairs_internal": 7342,
+      "primes": 107471
+    },
+    {
+      "hi": 310378539,
+      "lo": 308281389,
+      "pairs_crossing": 0,
+      "pairs_internal": 7212,
+      "primes": 107357
+    },
+    {
+      "hi": 312475691,
+      "lo": 310378541,
+      "pairs_crossing": 0,
+      "pairs_internal": 7291,
+      "primes": 107175
+    },
+    {
+      "hi": 314572843,
+      "lo": 312475693,
+      "pairs_crossing": 0,
+      "pairs_internal": 7165,
+      "primes": 107238
+    },
+    {
+      "hi": 316669995,
+      "lo": 314572845,
+      "pairs_crossing": 0,
+      "pairs_internal": 7140,
+      "primes": 107042
+    },
+    {
+      "hi": 318767147,
+      "lo": 316669997,
+      "pairs_crossing": 0,
+      "pairs_internal": 7319,
+      "primes": 107037
+    },
+    {
+      "hi": 320864299,
+      "lo": 318767149,
+      "pairs_crossing": 0,
+      "pairs_internal": 7299,
+      "primes": 107066
+    },
+    {
+      "hi": 322961451,
+      "lo": 320864301,
+      "pairs_crossing": 0,
+      "pairs_internal": 7190,
+      "primes": 106882
+    },
+    {
+      "hi": 325058603,
+      "lo": 322961453,
+      "pairs_crossing": 0,
+      "pairs_internal": 7322,
+      "primes": 107052
+    },
+    {
+      "hi": 327155755,
+      "lo": 325058605,
+      "pairs_crossing": 0,
+      "pairs_internal": 7224,
+      "primes": 107005
+    },
+    {
+      "hi": 329252907,
+      "lo": 327155757,
+      "pairs_crossing": 0,
+      "pairs_internal": 7143,
+      "primes": 106872
+    },
+    {
+      "hi": 331350059,
+      "lo": 329252909,
+      "pairs_crossing": 0,
+      "pairs_internal": 7164,
+      "primes": 106883
+    },
+    {
+      "hi": 333447211,
+      "lo": 331350061,
+      "pairs_crossing": 0,
+      "pairs_internal": 7246,
+      "primes": 106839
+    },
+    {
+      "hi": 335544363,
+      "lo": 333447213,
+      "pairs_crossing": 0,
+      "pairs_internal": 7207,
+      "primes": 106970
+    },
+    {
+      "hi": 337641515,
+      "lo": 335544365,
+      "pairs_crossing": 0,
+      "pairs_internal": 7206,
+      "primes": 106702
+    },
+    {
+      "hi": 339738667,
+      "lo": 337641517,
+      "pairs_crossing": 0,
+      "pairs_internal": 7105,
+      "primes": 106698
+    },
+    {
+      "hi": 341835819,
+      "lo": 339738669,
+      "pairs_crossing": 0,
+      "pairs_internal": 7152,
+      "primes": 106945
+    },
+    {
+      "hi": 343932971,
+      "lo": 341835821,
+      "pairs_crossing": 0,
+      "pairs_internal": 7203,
+      "primes": 106705
+    },
+    {
+      "hi": 346030123,
+      "lo": 343932973,
+      "pairs_crossing": 1,
+      "pairs_internal": 7226,
+      "primes": 106701
+    },
+    {
+      "hi": 348127275,
+      "lo": 346030125,
+      "pairs_crossing": 0,
+      "pairs_internal": 7128,
+      "primes": 106464
+    },
+    {
+      "hi": 350224427,
+      "lo": 348127277,
+      "pairs_crossing": 0,
+      "pairs_internal": 7122,
+      "primes": 106786
+    },
+    {
+      "hi": 352321579,
+      "lo": 350224429,
+      "pairs_crossing": 0,
+      "pairs_internal": 7040,
+      "primes": 106375
+    },
+    {
+      "hi": 354418731,
+      "lo": 352321581,
+      "pairs_crossing": 0,
+      "pairs_internal": 7060,
+      "primes": 106718
+    },
+    {
+      "hi": 356515883,
+      "lo": 354418733,
+      "pairs_crossing": 0,
+      "pairs_internal": 7198,
+      "primes": 106488
+    },
+    {
+      "hi": 358613035,
+      "lo": 356515885,
+      "pairs_crossing": 0,
+      "pairs_internal": 7055,
+      "primes": 106374
+    },
+    {
+      "hi": 360710187,
+      "lo": 358613037,
+      "pairs_crossing": 0,
+      "pairs_internal": 7060,
+      "primes": 106187
+    },
+    {
+      "hi": 362807339,
+      "lo": 360710189,
+      "pairs_crossing": 0,
+      "pairs_internal": 7093,
+      "primes": 106460
+    },
+    {
+      "hi": 364904491,
+      "lo": 362807341,
+      "pairs_crossing": 0,
+      "pairs_internal": 7257,
+      "primes": 106386
+    },
+    {
+      "hi": 367001643,
+      "lo": 364904493,
+      "pairs_crossing": 0,
+      "pairs_internal": 7092,
+      "primes": 106599
+    },
+    {
+      "hi": 369098795,
+      "lo": 367001645,
+      "pairs_crossing": 0,
+      "pairs_internal": 7049,
+      "primes": 106227
+    },
+    {
+      "hi": 371195947,
+      "lo": 369098797,
+      "pairs_crossing": 0,
+      "pairs_internal": 7120,
+      "primes": 106090
+    },
+    {
+      "hi": 373293099,
+      "lo": 371195949,
+      "pairs_crossing": 0,
+      "pairs_internal": 7136,
+      "primes": 106162
+    },
+    {
+      "hi": 375390251,
+      "lo": 373293101,
+      "pairs_crossing": 0,
+      "pairs_internal": 7130,
+      "primes": 106580
+    },
+    {
+      "hi": 377487403,
+      "lo": 375390253,
+      "pairs_crossing": 0,
+      "pairs_internal": 7079,
+      "primes": 106330
+    },
+    {
+      "hi": 379584555,
+      "lo": 377487405,
+      "pairs_crossing": 0,
+      "pairs_internal": 7044,
+      "primes": 106406
+    },
+    {
+      "hi": 381681707,
+      "lo": 379584557,
+      "pairs_crossing": 0,
+      "pairs_internal": 7221,
+      "primes": 106363
+    },
+    {
+      "hi": 383778859,
+      "lo": 381681709,
+      "pairs_crossing": 0,
+      "pairs_internal": 7199,
+      "primes": 106091
+    },
+    {
+      "hi": 385876011,
+      "lo": 383778861,
+      "pairs_crossing": 0,
+      "pairs_internal": 7056,
+      "primes": 105915
+    },
+    {
+      "hi": 387973163,
+      "lo": 385876013,
+      "pairs_crossing": 0,
+      "pairs_internal": 7089,
+      "primes": 106120
+    },
+    {
+      "hi": 390070315,
+      "lo": 387973165,
+      "pairs_crossing": 0,
+      "pairs_internal": 7002,
+      "primes": 105908
+    },
+    {
+      "hi": 392167467,
+      "lo": 390070317,
+      "pairs_crossing": 0,
+      "pairs_internal": 7071,
+      "primes": 106016
+    },
+    {
+      "hi": 394264619,
+      "lo": 392167469,
+      "pairs_crossing": 0,
+      "pairs_internal": 7056,
+      "primes": 105925
+    },
+    {
+      "hi": 396361771,
+      "lo": 394264621,
+      "pairs_crossing": 0,
+      "pairs_internal": 7038,
+      "primes": 105750
+    },
+    {
+      "hi": 398458923,
+      "lo": 396361773,
+      "pairs_crossing": 0,
+      "pairs_internal": 7081,
+      "primes": 106058
+    },
+    {
+      "hi": 400556075,
+      "lo": 398458925,
+      "pairs_crossing": 0,
+      "pairs_internal": 7015,
+      "primes": 105839
+    },
+    {
+      "hi": 402653227,
+      "lo": 400556077,
+      "pairs_crossing": 0,
+      "pairs_internal": 7068,
+      "primes": 105828
+    },
+    {
+      "hi": 404750379,
+      "lo": 402653229,
+      "pairs_crossing": 0,
+      "pairs_internal": 7075,
+      "primes": 105842
+    },
+    {
+      "hi": 406847531,
+      "lo": 404750381,
+      "pairs_crossing": 0,
+      "pairs_internal": 6995,
+      "primes": 105828
+    },
+    {
+      "hi": 408944683,
+      "lo": 406847533,
+      "pairs_crossing": 1,
+      "pairs_internal": 7038,
+      "primes": 105766
+    },
+    {
+      "hi": 411041835,
+      "lo": 408944685,
+      "pairs_crossing": 0,
+      "pairs_internal": 7016,
+      "primes": 105728
+    },
+    {
+      "hi": 413138987,
+      "lo": 411041837,
+      "pairs_crossing": 0,
+      "pairs_internal": 7023,
+      "primes": 105721
+    },
+    {
+      "hi": 415236139,
+      "lo": 413138989,
+      "pairs_crossing": 0,
+      "pairs_internal": 6983,
+      "primes": 105771
+    },
+    {
+      "hi": 417333291,
+      "lo": 415236141,
+      "pairs_crossing": 0,
+      "pairs_internal": 7051,
+      "primes": 105716
+    },
+    {
+      "hi": 419430443,
+      "lo": 417333293,
+      "pairs_crossing": 0,
+      "pairs_internal": 7120,
+      "primes": 105418
+    },
+    {
+      "hi": 421527595,
+      "lo": 419430445,
+      "pairs_crossing": 0,
+      "pairs_internal": 7131,
+      "primes": 105536
+    },
+    {
+      "hi": 423624747,
+      "lo": 421527597,
+      "pairs_crossing": 0,
+      "pairs_internal": 7041,
+      "primes": 105711
+    },
+    {
+      "hi": 425721899,
+      "lo": 423624749,
+      "pairs_crossing": 0,
+      "pairs_internal": 6991,
+      "primes": 105793
+    },
+    {
+      "hi": 427819051,
+      "lo": 425721901,
+      "pairs_crossing": 0,
+      "pairs_internal": 6968,
+      "primes": 105381
+    },
+    {
+      "hi": 429916203,
+      "lo": 427819053,
+      "pairs_crossing": 0,
+      "pairs_internal": 6949,
+      "primes": 105476
+    },
+    {
+      "hi": 432013355,
+      "lo": 429916205,
+      "pairs_crossing": 0,
+      "pairs_internal": 6981,
+      "primes": 105437
+    },
+    {
+      "hi": 434110507,
+      "lo": 432013357,
+      "pairs_crossing": 0,
+      "pairs_internal": 7007,
+      "primes": 105285
+    },
+    {
+      "hi": 436207659,
+      "lo": 434110509,
+      "pairs_crossing": 0,
+      "pairs_internal": 7095,
+      "primes": 105423
+    },
+    {
+      "hi": 438304811,
+      "lo": 436207661,
+      "pairs_crossing": 0,
+      "pairs_internal": 7068,
+      "primes": 105428
+    },
+    {
+      "hi": 440401963,
+      "lo": 438304813,
+      "pairs_crossing": 0,
+      "pairs_internal": 7038,
+      "primes": 105359
+    },
+    {
+      "hi": 442499115,
+      "lo": 440401965,
+      "pairs_crossing": 0,
+      "pairs_internal": 6964,
+      "primes": 105567
+    },
+    {
+      "hi": 444596267,
+      "lo": 442499117,
+      "pairs_crossing": 0,
+      "pairs_internal": 6983,
+      "primes": 105456
+    },
+    {
+      "hi": 446693419,
+      "lo": 444596269,
+      "pairs_crossing": 0,
+      "pairs_internal": 7019,
+      "primes": 105237
+    },
+    {
+      "hi": 448790571,
+      "lo": 446693421,
+      "pairs_crossing": 0,
+      "pairs_internal": 6962,
+      "primes": 105252
+    },
+    {
+      "hi": 450887723,
+      "lo": 448790573,
+      "pairs_crossing": 0,
+      "pairs_internal": 6991,
+      "primes": 105202
+    },
+    {
+      "hi": 452984875,
+      "lo": 450887725,
+      "pairs_crossing": 0,
+      "pairs_internal": 6920,
+      "primes": 105245
+    },
+    {
+      "hi": 455082027,
+      "lo": 452984877,
+      "pairs_crossing": 0,
+      "pairs_internal": 7035,
+      "primes": 105183
+    },
+    {
+      "hi": 457179179,
+      "lo": 455082029,
+      "pairs_crossing": 0,
+      "pairs_internal": 7015,
+      "primes": 105393
+    },
+    {
+      "hi": 459276331,
+      "lo": 457179181,
+      "pairs_crossing": 0,
+      "pairs_internal": 6949,
+      "primes": 105031
+    },
+    {
+      "hi": 461373483,
+      "lo": 459276333,
+      "pairs_crossing": 0,
+      "pairs_internal": 6916,
+      "primes": 105057
+    },
+    {
+      "hi": 463470635,
+      "lo": 461373485,
+      "pairs_crossing": 0,
+      "pairs_internal": 6904,
+      "primes": 105220
+    },
+    {
+      "hi": 465567787,
+      "lo": 463470637,
+      "pairs_crossing": 0,
+      "pairs_internal": 6854,
+      "primes": 105049
+    },
+    {
+      "hi": 467664939,
+      "lo": 465567789,
+      "pairs_crossing": 0,
+      "pairs_internal": 7053,
+      "primes": 105244
+    },
+    {
+      "hi": 469762091,
+      "lo": 467664941,
+      "pairs_crossing": 0,
+      "pairs_internal": 6826,
+      "primes": 104929
+    },
+    {
+      "hi": 471859243,
+      "lo": 469762093,
+      "pairs_crossing": 0,
+      "pairs_internal": 7006,
+      "primes": 105094
+    },
+    {
+      "hi": 473956395,
+      "lo": 471859245,
+      "pairs_crossing": 0,
+      "pairs_internal": 6860,
+      "primes": 104768
+    },
+    {
+      "hi": 476053547,
+      "lo": 473956397,
+      "pairs_crossing": 0,
+      "pairs_internal": 6940,
+      "primes": 104876
+    },
+    {
+      "hi": 478150699,
+      "lo": 476053549,
+      "pairs_crossing": 0,
+      "pairs_internal": 6983,
+      "primes": 105185
+    },
+    {
+      "hi": 480247851,
+      "lo": 478150701,
+      "pairs_crossing": 0,
+      "pairs_internal": 6960,
+      "primes": 105153
+    },
+    {
+      "hi": 482345003,
+      "lo": 480247853,
+      "pairs_crossing": 0,
+      "pairs_internal": 6809,
+      "primes": 104754
+    },
+    {
+      "hi": 484442155,
+      "lo": 482345005,
+      "pairs_crossing": 0,
+      "pairs_internal": 6910,
+      "primes": 104925
+    },
+    {
+      "hi": 486539307,
+      "lo": 484442157,
+      "pairs_crossing": 0,
+      "pairs_internal": 6851,
+      "primes": 104859
+    },
+    {
+      "hi": 488636459,
+      "lo": 486539309,
+      "pairs_crossing": 0,
+      "pairs_internal": 6876,
+      "primes": 104691
+    },
+    {
+      "hi": 490733611,
+      "lo": 488636461,
+      "pairs_crossing": 0,
+      "pairs_internal": 6886,
+      "primes": 104879
+    },
+    {
+      "hi": 492830763,
+      "lo": 490733613,
+      "pairs_crossing": 0,
+      "pairs_internal": 6938,
+      "primes": 104756
+    },
+    {
+      "hi": 494927915,
+      "lo": 492830765,
+      "pairs_crossing": 0,
+      "pairs_internal": 6838,
+      "primes": 104743
+    },
+    {
+      "hi": 497025067,
+      "lo": 494927917,
+      "pairs_crossing": 0,
+      "pairs_internal": 6902,
+      "primes": 104899
+    },
+    {
+      "hi": 499122219,
+      "lo": 497025069,
+      "pairs_crossing": 0,
+      "pairs_internal": 6880,
+      "primes": 104658
+    },
+    {
+      "hi": 501219371,
+      "lo": 499122221,
+      "pairs_crossing": 0,
+      "pairs_internal": 6895,
+      "primes": 104617
+    },
+    {
+      "hi": 503316523,
+      "lo": 501219373,
+      "pairs_crossing": 0,
+      "pairs_internal": 6819,
+      "primes": 104351
+    },
+    {
+      "hi": 505413675,
+      "lo": 503316525,
+      "pairs_crossing": 0,
+      "pairs_internal": 6876,
+      "primes": 104481
+    },
+    {
+      "hi": 507510827,
+      "lo": 505413677,
+      "pairs_crossing": 0,
+      "pairs_internal": 6882,
+      "primes": 104612
+    },
+    {
+      "hi": 509607979,
+      "lo": 507510829,
+      "pairs_crossing": 0,
+      "pairs_internal": 7008,
+      "primes": 104754
+    },
+    {
+      "hi": 511705131,
+      "lo": 509607981,
+      "pairs_crossing": 0,
+      "pairs_internal": 6789,
+      "primes": 104118
+    },
+    {
+      "hi": 513802283,
+      "lo": 511705133,
+      "pairs_crossing": 0,
+      "pairs_internal": 6882,
+      "primes": 104645
+    },
+    {
+      "hi": 515899435,
+      "lo": 513802285,
+      "pairs_crossing": 0,
+      "pairs_internal": 6867,
+      "primes": 104321
+    },
+    {
+      "hi": 517996587,
+      "lo": 515899437,
+      "pairs_crossing": 0,
+      "pairs_internal": 6862,
+      "primes": 104853
+    },
+    {
+      "hi": 520093739,
+      "lo": 517996589,
+      "pairs_crossing": 0,
+      "pairs_internal": 6940,
+      "primes": 104555
+    },
+    {
+      "hi": 522190891,
+      "lo": 520093741,
+      "pairs_crossing": 0,
+      "pairs_internal": 6824,
+      "primes": 104278
+    },
+    {
+      "hi": 524288043,
+      "lo": 522190893,
+      "pairs_crossing": 0,
+      "pairs_internal": 6851,
+      "primes": 104507
+    },
+    {
+      "hi": 526385195,
+      "lo": 524288045,
+      "pairs_crossing": 0,
+      "pairs_internal": 6929,
+      "primes": 104375
+    },
+    {
+      "hi": 528482347,
+      "lo": 526385197,
+      "pairs_crossing": 0,
+      "pairs_internal": 6947,
+      "primes": 104638
+    },
+    {
+      "hi": 530579499,
+      "lo": 528482349,
+      "pairs_crossing": 0,
+      "pairs_internal": 6854,
+      "primes": 104441
+    },
+    {
+      "hi": 532676651,
+      "lo": 530579501,
+      "pairs_crossing": 0,
+      "pairs_internal": 6770,
+      "primes": 104249
+    },
+    {
+      "hi": 534773803,
+      "lo": 532676653,
+      "pairs_crossing": 0,
+      "pairs_internal": 6915,
+      "primes": 104354
+    },
+    {
+      "hi": 536870955,
+      "lo": 534773805,
+      "pairs_crossing": 0,
+      "pairs_internal": 6924,
+      "primes": 104549
+    },
+    {
+      "hi": 538968107,
+      "lo": 536870957,
+      "pairs_crossing": 0,
+      "pairs_internal": 6855,
+      "primes": 104237
+    },
+    {
+      "hi": 541065259,
+      "lo": 538968109,
+      "pairs_crossing": 0,
+      "pairs_internal": 6806,
+      "primes": 104410
+    },
+    {
+      "hi": 543162411,
+      "lo": 541065261,
+      "pairs_crossing": 0,
+      "pairs_internal": 6762,
+      "primes": 104075
+    },
+    {
+      "hi": 545259563,
+      "lo": 543162413,
+      "pairs_crossing": 0,
+      "pairs_internal": 6965,
+      "primes": 104107
+    },
+    {
+      "hi": 547356715,
+      "lo": 545259565,
+      "pairs_crossing": 0,
+      "pairs_internal": 6877,
+      "primes": 104313
+    },
+    {
+      "hi": 549453867,
+      "lo": 547356717,
+      "pairs_crossing": 0,
+      "pairs_internal": 6879,
+      "primes": 104264
+    },
+    {
+      "hi": 551551019,
+      "lo": 549453869,
+      "pairs_crossing": 0,
+      "pairs_internal": 6920,
+      "primes": 104416
+    },
+    {
+      "hi": 553648171,
+      "lo": 551551021,
+      "pairs_crossing": 0,
+      "pairs_internal": 6747,
+      "primes": 104416
+    },
+    {
+      "hi": 555745323,
+      "lo": 553648173,
+      "pairs_crossing": 0,
+      "pairs_internal": 6765,
+      "primes": 104024
+    },
+    {
+      "hi": 557842475,
+      "lo": 555745325,
+      "pairs_crossing": 0,
+      "pairs_internal": 6889,
+      "primes": 104054
+    },
+    {
+      "hi": 559939627,
+      "lo": 557842477,
+      "pairs_crossing": 0,
+      "pairs_internal": 6834,
+      "primes": 104113
+    },
+    {
+      "hi": 562036779,
+      "lo": 559939629,
+      "pairs_crossing": 0,
+      "pairs_internal": 6805,
+      "primes": 104112
+    },
+    {
+      "hi": 564133931,
+      "lo": 562036781,
+      "pairs_crossing": 0,
+      "pairs_internal": 6802,
+      "primes": 104132
+    },
+    {
+      "hi": 566231083,
+      "lo": 564133933,
+      "pairs_crossing": 0,
+      "pairs_internal": 6896,
+      "primes": 103971
+    },
+    {
+      "hi": 568328235,
+      "lo": 566231085,
+      "pairs_crossing": 0,
+      "pairs_internal": 6772,
+      "primes": 104110
+    },
+    {
+      "hi": 570425387,
+      "lo": 568328237,
+      "pairs_crossing": 0,
+      "pairs_internal": 6851,
+      "primes": 103896
+    },
+    {
+      "hi": 572522539,
+      "lo": 570425389,
+      "pairs_crossing": 0,
+      "pairs_internal": 6685,
+      "primes": 104007
+    },
+    {
+      "hi": 574619691,
+      "lo": 572522541,
+      "pairs_crossing": 0,
+      "pairs_internal": 6785,
+      "primes": 103905
+    },
+    {
+      "hi": 576716843,
+      "lo": 574619693,
+      "pairs_crossing": 0,
+      "pairs_internal": 6816,
+      "primes": 104090
+    },
+    {
+      "hi": 578813995,
+      "lo": 576716845,
+      "pairs_crossing": 0,
+      "pairs_internal": 6890,
+      "primes": 103865
+    },
+    {
+      "hi": 580911147,
+      "lo": 578813997,
+      "pairs_crossing": 0,
+      "pairs_internal": 6755,
+      "primes": 104064
+    },
+    {
+      "hi": 583008299,
+      "lo": 580911149,
+      "pairs_crossing": 0,
+      "pairs_internal": 6826,
+      "primes": 104009
+    },
+    {
+      "hi": 585105451,
+      "lo": 583008301,
+      "pairs_crossing": 0,
+      "pairs_internal": 6769,
+      "primes": 103780
+    },
+    {
+      "hi": 587202603,
+      "lo": 585105453,
+      "pairs_crossing": 0,
+      "pairs_internal": 6865,
+      "primes": 103789
+    },
+    {
+      "hi": 589299755,
+      "lo": 587202605,
+      "pairs_crossing": 0,
+      "pairs_internal": 6892,
+      "primes": 103812
+    },
+    {
+      "hi": 591396907,
+      "lo": 589299757,
+      "pairs_crossing": 0,
+      "pairs_internal": 6741,
+      "primes": 104190
+    },
+    {
+      "hi": 593494059,
+      "lo": 591396909,
+      "pairs_crossing": 0,
+      "pairs_internal": 6769,
+      "primes": 103642
+    },
+    {
+      "hi": 595591211,
+      "lo": 593494061,
+      "pairs_crossing": 0,
+      "pairs_internal": 6781,
+      "primes": 104032
+    },
+    {
+      "hi": 597688363,
+      "lo": 595591213,
+      "pairs_crossing": 0,
+      "pairs_internal": 6787,
+      "primes": 103947
+    },
+    {
+      "hi": 599785515,
+      "lo": 597688365,
+      "pairs_crossing": 0,
+      "pairs_internal": 6769,
+      "primes": 103551
+    },
+    {
+      "hi": 601882667,
+      "lo": 599785517,
+      "pairs_crossing": 0,
+      "pairs_internal": 6773,
+      "primes": 103922
+    },
+    {
+      "hi": 603979819,
+      "lo": 601882669,
+      "pairs_crossing": 0,
+      "pairs_internal": 6880,
+      "primes": 103997
+    },
+    {
+      "hi": 606076971,
+      "lo": 603979821,
+      "pairs_crossing": 0,
+      "pairs_internal": 6723,
+      "primes": 103532
+    },
+    {
+      "hi": 608174123,
+      "lo": 606076973,
+      "pairs_crossing": 0,
+      "pairs_internal": 6668,
+      "primes": 103768
+    },
+    {
+      "hi": 610271275,
+      "lo": 608174125,
+      "pairs_crossing": 0,
+      "pairs_internal": 6768,
+      "primes": 103557
+    },
+    {
+      "hi": 612368427,
+      "lo": 610271277,
+      "pairs_crossing": 0,
+      "pairs_internal": 6837,
+      "primes": 103692
+    },
+    {
+      "hi": 614465579,
+      "lo": 612368429,
+      "pairs_crossing": 0,
+      "pairs_internal": 6749,
+      "primes": 103626
+    },
+    {
+      "hi": 616562731,
+      "lo": 614465581,
+      "pairs_crossing": 0,
+      "pairs_internal": 6868,
+      "primes": 103655
+    },
+    {
+      "hi": 618659883,
+      "lo": 616562733,
+      "pairs_crossing": 0,
+      "pairs_internal": 6833,
+      "primes": 103377
+    },
+    {
+      "hi": 620757035,
+      "lo": 618659885,
+      "pairs_crossing": 0,
+      "pairs_internal": 6689,
+      "primes": 103580
+    },
+    {
+      "hi": 622854187,
+      "lo": 620757037,
+      "pairs_crossing": 0,
+      "pairs_internal": 6745,
+      "primes": 103466
+    },
+    {
+      "hi": 624951339,
+      "lo": 622854189,
+      "pairs_crossing": 0,
+      "pairs_internal": 6677,
+      "primes": 103718
+    },
+    {
+      "hi": 627048491,
+      "lo": 624951341,
+      "pairs_crossing": 0,
+      "pairs_internal": 6735,
+      "primes": 103410
+    },
+    {
+      "hi": 629145643,
+      "lo": 627048493,
+      "pairs_crossing": 0,
+      "pairs_internal": 6834,
+      "primes": 103759
+    },
+    {
+      "hi": 631242795,
+      "lo": 629145645,
+      "pairs_crossing": 0,
+      "pairs_internal": 6756,
+      "primes": 103389
+    },
+    {
+      "hi": 633339947,
+      "lo": 631242797,
+      "pairs_crossing": 0,
+      "pairs_internal": 6809,
+      "primes": 103372
+    },
+    {
+      "hi": 635437099,
+      "lo": 633339949,
+      "pairs_crossing": 0,
+      "pairs_internal": 6592,
+      "primes": 103402
+    },
+    {
+      "hi": 637534251,
+      "lo": 635437101,
+      "pairs_crossing": 0,
+      "pairs_internal": 6794,
+      "primes": 103734
+    },
+    {
+      "hi": 639631403,
+      "lo": 637534253,
+      "pairs_crossing": 0,
+      "pairs_internal": 6668,
+      "primes": 103261
+    },
+    {
+      "hi": 641728555,
+      "lo": 639631405,
+      "pairs_crossing": 0,
+      "pairs_internal": 6776,
+      "primes": 103584
+    },
+    {
+      "hi": 643825707,
+      "lo": 641728557,
+      "pairs_crossing": 0,
+      "pairs_internal": 6580,
+      "primes": 103227
+    },
+    {
+      "hi": 645922859,
+      "lo": 643825709,
+      "pairs_crossing": 0,
+      "pairs_internal": 6646,
+      "primes": 103312
+    },
+    {
+      "hi": 648020011,
+      "lo": 645922861,
+      "pairs_crossing": 0,
+      "pairs_internal": 6791,
+      "primes": 103434
+    },
+    {
+      "hi": 650117163,
+      "lo": 648020013,
+      "pairs_crossing": 0,
+      "pairs_internal": 6719,
+      "primes": 103402
+    },
+    {
+      "hi": 652214315,
+      "lo": 650117165,
+      "pairs_crossing": 0,
+      "pairs_internal": 6731,
+      "primes": 103310
+    },
+    {
+      "hi": 654311467,
+      "lo": 652214317,
+      "pairs_crossing": 0,
+      "pairs_internal": 6753,
+      "primes": 103470
+    },
+    {
+      "hi": 656408619,
+      "lo": 654311469,
+      "pairs_crossing": 0,
+      "pairs_internal": 6720,
+      "primes": 103147
+    },
+    {
+      "hi": 658505771,
+      "lo": 656408621,
+      "pairs_crossing": 0,
+      "pairs_internal": 6743,
+      "primes": 103317
+    },
+    {
+      "hi": 660602923,
+      "lo": 658505773,
+      "pairs_crossing": 0,
+      "pairs_internal": 6681,
+      "primes": 103348
+    },
+    {
+      "hi": 662700075,
+      "lo": 660602925,
+      "pairs_crossing": 0,
+      "pairs_internal": 6681,
+      "primes": 103442
+    },
+    {
+      "hi": 664797227,
+      "lo": 662700077,
+      "pairs_crossing": 0,
+      "pairs_internal": 6689,
+      "primes": 103153
+    },
+    {
+      "hi": 666894379,
+      "lo": 664797229,
+      "pairs_crossing": 0,
+      "pairs_internal": 6778,
+      "primes": 103175
+    },
+    {
+      "hi": 668991531,
+      "lo": 666894381,
+      "pairs_crossing": 0,
+      "pairs_internal": 6736,
+      "primes": 103129
+    },
+    {
+      "hi": 671088683,
+      "lo": 668991533,
+      "pairs_crossing": 0,
+      "pairs_internal": 6712,
+      "primes": 103277
+    },
+    {
+      "hi": 673185835,
+      "lo": 671088685,
+      "pairs_crossing": 0,
+      "pairs_internal": 6643,
+      "primes": 103179
+    },
+    {
+      "hi": 675282987,
+      "lo": 673185837,
+      "pairs_crossing": 0,
+      "pairs_internal": 6719,
+      "primes": 102977
+    },
+    {
+      "hi": 677380139,
+      "lo": 675282989,
+      "pairs_crossing": 0,
+      "pairs_internal": 6579,
+      "primes": 102949
+    },
+    {
+      "hi": 679477291,
+      "lo": 677380141,
+      "pairs_crossing": 0,
+      "pairs_internal": 6762,
+      "primes": 103272
+    },
+    {
+      "hi": 681574443,
+      "lo": 679477293,
+      "pairs_crossing": 0,
+      "pairs_internal": 6703,
+      "primes": 102991
+    },
+    {
+      "hi": 683671595,
+      "lo": 681574445,
+      "pairs_crossing": 0,
+      "pairs_internal": 6678,
+      "primes": 102887
+    },
+    {
+      "hi": 685768747,
+      "lo": 683671597,
+      "pairs_crossing": 0,
+      "pairs_internal": 6750,
+      "primes": 103281
+    },
+    {
+      "hi": 687865899,
+      "lo": 685768749,
+      "pairs_crossing": 0,
+      "pairs_internal": 6703,
+      "primes": 103206
+    },
+    {
+      "hi": 689963051,
+      "lo": 687865901,
+      "pairs_crossing": 0,
+      "pairs_internal": 6755,
+      "primes": 103152
+    },
+    {
+      "hi": 692060203,
+      "lo": 689963053,
+      "pairs_crossing": 0,
+      "pairs_internal": 6644,
+      "primes": 103114
+    },
+    {
+      "hi": 694157355,
+      "lo": 692060205,
+      "pairs_crossing": 0,
+      "pairs_internal": 6680,
+      "primes": 102940
+    },
+    {
+      "hi": 696254507,
+      "lo": 694157357,
+      "pairs_crossing": 0,
+      "pairs_internal": 6661,
+      "primes": 103311
+    },
+    {
+      "hi": 698351659,
+      "lo": 696254509,
+      "pairs_crossing": 0,
+      "pairs_internal": 6543,
+      "primes": 102678
+    },
+    {
+      "hi": 700448811,
+      "lo": 698351661,
+      "pairs_crossing": 0,
+      "pairs_internal": 6718,
+      "primes": 102993
+    },
+    {
+      "hi": 702545963,
+      "lo": 700448813,
+      "pairs_crossing": 0,
+      "pairs_internal": 6678,
+      "primes": 103101
+    },
+    {
+      "hi": 704643115,
+      "lo": 702545965,
+      "pairs_crossing": 0,
+      "pairs_internal": 6676,
+      "primes": 103034
+    },
+    {
+      "hi": 706740267,
+      "lo": 704643117,
+      "pairs_crossing": 0,
+      "pairs_internal": 6630,
+      "primes": 102765
+    },
+    {
+      "hi": 708837419,
+      "lo": 706740269,
+      "pairs_crossing": 0,
+      "pairs_internal": 6831,
+      "primes": 102980
+    },
+    {
+      "hi": 710934571,
+      "lo": 708837421,
+      "pairs_crossing": 0,
+      "pairs_internal": 6670,
+      "primes": 102764
+    },
+    {
+      "hi": 713031723,
+      "lo": 710934573,
+      "pairs_crossing": 0,
+      "pairs_internal": 6802,
+      "primes": 103025
+    },
+    {
+      "hi": 715128875,
+      "lo": 713031725,
+      "pairs_crossing": 0,
+      "pairs_internal": 6656,
+      "primes": 102629
+    },
+    {
+      "hi": 717226027,
+      "lo": 715128877,
+      "pairs_crossing": 0,
+      "pairs_internal": 6644,
+      "primes": 102785
+    },
+    {
+      "hi": 719323179,
+      "lo": 717226029,
+      "pairs_crossing": 0,
+      "pairs_internal": 6689,
+      "primes": 102907
+    },
+    {
+      "hi": 721420331,
+      "lo": 719323181,
+      "pairs_crossing": 0,
+      "pairs_internal": 6590,
+      "primes": 102802
+    },
+    {
+      "hi": 723517483,
+      "lo": 721420333,
+      "pairs_crossing": 0,
+      "pairs_internal": 6600,
+      "primes": 102981
+    },
+    {
+      "hi": 725614635,
+      "lo": 723517485,
+      "pairs_crossing": 0,
+      "pairs_internal": 6767,
+      "primes": 102839
+    },
+    {
+      "hi": 727711787,
+      "lo": 725614637,
+      "pairs_crossing": 0,
+      "pairs_internal": 6715,
+      "primes": 102822
+    },
+    {
+      "hi": 729808939,
+      "lo": 727711789,
+      "pairs_crossing": 0,
+      "pairs_internal": 6606,
+      "primes": 102453
+    },
+    {
+      "hi": 731906091,
+      "lo": 729808941,
+      "pairs_crossing": 0,
+      "pairs_internal": 6535,
+      "primes": 102711
+    },
+    {
+      "hi": 734003243,
+      "lo": 731906093,
+      "pairs_crossing": 0,
+      "pairs_internal": 6654,
+      "primes": 102694
+    },
+    {
+      "hi": 736100395,
+      "lo": 734003245,
+      "pairs_crossing": 0,
+      "pairs_internal": 6678,
+      "primes": 102702
+    },
+    {
+      "hi": 738197547,
+      "lo": 736100397,
+      "pairs_crossing": 0,
+      "pairs_internal": 6666,
+      "primes": 102635
+    },
+    {
+      "hi": 740294699,
+      "lo": 738197549,
+      "pairs_crossing": 0,
+      "pairs_internal": 6657,
+      "primes": 102835
+    },
+    {
+      "hi": 742391851,
+      "lo": 740294701,
+      "pairs_crossing": 0,
+      "pairs_internal": 6731,
+      "primes": 102957
+    },
+    {
+      "hi": 744489003,
+      "lo": 742391853,
+      "pairs_crossing": 0,
+      "pairs_internal": 6579,
+      "primes": 102450
+    },
+    {
+      "hi": 746586155,
+      "lo": 744489005,
+      "pairs_crossing": 0,
+      "pairs_internal": 6615,
+      "primes": 102466
+    },
+    {
+      "hi": 748683307,
+      "lo": 746586157,
+      "pairs_crossing": 0,
+      "pairs_internal": 6548,
+      "primes": 102453
+    },
+    {
+      "hi": 750780459,
+      "lo": 748683309,
+      "pairs_crossing": 0,
+      "pairs_internal": 6637,
+      "primes": 102582
+    },
+    {
+      "hi": 752877611,
+      "lo": 750780461,
+      "pairs_crossing": 0,
+      "pairs_internal": 6628,
+      "primes": 102649
+    },
+    {
+      "hi": 754974763,
+      "lo": 752877613,
+      "pairs_crossing": 0,
+      "pairs_internal": 6532,
+      "primes": 102378
+    },
+    {
+      "hi": 757071915,
+      "lo": 754974765,
+      "pairs_crossing": 0,
+      "pairs_internal": 6703,
+      "primes": 102897
+    },
+    {
+      "hi": 759169067,
+      "lo": 757071917,
+      "pairs_crossing": 0,
+      "pairs_internal": 6619,
+      "primes": 102306
+    },
+    {
+      "hi": 761266219,
+      "lo": 759169069,
+      "pairs_crossing": 0,
+      "pairs_internal": 6478,
+      "primes": 102537
+    },
+    {
+      "hi": 763363371,
+      "lo": 761266221,
+      "pairs_crossing": 0,
+      "pairs_internal": 6569,
+      "primes": 102674
+    },
+    {
+      "hi": 765460523,
+      "lo": 763363373,
+      "pairs_crossing": 0,
+      "pairs_internal": 6508,
+      "primes": 102108
+    },
+    {
+      "hi": 767557675,
+      "lo": 765460525,
+      "pairs_crossing": 0,
+      "pairs_internal": 6560,
+      "primes": 102526
+    },
+    {
+      "hi": 769654827,
+      "lo": 767557677,
+      "pairs_crossing": 0,
+      "pairs_internal": 6640,
+      "primes": 102682
+    },
+    {
+      "hi": 771751979,
+      "lo": 769654829,
+      "pairs_crossing": 0,
+      "pairs_internal": 6631,
+      "primes": 102602
+    },
+    {
+      "hi": 773849131,
+      "lo": 771751981,
+      "pairs_crossing": 0,
+      "pairs_internal": 6591,
+      "primes": 102405
+    },
+    {
+      "hi": 775946283,
+      "lo": 773849133,
+      "pairs_crossing": 0,
+      "pairs_internal": 6661,
+      "primes": 102384
+    },
+    {
+      "hi": 778043435,
+      "lo": 775946285,
+      "pairs_crossing": 0,
+      "pairs_internal": 6617,
+      "primes": 102516
+    },
+    {
+      "hi": 780140587,
+      "lo": 778043437,
+      "pairs_crossing": 0,
+      "pairs_internal": 6625,
+      "primes": 102315
+    },
+    {
+      "hi": 782237739,
+      "lo": 780140589,
+      "pairs_crossing": 0,
+      "pairs_internal": 6621,
+      "primes": 102494
+    },
+    {
+      "hi": 784334891,
+      "lo": 782237741,
+      "pairs_crossing": 0,
+      "pairs_internal": 6581,
+      "primes": 102553
+    },
+    {
+      "hi": 786432043,
+      "lo": 784334893,
+      "pairs_crossing": 0,
+      "pairs_internal": 6595,
+      "primes": 102646
+    },
+    {
+      "hi": 788529195,
+      "lo": 786432045,
+      "pairs_crossing": 0,
+      "pairs_internal": 6403,
+      "primes": 102087
+    },
+    {
+      "hi": 790626347,
+      "lo": 788529197,
+      "pairs_crossing": 0,
+      "pairs_internal": 6621,
+      "primes": 102812
+    },
+    {
+      "hi": 792723499,
+      "lo": 790626349,
+      "pairs_crossing": 0,
+      "pairs_internal": 6655,
+      "primes": 102257
+    },
+    {
+      "hi": 794820651,
+      "lo": 792723501,
+      "pairs_crossing": 0,
+      "pairs_internal": 6572,
+      "primes": 102246
+    },
+    {
+      "hi": 796917803,
+      "lo": 794820653,
+      "pairs_crossing": 0,
+      "pairs_internal": 6496,
+      "primes": 102449
+    },
+    {
+      "hi": 799014955,
+      "lo": 796917805,
+      "pairs_crossing": 0,
+      "pairs_internal": 6655,
+      "primes": 102593
+    },
+    {
+      "hi": 801112107,
+      "lo": 799014957,
+      "pairs_crossing": 0,
+      "pairs_internal": 6528,
+      "primes": 101989
+    },
+    {
+      "hi": 803209259,
+      "lo": 801112109,
+      "pairs_crossing": 0,
+      "pairs_internal": 6525,
+      "primes": 102225
+    },
+    {
+      "hi": 805306411,
+      "lo": 803209261,
+      "pairs_crossing": 0,
+      "pairs_internal": 6606,
+      "primes": 102478
+    },
+    {
+      "hi": 807403563,
+      "lo": 805306413,
+      "pairs_crossing": 0,
+      "pairs_internal": 6629,
+      "primes": 102490
+    },
+    {
+      "hi": 809500715,
+      "lo": 807403565,
+      "pairs_crossing": 0,
+      "pairs_internal": 6513,
+      "primes": 102295
+    },
+    {
+      "hi": 811597867,
+      "lo": 809500717,
+      "pairs_crossing": 0,
+      "pairs_internal": 6592,
+      "primes": 102139
+    },
+    {
+      "hi": 813695019,
+      "lo": 811597869,
+      "pairs_crossing": 0,
+      "pairs_internal": 6584,
+      "primes": 102101
+    },
+    {
+      "hi": 815792171,
+      "lo": 813695021,
+      "pairs_crossing": 0,
+      "pairs_internal": 6613,
+      "primes": 102293
+    },
+    {
+      "hi": 817889323,
+      "lo": 815792173,
+      "pairs_crossing": 0,
+      "pairs_internal": 6488,
+      "primes": 102334
+    },
+    {
+      "hi": 819986475,
+      "lo": 817889325,
+      "pairs_crossing": 0,
+      "pairs_internal": 6526,
+      "primes": 102040
+    },
+    {
+      "hi": 822083627,
+      "lo": 819986477,
+      "pairs_crossing": 0,
+      "pairs_internal": 6573,
+      "primes": 102080
+    },
+    {
+      "hi": 824180779,
+      "lo": 822083629,
+      "pairs_crossing": 0,
+      "pairs_internal": 6571,
+      "primes": 102274
+    },
+    {
+      "hi": 826277931,
+      "lo": 824180781,
+      "pairs_crossing": 0,
+      "pairs_internal": 6546,
+      "primes": 101973
+    },
+    {
+      "hi": 828375083,
+      "lo": 826277933,
+      "pairs_crossing": 0,
+      "pairs_internal": 6637,
+      "primes": 102129
+    },
+    {
+      "hi": 830472235,
+      "lo": 828375085,
+      "pairs_crossing": 0,
+      "pairs_internal": 6491,
+      "primes": 102147
+    },
+    {
+      "hi": 832569387,
+      "lo": 830472237,
+      "pairs_crossing": 0,
+      "pairs_internal": 6585,
+      "primes": 102031
+    },
+    {
+      "hi": 834666539,
+      "lo": 832569389,
+      "pairs_crossing": 0,
+      "pairs_internal": 6572,
+      "primes": 102281
+    },
+    {
+      "hi": 836763691,
+      "lo": 834666541,
+      "pairs_crossing": 0,
+      "pairs_internal": 6563,
+      "primes": 102084
+    },
+    {
+      "hi": 838860843,
+      "lo": 836763693,
+      "pairs_crossing": 0,
+      "pairs_internal": 6638,
+      "primes": 102104
+    },
+    {
+      "hi": 840957995,
+      "lo": 838860845,
+      "pairs_crossing": 0,
+      "pairs_internal": 6571,
+      "primes": 102113
+    },
+    {
+      "hi": 843055147,
+      "lo": 840957997,
+      "pairs_crossing": 0,
+      "pairs_internal": 6562,
+      "primes": 102085
+    },
+    {
+      "hi": 845152299,
+      "lo": 843055149,
+      "pairs_crossing": 0,
+      "pairs_internal": 6504,
+      "primes": 102036
+    },
+    {
+      "hi": 847249451,
+      "lo": 845152301,
+      "pairs_crossing": 0,
+      "pairs_internal": 6476,
+      "primes": 101819
+    },
+    {
+      "hi": 849346603,
+      "lo": 847249453,
+      "pairs_crossing": 0,
+      "pairs_internal": 6534,
+      "primes": 102096
+    },
+    {
+      "hi": 851443755,
+      "lo": 849346605,
+      "pairs_crossing": 0,
+      "pairs_internal": 6626,
+      "primes": 101986
+    },
+    {
+      "hi": 853540907,
+      "lo": 851443757,
+      "pairs_crossing": 0,
+      "pairs_internal": 6567,
+      "primes": 101961
+    },
+    {
+      "hi": 855638059,
+      "lo": 853540909,
+      "pairs_crossing": 0,
+      "pairs_internal": 6568,
+      "primes": 102051
+    },
+    {
+      "hi": 857735211,
+      "lo": 855638061,
+      "pairs_crossing": 0,
+      "pairs_internal": 6454,
+      "primes": 101842
+    },
+    {
+      "hi": 859832363,
+      "lo": 857735213,
+      "pairs_crossing": 0,
+      "pairs_internal": 6557,
+      "primes": 101794
+    },
+    {
+      "hi": 861929515,
+      "lo": 859832365,
+      "pairs_crossing": 0,
+      "pairs_internal": 6639,
+      "primes": 101730
+    },
+    {
+      "hi": 864026667,
+      "lo": 861929517,
+      "pairs_crossing": 0,
+      "pairs_internal": 6580,
+      "primes": 101990
+    },
+    {
+      "hi": 866123819,
+      "lo": 864026669,
+      "pairs_crossing": 0,
+      "pairs_internal": 6605,
+      "primes": 101967
+    },
+    {
+      "hi": 868220971,
+      "lo": 866123821,
+      "pairs_crossing": 0,
+      "pairs_internal": 6446,
+      "primes": 102007
+    },
+    {
+      "hi": 870318123,
+      "lo": 868220973,
+      "pairs_crossing": 0,
+      "pairs_internal": 6543,
+      "primes": 101947
+    },
+    {
+      "hi": 872415275,
+      "lo": 870318125,
+      "pairs_crossing": 0,
+      "pairs_internal": 6518,
+      "primes": 101796
+    },
+    {
+      "hi": 874512427,
+      "lo": 872415277,
+      "pairs_crossing": 0,
+      "pairs_internal": 6536,
+      "primes": 101895
+    },
+    {
+      "hi": 876609579,
+      "lo": 874512429,
+      "pairs_crossing": 0,
+      "pairs_internal": 6557,
+      "primes": 101681
+    },
+    {
+      "hi": 878706731,
+      "lo": 876609581,
+      "pairs_crossing": 0,
+      "pairs_internal": 6544,
+      "primes": 101709
+    },
+    {
+      "hi": 880803883,
+      "lo": 878706733,
+      "pairs_crossing": 0,
+      "pairs_internal": 6446,
+      "primes": 101715
+    },
+    {
+      "hi": 882901035,
+      "lo": 880803885,
+      "pairs_crossing": 0,
+      "pairs_internal": 6556,
+      "primes": 101982
+    },
+    {
+      "hi": 884998187,
+      "lo": 882901037,
+      "pairs_crossing": 0,
+      "pairs_internal": 6507,
+      "primes": 101641
+    },
+    {
+      "hi": 887095339,
+      "lo": 884998189,
+      "pairs_crossing": 0,
+      "pairs_internal": 6566,
+      "primes": 101692
+    },
+    {
+      "hi": 889192491,
+      "lo": 887095341,
+      "pairs_crossing": 0,
+      "pairs_internal": 6558,
+      "primes": 101840
+    },
+    {
+      "hi": 891289643,
+      "lo": 889192493,
+      "pairs_crossing": 0,
+      "pairs_internal": 6605,
+      "primes": 101625
+    },
+    {
+      "hi": 893386795,
+      "lo": 891289645,
+      "pairs_crossing": 0,
+      "pairs_internal": 6475,
+      "primes": 101880
+    },
+    {
+      "hi": 895483947,
+      "lo": 893386797,
+      "pairs_crossing": 0,
+      "pairs_internal": 6526,
+      "primes": 101569
+    },
+    {
+      "hi": 897581099,
+      "lo": 895483949,
+      "pairs_crossing": 0,
+      "pairs_internal": 6519,
+      "primes": 101616
+    },
+    {
+      "hi": 899678251,
+      "lo": 897581101,
+      "pairs_crossing": 0,
+      "pairs_internal": 6589,
+      "primes": 101675
+    },
+    {
+      "hi": 901775403,
+      "lo": 899678253,
+      "pairs_crossing": 0,
+      "pairs_internal": 6591,
+      "primes": 101883
+    },
+    {
+      "hi": 903872555,
+      "lo": 901775405,
+      "pairs_crossing": 0,
+      "pairs_internal": 6467,
+      "primes": 101497
+    },
+    {
+      "hi": 905969707,
+      "lo": 903872557,
+      "pairs_crossing": 0,
+      "pairs_internal": 6536,
+      "primes": 101696
+    },
+    {
+      "hi": 908066859,
+      "lo": 905969709,
+      "pairs_crossing": 0,
+      "pairs_internal": 6480,
+      "primes": 101868
+    },
+    {
+      "hi": 910164011,
+      "lo": 908066861,
+      "pairs_crossing": 0,
+      "pairs_internal": 6626,
+      "primes": 101936
+    },
+    {
+      "hi": 912261163,
+      "lo": 910164013,
+      "pairs_crossing": 0,
+      "pairs_internal": 6516,
+      "primes": 101789
+    },
+    {
+      "hi": 914358315,
+      "lo": 912261165,
+      "pairs_crossing": 0,
+      "pairs_internal": 6537,
+      "primes": 101613
+    },
+    {
+      "hi": 916455467,
+      "lo": 914358317,
+      "pairs_crossing": 0,
+      "pairs_internal": 6573,
+      "primes": 101879
+    },
+    {
+      "hi": 918552619,
+      "lo": 916455469,
+      "pairs_crossing": 0,
+      "pairs_internal": 6434,
+      "primes": 101423
+    },
+    {
+      "hi": 920649771,
+      "lo": 918552621,
+      "pairs_crossing": 0,
+      "pairs_internal": 6456,
+      "primes": 101836
+    },
+    {
+      "hi": 922746923,
+      "lo": 920649773,
+      "pairs_crossing": 0,
+      "pairs_internal": 6514,
+      "primes": 101450
+    },
+    {
+      "hi": 924844075,
+      "lo": 922746925,
+      "pairs_crossing": 0,
+      "pairs_internal": 6437,
+      "primes": 101585
+    },
+    {
+      "hi": 926941227,
+      "lo": 924844077,
+      "pairs_crossing": 0,
+      "pairs_internal": 6478,
+      "primes": 101603
+    },
+    {
+      "hi": 929038379,
+      "lo": 926941229,
+      "pairs_crossing": 0,
+      "pairs_internal": 6441,
+      "primes": 101257
+    },
+    {
+      "hi": 931135531,
+      "lo": 929038381,
+      "pairs_crossing": 0,
+      "pairs_internal": 6450,
+      "primes": 101440
+    },
+    {
+      "hi": 933232683,
+      "lo": 931135533,
+      "pairs_crossing": 0,
+      "pairs_internal": 6541,
+      "primes": 101655
+    },
+    {
+      "hi": 935329835,
+      "lo": 933232685,
+      "pairs_crossing": 0,
+      "pairs_internal": 6591,
+      "primes": 101642
+    },
+    {
+      "hi": 937426987,
+      "lo": 935329837,
+      "pairs_crossing": 0,
+      "pairs_internal": 6550,
+      "primes": 101454
+    },
+    {
+      "hi": 939524139,
+      "lo": 937426989,
+      "pairs_crossing": 0,
+      "pairs_internal": 6505,
+      "primes": 101393
+    },
+    {
+      "hi": 941621291,
+      "lo": 939524141,
+      "pairs_crossing": 0,
+      "pairs_internal": 6578,
+      "primes": 101506
+    },
+    {
+      "hi": 943718443,
+      "lo": 941621293,
+      "pairs_crossing": 0,
+      "pairs_internal": 6428,
+      "primes": 101293
+    },
+    {
+      "hi": 945815595,
+      "lo": 943718445,
+      "pairs_crossing": 0,
+      "pairs_internal": 6645,
+      "primes": 101520
+    },
+    {
+      "hi": 947912747,
+      "lo": 945815597,
+      "pairs_crossing": 0,
+      "pairs_internal": 6475,
+      "primes": 101659
+    },
+    {
+      "hi": 950009899,
+      "lo": 947912749,
+      "pairs_crossing": 0,
+      "pairs_internal": 6387,
+      "primes": 101385
+    },
+    {
+      "hi": 952107051,
+      "lo": 950009901,
+      "pairs_crossing": 0,
+      "pairs_internal": 6475,
+      "primes": 101316
+    },
+    {
+      "hi": 954204203,
+      "lo": 952107053,
+      "pairs_crossing": 0,
+      "pairs_internal": 6585,
+      "primes": 101559
+    },
+    {
+      "hi": 956301355,
+      "lo": 954204205,
+      "pairs_crossing": 0,
+      "pairs_internal": 6429,
+      "primes": 101343
+    },
+    {
+      "hi": 958398507,
+      "lo": 956301357,
+      "pairs_crossing": 0,
+      "pairs_internal": 6505,
+      "primes": 101539
+    },
+    {
+      "hi": 960495659,
+      "lo": 958398509,
+      "pairs_crossing": 0,
+      "pairs_internal": 6405,
+      "primes": 101771
+    },
+    {
+      "hi": 962592811,
+      "lo": 960495661,
+      "pairs_crossing": 0,
+      "pairs_internal": 6412,
+      "primes": 101308
+    },
+    {
+      "hi": 964689963,
+      "lo": 962592813,
+      "pairs_crossing": 0,
+      "pairs_internal": 6520,
+      "primes": 101463
+    },
+    {
+      "hi": 966787115,
+      "lo": 964689965,
+      "pairs_crossing": 0,
+      "pairs_internal": 6416,
+      "primes": 101271
+    },
+    {
+      "hi": 968884267,
+      "lo": 966787117,
+      "pairs_crossing": 0,
+      "pairs_internal": 6583,
+      "primes": 101311
+    },
+    {
+      "hi": 970981419,
+      "lo": 968884269,
+      "pairs_crossing": 0,
+      "pairs_internal": 6540,
+      "primes": 101557
+    },
+    {
+      "hi": 973078571,
+      "lo": 970981421,
+      "pairs_crossing": 0,
+      "pairs_internal": 6409,
+      "primes": 101135
+    },
+    {
+      "hi": 975175723,
+      "lo": 973078573,
+      "pairs_crossing": 1,
+      "pairs_internal": 6396,
+      "primes": 101323
+    },
+    {
+      "hi": 977272875,
+      "lo": 975175725,
+      "pairs_crossing": 0,
+      "pairs_internal": 6472,
+      "primes": 101237
+    },
+    {
+      "hi": 979370027,
+      "lo": 977272877,
+      "pairs_crossing": 0,
+      "pairs_internal": 6414,
+      "primes": 101184
+    },
+    {
+      "hi": 981467179,
+      "lo": 979370029,
+      "pairs_crossing": 0,
+      "pairs_internal": 6367,
+      "primes": 101214
+    },
+    {
+      "hi": 983564331,
+      "lo": 981467181,
+      "pairs_crossing": 0,
+      "pairs_internal": 6506,
+      "primes": 101331
+    },
+    {
+      "hi": 985661483,
+      "lo": 983564333,
+      "pairs_crossing": 0,
+      "pairs_internal": 6444,
+      "primes": 101546
+    },
+    {
+      "hi": 987758635,
+      "lo": 985661485,
+      "pairs_crossing": 0,
+      "pairs_internal": 6496,
+      "primes": 101231
+    },
+    {
+      "hi": 989855787,
+      "lo": 987758637,
+      "pairs_crossing": 0,
+      "pairs_internal": 6444,
+      "primes": 101235
+    },
+    {
+      "hi": 991952939,
+      "lo": 989855789,
+      "pairs_crossing": 0,
+      "pairs_internal": 6381,
+      "primes": 101244
+    },
+    {
+      "hi": 994050091,
+      "lo": 991952941,
+      "pairs_crossing": 0,
+      "pairs_internal": 6436,
+      "primes": 101186
+    },
+    {
+      "hi": 996147243,
+      "lo": 994050093,
+      "pairs_crossing": 0,
+      "pairs_internal": 6482,
+      "primes": 101334
+    },
+    {
+      "hi": 998244395,
+      "lo": 996147245,
+      "pairs_crossing": 0,
+      "pairs_internal": 6430,
+      "primes": 101294
+    },
+    {
+      "hi": 1000341547,
+      "lo": 998244397,
+      "pairs_crossing": 0,
+      "pairs_internal": 6536,
+      "primes": 101093
+    },
+    {
+      "hi": 1002438699,
+      "lo": 1000341549,
+      "pairs_crossing": 0,
+      "pairs_internal": 6378,
+      "primes": 101042
+    },
+    {
+      "hi": 1004535851,
+      "lo": 1002438701,
+      "pairs_crossing": 0,
+      "pairs_internal": 6468,
+      "primes": 101260
+    },
+    {
+      "hi": 1006633003,
+      "lo": 1004535853,
+      "pairs_crossing": 0,
+      "pairs_internal": 6465,
+      "primes": 101165
+    },
+    {
+      "hi": 1008730155,
+      "lo": 1006633005,
+      "pairs_crossing": 0,
+      "pairs_internal": 6443,
+      "primes": 101260
+    },
+    {
+      "hi": 1010827307,
+      "lo": 1008730157,
+      "pairs_crossing": 0,
+      "pairs_internal": 6467,
+      "primes": 101144
+    },
+    {
+      "hi": 1012924459,
+      "lo": 1010827309,
+      "pairs_crossing": 0,
+      "pairs_internal": 6479,
+      "primes": 101291
+    },
+    {
+      "hi": 1015021611,
+      "lo": 1012924461,
+      "pairs_crossing": 0,
+      "pairs_internal": 6443,
+      "primes": 101154
+    },
+    {
+      "hi": 1017118763,
+      "lo": 1015021613,
+      "pairs_crossing": 0,
+      "pairs_internal": 6424,
+      "primes": 101178
+    },
+    {
+      "hi": 1019215915,
+      "lo": 1017118765,
+      "pairs_crossing": 0,
+      "pairs_internal": 6437,
+      "primes": 101097
+    },
+    {
+      "hi": 1021313067,
+      "lo": 1019215917,
+      "pairs_crossing": 0,
+      "pairs_internal": 6521,
+      "primes": 101105
+    },
+    {
+      "hi": 1023410219,
+      "lo": 1021313069,
+      "pairs_crossing": 0,
+      "pairs_internal": 6409,
+      "primes": 101076
+    },
+    {
+      "hi": 1025507371,
+      "lo": 1023410221,
+      "pairs_crossing": 0,
+      "pairs_internal": 6492,
+      "primes": 101197
+    },
+    {
+      "hi": 1027604523,
+      "lo": 1025507373,
+      "pairs_crossing": 0,
+      "pairs_internal": 6231,
+      "primes": 100834
+    },
+    {
+      "hi": 1029701675,
+      "lo": 1027604525,
+      "pairs_crossing": 0,
+      "pairs_internal": 6331,
+      "primes": 101192
+    },
+    {
+      "hi": 1031798827,
+      "lo": 1029701677,
+      "pairs_crossing": 0,
+      "pairs_internal": 6458,
+      "primes": 101040
+    },
+    {
+      "hi": 1033895979,
+      "lo": 1031798829,
+      "pairs_crossing": 0,
+      "pairs_internal": 6363,
+      "primes": 100894
+    },
+    {
+      "hi": 1035993131,
+      "lo": 1033895981,
+      "pairs_crossing": 0,
+      "pairs_internal": 6364,
+      "primes": 101010
+    },
+    {
+      "hi": 1038090283,
+      "lo": 1035993133,
+      "pairs_crossing": 0,
+      "pairs_internal": 6500,
+      "primes": 101139
+    },
+    {
+      "hi": 1040187435,
+      "lo": 1038090285,
+      "pairs_crossing": 0,
+      "pairs_internal": 6486,
+      "primes": 101192
+    },
+    {
+      "hi": 1042284587,
+      "lo": 1040187437,
+      "pairs_crossing": 0,
+      "pairs_internal": 6492,
+      "primes": 101034
+    },
+    {
+      "hi": 1044381739,
+      "lo": 1042284589,
+      "pairs_crossing": 0,
+      "pairs_internal": 6444,
+      "primes": 101026
+    },
+    {
+      "hi": 1046478891,
+      "lo": 1044381741,
+      "pairs_crossing": 0,
+      "pairs_internal": 6347,
+      "primes": 100913
+    },
+    {
+      "hi": 1048576043,
+      "lo": 1046478893,
+      "pairs_crossing": 0,
+      "pairs_internal": 6435,
+      "primes": 100746
+    },
+    {
+      "hi": 1050673195,
+      "lo": 1048576045,
+      "pairs_crossing": 0,
+      "pairs_internal": 6376,
+      "primes": 100847
+    },
+    {
+      "hi": 1052770347,
+      "lo": 1050673197,
+      "pairs_crossing": 0,
+      "pairs_internal": 6389,
+      "primes": 101100
+    },
+    {
+      "hi": 1054867499,
+      "lo": 1052770349,
+      "pairs_crossing": 0,
+      "pairs_internal": 6388,
+      "primes": 100852
+    },
+    {
+      "hi": 1056964651,
+      "lo": 1054867501,
+      "pairs_crossing": 0,
+      "pairs_internal": 6349,
+      "primes": 100751
+    },
+    {
+      "hi": 1059061803,
+      "lo": 1056964653,
+      "pairs_crossing": 0,
+      "pairs_internal": 6385,
+      "primes": 100969
+    },
+    {
+      "hi": 1061158955,
+      "lo": 1059061805,
+      "pairs_crossing": 0,
+      "pairs_internal": 6470,
+      "primes": 100807
+    },
+    {
+      "hi": 1063256107,
+      "lo": 1061158957,
+      "pairs_crossing": 0,
+      "pairs_internal": 6437,
+      "primes": 100717
+    },
+    {
+      "hi": 1065353259,
+      "lo": 1063256109,
+      "pairs_crossing": 0,
+      "pairs_internal": 6438,
+      "primes": 101200
+    },
+    {
+      "hi": 1067450411,
+      "lo": 1065353261,
+      "pairs_crossing": 0,
+      "pairs_internal": 6553,
+      "primes": 101130
+    },
+    {
+      "hi": 1069547563,
+      "lo": 1067450413,
+      "pairs_crossing": 0,
+      "pairs_internal": 6516,
+      "primes": 100939
+    },
+    {
+      "hi": 1071644715,
+      "lo": 1069547565,
+      "pairs_crossing": 0,
+      "pairs_internal": 6379,
+      "primes": 101002
+    },
+    {
+      "hi": 1073741823,
+      "lo": 1071644717,
+      "pairs_crossing": 0,
+      "pairs_internal": 6444,
+      "primes": 100764
+    }
+  ],
+  "sources": {
+    "PROBLEM.md": "9632c547445ed661a5df4ccfdc14892a0aeaf3ed108203c08bf075df8720c023",
+    "code/cutoff2_finite_twin_seed.py": "a953036cd54d6f817167e7f9964e872dc36b6d474b2db374ab1d03b501f3b6bc",
+    "manuscripts/cutoff2_finite_twin_seed.md": "64bd7357fc5ddf417445441ab9d34953df7f456350c9ee664041d1434483ab2a",
+    "manuscripts/cutoff2_narrowest_seed.md": "b70e838ca620130bfee85f4040fec002b709dc91d72c53262242890fd5ef1ac4"
+  }
+}

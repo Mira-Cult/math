@@ -1,0 +1,18 @@
+import Sude.FWPhysicalEarlyBudget
+import Sude.FWPhysicalSharpBudget
+import Sude.FWPhysicalCountedReservations
+import Sude.FWPhysicalExactReservations
+import Sude.FWPhysicalProtectedValues
+
+/-! Audit the conditional FW10 physical supply and gap composition. -/
+
+#check Sude.fw_reflected_supply_with_early_budget_and_even_gaps
+#print axioms Sude.fw_reflected_supply_with_early_budget_and_even_gaps
+#check Sude.fw_reflected_supply_with_sharp_early_budget_and_even_gaps
+#print axioms Sude.fw_reflected_supply_with_sharp_early_budget_and_even_gaps
+#check Sude.fw_reflected_supply_with_counted_early_reservations
+#print axioms Sude.fw_reflected_supply_with_counted_early_reservations
+#check Sude.fw_reflected_supply_avoiding_all_early_values
+#print axioms Sude.fw_reflected_supply_avoiding_all_early_values
+#check Sude.fw_reflected_supply_with_protected_early_values
+#print axioms Sude.fw_reflected_supply_with_protected_early_values

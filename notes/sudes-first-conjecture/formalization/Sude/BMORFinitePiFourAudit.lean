@@ -1,0 +1,255 @@
+import Sude.FWPhysicalPrefixMeanOfTheta
+import Sude.FWRetainedSeedMeanOfTheta
+import Sude.FWSeedFreshMidpointsOfTheta
+import Sude.FWSeedConcentrationFreshInvoiceOfTheta
+import Sude.FWSeedSourceConcentrationOfTheta
+import Sude.FWActualPhysicalMidpointsOfTheta
+import Sude.FWActualStrongWideGapTotalsOfTheta
+import Sude.FWActualStrongWideInvoiceOfTheta
+import Sude.FWActualGridFlowInvoiceOfTheta
+import Sude.FWActualGridsPrimeTargetsOfTheta
+import Sude.FWActualGridsSuppliedDemandsOfTheta
+import Sude.FWActualGridsSuppliedFlowsOfTheta
+import Sude.FWCrossingActualGridsOfTheta
+import Sude.FWCrossingJointSwitchesOfTheta
+import Sude.FWCrossingJointPhysicalOfTheta
+import Sude.FWCrossingWidePhysicalOfTheta
+import Sude.FWEnhancedCrossingPhysicalOfTheta
+import Sude.FWEnhancedCrossingOfTheta
+import Sude.FWEnhancedInitialWindowOfTheta
+import Sude.FWEnhancedFirstFourFromCharge
+import Sude.FWEnhancedLastFourFromCharge
+import Sude.FWEnhancedSinglePhaseFromCharge
+import Sude.FWFullStockTraceFromCharge
+import Sude.FWThetaCertifiedWindow
+import Sude.FWBT16IterationInputs
+import Sude.FWVaryingStockFromCharge
+import Sude.FWProtectedWideOfTheta
+import Sude.FWThetaFirstWindow
+import Sude.FWThetaVaryingStock
+import Sude.FWThetaInputs
+import Sude.BGThetaMean
+import Sude.OddCountUniformTheta
+import Sude.OddCountExpGate
+import Sude.OddPrimeLowJBound
+import Sude.OddCountJHigh
+import Sude.OddPrimeSqrtLogBounds
+import Sude.OddPrimeThetaCountError
+import Sude.OddPrimeAbelMainTerm
+import Sude.FWFirstBandAggregateEnvelopes
+import Sude.OddPrimeAbelIntegral
+import Sude.BGThetaMeanFromAggregate
+import Sude.FWThetaMeanFromAggregate
+import Sude.OddThetaAbel
+import Sude.OddCountScaledMean
+import Sude.BGThetaMeanGates
+import Sude.BGLogSqrtScale
+import Sude.OddCountCorrelatedMean
+import Sude.OddCountUniformMean
+import Sude.FWActualIndexRatio
+import Sude.FWActualPoolMeanRange
+import Sude.FWActualPoolMean
+import Sude.FWMeanCellCover
+import Sude.FWMeanCellTransport
+import Sude.FWMeanCoarseErrors
+import Sude.FWMeanLogLower
+import Sude.FWMeanScaledBounds
+import Sude.BMORPoolCorrelatedMean
+import Sude.BMORPoolScalarMean
+import Sude.BMORPoolContinuousMean
+import Sude.BMORPoolCountMean22
+import Sude.BMORPoolCountMean
+import Sude.BMORFinitePiFour
+
+#check Sude.BMORFinitePiFour
+#check Sude.oddPrimePrefix_theta_abel
+#print axioms Sude.oddPrimePrefix_theta_abel
+#check Sude.oddPrimeCountReal_eq_theta_div_log_add_integral
+#print axioms Sude.oddPrimeCountReal_eq_theta_div_log_add_integral
+#check Sude.odd_li_mainterm
+#print axioms Sude.odd_li_mainterm
+#check Sude.odd_count_theta_error_identity
+#print axioms Sude.odd_count_theta_error_identity
+#check Sude.bmor_odd_count_theta_integral_error
+#print axioms Sude.bmor_odd_count_theta_integral_error
+#check Sude.low_j_integral_lt_495_over_2
+#print axioms Sude.low_j_integral_lt_495_over_2
+#check Sude.odd_count_j_high_integral
+#print axioms Sude.odd_count_j_high_integral
+#check Sude.sqrt_log_ratio_lower_43_2
+#print axioms Sude.sqrt_log_ratio_lower_43_2
+#check Sude.odd_count_exp_43_fourths_gt_45000
+#print axioms Sude.odd_count_exp_43_fourths_gt_45000
+#check Sude.bmor_odd_count_uniform_of_theta
+#print axioms Sude.bmor_odd_count_uniform_of_theta
+#check Sude.bmor_odd_count_uniform_bound_of_theta
+#print axioms Sude.bmor_odd_count_uniform_bound_of_theta
+#check Sude.bmor_odd_count_pointwise_of_theta
+#print axioms Sude.bmor_odd_count_pointwise_of_theta
+#check Sude.bg_actual_pool_mean_lower_of_theta
+#print axioms Sude.bg_actual_pool_mean_lower_of_theta
+#check Sude.fw_actual_pool_mean_bounds_of_theta
+#print axioms Sude.fw_actual_pool_mean_bounds_of_theta
+#check Sude.fw_actual_index_ratio_of_theta
+#print axioms Sude.fw_actual_index_ratio_of_theta
+#check Sude.fw_first_band_ww4_pointwise_envelopes_of_theta
+#print axioms Sude.fw_first_band_ww4_pointwise_envelopes_of_theta
+#check Sude.fw_first_band_varying_stock_mass_of_theta
+#print axioms Sude.fw_first_band_varying_stock_mass_of_theta
+#check Sude.fw_first_band_varying_stock_mass_of_charge
+#print axioms Sude.fw_first_band_varying_stock_mass_of_charge
+#check Sude.fw_bt16_chosen_iterate_first_band_of_charge
+#print axioms Sude.fw_bt16_chosen_iterate_first_band_of_charge
+#check Sude.fw_bt16_chosen_iterate_first_band_of_theta
+#print axioms Sude.fw_bt16_chosen_iterate_first_band_of_theta
+#check Sude.fw_bt16_chosen_iterate_first_band_via_charge
+#print axioms Sude.fw_bt16_chosen_iterate_first_band_via_charge
+#check Sude.fw_first_band_trace_first_window_append_of_theta
+#print axioms Sude.fw_first_band_trace_first_window_append_of_theta
+#check Sude.fw_first_band_certified_first_window_bounded_stop_of_theta
+#print axioms Sude.fw_first_band_certified_first_window_bounded_stop_of_theta
+#check Sude.fw_first_band_full_stock_witness_gap_above_increment_of_charge_and_source_nonneg
+#print axioms Sude.fw_first_band_full_stock_witness_gap_above_increment_of_charge_and_source_nonneg
+#check Sude.fw_full_stock_append_stage_of_charge
+#print axioms Sude.fw_full_stock_append_stage_of_charge
+#check Sude.fw_full_stock_iterate_bounded_of_charge
+#print axioms Sude.fw_full_stock_iterate_bounded_of_charge
+#check Sude.fw_enhanced_single_phase_of_charge
+#print axioms Sude.fw_enhanced_single_phase_of_charge
+#check Sude.fw_enhanced_first_four_stop_or_complete_of_charge
+#print axioms Sude.fw_enhanced_first_four_stop_or_complete_of_charge
+#check Sude.fw_enhanced_last_four_stop_or_complete_of_charge
+#print axioms Sude.fw_enhanced_last_four_stop_or_complete_of_charge
+#check Sude.fw_enhanced_eight_stop_or_complete_of_charge
+#print axioms Sude.fw_enhanced_eight_stop_or_complete_of_charge
+#check Sude.fw_enhanced_from_seed_stop_or_complete_of_theta
+#print axioms Sude.fw_enhanced_from_seed_stop_or_complete_of_theta
+#check Sude.fw_enhanced_from_seed_bt16_crossing_of_theta
+#print axioms Sude.fw_enhanced_from_seed_bt16_crossing_of_theta
+#check Sude.bmor_fw_reserved_bridge_seed_wide_of_theta
+#print axioms Sude.bmor_fw_reserved_bridge_seed_wide_of_theta
+#check Sude.bmor_fw_enhanced_crossing_physical_of_theta
+#print axioms Sude.bmor_fw_enhanced_crossing_physical_of_theta
+#check Sude.bmor_fw_enhanced_crossing_wide_physical_of_theta
+#print axioms Sude.bmor_fw_enhanced_crossing_wide_physical_of_theta
+#check Sude.bmor_fw_enhanced_crossing_joint_physical_of_theta
+#print axioms Sude.bmor_fw_enhanced_crossing_joint_physical_of_theta
+#check Sude.bmor_fw_enhanced_crossing_joint_switches_of_theta
+#print axioms Sude.bmor_fw_enhanced_crossing_joint_switches_of_theta
+#check Sude.bmor_fw_enhanced_crossing_actual_grids_of_theta
+#print axioms Sude.bmor_fw_enhanced_crossing_actual_grids_of_theta
+#print axioms Sude.fw_physical_stage_mean_pool_bound_of_theta
+#print axioms Sude.fw_physical_stage_means_sum_pool_bound_of_theta
+#print axioms Sude.fw_retained_seed_midpoint_pool_bound_of_theta
+#print axioms Sude.fw_retained_seed_stage_mean_pool_bound_of_theta
+#print axioms Sude.bmor_fw_seed_concentration_fresh_midpoints_of_theta
+#print axioms Sude.bmor_fw_seed_concentration_fresh_invoice_of_theta
+#print axioms Sude.bmor_fw_seed_source_concentration_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_physical_midpoints_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_gap_totals_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_invoice_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_invoice_of_theta
+#check Sude.bmor_fw_actual_grids_supplied_flows_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_of_theta
+#check Sude.bmor_fw_actual_grids_supplied_demands_of_theta
+#print axioms Sude.bmor_fw_actual_grids_supplied_demands_of_theta
+#check Sude.bmor_fw_actual_grids_prime_targets_of_theta
+#print axioms Sude.bmor_fw_actual_grids_prime_targets_of_theta
+#check Sude.fw_reflected_supply_with_protected_early_values_of_theta
+#print axioms Sude.fw_reflected_supply_with_protected_early_values_of_theta
+#check Sude.fw_first_band_ww4_envelopes_of_aggregate
+#print axioms Sude.fw_first_band_ww4_envelopes_of_aggregate
+#check Sude.bg_actual_pool_normalized_mean_lower_of_aggregate
+#print axioms Sude.bg_actual_pool_normalized_mean_lower_of_aggregate
+#check Sude.fw_actual_pool_normalized_mean_of_aggregate
+#print axioms Sude.fw_actual_pool_normalized_mean_of_aggregate
+#check Sude.fw_actual_index_ratio_of_aggregate
+#print axioms Sude.fw_actual_index_ratio_of_aggregate
+#check Sude.odd_count_mean_coarse_errors
+#print axioms Sude.odd_count_mean_coarse_errors
+#check Sude.odd_count_mean_scaled_bounds
+#print axioms Sude.odd_count_mean_scaled_bounds
+#check Sude.OddPrimeCountUniformBound
+#check Sude.odd_count_uniform_of_bmor_pi_four
+#print axioms Sude.odd_count_uniform_of_bmor_pi_four
+#check Sude.odd_count_uniform_pool_mean_finite_li_sum
+#print axioms Sude.odd_count_uniform_pool_mean_finite_li_sum
+#check Sude.odd_count_pool_mean_continuous_bounds
+#print axioms Sude.odd_count_pool_mean_continuous_bounds
+#check Sude.odd_count_pool_mean_correlated_bounds
+#print axioms Sude.odd_count_pool_mean_correlated_bounds
+#check Sude.bg_sqrt_le_div_131072
+#print axioms Sude.bg_sqrt_le_div_131072
+#check Sude.bg_theta_mean_first_cell_gate
+#print axioms Sude.bg_theta_mean_first_cell_gate
+#check Sude.bg_theta_mean_shifted_cell_gates
+#print axioms Sude.bg_theta_mean_shifted_cell_gates
+#check Sude.fw_theta_mean_rational_cells
+#print axioms Sude.fw_theta_mean_rational_cells
+#check Sude.fw_theta_index_ratio_rational_gate
+#print axioms Sude.fw_theta_index_ratio_rational_gate
+#check Sude.oddPrimePrefix_eq_ap_four_union
+#print axioms Sude.oddPrimePrefix_eq_ap_four_union
+#check Sude.bmor_odd_count_four_pointwise
+#print axioms Sude.bmor_odd_count_four_pointwise
+#check Sude.bmor_odd_count_four_uniform
+#print axioms Sude.bmor_odd_count_four_uniform
+
+#check Sude.bmor_pool_mean_finite_li_sum
+#print axioms Sude.bmor_pool_mean_finite_li_sum
+
+#check Sude.bmor_odd_count_four_uniform_22
+#print axioms Sude.bmor_odd_count_four_uniform_22
+#check Sude.bmor_pool_mean_finite_li_sum_22
+#print axioms Sude.bmor_pool_mean_finite_li_sum_22
+
+#check Sude.bmor_pool_mean_continuous_bounds
+#print axioms Sude.bmor_pool_mean_continuous_bounds
+
+#check Sude.bmor_pool_mean_scalar_of_li_bounds
+#print axioms Sude.bmor_pool_mean_scalar_of_li_bounds
+#check Sude.bmor_pool_mean_bg_scalar_bounds
+#print axioms Sude.bmor_pool_mean_bg_scalar_bounds
+#check Sude.bmor_poolMaximum_count_bg_bounds_normalized
+#print axioms Sude.bmor_poolMaximum_count_bg_bounds_normalized
+#check Sude.bg_li_normalized_and_square
+#print axioms Sude.bg_li_normalized_and_square
+#check Sude.bg_li_integral_simplified_normalized
+#print axioms Sude.bg_li_integral_simplified_normalized
+#check Sude.bmor_pool_mean_dimensionless_bounds
+#print axioms Sude.bmor_pool_mean_dimensionless_bounds
+
+#check Sude.bmor_pool_mean_correlated_bounds
+#print axioms Sude.bmor_pool_mean_correlated_bounds
+
+#check Sude.fw_mean_rational_cells
+#print axioms Sude.fw_mean_rational_cells
+#check Sude.fw_mean_cells_cover
+#print axioms Sude.fw_mean_cells_cover
+#check Sude.fwMeanA_antitoneOn
+#print axioms Sude.fwMeanA_antitoneOn
+#check Sude.fwMeanB_antitoneOn
+#print axioms Sude.fwMeanB_antitoneOn
+#check Sude.fw_mean_cell_bounds
+#print axioms Sude.fw_mean_cell_bounds
+#check Sude.fw_mean_coarse_errors
+#print axioms Sude.fw_mean_coarse_errors
+#check Sude.fw_mean_cell_transport
+#print axioms Sude.fw_mean_cell_transport
+#check Sude.fw_poolMaximum_log_gt_181_eighths
+#print axioms Sude.fw_poolMaximum_log_gt_181_eighths
+#check Sude.fw_mean_scaled_bounds
+#print axioms Sude.fw_mean_scaled_bounds
+
+#check Sude.fw_actual_pool_normalized_mean
+#print axioms Sude.fw_actual_pool_normalized_mean
+#check Sude.fw_actual_pool_mean_bounds
+#print axioms Sude.fw_actual_pool_mean_bounds
+
+#check Sude.fw_actual_pool_mean_bounds_of_index
+#print axioms Sude.fw_actual_pool_mean_bounds_of_index
+
+#check Sude.fw_index_ratio_rational_gate
+#print axioms Sude.fw_index_ratio_rational_gate
+#check Sude.fw_actual_index_ratio
+#print axioms Sude.fw_actual_index_ratio

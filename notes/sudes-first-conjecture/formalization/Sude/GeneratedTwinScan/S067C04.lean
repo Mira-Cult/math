@@ -1,0 +1,62 @@
+import Sude.FiniteTwinOddBaseComplete
+import Sude.FiniteTwinActive
+import Sude.TwinStrideSixCompressed
+
+/-! Generated FT count hints; Lean checks each block. -/
+namespace Sude.GeneratedTwinScan
+namespace S067C04
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+theorem checked0 : strideSixCompressedIntervalScan finiteTwinCheckedBase 141033517 141066285 = 112 := by
+  decide +kernel
+
+theorem block0 : (twinPrimeSegment 141033517 141066285).card = 112 := by
+  have h := strideSixCompressedIntervalScan_spec finiteTwinCheckedBase 32768 141033517 141066285
+    finiteTwinCheckedBase_complete (by decide) (by decide)
+  rw [checked0] at h
+  exact h.symm
+
+theorem checked1 : strideSixCompressedIntervalScan finiteTwinCheckedBase 141066285 141099053 = 103 := by
+  decide +kernel
+
+theorem block1 : (twinPrimeSegment 141066285 141099053).card = 103 := by
+  have h := strideSixCompressedIntervalScan_spec finiteTwinCheckedBase 32768 141066285 141099053
+    finiteTwinCheckedBase_complete (by decide) (by decide)
+  rw [checked1] at h
+  exact h.symm
+
+theorem checked2 : strideSixCompressedIntervalScan finiteTwinCheckedBase 141099053 141131821 = 114 := by
+  decide +kernel
+
+theorem block2 : (twinPrimeSegment 141099053 141131821).card = 114 := by
+  have h := strideSixCompressedIntervalScan_spec finiteTwinCheckedBase 32768 141099053 141131821
+    finiteTwinCheckedBase_complete (by decide) (by decide)
+  rw [checked2] at h
+  exact h.symm
+
+theorem checked3 : strideSixCompressedIntervalScan finiteTwinCheckedBase 141131821 141164589 = 127 := by
+  decide +kernel
+
+theorem block3 : (twinPrimeSegment 141131821 141164589).card = 127 := by
+  have h := strideSixCompressedIntervalScan_spec finiteTwinCheckedBase 32768 141131821 141164589
+    finiteTwinCheckedBase_complete (by decide) (by decide)
+  rw [checked3] at h
+  exact h.symm
+
+theorem join_0_0 : (twinPrimeSegment 141033517 141099053).card = 215 := by
+  simpa using combineTwinPrimeSegments (by decide : 141033517 ≤ 141066285)
+    (by decide : 141066285 ≤ 141099053) block0 block1
+
+theorem join_0_1 : (twinPrimeSegment 141099053 141164589).card = 241 := by
+  simpa using combineTwinPrimeSegments (by decide : 141099053 ≤ 141131821)
+    (by decide : 141131821 ≤ 141164589) block2 block3
+
+theorem join_1_0 : (twinPrimeSegment 141033517 141164589).card = 456 := by
+  simpa using combineTwinPrimeSegments (by decide : 141033517 ≤ 141099053)
+    (by decide : 141099053 ≤ 141164589) join_0_0 join_0_1
+
+theorem total : (twinPrimeSegment 141033517 141164589).card = 456 := join_1_0
+
+end S067C04
+end Sude.GeneratedTwinScan

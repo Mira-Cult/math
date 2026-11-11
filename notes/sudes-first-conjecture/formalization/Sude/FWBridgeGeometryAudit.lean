@@ -1,0 +1,4224 @@
+import Sude.FWSeedReferenceDiagonalBound
+import Sude.FWThetaFreshSpareOutputGrids
+import Sude.FWSeedReferenceDiagonalSupport
+import Sude.FWSeedPhysicalDiagonalReindex
+import Sude.FWSeedPrescribedDiagonalBound
+import Sude.FWSeedSignedDiagonalScore
+import Sude.FWSeedDiagonalWeightSum
+import Sude.LayerPackingSegments
+import Sude.FWProjectedCYSpareOriginalActiveOutputGrids
+import Sude.FWProjectedCYSpareActiveReference
+import Sude.FWProjectedCYSpareDiagonalDifference
+import Sude.FWProjectedCYSpareTransportedBaseline
+import Sude.FWProjectedCYSpareTargetBaseline
+import Sude.SpareCYBaselineTransport
+import Sude.FWSelectedCapacityCYSpareOutputGrids
+import Sude.FWSelectedCapacityCYSpareTargetRouting
+import Sude.FWProjectedCYSpareTargetRouting
+import Sude.FWSuppliedCYSpareTargetRouting
+import Sude.FWSuppliedCYSpareRebalance
+import Sude.FWSpareConjugatedTargetRouting
+import Sude.FWSparePerturbedTargetRouting
+import Sude.SpareConjugatedFlowOutput
+import Sude.FWSelectedSpareRebalance
+import Sude.OffSupportReservationImage
+import Sude.FWSelectedSparePairCells
+import Sude.SingleMoveLineBound
+import Sude.SparePairedCellPermutation
+import Sude.OffRolesFlowDifference
+import Sude.SpareGreedySignBalance
+import Sude.FWFirstBandSpareRoutingBudget
+import Sude.FWSeedActiveMidpointsRadiusUpper
+import Sude.FWSeedFreshRoleValuesRadiusUpper
+import Sude.FWSeedFreshMidpointsRadiusUpper
+import Sude.FWSeedConcentrationFreshInvoiceRadiusUpper
+import Sude.FWSeedSourceConcentrationRadiusUpper
+import Sude.FWActualPhysicalMidpointsRadiusUpper
+import Sude.FWActualStrongWideGapTotalsRadiusUpper
+import Sude.FWActualStrongWideInvoiceRadiusUpper
+import Sude.FWCrossingJointSwitchesRadiusUpper
+import Sude.FWCrossingJointPhysicalRadiusUpper
+import Sude.FWEnhancedCrossingRadiusUpper
+import Sude.FWBoundedCrossingWindowGate
+import Sude.FWThetaProjectedFreshWideWitness
+import Sude.FWThetaAllFamilyFreshWideGapRadiusUpper
+import Sude.FWThetaGrowthMidpointReferenceRadiusUpper
+import Sude.FWFirstBandActiveDiagonalNumericInvoice
+import Sude.FWThetaGrowthFreshWideGapRadiusUpper
+import Sude.FWThetaFreshWideGapRadiusUpper
+import Sude.FWBalancedFreshWideAllLineReallocation
+import Sude.FWProtectedFreshWideMassReallocation
+import Sude.FWProtectedFreshWideReallocation
+import Sude.FWFreshWidePhysicalCenteredSelection
+import Sude.FWWideBalancedPhysicalCenteredGap
+import Sude.FWFreshWideMidpointGapSelection
+import Sude.StageSwapFailureBound
+import Sude.DoubleBlockMidpointFailureBound
+import Sude.FWWideSignedGapSlots
+import Sude.FWWideSourceGapInterval
+import Sude.StageHalfGapLogBudget
+import Sude.JointStageMidpointGapSelection
+import Sude.StageHalfGapConcentration
+import Sude.JointStageSwapEventSelection
+import Sude.StageHalfGapCancellation
+import Sude.FWSelectedChoiceFullBalance
+import Sude.FWSelectedFullDiagonalCounts
+import Sude.EqualCardCenteredBaseline
+import Sude.FWSelectedCapacityCYDiagonalDifference
+import Sude.ActiveRectangleDiagonalGeometry
+import Sude.FWSelectedSpareChoiceCount
+import Sude.FWGrowthCYDiagonalDifference
+import Sude.FWSelectedSpareDiagonalBound
+import Sude.FWSelectedCapacityFixedPrimeFamilyRepair
+import Sude.FWCanonicalCYFamilyChoiceGrids
+import Sude.FWSelectedCapacityCYFamilyGrids
+import Sude.ChoiceFiberGridRelabel
+import Sude.FWCanonicalFamilyLabelDisjoint
+import Sude.FWCanonicalFamilyRelabel
+import Sude.FWCanonicalFamilyGapAlignment
+import Sude.FWCanonicalFamilyChoiceGrids
+import Sude.T75ThetaIntervalBrackets
+import Sude.FWThetaBridgeSourceGap
+import Sude.FWThetaWideSourceGap
+import Sude.FWSelectedCapacityCYChoiceGrid
+import Sude.FWSelectedCapacityNominalCYTargets
+import Sude.FWSelectedCapacitySeedChainCYTargets
+import Sude.FWSelectedCapacitySeedChainCYDiagonalRepair
+import Sude.PackedReachablePrimeDiagonal
+import Sude.FWSelectedCapacityReachablePrime
+import Sude.TargetMeanReachable
+import Sude.T75FixedPrimeInsertion
+import Sude.FWSelectedCapacityFixedPrimeRepair
+import Sude.FWSelectedCapacityFreeDiagonalPrime
+import Sude.FWSelectedCapacityTP2PrimeRepair
+import Sude.FWSelectedCapacityMeanWindowPrime
+import Sude.FWCanonicalCYSeedGrowthGrid
+import Sude.FWSelectedCapacityFrozenCYAllLineFlows
+import Sude.FWThetaProjectedCapacityWitness
+import Sude.FWSelectedCapacityThetaWitness
+import Sude.FWThetaProjectedCrossWitness
+import Sude.FWSelectedCrossThetaWitness
+import Sude.FWCanonicalSeedGrowthLabels
+import Sude.FWOrderedActiveRectangleGaps
+import Sude.FWOrderedCanonicalRectangleGap
+import Sude.FWChoiceSeedTraceGrid
+import Sude.FWRectangleCYSignedGapTransport
+import Sude.FWOrderedBridgeWideRectangleGaps
+import Sude.FWOrderedSeedGrowthRectangleGaps
+import Sude.FWSelectedEnrichedT75NominalRepair
+import Sude.FWSelectedEnrichedCYPrimeRepairNominal
+import Sude.FWFirstBandTargetSpread
+import Sude.FWSelectedEnrichedCYPrimeRepairBudget
+import Sude.FWSelectedEnrichedCYPrimeDiagonalRepair
+import Sude.FWFirstBandCYRoutingBudget
+import Sude.FWFirstBandSeedRadiusBound
+import Sude.FWProjectedCYPrimeDiagonalRepair
+import Sude.PackedLabelRectangleSupport
+import Sude.FWFirstBandLogScoreBounds
+import Sude.FWSelectedEnrichedCYPrimeGrowthDiagonals
+import Sude.FWProjectedCYPrimeGrowthDiagonals
+import Sude.FWGrowthCYFlowDiagonalTransfer
+import Sude.FWGrowthCYDiagonalTransfer
+import Sude.FWProjectedCYPrimeTargets
+import Sude.FWSelectedEnrichedFrozenCYAllLineFlows
+import Sude.FWProjectedFrozenCYAllLineFlows
+import Sude.FWSelectedEnrichedThetaWitness
+import Sude.FWProjectedCYFlowTransport
+import Sude.FWCYReverseSplice
+import Sude.FWThetaProjectedEnrichedWitness
+import Sude.FWSelectedThetaWitness
+import Sude.FWThetaProjectedJoinWitness
+import Sude.FWThetaRoleValueInputs
+import Sude.FWProjectedReferenceUnusedMeanSigma11
+import Sude.FWThetaGrowthDiagonalWitness
+import Sude.FWThetaFamilyDQRFInputs
+import Sude.FWProjectedThetaDQRFAllLineFlows
+import Sude.FWThetaFamilyWitness
+import Sude.FWThetaNetworkWitness
+import Sude.FWThetaSeedGrowthLineBounds
+import Sude.FWFirstBandDQRFInputs
+import Sude.FWThetaBridgeWideLineScores
+import Sude.FWGivenThetaDQRFAllLineFlows
+import Sude.FWGrowthFinalPairedGapTransfer
+import Sude.FWCompletedFirstBandAllLineFlows
+import Sude.CompletionColumnResidualClosure
+import Sude.FWCompletedFirstBandColumnBound
+import Sude.FWCompletedSuppliedFlows
+import Sude.FlowOutputCompletionSync
+import Sude.FWCompletedFirstBandRowBound
+import Sude.FWGivenReferenceCompletionTransport
+import Sude.CompletionRowResidualClosure
+import Sude.FWCompletionSeedGrowthComponents
+import Sude.FWFullReservationQuarterCapacity
+import Sude.FWFirstBandColumnResidualBound
+import Sude.CompletedReservationSamePoolResidual
+import Sude.FixedRolePairLineTransfer
+import Sude.FWRebasedNetworkBlocks
+import Sude.FWCompletionFamilyFixed
+import Sude.FWCompletionFamilyInvariants
+import Sude.FWReservedMidpointColumnCancellation
+import Sude.FWFirstBandRowResidualBound
+import Sude.FWPhysicalRowIncidence
+import Sude.FWPhysicalColumnIncidence
+import Sude.ReservedMidpointCancellationAlgebra
+import Sude.FWReservedMidpointColumn
+import Sude.FWReservedMidpointRow
+import Sude.FWReservedMidpointComponentAssembly
+import Sude.FWBridgeWideOrderedMeanScore
+import Sude.FWSeedOrderedAllLineAdapter
+import Sude.FWSeedOrderedStageLineBound
+import Sude.FWGrowthOrderedStageLineBound
+import Sude.RFCompletionFreeResidual
+import Sude.RFReferenceFreeResidual
+import Sude.FWFourFamilyWeightedStageReindex
+import Sude.FWGrowthFourStageMean
+import Sude.FWFourStageRectangleMeansOfTheta
+import Sude.FWSeedSourceStageMeanAlignment
+import Sude.FWSeedOrdinaryActiveWeight
+import Sude.FWGrowthOrdinaryRectangleMass
+import Sude.FWGrowthRectangleMembership
+import Sude.FWGrowthOrdinaryRectanglePhysical
+import Sude.FWFourStageRectangleMeans
+import Sude.FWBridgeWideOrdinaryLineMass
+import Sude.FWOrdinaryRectangleExclusion
+import Sude.PrefixOrdinaryRectangleWeightSplit
+import Sude.FWActiveBridgeWideRectangleMembership
+import Sude.FWBridgeWideStageRectangleSplit
+import Sude.FWRectangleWeightedSpareBound
+import Sude.FWThetaAllFamilyReferenceGapMagnitudes
+import Sude.FWRectangleStageOwner
+import Sude.FWActiveSpareRectangleMeans
+import Sude.DQRFNetworkCompletionJoin
+import Sude.FWReferenceCompletionTransport
+import Sude.ReferenceCompletionEntryInputs
+import Sude.PhysicalNetworkCompletionTransport
+import Sude.ReferenceCompletionInvoiceTransport
+import Sude.FWPairGapColumnReferenceMidpoint
+import Sude.FWPairGapBridgeWideRowReferenceInvoice
+import Sude.FullReservationCancellationTransport
+import Sude.FWThetaAllFamilyMidpointReference
+import Sude.FWThetaAllFamilyEndpointsReference
+import Sude.FWFixedEarlyReferenceGapMagnitudes
+import Sude.FWAllFamilyReferenceGapMagnitudes
+import Sude.FiniteTwinCheckpointEightyFour
+import Sude.FWPreservedAllFamilyPairEndpointsReference
+import Sude.ActiveReferencePairEndpoints
+import Sude.MarkedPairEndpointTransfer
+import Sude.FWThetaGrowthMidpointReference
+import Sude.PhysicalPairSignedMidpointInvoice
+import Sude.FWFreshT75ReferenceGains
+import Sude.DiagonalStockCount
+import Sude.DiagonalFullStockSelection
+import Sude.DiagonalFullStockPlacement
+import Sude.DiagonalFullStockCenter
+import Sude.DiagonalCenterExposure
+import Sude.DiagonalFullStockCenterBatches
+import Sude.DiagonalFullStockMean
+import Sude.DiagonalFullStockLineShift
+import Sude.DiagonalFullStockLineComposition
+import Sude.DiagonalFullStockGeometry
+import Sude.DiagonalFullStockRowsColumns
+import Sude.DiagonalFullStockActualDiagonals
+import Sude.DiagonalFullStockIntegrated
+import Sude.DiagonalFullStockRFCompletion
+import Sude.DiagonalFullStockDeletion
+import Sude.DiagonalFullStockPostMean
+import Sude.DiagonalFullStockIntervalShift
+import Sude.DiagonalFullStockPostInputs
+import Sude.DiagonalFullStockExplicitMean
+import Sude.DiagonalFullStockWidenedCompletion
+import Sude.DiagonalFullStockWidenedBands
+import Sude.DiagonalFullStockBandCompletion
+import Sude.FWFullDiagonalOverlap
+import Sude.CYTwoEdgeRegularFactor
+import Sude.CYExactExceptionCount
+import Sude.CYFullKeepoutQ4
+import Sude.CYFullKeepoutFactorCount
+import Sude.CYFullKeepoutCompletion
+import Sude.RegularFactorExactExceptionCompletion
+import Sude.CYFullKeepoutSharpCompletion
+import Sude.CYDiagonalWidenedCompletion
+import Sude.CYDiagonalBandCompletion
+import Sude.FWFullSpareCover
+import Sude.FWWideOutsideQuarter
+import Sude.FWRoleValueBudget
+import Sude.FWClassifiedFullCover
+import Sude.CYDiagonalClassifiedCompletion
+import Sude.FWNormalizedClassifiedCover
+import Sude.FWThetaSameWitnessRoleValues
+import Sude.FWThetaEndpointRoleValues
+import Sude.FWCYSameReferenceCompletion
+import Sude.FWReallocatedFullUnusedMean
+import Sude.FWFirstBandFrozenCYStockGate
+import Sude.FWFirstBandFrozenCYEndpoints
+import Sude.FWFrozenCYSameReference
+import Sude.FWProjectedFullClassifiedCover
+import Sude.FWProjectedFrozenCYCompletion
+import Sude.FWReallocatedFullUnusedMeanSigma11
+import Sude.UnorderedPairInvariants
+import Sude.FWEarlyReferenceMidpointScores
+import Sude.FWFourFamilyLineComplementSplit
+import Sude.PackedReferenceGainBound
+import Sude.FWThetaGrowthAllLineFreshNetworks
+import Sude.FWPreservedPairGapGrowthMidpointReference
+import Sude.FWGrowthCenteredMidpointTransfer
+import Sude.PackedPrimeDiagonalRepair
+import Sude.FWFreshT75PackedPrimeRepair
+import Sude.FWFullReservationPairCover
+import Sude.FWSeedStageOrientationZero
+import Sude.DiagonalTargetFromVector
+import Sude.NetworkSwitchPairSums
+import Sude.FWPairGapColumnMidpointGapInvoice
+import Sude.FWPairGapBridgeWideRowMidpoint
+import Sude.FWPairGapBridgeWideColumnMidpoint
+import Sude.FWPairGapResidualCancellation
+import Sude.FWFreshReferenceT75Routing
+import Sude.FWThetaGrowthAllLineConcentration
+import Sude.FWGrowthOrderedPhysicalWitness
+import Sude.FWThetaGrowthFreshNetworks
+import Sude.FWGrowthTracePhysicalEntryBound
+import Sude.FWGrowthProtectedAllLineMidpoints
+import Sude.FWGrowthPhysicalRowColumnBound
+import Sude.FWT75CenteredPrimeTargetRouting
+import Sude.GrowthPhysicalEntryBudget
+import Sude.FWThetaGrowthWitnessGeometry
+import Sude.FWCenteredPrimeTargetRouting
+import Sude.FWGrowthFirstBandMidpointGate
+import Sude.FWGrowthSameSquareDiagonalBounds
+import Sude.FWGrowthFullMidpointBound
+import Sude.FWGrowthDiagonalOrdinaryRecentered
+import Sude.FWGrowthOrdinaryCenteredReference
+import Sude.FWThetaGrowthDiagonalConcentration
+import Sude.FWPreservedPairGapTraceNetworks
+import Sude.FWGrowthDiagonalOrdinaryTraceDP
+import Sude.FWGrowthFullMidpointFromComponents
+import Sude.FWGrowthOrdinaryTraceDP
+import Sude.FWGrowthOrdinaryRecenter
+import Sude.FWGrowthRectangleRowColumnMass
+import Sude.FWGrowthOrdinaryPhysicalDP
+import Sude.FWGrowthOrdinaryMeanBridge
+import Sude.FWGrowthRemainingMeanCorrection
+import Sude.FWGrowthOrdinaryRowColumnMass
+import Sude.FWGrowthOrdinaryLineMass
+import Sude.FWGrowthProtectedDiagonalBounds
+import Sude.PrefixDeterministicStageAssignment
+import Sude.FWThetaSeedBridgeWideConcentration
+import Sude.FWGrowthDiagonalBounds
+import Sude.PrefixMatchedDepthStep
+import Sude.FWGrowthAllocatedDiagonals
+import Sude.PrefixSplitStateSequence
+import Sude.PrefixSplitTerminalAssignment
+import Sude.PrefixGlobalLowerMeans
+import Sude.PrefixSimultaneousSplit
+import Sude.PrefixBalancedSplitDepth
+import Sude.PrefixDepthMeanIdentity
+import Sude.PrefixDepthTelescope
+import Sude.PrefixSortedLabelSplit
+import Sude.PrefixRefinedGroupFibers
+import Sude.FWGrowthDiagonalPhysical
+import Sude.BTGrowthFamilyPlacement
+import Sude.FWGrowthFullDiagonalWeights
+import Sude.FWGrowthDiagonalAllocation
+import Sude.PrefixFractionalGroupIntegral
+import Sude.PrefixOneLevelRounding
+import Sude.FWTraceColumnMidpointGapInvoice
+import Sude.FWTraceBridgeWideRowMidpoint
+import Sude.FWTraceBridgeWideColumnMidpoint
+import Sude.DPRoundingKernel
+import Sude.PrefixRoundingEquationCount
+import Sude.PrefixRoundingFreezeStep
+import Sude.BTGrowingPermutedPlacement
+import Sude.DisjointFamilyPermutation
+import Sude.FWGrowthDiagonalSlots
+import Sude.BTGrowthSelectedLabelIndices
+import Sude.FWGrowthTraceNetworkGaps
+import Sude.PrefixThreeSelections
+import Sude.FWGrowthNarrowPD2
+import Sude.FWGrowthPrefixGlobalSelection
+import Sude.PrefixRoundingDropError
+import Sude.FWResidualFixedGapCancellation
+import Sude.FWGrowthRoleTraceGaps
+import Sude.FWSeedGrowthNetworkGaps
+import Sude.FWPostDiagonalBalancedCompletion
+import Sude.PrefixSelectionBudgetStrict
+import Sude.FWBridgeWideUnmatchedColumnOrientation
+import Sude.PrefixThreeSelectionArithmetic
+import Sude.PrefixSelectionBudget
+import Sude.PrefixSelectionMeanShift
+import Sude.PrefixLabelSelectionAdapter
+import Sude.FWResidualNetworkBands
+import Sude.FWPostDiagonalCompletionGeometry
+import Sude.PrefixGlobalSelection
+import Sude.PrefixWindowBracket
+import Sude.T75TargetRadius
+import Sude.FWBridgeWideUnmatchedRowOrientation
+import Sude.FixedGapLayerNetworkCancellation
+import Sude.FWBridgeWideColumnMidpointPartition
+import Sude.FWBridgeWideRowMidpointPartition
+import Sude.FWGroupedBridgeWideGeometry
+import Sude.DoubleBlockTwoFamilyMidpointPartition
+import Sude.FWWideMidpointPartitions
+import Sude.FWBridgeColumnMidpointPartition
+import Sude.DoubleBlockTranspose
+import Sude.FWBridgeRowMidpointPartition
+import Sude.FWBridgeWideNetworkMatching
+import Sude.DoubleBlockPhysicalMidpointPartition
+import Sude.DoubleBlockSelectedLineIdentity
+import Sude.PhysicalVariableGapCancellation
+import Sude.FWFirstBandReallocatedCancellationGate
+import Sude.FWReallocatedCancellationEnvelope
+import Sude.FWReallocatedStageMeanSum
+import Sude.FWReallocatedStageMeanBounds
+import Sude.FWGroupedStageMeanReindex
+import Sude.DoubleBlockStageMeanPreservation
+import Sude.ActualUnusedCoupledLineIdentity
+import Sude.ActualUnusedMeanShiftBound
+import Sude.FWSpareRectangleLineBound
+import Sude.FWRoleSupportForNetworks
+import Sude.FWWideGraphMapsFromCoordinates
+import Sude.FWPermutedTraceActiveNetworks
+import Sude.FWPermutedActiveTraceMidpoint
+import Sude.FWReallocatedInitialGapTotal
+import Sude.FWPermutedInvoiceMidpoint
+import Sude.FWPermutedActiveReference
+import Sude.FWPermutedPhysicalGapTotals
+import Sude.FWPermutedNetworksFlowComposition
+import Sude.FWPermutedSuppliedFlowInvoice
+import Sude.FWPermutedCenteredNetworks
+import Sude.FWPermutedRadiusCapacity
+import Sude.FWJointCenteredNetworksOfRadii
+import Sude.FWPermutedJointOrientation
+import Sude.FWJointGridGraphCoordinates
+import Sude.FWPermutedJointSupportedGap
+import Sude.FWPermutedJointEdgeGaps
+import Sude.FWPermutedBridgeWideGrid
+import Sude.FWPermutedWideGapBounds
+import Sude.FWPermutedOrdinaryEdgeGaps
+import Sude.BTOffsetPlacementPreservation
+import Sude.FWBridgeWidePlacementTransfer
+import Sude.SeedConcentrationPreservation
+import Sude.FWGrowthChoiceRetraction
+import Sude.FWBalancedAllLineReallocation
+import Sude.FWAllLineScalarReallocation
+import Sude.FWGroupedDiagonalMass
+import Sude.FWDoubleBlockScalarInvoices
+import Sude.FWOrdinaryDiagonalAvoidance
+import Sude.FWAllLineMassReallocation
+import Sude.FWBalancedDiagonalRectangleInvoice
+import Sude.FWGroupedRowColumnMass
+import Sude.FWOrdinaryStageEighteen
+import Sude.FWJointStageDerangements
+import Sude.FWOrdinaryTagInvoice
+import Sude.FWBridgeRectangleInvoice
+import Sude.FWWideOffsetRectangleInvoice
+import Sude.FWWideOffsetPairIncidence
+import Sude.FWGroupedPairMassReindex
+import Sude.FWDoubleBlockMassReallocation
+import Sude.FWControllerStageReindex
+import Sude.FWDoubleBlockSourceIntervals
+import Sude.DoubleBlockProxyInvoice
+import Sude.FWProtectedDoubleBlockLogReallocation
+import Sude.DoubleBlockProtectedLogReallocation
+import Sude.DoubleBlockLogSelection
+import Sude.DoubleBlockSimultaneousSelection
+import Sude.MixedMomentLogBudget
+import Sude.DoubleBlockScoreDecomposition
+import Sude.FWPhysicalDoubleBlockGaps
+import Sude.FiniteMomentSelection
+import Sude.StageFairSwapMoment
+import Sude.FWBridgeWideDoubleReallocation
+import Sude.FiniteUniformStageMeasure
+import Sude.FWPhysicalDoubleBlockCells
+import Sude.FairBlockSwap
+import Sude.FiniteIndependentBinaryMoment
+import Sude.FWStageVaryingBridgeGrid
+import Sude.StageDoubleBlockReallocation
+import Sude.FWRetainedLineCancellationEnvelope
+import Sude.FullReservationCancellationEnvelope
+import Sude.FWSpareGlobalDeviationOfTheta
+import Sude.FWRetainedStageLineCancellation
+import Sude.FWActualStageLineCancellation
+import Sude.FWFourFamilyStageMeanSumOfTheta
+import Sude.FWBridgeWideStageMeansOfTheta
+import Sude.FWWidePairMidpointOfTheta
+import Sude.FWBridgePairMidpointOfTheta
+import Sude.FWBridgeWidePairPlacement
+import Sude.FWFirstBandPhysicalCancellationGate
+import Sude.FWScalarAllStagesFirstBandGate
+import Sude.FWScalarEndpointFirstBandGate
+import Sude.FWScalarEnvelopeMonotonicity
+import Sude.FWFourFamilyLineEnvelopeOfTheta
+import Sude.FWFourFamilyLineCancellation
+import Sude.FWFourFamilyStageTotals
+import Sude.FWFourFamilyPairInjection
+import Sude.FWFourFamilyRoleCoverage
+import Sude.FWBridgeWidePairCells
+import Sude.FWAllStageRemainingRoleCard
+import Sude.FWCombinedPhysicalStageFamily
+import Sude.FWSeedGrowthPhysicalDisjoint
+import Sude.CombinedPhysicalStageFamilies
+import Sude.BTGrowingPhysicalStageTotals
+import Sude.FWGeometryLineCancellationNonempty
+import Sude.FWFullReservationNonempty
+import Sude.ActiveSupportFullKeepout
+import Sude.FWGeometryLineSignedCancellation
+import Sude.FWFullReservationLineIncidence
+import Sude.FWGeometrySignedCancellation
+import Sude.FWFullReservedSignedCancellation
+import Sude.FWRectangleCenteredBoundOfTheta
+import Sude.PackedRectangleCenteredLineBound
+import Sude.SpareRectangleLineSeparation
+import Sude.ActualUnusedKeepoutLineIdeal
+import Sude.ActualUnusedKeepoutMean
+import Sude.ActualUnusedKeepoutCard
+import Sude.ActualUnusedKeepoutDifference
+import Sude.ActualUnusedRoleImageTransport
+import Sude.ActualUnusedScreenedStock
+import Sude.FWReallocatedActiveMidpointInvoice
+import Sude.BTGrowingUnscreenedStock
+import Sude.FWActiveRoleMidpointInvoice
+import Sude.FWActiveRoleInvoice
+import Sude.ActiveSupportCenteredInvoice
+import Sude.ActiveSupportExtendedPacking
+import Sude.FiniteSupportValueImage
+import Sude.RoleValueReallocation
+import Sude.FWGrownRoleValueUnion
+import Sude.FWRoleValueUnion
+import Sude.BTGrowingRoleValueCoverage
+import Sude.FWWideRoleValueCoverage
+import Sude.FWBridgeRoleValueCoverage
+import Sude.BTGrowingFootprintCoverage
+import Sude.DoublePairEndpointCoverage
+import Sude.FWRoleCellOccupancy
+import Sude.FWRoleSupportEquality
+import Sude.FWFullReservationOccupancy
+import Sude.FWJointPackedOccupancy
+import Sude.FWSeedOldGapNoAvailability
+import Sude.FWPrefixMidpointPoolBound
+import Sude.FWRetainedSeedMeanPoolBound
+import Sude.FWSeedRectangleMeanDeviation
+import Sude.FWSeedGlobalRectangleLines
+import Sude.FWSeedStageLineCounts
+import Sude.FWSeedRectangleLineCounts
+import Sude.FWSeedLineStageMeans
+import Sude.FWActiveRectangleLayerOccupancy
+import Sude.ActiveRectangleLayerOccupancy
+import Sude.FWActiveRectangleLabels
+import Sude.ActiveRectangleCardinality
+import Sude.FWSeedLineIncidence
+import Sude.ActiveRectangleLineCounts
+import Sude.FWSeedPhysicalStageCancellation
+import Sude.FWSeedPhysicalStageTotals
+import Sude.ReservedStageSignedCancellation
+import Sude.ReservedStageFamilyTotal
+import Sude.ReservedFamilySignedCancellation
+import Sude.ReservedPoolSignedMean
+import Sude.SignedPoolMeanCancellation
+import Sude.FWSeedDiagonalOrientation
+import Sude.FWActualSeedMidpointNoRectangle
+import Sude.FWSeedRectangleOrientationZero
+import Sude.FWActualSeedRectangleMidpoint
+import Sude.FWSeedRectangleOrientation
+import Sude.FWSeedOrientationPartition
+import Sude.FWSeedNetworkCoverage
+import Sude.FWSeedPerpendicularOrientation
+import Sude.FWActualSeedMidpointCancellation
+import Sude.FWSeedNetworkOrientation
+import Sude.FWSeedNetworkMatching
+import Sude.FWSeedMidpointCancellation
+import Sude.FWSeedMidpointPartition
+import Sude.FWReallocatedPhysicalMidpoints
+import Sude.FWPackedReallocatedConcentrationInvoice
+import Sude.FWReallocatedReconciledInvoice
+import Sude.FWGlobalWideReconciliation
+import Sude.FWReallocatedNewInvoice
+import Sude.FWReallocatedAllEdgeGrids
+import Sude.FWReallocatedActualEdgeGrid
+import Sude.FWReallocatedOrientation
+import Sude.FWReallocatedJoinedGrid
+import Sude.FWReallocatedTraceGap
+import Sude.FWReallocatedJointGap
+import Sude.FWReallocatedSeedEdgeGap
+import Sude.FWSeedReallocationRolePreservation
+import Sude.FWSeedBridgeRolePreservation
+import Sude.FWSeedReallocationWidePreservation
+import Sude.FWSeedReallocationGrowthPreservation
+import Sude.FWSeedSourceConcentration
+import Sude.RetainedMidpointNoAvailability
+import Sude.FWSeedFullOffsetConcentration
+import Sude.FWSeedExistingMidpoints
+import Sude.FWSeedReallocationSuppliedConcentration
+import Sude.FWSeedOffsetAllLineAllocation
+import Sude.FWSeedOffsetActualRowColumn
+import Sude.FWSeedOffsetRowColumnRectangle
+import Sude.FWSeedOffsetActualDiagonal
+import Sude.FWSeedOffsetDiagonalWeights
+import Sude.FWSeedOffsetDiagonalInvoice
+import Sude.FWSeedExistingReallocation
+import Sude.StagePairReallocation
+import Sude.FWPhysicalMidpointComplement
+import Sude.FWPhysicalMidpointInvoice
+import Sude.FWPhysicalMidpointReference
+import Sude.FWInstalledNetworkGapTotal
+import Sude.FWActualNetworkGapTotal
+import Sude.FWActualStrongWideInvoice
+import Sude.FWActualExplicitWideInvoice
+import Sude.FWActualExplicitWideNetworks
+import Sude.FWActualJointGapTotal
+import Sude.FWPhysicalGridGapTotal
+import Sude.FWJointGridGapTotal
+import Sude.FWPhysicalRadiusCentering
+import Sude.FWRadiusCenteringAny
+import Sude.FWRadiusCentering
+import Sude.T75ConditionalPrimeList
+import Sude.T75ConditionalSelection
+import Sude.T75TwoClassMidpointMargin
+import Sude.T75UniformSeedGrid
+import Sude.T75UnitBracketTargets
+import Sude.FWT75NominalTwoClassTargets
+import Sude.FWT75NominalSeedChainTargets
+import Sude.FWT75NominalThetaDomain
+import Sude.T75GreedyBrackets
+import Sude.T75StepGridResidual
+import Sude.T75FixedResidueExtension
+import Sude.T75FreeUnitResidues
+import Sude.T75TwoUnitResidues
+import Sude.T75StepGridTransport
+import Sude.T75PoolParity
+import Sude.FWTargetDemandBudget
+import Sude.FWReferencePrimeTargets
+import Sude.FWFlowDemandAdapter
+import Sude.FWActualGridsSuppliedFlows
+import Sude.FWCenteredSuppliedFlows
+import Sude.FWActualCenteredNetworks
+import Sude.FWActualGridFlowInvoice
+import Sude.FWCenteredFlowInvoice
+import Sude.FWFirstBandWideCapacity
+import Sude.FWJointCenteredNetwork
+import Sude.FWCrossingActualGrids
+import Sude.FWActualEdgeGridTransport
+import Sude.FWJointSupportedCellSeparation
+import Sude.FWJointGraphEndpoints
+import Sude.FWJointSupportedGap
+import Sude.FWWideGapUniqueness
+import Sude.FWJointSupportedIndex
+import Sude.FWJointGridTransport
+import Sude.FWWideJointIndex
+import Sude.FWGrowthJointIndex
+import Sude.FWBridgeJointIndex
+import Sude.FWSeedJointIndex
+import Sude.FWCrossingJointSwitches
+import Sude.FWJointLayerPacking
+import Sude.FWCrossingWidePhysical
+import Sude.FWWidePhysicalGrid
+import Sude.FWEnhancedCrossingPhysical
+import Sude.FWEnhancedBT16Crossing
+import Sude.FWEnhancedBT16TenStages
+import Sude.FWBT16WidthCompare
+import Sude.FWEnhancedFirstBandPhysical
+import Sude.FWPreservedWideEdgeRoles
+import Sude.FWFirstBandAffinePhysical
+import Sude.FWEarlyGrowthEdgeBridge
+import Sude.FWPhysicalEdgeBridgeGrid
+import Sude.FWWideEdgeRoles
+import Sude.FWEarlyGrowthPhysical
+import Sude.FWGrowthEarlyInstall
+import Sude.BTGrowingOffsetPhysical
+import Sude.FWFourthAffinePhase
+import Sude.FWMixedAffineActualIteration
+import Sude.FWMixedScheduleSurplus
+import Sude.FWEnhancedInitialWindow
+import Sude.FWEnhancedEightPhases
+import Sude.FWEnhancedLastFour
+import Sude.FWEnhancedFirstFour
+import Sude.FWEnhancedSinglePhase
+import Sude.FWEnhancedPhaseBounds
+import Sude.FWEnhancedNumericCertificate
+import Sude.FWFullStockLowerIteration
+import Sude.FWIndexedAffineOrigins
+import Sude.FWFullStockIteration
+import Sude.FWFullStockTraceStep
+import Sude.FWFirstBandFullStockNonnegative
+import Sude.FWFirstBandFullStockWitness
+import Sude.FWFirstBandFullStockSlack
+import Sude.FWAffineUniformStockMatching
+import Sude.FWFirstBandVaryingAffine
+import Sude.FWVaryingStockMass
+import Sude.FWFirstBandAffineComposition
+import Sude.FWEighthAffinePhase
+import Sude.FWSeventhAffinePhase
+import Sude.FWSixthAffinePhase
+import Sude.FWFifthAffinePhase
+import Sude.FWEnhancedBT16FirstStage
+import Sude.FWBT16ChosenTrace
+import Sude.FWEnhancedBT16Entry
+import Sude.FWBT16LowerGrowth
+import Sude.FWBT16EntryGate
+import Sude.FWThirdAffinePhase
+import Sude.FWFirstWindowRadius105
+import Sude.FWSecondAffinePhase
+import Sude.FWFirstWindowRadiusHybrid
+import Sude.FWSubwheelDomination
+import Sude.FWFirstWindowRadiusStrong
+import Sude.FWFirstAffinePhase
+import Sude.FWMixedAffineIteration
+import Sude.FWFirstAffineTransition
+import Sude.FWFirstWindowRadius118
+import Sude.FWMixedFirstAffineOrigin
+import Sude.FWMixedAffineTraceStep
+import Sude.FWMixedFirstBandQuota
+import Sude.FWMixedAffineSlope
+import Sude.FWMixedAffineStage
+import Sude.FWAffineMixedWheelCertificates
+import Sude.BGActualMeanLower
+import Sude.FWAffineBaseCertificate
+import Sude.FWAffineWheelPairSupply
+import Sude.FWAffineWheelExtension
+import Sude.FWAffineWheelThreshold
+import Sude.FWFirstWindowCertifiedRadius
+import Sude.FWAffineWheelNeighbors
+import Sude.FWMixedWheelUnits
+import Sude.FWReservedPhysicalSeedBoundedWheelGrid
+import Sude.FWWheelFirstWindowSchedule
+import Sude.FWWheelFirstBandActualStep
+import Sude.FWPhysicalSeedTraceGrid
+import Sude.FWReservedEarlyPlacementFirstWheel
+import Sude.FWWheelFirstBandFloor
+import Sude.FWWheelFirstStageFromSeed
+import Sude.FWWheelFirstBandPointwise
+import Sude.FWWheelFirstBandTrace
+import Sude.FWWheelFirstTraceStep
+import Sude.FWWheelFirstBandPublished
+import Sude.FWWheelFirstBandEnvelopes
+import Sude.FWReservedBridgeSeedWideOfIndex
+import Sude.FWWheelTraceNextCandidates
+import Sude.FWWheelWitnessTraceStock
+import Sude.FWReservedBridgeSeedWideFullPlacement
+import Sude.FWInitialBridgeSeedWideFullPlacement
+import Sude.FWInitialWideRectangleCapacity
+import Sude.FWBridgeSeedWideFullPlacement
+import Sude.FWBridgeSeedCoverage
+import Sude.FWWheelFirstBandFW3
+import Sude.FWBridgeSeedWideRolePreservation
+import Sude.FWWheelActualStock
+import Sude.FWWideSupplyRoles
+import Sude.FWBridgeGeometry
+import Sude.FWBridgeBatch
+import Sude.FWBridgeStocks
+import Sude.FWBridgeWindowDisjoint
+import Sude.FWBridgeDepletion
+import Sude.FWBridgeFiveBatch
+import Sude.FWBridgeFiveSequential
+import Sude.FWBridgeNumericalStock
+import Sude.FWBridgeNumericalGates
+import Sude.FWBridgeGridGrowth
+import Sude.FWBridgeFiveEmpty
+import Sude.FWBridgeFiveGrid
+import Sude.FWBridgeEndpoints
+import Sude.FWBridgePlacement
+import Sude.FWBridgeSeedIntegration
+import Sude.FWBridgeControllerSlots
+import Sude.FWSeedQuota
+import Sude.FWBridgeRectangles
+import Sude.FWBridgeOrdinaryPlacement
+import Sude.FWSeedTraceGrid
+import Sude.FWBridgeJointPlacement
+import Sude.FWSeedTraceBridgeGrid
+import Sude.FWProtectedTraceBridge
+import Sude.FWBridgeLayerPacking
+import Sude.FWBridgeLayerSlots
+import Sude.FWBridgeLayerPlacement
+import Sude.FWBridgeFivePlacement
+import Sude.FWBridgeCommonFC2K
+import Sude.FWPermutationExceptions
+import Sude.FWPermutationExceptionBound
+import Sude.FWEntropySmallEndpoint
+import Sude.FWEntropyCurvature
+import Sude.FWEntropyHalfEndpoint
+import Sude.FWEntropyIntervalGate
+import Sude.FWPermutationLargeCut
+import Sude.FWSmallCutGate
+import Sude.FWPermutationLargeUnion
+import Sude.FWPermutationSmallUnion
+import Sude.FWPermutationLargeBudget
+import Sude.FWPermutationExpander
+import Sude.FWBridgeCommonFW
+import Sude.FWSeedRectangleOffset
+import Sude.FWBridgeCommonSeed
+import Sude.FWSeedOffsetPlacement
+import Sude.FWRectangleCapacity
+import Sude.FWBridgeSeedDiagonalComposition
+import Sude.FWSeedLayerPacking
+import Sude.FWSeedOrdinarySlots
+import Sude.FWSeedOrdinaryPlacement
+import Sude.FWBridgeSeedFullPlacement
+import Sude.FWBridgeSeedWideProtected
+import Sude.FWExactWheelWindow
+import Sude.FWWheelEnumeration
+import Sude.FWWideSpatialReservation
+import Sude.FWWideRectangleOffset
+import Sude.FWWheelShortPairs
+import Sude.FWWideLayerPacking
+import Sude.FWWheelCommonGap
+import Sude.FWWidePhysicalSlots
+import Sude.FWWheelStockGate
+import Sude.FWWheelPairSupply
+import Sude.FWWideSelectedPlacement
+
+/-! Audit FW-specific bridge geometry and normalized schedule. -/
+
+#check Sude.fw_bridge_width_and_increment
+#print axioms Sude.fw_prefix_value_pool_bound
+
+#print axioms Sude.fw_prefix_stage_average_range
+
+#print axioms Sude.fw_prefix_stage_mean_pool_bound
+
+#print axioms Sude.fw_prefix_stage_means_sum_pool_bound
+
+#print axioms Sude.seed_midpoint_pool_bound
+
+#print axioms Sude.retained_seed_midpoint_pool_bound
+
+#print axioms Sude.retained_seed_stage_mean_pool_bound
+
+#print axioms Sude.fw_seed_row_rectangle_weighted_deviation_bound
+
+#print axioms Sude.fw_seed_column_rectangle_weighted_deviation_bound
+
+#print axioms Sude.fw_seed_global_row_rectangle_indicator
+
+#print axioms Sude.fw_seed_global_column_rectangle_indicator
+
+#print axioms Sude.fw_seed_row_rectangle_stage_hit_unique
+
+#print axioms Sude.fw_seed_column_rectangle_stage_hit_unique
+
+#print axioms Sude.fw_seed_existing_row_line_weight_twelve_or_fourteen
+
+#print axioms Sude.fw_seed_existing_column_line_weight_twelve_or_fourteen
+
+#print axioms Sude.fw_seed_rectangle_row_stage_weight
+
+#print axioms Sude.fw_seed_rectangle_column_stage_weight
+
+#print axioms Sude.fw_seed_row_stage_mean_split
+
+#print axioms Sude.fw_seed_column_stage_mean_split
+
+#print axioms Sude.fw_active_rectangle_layer_occupancy
+
+#print axioms Sude.packed_layers_support_card
+
+#print axioms Sude.active_rectangle_packed_layer_occupancy
+
+#print axioms Sude.fw_active_rectangle_label_count
+
+#print axioms Sude.fw_spare_rectangle_label_count
+
+#print axioms Sude.fw_active_labels_eq_family_union
+
+#print axioms Sude.active_rectangle_support_card
+
+#print axioms Sude.fw_seed_existing_row_line_weight
+
+#print axioms Sude.fw_seed_existing_column_line_weight
+
+#print axioms Sude.active_rectangle_row_count
+
+#print axioms Sude.active_rectangle_column_count
+
+#print axioms Sude.active_rectangle_row_load_le_two
+
+#print axioms Sude.active_rectangle_column_load_le_two
+
+#print axioms Sude.fw_seed_physical_stages_signed_cancellation
+
+#print axioms Sude.physical_pair_stage_cells_disjoint_card
+
+#print axioms Sude.physical_pair_stage_sum_midpoints
+
+#print axioms Sude.fw_seed_physical_stage_totals
+
+#print axioms Sude.actual_reserved_stages_signed_cancellation
+
+#print axioms Sude.reserved_stage_family_signed_total
+
+#print axioms Sude.reserved_uniform_stage_family_signed_total
+
+#print axioms Sude.actual_reserved_family_signed_cancellation
+
+#print axioms Sude.actual_unused_mean_signed_update
+
+#print axioms Sude.actual_unused_mean_signed_update_source
+
+#print axioms Sude.signed_family_unused_mean_cancellation_real
+
+#print axioms Sude.signed_family_unused_mean_cancellation
+
+#print axioms Sude.fw_seed_actual_seed_main_stage_orientation
+
+#print axioms Sude.fw_seed_actual_seed_anti_stage_orientation
+
+#print axioms Sude.fw_seed_actual_seed_main_all_stage_orientation
+
+#print axioms Sude.fw_seed_actual_seed_anti_all_stage_orientation
+
+#print axioms Sude.fw_actual_seed_row_midpoint_no_rectangle_orientation
+
+#print axioms Sude.fw_actual_seed_column_midpoint_no_rectangle_orientation
+
+#print axioms Sude.fw_seed_rectangle_pair_row_orientation_zero
+
+#print axioms Sude.fw_seed_rectangle_pairs_column_orientation_zero
+
+#print axioms Sude.fw_seed_rectangle_row_orientation_sum_zero
+
+#print axioms Sude.fw_seed_rectangle_column_orientation_sum_zero
+
+#print axioms Sude.fw_actual_seed_row_rectangle_midpoint
+
+#print axioms Sude.fw_actual_seed_column_rectangle_midpoint
+
+#print axioms Sude.fw_seed_row_remaining_orientation
+
+#print axioms Sude.fw_seed_column_remaining_orientation
+
+#print axioms Sude.fw_seed_row_orientation_split
+
+#print axioms Sude.fw_seed_column_orientation_split
+
+#print axioms Sude.fw_seed_row_network_endpoint_overlap
+
+#print axioms Sude.fw_seed_column_network_endpoint_overlap
+
+#print axioms Sude.fw_seed_centered_row_endpoint_overlap
+
+#print axioms Sude.fw_seed_centered_column_endpoint_overlap
+
+#print axioms Sude.fw_seed_column_pair_row_orientation_zero
+
+#print axioms Sude.fw_seed_row_pair_column_orientation_zero
+
+#print axioms Sude.fw_actual_seed_row_midpoint_cancellation
+
+#print axioms Sude.fw_actual_seed_column_midpoint_cancellation
+
+#print axioms Sude.fw_seed_joint_row_orientation_sum
+
+#print axioms Sude.fw_seed_joint_column_orientation_sum
+
+#print axioms Sude.fw_seed_joint_row_side_matching
+
+#print axioms Sude.fw_seed_joint_column_side_matching
+
+#print axioms Sude.fw_seed_joint_image_subset_blocks
+
+#print axioms Sude.fw_seed_joint_to_ordinary_injective_on_image
+
+#print axioms Sude.fw_seed_ordinary_network_cells_separate
+
+#print axioms Sude.fw_seed_ordinary_rectangle_cells_separate
+
+#print axioms Sude.physical_network_midpoint_seed_cancellation
+
+#print axioms Sude.physical_network_midpoint_selected_partition
+
+#print axioms Sude.physical_network_midpoint_selected_centered
+
+#print axioms Sude.physical_network_matched_pair_delta
+
+#print axioms Sude.physical_network_matched_delta_sum
+
+#print axioms Sude.fw_reallocated_reference_physical_midpoints
+
+#print axioms Sude.fw_seed_edge_gap_no_availability
+
+#print axioms Sude.fw_packed_reallocated_concentration_new_invoice
+
+#print axioms Sude.fw_reallocated_reconciled_grids_new_invoice
+
+#print axioms Sude.fw_global_reconcile_physical_wide_grids
+
+#print axioms Sude.fw_reallocated_actual_grids_new_invoice
+
+#print axioms Sude.fw_reallocated_actual_all_edge_grids
+
+#print axioms Sude.fw_reallocated_actual_edge_joint_grids
+
+#print axioms Sude.fw_joint_gap_equations_after_seed_reallocation
+
+#print axioms Sude.fw_joint_gap_equations_after_seed_reallocation_of_joint_gaps
+
+#print axioms Sude.fw_reallocated_joined_grid
+
+#print axioms Sude.fw_reallocated_physical_trace_gap_eq
+
+#print axioms Sude.fw_reallocated_physical_trace_grid
+
+#print axioms Sude.fw_joint_supported_gap_after_seed_reallocation
+
+#print axioms Sude.fw_reallocated_seed_edge_gap
+
+#print axioms Sude.fw_seed_reallocation_preserves_other_roles
+
+#print axioms Sude.fw_seed_reallocation_preserves_bridge_roles
+
+#print axioms Sude.fw_seed_existing_cells_mem_bridge_seed_roles
+
+#print axioms Sude.fw_seed_reallocation_preserves_wide_roles
+
+#print axioms Sude.fw_seed_existing_cells_mem_early
+
+#print axioms Sude.fw_seed_reallocation_preserves_outside_early
+
+#print axioms Sude.fw_seed_reallocation_preserves_growth_roles
+
+#print axioms Sude.fw_seed_source_concentration
+
+#print axioms Sude.retainedStageMidpoint_bounds_no_availability
+
+#print axioms Sude.retainedStage_midpoint_width_sq_le_no_availability
+
+#print axioms Sude.retainedStage_source_width_budget_no_availability
+
+#print axioms Sude.fw_seed_full_offset_concentration
+
+#print axioms Sude.fw_seed_existing_midpoints_and_injective
+
+#print axioms Sude.fw_seed_reallocation_supplied_concentration
+
+#print axioms Sude.fw_seed_offset_all_line_allocation
+
+#print axioms Sude.fw_seed_existing_row_squared_sum
+
+#print axioms Sude.fw_seed_existing_column_squared_sum
+
+#print axioms Sude.fw_seed_existing_row_weighted_invoice
+
+#print axioms Sude.fw_seed_existing_column_weighted_invoice
+
+#print axioms Sude.fw_seed_offset_row_pair_invoice
+
+#print axioms Sude.fw_seed_offset_column_pair_invoice
+
+#print axioms Sude.fw_seed_offset_row_combined_width_invoice
+
+#print axioms Sude.fw_seed_offset_column_combined_width_invoice
+
+#print axioms Sude.fw_seed_existing_main_squared_sum
+
+#print axioms Sude.fw_seed_existing_anti_squared_sum
+
+#print axioms Sude.fw_seed_existing_main_weighted_invoice
+
+#print axioms Sude.fw_seed_existing_anti_weighted_invoice
+
+#print axioms Sude.fw_seed_offset_diagonal_slot_sq_sum
+
+#print axioms Sude.fw_seed_offset_main_weighted_invoice
+
+#print axioms Sude.fw_seed_offset_anti_weighted_invoice
+
+#print axioms Sude.fw_seed_offset_main_stage_invoice
+
+#print axioms Sude.fw_seed_offset_anti_stage_invoice
+
+#print axioms Sude.fw_reallocate_existing_retained_seed_pairs
+
+#print axioms Sude.reallocate_existing_stage_pairs
+
+#print axioms Sude.physical_network_line_residual
+
+#print axioms Sude.physical_network_midpoint_complement
+
+#print axioms Sude.fw_reference_invoice_physical_midpoint_bounds
+
+#print axioms Sude.physical_pair_line_midpoint_identity
+
+#print axioms Sude.physical_network_midpoint_identity
+
+#print axioms Sude.physical_network_centered_midpoint_bound
+
+#print axioms Sude.fw_installed_network_block_gap_totals
+
+#print axioms Sude.fw_actual_network_block_gap_totals
+
+#print axioms Sude.fw_actual_grids_realize_supplied_flows_with_strong_wide_invoice
+
+#print axioms Sude.fw_actual_grids_realize_supplied_flows_with_explicit_wide_invoice
+
+#print axioms Sude.fw_actual_joint_centered_networks_explicit_wide
+
+#print axioms Sude.fw_actual_joint_grid_gap_totals
+
+#print axioms Sude.fw_physical_trace_gap_total
+
+#print axioms Sude.fw_physical_joint_grid_actual_total
+
+#print axioms Sude.fw_joint_grid_gap_total
+
+#print axioms Sude.fw_joint_grid_gap_total_on_slots
+
+#print axioms Sude.fw_joint_grid_actual_radius_on_slots
+
+#print axioms Sude.fw_reference_invoice_radius_bounds
+
+#print axioms Sude.fw_radius_centering_remainder_any
+
+#print axioms Sude.fw_three_permutation_centered_invoice_any
+
+#print axioms Sude.fw_radius_centering_remainder
+
+#print axioms Sude.fw_three_permutation_transfer
+
+#print axioms Sude.fw_three_permutation_centered_invoice
+
+#print axioms Sude.t75_bracket_choices_prime
+
+#print axioms Sude.t75_conditional_prime_target_list
+
+#print axioms Sude.t75_conditional_step_selection
+#check Sude.t75_two_class_midpoint_margin_with_slack
+#print axioms Sude.t75_two_class_midpoint_margin_with_slack
+#check Sude.t75_two_class_hmargin
+#print axioms Sude.t75_two_class_hmargin
+#check Sude.t75_uniform_seed_grid
+#print axioms Sude.t75_uniform_seed_grid
+#check Sude.t75_uniform_seed_sum
+#print axioms Sude.t75_uniform_seed_sum
+#check Sude.t75_uniform_seed_extend
+#print axioms Sude.t75_uniform_seed_extend
+#check Sude.t75_free_prime_brackets_from_unit_supply
+#print axioms Sude.t75_free_prime_brackets_from_unit_supply
+#check Sude.t75_targets_from_unit_bracket_supply
+#print axioms Sude.t75_targets_from_unit_bracket_supply
+#check Sude.fw_t75_nominal_two_class_targets
+#print axioms Sude.fw_t75_nominal_two_class_targets
+#check Sude.fw_t75_nominal_targets_from_seed_chain
+#print axioms Sude.fw_t75_nominal_targets_from_seed_chain
+#check Sude.fw_t75_nominal_lower_above_finite_bmor
+#print axioms Sude.fw_t75_nominal_lower_above_finite_bmor
+#check Sude.bmor_finite_limit_le_four_ten_pow_thirteen
+#print axioms Sude.bmor_finite_limit_le_four_ten_pow_thirteen
+#check Sude.fw_t75_nominal_point_above_finite_bmor
+#print axioms Sude.fw_t75_nominal_point_above_finite_bmor
+
+#print axioms Sude.fw_bridge_width_and_increment
+#check Sude.fw_bridge_window_geometry
+#print axioms Sude.fw_bridge_window_geometry
+#check Sude.fw_bridge_cross_gap
+#print axioms Sude.fw_bridge_cross_gap
+#check Sude.fw_bridge_pool_gap_even
+#print axioms Sude.fw_bridge_pool_gap_even
+#check Sude.fw_bridge_radius_succ
+#print axioms Sude.fw_bridge_radius_succ
+#check Sude.fw_bridge_five_stage_schedule
+#print axioms Sude.fw_bridge_five_stage_schedule
+#check Sude.fw_bridge_select_pool_blocks
+#print axioms Sude.fw_bridge_select_pool_blocks
+#check Sude.bmor_fw_bridge_stocks
+#print axioms Sude.bmor_fw_bridge_stocks
+#check Sude.bmor_fw_bridge_select_pool_blocks
+#print axioms Sude.bmor_fw_bridge_select_pool_blocks
+#check Sude.fw_bridge_nominal_span_scale
+#print axioms Sude.fw_bridge_nominal_span_scale
+#check Sude.fw_bridge_nominal_windows_ordered
+#print axioms Sude.fw_bridge_nominal_windows_ordered
+#check Sude.fw_bridge_nominal_radius_pos
+#print axioms Sude.fw_bridge_nominal_radius_pos
+#check Sude.fw_bridge_nominal_low_stocks_disjoint
+#print axioms Sude.fw_bridge_nominal_low_stocks_disjoint
+#check Sude.fw_bridge_nominal_high_stocks_disjoint
+#print axioms Sude.fw_bridge_nominal_high_stocks_disjoint
+#check Sude.fw_bridge_nominal_low_overlap_subset
+#print axioms Sude.fw_bridge_nominal_low_overlap_subset
+#check Sude.fw_bridge_nominal_high_overlap_subset
+#print axioms Sude.fw_bridge_nominal_high_overlap_subset
+#check Sude.fw_bridge_nominal_low_window_overlap_iff
+#print axioms Sude.fw_bridge_nominal_low_window_overlap_iff
+#check Sude.fw_bridge_nominal_high_window_overlap_iff
+#print axioms Sude.fw_bridge_nominal_high_window_overlap_iff
+#check Sude.fw_bridge_low_high_stocks_disjoint
+#print axioms Sude.fw_bridge_low_high_stocks_disjoint
+#check Sude.fw_nominal_prior_batches_disjoint_current
+#print axioms Sude.fw_nominal_prior_batches_disjoint_current
+#check Sude.fw_nominal_prior_reservation_intersections
+#print axioms Sude.fw_nominal_prior_reservation_intersections
+#check Sude.bmor_fw_five_bridge_batches
+#print axioms Sude.bmor_fw_five_bridge_batches
+#check Sude.fw_five_batches_sequential_valid
+#print axioms Sude.fw_five_batches_sequential_valid
+#check Sude.fw_five_batches_prior_card_le
+#print axioms Sude.fw_five_batches_prior_card_le
+#check Sude.bmor_fw_five_bridge_batches_sequential
+#print axioms Sude.bmor_fw_five_bridge_batches_sequential
+#check Sude.fw_bridge_nominal_width_bounds
+#print axioms Sude.fw_bridge_nominal_width_bounds
+#check Sude.fw_bridge_nominal_stock_bound_ge_linear
+#print axioms Sude.fw_bridge_nominal_stock_bound_ge_linear
+#check Sude.fw_bridge_numerical_gates
+#print axioms Sude.fw_bridge_numerical_gates
+#check Sude.fw_bridge_empty_initial_gates
+#print axioms Sude.fw_bridge_empty_initial_gates
+#check Sude.fw_selected_bridge_gap_bounds
+#print axioms Sude.fw_selected_bridge_gap_bounds
+#check Sude.fw_selected_bridge_batches_grow_grid
+#print axioms Sude.fw_selected_bridge_batches_grow_grid
+#check Sude.bmor_fw_five_bridge_batches_empty
+#print axioms Sude.bmor_fw_five_bridge_batches_empty
+#check Sude.bmor_fw_five_bridge_batches_grow_every_grid
+#print axioms Sude.bmor_fw_five_bridge_batches_grow_every_grid
+#check Sude.fwBridgeStageBlock_valid
+#print axioms Sude.fwBridgeStageBlock_valid
+#check Sude.fw_bridge_stocks_order
+#print axioms Sude.fw_bridge_stocks_order
+#check Sude.fwBridgeStageEndpoint_injective
+#print axioms Sude.fwBridgeStageEndpoint_injective
+#check Sude.fwBridgeStageEndpoint_pool_avoids
+#print axioms Sude.fwBridgeStageEndpoint_pool_avoids
+#check Sude.fwBridgeStageBlock_gap
+#print axioms Sude.fwBridgeStageBlock_gap
+#check Sude.fw_install_bridge_stage_endpoints
+#print axioms Sude.fw_install_bridge_stage_endpoints
+#check Sude.fw_bridge_cells_of_capacity
+#print axioms Sude.fw_bridge_cells_of_capacity
+#check Sude.fw_install_bridge_stage_endpoints_of_capacity
+#print axioms Sude.fw_install_bridge_stage_endpoints_of_capacity
+#check Sude.fw_selected_bridge_values_pool_and_quarter
+#print axioms Sude.fw_selected_bridge_values_pool_and_quarter
+#check Sude.bmor_fw_bridges_then_narrow_seeds
+#print axioms Sude.bmor_fw_bridges_then_narrow_seeds
+#check Sude.fwBridgeDiagonalSlot_injective
+#print axioms Sude.fwBridgeDiagonalSlot_injective
+#check Sude.fwBridgeOrdinarySlot_injective
+#print axioms Sude.fwBridgeOrdinarySlot_injective
+#check Sude.fwBridgeControllerSlot_bijective
+#print axioms Sude.fwBridgeControllerSlot_bijective
+#check Sude.fwBridgeControllerEndpoint_injective
+#print axioms Sude.fwBridgeControllerEndpoint_injective
+#check Sude.fw_seed_candidates_after_bridges_of_quota
+#print axioms Sude.fw_seed_candidates_after_bridges_of_quota
+#check Sude.fw_actual_seed_candidates_after_bridges_of_quota
+#print axioms Sude.fw_actual_seed_candidates_after_bridges_of_quota
+#check Sude.fw_actual_narrow_seed_of_quota
+#print axioms Sude.fw_actual_narrow_seed_of_quota
+#check Sude.fw_actual_narrow_seed_reservation_of_quota
+#print axioms Sude.fw_actual_narrow_seed_reservation_of_quota
+#check Sude.bmor_fw_bridges_then_narrow_seeds_of_quota
+#print axioms Sude.bmor_fw_bridges_then_narrow_seeds_of_quota
+#check Sude.fw_install_bridge_diagonal_rectangles
+#print axioms Sude.fw_install_bridge_diagonal_rectangles
+#check Sude.fw_bridge_ordinary_endpoint_gap
+#print axioms Sude.fw_bridge_ordinary_endpoint_gap
+#check Sude.fw_install_ordinary_bridge_slots_preserving_rectangles
+#print axioms Sude.fw_install_ordinary_bridge_slots_preserving_rectangles
+#check Sude.fw_sixteen_seed_even_grid
+#print axioms Sude.fw_sixteen_seed_even_grid
+#check Sude.fw_sixteen_supplied_seed_even_grid
+#print axioms Sude.fw_sixteen_supplied_seed_even_grid
+#check Sude.fw_screened_seed_trace_bridge_grid
+#print axioms Sude.fw_screened_seed_trace_bridge_grid
+#check Sude.fw_install_bridge_diagonals_and_ordinary
+#print axioms Sude.fw_install_bridge_diagonals_and_ordinary
+#check Sude.bmor_fw_bridges_extend_every_screened_trace
+#print axioms Sude.bmor_fw_bridges_extend_every_screened_trace
+#check Sude.bmor_fw_protected_bridges_extend_every_screened_trace
+#print axioms Sude.bmor_fw_protected_bridges_extend_every_screened_trace
+#check Sude.fw_pack_bridge_layers_around_rectangles
+#print axioms Sude.fw_pack_bridge_layers_around_rectangles
+#check Sude.fwBridgeLayerIndex_injective
+#print axioms Sude.fwBridgeLayerIndex_injective
+#check Sude.fw_bridge_layer_cells_exist
+#print axioms Sude.fw_bridge_layer_cells_exist
+#check Sude.fw_install_bridge_on_packed_layers_empty
+#print axioms Sude.fw_install_bridge_on_packed_layers_empty
+#check Sude.bmor_fw_five_bridge_packed_placement
+#print axioms Sude.bmor_fw_five_bridge_packed_placement
+#check Sude.bmor_fw_bridge_placement_with_common_fc2k_graph
+#print axioms Sude.bmor_fw_bridge_placement_with_common_fc2k_graph
+#check Sude.fwPermutationCutFailure_compl
+#print axioms Sude.fwPermutationCutFailure_compl
+#check Sude.fwPermutationCutFailure_iff_tuple
+#print axioms Sude.fwPermutationCutFailure_iff_tuple
+#check Sude.fwPermutationFixedCutBad_card_partition
+#print axioms Sude.fwPermutationFixedCutBad_card_partition
+#check Sude.fwPermutationFixedCutBad_subset_exception_union
+#print axioms Sude.fwPermutationFixedCutBad_subset_exception_union
+#check Sude.fwPermutationFixedCutBad_exception_union_bound
+#print axioms Sude.fwPermutationFixedCutBad_exception_union_bound
+#check Sude.fwPermutationFixedCutBad_exception_sum_bound
+#print axioms Sude.fwPermutationFixedCutBad_exception_sum_bound
+#check Sude.fw_exception_binomial_bound
+#print axioms Sude.fw_exception_binomial_bound
+#check Sude.fwPermutationFixedCutBad_exception_entropy_bound
+#print axioms Sude.fwPermutationFixedCutBad_exception_entropy_bound
+#check Sude.fw_entropy_small_endpoint
+#print axioms Sude.fw_entropy_small_endpoint
+#check Sude.fw_curvature_pos
+#print axioms Sude.fw_curvature_pos
+#check Sude.fw_entropy_hasDerivAt
+#print axioms Sude.fw_entropy_hasDerivAt
+#check Sude.fw_entropySlope_hasDerivAt
+#print axioms Sude.fw_entropySlope_hasDerivAt
+#check Sude.fw_entropy_convex
+#print axioms Sude.fw_entropy_convex
+#check Sude.fw_entropy_le_endpoint_max
+#print axioms Sude.fw_entropy_le_endpoint_max
+#check Sude.fw_entropy_half_endpoint
+#print axioms Sude.fw_entropy_half_endpoint
+#check Sude.fw_entropy_interval_gate
+#print axioms Sude.fw_entropy_interval_gate
+#check Sude.fwPermutationFixedCutBad_scaled_card
+#print axioms Sude.fwPermutationFixedCutBad_scaled_card
+#check Sude.fwPermutationFixedCutBad_card_eq
+#print axioms Sude.fwPermutationFixedCutBad_card_eq
+#check Sude.fw_entropy_tuple_bound
+#print axioms Sude.fw_entropy_tuple_bound
+#check Sude.fw_tuple_choose_entropy_bound
+#print axioms Sude.fw_tuple_choose_entropy_bound
+#check Sude.fw_cutWeight_entropy_bound
+#print axioms Sude.fw_cutWeight_entropy_bound
+#check Sude.fw_cut_entropy_scaling
+#print axioms Sude.fw_cut_entropy_scaling
+#check Sude.fw_fixedCut_large_entropy_bound
+#print axioms Sude.fw_fixedCut_large_entropy_bound
+#check Sude.fw_large_cut_summand_bound
+#print axioms Sude.fw_large_cut_summand_bound
+#check Sude.fw_actual_fixedCut_large_bound
+#print axioms Sude.fw_actual_fixedCut_large_bound
+#check Sude.fw_small_cut_gate
+#print axioms Sude.fw_small_cut_gate
+#check Sude.fw_large_cut_mem_of_failure
+#print axioms Sude.fw_large_cut_mem_of_failure
+#check Sude.fw_sum_cuts_by_size
+#print axioms Sude.fw_sum_cuts_by_size
+#check Sude.fw_large_cut_union_card
+#print axioms Sude.fw_large_cut_union_card
+#check Sude.fw_large_cut_sum_bound
+#print axioms Sude.fw_large_cut_sum_bound
+#check Sude.fw_large_cut_union_bound
+#print axioms Sude.fw_large_cut_union_bound
+#check Sude.fw_smallCutBase_lt
+#print axioms Sude.fw_smallCutBase_lt
+#check Sude.fw_small_cut_summand_bound
+#print axioms Sude.fw_small_cut_summand_bound
+#check Sude.fw_small_cut_sum_bound
+#print axioms Sude.fw_small_cut_sum_bound
+#check Sude.fw_small_cut_mem_of_failure
+#print axioms Sude.fw_small_cut_mem_of_failure
+#check Sude.fw_small_cut_union_probability
+#print axioms Sude.fw_small_cut_union_probability
+#check Sude.fw_small_cut_union_integer_budget
+#print axioms Sude.fw_small_cut_union_integer_budget
+#check Sude.fw_large_cut_log_gate
+#print axioms Sude.fw_large_cut_log_gate
+#check Sude.fw_large_cut_decay
+#print axioms Sude.fw_large_cut_decay
+#check Sude.fw_large_cut_union_integer_budget
+#print axioms Sude.fw_large_cut_union_integer_budget
+#check Sude.fw_permutation_expander_exists
+#print axioms Sude.fw_permutation_expander_exists
+#check Sude.bmor_fw_bridge_placement_with_common_fw_graph
+#print axioms Sude.bmor_fw_bridge_placement_with_common_fw_graph
+#check Sude.fwSeedRectangle_injective
+#print axioms Sude.fwSeedRectangle_injective
+#check Sude.fw_bridge_seed_rectangle_ne
+#print axioms Sude.fw_bridge_seed_rectangle_ne
+#check Sude.fwBridgeSeedRectangleChoice_bridge
+#print axioms Sude.fwBridgeSeedRectangleChoice_bridge
+#check Sude.fwBridgeSeedRectangleChoice_seed
+#print axioms Sude.fwBridgeSeedRectangleChoice_seed
+#check Sude.fw_bridge_seed_rectangles_disjoint
+#print axioms Sude.fw_bridge_seed_rectangles_disjoint
+#check Sude.fw_bridge_seed_rectangle_capacity
+#print axioms Sude.fw_bridge_seed_rectangle_capacity
+#check Sude.bmor_fw_bridge_placement_and_quota_seeds
+#print axioms Sude.bmor_fw_bridge_placement_and_quota_seeds
+#check Sude.fw_install_retained_seed_offset_rectangles
+#print axioms Sude.fw_install_retained_seed_offset_rectangles
+#check Sude.fw_rectangle_stage_budget_of_fw15
+#print axioms Sude.fw_rectangle_stage_budget_of_fw15
+#check Sude.fw_full_rectangle_capacity
+#print axioms Sude.fw_full_rectangle_capacity
+#check Sude.fw_rectangle_stage_budget_of_cap
+#print axioms Sude.fw_rectangle_stage_budget_of_cap
+#check Sude.fw_full_rectangle_capacity_of_cap
+#print axioms Sude.fw_full_rectangle_capacity_of_cap
+#check Sude.fw_early_rectangle_capacity
+#print axioms Sude.fw_early_rectangle_capacity
+#check Sude.fwBridgeStageEndpoint_mem_final_reservation
+#print axioms Sude.fwBridgeStageEndpoint_mem_final_reservation
+#check Sude.bmor_fw_bridge_and_seed_diagonal_placement
+#print axioms Sude.bmor_fw_bridge_and_seed_diagonal_placement
+#check Sude.fw_pack_seed_layers_after_bridge
+#print axioms Sude.fw_pack_seed_layers_after_bridge
+#check Sude.fwSeedOrdinaryInput_injective
+#print axioms Sude.fwSeedOrdinaryInput_injective
+#check Sude.fwSeedOrdinaryInput_ne_rectangle
+#print axioms Sude.fwSeedOrdinaryInput_ne_rectangle
+#check Sude.fwSeedPhysicalInput_bijective
+#print axioms Sude.fwSeedPhysicalInput_bijective
+#check Sude.fwSeedOrdinaryCells_geometry
+#print axioms Sude.fwSeedOrdinaryCells_geometry
+#check Sude.fw_install_retained_seed_ordinary
+#print axioms Sude.fw_install_retained_seed_ordinary
+#check Sude.bmor_fw_bridge_and_seed_full_placement
+#print axioms Sude.bmor_fw_bridge_and_seed_full_placement
+#check Sude.bmor_fw_bridge_seed_and_wide_protected
+#print axioms Sude.bmor_fw_bridge_seed_and_wide_protected
+#check Sude.fw_wheel_period_iterate
+#print axioms Sude.fw_wheel_period_iterate
+#check Sude.fw_wheel_min_pos
+#print axioms Sude.fw_wheel_min_pos
+#check Sude.fw_wheel_cutoff_pos
+#print axioms Sude.fw_wheel_cutoff_pos
+#check Sude.fw_wheel_min_le_successor
+#print axioms Sude.fw_wheel_min_le_successor
+#check Sude.fw_wheel_cutoff_le_next
+#print axioms Sude.fw_wheel_cutoff_le_next
+#check Sude.fw_wheel_window_bound
+#print axioms Sude.fw_wheel_window_bound
+#check Sude.fw_wheel_one_window_bound
+#print axioms Sude.fw_wheel_one_window_bound
+#check Sude.fw_wheel_units_infinite
+#print axioms Sude.fw_wheel_units_infinite
+#check Sude.fw_wheel_unit_strictMono
+#print axioms Sude.fw_wheel_unit_strictMono
+#check Sude.fw_wheel_unit_enum
+#print axioms Sude.fw_wheel_unit_enum
+#check Sude.fw_wheel_shifted_count
+#print axioms Sude.fw_wheel_shifted_count
+#check Sude.fw_wheel_unit_period
+#print axioms Sude.fw_wheel_unit_period
+#check Sude.fw_wheel_cutoff_pos_of_pos
+#print axioms Sude.fw_wheel_cutoff_pos_of_pos
+#check Sude.fw_wheel_window_bound_of_pos
+#print axioms Sude.fw_wheel_window_bound_of_pos
+#check Sude.fw_wide_install_avoiding_spatial_reservation
+#print axioms Sude.fw_wide_install_avoiding_spatial_reservation
+#check Sude.fw_wide_install_preserving_spatial_reservation
+#print axioms Sude.fw_wide_install_preserving_spatial_reservation
+#check Sude.fwWideRectangle_injective
+#print axioms Sude.fwWideRectangle_injective
+#check Sude.fw_bridge_wide_rectangle_ne
+#print axioms Sude.fw_bridge_wide_rectangle_ne
+#check Sude.fw_seed_wide_rectangle_ne
+#print axioms Sude.fw_seed_wide_rectangle_ne
+#check Sude.fwBridgeSeedWideChoice_bridge
+#print axioms Sude.fwBridgeSeedWideChoice_bridge
+#check Sude.fwBridgeSeedWideChoice_seed
+#print axioms Sude.fwBridgeSeedWideChoice_seed
+#check Sude.fwBridgeSeedWideChoice_wide
+#print axioms Sude.fwBridgeSeedWideChoice_wide
+#check Sude.fwBridgeSeedWideChoice_outside
+#print axioms Sude.fwBridgeSeedWideChoice_outside
+#check Sude.fw_wide_rectangles_disjoint_from_prior
+#print axioms Sude.fw_wide_rectangles_disjoint_from_prior
+#check Sude.fw_wide_rectangles_pairwise_disjoint
+#print axioms Sude.fw_wide_rectangles_pairwise_disjoint
+#check Sude.fw_wheel_half_unit
+#print axioms Sude.fw_wheel_half_unit
+#check Sude.fw_wheel_short_neighbors_bound
+#print axioms Sude.fw_wheel_short_neighbors_bound
+#check Sude.fw_wheel_short_pairs_bound
+#print axioms Sude.fw_wheel_short_pairs_bound
+#check Sude.fw_screened_prime_coprime_15015
+#print axioms Sude.fw_screened_prime_coprime_15015
+#check Sude.fw_screened_wheel_short_pairs
+#print axioms Sude.fw_screened_wheel_short_pairs
+#check Sude.fw_wheel_long_pairs_after_short_removal
+#print axioms Sude.fw_wheel_long_pairs_after_short_removal
+#check Sude.fw_wheel_ww5_cutoff_geometry
+#print axioms Sude.fw_wheel_ww5_cutoff_geometry
+#check Sude.fw_transposed_layer_union_load
+#print axioms Sude.fw_transposed_layer_union_load
+#check Sude.fw_wide_layer_hall_bound
+#print axioms Sude.fw_wide_layer_hall_bound
+#check Sude.fw_pack_wide_layers_after_bridge_seed
+#print axioms Sude.fw_pack_wide_layers_after_bridge_seed
+#check Sude.fw_weak_common_gap_matching_from_pairs
+#print axioms Sude.fw_weak_common_gap_matching_from_pairs
+#check Sude.fw_wheel_common_gap_from_pair_population
+#print axioms Sude.fw_wheel_common_gap_from_pair_population
+#check Sude.fw_wheel_ww5_common_gap_from_pair_population
+#print axioms Sude.fw_wheel_ww5_common_gap_from_pair_population
+#check Sude.fwWideControllerSlot_bijective
+#print axioms Sude.fwWideControllerSlot_bijective
+#check Sude.fwWideFlatSlot_bijective
+#print axioms Sude.fwWideFlatSlot_bijective
+#check Sude.fwWideLayerIndex_injective
+#print axioms Sude.fwWideLayerIndex_injective
+#check Sude.fwWidePhysicalCells_geometry
+#print axioms Sude.fwWidePhysicalCells_geometry
+#check Sude.fw_wheel_stock_floor_population_gate
+#print axioms Sude.fw_wheel_stock_floor_population_gate
+#check Sude.fw_wheel_ww5_common_gap_from_stock
+#print axioms Sude.fw_wheel_ww5_common_gap_from_stock
+#check Sude.fw_wheel_binned_pairs
+#print axioms Sude.fw_wheel_binned_pairs
+#check Sude.fw_wheel_ww5_common_gap_from_bins
+#print axioms Sude.fw_wheel_ww5_common_gap_from_bins
+#check Sude.fw_install_selected_wide_roles
+#print axioms Sude.fw_install_selected_wide_roles
+
+#check Sude.fw_reflected_bins_cross_order
+#print axioms Sude.fw_reflected_bins_cross_order
+#check Sude.fw_select_and_install_wide_roles
+#print axioms Sude.fw_select_and_install_wide_roles
+
+#check Sude.fw_wheel_early_reserved_card
+#print axioms Sude.fw_wheel_early_reserved_card
+#check Sude.fw_wheel_wide_batch_card
+#print axioms Sude.fw_wheel_wide_batch_card
+#check Sude.fw_wheel_actual_stage_charge_bound
+#print axioms Sude.fw_wheel_actual_stage_charge_bound
+#check Sude.fw_wheel_ww4_first_band_quota
+#print axioms Sude.fw_wheel_ww4_first_band_quota
+#check Sude.fw_wheel_screened_actual_stock
+#print axioms Sude.fw_wheel_screened_actual_stock
+#check Sude.fw_wheel_screened_normalized_stock
+#print axioms Sude.fw_wheel_screened_normalized_stock
+
+#check Sude.fw_select_wide_roles_preserving_bridge_seed
+#print axioms Sude.fw_select_wide_roles_preserving_bridge_seed
+
+#check Sude.fw_poolMaximum_index_ratio_of_fw3
+#print axioms Sude.fw_poolMaximum_index_ratio_of_fw3
+#check Sude.fw_wheel_ww4_first_band_quota_of_fw3
+#print axioms Sude.fw_wheel_ww4_first_band_quota_of_fw3
+
+#check Sude.fwBridge_reservation_eq_endpoints
+#print axioms Sude.fwBridge_reservation_eq_endpoints
+#check Sude.protectedPoolCells_subset_role_images
+#print axioms Sude.protectedPoolCells_subset_role_images
+#check Sude.fw_bridge_seed_protected_covered
+#print axioms Sude.fw_bridge_seed_protected_covered
+#check Sude.fw_bridge_seed_role_images_subset_base
+#print axioms Sude.fw_bridge_seed_role_images_subset_base
+#check Sude.fw_wide_corner_avoids_bridge_seed_roles
+#print axioms Sude.fw_wide_corner_avoids_bridge_seed_roles
+
+#check Sude.bmor_fw_bridge_seed_wide_full_placement
+#print axioms Sude.bmor_fw_bridge_seed_wide_full_placement
+
+#check Sude.fw_initial_wide_rectangle_capacity
+#print axioms Sude.fw_initial_wide_rectangle_capacity
+
+#check Sude.bmor_fw_initial_bridge_seed_wide_full_placement
+#print axioms Sude.bmor_fw_initial_bridge_seed_wide_full_placement
+
+#check Sude.fw_reserved_wide_rectangle_capacity
+#print axioms Sude.fw_reserved_wide_rectangle_capacity
+#check Sude.fw_reserved_wide_rectangle_slack
+#print axioms Sude.fw_reserved_wide_rectangle_slack
+#check Sude.bmor_fw_reserved_bridge_seed_wide_full_placement
+#print axioms Sude.bmor_fw_reserved_bridge_seed_wide_full_placement
+
+#check Sude.fw_wheel_witness_early_card
+#print axioms Sude.fw_wheel_witness_early_card
+#check Sude.fw_wheel_witness_trace_stock
+#print axioms Sude.fw_wheel_witness_trace_stock
+#check Sude.fw_wheel_witness_trace_screened_units
+#print axioms Sude.fw_wheel_witness_trace_screened_units
+#check Sude.fw_wheel_witness_trace_normalized_stock
+#print axioms Sude.fw_wheel_witness_trace_normalized_stock
+
+#check Sude.fw_wheel_trace_first_window_candidates
+#print axioms Sude.fw_wheel_trace_first_window_candidates
+
+#check Sude.bmor_fw_reserved_bridge_seed_wide_of_index
+#print axioms Sude.bmor_fw_reserved_bridge_seed_wide_of_index
+
+#check Sude.BTGrowingTrace.append_narrow_matching
+#print axioms Sude.BTGrowingTrace.append_narrow_matching
+#check Sude.fw_first_wheel_append_supplied_candidates
+#print axioms Sude.fw_first_wheel_append_supplied_candidates
+#check Sude.fw_wheel_trace_first_window_append
+#print axioms Sude.fw_wheel_trace_first_window_append
+#check Sude.fw_wheel_ww4_first_band_quota_from_imports
+#print axioms Sude.fw_wheel_ww4_first_band_quota_from_imports
+#check Sude.fw_first_band_upper_index_ratio
+#print axioms Sude.fw_first_band_upper_index_ratio
+#check Sude.fw_first_band_early_budget_bound
+#print axioms Sude.fw_first_band_early_budget_bound
+#check Sude.fw_first_band_stock_baseline
+#print axioms Sude.fw_first_band_stock_baseline
+#check Sude.fw_first_band_stage_charge_from_fw3
+#print axioms Sude.fw_first_band_stage_charge_from_fw3
+#check Sude.fw_first_band_ww4_envelopes
+#print axioms Sude.fw_first_band_ww4_envelopes
+
+#check Sude.fw_first_band_ww4_envelopes_from_imports
+#print axioms Sude.fw_first_band_ww4_envelopes_from_imports
+#check Sude.fw_first_band_trace_first_window_append
+#print axioms Sude.fw_first_band_trace_first_window_append
+
+#check Sude.fw_first_band_log_upper_of_rs
+#print axioms Sude.fw_first_band_log_upper_of_rs
+#check Sude.fw_first_band_pointwise_log_bounds
+#print axioms Sude.fw_first_band_pointwise_log_bounds
+#check Sude.fw_first_band_trace_first_window_append_pointwise
+#print axioms Sude.fw_first_band_trace_first_window_append_pointwise
+
+#check Sude.fw_wheel_seed_radius_floor_zero
+#print axioms Sude.fw_wheel_seed_radius_floor_zero
+#check Sude.fw_wheel_first_stage_from_seed_radius
+#print axioms Sude.fw_wheel_first_stage_from_seed_radius
+
+#check Sude.bmor_fw_reserved_early_placement_first_wheel
+#print axioms Sude.bmor_fw_reserved_early_placement_first_wheel
+#check Sude.fw_first_band_floor_of_radius
+#print axioms Sude.fw_first_band_floor_of_radius
+#check Sude.fw_even_trace_radius_lower
+#print axioms Sude.fw_even_trace_radius_lower
+#check Sude.fw_first_band_floor_of_even_trace
+#print axioms Sude.fw_first_band_floor_of_even_trace
+
+#check Sude.fw_wheel_15015_zero_cutoff
+#print axioms Sude.fw_wheel_15015_zero_cutoff
+#check Sude.fw_wheel_seed_radius_cutoff_eq_two
+#print axioms Sude.fw_wheel_seed_radius_cutoff_eq_two
+
+#check Sude.fw_first_band_trace_first_window_append_at_last
+#print axioms Sude.fw_first_band_trace_first_window_append_at_last
+#check Sude.fw_first_band_trace_first_window_bounded_stop
+#print axioms Sude.fw_first_band_trace_first_window_bounded_stop
+#check Sude.fw_first_band_first_window_trace_bounded_stop
+#print axioms Sude.fw_first_band_first_window_trace_bounded_stop
+#check Sude.fw_seed_trace_even_grid_unconditional_coverage
+#print axioms Sude.fw_seed_trace_even_grid_unconditional_coverage
+#check Sude.fw_supplied_seed_trace_even_grid
+#print axioms Sude.fw_supplied_seed_trace_even_grid
+#check Sude.fw_physical_seed_trace_even_grid
+#print axioms Sude.fw_physical_seed_trace_even_grid
+
+#check Sude.fw_first_band_trace_labeled_window_bounded_stop
+#print axioms Sude.fw_first_band_trace_labeled_window_bounded_stop
+#check Sude.fw_first_band_first_window_labeled_trace_bounded_stop
+#print axioms Sude.fw_first_band_first_window_labeled_trace_bounded_stop
+
+#check Sude.fw_mixed_wheel_values
+#print axioms Sude.fw_mixed_wheel_values
+#check Sude.fw_screened_pool_mixed_wheel_units
+#print axioms Sude.fw_screened_pool_mixed_wheel_units
+#check Sude.fw_mixed_wheel_exact_window
+#print axioms Sude.fw_mixed_wheel_exact_window
+#check Sude.fw_mixed_wheel_screened_short_pairs
+#print axioms Sude.fw_mixed_wheel_screened_short_pairs
+#check Sude.fw_physical_seed_witness_trace_grid
+#print axioms Sude.fw_physical_seed_witness_trace_grid
+#check Sude.bmor_fw_reserved_early_physical_seed_bounded_wheel_grid
+#print axioms Sude.bmor_fw_reserved_early_physical_seed_bounded_wheel_grid
+
+#check Sude.fw_first_band_certified_first_window_bounded_stop
+#print axioms Sude.fw_first_band_certified_first_window_bounded_stop
+#check Sude.fw_affine_short_neighbors_bound
+#print axioms Sude.fw_affine_short_neighbors_bound
+#check Sude.fw_affine_short_pair_count
+#print axioms Sude.fw_affine_short_pair_count
+#check Sude.fw_screened_prime_coprime_255255
+#print axioms Sude.fw_screened_prime_coprime_255255
+
+#check Sude.fw_affine_threshold_identity
+#print axioms Sude.fw_affine_threshold_identity
+#check Sude.fw_affine_threshold_bounds
+#print axioms Sude.fw_affine_threshold_bounds
+
+#check Sude.fw_interval_units_multiples_card
+#print axioms Sude.fw_interval_units_multiples_card
+#check Sude.fw_interval_units_prime_extension
+#print axioms Sude.fw_interval_units_prime_extension
+#check Sude.fw_multiple_interval_count_error
+#print axioms Sude.fw_multiple_interval_count_error
+#check Sude.fw_affine_interval_discrepancy_extend
+#print axioms Sude.fw_affine_interval_discrepancy_extend
+#check Sude.fw_affine_interval_discrepancy_implies_window
+#print axioms Sude.fw_affine_interval_discrepancy_implies_window
+#check Sude.fw_affine_interval_discrepancy_one
+#print axioms Sude.fw_affine_interval_discrepancy_one
+
+#check Sude.affine_pair_population_real
+#print axioms Sude.affine_pair_population_real
+#check Sude.fw_affine_discrepancy_nonneg
+#print axioms Sude.fw_affine_discrepancy_nonneg
+#check Sude.fw_affine_common_gap_from_bins
+#print axioms Sude.fw_affine_common_gap_from_bins
+
+#check Sude.bg_mean_cells_cover
+#print axioms Sude.bg_mean_cells_cover
+#check Sude.bg_actual_pool_normalized_mean_lower
+#print axioms Sude.bg_actual_pool_normalized_mean_lower
+#check Sude.bg_actual_pool_mean_lower
+#print axioms Sude.bg_actual_pool_mean_lower
+#check Sude.fw_base_prefix_full_certificate
+#print axioms Sude.fw_base_prefix_full_certificate
+#check Sude.fw_affine_interval_discrepancy_of_prefix_bounds
+#print axioms Sude.fw_affine_interval_discrepancy_of_prefix_bounds
+#check Sude.fw_base_wheel_interval_discrepancy
+#print axioms Sude.fw_base_wheel_interval_discrepancy
+#check Sude.fw_first_affine_wheel_interval_discrepancy
+#print axioms Sude.fw_first_affine_wheel_interval_discrepancy
+
+#check Sude.fw_mixed_wheel_interval_discrepancy
+#print axioms Sude.fw_mixed_wheel_interval_discrepancy
+#check Sude.fw_mixed_wheel_affine_discrepancy
+#print axioms Sude.fw_mixed_wheel_affine_discrepancy
+#check Sude.fw_mixed_wheel_screened_affine_short_pair_count
+#print axioms Sude.fw_mixed_wheel_screened_affine_short_pair_count
+
+#check Sude.fw_mixed_affine_common_gap_stage
+#print axioms Sude.fw_mixed_affine_common_gap_stage
+
+#check Sude.fw_mixed_affine_density_gt_quarter
+#print axioms Sude.fw_mixed_affine_density_gt_quarter
+#check Sude.fw_mixed_affine_slope_from_pool_stock
+#print axioms Sude.fw_mixed_affine_slope_from_pool_stock
+
+#check Sude.fw_mixed_first_band_affine_quota
+#print axioms Sude.fw_mixed_first_band_affine_quota
+
+#check Sude.fw_mixed_affine_append_stage
+#print axioms Sude.fw_mixed_affine_append_stage
+
+#check Sude.fw_first_affine_origin_lt_1104
+#print axioms Sude.fw_first_affine_origin_lt_1104
+#check Sude.fw_first_affine_shift_of_radius_1104
+#print axioms Sude.fw_first_affine_shift_of_radius_1104
+
+#check Sude.fw_wheel_cutoff_ge_succ
+#print axioms Sude.fw_wheel_cutoff_ge_succ
+#check Sude.fw_coarse_window_118
+#print axioms Sude.fw_coarse_window_118
+#check Sude.fw_certified_118_radius_at_least_1108
+#print axioms Sude.fw_certified_118_radius_at_least_1108
+
+#check Sude.fw_first_band_first_affine_after_118
+#print axioms Sude.fw_first_band_first_affine_after_118
+
+#check Sude.fw_even_ceiling_threshold
+#print axioms Sude.fw_even_ceiling_threshold
+#check Sude.fw_mixed_affine_iterate_bounded
+#print axioms Sude.fw_mixed_affine_iterate_bounded
+
+#check Sude.fw_first_affine_six_stage_stock_budget
+#print axioms Sude.fw_first_affine_six_stage_stock_budget
+#check Sude.fw_first_affine_phase_from_118
+#print axioms Sude.fw_first_affine_phase_from_118
+
+#check Sude.fw_base_wheel_cutoff_discrepancy
+#print axioms Sude.fw_base_wheel_cutoff_discrepancy
+#check Sude.fw_strong_radius_118
+#print axioms Sude.fw_strong_radius_118
+#check Sude.fw_certified_118_radius_at_least_7118
+#print axioms Sude.fw_certified_118_radius_at_least_7118
+
+#check Sude.fw_wheel_cutoff_attained
+#print axioms Sude.fw_wheel_cutoff_attained
+#check Sude.fw_subwheel_cutoff_le
+#print axioms Sude.fw_subwheel_cutoff_le
+
+#check Sude.fw_wheel15_cutoff_eq
+#print axioms Sude.fw_wheel15_cutoff_eq
+#check Sude.fw_hybrid_radius_118
+#print axioms Sude.fw_hybrid_radius_118
+#check Sude.fw_certified_118_radius_at_least_10116
+#print axioms Sude.fw_certified_118_radius_at_least_10116
+
+#check Sude.fw_radius105_118
+#print axioms Sude.fw_radius105_118
+#check Sude.fw_certified_118_radius_at_least_11648
+#print axioms Sude.fw_certified_118_radius_at_least_11648
+#check Sude.fw_second_affine_phase_after_first
+#print axioms Sude.fw_second_affine_phase_after_first
+
+#check Sude.fw_third_affine_phase_after_second
+#print axioms Sude.fw_third_affine_phase_after_second
+
+#check Sude.fw_fifth_entry_radius
+#print axioms Sude.fw_fifth_entry_radius
+#check Sude.fw_fifth_affine_phase_after_fourth
+#print axioms Sude.fw_fifth_affine_phase_after_fourth
+
+#check Sude.fw_sixth_entry_radius
+#print axioms Sude.fw_sixth_entry_radius
+#check Sude.fw_sixth_affine_phase_after_fifth
+#print axioms Sude.fw_sixth_affine_phase_after_fifth
+
+#check Sude.fw_seventh_entry_radius
+#print axioms Sude.fw_seventh_entry_radius
+#check Sude.fw_seventh_affine_phase_after_sixth
+#print axioms Sude.fw_seventh_affine_phase_after_sixth
+
+#check Sude.fw_eighth_entry_radius
+#print axioms Sude.fw_eighth_entry_radius
+#check Sude.fw_eighth_affine_phase_after_seventh
+#print axioms Sude.fw_eighth_affine_phase_after_seventh
+
+#check Sude.fw_first_band_stop_or_228
+#print axioms Sude.fw_first_band_stop_or_228
+
+#check Sude.fw_varying_mass_one_step
+#print axioms Sude.fw_varying_mass_one_step
+#check Sude.fw_first_band_varying_stock_mass
+#print axioms Sude.fw_first_band_varying_stock_mass
+
+#check Sude.fw_mixed_affine_varying_global_iterate
+#print axioms Sude.fw_mixed_affine_varying_global_iterate
+#check Sude.fw_first_band_varying_affine_iterate
+#print axioms Sude.fw_first_band_varying_affine_iterate
+
+#check Sude.fw_affine_uniform_stock_common_gap
+#print axioms Sude.fw_affine_uniform_stock_common_gap
+#check Sude.fw_first_band_full_stock_threshold_add_three
+#print axioms Sude.fw_first_band_full_stock_threshold_add_three
+#check Sude.fw_first_band_full_stock_gap_above_source_increment
+#print axioms Sude.fw_first_band_full_stock_gap_above_source_increment
+
+#check Sude.fw_first_band_full_stock_witness_common_gap
+#print axioms Sude.fw_first_band_full_stock_witness_common_gap
+#check Sude.fw_first_band_full_stock_witness_gap_above_increment
+#print axioms Sude.fw_first_band_full_stock_witness_gap_above_increment
+
+#check Sude.fw_first_band_full_stock_witness_gap_above_increment_of_source_nonneg
+#print axioms Sude.fw_first_band_full_stock_witness_gap_above_increment_of_source_nonneg
+
+#check Sude.fw_full_stock_append_stage
+#print axioms Sude.fw_full_stock_append_stage
+
+#check Sude.fw_full_stock_iterate_bounded
+#print axioms Sude.fw_full_stock_iterate_bounded
+
+#check Sude.fw_full_stock_schedule_lower_iter_of_bounds
+#print axioms Sude.fw_full_stock_schedule_lower_iter_of_bounds
+#check Sude.fw_indexed_affine_shift_of_radius
+#print axioms Sude.fw_indexed_affine_shift_of_radius
+
+#check Sude.fw_enhanced_lower_increment_le_gap
+#print axioms Sude.fw_enhanced_lower_increment_le_gap
+#check Sude.fw_enhanced_110_stage_endpoint
+#print axioms Sude.fw_enhanced_110_stage_endpoint
+#check Sude.fw_enhanced_110_stage_bt_radius
+#print axioms Sude.fw_enhanced_110_stage_bt_radius
+
+#check Sude.fw_enhanced_window_and_eight_supplied_phase_bounds
+#print axioms Sude.fw_enhanced_window_and_eight_supplied_phase_bounds
+#check Sude.fw_enhanced_phase_bounds_pay_shifts
+#print axioms Sude.fw_enhanced_phase_bounds_pay_shifts
+
+#check Sude.fw_enhanced_single_phase
+#print axioms Sude.fw_enhanced_single_phase
+
+#check Sude.fw_enhanced_first_four_stop_or_complete
+#print axioms Sude.fw_enhanced_first_four_stop_or_complete
+#check Sude.fw_enhanced_last_four_stop_or_complete
+#print axioms Sude.fw_enhanced_last_four_stop_or_complete
+
+#check Sude.fw_enhanced_eight_stop_or_complete
+#print axioms Sude.fw_enhanced_eight_stop_or_complete
+
+#check Sude.fw_enhanced_from_seed_stop_or_complete
+#print axioms Sude.fw_enhanced_from_seed_stop_or_complete
+
+#check Sude.fw_bt_exp_16_upper
+#print axioms Sude.fw_bt_exp_16_upper
+#check Sude.fw_bt16_fixed_mass_gate
+#print axioms Sude.fw_bt16_fixed_mass_gate
+#check Sude.fw_bt16_fixed_mass_capped_gate
+#print axioms Sude.fw_bt16_fixed_mass_capped_gate
+
+#check Sude.fw_bt16_increment_le_gap
+#print axioms Sude.fw_bt16_increment_le_gap
+#check Sude.fw_bt16_lower_iter_10
+#print axioms Sude.fw_bt16_lower_iter_10
+#check Sude.fw_bt16_lower_iter_above_target
+#print axioms Sude.fw_bt16_lower_iter_above_target
+
+#check Sude.fw_bt16_first_band_width_and_budget
+#print axioms Sude.fw_bt16_first_band_width_and_budget
+#check Sude.fw_enhanced_from_seed_stop_or_bt16_numeric_entry
+#print axioms Sude.fw_enhanced_from_seed_stop_or_bt16_numeric_entry
+#check Sude.BTGrowingTrace.append_fw_bt16_first_band
+#print axioms Sude.BTGrowingTrace.append_fw_bt16_first_band
+#check Sude.fw_enhanced_from_seed_stop_or_first_bt16
+#print axioms Sude.fw_enhanced_from_seed_stop_or_first_bt16
+#check Sude.fw_bt16_chosen_iterate_first_band
+#print axioms Sude.fw_bt16_chosen_iterate_first_band
+#check Sude.fw_bt16_varying_width_trace_fixed
+#print axioms Sude.fw_bt16_varying_width_trace_fixed
+#check Sude.fw_enhanced_from_seed_stop_or_ten_bt16
+#print axioms Sude.fw_enhanced_from_seed_stop_or_ten_bt16
+#check Sude.fw_bt16_ten_width_stages_cross
+#print axioms Sude.fw_bt16_ten_width_stages_cross
+#check Sude.fw_enhanced_from_seed_bt16_crossing
+#print axioms Sude.fw_enhanced_from_seed_bt16_crossing
+
+#check Sude.fw_mixed_affine_actual_iterate_bounded
+#print axioms Sude.fw_mixed_affine_actual_iterate_bounded
+#check Sude.fw_first_window_schedule_retains_surplus
+#print axioms Sude.fw_first_window_schedule_retains_surplus
+#check Sude.fw_affine_schedule_retains_surplus
+#print axioms Sude.fw_affine_schedule_retains_surplus
+
+#check Sude.fw_six_first_affine_stages_radius_9710
+#print axioms Sude.fw_six_first_affine_stages_radius_9710
+#check Sude.fw_fourth_affine_phase_after_third
+#print axioms Sude.fw_fourth_affine_phase_after_third
+
+#check Sude.btGrowingOffsetCells_geometry
+#print axioms Sude.btGrowingOffsetCells_geometry
+#check Sude.BTGrowingTrace.install_offset_roles
+#print axioms Sude.BTGrowingTrace.install_offset_roles
+
+#check Sude.fw_growth_layer_hall_bound
+#print axioms Sude.fw_growth_layer_hall_bound
+#check Sude.fw_install_growth_after_actual_early
+#print axioms Sude.fw_install_growth_after_actual_early
+
+#check Sude.fwBridgeSeedWideGrowthChoice_growth
+#print axioms Sude.fwBridgeSeedWideGrowthChoice_growth
+#check Sude.bmor_fw_early_and_growth_physical
+#print axioms Sude.bmor_fw_early_and_growth_physical
+
+#check Sude.fw_physical_edge_bridge_witness_grid
+#print axioms Sude.fw_physical_edge_bridge_witness_grid
+#check Sude.fw_wide_edge_physical_gap
+#print axioms Sude.fw_wide_edge_physical_gap
+
+#check Sude.fw_preserved_wide_edge_physical_gap
+#print axioms Sude.fw_preserved_wide_edge_physical_gap
+
+#check Sude.bmor_fw_early_growth_edge_bridge
+#print axioms Sude.bmor_fw_early_growth_edge_bridge
+
+#check Sude.bmor_fw_first_band_affine_physical
+#print axioms Sude.bmor_fw_first_band_affine_physical
+#check Sude.bmor_fw_enhanced_first_band_physical
+#print axioms Sude.bmor_fw_enhanced_first_band_physical
+#check Sude.bmor_fw_enhanced_crossing_physical
+#print axioms Sude.bmor_fw_enhanced_crossing_physical
+#check Sude.fw_physical_wide_edge_grid
+#print axioms Sude.fw_physical_wide_edge_grid
+#check Sude.fw_physical_bridge_wide_edge_grid
+#print axioms Sude.fw_physical_bridge_wide_edge_grid
+#check Sude.bmor_fw_enhanced_crossing_wide_physical
+#print axioms Sude.bmor_fw_enhanced_crossing_wide_physical
+#check Sude.fw_joint_layer_packing
+#print axioms Sude.fw_joint_layer_packing
+#check Sude.bmor_fw_enhanced_crossing_joint_switches
+#print axioms Sude.bmor_fw_enhanced_crossing_joint_switches
+#check Sude.fwSeedJointPairIndex_injective
+#print axioms Sude.fwSeedJointPairIndex_injective
+#check Sude.fw_seed_joint_row_gap
+#print axioms Sude.fw_seed_joint_row_gap
+#check Sude.fw_seed_joint_column_gap
+#print axioms Sude.fw_seed_joint_column_gap
+#check Sude.fwGrowthJointPairIndex_injective
+#print axioms Sude.fwGrowthJointPairIndex_injective
+#check Sude.fw_growth_joint_trace_gap
+#print axioms Sude.fw_growth_joint_trace_gap
+#check Sude.fwWideJointPairIndex_injective
+#print axioms Sude.fwWideJointPairIndex_injective
+#check Sude.fw_wide_joint_selected_gap
+#print axioms Sude.fw_wide_joint_selected_gap
+#check Sude.fw_joint_row_column_grid_transport
+#print axioms Sude.fw_joint_row_column_grid_transport
+#check Sude.fwJointActualGridPairIndex_injective
+#print axioms Sude.fwJointActualGridPairIndex_injective
+#check Sude.fw_joint_supported_gap_eq
+#print axioms Sude.fw_joint_supported_gap_eq
+#check Sude.fw_reconcile_physical_wide_edge_grids
+#print axioms Sude.fw_reconcile_physical_wide_edge_grids
+#check Sude.fw_retained_stage_each_line_cancellation_envelope
+#print axioms Sude.fw_retained_stage_each_line_cancellation_envelope
+#check Sude.full_reservation_cancellation_envelope
+#print axioms Sude.full_reservation_cancellation_envelope
+#check Sude.fw_spare_global_deviation_of_theta
+#print axioms Sude.fw_spare_global_deviation_of_theta
+#check Sude.fw_retained_stage_each_line_signed_cancellation
+#print axioms Sude.fw_retained_stage_each_line_signed_cancellation
+#check Sude.fw_actual_stage_each_line_signed_cancellation
+#print axioms Sude.fw_actual_stage_each_line_signed_cancellation
+#check Sude.fw_four_family_stage_mean_sum_bound_of_theta
+#print axioms Sude.fw_four_family_stage_mean_sum_bound_of_theta
+#check Sude.fw_bridge_wide_stage_means_bound_of_theta
+#print axioms Sude.fw_bridge_wide_stage_means_bound_of_theta
+#check Sude.fw_wide_physical_pair_midpoint_bound_of_theta
+#print axioms Sude.fw_wide_physical_pair_midpoint_bound_of_theta
+#check Sude.fw_bridge_physical_pair_midpoint_bound_of_theta
+#print axioms Sude.fw_bridge_physical_pair_midpoint_bound_of_theta
+#check Sude.fw_bridge_selected_pair_entry_oriented
+#print axioms Sude.fw_bridge_selected_pair_entry_oriented
+#check Sude.fw_wide_pair_entry_of_placement_four_corners
+#print axioms Sude.fw_wide_pair_entry_of_placement_four_corners
+#check Sude.fw_first_band_physical_cancellation_gate
+#print axioms Sude.fw_first_band_physical_cancellation_gate
+#check Sude.fw_scalar_all_stages_first_band_gate
+#print axioms Sude.fw_scalar_all_stages_first_band_gate
+#check Sude.fw_scalar_endpoint_first_band_gate
+#print axioms Sude.fw_scalar_endpoint_first_band_gate
+#check Sude.fw_scalar_envelope_monotone_in_P
+#print axioms Sude.fw_scalar_envelope_monotone_in_P
+#check Sude.fw_four_family_each_line_cancellation_envelope_of_theta
+#print axioms Sude.fw_four_family_each_line_cancellation_envelope_of_theta
+#check Sude.fw_four_family_each_line_signed_cancellation
+#print axioms Sude.fw_four_family_each_line_signed_cancellation
+#check Sude.fw_four_family_stage_totals
+#print axioms Sude.fw_four_family_stage_totals
+#check Sude.fw_four_family_pair_cells_injective
+#print axioms Sude.fw_four_family_pair_cells_injective
+#check Sude.fw_four_family_pair_cells_cover_roles
+#print axioms Sude.fw_four_family_pair_cells_cover_roles
+#check Sude.fw_bridge_physical_pair_cells_image
+#print axioms Sude.fw_bridge_physical_pair_cells_image
+#check Sude.fw_wide_physical_pair_cells_image
+#print axioms Sude.fw_wide_physical_pair_cells_image
+#check Sude.fw_all_stage_remaining_role_card
+#print axioms Sude.fw_all_stage_remaining_role_card
+#check Sude.fw_combined_physical_stage_family
+#print axioms Sude.fw_combined_physical_stage_family
+#check Sude.fw_seed_growth_physical_pair_images_disjoint
+#print axioms Sude.fw_seed_growth_physical_pair_images_disjoint
+#check Sude.combined_physical_stage_family
+#print axioms Sude.combined_physical_stage_family
+#check Sude.bt_growing_physical_stage_totals
+#print axioms Sude.bt_growing_physical_stage_totals
+#check Sude.fw_geometry_each_line_signed_cancellation_of_nonempty
+#print axioms Sude.fw_geometry_each_line_signed_cancellation_of_nonempty
+#check Sude.fw_full_reservation_actual_unused_positive
+#print axioms Sude.fw_full_reservation_actual_unused_positive
+#check Sude.twoNetworks_centered_invoice_preserves_full_unused_pool
+#print axioms Sude.twoNetworks_centered_invoice_preserves_full_unused_pool
+#check Sude.fw_geometry_each_line_signed_cancellation
+#print axioms Sude.fw_geometry_each_line_signed_cancellation
+#check Sude.fw_full_reservation_line_incidence
+#print axioms Sude.fw_full_reservation_line_incidence
+#check Sude.fw_geometry_stages_signed_cancellation
+#print axioms Sude.fw_geometry_stages_signed_cancellation
+#check Sude.fw_full_reserved_stages_signed_cancellation
+#print axioms Sude.fw_full_reserved_stages_signed_cancellation
+#check Sude.fw_packed_rectangle_centered_bound_of_theta
+#print axioms Sude.fw_packed_rectangle_centered_bound_of_theta
+#check Sude.packed_rectangle_centered_row_column_bound
+#print axioms Sude.packed_rectangle_centered_row_column_bound
+#check Sude.fw_spare_rectangle_line_separation
+#print axioms Sude.fw_spare_rectangle_line_separation
+#check Sude.actualUnusedPool_line_ideal_difference
+#print axioms Sude.actualUnusedPool_line_ideal_difference
+#check Sude.actualUnusedPool_full_mean_eq_roles_mean_sub_extra
+#print axioms Sude.actualUnusedPool_full_mean_eq_roles_mean_sub_extra
+#check Sude.fw_actualUnusedPool_spare_role_card
+#print axioms Sude.fw_actualUnusedPool_spare_role_card
+#check Sude.actualUnusedPool_full_value_image_eq_screened_sdiff
+#print axioms Sude.actualUnusedPool_full_value_image_eq_screened_sdiff
+#check Sude.actualUnusedPool_value_image_screened_stock_of_role_image_eq
+#print axioms Sude.actualUnusedPool_value_image_screened_stock_of_role_image_eq
+#check Sude.actualUnusedPool_value_image_eq_screened_stock_indexed
+#print axioms Sude.actualUnusedPool_value_image_eq_screened_stock_indexed
+#check Sude.fw_reallocated_active_role_fresh_midpoint_invoice
+#print axioms Sude.fw_reallocated_active_role_fresh_midpoint_invoice
+#check Sude.BTGrowingTrace.unscreened_complement_decomposition
+#print axioms Sude.BTGrowingTrace.unscreened_complement_decomposition
+#check Sude.fw_actual_explicit_wide_active_role_midpoint_invoice
+#print axioms Sude.fw_actual_explicit_wide_active_role_midpoint_invoice
+#check Sude.fw_actual_explicit_wide_active_role_invoice
+#print axioms Sude.fw_actual_explicit_wide_active_role_invoice
+#check Sude.twoNetworks_centered_invoice_preserves_active_values
+#print axioms Sude.twoNetworks_centered_invoice_preserves_active_values
+#check Sude.LayerPacking.packed_layers_extend_outside_active
+#print axioms Sude.LayerPacking.packed_layers_extend_outside_active
+#check Sude.finite_support_value_image_eq
+#print axioms Sude.finite_support_value_image_eq
+#check Sude.fw_seed_reallocation_preserves_role_value_image
+#print axioms Sude.fw_seed_reallocation_preserves_role_value_image
+#check Sude.fw_grown_role_values_eq_early_and_growth
+#print axioms Sude.fw_grown_role_values_eq_early_and_growth
+#check Sude.fw_seed_role_values_eq_retained
+#print axioms Sude.fw_seed_role_values_eq_retained
+#check Sude.fw_role_values_eq_early_and_growth
+#print axioms Sude.fw_role_values_eq_early_and_growth
+#check Sude.bt_growing_role_values_eq_footprints
+#print axioms Sude.bt_growing_role_values_eq_footprints
+#check Sude.fw_wide_role_values_eq_batch
+#print axioms Sude.fw_wide_role_values_eq_batch
+#check Sude.fw_bridge_role_values_eq_reservation
+#print axioms Sude.fw_bridge_role_values_eq_reservation
+#check Sude.BTGrowingTrace.poolValues_image_eq_footprints
+#print axioms Sude.BTGrowingTrace.poolValues_image_eq_footprints
+#check Sude.double_pair_sequence_endpoint_image
+#print axioms Sude.double_pair_sequence_endpoint_image
+#check Sude.fw_role_cell_occupancy
+#print axioms Sude.fw_role_cell_occupancy
+#check Sude.fw_role_cells_eq_active_support
+#print axioms Sude.fw_role_cells_eq_active_support
+#check Sude.fw_full_reservation_occupancy
+#print axioms Sude.fw_full_reservation_occupancy
+#check Sude.fw_joint_packed_active_occupancy
+#print axioms Sude.fw_joint_packed_active_occupancy
+#check Sude.fw_joint_actual_grid_row_column_graph
+#print axioms Sude.fw_joint_actual_grid_row_column_graph
+#check Sude.fw_joint_actual_supported_cells_separate
+#print axioms Sude.fw_joint_actual_supported_cells_separate
+#check Sude.fw_actual_edge_joint_grids
+#print axioms Sude.fw_actual_edge_joint_grids
+#check Sude.bmor_fw_enhanced_crossing_actual_grids
+#print axioms Sude.bmor_fw_enhanced_crossing_actual_grids
+#check Sude.centeredNetwork_of_supported_grids
+#print axioms Sude.centeredNetwork_of_supported_grids
+#check Sude.fw_bridge_wide_uniform_integer_capacity
+#print axioms Sude.fw_bridge_wide_uniform_integer_capacity
+#check Sude.fw_first_band_integer_capacity_large
+#print axioms Sude.fw_first_band_integer_capacity_large
+#check Sude.fw_actual_joint_centered_networks
+#print axioms Sude.fw_actual_joint_centered_networks
+#check Sude.fw_centered_networks_realize_supplied_flows
+#print axioms Sude.fw_centered_networks_realize_supplied_flows
+#check Sude.twoNetworks_realize_bounded_integer_flows_with_invoice
+#print axioms Sude.twoNetworks_realize_bounded_integer_flows_with_invoice
+#check Sude.fw_centered_networks_realize_supplied_flows_with_invoice
+#print axioms Sude.fw_centered_networks_realize_supplied_flows_with_invoice
+#check Sude.fw_actual_grids_realize_supplied_flows_with_invoice
+#print axioms Sude.fw_actual_grids_realize_supplied_flows_with_invoice
+#check Sude.twoNetworks_centered_transfers_with_invoice
+#print axioms Sude.twoNetworks_centered_transfers_with_invoice
+#check Sude.fw_actual_grids_realize_supplied_flows
+#print axioms Sude.fw_actual_grids_realize_supplied_flows
+#check Sude.fw_permutation_integral_flow_of_demand_box
+#print axioms Sude.fw_permutation_integral_flow_of_demand_box
+#check Sude.fw_supplied_flows_realize_demand_box
+#print axioms Sude.fw_supplied_flows_realize_demand_box
+#check Sude.fw_reference_prime_targets_of_demands
+#print axioms Sude.fw_reference_prime_targets_of_demands
+#check Sude.fw_demand_box_rounding
+#print axioms Sude.fw_demand_box_rounding
+#check Sude.fw_first_band_demand_rounding_threshold
+#print axioms Sude.fw_first_band_demand_rounding_threshold
+#check Sude.fw_reference_target_bounds_of_fw18
+#print axioms Sude.fw_reference_target_bounds_of_fw18
+#check Sude.t75_pool_total_mod_two
+#print axioms Sude.t75_pool_total_mod_two
+#check Sude.t75_line_mean_eq_order_mul_pool_mean
+#print axioms Sude.t75_line_mean_eq_order_mul_pool_mean
+#check Sude.completeStepGrid_finite_relabel
+#print axioms Sude.completeStepGrid_finite_relabel
+#check Sude.t75_favorable_two_unit_residues
+#print axioms Sude.t75_favorable_two_unit_residues
+#check Sude.t75_free_unit_residues
+#print axioms Sude.t75_free_unit_residues
+#check Sude.t75_extend_fixed_unit_residues
+#print axioms Sude.t75_extend_fixed_unit_residues
+#check Sude.t75_step_grid_exact_residual
+#print axioms Sude.t75_step_grid_exact_residual
+#check Sude.t75_greedy_brackets
+#print axioms Sude.t75_greedy_brackets
+#check Sude.reallocate_existing_stage_double_blocks
+#print axioms Sude.reallocate_existing_stage_double_blocks
+#check Sude.fw_stage_varying_bridge_batches_grow_grid
+#print axioms Sude.fw_stage_varying_bridge_batches_grow_grid
+#check Sude.fw_permuted_bridge_batches_grow_grid
+#print axioms Sude.fw_permuted_bridge_batches_grow_grid
+#check Sude.fair_block_swap_conditional_mean
+#print axioms Sude.fair_block_swap_conditional_mean
+#check Sude.fair_block_swap_conditional_subgaussian
+#print axioms Sude.fair_block_swap_conditional_subgaussian
+#check Sude.finite_independent_binary_exp_moment
+#print axioms Sude.finite_independent_binary_exp_moment
+#check Sude.finite_outer_binary_exp_moment
+#print axioms Sude.finite_outer_binary_exp_moment
+#check Sude.fw_grouped_controller_slot
+#print axioms Sude.fw_grouped_controller_slot
+#check Sude.fw_bridge_double_cells_geometry
+#print axioms Sude.fw_bridge_double_cells_geometry
+#check Sude.fw_wide_double_cells_geometry
+#print axioms Sude.fw_wide_double_cells_geometry
+#check Sude.finite_uniform_integral_eq_average
+#print axioms Sude.finite_uniform_integral_eq_average
+#check Sude.stage_permutation_measure_eq_uniform
+#print axioms Sude.stage_permutation_measure_eq_uniform
+#check Sude.stage_permutation_integral_eq_average
+#print axioms Sude.stage_permutation_integral_eq_average
+#check Sude.stage_permutation_mgf_eq_average
+#print axioms Sude.stage_permutation_mgf_eq_average
+#check Sude.fw_reallocate_two_double_families
+#print axioms Sude.fw_reallocate_two_double_families
+#check Sude.fw_reallocate_bridge_wide_double_blocks
+#print axioms Sude.fw_reallocate_bridge_wide_double_blocks
+#check Sude.stage_fair_swap_exp_moment
+#print axioms Sude.stage_fair_swap_exp_moment
+#check Sude.stage_weighted_fair_swap_exp_moment
+#print axioms Sude.stage_weighted_fair_swap_exp_moment
+#check Sude.finite_uniform_simultaneous_exists
+#print axioms Sude.finite_uniform_simultaneous_exists
+#check Sude.stage_swap_simultaneous_exists
+#print axioms Sude.stage_swap_simultaneous_exists
+#check Sude.stage_fair_swap_simultaneous_exists
+#print axioms Sude.stage_fair_swap_simultaneous_exists
+#check Sude.fw_bridge_physical_double_common_gap
+#print axioms Sude.fw_bridge_physical_double_common_gap
+#check Sude.fw_wide_physical_selected_double_gap
+#print axioms Sude.fw_wide_physical_selected_double_gap
+#check Sude.double_block_weighted_midpoint_eq_swap
+#print axioms Sude.double_block_weighted_midpoint_eq_swap
+#check Sude.double_block_midpoint_score_decomposition
+#print axioms Sude.double_block_midpoint_score_decomposition
+#check Sude.double_block_physical_line_score_decomposition
+#print axioms Sude.double_block_physical_line_score_decomposition
+#check Sude.mixed_moment_log_failure_budget
+#print axioms Sude.mixed_moment_log_failure_budget
+#check Sude.double_block_sample_score_decomposition
+#print axioms Sude.double_block_sample_score_decomposition
+#check Sude.double_block_signed_swap
+#print axioms Sude.double_block_signed_swap
+#check Sude.double_block_simultaneous_sample_exists
+#print axioms Sude.double_block_simultaneous_sample_exists
+#check Sude.double_block_signed_moment_le_proxy
+#print axioms Sude.double_block_signed_moment_le_proxy
+#check Sude.double_block_log_simultaneous_sample_exists
+#print axioms Sude.double_block_log_simultaneous_sample_exists
+#check Sude.double_block_actual_centered_score_eq_sample
+#print axioms Sude.double_block_actual_centered_score_eq_sample
+#check Sude.double_block_two_family_protected_log_reallocation
+#print axioms Sude.double_block_two_family_protected_log_reallocation
+#check Sude.fw_double_block_family_separation
+#print axioms Sude.fw_double_block_family_separation
+#check Sude.fw_protected_double_block_log_reallocation
+#print axioms Sude.fw_protected_double_block_log_reallocation
+#check Sude.double_block_combined_proxy_eq_pair_invoice
+#print axioms Sude.double_block_combined_proxy_eq_pair_invoice
+#check Sude.double_block_proxy_le_of_pair_invoice
+#print axioms Sude.double_block_proxy_le_of_pair_invoice
+#check Sude.double_block_proxy_uniform_pair_invoice
+#print axioms Sude.double_block_proxy_uniform_pair_invoice
+#check Sude.fw_bridge_double_block_source_interval
+#print axioms Sude.fw_bridge_double_block_source_interval
+#check Sude.fw_wide_double_block_source_interval
+#print axioms Sude.fw_wide_double_block_source_interval
+#check Sude.fwPrefixToControllerPair_diagonal_fixed
+#print axioms Sude.fwPrefixToControllerPair_diagonal_fixed
+#check Sude.fwPrefixToControllerPair_ordinary_val
+#print axioms Sude.fwPrefixToControllerPair_ordinary_val
+#check Sude.fw_bridge_reindexed_diagonal_cell
+#print axioms Sude.fw_bridge_reindexed_diagonal_cell
+#check Sude.fw_bridge_reindexed_ordinary_cell
+#print axioms Sude.fw_bridge_reindexed_ordinary_cell
+#check Sude.fw_wide_reindexed_diagonal_cell
+#print axioms Sude.fw_wide_reindexed_diagonal_cell
+#check Sude.fw_wide_reindexed_ordinary_cell
+#print axioms Sude.fw_wide_reindexed_ordinary_cell
+#check Sude.fw_controller_weighted_squared_invoice
+#print axioms Sude.fw_controller_weighted_squared_invoice
+#check Sude.fw_protected_double_block_mass_reallocation
+#print axioms Sude.fw_protected_double_block_mass_reallocation
+#check Sude.fw_grouped_stage_squared_pair_mass
+#print axioms Sude.fw_grouped_stage_squared_pair_mass
+#check Sude.fw_grouped_prefix_stage_squared_pair_mass
+#print axioms Sude.fw_grouped_prefix_stage_squared_pair_mass
+#check Sude.fw_grouped_prefix_weighted_squared_pair_mass
+#print axioms Sude.fw_grouped_prefix_weighted_squared_pair_mass
+#check Sude.fwWideOffsetPairSlot_injective
+#print axioms Sude.fwWideOffsetPairSlot_injective
+#check Sude.fw_wide_reindexed_rectangle_pair_weight
+#print axioms Sude.fw_wide_reindexed_rectangle_pair_weight
+#check Sude.fw_wide_offset_row_pair_invoice
+#print axioms Sude.fw_wide_offset_row_pair_invoice
+#check Sude.fw_wide_offset_column_pair_invoice
+#print axioms Sude.fw_wide_offset_column_pair_invoice
+#check Sude.fw_wide_reindexed_rectangle_row_invoice
+#print axioms Sude.fw_wide_reindexed_rectangle_row_invoice
+#check Sude.fw_wide_reindexed_rectangle_column_invoice
+#print axioms Sude.fw_wide_reindexed_rectangle_column_invoice
+#check Sude.fw_bridge_reindexed_rectangle_pair_weight
+#print axioms Sude.fw_bridge_reindexed_rectangle_pair_weight
+#check Sude.fw_bridge_reindexed_rectangle_row_invoice
+#print axioms Sude.fw_bridge_reindexed_rectangle_row_invoice
+#check Sude.fw_bridge_reindexed_rectangle_column_invoice
+#print axioms Sude.fw_bridge_reindexed_rectangle_column_invoice
+#check Sude.fw_bridge_reindexed_ordinary_row_stage_invoice
+#print axioms Sude.fw_bridge_reindexed_ordinary_row_stage_invoice
+#check Sude.fw_bridge_reindexed_ordinary_column_stage_invoice
+#print axioms Sude.fw_bridge_reindexed_ordinary_column_stage_invoice
+#check Sude.fw_wide_reindexed_ordinary_row_stage_invoice
+#print axioms Sude.fw_wide_reindexed_ordinary_row_stage_invoice
+#check Sude.fw_wide_reindexed_ordinary_column_stage_invoice
+#print axioms Sude.fw_wide_reindexed_ordinary_column_stage_invoice
+#check Sude.packed_layer_member_derange
+#print axioms Sude.packed_layer_member_derange
+#check Sude.packed_selected_stage_derange
+#print axioms Sude.packed_selected_stage_derange
+#check Sude.fw_joint_bridge_wide_stage_derangements
+#print axioms Sude.fw_joint_bridge_wide_stage_derangements
+#check Sude.fw_bridge_ordinary_row_stage_eq_eighteen
+#print axioms Sude.fw_bridge_ordinary_row_stage_eq_eighteen
+#check Sude.fw_bridge_ordinary_column_stage_eq_eighteen
+#print axioms Sude.fw_bridge_ordinary_column_stage_eq_eighteen
+#check Sude.fw_wide_ordinary_row_stage_eq_eighteen
+#print axioms Sude.fw_wide_ordinary_row_stage_eq_eighteen
+#check Sude.fw_wide_ordinary_column_stage_eq_eighteen
+#print axioms Sude.fw_wide_ordinary_column_stage_eq_eighteen
+#check Sude.fw_joint_bridge_wide_ordinary_stage_eighteen
+#print axioms Sude.fw_joint_bridge_wide_ordinary_stage_eighteen
+#check Sude.fw_grouped_stage_mass_split
+#print axioms Sude.fw_grouped_stage_mass_split
+#check Sude.fw_joint_bridge_wide_grouped_row_column_mass
+#print axioms Sude.fw_joint_bridge_wide_grouped_row_column_mass
+#check Sude.fw_labelled_balanced_diagonal_invoice
+#print axioms Sude.fw_labelled_balanced_diagonal_invoice
+#check Sude.fw_bridge_physical_balanced_diagonal_invoice
+#print axioms Sude.fw_bridge_physical_balanced_diagonal_invoice
+#check Sude.fw_wide_physical_balanced_diagonal_invoice
+#print axioms Sude.fw_wide_physical_balanced_diagonal_invoice
+#check Sude.fw_joint_all_line_grouped_mass_of_diagonals
+#print axioms Sude.fw_joint_all_line_grouped_mass_of_diagonals
+#check Sude.fw_all_line_protected_double_block_reallocation
+#print axioms Sude.fw_all_line_protected_double_block_reallocation
+#check Sude.fw_bridge_ordinary_cell_off_diagonals
+#print axioms Sude.fw_bridge_ordinary_cell_off_diagonals
+#check Sude.fw_wide_ordinary_cell_off_diagonals
+#print axioms Sude.fw_wide_ordinary_cell_off_diagonals
+#check Sude.fw_bridge_ordinary_diagonal_weight_zero
+#print axioms Sude.fw_bridge_ordinary_diagonal_weight_zero
+#check Sude.fw_wide_ordinary_diagonal_weight_zero
+#print axioms Sude.fw_wide_ordinary_diagonal_weight_zero
+#check Sude.fw_double_block_scalar_invoices_pos
+#print axioms Sude.fw_double_block_scalar_invoices_pos
+#check Sude.fw_double_block_scalar_invoice_equalities
+#print axioms Sude.fw_double_block_scalar_invoice_equalities
+#check Sude.fw_bridge_midpoint_invoice_threshold
+#print axioms Sude.fw_bridge_midpoint_invoice_threshold
+#check Sude.fw_wide_midpoint_invoice_threshold
+#print axioms Sude.fw_wide_midpoint_invoice_threshold
+#check Sude.fw_bridge_grouped_stage_diagonal_mass
+#print axioms Sude.fw_bridge_grouped_stage_diagonal_mass
+#check Sude.fw_wide_grouped_stage_diagonal_mass
+#print axioms Sude.fw_wide_grouped_stage_diagonal_mass
+#check Sude.fw_joint_bridge_wide_grouped_diagonal_mass
+#print axioms Sude.fw_joint_bridge_wide_grouped_diagonal_mass
+#check Sude.fw_all_line_scalar_double_block_reallocation
+#print axioms Sude.fw_all_line_scalar_double_block_reallocation
+#check Sude.fw_balanced_all_line_double_block_reallocation
+#print axioms Sude.fw_balanced_all_line_double_block_reallocation
+#check Sude.fw_growth_choice_retract_larger_reservation
+#print axioms Sude.fw_growth_choice_retract_larger_reservation
+#check Sude.fw_theta_witness_choice_retract_realized
+#print axioms Sude.fw_theta_witness_choice_retract_realized
+#check Sude.selected_cell_line_sum_preserved
+#print axioms Sude.selected_cell_line_sum_preserved
+#check Sude.seed_source_midpoint_concentration_preserved
+#print axioms Sude.seed_source_midpoint_concentration_preserved
+#check Sude.seed_pair_permutation_preserved
+#print axioms Sude.seed_pair_permutation_preserved
+#check Sude.fw_bridge_wide_placement_transfer
+#print axioms Sude.fw_bridge_wide_placement_transfer
+#check Sude.bt_offset_roles_fixed_of_pairs_fixed
+#print axioms Sude.bt_offset_roles_fixed_of_pairs_fixed
+#check Sude.BTGrowingTrace.offset_placement_of_pairs_fixed
+#print axioms Sude.BTGrowingTrace.offset_placement_of_pairs_fixed
+#check Sude.fw_bridge_double_ordinary_cell
+#print axioms Sude.fw_bridge_double_ordinary_cell
+#check Sude.fw_wide_double_ordinary_cell
+#print axioms Sude.fw_wide_double_ordinary_cell
+#check Sude.fw_permuted_bridge_ordinary_edge_gap
+#print axioms Sude.fw_permuted_bridge_ordinary_edge_gap
+#check Sude.fw_permuted_wide_ordinary_edge_gap
+#print axioms Sude.fw_permuted_wide_ordinary_edge_gap
+#check Sude.fw_matched_block_source_gap_bounds
+#print axioms Sude.fw_matched_block_source_gap_bounds
+#check Sude.fw_permuted_wide_source_gap_bounds
+#print axioms Sude.fw_permuted_wide_source_gap_bounds
+#check Sude.fw_permuted_wide_edge_gap_bounds
+#print axioms Sude.fw_permuted_wide_edge_gap_bounds
+#check Sude.fw_permuted_bridge_wide_source_grid
+#print axioms Sude.fw_permuted_bridge_wide_source_grid
+#check Sude.fw_permuted_bridge_joint_edge_gap
+#print axioms Sude.fw_permuted_bridge_joint_edge_gap
+#check Sude.fw_permuted_bridge_index_on_stage
+#print axioms Sude.fw_permuted_bridge_index_on_stage
+#check Sude.fw_permuted_wide_joint_edge_gap_bounds
+#print axioms Sude.fw_permuted_wide_joint_edge_gap_bounds
+#check Sude.fw_permuted_joint_supported_gap
+#print axioms Sude.fw_permuted_joint_supported_gap
+#check Sude.fw_permuted_joint_physical_grids
+#print axioms Sude.fw_permuted_joint_physical_grids
+#check Sude.fw_joint_grid_graph_coordinates_of_maps
+#print axioms Sude.fw_joint_grid_graph_coordinates_of_maps
+#check Sude.fw_permuted_bridge_wide_layers_oriented
+#print axioms Sude.fw_permuted_bridge_wide_layers_oriented
+#check Sude.fw_permuted_four_family_physical_gap_equations
+#print axioms Sude.fw_permuted_four_family_physical_gap_equations
+#check Sude.fw_joint_centered_networks_of_radii
+#print axioms Sude.fw_joint_centered_networks_of_radii
+#check Sude.fw_permuted_wide_gap_total_lower
+#print axioms Sude.fw_permuted_wide_gap_total_lower
+#check Sude.fw_permuted_radius_capacity
+#print axioms Sude.fw_permuted_radius_capacity
+#check Sude.fw_permuted_centered_networks
+#print axioms Sude.fw_permuted_centered_networks
+#check Sude.fw_permuted_centered_supplied_flows_with_invoice
+#print axioms Sude.fw_permuted_centered_supplied_flows_with_invoice
+#check Sude.fw_permuted_centered_networks_supplied_flows
+#print axioms Sude.fw_permuted_centered_networks_supplied_flows
+#check Sude.fw_permuted_joint_gap_totals
+#print axioms Sude.fw_permuted_joint_gap_totals
+#check Sude.fw_permuted_centered_active_reference
+#print axioms Sude.fw_permuted_centered_active_reference
+#check Sude.fw_permuted_invoice_physical_midpoint_bounds
+#print axioms Sude.fw_permuted_invoice_physical_midpoint_bounds
+#check Sude.fw_reallocated_initial_gap_total
+#print axioms Sude.fw_reallocated_initial_gap_total
+#check Sude.fw_permuted_active_trace_midpoint_reference
+#print axioms Sude.fw_permuted_active_trace_midpoint_reference
+#check Sude.fw_permuted_trace_networks_active_reference
+#print axioms Sude.fw_permuted_trace_networks_active_reference
+#check Sude.bridgeStageLayer_maps_of_endpoints
+#print axioms Sude.bridgeStageLayer_maps_of_endpoints
+#check Sude.fw_wide_graph_maps_of_physical_coordinates
+#print axioms Sude.fw_wide_graph_maps_of_physical_coordinates
+#check Sude.fw_role_support_for_trace_networks
+#print axioms Sude.fw_role_support_for_trace_networks
+#check Sude.fw_spare_rectangle_centered_row_column_bound
+#print axioms Sude.fw_spare_rectangle_centered_row_column_bound
+#check Sude.actual_unused_full_mean_shift_bound
+#print axioms Sude.actual_unused_full_mean_shift_bound
+#check Sude.actual_unused_keepout_coupled_line_identity
+#print axioms Sude.actual_unused_keepout_coupled_line_identity
+#check Sude.double_block_stage_midpoint_mean_preserved
+#print axioms Sude.double_block_stage_midpoint_mean_preserved
+#check Sude.double_block_bridge_wide_stage_means_preserved
+#print axioms Sude.double_block_bridge_wide_stage_means_preserved
+#check Sude.fw_grouped_stage_midpoint_mean
+#print axioms Sude.fw_grouped_stage_midpoint_mean
+#check Sude.fw_four_family_bridge_wide_grouped_means
+#print axioms Sude.fw_four_family_bridge_wide_grouped_means
+#check Sude.fw_four_family_bridge_wide_means_preserved
+#print axioms Sude.fw_four_family_bridge_wide_means_preserved
+#check Sude.fw_reallocated_bridge_wide_stage_means_bound_of_theta
+#print axioms Sude.fw_reallocated_bridge_wide_stage_means_bound_of_theta
+#check Sude.fw_reallocated_four_family_stage_mean_sum_bound_of_theta
+#print axioms Sude.fw_reallocated_four_family_stage_mean_sum_bound_of_theta
+#check Sude.fw_reallocated_four_family_cancellation_envelope_of_theta
+#print axioms Sude.fw_reallocated_four_family_cancellation_envelope_of_theta
+#check Sude.fw_first_band_reallocated_cancellation_gate
+#print axioms Sude.fw_first_band_reallocated_cancellation_gate
+#check Sude.physical_network_matched_variable_gap_delta_sum
+#print axioms Sude.physical_network_matched_variable_gap_delta_sum
+#check Sude.double_block_actual_selected_line_identity
+#print axioms Sude.double_block_actual_selected_line_identity
+#check Sude.double_block_selected_row_matched_cancellation
+#print axioms Sude.double_block_selected_row_matched_cancellation
+#check Sude.double_block_physical_midpoint_partition
+#print axioms Sude.double_block_physical_midpoint_partition
+#check Sude.fw_bridge_joint_grouped_injective_on_image
+#print axioms Sude.fw_bridge_joint_grouped_injective_on_image
+#check Sude.fw_wide_joint_grouped_injective_on_image
+#print axioms Sude.fw_wide_joint_grouped_injective_on_image
+#check Sude.fw_bridge_joint_image_subset_blocks
+#print axioms Sude.fw_bridge_joint_image_subset_blocks
+#check Sude.fw_wide_joint_image_subset_blocks
+#print axioms Sude.fw_wide_joint_image_subset_blocks
+#check Sude.fw_bridge_wide_joint_images_disjoint
+#print axioms Sude.fw_bridge_wide_joint_images_disjoint
+#check Sude.fw_bridge_joint_row_side_matching
+#print axioms Sude.fw_bridge_joint_row_side_matching
+#check Sude.fw_bridge_joint_column_side_matching
+#print axioms Sude.fw_bridge_joint_column_side_matching
+#check Sude.fw_wide_joint_row_side_matching
+#print axioms Sude.fw_wide_joint_row_side_matching
+#check Sude.fw_wide_joint_column_side_matching
+#print axioms Sude.fw_wide_joint_column_side_matching
+#check Sude.fw_wide_stage_count_pos_of_geometry
+#print axioms Sude.fw_wide_stage_count_pos_of_geometry
+#check Sude.fw_bridge_row_midpoint_partition
+#print axioms Sude.fw_bridge_row_midpoint_partition
+#check Sude.double_block_actual_centered_score_transpose
+#print axioms Sude.double_block_actual_centered_score_transpose
+#check Sude.physical_pair_gap_transpose
+#print axioms Sude.physical_pair_gap_transpose
+#check Sude.physical_column_complement_transpose
+#print axioms Sude.physical_column_complement_transpose
+#check Sude.fw_bridge_column_midpoint_partition
+#print axioms Sude.fw_bridge_column_midpoint_partition
+#check Sude.fw_wide_row_midpoint_partition
+#print axioms Sude.fw_wide_row_midpoint_partition
+#check Sude.fw_wide_column_midpoint_partition
+#print axioms Sude.fw_wide_column_midpoint_partition
+#check Sude.double_block_two_family_midpoint_partition
+#print axioms Sude.double_block_two_family_midpoint_partition
+#check Sude.fw_grouped_bridge_wide_geometry
+#print axioms Sude.fw_grouped_bridge_wide_geometry
+
+#check Sude.fw_bridge_wide_row_midpoint_partition
+#print axioms Sude.fw_bridge_wide_row_midpoint_partition
+
+#check Sude.physical_column_two_family_complement_transpose
+#print axioms Sude.physical_column_two_family_complement_transpose
+#check Sude.fw_bridge_wide_column_midpoint_partition
+#print axioms Sude.fw_bridge_wide_column_midpoint_partition
+
+#check Sude.layer_fixed_gap_transfer_sum_zero
+#print axioms Sude.layer_fixed_gap_transfer_sum_zero
+
+#check Sude.row_network_fixed_gap_layer_sum_zero
+#print axioms Sude.row_network_fixed_gap_layer_sum_zero
+
+#check Sude.row_network_fixed_gap_layers_sum_zero
+#print axioms Sude.row_network_fixed_gap_layers_sum_zero
+
+#check Sude.prefix_window_brackets_mean
+#print axioms Sude.prefix_window_brackets_mean
+
+#check Sude.t75_bracket_choices_window
+#print axioms Sude.t75_bracket_choices_window
+
+#check Sude.t75_conditional_indexed_prime_targets
+#print axioms Sude.t75_conditional_indexed_prime_targets
+
+#check Sude.fw_unmatched_grouped_sum_zero
+#print axioms Sude.fw_unmatched_grouped_sum_zero
+
+#check Sude.fw_bridge_unmatched_row_orientation_zero
+#print axioms Sude.fw_bridge_unmatched_row_orientation_zero
+
+#check Sude.fw_wide_unmatched_row_orientation_zero
+#print axioms Sude.fw_wide_unmatched_row_orientation_zero
+
+#check Sude.prefix_global_path_near
+#print axioms Sude.prefix_global_path_near
+
+#check Sude.prefix_global_window_select
+#print axioms Sude.prefix_global_window_select
+
+#check Sude.prefix_global_fixed_cardinality_select
+#print axioms Sude.prefix_global_fixed_cardinality_select
+
+#check Sude.fw_first_band_post_diagonal_load
+#print axioms Sude.fw_first_band_post_diagonal_load
+
+#check Sude.fw_post_diagonal_completion_geometry
+#print axioms Sude.fw_post_diagonal_completion_geometry
+
+#check Sude.fw_full_keepout_avoids_center
+#print axioms Sude.fw_full_keepout_avoids_center
+
+#check Sude.fw_joint_network_four_bands
+#print axioms Sude.fw_joint_network_four_bands
+
+#check Sude.fw_joint_network_residual_seed_growth
+#print axioms Sude.fw_joint_network_residual_seed_growth
+
+#check Sude.prefix_global_indexed_select
+#print axioms Sude.prefix_global_indexed_select
+
+#check Sude.prefix_global_finset_select
+#print axioms Sude.prefix_global_finset_select
+
+#check Sude.prefix_remaining_mean_eq
+#print axioms Sude.prefix_remaining_mean_eq
+
+#check Sude.prefix_second_selection_deviation
+#print axioms Sude.prefix_second_selection_deviation
+
+#check Sude.prefix_cumulative_selection_deviation
+#print axioms Sude.prefix_cumulative_selection_deviation
+
+#check Sude.prefix_three_selection_budget
+#print axioms Sude.prefix_three_selection_budget
+
+#check Sude.fw_bridge_unmatched_column_orientation_zero
+#print axioms Sude.fw_bridge_unmatched_column_orientation_zero
+
+#check Sude.fw_wide_unmatched_column_orientation_zero
+#print axioms Sude.fw_wide_unmatched_column_orientation_zero
+
+#check Sude.prefix_three_selection_budget_strict
+#print axioms Sude.prefix_three_selection_budget_strict
+
+#check Sude.fw_post_diagonal_balanced_completion
+#print axioms Sude.fw_post_diagonal_balanced_completion
+
+#check Sude.fw_seed_joint_row_network_gap
+#print axioms Sude.fw_seed_joint_row_network_gap
+
+#check Sude.fw_seed_joint_column_network_gap
+#print axioms Sude.fw_seed_joint_column_network_gap
+
+#check Sude.fw_growth_joint_network_trace_gaps
+#print axioms Sude.fw_growth_joint_network_trace_gaps
+
+#check Sude.bt_growing_preserved_role_network_gaps
+#print axioms Sude.bt_growing_preserved_role_network_gaps
+
+#check Sude.fw_seed_joint_pair_image_product
+#print axioms Sude.fw_seed_joint_pair_image_product
+
+#check Sude.fw_growth_joint_pair_image_product
+#print axioms Sude.fw_growth_joint_pair_image_product
+
+#check Sude.fw_residual_fixed_gap_row_cancellation
+#print axioms Sude.fw_residual_fixed_gap_row_cancellation
+
+#check Sude.fw_residual_fixed_gap_row_cancellation_real
+#print axioms Sude.fw_residual_fixed_gap_row_cancellation_real
+
+#check Sude.prefix_three_selection_natural_arithmetic
+#print axioms Sude.prefix_three_selection_natural_arithmetic
+
+#check Sude.prefix_three_selection_real_ratios
+#print axioms Sude.prefix_three_selection_real_ratios
+
+#check Sude.prefix_three_selection_weight_identities
+#print axioms Sude.prefix_three_selection_weight_identities
+
+#check Sude.fw_growth_preserved_trace_network_gaps
+#print axioms Sude.fw_growth_preserved_trace_network_gaps
+
+#check Sude.prefix_three_global_selections
+#print axioms Sude.prefix_three_global_selections
+
+#check Sude.fw_growth_narrow_pd2
+#print axioms Sude.fw_growth_narrow_pd2
+
+#check Sude.fw_growth_three_global_selections
+#print axioms Sude.fw_growth_three_global_selections
+
+#check Sude.prefix_rounding_drop_error
+#print axioms Sude.prefix_rounding_drop_error
+
+#check Sude.prefix_rounding_drop_error_bound
+#print axioms Sude.prefix_rounding_drop_error_bound
+
+#check Sude.fw_seed_growth_layer_gap_uniformity
+#print axioms Sude.fw_seed_growth_layer_gap_uniformity
+
+#check Sude.fw_trace_seed_growth_residual_cancellation
+#print axioms Sude.fw_trace_seed_growth_residual_cancellation
+
+#check Sude.fw_trace_bridge_wide_row_midpoint
+#print axioms Sude.fw_trace_bridge_wide_row_midpoint
+
+#check Sude.fw_trace_bridge_wide_column_midpoint
+#print axioms Sude.fw_trace_bridge_wide_column_midpoint
+
+#check Sude.dp_underdetermined_direction
+#print axioms Sude.dp_underdetermined_direction
+
+#check Sude.prefix_rounding_integral_equations_count
+#print axioms Sude.prefix_rounding_integral_equations_count
+
+#check Sude.prefix_fractional_group_sum_integral
+#print axioms Sude.prefix_fractional_group_sum_integral
+
+#check Sude.prefix_first_boundary_move
+#print axioms Sude.prefix_first_boundary_move
+
+#check Sude.prefix_joint_rounding_direction
+#print axioms Sude.prefix_joint_rounding_direction
+
+#check Sude.prefix_joint_rounding_step
+#print axioms Sude.prefix_joint_rounding_step
+
+#check Sude.prefix_rounding_freeze_step
+#print axioms Sude.prefix_rounding_freeze_step
+
+#check Sude.bt_growing_permuted_placement
+#print axioms Sude.bt_growing_permuted_placement
+
+#check Sude.disjoint_family_permutation
+#print axioms Sude.disjoint_family_permutation
+
+#check Sude.fw_growth_slot_group_cardinalities
+#print axioms Sude.fw_growth_slot_group_cardinalities
+
+#check Sude.fw_growth_slot_groups_disjoint
+#print axioms Sude.fw_growth_slot_groups_disjoint
+
+#check Sude.fw_growth_ordinary_slots_eq_complement
+#print axioms Sude.fw_growth_ordinary_slots_eq_complement
+
+#check Sude.bt_growth_selected_label_indices
+#print axioms Sude.bt_growth_selected_label_indices
+
+#check Sude.double_block_paired_gap_equality
+#print axioms Sude.double_block_paired_gap_equality
+
+#check Sude.fw_trace_bridge_wide_column_midpoint_of_gap_invoice
+#print axioms Sude.fw_trace_bridge_wide_column_midpoint_of_gap_invoice
+
+#check Sude.prefix_one_level_rounding
+#print axioms Sude.prefix_one_level_rounding
+
+#check Sude.prefix_simultaneous_split
+#print axioms Sude.prefix_simultaneous_split
+
+#check Sude.prefix_balanced_path_terminal_clog
+#print axioms Sude.prefix_balanced_path_terminal_clog
+
+#check Sude.prefix_depth_mean_identity
+#print axioms Sude.prefix_depth_mean_identity
+
+#check Sude.prefix_depth_mean_bound
+#print axioms Sude.prefix_depth_mean_bound
+
+#check Sude.prefix_depth_telescope
+#print axioms Sude.prefix_depth_telescope
+
+#check Sude.prefix_sorted_label_split_mean_gap
+#print axioms Sude.prefix_sorted_label_split_mean_gap
+
+#check Sude.prefix_refined_group_fibers
+#print axioms Sude.prefix_refined_group_fibers
+
+#check Sude.prefix_refined_balanced_child_card_le
+#print axioms Sude.prefix_refined_balanced_child_card_le
+
+#check Sude.fw_growth_balanced_rectangle_weights
+#print axioms Sude.fw_growth_balanced_rectangle_weights
+
+#check Sude.fw_growth_ordinary_off_diagonals
+#print axioms Sude.fw_growth_ordinary_off_diagonals
+
+#check Sude.bt_growth_family_placement
+#print axioms Sude.bt_growth_family_placement
+
+#check Sude.fw_growth_full_diagonal_weights
+#print axioms Sude.fw_growth_full_diagonal_weights
+
+#check Sude.fw_growth_three_family_allocation
+#print axioms Sude.fw_growth_three_family_allocation
+
+#check Sude.growth_diagonal_midpoint_identity
+#print axioms Sude.growth_diagonal_midpoint_identity
+
+#check Sude.fw_growth_full_diagonal_orientation
+#print axioms Sude.fw_growth_full_diagonal_orientation
+
+#check Sude.growth_trace_selected_diagonal_identity
+#print axioms Sude.growth_trace_selected_diagonal_identity
+
+#check Sude.fw_growth_selected_diagonal_identities
+#print axioms Sude.fw_growth_selected_diagonal_identities
+
+#check Sude.fw_growth_allocated_diagonal_contributions
+#print axioms Sude.fw_growth_allocated_diagonal_contributions
+
+#check Sude.prefix_matched_depth_step
+#print axioms Sude.prefix_matched_depth_step
+
+#check Sude.prefix_split_state_sequence
+#print axioms Sude.prefix_split_state_sequence
+
+#check Sude.prefix_global_lower_means
+#print axioms Sude.prefix_global_lower_means
+
+#check Sude.prefix_split_terminal_assignment
+#print axioms Sude.prefix_split_terminal_assignment
+
+#check Sude.bmor_fw_seed_bridge_wide_concentration_of_theta
+#print axioms Sude.bmor_fw_seed_bridge_wide_concentration_of_theta
+
+#check Sude.fw_growth_allocated_diagonal_bounds
+#print axioms Sude.fw_growth_allocated_diagonal_bounds
+
+#check Sude.prefix_initial_split_state_valid
+#print axioms Sude.prefix_initial_split_state_valid
+
+#check Sude.prefix_construct_state_step
+#print axioms Sude.prefix_construct_state_step
+
+#check Sude.prefix_conditional_recursive_assignment_clog
+#print axioms Sude.prefix_conditional_recursive_assignment_clog
+
+#check Sude.prefix_stage_conditional_assignment
+#print axioms Sude.prefix_stage_conditional_assignment
+
+#check Sude.prefix_deterministic_stage_assignment
+#print axioms Sude.prefix_deterministic_stage_assignment
+
+#check Sude.prefix_stagewise_subset_permutation
+#print axioms Sude.prefix_stagewise_subset_permutation
+
+#check Sude.prefix_reallocate_stagewise_subset
+#print axioms Sude.prefix_reallocate_stagewise_subset
+
+#check Sude.prefix_deterministic_stage_assignment_four
+#print axioms Sude.prefix_deterministic_stage_assignment_four
+
+#check Sude.fw_growth_ordinary_dp_assignment
+#print axioms Sude.fw_growth_ordinary_dp_assignment
+
+#check Sude.fw_growth_ordinary_physical_dp
+#print axioms Sude.fw_growth_ordinary_physical_dp
+
+#check Sude.fw_growth_ordinary_dp_mean
+#print axioms Sude.fw_growth_ordinary_dp_mean
+
+#check Sude.fw_growth_twelve_weight_mean_shift_bound
+#print axioms Sude.fw_growth_twelve_weight_mean_shift_bound
+
+#check Sude.fw_growth_ordinary_all_line_mass
+#print axioms Sude.fw_growth_ordinary_all_line_mass
+
+#check Sude.fw_growth_ordinary_all_line_mass_le_five
+#print axioms Sude.fw_growth_ordinary_all_line_mass_le_five
+
+#check Sude.fw_growth_ordinary_row_mass
+#print axioms Sude.fw_growth_ordinary_row_mass
+
+#check Sude.fw_growth_ordinary_column_mass
+#print axioms Sude.fw_growth_ordinary_column_mass
+
+#check Sude.fw_growth_reallocation_preserves_early_roles
+#print axioms Sude.fw_growth_reallocation_preserves_early_roles
+
+#check Sude.fw_growth_protected_diagonal_bounds
+#print axioms Sude.fw_growth_protected_diagonal_bounds
+
+#check Sude.growth_permuted_trace_midpoints
+#print axioms Sude.growth_permuted_trace_midpoints
+
+#check Sude.fw_growth_ordinary_trace_dp
+#print axioms Sude.fw_growth_ordinary_trace_dp
+
+#check Sude.fw_growth_ordinary_dp_reference_recenter
+#print axioms Sude.fw_growth_ordinary_dp_reference_recenter
+
+#check Sude.fw_growth_rectangle_row_mass
+#print axioms Sude.fw_growth_rectangle_row_mass
+
+#check Sude.fw_growth_rectangle_column_mass
+#print axioms Sude.fw_growth_rectangle_column_mass
+
+#check Sude.bmor_fw_growth_diagonal_concentration_of_theta
+#print axioms Sude.bmor_fw_growth_diagonal_concentration_of_theta
+
+#check Sude.fw_growth_diagonal_ordinary_trace_dp
+#print axioms Sude.fw_growth_diagonal_ordinary_trace_dp
+
+#check Sude.fw_growth_centered_midpoint_split
+#print axioms Sude.fw_growth_centered_midpoint_split
+
+#check Sude.fw_growth_rectangle_midpoint_deviation
+#print axioms Sude.fw_growth_rectangle_midpoint_deviation
+
+#check Sude.growth_pair_gaps_imply_role_network_gaps
+#print axioms Sude.growth_pair_gaps_imply_role_network_gaps
+
+#check Sude.fw_preserved_early_permuted_trace_networks_active_reference
+#print axioms Sude.fw_preserved_early_permuted_trace_networks_active_reference
+
+#check Sude.fw_preserved_pair_gap_trace_networks_active_reference
+#print axioms Sude.fw_preserved_pair_gap_trace_networks_active_reference
+
+#check Sude.fw_growth_ordinary_centered_reference
+#print axioms Sude.fw_growth_ordinary_centered_reference
+
+#check Sude.fw_growth_full_midpoint_from_components
+#print axioms Sude.fw_growth_full_midpoint_from_components
+
+#check Sude.fw_growth_ordinary_population_row_column_mass
+#print axioms Sude.fw_growth_ordinary_population_row_column_mass
+
+#check Sude.fw_growth_ordinary_recentered_rows_columns
+#print axioms Sude.fw_growth_ordinary_recentered_rows_columns
+
+#check Sude.fw_growth_full_midpoint_bound
+#print axioms Sude.fw_growth_full_midpoint_bound
+
+#check Sude.fw_growth_diagonal_ordinary_recentered
+#print axioms Sude.fw_growth_diagonal_ordinary_recentered
+
+#check Sude.fw_growth_same_square_diagonal_bounds
+#print axioms Sude.fw_growth_same_square_diagonal_bounds
+
+#check Sude.fw_growth_first_band_depth
+#print axioms Sude.fw_growth_first_band_depth
+
+#check Sude.fw_growth_first_band_midpoint_expression
+#print axioms Sude.fw_growth_first_band_midpoint_expression
+
+#check Sude.fw_growth_first_band_midpoint_gate
+#print axioms Sude.fw_growth_first_band_midpoint_gate
+
+#check Sude.fw_theta_growth_suffix_geometry
+#print axioms Sude.fw_theta_growth_suffix_geometry
+
+#check Sude.fw_theta_growth_initial_subset_pool
+#print axioms Sude.fw_theta_growth_initial_subset_pool
+
+#check Sude.fw_growth_trace_placement_of_preserved_roles
+#print axioms Sude.fw_growth_trace_placement_of_preserved_roles
+
+#check Sude.fw_centered_prime_target_of_supplied_flows
+#print axioms Sude.fw_centered_prime_target_of_supplied_flows
+
+#check Sude.fw_t75_centered_prime_target_of_supplied_flows
+#print axioms Sude.fw_t75_centered_prime_target_of_supplied_flows
+
+#check Sude.growth_physical_line_centered_identity
+#print axioms Sude.growth_physical_line_centered_identity
+
+#check Sude.growth_physical_line_centered_bound
+#print axioms Sude.growth_physical_line_centered_bound
+
+#check Sude.fw_growth_stage_row_orientation_zero
+#print axioms Sude.fw_growth_stage_row_orientation_zero
+
+#check Sude.fw_growth_stage_column_orientation_zero
+#print axioms Sude.fw_growth_stage_column_orientation_zero
+
+#check Sude.stage_gap_orientation_invoice_zero
+#print axioms Sude.stage_gap_orientation_invoice_zero
+
+#check Sude.stage_gap_physical_line_zero_orientation_bound
+#print axioms Sude.stage_gap_physical_line_zero_orientation_bound
+
+#check Sude.fw_growth_physical_row_column_bound
+#print axioms Sude.fw_growth_physical_row_column_bound
+
+#check Sude.fw_growth_all_line_midpoint_witness
+#print axioms Sude.fw_growth_all_line_midpoint_witness
+
+#check Sude.fw_growth_protected_all_line_midpoint_bounds
+#print axioms Sude.fw_growth_protected_all_line_midpoint_bounds
+
+#check Sude.bmor_fw_growth_fresh_networks_of_theta
+#print axioms Sude.bmor_fw_growth_fresh_networks_of_theta
+
+#check Sude.fw_growth_trace_midpoint_to_physical_lines
+#print axioms Sude.fw_growth_trace_midpoint_to_physical_lines
+
+#check Sude.fw_growth_ordered_physical_entry_witness
+#print axioms Sude.fw_growth_ordered_physical_entry_witness
+
+#check Sude.bmor_fw_growth_all_line_concentration_of_theta
+#print axioms Sude.bmor_fw_growth_all_line_concentration_of_theta
+
+#check Sude.fw_pair_gap_seed_growth_residual_cancellation
+#print axioms Sude.fw_pair_gap_seed_growth_residual_cancellation
+
+#check Sude.fw_fresh_active_flow_interface
+#print axioms Sude.fw_fresh_active_flow_interface
+
+#check Sude.fw_t75_fresh_active_reference_routing
+#print axioms Sude.fw_t75_fresh_active_reference_routing
+
+#check Sude.fw_pair_gap_bridge_wide_row_midpoint
+#print axioms Sude.fw_pair_gap_bridge_wide_row_midpoint
+
+#check Sude.fw_pair_gap_bridge_wide_column_midpoint
+#print axioms Sude.fw_pair_gap_bridge_wide_column_midpoint
+
+#check Sude.diagonal_prime_target_from_vector
+#print axioms Sude.diagonal_prime_target_from_vector
+
+#check Sude.rowNetwork_toggle_subset_preserves_pair_sums
+#print axioms Sude.rowNetwork_toggle_subset_preserves_pair_sums
+
+#check Sude.columnNetwork_toggle_subset_preserves_pair_sums
+#print axioms Sude.columnNetwork_toggle_subset_preserves_pair_sums
+
+#check Sude.fw_pair_gap_bridge_wide_column_midpoint_of_gap_invoice
+#print axioms Sude.fw_pair_gap_bridge_wide_column_midpoint_of_gap_invoice
+
+#check Sude.bmor_fw_growth_all_line_fresh_networks_of_theta
+#print axioms Sude.bmor_fw_growth_all_line_fresh_networks_of_theta
+
+#check Sude.toggle_two_installed_networks_preserves_pair_sums
+#print axioms Sude.toggle_two_installed_networks_preserves_pair_sums
+
+#check Sude.twoNetworks_centered_transfers_with_invoice_pair_sums
+#print axioms Sude.twoNetworks_centered_transfers_with_invoice_pair_sums
+
+#check Sude.twoNetworks_centered_invoice_preserves_active_pair_sums
+#print axioms Sude.twoNetworks_centered_invoice_preserves_active_pair_sums
+
+#check Sude.fw_permuted_centered_active_reference_pair_sums
+#print axioms Sude.fw_permuted_centered_active_reference_pair_sums
+
+#check Sude.fw_permuted_trace_networks_active_reference_pair_sums
+#print axioms Sude.fw_permuted_trace_networks_active_reference_pair_sums
+
+#check Sude.fw_preserved_pair_gap_trace_networks_pair_sums
+#print axioms Sude.fw_preserved_pair_gap_trace_networks_pair_sums
+
+#check Sude.fw_growth_pair_network_coverage
+#print axioms Sude.fw_growth_pair_network_coverage
+
+#check Sude.fw_growth_pair_midpoint_transfer
+#print axioms Sude.fw_growth_pair_midpoint_transfer
+
+#check Sude.fw_preserved_pair_gap_growth_midpoint_reference
+#print axioms Sude.fw_preserved_pair_gap_growth_midpoint_reference
+
+#check Sude.fw_growth_centered_midpoint_scores_transfer
+#print axioms Sude.fw_growth_centered_midpoint_scores_transfer
+
+#check Sude.packed_centered_diagonal_controller
+#print axioms Sude.packed_centered_diagonal_controller
+
+#check Sude.packed_centered_diagonal_adapter
+#print axioms Sude.packed_centered_diagonal_adapter
+
+#check Sude.packed_prime_diagonal_repair
+#print axioms Sude.packed_prime_diagonal_repair
+
+#check Sude.fw_t75_fresh_routing_with_diagonal_repair
+#print axioms Sude.fw_t75_fresh_routing_with_diagonal_repair
+
+#check Sude.fw_full_reservation_pair_cover
+#print axioms Sude.fw_full_reservation_pair_cover
+
+#check Sude.fw_seed_row_deviation_without_orientation
+#print axioms Sude.fw_seed_row_deviation_without_orientation
+
+#check Sude.fw_physical_four_family_line_complement_split
+#print axioms Sude.fw_physical_four_family_line_complement_split
+
+#check Sude.packed_reference_gain_bounds
+#print axioms Sude.packed_reference_gain_bounds
+
+#check Sude.packed_centered_diagonal_controller_with_reference_gains
+#print axioms Sude.packed_centered_diagonal_controller_with_reference_gains
+
+#check Sude.packed_centered_diagonal_adapter_with_reference_gains
+#print axioms Sude.packed_centered_diagonal_adapter_with_reference_gains
+
+#check Sude.packed_prime_diagonal_repair_with_reference_gains
+#print axioms Sude.packed_prime_diagonal_repair_with_reference_gains
+
+#check Sude.fw_t75_fresh_routing_with_diagonal_repair_and_reference_gains
+#print axioms Sude.fw_t75_fresh_routing_with_diagonal_repair_and_reference_gains
+
+#check Sude.cy_dq_sharp_completion_from_widened_old
+#print axioms Sude.cy_dq_sharp_completion_from_widened_old
+#check Sude.cy_dq_sharp_completion_from_mean_and_bands
+#print axioms Sude.cy_dq_sharp_completion_from_mean_and_bands
+#check Sude.full_value_cover_from_roles_and_spares
+#print axioms Sude.full_value_cover_from_roles_and_spares
+#check Sude.fw_prefix_spare_capacity_exact
+#print axioms Sude.fw_prefix_spare_capacity_exact
+#check Sude.fw_prefix_spare_capacity_le
+#print axioms Sude.fw_prefix_spare_capacity_le
+#check Sude.fw_bridge_prefix_spare_capacity_le
+#print axioms Sude.fw_bridge_prefix_spare_capacity_le
+#check Sude.fw_full_value_cover_from_roles_and_spares
+#print axioms Sude.fw_full_value_cover_from_roles_and_spares
+#check Sude.fw_wide_batch_outside_quarter
+#print axioms Sude.fw_wide_batch_outside_quarter
+#check Sude.fw_wide_batch_shielded
+#print axioms Sude.fw_wide_batch_shielded
+#check Sude.fw_bridge_retained_seed_card_le
+#print axioms Sude.fw_bridge_retained_seed_card_le
+#check Sude.growing_indexed_footprint_card
+#print axioms Sude.growing_indexed_footprint_card
+#check Sude.fw_growing_indexed_footprint_card
+#print axioms Sude.fw_growing_indexed_footprint_card
+#check Sude.fw_bridge_seed_growth_card_le
+#print axioms Sude.fw_bridge_seed_growth_card_le
+#check Sude.fw_physical_bridge_seed_growth_card_le
+#print axioms Sude.fw_physical_bridge_seed_growth_card_le
+#check Sude.fw_classified_full_value_cover
+#print axioms Sude.fw_classified_full_value_cover
+#check Sude.cy_dq_completion_from_classified_cover
+#print axioms Sude.cy_dq_completion_from_classified_cover
+#check Sude.fw_normalized_classified_full_value_cover
+#print axioms Sude.fw_normalized_classified_full_value_cover
+#check Sude.fw_theta_same_witness_role_values
+#print axioms Sude.fw_theta_same_witness_role_values
+#check Sude.bmor_fw_endpoint_reference_role_values_of_theta
+#print axioms Sude.bmor_fw_endpoint_reference_role_values_of_theta
+#check Sude.fw_cy_same_reference_completion
+#print axioms Sude.fw_cy_same_reference_completion
+#check Sude.fw_four_family_exact_unused_mean
+#print axioms Sude.fw_four_family_exact_unused_mean
+#check Sude.fw_reallocated_full_unused_mean_bound_of_theta
+#print axioms Sude.fw_reallocated_full_unused_mean_bound_of_theta
+#check Sude.fw_first_band_frozen_cy_stock_gate
+#print axioms Sude.fw_first_band_frozen_cy_stock_gate
+#check Sude.fw_first_band_frozen_cy_endpoints
+#print axioms Sude.fw_first_band_frozen_cy_endpoints
+#check Sude.fw_frozen_cy_same_reference_completion
+#print axioms Sude.fw_frozen_cy_same_reference_completion
+#check Sude.fw_projected_full_classified_cover
+#print axioms Sude.fw_projected_full_classified_cover
+#check Sude.fw_projected_frozen_cy_completion
+#print axioms Sude.fw_projected_frozen_cy_completion
+#check Sude.fw_reallocated_full_unused_mean_11_100_of_theta
+#print axioms Sude.fw_reallocated_full_unused_mean_11_100_of_theta
+
+#check Sude.central_exception_mean_shift_exact_count
+#print axioms Sude.central_exception_mean_shift_exact_count
+
+#check Sude.central_exception_line_error_exact_count
+#print axioms Sude.central_exception_line_error_exact_count
+
+#check Sude.central_stock_regular_factor_completion_exact_count
+#print axioms Sude.central_stock_regular_factor_completion_exact_count
+
+#check Sude.cy_full_keepout_sharp_central_completion
+#print axioms Sude.cy_full_keepout_sharp_central_completion
+
+#check Sude.cy_full_keepout_central_completion
+#print axioms Sude.cy_full_keepout_central_completion
+
+#check Sude.cy_full_prekeepout_card
+#print axioms Sude.cy_full_prekeepout_card
+
+#check Sude.cy_full_keepout_diagonal_card
+#print axioms Sude.cy_full_keepout_diagonal_card
+
+#check Sude.cy_full_keepout_factor_and_total
+#print axioms Sude.cy_full_keepout_factor_and_total
+
+#check Sude.cy_row_q4_card
+#print axioms Sude.cy_row_q4_card
+
+#check Sude.cy_column_q4_card
+#print axioms Sude.cy_column_q4_card
+
+#check Sude.cy_rectangle_diagonal_layers_load
+#print axioms Sude.cy_rectangle_diagonal_layers_load
+
+#check Sude.cy_full_cy_q4_and_center
+#print axioms Sude.cy_full_cy_q4_and_center
+
+#check Sude.cy_post_diagonal_residual_occupancy
+#print axioms Sude.cy_post_diagonal_residual_occupancy
+
+#check Sude.cy_exact_exception_arithmetic
+#print axioms Sude.cy_exact_exception_arithmetic
+
+#check Sude.cy_actual_exception_count
+#print axioms Sude.cy_actual_exception_count
+
+#check Sude.cy_trim_row_degrees
+#print axioms Sude.cy_trim_row_degrees
+
+#check Sude.cy_trim_column_degrees
+#print axioms Sude.cy_trim_column_degrees
+
+#check Sude.cy_two_edge_regular_factor
+#print axioms Sude.cy_two_edge_regular_factor
+
+#check Sude.cy_choose_center_trim_edges
+#print axioms Sude.cy_choose_center_trim_edges
+
+#check Sude.cy_choose_trim_and_regular_factor
+#print axioms Sude.cy_choose_trim_and_regular_factor
+
+#check Sude.packed_rectangle_diagonal_exact
+#print axioms Sude.packed_rectangle_diagonal_exact
+
+#check Sude.fw_full_keepout_diagonal_exact
+#print axioms Sude.fw_full_keepout_diagonal_exact
+
+#check Sude.unreserved_diagonal_card_of_overlap
+#print axioms Sude.unreserved_diagonal_card_of_overlap
+
+#check Sude.full_stock_dq_rf_from_mean_and_bands
+#print axioms Sude.full_stock_dq_rf_from_mean_and_bands
+
+#check Sude.old_reservation_widened_interval_from_bands
+#print axioms Sude.old_reservation_widened_interval_from_bands
+
+#check Sude.old_widened_endpoints_from_mean
+#print axioms Sude.old_widened_endpoints_from_mean
+
+#check Sude.full_stock_dq_rf_from_widened_old
+#print axioms Sude.full_stock_dq_rf_from_widened_old
+
+#check Sude.full_stock_final_card_le_center_card
+#print axioms Sude.full_stock_final_card_le_center_card
+
+#check Sude.full_stock_post_mean_shift_explicit
+#print axioms Sude.full_stock_post_mean_shift_explicit
+
+#check Sude.odd_full_stock_integrated_witness_explicit_mean
+#print axioms Sude.odd_full_stock_integrated_witness_explicit_mean
+
+#check Sude.post_diagonal_inputs_from_widened_old
+#print axioms Sude.post_diagonal_inputs_from_widened_old
+
+#check Sude.ap_interval_shift_subset
+#print axioms Sude.ap_interval_shift_subset
+
+#check Sude.post_diagonal_deletions_from_widened_interval
+#print axioms Sude.post_diagonal_deletions_from_widened_interval
+
+#check Sude.actual_center_recovered_mean_shift
+#print axioms Sude.actual_center_recovered_mean_shift
+
+#check Sude.center_and_batches_post_mean_shift
+#print axioms Sude.center_and_batches_post_mean_shift
+
+#check Sude.reserved_value_deletion_exact
+#print axioms Sude.reserved_value_deletion_exact
+
+#check Sude.reserved_value_deletion_bound
+#print axioms Sude.reserved_value_deletion_bound
+
+#check Sude.post_diagonal_interval_deletion_bound
+#print axioms Sude.post_diagonal_interval_deletion_bound
+
+#check Sude.unreserved_diagonal_card_le_two_n_sub_one
+#print axioms Sude.unreserved_diagonal_card_le_two_n_sub_one
+
+#check Sude.post_diagonal_interval_deletion_two_n
+#print axioms Sude.post_diagonal_interval_deletion_two_n
+
+#check Sude.full_stock_dq_rf_conditional_completion_with_mean
+#print axioms Sude.full_stock_dq_rf_conditional_completion_with_mean
+
+#check Sude.full_stock_dq_rf_conditional_completion
+#print axioms Sude.full_stock_dq_rf_conditional_completion
+
+#check Sude.odd_full_stock_integrated_diagonal_witness_with_mean
+#print axioms Sude.odd_full_stock_integrated_diagonal_witness_with_mean
+
+#check Sude.odd_full_stock_integrated_diagonal_witness
+#print axioms Sude.odd_full_stock_integrated_diagonal_witness
+
+#check Sude.full_stock_second_batch_original_mean
+#print axioms Sude.full_stock_second_batch_original_mean
+
+#check Sude.full_stock_complete_line_from_batch
+#print axioms Sude.full_stock_complete_line_from_batch
+
+#check Sude.odd_full_stock_actual_diagonal_bounds
+#print axioms Sude.odd_full_stock_actual_diagonal_bounds
+
+#check Sude.odd_full_stock_rows_columns_expectation
+#print axioms Sude.odd_full_stock_rows_columns_expectation
+
+#check Sude.odd_diagonal_full_stock_expectation
+#print axioms Sude.odd_diagonal_full_stock_expectation
+
+#check Sude.odd_diagonal_full_stock_three_x
+#print axioms Sude.odd_diagonal_full_stock_three_x
+
+#check Sude.actual_center_batches_line_expectation
+#print axioms Sude.actual_center_batches_line_expectation
+
+#check Sude.full_stock_line_baseline_shift
+#print axioms Sude.full_stock_line_baseline_shift
+
+#check Sude.placed_full_stock_line_expectation_shift
+#print axioms Sude.placed_full_stock_line_expectation_shift
+
+#check Sude.placed_full_stock_mean_and_width
+#print axioms Sude.placed_full_stock_mean_and_width
+
+#check Sude.actual_center_and_two_full_stock_batches
+#print axioms Sude.actual_center_and_two_full_stock_batches
+
+#check Sude.full_stock_center_exposure
+#print axioms Sude.full_stock_center_exposure
+
+#check Sude.center_free_line_le_unused
+#print axioms Sude.center_free_line_le_unused
+
+#check Sude.center_free_line_card_split
+#print axioms Sude.center_free_line_card_split
+
+#check Sude.center_fixed_line_sum_split
+#print axioms Sude.center_fixed_line_sum_split
+
+#check Sude.actual_center_preserves_line_expectations
+#print axioms Sude.actual_center_preserves_line_expectations
+
+#check Sude.actual_unused_pool_place_center
+#print axioms Sude.actual_unused_pool_place_center
+
+#check Sude.actual_unused_pool_place_two_batches
+#print axioms Sude.actual_unused_pool_place_two_batches
+
+#check Sude.full_stock_label_select
+#print axioms Sude.full_stock_label_select
+
+#check Sude.full_stock_two_batch_error
+#print axioms Sude.full_stock_two_batch_error
+
+#check Sude.full_stock_two_batches
+#print axioms Sude.full_stock_two_batches
+
+#check Sude.actual_unused_pool_two_batches
+#print axioms Sude.actual_unused_pool_two_batches
+
+#check Sude.bmor_unused_window_count
+#print axioms Sude.bmor_unused_window_count
+
+#check Sude.bmor_two_diagonal_window_supplies
+#print axioms Sude.bmor_two_diagonal_window_supplies
+
+#check Sude.fw_early_reference_midpoint_scores
+#print axioms Sude.fw_early_reference_midpoint_scores
+
+#check Sude.physical_pair_signed_midpoint_invoice
+#print axioms Sude.physical_pair_signed_midpoint_invoice
+
+#check Sude.physical_pair_signed_midpoint_bound
+#print axioms Sude.physical_pair_signed_midpoint_bound
+
+#check Sude.seed_signed_midpoint_line_bound
+#print axioms Sude.seed_signed_midpoint_line_bound
+
+#check Sude.bmor_fw_growth_all_line_midpoint_reference_of_theta
+#print axioms Sude.bmor_fw_growth_all_line_midpoint_reference_of_theta
+
+#check Sude.rowNetwork_toggle_subset_preserves_pair_endpoints
+#print axioms Sude.rowNetwork_toggle_subset_preserves_pair_endpoints
+
+#check Sude.columnNetwork_toggle_subset_preserves_pair_endpoints
+#print axioms Sude.columnNetwork_toggle_subset_preserves_pair_endpoints
+
+#check Sude.toggle_two_installed_networks_preserves_pair_endpoints
+#print axioms Sude.toggle_two_installed_networks_preserves_pair_endpoints
+
+#check Sude.unordered_pair_sum_and_signed_gap
+#print axioms Sude.unordered_pair_sum_and_signed_gap
+
+#check Sude.unordered_pair_gap_magnitude
+#print axioms Sude.unordered_pair_gap_magnitude
+
+#check Sude.marked_pair_endpoints_preserved
+#print axioms Sude.marked_pair_endpoints_preserved
+
+#check Sude.pair_endpoint_gap_magnitude_preserved
+#print axioms Sude.pair_endpoint_gap_magnitude_preserved
+
+#check Sude.twoNetworks_centered_transfers_with_invoice_pair_endpoints
+#print axioms Sude.twoNetworks_centered_transfers_with_invoice_pair_endpoints
+
+#check Sude.twoNetworks_centered_invoice_preserves_active_pair_endpoints
+#print axioms Sude.twoNetworks_centered_invoice_preserves_active_pair_endpoints
+
+#check Sude.fw_permuted_centered_active_reference_pair_endpoints
+#print axioms Sude.fw_permuted_centered_active_reference_pair_endpoints
+
+#check Sude.fw_permuted_active_trace_midpoint_reference_pair_endpoints
+#print axioms Sude.fw_permuted_active_trace_midpoint_reference_pair_endpoints
+
+#check Sude.fw_permuted_trace_networks_active_reference_pair_endpoints
+#print axioms Sude.fw_permuted_trace_networks_active_reference_pair_endpoints
+
+#check Sude.fw_seed_pair_endpoints_transfer
+#print axioms Sude.fw_seed_pair_endpoints_transfer
+
+#check Sude.fw_bridge_pair_endpoints_transfer
+#print axioms Sude.fw_bridge_pair_endpoints_transfer
+
+#check Sude.fw_wide_pair_endpoints_transfer
+#print axioms Sude.fw_wide_pair_endpoints_transfer
+
+#check Sude.fw_growth_pair_endpoints_transfer
+#print axioms Sude.fw_growth_pair_endpoints_transfer
+
+#check Sude.fw_growth_pair_gap_magnitude_transfer
+#print axioms Sude.fw_growth_pair_gap_magnitude_transfer
+
+#check Sude.fw_preserved_early_trace_networks_pair_endpoints
+#print axioms Sude.fw_preserved_early_trace_networks_pair_endpoints
+
+#check Sude.fw_preserved_pair_gap_trace_networks_pair_endpoints
+#print axioms Sude.fw_preserved_pair_gap_trace_networks_pair_endpoints
+
+#check Sude.fw_preserved_pair_gap_all_family_endpoints_reference
+#print axioms Sude.fw_preserved_pair_gap_all_family_endpoints_reference
+
+#check Sude.finiteTwinFirstEightyTwoSegments
+#print axioms Sude.finiteTwinFirstEightyTwoSegments
+
+#check Sude.finiteTwinSeeds_at_least_724936
+#print axioms Sude.finiteTwinSeeds_at_least_724936
+
+#check Sude.physical_pair_endpoint_gap_magnitude
+#print axioms Sude.physical_pair_endpoint_gap_magnitude
+
+#check Sude.fw_all_family_reference_gap_magnitudes
+#print axioms Sude.fw_all_family_reference_gap_magnitudes
+
+#check Sude.fw_fixed_early_reference_gap_magnitudes
+#print axioms Sude.fw_fixed_early_reference_gap_magnitudes
+
+#check Sude.bmor_fw_all_family_endpoints_reference_of_theta
+#print axioms Sude.bmor_fw_all_family_endpoints_reference_of_theta
+
+#check Sude.bmor_fw_all_family_midpoint_reference_of_theta
+#print axioms Sude.bmor_fw_all_family_midpoint_reference_of_theta
+
+#check Sude.fw_pair_gap_bridge_wide_row_reference_invoice
+#print axioms Sude.fw_pair_gap_bridge_wide_row_reference_invoice
+
+#check Sude.full_reservation_cancellation_transport
+#print axioms Sude.full_reservation_cancellation_transport
+
+#check Sude.full_reservation_cancellation_transport_of_active
+#print axioms Sude.full_reservation_cancellation_transport_of_active
+
+#check Sude.fw_pair_gap_column_reference_midpoint_comparison
+#print axioms Sude.fw_pair_gap_column_reference_midpoint_comparison
+
+#check Sude.reference_completion_synchronise
+#print axioms Sude.reference_completion_synchronise
+
+#check Sude.reference_completion_invoice_transport
+#print axioms Sude.reference_completion_invoice_transport
+
+#check Sude.reference_completion_doubled_invoice_transport
+#print axioms Sude.reference_completion_doubled_invoice_transport
+
+#check Sude.physical_network_midpoint_completion_rebase
+#print axioms Sude.physical_network_midpoint_completion_rebase
+
+#check Sude.physical_network_reference_completion_invoice
+#print axioms Sude.physical_network_reference_completion_invoice
+
+#check Sude.physical_network_reference_completion_column_invoice
+#print axioms Sude.physical_network_reference_completion_column_invoice
+
+#check Sude.entry_eq_implies_index_eq
+#print axioms Sude.entry_eq_implies_index_eq
+
+#check Sude.entry_image_eq_implies_index_image_eq
+#print axioms Sude.entry_image_eq_implies_index_image_eq
+
+#check Sude.reference_completion_diagonal_sums
+#print axioms Sude.reference_completion_diagonal_sums
+
+#check Sude.physical_reference_completion_both_invoices
+#print axioms Sude.physical_reference_completion_both_invoices
+
+#check Sude.fw_reference_completion_transport
+#print axioms Sude.fw_reference_completion_transport
+
+#check Sude.dq_rf_network_completion_join
+#print axioms Sude.dq_rf_network_completion_join
+
+#check Sude.exclusive_two_cell_sums_bound
+#print axioms Sude.exclusive_two_cell_sums_bound
+
+#check Sude.fw_active_spare_rectangle_means_bound
+#print axioms Sude.fw_active_spare_rectangle_means_bound
+
+#check Sude.bmor_fw_all_family_reference_gap_magnitudes_of_theta
+#print axioms Sude.bmor_fw_all_family_reference_gap_magnitudes_of_theta
+
+#check Sude.physical_pair_stage_owner_reindex
+#print axioms Sude.physical_pair_stage_owner_reindex
+
+#check Sude.physical_pair_stage_owner_weighted
+#print axioms Sude.physical_pair_stage_owner_weighted
+
+#check Sude.fw_rectangle_stage_owner_reindex
+#print axioms Sude.fw_rectangle_stage_owner_reindex
+
+#check Sude.fw_bridge_ordinary_row_line_mass
+#print axioms Sude.fw_bridge_ordinary_row_line_mass
+
+#check Sude.fw_bridge_ordinary_column_line_mass
+#print axioms Sude.fw_bridge_ordinary_column_line_mass
+
+#check Sude.fw_wide_ordinary_row_line_mass
+#print axioms Sude.fw_wide_ordinary_row_line_mass
+
+#check Sude.fw_wide_ordinary_column_line_mass
+#print axioms Sude.fw_wide_ordinary_column_line_mass
+
+#check Sude.fw_selected_stage_layer_off_reserved
+#print axioms Sude.fw_selected_stage_layer_off_reserved
+
+#check Sude.fw_selected_stage_layer_swap_off_reserved
+#print axioms Sude.fw_selected_stage_layer_swap_off_reserved
+
+#check Sude.fw_bridge_ordinary_cell_off_active_rectangle
+#print axioms Sude.fw_bridge_ordinary_cell_off_active_rectangle
+
+#check Sude.fw_wide_ordinary_cell_off_active_rectangle
+#print axioms Sude.fw_wide_ordinary_cell_off_active_rectangle
+
+#check Sude.prefix_permuted_ordinary_rectangle_weight_split
+#print axioms Sude.prefix_permuted_ordinary_rectangle_weight_split
+
+#check Sude.fw_bridge_diagonal_cell_mem_active_rectangle
+#print axioms Sude.fw_bridge_diagonal_cell_mem_active_rectangle
+
+#check Sude.fw_wide_diagonal_cell_mem_active_rectangle
+#print axioms Sude.fw_wide_diagonal_cell_mem_active_rectangle
+
+#check Sude.fw_bridge_stage_rectangle_line_split
+#print axioms Sude.fw_bridge_stage_rectangle_line_split
+
+#check Sude.fw_wide_stage_rectangle_line_split
+#print axioms Sude.fw_wide_stage_rectangle_line_split
+
+#check Sude.fw_rectangle_weighted_spare_bound
+#print axioms Sude.fw_rectangle_weighted_spare_bound
+
+#check Sude.fw_seed_rectangle_cell_in_active
+#print axioms Sude.fw_seed_rectangle_cell_in_active
+
+#check Sude.fw_seed_ordinary_cell_off_active
+#print axioms Sude.fw_seed_ordinary_cell_off_active
+
+#check Sude.fw_seed_active_rectangle_weight
+#print axioms Sude.fw_seed_active_rectangle_weight
+
+#check Sude.fw_seed_ordinary_active_mass
+#print axioms Sude.fw_seed_ordinary_active_mass
+
+#check Sude.physical_pair_weight_outside_rectangle
+#print axioms Sude.physical_pair_weight_outside_rectangle
+
+#check Sude.fw_growth_ordinary_rectangle_line_mass
+#print axioms Sude.fw_growth_ordinary_rectangle_line_mass
+
+#check Sude.fw_growth_rectangle_ordinary_support
+#print axioms Sude.fw_growth_rectangle_ordinary_support
+
+#check Sude.fw_growth_active_rectangle_endpoint_iff
+#print axioms Sude.fw_growth_active_rectangle_endpoint_iff
+
+#check Sude.fw_growth_active_rectangle_ordinary_line_mass
+#print axioms Sude.fw_growth_active_rectangle_ordinary_line_mass
+
+#check Sude.stage_mass_weighted_identity
+#print axioms Sude.stage_mass_weighted_identity
+
+#check Sude.fw_four_stage_rectangle_line_split
+#print axioms Sude.fw_four_stage_rectangle_line_split
+
+#check Sude.fw_four_stage_weighted_spare_deviation
+#print axioms Sude.fw_four_stage_weighted_spare_deviation
+
+#check Sude.fw_four_stage_weighted_spare_deviation_of_theta
+#print axioms Sude.fw_four_stage_weighted_spare_deviation_of_theta
+
+#check Sude.fw_seed_source_stage_mean_alignment
+#print axioms Sude.fw_seed_source_stage_mean_alignment
+
+#check Sude.growth_trace_placed_full_stage_mean
+#print axioms Sude.growth_trace_placed_full_stage_mean
+
+#check Sude.fw_four_family_growth_stage_mean
+#print axioms Sude.fw_four_family_growth_stage_mean
+
+#check Sude.fixed_reservation_free_line_residual
+#print axioms Sude.fixed_reservation_free_line_residual
+
+#check Sude.dq_rf_completion_free_residual
+#print axioms Sude.dq_rf_completion_free_residual
+
+#check Sude.synchronized_reference_free_line_residual
+#print axioms Sude.synchronized_reference_free_line_residual
+
+#check Sude.dq_rf_reference_free_residual
+#print axioms Sude.dq_rf_reference_free_residual
+
+#check Sude.fw_grouped_stage_line_weight
+#print axioms Sude.fw_grouped_stage_line_weight
+
+#check Sude.fw_four_family_weighted_stage_reindex
+#print axioms Sude.fw_four_family_weighted_stage_reindex
+
+#check Sude.fw_seed_ordered_stage_line_bound_of_all_lines
+#print axioms Sude.fw_seed_ordered_stage_line_bound_of_all_lines
+
+#check Sude.fw_seed_ordered_stage_line_bound
+#print axioms Sude.fw_seed_ordered_stage_line_bound
+
+#check Sude.fw_growth_ordered_stage_line_bound
+#print axioms Sude.fw_growth_ordered_stage_line_bound
+
+#check Sude.fw_grouped_score_ordered_mean
+#print axioms Sude.fw_grouped_score_ordered_mean
+
+#check Sude.fw_grouped_baseline_ordered_mean
+#print axioms Sude.fw_grouped_baseline_ordered_mean
+
+#check Sude.fw_bridge_wide_ordered_mean_scores
+#print axioms Sude.fw_bridge_wide_ordered_mean_scores
+
+#check Sude.reserved_midpoint_component_arithmetic
+#print axioms Sude.reserved_midpoint_component_arithmetic
+
+#check Sude.fw_reserved_midpoint_component_assembly
+#print axioms Sude.fw_reserved_midpoint_component_assembly
+
+#check Sude.fw_reserved_midpoint_row
+#print axioms Sude.fw_reserved_midpoint_row
+
+#check Sude.fw_reserved_midpoint_column
+#print axioms Sude.fw_reserved_midpoint_column
+
+#check Sude.finite_reserved_midpoint_cancellation
+#print axioms Sude.finite_reserved_midpoint_cancellation
+
+#check Sude.injective_pair_line_weight_card
+#print axioms Sude.injective_pair_line_weight_card
+
+#check Sude.fw_physical_row_incidence
+#print axioms Sude.fw_physical_row_incidence
+
+#check Sude.fw_physical_column_incidence
+#print axioms Sude.fw_physical_column_incidence
+
+#check Sude.fw_first_band_row_residual_bound
+#print axioms Sude.fw_first_band_row_residual_bound
+
+#check Sude.fw_column_midpoint_theta_cancellation
+#print axioms Sude.fw_column_midpoint_theta_cancellation
+
+#check Sude.fixed_role_pair_line_transfer
+#print axioms Sude.fixed_role_pair_line_transfer
+
+#check Sude.fw_rebased_network_blocks
+#print axioms Sude.fw_rebased_network_blocks
+
+#check Sude.fw_completion_family_fixed
+#print axioms Sude.fw_completion_family_fixed
+
+#check Sude.fw_completion_family_invariants
+#print axioms Sude.fw_completion_family_invariants
+
+#check Sude.fw_first_band_column_residual_bound
+#print axioms Sude.fw_first_band_column_residual_bound
+
+#check Sude.fixed_reservation_same_unused_pool
+#print axioms Sude.fixed_reservation_same_unused_pool
+
+#check Sude.dq_rf_completed_same_pool_free_residual
+#print axioms Sude.dq_rf_completed_same_pool_free_residual
+
+#check Sude.dq_rf_reference_same_completed_pool_free_residual
+#print axioms Sude.dq_rf_reference_same_completed_pool_free_residual
+
+#check Sude.fw_full_reservation_formula_quarter
+#print axioms Sude.fw_full_reservation_formula_quarter
+
+#check Sude.fw_full_reservation_quarter_capacity
+#print axioms Sude.fw_full_reservation_quarter_capacity
+
+#check Sude.fw_completion_seed_growth_components
+#print axioms Sude.fw_completion_seed_growth_components
+
+#check Sude.completion_row_residual_closure
+#print axioms Sude.completion_row_residual_closure
+
+#check Sude.fw_given_reference_completion_transport
+#print axioms Sude.fw_given_reference_completion_transport
+
+#check Sude.fw_completed_first_band_row_bound
+#print axioms Sude.fw_completed_first_band_row_bound
+
+#check Sude.flow_output_completion_sync
+#print axioms Sude.flow_output_completion_sync
+
+#check Sude.fw_completed_supplied_flows
+#print axioms Sude.fw_completed_supplied_flows
+
+#check Sude.completion_column_residual_closure
+#print axioms Sude.completion_column_residual_closure
+
+#check Sude.fw_completed_first_band_column_bound
+#print axioms Sude.fw_completed_first_band_column_bound
+
+#check Sude.fw_completed_first_band_all_line_flows
+#print axioms Sude.fw_completed_first_band_all_line_flows
+
+#check Sude.fw_growth_final_paired_gap_transfer
+#print axioms Sude.fw_growth_final_paired_gap_transfer
+
+#check Sude.fw_given_theta_witness_dqrf_all_line_flows
+#print axioms Sude.fw_given_theta_witness_dqrf_all_line_flows
+
+#check Sude.fw_theta_bridge_wide_line_scores
+#print axioms Sude.fw_theta_bridge_wide_line_scores
+
+#check Sude.FWFirstBandDQRFInputs
+#print axioms Sude.FWFirstBandDQRFInputs
+
+#check Sude.fw_theta_seed_growth_line_interfaces
+#print axioms Sude.fw_theta_seed_growth_line_interfaces
+
+#check Sude.FWThetaNetworkWitness
+#print axioms Sude.FWThetaNetworkWitness
+
+#check Sude.FWThetaFamilyWitness
+#print axioms Sude.FWThetaFamilyWitness
+
+#check Sude.fw_projected_theta_dqrf_all_line_flows
+#print axioms Sude.fw_projected_theta_dqrf_all_line_flows
+
+#check Sude.FWThetaGrowthDiagonalWitness
+#print axioms Sude.FWThetaGrowthDiagonalWitness
+
+#check Sude.fw_theta_family_dqrf_inputs
+#print axioms Sude.fw_theta_family_dqrf_inputs
+
+#check Sude.fw_projected_reference_unused_mean_sigma11
+#print axioms Sude.fw_projected_reference_unused_mean_sigma11
+
+#check Sude.FWThetaRoleValueInputs
+#print axioms Sude.FWThetaRoleValueInputs
+
+#check Sude.fwThetaWitnessRoleCells
+#print axioms Sude.fwThetaWitnessRoleCells
+
+#check Sude.fw_theta_role_values_of_inputs
+#print axioms Sude.fw_theta_role_values_of_inputs
+
+#check Sude.fw_theta_projected_join_witness
+#print axioms Sude.fw_theta_projected_join_witness
+
+#check Sude.FWSelectedThetaWitness
+#print axioms Sude.FWSelectedThetaWitness
+
+#check Sude.fwSelectedThetaChoice
+#print axioms Sude.fwSelectedThetaChoice
+
+#check Sude.fwSelectedThetaWitness
+#print axioms Sude.fwSelectedThetaWitness
+
+#check Sude.fw_theta_projected_enriched_witness
+#print axioms Sude.fw_theta_projected_enriched_witness
+
+#check Sude.fw_cy_reverse_splice
+#print axioms Sude.fw_cy_reverse_splice
+
+#check Sude.FWSelectedEnrichedThetaWitness
+#print axioms Sude.FWSelectedEnrichedThetaWitness
+
+#check Sude.fwSelectedEnrichedThetaWitness
+#print axioms Sude.fwSelectedEnrichedThetaWitness
+
+#check Sude.fw_projected_cy_supplied_flows
+#print axioms Sude.fw_projected_cy_supplied_flows
+
+#check Sude.fw_projected_frozen_cy_all_line_flows
+#print axioms Sude.fw_projected_frozen_cy_all_line_flows
+
+#check Sude.fw_selected_enriched_theta_frozen_cy_all_line_flows
+#print axioms Sude.fw_selected_enriched_theta_frozen_cy_all_line_flows
+
+#check Sude.fw_growth_cy_diagonal_transfer
+#print axioms Sude.fw_growth_cy_diagonal_transfer
+
+#check Sude.fw_projected_cy_prime_targets
+#print axioms Sude.fw_projected_cy_prime_targets
+
+#check Sude.fw_growth_cy_flow_diagonal_transfer
+#print axioms Sude.fw_growth_cy_flow_diagonal_transfer
+
+#check Sude.fw_projected_cy_prime_targets_growth_diagonals
+#print axioms Sude.fw_projected_cy_prime_targets_growth_diagonals
+
+#check Sude.fw_selected_enriched_theta_cy_prime_growth_diagonals
+#print axioms Sude.fw_selected_enriched_theta_cy_prime_growth_diagonals
+
+#check Sude.fw_first_band_log_eight_le_thirteen
+#print axioms Sude.fw_first_band_log_eight_le_thirteen
+
+#check Sude.fw_first_band_bridge_sqrt_le_35
+#print axioms Sude.fw_first_band_bridge_sqrt_le_35
+
+#check Sude.fw_first_band_wide_sqrt_le_183
+#print axioms Sude.fw_first_band_wide_sqrt_le_183
+
+#check Sude.packed_label_support_subset_rectangle_support
+#print axioms Sude.packed_label_support_subset_rectangle_support
+
+#check Sude.fw_projected_cy_prime_growth_diagonal_repair
+#print axioms Sude.fw_projected_cy_prime_growth_diagonal_repair
+
+#check Sude.fw_first_band_seed_radius_le_three_halves
+#print axioms Sude.fw_first_band_seed_radius_le_three_halves
+
+#check Sude.fw_frozen_cy_line_radius_le_34
+#print axioms Sude.fw_frozen_cy_line_radius_le_34
+
+#check Sude.fw_first_band_cy_routing_budget_of_spread
+#print axioms Sude.fw_first_band_cy_routing_budget_of_spread
+
+#check Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair
+#print axioms Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair
+
+#check Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair_of_spread
+#print axioms Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair_of_spread
+
+#check Sude.fw_first_band_target_spread_lt_ten
+#print axioms Sude.fw_first_band_target_spread_lt_ten
+
+#check Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair_of_nominal_spread
+#print axioms Sude.fw_selected_enriched_theta_cy_prime_diagonal_repair_of_nominal_spread
+
+#check Sude.fw_selected_enriched_t75_nominal_repair
+#print axioms Sude.fw_selected_enriched_t75_nominal_repair
+
+#check Sude.fw_choice_seed_trace_even_grids
+#print axioms Sude.fw_choice_seed_trace_even_grids
+
+#check Sude.fw_rectangle_cy_signed_gap_transport
+#print axioms Sude.fw_rectangle_cy_signed_gap_transport
+
+#check Sude.fw_ordered_bridge_rectangle_gaps
+#print axioms Sude.fw_ordered_bridge_rectangle_gaps
+
+#check Sude.fw_ordered_wide_rectangle_gaps
+#print axioms Sude.fw_ordered_wide_rectangle_gaps
+
+#check Sude.fw_ordered_seed_rectangle_signed_gaps
+#print axioms Sude.fw_ordered_seed_rectangle_signed_gaps
+
+#check Sude.fw_ordered_growth_rectangle_signed_gaps
+#print axioms Sude.fw_ordered_growth_rectangle_signed_gaps
+
+#check Sude.fw_seed_trace_stage_mem
+#print axioms Sude.fw_seed_trace_stage_mem
+
+#check Sude.fwCanonicalChoiceRectangle
+#print axioms Sude.fwCanonicalChoiceRectangle
+
+#check Sude.fwCanonicalSeedGrowthLabel
+#print axioms Sude.fwCanonicalSeedGrowthLabel
+
+#check Sude.fw_canonical_seed_label
+#print axioms Sude.fw_canonical_seed_label
+
+#check Sude.fw_canonical_growth_label
+#print axioms Sude.fw_canonical_growth_label
+
+#check Sude.fw_canonical_seed_growth_label_injective
+#print axioms Sude.fw_canonical_seed_growth_label_injective
+
+#check Sude.fw_canonical_seed_growth_label_mem
+#print axioms Sude.fw_canonical_seed_growth_label_mem
+
+#check Sude.fw_canonical_seed_growth_label_choice
+#print axioms Sude.fw_canonical_seed_growth_label_choice
+
+#check Sude.fw_ordered_active_rectangle_signed_gaps
+#print axioms Sude.fw_ordered_active_rectangle_signed_gaps
+
+#check Sude.fwOrderedCanonicalRectangleGap
+#print axioms Sude.fwOrderedCanonicalRectangleGap
+
+#check Sude.fw_ordered_canonical_rectangle_gap
+#print axioms Sude.fw_ordered_canonical_rectangle_gap
+
+#check Sude.fw_theta_projected_cross_witness
+#print axioms Sude.fw_theta_projected_cross_witness
+
+#check Sude.FWSelectedCrossThetaWitness
+#print axioms Sude.FWSelectedCrossThetaWitness
+
+#check Sude.fwSelectedCrossThetaWitness
+#print axioms Sude.fwSelectedCrossThetaWitness
+
+#check Sude.fw_theta_projected_capacity_witness
+#print axioms Sude.fw_theta_projected_capacity_witness
+
+#check Sude.FWSelectedCapacityThetaWitness
+#print axioms Sude.FWSelectedCapacityThetaWitness
+
+#check Sude.fwSelectedCapacityThetaWitness
+#print axioms Sude.fwSelectedCapacityThetaWitness
+
+#check Sude.fw_canonical_seed_growth_label_gap
+#print axioms Sude.fw_canonical_seed_growth_label_gap
+
+#check Sude.fw_canonical_cy_seed_growth_grids
+#print axioms Sude.fw_canonical_cy_seed_growth_grids
+
+#check Sude.fw_selected_capacity_theta_frozen_cy_all_line_flows
+#print axioms Sude.fw_selected_capacity_theta_frozen_cy_all_line_flows
+
+#check Sude.fw_selected_capacity_cy_choice_grids
+#print axioms Sude.fw_selected_capacity_cy_choice_grids
+#check Sude.fw_selected_capacity_nominal_cy_targets
+#print axioms Sude.fw_selected_capacity_nominal_cy_targets
+#check Sude.fw_selected_capacity_seed_chain_cy_targets
+#print axioms Sude.fw_selected_capacity_seed_chain_cy_targets
+#check Sude.fw_selected_capacity_seed_chain_cy_diagonal_repair
+#print axioms Sude.fw_selected_capacity_seed_chain_cy_diagonal_repair
+#check Sude.packed_prime_diagonal_repair_reachable_target
+#print axioms Sude.packed_prime_diagonal_repair_reachable_target
+#check Sude.fw_selected_capacity_seed_chain_cy_reachable_prime
+#print axioms Sude.fw_selected_capacity_seed_chain_cy_reachable_prime
+#check Sude.target_mean_forward_reachable
+#print axioms Sude.target_mean_forward_reachable
+#check Sude.t75_fixed_prime_insertion
+#print axioms Sude.t75_fixed_prime_insertion
+#check Sude.fw_selected_capacity_fixed_prime_repair
+#print axioms Sude.fw_selected_capacity_fixed_prime_repair
+#check Sude.fw_selected_capacity_free_diagonal_prime
+#print axioms Sude.fw_selected_capacity_free_diagonal_prime
+#check Sude.fw_selected_capacity_tp2_prime_repair
+#print axioms Sude.fw_selected_capacity_tp2_prime_repair
+#check Sude.fw_selected_capacity_mean_window_cy_prime
+#print axioms Sude.fw_selected_capacity_mean_window_cy_prime
+
+#check Sude.fw_theta_bridge_source_gap
+#print axioms Sude.fw_theta_bridge_source_gap
+
+#check Sude.fw_theta_wide_source_gap
+#print axioms Sude.fw_theta_wide_source_gap
+
+#check Sude.t75_prime_of_theta_increment_pos
+#print axioms Sude.t75_prime_of_theta_increment_pos
+
+#check Sude.t75_unit_brackets_of_theta_increments
+#print axioms Sude.t75_unit_brackets_of_theta_increments
+
+#check Sude.choice_fiber_complete_even_grids
+#print axioms Sude.choice_fiber_complete_even_grids
+#check Sude.fw_canonical_seed_growth_ne_bridge
+#print axioms Sude.fw_canonical_seed_growth_ne_bridge
+#check Sude.fw_canonical_seed_growth_ne_wide
+#print axioms Sude.fw_canonical_seed_growth_ne_wide
+#check Sude.fw_canonical_bridge_ne_wide
+#print axioms Sude.fw_canonical_bridge_ne_wide
+#check Sude.fwCanonicalFamilySourceSupport
+#print axioms Sude.fwCanonicalFamilySourceSupport
+#check Sude.fw_canonical_family_source_seed_mem
+#print axioms Sude.fw_canonical_family_source_seed_mem
+#check Sude.fw_canonical_family_source_bridge_mem
+#print axioms Sude.fw_canonical_family_source_bridge_mem
+#check Sude.fw_canonical_family_source_wide_mem
+#print axioms Sude.fw_canonical_family_source_wide_mem
+#check Sude.fwCanonicalFamilyLabel
+#print axioms Sude.fwCanonicalFamilyLabel
+#check Sude.fw_canonical_family_label_embedding
+#print axioms Sude.fw_canonical_family_label_embedding
+#check Sude.fwCanonicalFamilyDestination
+#print axioms Sude.fwCanonicalFamilyDestination
+#check Sude.fwCanonicalFamilySourceGap
+#print axioms Sude.fwCanonicalFamilySourceGap
+#check Sude.fw_canonical_family_gap_alignment
+#print axioms Sude.fw_canonical_family_gap_alignment
+#check Sude.fwCanonicalFamilyRadius
+#print axioms Sude.fwCanonicalFamilyRadius
+#check Sude.fw_canonical_family_choice_grids
+#print axioms Sude.fw_canonical_family_choice_grids
+
+#check Sude.fw_canonical_cy_family_choice_grids
+#print axioms Sude.fw_canonical_cy_family_choice_grids
+#check Sude.fw_selected_capacity_cy_family_grids
+#print axioms Sude.fw_selected_capacity_cy_family_grids
+
+#check Sude.fw_selected_capacity_fixed_prime_family_repair
+#print axioms Sude.fw_selected_capacity_fixed_prime_family_repair
+
+#check Sude.equal_card_centered_baseline_difference
+#print axioms Sude.equal_card_centered_baseline_difference
+#check Sude.equal_card_centered_baseline_error
+#print axioms Sude.equal_card_centered_baseline_error
+#check Sude.fw_selected_capacity_cy_diagonal_difference
+#print axioms Sude.fw_selected_capacity_cy_diagonal_difference
+#check Sude.active_rectangle_main_cells
+#print axioms Sude.active_rectangle_main_cells
+#check Sude.active_rectangle_anti_cells
+#print axioms Sude.active_rectangle_anti_cells
+#check Sude.active_rectangle_diagonal_cards
+#print axioms Sude.active_rectangle_diagonal_cards
+#check Sude.fwSelectedSpareSideLabel
+#print axioms Sude.fwSelectedSpareSideLabel
+#check Sude.fw_selected_spare_choice_count
+#print axioms Sude.fw_selected_spare_choice_count
+#check Sude.fw_growth_cy_diagonal_difference
+#print axioms Sude.fw_growth_cy_diagonal_difference
+#check Sude.fw_selected_spare_diagonal_bound
+#print axioms Sude.fw_selected_spare_diagonal_bound
+
+#check Sude.fwSelectedChoiceBlockCount
+#print axioms Sude.fwSelectedChoiceBlockCount
+#check Sude.fwSelectedFullBlockLabel
+#print axioms Sude.fwSelectedFullBlockLabel
+#check Sude.fw_selected_choice_by_block
+#print axioms Sude.fw_selected_choice_by_block
+#check Sude.fwSelectedFullSideLabel
+#print axioms Sude.fwSelectedFullSideLabel
+#check Sude.fw_selected_choice_full_balance
+#print axioms Sude.fw_selected_choice_full_balance
+#check Sude.fw_selected_full_diagonal_counts
+#print axioms Sude.fw_selected_full_diagonal_counts
+
+#check Sude.stageHalfGapScore
+#print axioms Sude.stageHalfGapScore
+#check Sude.stage_half_gap_proxy
+#print axioms Sude.stage_half_gap_proxy
+#check Sude.stage_half_gap_two_sided
+#print axioms Sude.stage_half_gap_two_sided
+#check Sude.product_probability_three_events_select
+#print axioms Sude.product_probability_three_events_select
+#check Sude.stage_swap_three_events_select
+#print axioms Sude.stage_swap_three_events_select
+#check Sude.stage_half_gap_score_difference
+#print axioms Sude.stage_half_gap_score_difference
+
+#check Sude.stage_half_gap_log_budget
+#print axioms Sude.stage_half_gap_log_budget
+#check Sude.joint_stage_midpoint_gap_selection
+#print axioms Sude.joint_stage_midpoint_gap_selection
+
+#check Sude.fwWideSignedGapRectangle
+#print axioms Sude.fwWideSignedGapRectangle
+#check Sude.fwWideSignedGapSlot
+#print axioms Sude.fwWideSignedGapSlot
+#check Sude.fwWideSignedGapSlots
+#print axioms Sude.fwWideSignedGapSlots
+#check Sude.fw_wide_signed_gap_slot_injective
+#print axioms Sude.fw_wide_signed_gap_slot_injective
+#check Sude.fw_wide_signed_gap_slots_card_disjoint
+#print axioms Sude.fw_wide_signed_gap_slots_card_disjoint
+#check Sude.fw_wide_signed_gap_controller_index
+#print axioms Sude.fw_wide_signed_gap_controller_index
+#check Sude.fw_wide_source_gap_interval
+#print axioms Sude.fw_wide_source_gap_interval
+
+#check Sude.stage_swap_product_integral_eq_average
+#print axioms Sude.stage_swap_product_integral_eq_average
+#check Sude.stage_swap_failure_bound
+#print axioms Sude.stage_swap_failure_bound
+#check Sude.double_block_log_midpoint_failure_bound
+#print axioms Sude.double_block_log_midpoint_failure_bound
+
+#check Sude.fw_fresh_wide_midpoint_gap_selection
+#print axioms Sude.fw_fresh_wide_midpoint_gap_selection
+
+#check Sude.fw_wide_balanced_physical_centered_gap
+#print axioms Sude.fw_wide_balanced_physical_centered_gap
+
+#check Sude.fw_fresh_wide_physical_centered_selection
+#print axioms Sude.fw_fresh_wide_physical_centered_selection
+
+#check Sude.fw_protected_double_block_fresh_wide_reallocation
+#print axioms Sude.fw_protected_double_block_fresh_wide_reallocation
+
+#check Sude.fw_protected_double_block_fresh_wide_mass_reallocation
+#print axioms Sude.fw_protected_double_block_fresh_wide_mass_reallocation
+
+#check Sude.fw_balanced_all_line_fresh_wide_reallocation
+#print axioms Sude.fw_balanced_all_line_fresh_wide_reallocation
+
+#check Sude.bmor_fw_seed_bridge_wide_fresh_gap_radius_upper_of_theta
+#print axioms Sude.bmor_fw_seed_bridge_wide_fresh_gap_radius_upper_of_theta
+
+#check Sude.bmor_fw_growth_fresh_wide_gap_radius_upper_of_theta
+#print axioms Sude.bmor_fw_growth_fresh_wide_gap_radius_upper_of_theta
+
+#check Sude.fw_first_band_active_diagonal_numeric_invoice
+#print axioms Sude.fw_first_band_active_diagonal_numeric_invoice
+#check Sude.fw_first_band_active_diagonal_capacity
+#print axioms Sude.fw_first_band_active_diagonal_capacity
+
+#check Sude.bmor_fw_growth_all_line_midpoint_reference_radius_upper_of_theta
+#print axioms Sude.bmor_fw_growth_all_line_midpoint_reference_radius_upper_of_theta
+
+#check Sude.bmor_fw_all_family_fresh_wide_gap_radius_upper_of_theta
+#print axioms Sude.bmor_fw_all_family_fresh_wide_gap_radius_upper_of_theta
+
+#check Sude.FWThetaFreshWideProjection
+#print axioms Sude.FWThetaFreshWideProjection
+#check Sude.fw_theta_projected_fresh_wide_witness
+#print axioms Sude.fw_theta_projected_fresh_wide_witness
+
+#check Sude.fw_first_window_schedule_radius_upper
+#print axioms Sude.fw_first_window_schedule_radius_upper
+#check Sude.fw_full_stock_schedule_radius_upper
+#print axioms Sude.fw_full_stock_schedule_radius_upper
+#check Sude.fw_enhanced_first_four_stop_or_complete_of_charge_radius_upper
+#print axioms Sude.fw_enhanced_first_four_stop_or_complete_of_charge_radius_upper
+#check Sude.fw_enhanced_last_four_stop_or_complete_radius_upper
+#print axioms Sude.fw_enhanced_last_four_stop_or_complete_radius_upper
+#check Sude.fw_enhanced_eight_stop_or_complete_with_radius_upper
+#print axioms Sude.fw_enhanced_eight_stop_or_complete_with_radius_upper
+#check Sude.fw_enhanced_from_seed_stop_or_complete_of_theta_radius_upper
+#print axioms Sude.fw_enhanced_from_seed_stop_or_complete_of_theta_radius_upper
+#check Sude.fw_bt16_chosen_iterate_first_band_radius_upper
+#print axioms Sude.fw_bt16_chosen_iterate_first_band_radius_upper
+#check Sude.fw_enhanced_from_seed_bt16_crossing_of_theta_radius_upper
+#print axioms Sude.fw_enhanced_from_seed_bt16_crossing_of_theta_radius_upper
+#check Sude.fw_bounded_crossing_center_lt_nominal_spread
+#print axioms Sude.fw_bounded_crossing_center_lt_nominal_spread
+#check Sude.fw_bounded_crossing_window_gate_impossible
+#print axioms Sude.fw_bounded_crossing_window_gate_impossible
+
+#check Sude.bmor_fw_enhanced_crossing_physical_of_theta_radius_upper
+#print axioms Sude.bmor_fw_enhanced_crossing_physical_of_theta_radius_upper
+#check Sude.bmor_fw_enhanced_crossing_joint_physical_of_theta_radius_upper
+#print axioms Sude.bmor_fw_enhanced_crossing_joint_physical_of_theta_radius_upper
+
+#check Sude.bmor_fw_enhanced_crossing_joint_switches_of_theta_radius_upper
+#print axioms Sude.bmor_fw_enhanced_crossing_joint_switches_of_theta_radius_upper
+
+#check Sude.bmor_fw_enhanced_crossing_actual_grids_of_theta_radius_upper
+#print axioms Sude.bmor_fw_enhanced_crossing_actual_grids_of_theta_radius_upper
+#check Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_invoice_of_theta_radius_upper
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_invoice_of_theta_radius_upper
+
+#check Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_gap_totals_of_theta_radius_upper
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_strong_wide_gap_totals_of_theta_radius_upper
+
+#check Sude.bmor_fw_actual_grids_supplied_flows_with_physical_midpoints_of_theta_radius_upper
+#print axioms Sude.bmor_fw_actual_grids_supplied_flows_with_physical_midpoints_of_theta_radius_upper
+
+#check Sude.bmor_fw_seed_source_concentration_of_theta_radius_upper
+#print axioms Sude.bmor_fw_seed_source_concentration_of_theta_radius_upper
+
+#check Sude.bmor_fw_seed_concentration_fresh_invoice_of_theta_radius_upper
+#print axioms Sude.bmor_fw_seed_concentration_fresh_invoice_of_theta_radius_upper
+
+#check Sude.bmor_fw_seed_concentration_fresh_midpoints_of_theta_radius_upper
+#print axioms Sude.bmor_fw_seed_concentration_fresh_midpoints_of_theta_radius_upper
+
+#check Sude.bmor_fw_seed_fresh_midpoints_role_values_of_theta_radius_upper
+#print axioms Sude.bmor_fw_seed_fresh_midpoints_role_values_of_theta_radius_upper
+
+#check Sude.bmor_fw_seed_fresh_active_role_midpoints_of_theta_radius_upper
+#print axioms Sude.bmor_fw_seed_fresh_active_role_midpoints_of_theta_radius_upper
+
+#check Sude.spare_greedy_sign_balance
+#print axioms Sude.spare_greedy_sign_balance
+#check Sude.spare_greedy_pair_balance
+#print axioms Sude.spare_greedy_pair_balance
+#check Sude.fw_first_band_nominal_spread_lt_nine
+#print axioms Sude.fw_first_band_nominal_spread_lt_nine
+#check Sude.fw_first_band_cy_routing_budget_with_spare_perturbation
+#print axioms Sude.fw_first_band_cy_routing_budget_with_spare_perturbation
+#check Sude.fw_first_band_nominal_routing_budget_with_spare_perturbation
+#print axioms Sude.fw_first_band_nominal_routing_budget_with_spare_perturbation
+
+#check Sude.off_roles_perm_outside
+#print axioms Sude.off_roles_perm_outside
+#check Sude.off_roles_perm_difference
+#print axioms Sude.off_roles_perm_difference
+#check Sude.off_roles_perm_agreement
+#print axioms Sude.off_roles_perm_agreement
+#check Sude.off_roles_perm_line_difference
+#print axioms Sude.off_roles_perm_line_difference
+#check Sude.off_roles_perm_physical_differences
+#print axioms Sude.off_roles_perm_physical_differences
+
+#check Sude.sparePairChoicePerm
+#print axioms Sude.sparePairChoicePerm
+#check Sude.spare_paired_cell_permutation
+#print axioms Sude.spare_paired_cell_permutation
+
+#check Sude.single_move_line_sum_bound
+#print axioms Sude.single_move_line_sum_bound
+#check Sude.fwSelectedSparePairCell
+#print axioms Sude.fwSelectedSparePairCell
+#check Sude.fw_selected_spare_side_choice
+#print axioms Sude.fw_selected_spare_side_choice
+#check Sude.fw_selected_spare_side_mem
+#print axioms Sude.fw_selected_spare_side_mem
+#check Sude.fw_selected_spare_side_injective
+#print axioms Sude.fw_selected_spare_side_injective
+#check Sude.fw_selected_spare_pair_cell_injective
+#print axioms Sude.fw_selected_spare_pair_cell_injective
+#check Sude.fw_selected_spare_pair_cell_diagonal
+#print axioms Sude.fw_selected_spare_pair_cell_diagonal
+#check Sude.fw_selected_spare_pair_line_injective
+#print axioms Sude.fw_selected_spare_pair_line_injective
+#check Sude.fw_selected_spare_side_labels
+#print axioms Sude.fw_selected_spare_side_labels
+#check Sude.fw_selected_spare_pair_cell_images
+#print axioms Sude.fw_selected_spare_pair_cell_images
+
+#check Sude.off_reservation_perm_image
+#print axioms Sude.off_reservation_perm_image
+#check Sude.off_support_reservation_value_images
+#print axioms Sude.off_support_reservation_value_images
+
+#check Sude.fw_selected_spare_rebalance
+#print axioms Sude.fw_selected_spare_rebalance
+
+#check Sude.spare_conjugated_flow_output
+#print axioms Sude.spare_conjugated_flow_output
+#check Sude.spare_conjugated_supplied_flows
+#print axioms Sude.spare_conjugated_supplied_flows
+#check Sude.fw_spare_perturbed_nominal_target_routing
+#print axioms Sude.fw_spare_perturbed_nominal_target_routing
+
+#check Sude.fw_supplied_cy_spare_rebalance
+#print axioms Sude.fw_supplied_cy_spare_rebalance
+#check Sude.fw_spare_conjugated_nominal_target_routing
+#print axioms Sude.fw_spare_conjugated_nominal_target_routing
+
+#check Sude.fw_supplied_cy_spare_nominal_target_routing
+#print axioms Sude.fw_supplied_cy_spare_nominal_target_routing
+
+#check Sude.fw_projected_cy_spare_nominal_target_routing
+#print axioms Sude.fw_projected_cy_spare_nominal_target_routing
+
+#check Sude.fw_selected_capacity_cy_spare_nominal_target_routing
+#print axioms Sude.fw_selected_capacity_cy_spare_nominal_target_routing
+
+#check Sude.fw_selected_capacity_cy_spare_output_grids
+#print axioms Sude.fw_selected_capacity_cy_spare_output_grids
+
+#check Sude.reservation_line_error_perm
+#print axioms Sude.reservation_line_error_perm
+#check Sude.supplied_cy_reservation_perm_diagonal_errors
+#print axioms Sude.supplied_cy_reservation_perm_diagonal_errors
+#check Sude.fw_projected_cy_spare_nominal_target_baseline
+#print axioms Sude.fw_projected_cy_spare_nominal_target_baseline
+#check Sude.fw_projected_cy_spare_transported_target_baseline
+#print axioms Sude.fw_projected_cy_spare_transported_target_baseline
+
+#check Sude.centered_baseline_split_spare_error
+#print axioms Sude.centered_baseline_split_spare_error
+#check Sude.fw_projected_cy_spare_active_diagonal_difference
+#print axioms Sude.fw_projected_cy_spare_active_diagonal_difference
+
+#check Sude.spare_perm_active_reference_difference
+#print axioms Sude.spare_perm_active_reference_difference
+#check Sude.fw_projected_cy_spare_original_active_difference
+#print axioms Sude.fw_projected_cy_spare_original_active_difference
+
+#check Sude.fw_projected_cy_spare_original_active_output_grids
+#print axioms Sude.fw_projected_cy_spare_original_active_output_grids
+
+#check Sude.fw_seed_physical_side_label_injective
+#print axioms Sude.fw_seed_physical_side_label_injective
+#check Sude.fw_seed_physical_side_corner_eq_pair
+#print axioms Sude.fw_seed_physical_side_corner_eq_pair
+#check Sude.fw_seed_physical_labels_eq_image
+#print axioms Sude.fw_seed_physical_labels_eq_image
+#check Sude.fw_selected_seed_physical_side_choice
+#print axioms Sude.fw_selected_seed_physical_side_choice
+#check Sude.fw_seed_physical_side_labels
+#print axioms Sude.fw_seed_physical_side_labels
+#check Sude.fw_seed_physical_diagonal_cells
+#print axioms Sude.fw_seed_physical_diagonal_cells
+#check Sude.fw_seed_physical_diagonal_sum
+#print axioms Sude.fw_seed_physical_diagonal_sum
+#check Sude.fw_seed_signed_diagonal_of_equal_invoices
+#print axioms Sude.fw_seed_signed_diagonal_of_equal_invoices
+#check Sude.fw_first_band_twice_seed_radius_le_three_pool
+#print axioms Sude.fw_first_band_twice_seed_radius_le_three_pool
+#check Sude.fw_seed_prescribed_diagonal_difference
+#print axioms Sude.fw_seed_prescribed_diagonal_difference
+#check Sude.fw_seed_prescribed_first_band_diagonal_difference
+#print axioms Sude.fw_seed_prescribed_first_band_diagonal_difference
+#check Sude.fw_seed_existing_main_weight_sum
+#print axioms Sude.fw_seed_existing_main_weight_sum
+#check Sude.fw_seed_existing_anti_weight_sum
+#print axioms Sude.fw_seed_existing_anti_weight_sum
+#check Sude.LayerPacking.PackedLayers.prefix
+#print axioms Sude.LayerPacking.PackedLayers.prefix
+#check Sude.LayerPacking.PackedLayers.suffix
+#print axioms Sude.LayerPacking.PackedLayers.suffix
+#check Sude.LayerPacking.PackedLayers.segment
+#print axioms Sude.LayerPacking.PackedLayers.segment
+
+#check Sude.fw_seed_reference_diagonal_support
+#print axioms Sude.fw_seed_reference_diagonal_support
+
+#check Sude.fw_theta_fresh_spare_output_grids
+#print axioms Sude.fw_theta_fresh_spare_output_grids
+
+#check Sude.fw_seed_reference_support_sum
+#print axioms Sude.fw_seed_reference_support_sum
+
+#check Sude.fw_seed_reference_first_band_diagonal_difference
+#print axioms Sude.fw_seed_reference_first_band_diagonal_difference

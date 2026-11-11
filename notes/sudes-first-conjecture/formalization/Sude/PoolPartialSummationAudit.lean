@@ -1,0 +1,26 @@
+import Sude.OddPrimeCountTranslation
+import Sude.PoolCountMeanBounds
+import Sude.PoolPartialSummation
+
+#check Sude.finite_count_partial_summation
+#print axioms Sude.finite_count_partial_summation
+#check Sude.oddPrimePrefix_poolMaximum_card
+#print axioms Sude.oddPrimePrefix_poolMaximum_card
+#check Sude.oddPrimePool_weighted_partial_summation
+#print axioms Sude.oddPrimePool_weighted_partial_summation
+#check Sude.oddPrimePool_total_count_identity
+#print axioms Sude.oddPrimePool_total_count_identity
+
+#check Sude.oddPrimePool_mean_bounds_of_count_envelopes
+#print axioms Sude.oddPrimePool_mean_bounds_of_count_envelopes
+#check Sude.oddPrimePool_mean_error_of_count_approximation
+#print axioms Sude.oddPrimePool_mean_error_of_count_approximation
+
+#check Sude.oddPrimePrefix_card_eq_primeCounting_sub_one
+#print axioms Sude.oddPrimePrefix_card_eq_primeCounting_sub_one
+#check Sude.oddPrimePrefix_card_real_eq_primeCounting
+#print axioms Sude.oddPrimePrefix_card_real_eq_primeCounting
+#check Sude.primeCounting_poolMaximum
+#print axioms Sude.primeCounting_poolMaximum
+#check Sude.oddPrimePool_total_primeCounting_identity
+#print axioms Sude.oddPrimePool_total_primeCounting_identity

@@ -1,0 +1,4 @@
+import Sude.FWSeedActiveStageCancellationOfTheta
+
+#check Sude.bmor_fw_seed_active_stage_cancellation_of_theta
+#print axioms Sude.bmor_fw_seed_active_stage_cancellation_of_theta

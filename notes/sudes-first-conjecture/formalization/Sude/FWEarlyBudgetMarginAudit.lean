@@ -1,0 +1,16 @@
+import Sude.FWEarlyBudgetSharp
+
+/-! Audit the conditional FW10 budget margin and rounded gate. -/
+
+#check Sude.fw_early_budget_real_margin
+#print axioms Sude.fw_early_budget_real_margin
+#check Sude.fw_early_budget_floored_square_gate
+#print axioms Sude.fw_early_budget_floored_square_gate
+#check Sude.fw_early_budget_real_margin_of_twenty_one
+#print axioms Sude.fw_early_budget_real_margin_of_twenty_one
+#check Sude.fw_early_budget_floored_square_gate_of_twenty_one
+#print axioms Sude.fw_early_budget_floored_square_gate_of_twenty_one
+#check Sude.fw_early_budget_real_margin_of_sharp_index
+#print axioms Sude.fw_early_budget_real_margin_of_sharp_index
+#check Sude.fw_early_budget_floored_square_gate_of_sharp_index
+#print axioms Sude.fw_early_budget_floored_square_gate_of_sharp_index

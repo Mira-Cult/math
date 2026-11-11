@@ -15,6 +15,29 @@ Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that ev
 
 The theorem is conventional computer-assisted mathematics with internal nonauthor review and independently reproduced exact checks. It is not an end-to-end Lean proof or a claim of external referee acceptance. The named analytic results, including published finite zero verifications, remain explicit imports. See [the resolution's import map](resolution.md#5-explicit-external-imports) and [reproduction instructions](resolution.md#6-reproduce-the-computational-component).
 
+## Research writeup and Lean source (11 November 2026)
+
+The [research writeup](research-writeup.md) explains the exact-pool theorem,
+its construction, range joins and correspondence with the
+[released Lean source](formalization/). The [source package guide](SOURCE-PACKAGE.md)
+and [manifest](source-manifest.json) identify the exact sources, pinned
+dependencies, finite replay and original-layout regeneration inputs.
+
+The Lean all-odd endpoint is conditional on **16 explicit premises**:
+`FiniteWitness` and 15 named published analytic propositions. The complete
+strict finite replay and foundational statement checks were independently
+repeated. The full Lean build and endpoint audit remain producer-reported;
+this release does not claim an independently rebuilt, assumption-free
+end-to-end formal proof or external referee acceptance.
+
+[Section 8](research-writeup.md#8-relationship-to-the-older-public-proof-packet)
+separately documents a restricted q4 prime-count correction for the older
+packet's BMOR citation and lower endpoint, with the inspected applications'
+constants unchanged. It is not an official erratum or an independent rerun
+of BMOR's finite computations. The historical resolution, proof sources and
+frozen packet remain unchanged. This release supplies the research writeup
+and source package, not the separate mathematical paper.
+
 ## Best reviewed bound for each family
 
 Bounds are sufficient, not claimed optimal. The research bounds below are the latest internally reviewed results; the cube and 4D improved-bound manuscripts are not yet publicly reproduced. Their older public expositions remain available below.

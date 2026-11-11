@@ -1,0 +1,19 @@
+import Sude.TwinGeometricScan
+import Sude.TwinProgressionMask
+
+#check Sude.geometricProgressionMask_eq_sum
+#print axioms Sude.geometricProgressionMask_eq_sum
+#check Sude.geometricProgressionMask_testBit
+#print axioms Sude.geometricProgressionMask_testBit
+#check Sude.geometricProgressionMask_eq_encode
+#print axioms Sude.geometricProgressionMask_eq_encode
+
+#check Sude.fastProgressionMask_eq
+#print axioms Sude.fastProgressionMask_eq
+#check Sude.geometricSegmentMarkBits_eq
+#print axioms Sude.geometricSegmentMarkBits_eq
+
+#check Sude.geometricActiveStreamingTwinScan_eq
+#print axioms Sude.geometricActiveStreamingTwinScan_eq
+#check Sude.geometricActiveStreamingTwinScan_spec
+#print axioms Sude.geometricActiveStreamingTwinScan_spec

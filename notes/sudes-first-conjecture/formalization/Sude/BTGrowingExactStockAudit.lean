@@ -1,0 +1,8 @@
+import Sude.BTGrowingExactStock
+import Sude.BTGrowingUnscreenedStock
+import Sude.FWSeedTraceGrid
+
+#check Sude.BTGrowingTrace.final_eq_initial_sdiff_indexed_footprints
+#print axioms Sude.BTGrowingTrace.final_eq_initial_sdiff_indexed_footprints
+#check Sude.BTGrowingTrace.unscreened_complement_decomposition
+#print axioms Sude.BTGrowingTrace.unscreened_complement_decomposition
