@@ -1,0 +1,837 @@
+% Canonical mathematical source. Compile outside the repository tree.
+\documentclass[11pt]{article}
+\usepackage[TU]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Sude's prime-sum squares},pdfsubject={A construction step by step},pdfauthor={Mira}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\title{Sude's prime-sum squares\\[0.3em]\large A construction step by step}
+\author{Mira}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Sude's square problem asks whether the first \(n^2\) odd primes can be arranged
+in an \(n\times n\) square so that every row, every column and both main diagonals
+have prime sums, with each prime used exactly once. We follow the large-order
+construction through three stages. First, choose prime targets for the row
+and column sums with the correct total: nearby prime choices leave a small
+error, which a reserved set of choices corrects exactly. Second, place the
+prescribed entries, reserving pairs whose swaps transfer amounts between line
+sums; an integer-flow argument selects swaps that attain the targets. Third,
+use reserved rectangle swaps to make both diagonal sums equal to a common
+prime without changing any row or column sum. We prove the combinatorial steps
+as they arise, explain the bounds they require, and state the quantitative
+prime-supply and placement results used to meet those bounds. Together with
+exact certificates for the 1,000 odd orders below 2000, the cited construction
+results give the all-odd conclusion under the specified analytic and finite inputs.
+\end{abstract}
+
+\section{The square we want to build}\label{sec:problem}
+
+Let \(n\) be a positive integer, the number of rows and columns of the square;
+we call \(n\) its \emph{order}. Let \(p_j\) be the \(j\)th prime, with
+\(p_1=2\), and set
+\[
+ P_n=\{p_2,p_3,\ldots,p_{n^2+1}\}.
+\]
+An arrangement is a bijection
+\(A:\{0,\ldots,n-1\}^2\longrightarrow P_n\). Write
+\[
+ R_i(A)=\sum_{j=0}^{n-1}A(i,j),\qquad
+ C_j(A)=\sum_{i=0}^{n-1}A(i,j)
+\]
+for its row and column sums, and
+\[
+ D_+(A)=\sum_{i=0}^{n-1}A(i,i),\qquad
+ D_-(A)=\sum_{i=0}^{n-1}A(i,n-1-i)
+\]
+for its main-diagonal and antidiagonal sums. We require all \(2n+2\) of these
+labelled sums to be prime. They may repeat. At \(n=1\), all four labels refer
+to the entry 3.
+
+Odd order is necessary: when \(n\ge2\) is even, every row sum is even and
+at least \(3n>2\). At order 3 there is, for example, the square
+\[
+ \begin{pmatrix}7&5&19\\13&11&29\\17&3&23\end{pmatrix}.
+\]
+Its row sums are \(31,53,43\), its column sums are \(37,19,71\), and its diagonal
+sums are \(41,47\). These use exactly the first nine odd primes.
+
+The construction below concerns a fixed odd order \(n\ge2001\). We first choose
+the prime sums we want. We then prepare one arrangement with enough reserved
+swaps to attain those sums, and finally use a different family of swaps for
+the diagonals. All estimates refer to this same arrangement. The smaller odd
+orders are handled by the finite certificates in Section~\ref{sec:allorders}.
+
+We prove the elementary selection, switching and routing arguments in this
+paper. The large prime-supply estimates and the joint placement and completion
+bounds are used as quantitative results of the supporting construction
+\cite[Sections 3--4]{Companion}, with the published analytic inputs collected
+in Appendix~\ref{app:inputs}. Their role is stated where each is needed.
+Thus the walkthrough explains how the supplied objects produce a square,
+without treating the long quantitative estimates as consequences of the
+short combinatorial lemmas alone.
+
+\section{First choose the prime sums}\label{sec:targets}
+
+Let
+\[
+ T=\sum_{p\in P_n}p,\qquad X=\max P_n,\qquad y=T/n.
+\]
+Every arrangement has total row sum \(T\) and total column sum \(T\). Thus \(y\)
+is the common average of the row sums and of the column sums; the average
+\emph{entry} is \(T/n^2\). We aim to choose odd primes \(t_0,\ldots,t_{n-1}\)
+with
+\begin{equation}\label{eq:targets}
+ \sum_i t_i=T,\qquad |t_i-y|\le D,
+\end{equation}
+where \(D\ge0\) is a target radius. We will use the same vector for the row and
+column sums. Target values may repeat and need not belong to \(P_n\): they
+are sums of entries, not entries to be placed.
+
+The exact total is indispensable. For the nine-entry pool above, \(T=127\),
+so choosing three target sums of 43 cannot work, although each target is prime.
+The triple \((41,43,43)\) has the right total. That observation supplies targets,
+not yet a placement attaining them.
+
+\subsection{Choose near the mean, then correct the total}
+
+Choosing primes near \(y\) independently need not give total \(T\). Instead,
+reserve some target positions for a final exact correction. The other positions
+can be filled greedily without allowing their total error to accumulate.
+
+\begin{lemma}[Greedy prime brackets]\label{lem:brackets}
+Suppose each of \(m\) positions has two permitted values \(\ell_i,u_i\) with
+\(y-D\le\ell_i\le y\le u_i\le y+D\). One can choose one value at each position
+so that their sum \(V\) satisfies \(|V-my|\le D\).
+If \(\ell_i\equiv u_i\pmod h\) at every position, the chosen sum also satisfies
+\(V\equiv\sum_i\ell_i\pmod h\).
+\end{lemma}
+\begin{proof}
+Start with discrepancy zero. When the discrepancy of the choices already made
+from their prescribed mean is nonnegative, choose the next lower value;
+otherwise choose the upper value. If the old discrepancy lies in \([0,D]\),
+adding \(\ell_i-y\in[-D,0]\) keeps it in \([-D,D]\). If it lies in \([-D,0)\),
+adding \(u_i-y\in[0,D]\) does the same. Induction proves the error bound. The
+congruence is unchanged by either choice at each position.
+\end{proof}
+
+At each of the remaining \(s=n-m\) positions, suppose we have two odd primes
+\(a_j,a_j+g_j\) in \([y-D,y+D]\), where \(g_j\ge0\). Initially choose every
+\(a_j\), and put \(L=\sum_j a_j\). Replacing selected lower choices by their
+upper choices adds a subset sum of the gaps \(g_j\).
+
+Both groups of positions offer a lower and an upper prime. Their roles differ:
+the first \(m\) choices are made greedily to keep their sum \(V\) close to
+\(my\), while the other \(s\) choices are reserved until \(V\) is known and
+then used to correct the total exactly. The reserved pairs need not individually
+straddle \(y\); it is their combined gap coverage that matters.
+
+\begin{lemma}[Exact total from a correction interval]\label{lem:exact-targets}
+Let \(T=ny\) be an integer and \(m+s=n\). Suppose the \(m\) positions of
+Lemma~\ref{lem:brackets} offer odd primes in \([y-D,y+D]\), and let \(V\) be
+the sum selected by its greedy procedure. Suppose the \(s\) reserved pairs
+\(a_j,a_j+g_j\) also consist of odd primes in that interval. Let \(h\) be a
+positive integer. Assume the reserved gaps \(g_j\) have subset sums containing every
+multiple of \(h\) in an integer interval \([a,b]\), where \(0\le a\le b\), and
+\begin{equation}\label{eq:target-margin}
+ a+D\le sy-L,\qquad sy-L+D\le b.
+\end{equation}
+If \(V\equiv T-L\pmod h\), one can select a prime from each reserved pair so
+that, together with the \(m\) greedily selected primes, they give \(n\) targets
+satisfying \eqref{eq:targets}.
+\end{lemma}
+\begin{proof}
+The amount still needed is \(r=T-V-L\). Since
+\[
+ r=sy-L-(V-my),
+\]
+Lemma~\ref{lem:brackets} and \eqref{eq:target-margin} give \(a\le r\le b\).
+The congruence gives \(h\mid r\). Choose a subset \(J\) with
+\(\sum_{j\in J}g_j=r\), and use the upper prime precisely at those positions.
+The total is now \(V+L+r=T\); every chosen value is still an odd prime within
+\(D\) of \(y\).
+\end{proof}
+
+In the simplest case \(h=2\), the required congruence is automatic. The total
+\(T\) is a sum of \(n^2\) odd numbers, so \(T\equiv n\pmod2\), whereas
+\(V+L\equiv m+s=n\pmod2\). The residual is therefore even. At \(n=3\),
+\(y=127/3\), take \(D=4/3\), one bracket \((41,43)\) for the greedy step,
+and two copies of \((41,43)\) reserved for correction. The greedy step chooses
+41. The residual above the three lower choices is \(127-123=4\); choosing 43
+from both reserved pairs gives \((41,43,43)\). Repeating a prime here is allowed
+because these are target sums.
+
+For larger even \(h\), prime brackets in selected reduced residue classes
+can enforce the congruence. The following elementary fact explains the choice
+of classes; the existence of primes in those classes is a separate analytic input.
+
+\begin{lemma}[Choosing residue classes for the greedy step]\label{lem:units}
+If \(h\ge2\) is even, \(m\ge2\), and \(c\equiv m\pmod2\), then \(c\) is a sum of
+\(m\) residues coprime to \(h\), modulo \(h\).
+\end{lemma}
+\begin{proof}
+Use \(m-2\) copies of 1. The residual \(d=c-(m-2)\) is even. For the power of 2
+dividing \(h\), choose an odd residue \(a\), so \(d-a\) is odd as well. For
+each odd prime divisor \(p\) of \(h\), choose \(a\) modulo \(p\) different from
+both 0 and \(d\); at most two residues are excluded and \(p\ge3\). Lift these
+choices to the corresponding prime powers and combine them by the Chinese
+remainder theorem. Both \(a\) and \(d-a\) are coprime to \(h\). They provide
+the last two residues.
+\end{proof}
+
+Apply this with \(c=T-L\), whose parity is \(n-s=m\). For each chosen
+unit class, supply a lower and upper prime bracket in that same class.
+Lemma~\ref{lem:brackets} then preserves the required total residue while
+keeping the greedily chosen sum within \(D\) of \(my\).
+
+\subsection{Build a correction interval rather than assume one}
+
+We next explain the two requirements in Lemma~\ref{lem:exact-targets}: gap
+coverage and enough room around the desired residual.
+
+\begin{lemma}[Extending subset-sum coverage]\label{lem:grid}
+Suppose subset sums of some nonnegative gaps include
+\(0,h,2h,\ldots,R\), where \(h>0\) and \(h\mid R\). Adjoining a gap \(g\)
+with \(h\mid g\) and \(0\le g\le R+h\) extends this coverage through \(R+g\).
+\end{lemma}
+\begin{proof}
+The old choices give multiples of \(h\) in \([0,R]\), and choices using the
+new gap give them in \([g,R+g]\). The two lists overlap or are adjacent in
+steps of \(h\), so leave no missing multiple.
+\end{proof}
+
+Copies of a seed gap \(h\) start such a list; suitable further gaps extend it.
+For example, gaps 2, 4 and 6 realize every even integer from 0 through 12.
+Gaps 4 and 8 have the same total but miss 2, 6 and 10. A total amount of
+available change is therefore not a substitute for complete coverage.
+When \(a\) and \(b\) are multiples of \(h\), adjoining a nonnegative gap
+\(g\) divisible by \(h\) similarly extends coverage from \([a,b]\) to
+\([a,b+g]\), provided \(g\le b-a+h\).
+
+Here is a quantitative way to obtain the margins when the correction interval
+is \([0,G]\), with \(G=\sum_jg_j\). Put \(M=L+G/2\), the sum of the pair
+midpoints. The two inequalities \eqref{eq:target-margin} are equivalent to
+\begin{equation}\label{eq:midpoint-margin}
+ |M-sy|+D\le G/2.
+\end{equation}
+Pairs with large gaps can supply this room while keeping their midpoints near
+\(y\).
+
+\begin{lemma}[A midpoint margin]\label{lem:margin}
+Suppose the positions reserved for correction consist of \(P\) pairs with midpoints within
+\(D/2\) of \(y\), and \(W\) further pairs with midpoints within \(D/4\) of
+\(y\) and gaps at least \(D\). If \(W\ge2P+5\), then
+\[
+ |M-sy|+D+D/4\le G/2.
+\]
+In particular, \eqref{eq:midpoint-margin} holds.
+\end{lemma}
+\begin{proof}
+The triangle inequality gives \(|M-sy|\le PD/2+WD/4\), and the wide pairs give
+\(G/2\ge WD/2\). The difference between these two bounds is
+\((W-2P)D/4\ge5D/4\).
+\end{proof}
+
+The prime-target supply results of \cite[Section 3.2 and the range constructions
+in Section 4]{Companion} implement these steps: obtain prime brackets, construct
+gap coverage, verify a midpoint margin, and check that the greedy and reserved
+positions fit among the \(n\) targets. In the bounded lower range they use
+short seed gaps and prime brackets in a finite set of residue classes. In the
+unbounded range additional gap choices cover the even residue classes of a
+larger seed step, producing the correction interval required by
+Lemma~\ref{lem:exact-targets}. The elementary lemmas above explain why these
+supplies give an \emph{exact} total, rather than merely a small error.
+
+For later use, the lower-range target radii are
+\begin{equation}\label{eq:radii}
+ D=\begin{cases}
+ (23/50)X,&2001\le n\le9299,\\
+ y/400,&9301\le n\le19483,
+ \end{cases}
+\end{equation}
+and the unbounded construction uses \(D=y/1400\) for \(n\ge35735\).
+The middle range has its own target and capacity estimates in the same cited
+construction. We will now see exactly where a bound on \(D\) is needed.
+
+\section{Reserve the swaps before filling the square}\label{sec:reserve}
+
+The targets have been chosen. We must now arrange the \emph{distinct entries}
+of \(P_n\) so that enough adjustments remain available. Unlike target choices,
+physical pairs cannot reuse an entry or a cell.
+
+\subsection{A row transfer we can perform}
+
+If entries \(a,b\) occupy two cells in the same column, swapping them changes
+the two row sums by \(b-a\) and \(a-b\). All column sums stay fixed. Since
+both entries are odd, the changes are even. If both cells avoid the two
+diagonals, their sums stay fixed too. A corresponding swap within a row
+transfers an even amount between two column sums.
+
+Call a collection of reserved, disjoint pairs of this kind a \emph{reservoir}.
+Its possible adjustments are the sums of the changes supplied by the pairs
+we choose to swap. For example, consider these six entries in two rows:
+\[
+ \begin{pmatrix}3&7&19\\5&11&13\end{pmatrix}.
+\]
+Swapping within its three columns changes the first row sum by a subset sum
+of \(2,4,-6\), namely any of
+\[
+ -6,-4,-2,0,2,4,6.
+\]
+The second row changes by the negative of that amount and every column sum
+is unchanged. In units of 2, this reservoir has signed capacity 3. This is a
+local example: its cells must still be placed away from the diagonals and all
+other reserved objects in the full square.
+
+More generally, suppose a reservoir's pair gaps are \(2w_1,\ldots,2w_k\), and
+subset sums of the \(w_j\) contain every integer from 0 through \(W\). Begin
+with the smaller entries in one row, and swap a subset of total weight
+\(K=\lfloor W/2\rfloor\). From this \emph{centered orientation}, choosing any
+other subset allows changes \(2(z-K)\), \(0\le z\le W\). In particular it
+allows every even change between \(-2K\) and \(2K\). This explains both the
+centering step and the division by 2 in the eventual flow calculation.
+
+\subsection{Reserve a different kind of swap for the diagonals}\label{subsec:rectangles}
+
+A pair swap generally changes row or column sums. To adjust a diagonal after
+those sums are finished, reserve four entries at the corners of a rectangle:
+\begin{equation}\label{eq:trade}
+ \begin{pmatrix}a&a+d\\b+d&b\end{pmatrix}
+ \quad\longleftrightarrow\quad
+ \begin{pmatrix}a+d&a\\b&b+d\end{pmatrix}.
+\end{equation}
+The four values are distinct odd primes from \(P_n\), and \(d>0\) is even.
+The rows or columns of the rectangle need not be adjacent.
+
+\begin{lemma}[Rectangle switch]\label{lem:rectangle}
+The switch \eqref{eq:trade} preserves the entries and every row and column sum.
+For any set of cells \(L\), its sum changes by
+\[
+ d\bigl(\mathbf1_L(r_1,c_1)-\mathbf1_L(r_1,c_2)
+       -\mathbf1_L(r_2,c_1)+\mathbf1_L(r_2,c_2)\bigr),
+\]
+where \(\mathbf1_L(r,c)\) is 1 if \((r,c)\in L\), and 0 otherwise.
+\end{lemma}
+\begin{proof}
+The changes at the four corners, in row-major order, are \(d,-d,-d,d\).
+They cancel within each affected row and column. The displayed formula sums
+exactly the changes belonging to \(L\).
+\end{proof}
+
+For example,
+\[
+ \begin{pmatrix}3&5\\13&11\end{pmatrix}
+ \longleftrightarrow
+ \begin{pmatrix}5&3\\11&13\end{pmatrix}
+\]
+keeps row sums 8 and 24 and column sums 16 and 16. At order 5, place its
+corners in rows 0,1 and columns 0,2. Only its upper-left corner lies on the
+main diagonal, and none lies on the antidiagonal. The switch therefore
+changes the diagonal pair by \((2,0)\). Reflecting this placement in the
+vertical axis gives the analogous effect on the antidiagonal. These illustrate
+separate placements; a family of such objects must be packed without common cells.
+
+For the full construction, reserve one family whose forward switches change
+only \(D_+\), and a second family whose forward switches change only \(D_-\).
+All rectangle supports are disjoint. Their even gaps give complete subset-sum
+intervals. Relative to the chosen orientations, let the main-diagonal family
+allow every even change in an integer interval \([\ell_+,u_+]\), and let the
+antidiagonal family allow every even change in \([\ell_-,u_-]\). The intervals
+may consist of positive changes or may extend on both sides of zero. We retain
+the actual endpoints: replacing an interval by a smaller symmetric one could
+lose a needed target. The rectangles also avoid the central cell, so the common
+cell of the diagonals creates no unintended interaction between their switches.
+
+\subsection{Choose entries without using any twice}
+
+The actual supply question is now visible. We need prime pairs with useful
+gaps, four distinct entries with the equal-gap pattern \eqref{eq:trade}, and
+unused entries for all remaining cells. The selected pair and rectangle
+families must be disjoint from one another.
+
+Here is the elementary counting principle used when excluding earlier choices.
+If \(\mathcal F\) is a finite family of candidate objects and every already
+used entry lies in at most \(d\) members of \(\mathcal F\), then a used set
+\(U\) excludes at most \(d|U|\) candidates. Consequently,
+\(|\mathcal F|>d|U|\) guarantees an available candidate. This follows by counting
+all incidences between used entries and candidates; counting an excluded
+candidate more than once only enlarges the upper bound. More complicated
+selection steps use a sum of such exclusion bounds.
+
+To see how analytic estimates provide candidates, define
+\[
+ \theta(x;q,a)=\sum_{\substack{p\le x\\p\equiv a\pmod q}}\log p,
+\]
+where the sum is over primes. Let \(\varphi(q)\) denote Euler's totient function.
+Suppose \(q\ge1\), \(2\le u<v\), \(\gcd(a,q)=1\), and available estimates give
+\[
+ |\theta(u;q,a)-u/\varphi(q)|\le E_u,\qquad
+ |\theta(v;q,a)-v/\varphi(q)|\le E_v.
+\]
+Subtracting shows that the number of primes in \((u,v]\) in this class is at least
+\begin{equation}\label{eq:stock}
+ \frac{(v-u)/\varphi(q)-E_u-E_v}{\log v},
+\end{equation}
+because each prime counted contributes at most \(\log v\). In particular,
+a positive numerator supplies an odd prime. If the numerator exceeds
+\(F\log v\), there are more than \(F\) such primes, so deleting at most
+\(F\) of them still leaves one. For entries of the square we also require
+\(v\le X\); for prime \emph{target sums} that restriction is unnecessary.
+
+Prime density also starts gap selection: \(k\ge2\) primes in an interval of
+length \(H\) have two consecutive members at distance at most \(H/(k-1)\),
+since their \(k-1\) gaps sum to at most \(H\). Further selection and congruence
+arguments turn such gaps into the complete adjustment sets above. The
+published estimates used for these counts and for bounding excluded
+progressions are listed in Appendix~\ref{app:inputs}. The quantitative
+construction checks their domains and the remaining counts after each selection.
+
+\section{Complete one reference arrangement}\label{sec:reference}
+
+\subsection{Place the pairs without collisions}
+
+There is a useful elementary answer to the placement question for one layer
+of row pairs. Let \(\sigma\) be a permutation of the rows with no fixed points.
+For each row label \(i\), one pair is to connect rows \(i\) and \(\sigma(i)\).
+We must choose a column for that pair, avoiding reserved cells and both diagonals.
+Using a different column for each pair also prevents collisions within the layer.
+
+\begin{lemma}[Placing a layer of pairs]\label{lem:layer}
+Suppose the already reserved cells occupy at most \(L\) cells in each row and
+each column. If \(4L+8<n\), there is a bijection \(f\) from the pair labels
+to the columns such that the cells \((i,f(i))\) and \((\sigma(i),f(i))\) avoid
+all reservations and both diagonals. The resulting pairs have disjoint cells,
+and add exactly two occupied cells to each row and each column.
+\end{lemma}
+\begin{proof}
+For pair \(i\), at most \(2L\) columns are excluded by reservations in its two
+rows. At most four more are excluded by the two diagonals. Conversely, a
+fixed column excludes at most \(2L\) pair labels because of reservations:
+at most \(L\) whose first row is occupied, and at most \(L\) whose second row
+is occupied, since \(\sigma\) is a permutation. Diagonal avoidance excludes
+at most four additional labels.
+
+Form a bipartite graph of pairs and columns, joining precisely the allowed
+choices. Each vertex has at most \(b=2L+4\) forbidden partners, with \(2b<n\).
+For any nonempty set \(S\) of pair labels with \(|S|\le n/2\), even one of its
+members has at least \(n-b>n/2\) allowed columns, so the union of their
+neighbors has size at least \(|S|\). If \(|S|>n/2\), every column has a neighbor
+in \(S\), since otherwise it would forbid more than \(b\) labels. Thus the
+neighbor condition holds for every \(S\), including the empty set.
+
+This condition gives a matching of all pair labels: if a maximum matching
+left a label unmatched, follow alternating unmatched and matched edges from
+it. Unless an unmatched column is reached, giving a larger matching, the
+reachable labels have fewer neighboring columns than labels. That contradicts
+the condition just proved. The matching is the required bijection \(f\).
+Distinct columns separate different pairs. Each row is the first row of one
+pair and the second row of one other pair, and these use different columns
+because \(\sigma\) has no fixed point.
+\end{proof}
+
+This is the placement bound used for permutation layers in the supporting
+construction \cite[Section 3.1]{Companion}. Repeating it installs further layers
+as long as the updated reservation count satisfies the inequality. Transposing
+the square gives the corresponding statement for column pairs, with all
+previous row pairs now counted among the reservations. The quantitative
+construction chooses the number of layers, their row permutations and their
+prime gaps to meet both this placement bound and the capacity bounds below.
+
+\subsection{Fill the remaining cells and measure the same square}
+
+We now install the selected primes in their designated cells. Here
+\emph{install} means place the pairs and rectangles with exactly the switching
+effects just proved. Row reservoirs, column reservoirs and diagonal rectangles
+have pairwise disjoint supports. Ordinary row and column reservoirs avoid
+both diagonals. The ordinary row and column reservoirs are centered before
+we measure discrepancies. The diagonal families retain the specified
+orientations and adjustment intervals of Section~\ref{subsec:rectangles}.
+
+If \(k\) distinct pool entries occupy \(k\) distinct cells, the remaining
+\(n^2-k\) entries can always be bijected with the remaining cells. This proves
+that the partial placement can be completed without changing the pool. But
+an arbitrary completion could leave row sums too far from their targets. The
+quantitative placement and completion results choose a completion \(A_0\)
+whose row and column sums obey
+\begin{equation}\label{eq:baseline}
+ |R_i(A_0)-y|\le E,\qquad |C_j(A_0)-y|\le E
+\end{equation}
+for a controlled error \(E\), while retaining all reserved objects. They also
+bound its two diagonal sums and the adjustment intervals available there.
+This is one simultaneous placement statement, not separate choices of a good
+square for each family of lines.
+
+One elementary device converts a bound on the spread of line sums into
+\eqref{eq:baseline}.
+\begin{lemma}[From width to distance from the mean]\label{lem:width}
+If \(n\ge1\) and \(z_1,\ldots,z_n\) have average \(y\) and \(|z_i-z_j|\le E\) for every
+\(i,j\), then \(|z_i-y|\le E\) for every \(i\).
+\end{lemma}
+\begin{proof}
+Write \(z_i-y=n^{-1}\sum_j(z_i-z_j)\) and use the triangle inequality.
+\end{proof}
+
+This applies separately to row sums and column sums because both totals are
+\(T\). The substantial completion estimates control their widths despite the
+already reserved cells. The relevant joint installation and completion
+arguments are part of the lower, middle and unbounded constructions cited
+in Section~\ref{sec:ranges}; their conclusion supplies the single \(A_0\)
+used from this point onward.
+
+\section{Route the row and column discrepancies}\label{sec:routing}
+
+For each row, define the amount it must \emph{give away}, in units of 2, by
+\[
+ b_i^R=\frac{R_i(A_0)-t_i}{2}.
+\]
+A negative value means the row must receive that amount instead. These demands
+are integers: an odd number of odd entries has odd sum, as does the target.
+They sum to zero because \(\sum_iR_i(A_0)=\sum_it_i=T\). Define \(b_j^C\)
+for the columns in the same way. From \eqref{eq:targets} and
+\eqref{eq:baseline},
+\begin{equation}\label{eq:demand-bound}
+ |b_i^R|,|b_j^C|\le (E+D)/2.
+\end{equation}
+This is the promised use of the target radius: the closer the targets and
+baseline sums are to the same mean, the less switching capacity we need.
+
+Draw a graph whose vertices are rows. An edge records a reserved reservoir
+between its two rows. Fix an orientation for each edge. A signed integer
+\(f_e\) means transferring \(2f_e\) from its initial row to its terminal row;
+a negative value reverses the transfer. If the reservoir can realize every
+such transfer for \(|f_e|\le c_e\), call \(c_e\) its capacity. Disjoint supports
+allow edge choices to be performed together. Thus we seek a flow satisfying
+\(\operatorname{div}f(i)=b_i^R\), where divergence is outgoing minus incoming
+flow. The net row change is then \(-2b_i^R=t_i-R_i(A_0)\).
+
+\begin{lemma}[Integral routing criterion]\label{lem:flow}
+Let a finite graph have integer capacities \(c_e\ge0\) and integer demands
+\(b_v\) with total zero. A signed integer flow with
+\(\operatorname{div}f(v)=b_v\) and \(|f_e|\le c_e\) exists if and only if,
+for every vertex set \(S\),
+\begin{equation}\label{eq:cut}
+ \left|\sum_{v\in S}b_v\right|\le\sum_{e\in\delta(S)}c_e.
+\end{equation}
+Here \(\delta(S)\) is the set of edges crossing from \(S\) to its complement.
+\end{lemma}
+\begin{proof}
+Summing divergences over \(S\) cancels every internal edge, proving necessity.
+For sufficiency, replace each edge by two opposite arcs, each of capacity
+\(c_e\). Add a source with capacity \(b_v\) into each vertex of positive demand,
+and an arc of capacity \(-b_v\) from each vertex of negative demand to a sink.
+Put \(Q=\sum_{b_v>0}b_v\). A source--sink cut whose original vertices on the
+source side form \(S\) has capacity
+\[
+ Q-\sum_{v\in S}b_v+\sum_{e\in\delta(S)}c_e\ge Q.
+\]
+Starting with zero flow, augment along a residual source--sink path whenever
+one exists. Integer capacities permit integer augmentations, each increasing
+the value by at least 1. The value is bounded by \(Q\), so the process stops.
+If it stopped below \(Q\), the vertices reachable from the source in the
+residual graph would give a cut of smaller capacity, a contradiction. All
+source and sink arcs are therefore saturated. Subtract the opposite arc flows
+on each original edge to obtain the signed flow required.
+\end{proof}
+
+\subsection{A readable capacity test}
+
+The cut condition need not be checked separately for every possible demand
+vector. Suppose every edge has capacity at least \(C\), every demand has
+absolute value at most \(B\), and the graph satisfies
+\[
+ |\delta(S)|\ge h\min(|S|,n-|S|)
+\]
+for a constant \(h>0\). Since the total demand is zero, its sum over \(S\)
+is bounded using either \(S\) or its complement:
+\[
+ \left|\sum_{v\in S}b_v\right|
+ \le B\min(|S|,n-|S|).
+\]
+The cut capacity is at least \(Ch\min(|S|,n-|S|)\). Thus
+\begin{equation}\label{eq:capacity}
+ B\le Ch
+\end{equation}
+suffices. Combining this with \eqref{eq:demand-bound}, one may choose an
+integer \(B\) with \(E+D\le2B\) and then prove \eqref{eq:capacity}.
+
+For example, a specialization used in the lower-range construction has
+\(h=199/200\) and \(C=\lfloor N/2\rfloor\), where \(N\ge2000\) is a
+lower bound arising from the installed reservoir ranges. Since
+\[
+ C\ge (N-1)/2\ge 999N/2000,
+\]
+the numerical condition \(400000B<199\cdot999N\) implies \eqref{eq:capacity}.
+The constants express the same simple requirement: the available transfer
+across every cut must exceed the amount the rows on that side need to exchange.
+
+\subsection{Apply the two flows to the same square}
+
+First perform the row flow. Each swap preserves all column sums, both
+diagonals and the cells reserved for column and diagonal adjustments. We
+obtain \(A_1\) with \(R_i(A_1)=t_i\). Its column sums are still those of
+\(A_0\), so the originally calculated column demands remain correct.
+
+Now use the column reservoirs to perform the column flow. These swaps
+preserve each already finished row sum. The result \(A_2\) therefore satisfies
+\[
+ R_i(A_2)=t_i,\qquad C_i(A_2)=t_i.
+\]
+It still agrees with \(A_0\) on the diagonal rectangles, and
+\(D_\pm(A_2)=D_\pm(A_0)\). This is why the three sets of reserved objects
+were installed together before any routing took place.
+
+\section{Finish both diagonals together}\label{sec:diagonals}
+
+Prime rows and columns do not force prime diagonals. For example, swapping
+the first two rows of the small square in Section~\ref{sec:problem} leaves all
+row and column sums prime but gives diagonal sums 41 and \(51=3\cdot17\).
+We therefore use the rectangles deliberately left untouched in \(A_2\).
+
+Put \(d_+=D_+(A_0)\) and \(d_-=D_-(A_0)\). The two reserved families allow
+every even change in \([\ell_+,u_+]\) and \([\ell_-,u_-]\), respectively.
+Because their supports are disjoint and each family affects only its own
+diagonal, the \emph{joint} set of attainable sums contains
+\begin{equation}\label{eq:joint}
+ \begin{split}
+ &\bigl((d_++2\mathbb Z)\cap[d_++\ell_+,d_++u_+]\bigr)\\
+ &\hspace{3em}\times
+ \bigl((d_-+2\mathbb Z)\cap[d_-+\ell_-,d_-+u_-]\bigr).
+ \end{split}
+\end{equation}
+Here the product means independent choices of the two coordinates. This
+conclusion uses disjoint physical switches, not merely two separate statements
+that each diagonal could be adjusted in some arrangement.
+
+\begin{proposition}[A common prime finishes the square]\label{prop:diagonal}
+Suppose an odd prime \(q\) belongs to
+\begin{equation}\label{eq:overlap}
+ [d_++\ell_+,d_++u_+]\cap[d_-+\ell_-,d_-+u_-].
+\end{equation}
+Then the reserved rectangle switches turn \(A_2\) into a valid prime-sum square.
+\end{proposition}
+\begin{proof}
+Both \(d_+,d_-\) are odd, so \(q-d_+\) and \(q-d_-\) are even. The interval
+condition puts them inside the two allowed ranges. Choose the corresponding
+switches in each disjoint family. By \eqref{eq:joint}, the choices can be
+performed together and make both diagonal sums equal to \(q\). Every
+rectangle switch preserves each row and column sum and permutes existing
+entries. Hence all required sums are prime and the entries are still exactly
+\(P_n\), each once.
+\end{proof}
+
+One convenient sufficient condition applies when the actual adjustment
+intervals contain symmetric ranges \([-2H_+,2H_+]\) and \([-2H_-,2H_-]\).
+If also
+\[
+ |d_\pm-y|\le U,\qquad U+D\le2H_+,\quad U+D\le2H_-,
+\]
+then any already chosen target, for example \(q=t_0\), works: the triangle
+inequality gives \(|t_0-d_\pm|\le D+U\). No new prime choice is needed under
+these additional bounds. They are a useful special case, not a requirement
+imposed on every range construction.
+
+In general, retain the actual overlap endpoints
+\[
+ L=\max(d_++\ell_+,d_-+\ell_-),\qquad
+ U'=\min(d_++u_+,d_-+u_-).
+\]
+The placement bounds must leave an interval \((u,v]\subseteq[L,U']\), with
+\(u\ge2\), to which a prime estimate applies. A positive lower bound in
+\eqref{eq:stock}, or the corresponding all-scale interval estimate of the
+supporting construction, then supplies an odd prime in the overlap. The
+lower-range and unbounded constructions use overlap arguments with their
+stated interval endpoints. In both versions,
+the target is one common prime and the proof of joint reachability is the same.
+
+\section{Where the quantitative bounds enter}\label{sec:ranges}
+
+For our fixed odd \(n\), the walkthrough has reduced the construction to
+concrete requirements. We need prime target choices meeting the correction
+interval and position budget; distinct pool entries in a joint installation
+of row reservoirs, column reservoirs and diagonal rectangles; a completion
+with the reference bounds \eqref{eq:baseline}; enough cut capacity for
+\eqref{eq:capacity}; and a prime in the diagonal overlap \eqref{eq:overlap}.
+The proved steps then act on the single reference arrangement in sequence:
+\[
+ A_0\ \longrightarrow\ A_1\ \longrightarrow\ A_2\ \longrightarrow\ A_3,
+\]
+where the arrows finish the rows, then the columns, then both diagonals.
+
+The supporting construction \cite[Sections 3--4]{Companion} establishes these
+requirements in three ranges, using the analytic inputs in
+Appendix~\ref{app:inputs}. The following are cited quantitative construction
+results, not new estimates derived here from prime density alone.
+
+\paragraph{Lower range: odd \(2001\le n\le19483\).}
+The proof uses nine certified descriptions of finite prime prefixes and 21
+parameter subranges. These give usable prime pairs and explicit bounds on
+their gaps. The prime-target selection has radii \eqref{eq:radii}. The joint
+placement reserves the pairs and rectangles together, completes the remaining
+cells with line-width and diagonal bounds, and verifies the capacity and
+overlap inequalities. Its routing step has the numerical specialization
+explained in Section~\ref{sec:routing}. Thus all three arrows above apply.
+The cited lower-range construction includes these simultaneous placement
+bounds, not only a list of targets.
+
+\paragraph{Middle range: odd \(19485\le n\le35733\).}
+A verified finite collection of 3,650,551 twin-prime pairs supplies pairs with
+the smallest possible nonzero even gap, 2. Further selection stages enlarge
+the possible changes while avoiding previously used entries. Prime-supply
+lower bounds and short-progression upper bounds control this selection.
+The completed square, centered reservoirs, line-error estimates and diagonal
+ranges refer to the same placement. The resulting demand and diagonal bounds
+permit the same row, column and rectangle operations as above.
+
+\paragraph{Unbounded range: odd \(n\ge35735\).}
+The prime-target radius is \(D=y/1400\). As the pool grows, the proof enlarges
+the reserved swapping families and controls row and column contributions
+simultaneously before completing the unused cells. Its all-scale prime
+estimates give fresh pairs and the necessary adjustment ranges, and its
+completion estimates retain the diagonal rectangles. The capacity and joint
+diagonal arguments then apply at every larger order, not just at a finite
+list of tested values.
+
+The exact estimates and range-specific installations reside in the cited
+construction source. The proofs in Sections~\ref{sec:targets}--\ref{sec:diagonals}
+explain how their bounds are consumed: target radius and reference error
+control the demands, reservoir capacity solves them, and diagonal reachability
+completes the square. Neither distinctness of the entries nor preservation of
+already completed lines is left implicit in this assembly.
+
+\section{Add the finite orders}\label{sec:allorders}
+
+For each odd \(n<2000\), an exact certificate specifies a permutation of the
+first \(n^2\) odd primes. A record can be viewed as an initial arrangement
+followed by a list of transpositions. Replaying it and summing the resulting
+rows, columns and diagonals checks the required square directly.
+
+\paragraph{Finite certificate assertion.}
+For every \(n\in\{1,3,\ldots,1999\}\), the stored certificate gives exactly
+the prescribed pool and all \(2n+2\) labelled line sums are prime.
+
+The replay checks all 1,000 orders, not a sample. Primality is tested by exact
+sieve membership or complete trial division. This is a finite decision
+procedure because a composite integer has a prime divisor at most its square
+root. An independent replay of the complete family succeeded; the records,
+verifier and detailed verification evidence are supplied in
+\cite[Sections 6--7]{Companion}. We use that exact computational assertion,
+separately from the analytic construction for larger orders.
+
+\begin{theorem}[All positive odd orders]\label{thm:allodd}
+Using the quantitative construction results of Section~\ref{sec:ranges} under
+the analytic inputs in Appendix~\ref{app:inputs}, and assuming the finite
+certificate assertion above, every positive odd integer \(n\) admits a
+bijection onto \(P_n\) with prime sums on every row, every column and both
+main diagonals.
+\end{theorem}
+\begin{proof}
+The finite assertion covers \(n<2000\). For the other odd orders, use the
+lower-range result through 19483, the middle-range result from 19485 through
+35733, and the unbounded result from 35735 onward. The integers between
+successive endpoints are 2000, 19484 and 35734, all even. Each construction
+uses the same pool and the same required lines, so no odd order is omitted.
+\end{proof}
+
+The result is an existence construction. It makes no claim of a small running
+time at arbitrary order or of optimal thresholds for its separate methods.
+Requiring every wrapped diagonal or higher-dimensional line would introduce
+additional constraints; those do not follow just by repeating the final
+rectangle step. For the present square, the construction succeeds because
+it separates the tasks while preserving precisely what the next task needs:
+correct total, available disjoint switches, and the completed line sums.
+
+\appendix
+\section{Analytic inputs used in the quantitative construction}\label{app:inputs}
+
+For completeness we identify the analytic results used by the cited range
+constructions. Write \(\pi(x)\) for the number of primes at most \(x\),
+\(\pi(x;q,a)\) for the number congruent to \(a\pmod q\), and
+\(\theta(x)=\sum_{p\le x}\log p\). All logarithms are natural. The
+progression function \(\theta(x;q,a)\) and Euler's totient \(\varphi(q)\)
+were introduced when deriving \eqref{eq:stock}.
+
+\begin{enumerate}
+\item \textbf{Pool scale and total.} Rosser and Schoenfeld's prime-count bounds,
+Theorem 2 and Corollary 1, equations (3.3)--(3.6); prime-index bounds,
+Theorem 3 and its Corollary, equations (3.10)--(3.13); and theta upper bound,
+Theorem 4, equation (3.15), supply nine inequalities \cite{RS62}.
+They bound the largest available entry \(X\) and the exact-pool mean, so that
+intervals chosen for entries remain inside \(P_n\).
+\item \textbf{Primes in progressions and intervals.} The theta part of
+Theorem 1.9 and equation (1.18), Proposition 2.1 with equations (2.3)--(2.7),
+Propositions 2.5 and 2.7 with Definition 2.6, and Proposition 4.34 with
+Definition 3.1 of Bennett, Martin, O'Bryant and Rechnitzer supply five inputs
+\cite{BMOR18}. The first gives
+\[
+ |\theta(z;q,a)-z/\varphi(q)|\le2.072\sqrt{x}
+ \quad(1\le z\le x\le x_2(q),\ 1\le q\le10^5,\ \gcd(q,a)=1),
+\]
+with \(x_2(q)\) as defined in that theorem. The others provide the smoothed
+explicit formula, zero counts, finite-height zero information and zero-free
+region used for the larger intervals. Their stated domains and conductor
+conditions are retained. These bounds supply prime brackets, pair candidates
+and diagonal targets through interval differences such as \eqref{eq:stock}.
+\item \textbf{Upper bounds for excluded progressions.} Montgomery and Vaughan's
+Brun--Titchmarsh inequality, Theorem 2, equation (1.10), states for positive
+\(x,y\), positive coprime integers \(k,a\), and \(y>k\), that
+\[
+ \pi(x+y;k,a)-\pi(x;k,a)
+ <\frac{2y}{\varphi(k)\log(y/k)}.
+\]
+This bounds the number of primes lost to excluded residue classes during
+selection \cite{MV73}.
+\end{enumerate}
+
+These fifteen named analytic statements, together with the finite certificate
+assertion, are the external inputs to the all-odd result presented here.
+The range constructions supply the internal prime-pair selections, placements,
+completions and numerical inequalities. The full source statements, including
+their domains, specify the hypotheses; an asymptotic assertion that primes
+are plentiful would not provide the finite constants needed in the walkthrough.
+
+\section*{Acknowledgements}
+OpenAI AI systems assisted with drafting and revising the text, developing and
+checking the expository structural proofs, reviewing the accompanying
+formalization and computational certificates, and preparing the LaTeX source.
+The cited analytic theorems are due to their named authors. These assistance
+roles do not replace the mathematical arguments, cited construction results,
+or exact computations on which the conclusions depend.
+
+\begin{thebibliography}{9}
+\bibitem{RS62}
+J. Barkley Rosser and Lowell Schoenfeld,
+\emph{Approximate formulas for some functions of prime numbers},
+Illinois Journal of Mathematics \textbf{6} (1962), 64--94.
+Theorems 2--4 and their cited corollaries, pp.~69--70.
+\href{https://denisevellachemla.eu/Rosser-Schoenfeld-1962.pdf}{Paper}.
+\bibitem{BMOR18}
+Michael A. Bennett, Greg Martin, Kevin O'Bryant and Andrew Rechnitzer,
+\emph{Explicit bounds for primes in arithmetic progressions},
+Illinois Journal of Mathematics \textbf{62} (2018), 427--532.
+Theorem 1.9, Propositions 2.1, 2.5, 2.7 and 4.34, and Definitions 2.6 and 3.1.
+\href{https://personal.math.ubc.ca/~bennett/BeMaObRe-IJM-2018.pdf}{Paper}.
+\bibitem{MV73}
+H. L. Montgomery and R. C. Vaughan,
+\emph{The large sieve}, Mathematika \textbf{20} (1973), 119--134.
+Theorem 2, equation (1.10), p.~121.
+\href{https://personal.science.psu.edu/rcv4/personal/Publications/large_sieve.pdf}{Paper}.
+\bibitem{Companion}
+Mira, \emph{Sude's prime-sum squares: research writeup}, 11 November 2026.
+Sections 3.1--3.3 give the mathematical mechanism and source locations;
+Section 4 identifies the lower, middle and unbounded construction results;
+Sections 6--7 describe the finite certificates and verification.
+\href{https://github.com/Mira-Cult/math/blob/d16fd1ee2dd6f8440c6c47b1b7575d0fca8b4241/notes/sudes-first-conjecture/research-writeup.md}{Research writeup and construction source}.
+\end{thebibliography}
+\end{document}

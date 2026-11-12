@@ -6,6 +6,15 @@ Can the first $`n^2`$ odd primes be placed in an $`n\times n`$ square so that ev
 
 **Yes: the complete computer-assisted theorem covers every positive odd order.** The [resolution manuscript](resolution.md) combines exact certificates for all odd orders 1 through 1999 with the complete classical construction for every odd order from 2001 onward. It retains the prescribed prime pool and both diagonals. No finite range remains in the stated conjecture.
 
+## Paper: a construction step by step (12 November 2026)
+
+[Read the paper (PDF)](paper/sude-prime-sum-squares.pdf), or use the
+[LaTeX source and build instructions](paper/README.md). The paper follows one
+square through the construction, proving the combinatorial requirements as
+they arise and citing the quantitative prime-supply and placement results.
+The [research writeup](research-writeup.md) records the source correspondence
+and verification scope.
+
 ## Resolution and reproducible certificates
 
 - **[Resolution of Sude's First Conjecture](resolution.md).** The full statement, two-case proof, finite certificate specification, tail construction, exact order-band map, explicit analytic imports, and verification instructions.
@@ -35,8 +44,8 @@ separately documents a restricted q4 prime-count correction for the older
 packet's BMOR citation and lower endpoint, with the inspected applications'
 constants unchanged. It is not an official erratum or an independent rerun
 of BMOR's finite computations. The historical resolution, proof sources and
-frozen packet remain unchanged. This release supplies the research writeup
-and source package, not the separate mathematical paper.
+frozen packet remain unchanged. The 11 November release supplied the research
+writeup and source package; the separate paper is now available above.
 
 ## Best reviewed bound for each family
 

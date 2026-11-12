@@ -16,11 +16,14 @@ The [source manifest](source-manifest.json) identifies the released bytes.
 The mathematical paper is a separate exposition; no paper is needed to read
 or reproduce the statements and checks described here.
 
+The step-by-step exposition is available as a [paper (PDF)](paper/sude-prime-sum-squares.pdf),
+with its [LaTeX source and build instructions](paper/README.md).
+
 ## 1. The exact-pool problem
 
-Let $p_j$ be the $j$th prime with $p_1=2$, and let
+Let $p_j$ be prime number $j$, with $p_1=2$, and let
 
-$$P_n=\{p_2,p_3,\ldots,p_{n^2+1}\}.$$
+$$P_n=\lbrace p_2,p_3,\ldots,p_{n^2+1}\rbrace.$$
 
 The original square problem asks, for every positive odd integer $n$, for a
 bijection from the $n\times n$ cells to $P_n$ such that every row, every column,
@@ -79,7 +82,7 @@ Bibliographic details and primary-source links are in
 | 10 | `RSThetaUpper` | $\theta(t)<t+t/(2\log t)$ for $t>1$; RS62 Theorem 4, (3.15), p. 70. |
 | 11 | `BMORFiniteTheta` | $\lvert\theta(y;q,a)-y/\varphi(q)\rvert\le2.072\sqrt{x}$ for $1\le y\le x\le x_2(q)$, $1\le q\le10^5$, and $\gcd(q,\lvert a\rvert)=1$; BMOR Theorem 1.9 theta part and (1.18), pp. 434–435. |
 | 12 | `BMORProp2_1` | Smoothed explicit-formula inequality, including its GRH(1), $m\ge1$, $x>2$, $H\ge1$ and $0<\delta<(x-2)/(mx)$ conditions; BMOR Proposition 2.1, (2.3)–(2.7), pp. 438–439. |
-| 13 | `BMORProp2_5` | Conductor-$d$ zero count for $T\ge1$: error from $(T/\pi)\log(dT/(2\pi e))$ is strictly below $0.399\log(dT)+5.338$; BMOR Proposition 2.5, (2.10), p. 441. |
+| 13 | `BMORProp2_5` | For conductor $d$ and $T\ge1$, the zero-count error from $(T/\pi)\log(dT/(2\pi e))$ is strictly below $0.399\log(dT)+5.338$; BMOR Proposition 2.5, (2.10), p. 441. |
 | 14 | `BMORProp2_7` | Finite-height GRH verification for primitive conductors $d\le10^5$, at $H(1)=30{,}610{,}046{,}000$ and $H(d)=10^8/d$ otherwise; BMOR Definition 2.6 and Proposition 2.7, p. 441. |
 | 15 | `BMORProp4_34` | For modulus $q\le10^5$, critical-strip zeros of height at most $10^8/q$ are on the critical line; above it they satisfy the zero-free bound with constant 5.6 and primitive conductor $d$ in $\log(d\lvert\gamma\rvert)$. BMOR Definition 3.1, p. 451, and Proposition 4.34, pp. 478–479. |
 | 16 | `MVBrunTitchmarsh` | For $x,y>0$, positive coprime $k,a$, and $y>k$, the number of primes in $(x,x+y]$ congruent to $a\pmod k$ is strictly less than $2y/(\varphi(k)\log(y/k))$; MV73 Theorem 2, (1.10), p. 121. |
@@ -401,7 +404,7 @@ the historical review.
 
 BMOR defines
 
-$$\operatorname{Li}(t)=\int_2^t\frac{ds}{\log s}.$$
+$$\mathrm{Li}(t)=\int_2^t\frac{ds}{\log s}.$$
 
 The prime-count maximum printed in Theorem 1.9 ranges over $1\le y\le x$.
 For fixed $x>2$, the error diverges as $y\downarrow1$ under this convention,
@@ -414,8 +417,8 @@ The $q=4$ row gives $x_2(4)=4\cdot10^{13}$ and the upward-rounded coefficient
 $b_\pi(4)=2.253192$. Use the published pointwise computation only on
 $2\le t\le x_2(4)$:
 
-$$\left|\pi(t;4,a)-\frac{\operatorname{Li}(t)}2\right|
- \le\frac{281649}{125000}\frac{\sqrt t}{\log t},\qquad a\in\{1,3\}.$$
+$$\left|\pi(t;4,a)-\frac{\mathrm{Li}(t)}2\right|
+ \le\frac{281649}{125000}\frac{\sqrt t}{\log t},\qquad a\in\lbrace 1,3\rbrace.$$
 
 The appendix also prints lower endpoint 1 in its surrounding statements.
 The restriction here avoids that endpoint. It is not an official erratum,
@@ -424,14 +427,18 @@ and the published prime-count computation has not been independently rerun.
 **Restricted count lemma.** Put $P_o(t)=\pi(t;4,1)+\pi(t;4,3)$, the number of
 odd primes at most $t$. For $2\le t\le4\cdot10^{13}$,
 
-$$|P_o(t)-\operatorname{Li}(t)|
+**(Q4.1)**
+
+$$|P_o(t)-\mathrm{Li}(t)|
  \le\frac{281649}{62500}\frac{\sqrt t}{\log t}
- \le\frac{1367}{250}\frac{\sqrt t}{\log t}.\tag{Q4.1}$$
+ \le\frac{1367}{250}\frac{\sqrt t}{\log t}.$$
 
 For $128\le X\le4\cdot10^{13}$ and $2\le t\le X$,
 
-$$|P_o(t)-\operatorname{Li}(t)|
- \le\frac{1367}{250}\frac{\sqrt X}{\log X}.\tag{Q4.2}$$
+**(Q4.2)**
+
+$$|P_o(t)-\mathrm{Li}(t)|
+ \le\frac{1367}{250}\frac{\sqrt X}{\log X}.$$
 
 *Proof.* The two residue classes partition the odd primes. Adding their
 pointwise errors gives the first inequality in (Q4.1), and
@@ -471,7 +478,7 @@ Some files are absent from the smaller browsable presentation subset.
 The relevant scales imply $X\ge128$ and $X\le e^{29}<4\cdot10^{13}$,
 and each endpoint argument is at least 2. BG6 treats interval endpoints below
 2 separately without evaluating Li there. Its comparison involving
-$\operatorname{Li}(X^2)$ uses separate Li inequalities, not the bounded
+$\mathrm{Li}(X^2)$ uses separate Li inequalities, not the bounded
 prime-count estimate at $X^2$.
 
 This is a restricted q4 repair, not a validation of every broader-modulus
