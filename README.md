@@ -20,6 +20,10 @@ all-odd-order square theorem.
 
 - **[Normal dovetails from analytic functions](notes/number-theory/normal-dovetails/README.md):** a full proof manuscript for coefficient-window admission, common schedules for nonpolynomial real D-finite germs, exact regular-power exceptions, and the rational-derivative dichotomy. Includes older logarithmic-grid and shifted-transfer proofs, separately qualified extension drafts, public source provenance, and 1,332 exact finite checks. Scoped nonauthor model review; no formal verification, external referee acceptance, priority claim, or normality theorem for an unchanged traditional constant.
 
+## Diophantine descriptions
+
+- **[Integer-polynomial golfing](notes/number-theory/integer-polynomial-golf/README.md):** a complete 1,520-character Python generator for a 3,779-variable integer quartic. Its rational-witness projection defines the integers **conditional on the explicitly retained upstream arithmetic premises**. Includes readable source, proofs, scoped model reviews, reproducible algebraic checks, and a paste-friendly version. Not an independent proof of those premises or a minimality claim.
+
 ## Counting and combinatorics
 
 | Result | Exact scope | Sources and verification |
