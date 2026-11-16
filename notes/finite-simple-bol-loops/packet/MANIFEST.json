@@ -1,0 +1,746 @@
+{
+  "source_commit": "27d51e6a23363d6c0ae74b2f6f752db9bb5e5847",
+  "files": [
+    {
+      "path": "manuscripts/odd-noncentral-jordan-center-family.md",
+      "github_blob_sha": "d40cac8dafb9535f8f23f1141c27749775276541",
+      "original_sha256": "4c8bf59340f0483336653fe9b726d6fdb64a68ff9a873b6f466817053f5517a4",
+      "export_sha256": "e26c32bf24ee46e86c469f5b90f56c228239e2df3927890b27f4e48749b8c65b",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-monolithic-defect-two.md",
+      "github_blob_sha": "ad83514227ce354cf83aea4b7237fc5047bd6f0e",
+      "original_sha256": "4313cb6b9e20c83df2f80ecc789cd5e9c4fb5c8fb970cf7bd7203d4316387c61",
+      "export_sha256": "ec4f829c2c8c2c41686ef192b7433bd938eee5770ba212e0ef453ca4e5a43f1c",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/nonbruck-single-root-classification.md",
+      "github_blob_sha": "c7b99d40df4a516864038247916f7d628d79a2f3",
+      "original_sha256": "5ab579a3133acf68bd07ac45eea09fde236b4b15aff0adcafb34230409dcd436",
+      "export_sha256": "f53e1cc74b60c7f0bae242683e73ac087e1f395b5be632723fefd05de5ef8f83",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-fixed-shadow-simple-example.md",
+      "github_blob_sha": "7c1d8fc5a9a707cf6c0f59833aa8e8a36d4a5537",
+      "original_sha256": "0e5e124847a9d650cf990ab465dc65b2878caa817ec33463016c762194822ba6",
+      "export_sha256": "c565f832dc37dffebd5f339a5dbc703a7097a596c078d13dab3929822919b923",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-rigid-center-nongloop.md",
+      "github_blob_sha": "ecd8cbebcabf7dd6f9fd80f03faf39947071f3ad",
+      "original_sha256": "35b2e05c014a583f092e7b4c679e20f12da3ef917e0c0e0e3c1d994f0a2e04ca",
+      "export_sha256": "0ccb5e1a5b33dc7bdd548cf68b8decf5c405e456be5cbf5a6146b6e0ba2f3d5a",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-monolithic-heisenberg-prime-family.md",
+      "github_blob_sha": "ab12f53cfa8289d39500353fc363272b786149b0",
+      "original_sha256": "6488c3c80fecada5e25ffd42e37a7d59ef7f9547b2c0fd1c7825eec6146bbb6b",
+      "export_sha256": "946d5839a327b85adac882843d31e866641a70c170fe103708083b786cfe1304",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-unbounded-fitting-height.md",
+      "github_blob_sha": "bbab27880fe8be0891f5d6f9b0d84a3f652b12ed",
+      "original_sha256": "f8e660079a0a8ee97c8bd5035a1119fdccd3772249972d10d341f7325fc1020a",
+      "export_sha256": "40e2af9e45afe7dfd6b6e1baa47fe6da69951e293628c7f469c8429b3067c461",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-unbounded-derived-class.md",
+      "github_blob_sha": "5e03b406249c4f461b971102e2d8570cc29796d6",
+      "original_sha256": "1640bafe1bc2fdbf74e542cbb5c3231384b5cec5a295d34b83db6bc2d3e24f32",
+      "export_sha256": "6c372be1d4851de2cf6dc2e59b334add21f791c6726ddeabcc0a120b82bed337",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-alternating-form-family.md",
+      "github_blob_sha": "19c924fde4f517d459473c53000e538f03fb9927",
+      "original_sha256": "04c6156bf322bc0d27f73e5d430ec8a9d94d252a21823cc1e165955ea9f30a86",
+      "export_sha256": "9604b57dd852db43fa2a81f6342ba3c8cd40947951549067f5da2858817fec1a",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-matrix-pair-embedding.md",
+      "github_blob_sha": "a5fa64407e08af532efdca1a2fbe92f34f513226",
+      "original_sha256": "d9989d00cbf7ee7441add87e94ac399f57936eb5050780071c4442f09055d5f7",
+      "export_sha256": "2bb720debf5813eabcab7428ae0c219c9c0b245a9256bae74ee16eae6d922b7a",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-monolithic-higher-defect-isomorphism.md",
+      "github_blob_sha": "e355d4ed6156765e99978813a645bdc07b307850",
+      "original_sha256": "17157dbb23e795788b1c3f5d5b4abefe22906e45d3ab388a9b17313604e91074",
+      "export_sha256": "4ab1b636c2f5bcce0e9afcbef18bd240372586e31e12b09d910a91458b8903e3",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-unbounded-derived-length.md",
+      "github_blob_sha": "ff60ec1480e662fcc2203caeb1144479091fc127",
+      "original_sha256": "202a00184e63774f58bc2f6d5d9294394fbed3bac5e164826f5b0c7bdb29ff0a",
+      "export_sha256": "08a6d8d726d61b6e3bee0a692929f9beb59f4b111791eda012d7db6b489c250d",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-class-two-coprime-center-reduction.md",
+      "github_blob_sha": "f1efa47b134e83e58e8be61410c7aa0420e2b6ef",
+      "original_sha256": "4aa07800036c71a4ad205ec233c5736082ad8d82a3a00d857d89514c7848d80b",
+      "export_sha256": "85f44b84dfba2dde8a3142aefbe32571409e9b700222146fdcf3c2a2c4840844",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-class-two-classification.md",
+      "github_blob_sha": "8c8b69117d6c50773cbcdda995b65f934517c7f6",
+      "original_sha256": "64e74f00c5fbafeca2b993a76c4585e578ef51f66a08b0a7c76026d603000c2b",
+      "export_sha256": "908d68bb84184021d3de6b19990d6354b4761f7fcbead6acfadeda38cf113892",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "proofs/C0002.md",
+      "github_blob_sha": "e9a7caf6a2a29dd3ac9bcba791f08be7a8c96bb2",
+      "original_sha256": "7fbd7747187f713a3f7b66c2f32e6099f60d4e2ec5c26438eefeea0bf3509e4d",
+      "export_sha256": "7fbd7747187f713a3f7b66c2f32e6099f60d4e2ec5c26438eefeea0bf3509e4d",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-central-class-two-classification.md",
+      "github_blob_sha": "7aa1f8ce5c50a978e7245e882b1ceac0e733a676",
+      "original_sha256": "6dff0c70c927c0d358b9ba21db649c696a6356cfd6463ba64a215a7d0bbe0f4f",
+      "export_sha256": "99c7c1eb4093de1e20f16fb4d01761c9bb05d37eaf6266d347263d1bbfcb470e",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_rigid_center.py",
+      "github_blob_sha": "4bfad28ec1869a7e29c4926a19269668bc93a3e2",
+      "original_sha256": "670910ff0aaf47c312241f6447d29c48610901489107e34af8adff94acfed339",
+      "export_sha256": "670910ff0aaf47c312241f6447d29c48610901489107e34af8adff94acfed339",
+      "change": "verbatim"
+    },
+    {
+      "path": "proofs/C0007.md",
+      "github_blob_sha": "9ac1efd7637c5a2114cbb3f89be7eb6a6432a426",
+      "original_sha256": "8139cf980679f54fd3051d20ab605688d5e246fb92f16cc3ac21a111f5926d6f",
+      "export_sha256": "8139cf980679f54fd3051d20ab605688d5e246fb92f16cc3ac21a111f5926d6f",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-lazard-central-classification.md",
+      "github_blob_sha": "dcc909f351d5a2bfea5f7daff81d1c4eec7753c4",
+      "original_sha256": "a89734e51783bf236ff6a52bae7f681dfdf4d7b47b284497d126cc3bb0f267bc",
+      "export_sha256": "bcaf64047f28129ab40e79a61af8af6d03853764ba2592be0ed120437b1abeb7",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/nonbruck-prime-transvection-orbits.md",
+      "github_blob_sha": "7ca6955e8dc1d3213a231633ad0df2e6fd64b0dd",
+      "original_sha256": "f681eb824f258ca135a04a1acaa8ec89a416af46edf5cd321d26668d1cb198c5",
+      "export_sha256": "bd3e84f5750da2cfa75ab70b2fea1daedbdd36d1545688285716887076e183f5",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-folder-radicals.md",
+      "github_blob_sha": "ec053f38919fb0a05ab4fa72e405c930a0e93319",
+      "original_sha256": "3408cf9508b3995cc7114aee1132d4c00e9f79486aa3cc50564a00bb9af1762d",
+      "export_sha256": "a4fa40180d22cea5aa3754bf50b987638738da4bc46ee875dd92ae23443332fa",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_heisenberg_jacobi_obstruction.py",
+      "github_blob_sha": "90469358260d26c82c799b2a07bd975cd059fb9d",
+      "original_sha256": "f9c5cf7d1e4c8c0aded42d0feda05d726c8b7bdb445021359866afdf08b206c3",
+      "export_sha256": "f9c5cf7d1e4c8c0aded42d0feda05d726c8b7bdb445021359866afdf08b206c3",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-stabilizer-alignment.md",
+      "github_blob_sha": "fab9a382ca56a946305e2d7e55833f6a21a48c2d",
+      "original_sha256": "b31e0f7b1df6ebe545d25a894ff995f215ff2c45afae87432c15dd3b4baf961c",
+      "export_sha256": "830c7f95fecc2f00dd8c444209981693495bdefbb4e7a896ffc8ca46c5eb2e40",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "proofs/C0001.md",
+      "github_blob_sha": "3c9676488833d3876fe39eab10d95abf8eed1457",
+      "original_sha256": "881c647253c293e0cc535e1cd444e9c52f3802566f6c8deef375e723338ce6ff",
+      "export_sha256": "881c647253c293e0cc535e1cd444e9c52f3802566f6c8deef375e723338ce6ff",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-monolithic-heisenberg-construction.md",
+      "github_blob_sha": "d3099ddd2bc1b5401b9ebddd8df464acb8dc3c4a",
+      "original_sha256": "d92e75fc1d65f2b3af4e6963da76d8594fbccac2ed0ef864259364bc2ea5aabd",
+      "export_sha256": "ddd51684de501a05abe38d0a8b860d38b488c465c17a6facf8fe2e3f6efe9ff7",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_heisenberg_prime_minors.py",
+      "github_blob_sha": "20ea5b83a1ca531f80d9cfccbb8f13123b00bf93",
+      "original_sha256": "725362775f0b6db090e422196b45b6f0421a402ac58a8e204b9f19861967b68c",
+      "export_sha256": "725362775f0b6db090e422196b45b6f0421a402ac58a8e204b9f19861967b68c",
+      "change": "verbatim"
+    },
+    {
+      "path": "REFERENCES.md",
+      "github_blob_sha": "b11d8bcad68f820a7bd2bb2a0a0fc5c27adfc23b",
+      "original_sha256": "ea5a8140b7adf2ef1b66f5e0d4ce33dacac7bd55457932e0f58ba0604d65b36a",
+      "export_sha256": "3633d86c9f5d261bd1f05dd6a77be65e1c9bf8021e7a2d8858feabd4ebcbcb1f",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "proofs/C0004.md",
+      "github_blob_sha": "ff3f1b4627a320ef2f5b4bb643dffef2af443194",
+      "original_sha256": "84d369339685b02516503badcc79103efe110944f99a2b6c2f624bd203b205a5",
+      "export_sha256": "84d369339685b02516503badcc79103efe110944f99a2b6c2f624bd203b205a5",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/nonbruck-affine-cocycle-data.md",
+      "github_blob_sha": "fb11a9afab30c194471c1eae5898f11c7a819237",
+      "original_sha256": "87b65d46d7750ae2f52ae8d0caaa7ea330e2537f80e5582b5bbc4f7b9ef98521",
+      "export_sha256": "20ed093747d99ea7045c21348caec2bb35ddc2fd2e39244a841a5dc7eb282549",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-elementary-layer-obstructions.md",
+      "github_blob_sha": "fe8907f5e13370699a0ed7be1165fa035ee817cb",
+      "original_sha256": "aa71dcefb5c10e50dd536da13074308c94c45ecbf188f7e16dfbb7cf3dab153a",
+      "export_sha256": "218cc689789e9624f623a26bef100b87e32474910646af256f0def511fba1805",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-fixed-envelope-stabilizers.md",
+      "github_blob_sha": "ef02c902ac05b9b03c26ff4925be99b3953875c1",
+      "original_sha256": "59089865499de72630298abc3e85d7d136a0a7bc47d321a805daa35ba7485717",
+      "export_sha256": "3834731490baaf4e2a06a7faa0a5a6ce69ff19abdbb2651966f66607a4a47d7e",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/exact-factorization-criterion.md",
+      "github_blob_sha": "2bef1d56791597212ad6ab3fd9c706f0041ca5ba",
+      "original_sha256": "c442cb455d71514a607b55edf441c2b446248afbc89220cdd007f93cd5255693",
+      "export_sha256": "03ed1fbeebb542c90386bafc183c95c45f64b73f52df9e038d66da67c8b3f6bc",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_stabilizer_alignment.py",
+      "github_blob_sha": "957b8a68c1f7f7d7a37ec30806cd3ab712938f69",
+      "original_sha256": "00520da3be7f84a6b91ee2ec20cfb0e0f7732fdf92c4fa521a2d7e8baee063a9",
+      "export_sha256": "00520da3be7f84a6b91ee2ec20cfb0e0f7732fdf92c4fa521a2d7e8baee063a9",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/verify_odd_heisenberg_control.py",
+      "github_blob_sha": "c3b9e8213889b61884b657f37ade7d4fd0142e24",
+      "original_sha256": "9f364ec922dd0a5e4bb582b420ab64015e14cd78cc7dc875b20b0af51b86ed0b",
+      "export_sha256": "9f364ec922dd0a5e4bb582b420ab64015e14cd78cc7dc875b20b0af51b86ed0b",
+      "change": "verbatim"
+    },
+    {
+      "path": "proofs/C0003.md",
+      "github_blob_sha": "9848a6dc931dc0c94f9b4850348545a0c3c282cd",
+      "original_sha256": "8a5861dc102ab5fb09136c5a6874612e621381c12c4831c26c38bfe6bba8e892",
+      "export_sha256": "8a5861dc102ab5fb09136c5a6874612e621381c12c4831c26c38bfe6bba8e892",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/verify_odd_vector_center_closure.py",
+      "github_blob_sha": "dc7e559372422285c49fe098492d8833386f9227",
+      "original_sha256": "252e9a26d92e1672e75535a9467a34793f68a2ebc13a0c00765ce93af912a268",
+      "export_sha256": "252e9a26d92e1672e75535a9467a34793f68a2ebc13a0c00765ce93af912a268",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-metabelian-residual-splitting.md",
+      "github_blob_sha": "d32e5285971fbb214f59854fc11c7aa2f1e93529",
+      "original_sha256": "13710bf08a1556730e8fb1f5769f4d5d485401c347dae69917c85561629d1523",
+      "export_sha256": "1cfff0730c83adb8d90f41cb6ca6ae91ae7393c0d7cc1783da3166eb1231c362",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_heisenberg_construction.py",
+      "github_blob_sha": "f5ec13ec0010949d036a7387b8d265da3ec4f04f",
+      "original_sha256": "215e9b68c58e03b305eeb091bca38d6d42e83217892fcaf3b796b1a71c4bfaf8",
+      "export_sha256": "215e9b68c58e03b305eeb091bca38d6d42e83217892fcaf3b796b1a71c4bfaf8",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-cross-extraspecial.md",
+      "github_blob_sha": "28ea7516dc25dbc5d2e6deea320de854de1ec266",
+      "original_sha256": "71cfc89c7c9056412b1904aa4e986e67edb7d820edd6069add4276787ecedec7",
+      "export_sha256": "d87a026177b33ff979802eac981adc5a7e36a80cdf83bf58d493074fe8a6cdf0",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/nonbruck-root-graph-parameters.md",
+      "github_blob_sha": "e56406fae4c1699a03ffc1b720823a359a2ac160",
+      "original_sha256": "075c1af9a7c5311adf7d37ea2978748c734b391a0f10bec0330b84e1b58b2ab3",
+      "export_sha256": "0899cc967ffceab7d0f9ca7c966184d981e57127fe4ce3385d5e55484e07978a",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "manuscripts/odd-extraspecial-classification.md",
+      "github_blob_sha": "ee61b18d1247b28c017dd30bcd9cfe5ba0ab31bc",
+      "original_sha256": "95c5f3be5d4ff2172cc73fc01f4b87df0b2abf582017c0fe5e910d82e0f2fee5",
+      "export_sha256": "c8e6cb7d4a5b64a1ca389c135c424d85885b1143c6b6ae27fe4931a1d9cd33d4",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_odd_cross_extraspecial.py",
+      "github_blob_sha": "9d1585be91729f7e099d54c40333d45d13e5c833",
+      "original_sha256": "70bdc2378f85cb2c56896ee51e1d012d105e7284fc3f7b7c8338ee14ed21e4f6",
+      "export_sha256": "70bdc2378f85cb2c56896ee51e1d012d105e7284fc3f7b7c8338ee14ed21e4f6",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/verify_odd_extraspecial_operators.py",
+      "github_blob_sha": "fdefe3e0c92b18d67fceaf7881515b962e175332",
+      "original_sha256": "83c851dc74e0fa6a8597e65a284aef51cd38056c64ae30fccee690d1c09b5475",
+      "export_sha256": "83c851dc74e0fa6a8597e65a284aef51cd38056c64ae30fccee690d1c09b5475",
+      "change": "verbatim"
+    },
+    {
+      "path": "manuscripts/odd-nilpotent-derived.md",
+      "github_blob_sha": "471824b3c4502131c59c4b454141dafa553e6110",
+      "original_sha256": "64224729b95595588dd11fdfdaf49a55807cb789cab48637c18bd0dc29a37957",
+      "export_sha256": "89ab05d1b8bdbdfeabcf81345636e0011a15ab2f349f118eb299b781eb06c6ad",
+      "change": "context links rendered as labeled text and internal reviewer identifiers omitted where present; mathematical text retained"
+    },
+    {
+      "path": "code/verify_nonbruck_root_graph.py",
+      "github_blob_sha": "7632598efac7ce0b011f5bc99b531f976e8c5a46",
+      "original_sha256": "fb530133fbe1e09ce85e3a1d79b8a0e01be8f2ee7824cd3449869a36c28d02d1",
+      "export_sha256": "fb530133fbe1e09ce85e3a1d79b8a0e01be8f2ee7824cd3449869a36c28d02d1",
+      "change": "verbatim"
+    },
+    {
+      "path": "proofs/C0012.md",
+      "github_blob_sha": "bbf326a5aa96ab49453ab084025c298ab7eec5b0",
+      "original_sha256": "02c218cdaaa701fbfb740f536fabd53a9a71fbd0d6756529aa3ae94bbce2ebe5",
+      "export_sha256": "02c218cdaaa701fbfb740f536fabd53a9a71fbd0d6756529aa3ae94bbce2ebe5",
+      "change": "verbatim"
+    },
+    {
+      "path": "proofs/C0006.md",
+      "github_blob_sha": "95c841150348475e8cc0d554751ad5555fe0e2dc",
+      "original_sha256": "b65699f989c62b37d8f9dee1bf85daeb51718f054f1fe9bf797f4de1f430e181",
+      "export_sha256": "b65699f989c62b37d8f9dee1bf85daeb51718f054f1fe9bf797f4de1f430e181",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/independent_bch_section_check.py",
+      "export_sha256": "363550c3f7345eb78474609778761408d15bf510cc7e4b93a72399a2d08c113f",
+      "change": "new independent release audit checker"
+    }
+  ],
+  "omitted_links": [
+    {
+      "source": "manuscripts/odd-noncentral-jordan-center-family.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-monolithic-defect-two.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/nonbruck-single-root-classification.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/nonbruck-single-root-classification.md",
+      "target": "../claims/C0004.md",
+      "label": "C0004"
+    },
+    {
+      "source": "manuscripts/odd-fixed-shadow-simple-example.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-rigid-center-nongloop.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-monolithic-heisenberg-prime-family.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-unbounded-fitting-height.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-unbounded-derived-class.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-alternating-form-family.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-matrix-pair-embedding.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-monolithic-higher-defect-isomorphism.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-unbounded-derived-length.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-class-two-coprime-center-reduction.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-class-two-classification.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-central-class-two-classification.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-lazard-central-classification.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/nonbruck-prime-transvection-orbits.md",
+      "target": "../claims/C0004.md",
+      "label": "C0004"
+    },
+    {
+      "source": "manuscripts/nonbruck-prime-transvection-orbits.md",
+      "target": "../claims/C0010.md",
+      "label": "C0010"
+    },
+    {
+      "source": "manuscripts/odd-folder-radicals.md",
+      "target": "../claims/C0010.md",
+      "label": "C0010"
+    },
+    {
+      "source": "manuscripts/odd-folder-radicals.md",
+      "target": "../claims/C0013.md",
+      "label": "C0013"
+    },
+    {
+      "source": "manuscripts/odd-stabilizer-alignment.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-stabilizer-alignment.md",
+      "target": "../claims/C0011.md",
+      "label": "C0011"
+    },
+    {
+      "source": "manuscripts/odd-stabilizer-alignment.md",
+      "target": "../claims/C0001.md",
+      "label": "C0001"
+    },
+    {
+      "source": "manuscripts/odd-monolithic-heisenberg-construction.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-monolithic-heisenberg-construction.md",
+      "target": "../claims/C0001.md",
+      "label": "C0001"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0001.md",
+      "label": "C0001.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0017.md",
+      "label": "C0017.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0001.md",
+      "label": "C0001.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0012.md",
+      "label": "C0012.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0001.md",
+      "label": "C0001.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0006.md",
+      "label": "C0006.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0007.md",
+      "label": "C0007.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0008.md",
+      "label": "C0008.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0011.md",
+      "label": "C0011.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0014.md",
+      "label": "C0014.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0003.md",
+      "label": "C0003.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0011.md",
+      "label": "C0011.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0011.md",
+      "label": "C0011.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0003.md",
+      "label": "C0003.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0009.md",
+      "label": "C0009.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0017.md",
+      "label": "C0017.md"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-a5-all-factors.md",
+      "label": "A\u2085 diagonal argument"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/tw-parity-code-subwreath.md",
+      "label": "parity-subwreath continuation"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd3-involution-count.md",
+      "label": "PSL\u2082 diagonal argument"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/bruck-s5-radical.md",
+      "label": "S\u2085 radical bound"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-finite-common-classes.md#generator-provenance",
+      "label": "finite common-class manuscript"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "claims/C0010.md",
+      "label": "C0010"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-linear-unitary-final-five.md",
+      "label": "the final linear and unitary cases"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-symplectic-finite-residuals.md",
+      "label": "symplectic residuals"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-sporadic-all.md",
+      "label": "sporadic"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-exceptional-remaining.md",
+      "label": "Tits"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/sd-orthogonal-refined-bounds.md",
+      "label": "orthogonal"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/hs-psl4-odd.md",
+      "label": "the odd-field PSL\u2084 argument"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/bruck-s5-order96-exponent4.md",
+      "label": "fixed-pair reconstruction and certificate"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/nonbruck-almost-simple-radical-bridge.md",
+      "label": "almost-simple/radical bridge"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/bruck-central-frattini-all-quotients.md",
+      "label": "uniform central-core candidate"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/bruck-elementary-block-obstruction.md",
+      "label": "elementary-radical block candidate"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/bruck-all-radical-block-obstruction.md",
+      "label": "arbitrary-radical chief-factor candidate"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/tw-psl2-factorwise-inversion.md",
+      "label": "the PSL\u2082 factorwise-inversion argument"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/tw-psl2-factorwise-inversion.md#natural-alternating-and-symmetric-factor-actions",
+      "label": "odd-field natural-top continuation"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/tw-psl2-factorwise-inversion.md#excluding-every-primitive-factor-action",
+      "label": "all-primitive-factor-action continuation"
+    },
+    {
+      "source": "REFERENCES.md",
+      "target": "manuscripts/tw-cross-label-block-exclusion.md",
+      "label": "coherent TW block exclusion"
+    },
+    {
+      "source": "manuscripts/nonbruck-affine-cocycle-data.md",
+      "target": "../claims/C0010.md",
+      "label": "C0010"
+    },
+    {
+      "source": "manuscripts/nonbruck-affine-cocycle-data.md",
+      "target": "../claims/C0004.md",
+      "label": "C0004"
+    },
+    {
+      "source": "manuscripts/odd-elementary-layer-obstructions.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-elementary-layer-obstructions.md",
+      "target": "../claims/C0011.md",
+      "label": "C0011"
+    },
+    {
+      "source": "manuscripts/odd-fixed-envelope-stabilizers.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/exact-factorization-criterion.md",
+      "target": "../claims/C0010.md#proof",
+      "label": "C0010"
+    },
+    {
+      "source": "manuscripts/exact-factorization-criterion.md",
+      "target": "bruck-all-radical-parameterization.md",
+      "label": "the all-radical scheme"
+    },
+    {
+      "source": "manuscripts/exact-factorization-criterion.md",
+      "target": "../claims/C0011.md",
+      "label": "C0011"
+    },
+    {
+      "source": "manuscripts/odd-metabelian-residual-splitting.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-cross-extraspecial.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-cross-extraspecial.md",
+      "target": "../claims/C0001.md",
+      "label": "C0001"
+    },
+    {
+      "source": "manuscripts/odd-cross-extraspecial.md",
+      "target": "../claims/C0007.md",
+      "label": "C0007"
+    },
+    {
+      "source": "manuscripts/nonbruck-root-graph-parameters.md",
+      "target": "../claims/C0010.md",
+      "label": "C0010"
+    },
+    {
+      "source": "manuscripts/nonbruck-root-graph-parameters.md",
+      "target": "../claims/C0004.md",
+      "label": "C0004"
+    },
+    {
+      "source": "manuscripts/nonbruck-root-graph-parameters.md",
+      "target": "../PROBLEM.md",
+      "label": "PROBLEM"
+    },
+    {
+      "source": "manuscripts/odd-extraspecial-classification.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-nilpotent-derived.md",
+      "target": "../claims/C0010.md",
+      "label": "0323:C0010"
+    },
+    {
+      "source": "manuscripts/odd-nilpotent-derived.md",
+      "target": "../claims/C0011.md",
+      "label": "C0011"
+    }
+  ]
+}
