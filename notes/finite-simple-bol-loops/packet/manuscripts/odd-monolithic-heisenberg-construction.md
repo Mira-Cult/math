@@ -1,0 +1,67 @@
+# A simple proper odd Bol loop with monolithic envelope
+
+**Independently reviewed construction for 0323:C0010 [context outside this selected packet: `../claims/C0010.md`], using the folder equivalence and normal-subloop interface of C0001 [context outside this selected packet: `../claims/C0001.md`], Theorems 1.3–1.4 and 2.2 in its canonical proof, reviewed at `9431ade99316d6bc62efb389492fef385b510b45`.** The explicit folder below gives a finite simple proper odd left Bol loop whose canonical left multiplication group is monolithic. Its proof uses the exact finite affine-fiber certificate described below and the cited folder interfaces; the exact-source independent reviews and reruns are recorded below. No novelty or classification claim is made.
+
+The full-inverted-set, conjugacy and folder inputs for odd groups are recorded in [odd-folder-radicals](odd-folder-radicals.md), reviewed at `95f226ac6c02b0153f3c226d823518e0891c1f1d`; its strict-defect simplicity interface is pinned at `65a3e58df517df59656ab948ac9d122208f62c4a`. The finite-field and quotient controls are in [verify_odd_heisenberg_control.py](../code/verify_odd_heisenberg_control.py), with two full proof/code reviews at `49b2a2c248d1b492fa0b35d5784999e7f8854000`. The new certificate is [verify_odd_heisenberg_construction.py](../code/verify_odd_heisenberg_construction.py); it uses that sibling module and Python 3.11+ with assertions enabled. This construction is separate from the necessary quotient restrictions in [odd-elementary-layer-obstructions](odd-elementary-layer-obstructions.md), reviewed at `958dd0d834610aa5b6a7a73b323eb62145aeec99`.
+
+## Group, involution and stabilizer
+
+Let E=F₃[ζ]/(1+ζ+⋯+ζ⁶), so ζ has order 7 and E has 3⁶ elements. Write vectors in V=E⁷ as ∑v_j e_j, with j modulo 7. Let T be the group of BCH triples (u,v,z)∈F₇³ with multiplication
+
+    (u,v,z)(u′,v′,z′)=(u+u′,v+v′,z+z′+(uv′−vu′)/2).
+
+Let A=⟨a⟩≅C₃ act by a(u,v,z)a⁻¹=(2u,4v,z), and set L=T⋊A. The involution θ sends (u,v,z) to (v,u,−z) and a to a⁻¹. Put x=(1,0,0), y=(0,1,0), and z₀=(0,0,1). Their action on V is
+
+    x e_j=ζ^j e_j,   y e_j=e_{j+1},   z₀ e_j=ζ e_j,   a e_j=e_{4j}.
+
+Define σ on V as the Fourier transform followed by Frobenius³:
+
+    (σv)_i=Σ_j ζ^{ij} v_j^{27}.
+
+The companion control checks the displayed group relations, σ²=1, and σρ(l)σ=ρ(θl) on generators. Set G=V⋊L and τ=(σ,θ). The action is faithful and irreducible: the center z₀ acts by ζ, generating E over F₃, the distinct x-eigenspaces are the E e_j, and y permutes them transitively.
+
+Let α=ζ³+ζ⁴ and λ=ζ³+ζ⁴+2ζ⁵. Put U=⟨λ,λα⟩_{F₃}, b=λα² and
+
+    W=U e₀ ⊕ E e₁ ⊕ E e₂ ⊕ E e₄,
+    H=⟨W, x, (b e₀,a)⟩ ≤ G.
+
+In the basis 1,ζ,…,ζ⁵, λ=(0,0,0,1,1,2), λα=(1,2,1,2,2,2), and b=(1,1,2,1,0,0). The certificate checks these products, dim W=20, and its invariance under x and a. Both x and a fix b e₀, so H/W≅J=⟨x,a⟩ and the lift of (u,0,0,i)∈J has V-coordinate i b e₀ modulo W. Thus |H|=3²¹·7. The control checks dim C_V(τ)=21, and C_L(θ) has order 7, so |C_G(τ)|=|H|.
+
+## Full inverted section and finite certificate
+
+Let K={g∈G:τ(g)=g⁻¹}. The quotient L has 147 θ-inverted elements and, by the companion control, exactly three lie in every coset of every conjugate of J. For the actual stabilizer, the construction certificate proves the following stronger affine-fiber assertion, with all arithmetic exact over F₃.
+
+For each of the 49 cosets tJ, represented by t=(0,v,z,0), it determines the three inverted quotient elements k_i=tj_i, one for each A-label i. For each k_i it computes the 21-dimensional negative eigenspace N_i of ρ(k_i)σ. This is the correct operator for the left fiber V k_i: an inverted lift has V-coordinate in N_i. The certificate verifies
+
+    dim N_i=21,  dim(tW+N_i)=41,  dim(tW+N_0+N_1+N_2)=41.
+
+The images of the three fibers in V/tW are therefore affine hyperplanes with a common direction. The actual H-lift of j_i has cocycle value i b e₀, so the three offsets differ by i·ρ(t)(b e₀). The certificate computes the common annihilating functional and checks it does not vanish on ρ(t)(b e₀). The three offsets are consequently distinct and partition V/tW. It also checks that the 49 quotient cosets are disjoint and cover L. Thus K is a transversal to H.
+
+For odd G, every outside involution in G⋊⟨τ⟩ is G-conjugate to τhat; the reviewed full-inverted-set interface identifies K⁻¹K=K² with the conjugacy-invariant set Λ² of products of outside involutions. Transversality gives H∩K⁻¹K=1, and conjugacy invariance then gives K transversality to every conjugate of H. Moreover 1∈K, K⁻¹=K, and for u,v∈K one has τ(uvu)=(uvu)⁻¹, so uvu∈K. These are the twisted-closure and transversality hypotheses of the cited Bol-folder equivalence; no quotient loop is used.
+
+## Faithfulness, generation and simplicity
+
+The faithful irreducible L-module V is the unique minimal normal subgroup of G: any normal subgroup disjoint from V centralizes it and is trivial. Since dim W<dim V, the core of H is trivial. The subgroup generated by K equals [G,τ] and is normal. Its image in L contains a and a nonzero anti-diagonal vector in T/Z(T); the A-translates span T/Z(T), and their commutator gives Z(T). Thus its image is L. Irreducibility and faithfulness imply its commutators with V generate V, so K generates G.
+
+The θ-stable normal subgroups of L are 1,Z(T),T,L. Indeed the two distinct A-invariant axes in T/Z(T) are interchanged by θ, and a normal subgroup with nontrivial A-image contains [T,A] and hence T. Therefore the nontrivial proper τ-stable normal subgroups of G are precisely V, VZ(T), and VT. Their respective ratios |C_N(τ)|/|H∩N| are all 3: their quotient fixed-point orders are 1,1,7, whereas the corresponding stabilizer intersections above W have orders 1,1,7. The reviewed strict-defect criterion consequently gives simplicity of the folder loop.
+
+Its order is
+
+    [G:H]=3²²·7²,
+
+and its canonical left multiplication group is G, monolithic with socle V. It is nonassociative: an associative loop has regular left multiplication group and hence trivial point stabilizer, while H is nontrivial. A direct properness witness is given below. The exact-source reviews below cover the complete construction and certificate.
+
+
+## A direct properness witness
+
+Write an E coordinate as its six coefficients in the basis 1,ζ,…,ζ⁵. Take x to be the K-element with zero V-coordinate and quotient z₀=(0,0,1,0), and let z be the unique K-representative of the coset (e₀,1)H. Using section multiplication k_g∘k_h=k_{gh}, the witness computation in the construction certificate finds that x(zx) and (xz)x both have quotient coordinate (0,0,2,1), while their e₀ coefficients are respectively
+
+    (0,0,0,0,2,1)    and    (2,0,1,0,1,2).
+
+They are distinct K-representatives, so x(zx)≠(xz)x. This is the identity (xy)(zx)=(x(yz))x with y equal to the loop identity, and proves non-Moufangness directly, without a simple-Moufang classification input. For each required section calculation the certificate uses the actual candidate U and b, the operator ρ(k)σ, and the transported subspace tW; it asserts rank 41 and a unique selected quotient fiber. The witness and its implementation are included in the exact-source reviews below.
+
+## Independent review and evidence
+
+At exact source `bb8b8a6048ab6c7fa1acc715764eb5da15bf5358`, GPT-6.1 Terra reviewers [model reviewer identity omitted], [model reviewer identity omitted], [model reviewer identity omitted] and [model reviewer identity omitted] independently accepted the complete construction, finite certificate and direct properness witness, conditional on the cited C0001 folder equivalence, full-inversion and strict-defect interfaces and the reviewed field/module control. All four read both pinned scripts and independently reran them with the bundled Python runtime; three explicitly reported Python 3.12.14 and [model reviewer identity omitted] reported bundled Python 3.12. They checked the actual H cocycle, every one of the 147 fiber injections and all 49 covering affine partitions, the all-conjugate shortcut, twisted closure, faithfulness, generation, complete invariant normal-subgroup list and defect ratios, and the section solver with its independent membership assertions and explicit flexibility failure. Root also read and ran the final source with Python 3.12.14.
+
+The result is this specific proper simple odd Bol loop of order 3²²·7² with monolithic canonical left multiplication group. It answers monolithic-envelope existence positively under the stated reviewed interfaces; it does not classify all such envelopes, identify literature priority, or give formal verification. The finite arithmetic certificate proves its stated finite checks; the accompanying algebraic argument is essential to the loop and simplicity conclusions.
