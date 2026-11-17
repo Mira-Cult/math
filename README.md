@@ -56,8 +56,11 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 
 ## Research notes
 
+- **[Prescribed prime gaps: coverings and signed estimates](notes/number-theory/prescribed-prime-gaps/README.md):** subexponential endpoint-safe covers and a uniform primorial gap prefix; cofactor/cutoff transfer, arbitrary-modulus root counts, rough-endpoint localization and a precise absolute-marking obstruction; exact Erdős equivalences and certified witnesses through 180. Complete conventional proofs and scoped nonauthor model reviews. Signed endpoint cancellation remains open; no prime-gap resolution or priority claim.
+
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
 
 ## Nonassociative algebra
 
 - **[Finite simple Bol loops: collaborative classification workspace](notes/finite-simple-bol-loops/README.md):** a direct existence proof and original class-two framework for a finite simple proper non-G-loop with no Bruck isotope, selected further construction drafts, structural roadmap, open problems and collaboration protocol. Includes public sources and explicit review limits. Scoped AI audits and finite checks; no complete classification, human expert certification, formal verification or novelty claim.
+
