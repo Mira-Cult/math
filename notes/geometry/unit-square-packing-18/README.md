@@ -7,7 +7,7 @@ Let $`s(n)`$ be the least side of a square that contains $`n`$ unit squares with
 **Theorem.** For eighteen squares, the optimum is
 
 ```math
-s(18)=\frac{7+\sqrt 7}{2}=4.822875655286\ldots .
+s(18)=\frac{7+\sqrt 7}{2}=4.822875655532295\ldots .
 ```
 
 This is an exact, computer-assisted optimality proof. [Hämäläinen’s earlier packing](https://erich-friedman.github.io/papers/squares/squares.html#2) already attained this side. The contribution is the matching **lower bound with no restriction on the orientations or contact pattern**.
