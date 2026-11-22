@@ -135,9 +135,7 @@ This refinement makes the final cycle the same for every orbit; it does not give
 
 ### A quantitative bound in terms of the final period
 
-**Corollary.** For every integer ### A quantitative bound in terms of the final period
-
-**Corollary.** K\ge80`$, one can force both uniform descent and convergence to $`1\leftrightarrow2`$ by changing only odd classes modulo $`2^K`$, at density at most $`\exp(-c\sqrt K)`$ for an absolute constant $`c>0`$.
+**Corollary.** For every integer $`K\ge80`$, one can force both uniform descent and convergence to $`1\leftrightarrow2`$ by changing only odd classes modulo $`2^K`$, at density at most $`\exp(-c\sqrt K)`$ for an absolute constant $`c>0`$.
 
 To control the period enlargement, strengthen the base flip test of Section 2: flip a residue if all its first $`k`$ ordinary prefix multipliers are strictly greater than $`3/4`$. No even residue passes this test; residue 1 does not pass for $`k\ge2`$. The number of flipped residues is between $`B_k`$ and $`B_{k+1}`$: the lower bound comes from positive-prefix words, and the upper bound from prepending one up bit, which makes every old prefix multiplier greater than $`(3/2)(3/4)>1`$. Thus the base density still has the order from Section 3.
 
