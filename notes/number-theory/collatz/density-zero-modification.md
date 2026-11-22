@@ -133,6 +133,26 @@ If $`j>J`$, the first step is down and the next $`j-1`$ steps follow $`F_0`$. He
 
 This refinement makes the final cycle the same for every orbit; it does not give the sharp rate from Section 3 in terms of the refined period. Nonempty periodic sets have positive density, so this theorem gives arbitrarily small density, not exactly zero.
 
+### A quantitative bound in terms of the final period
+
+**Corollary.** For every integer ### A quantitative bound in terms of the final period
+
+**Corollary.** K\ge80`$, one can force both uniform descent and convergence to $`1\leftrightarrow2`$ by changing only odd classes modulo $`2^K`$, at density at most $`\exp(-c\sqrt K)`$ for an absolute constant $`c>0`$.
+
+To control the period enlargement, strengthen the base flip test of Section 2: flip a residue if all its first $`k`$ ordinary prefix multipliers are strictly greater than $`3/4`$. No even residue passes this test; residue 1 does not pass for $`k\ge2`$. The number of flipped residues is between $`B_k`$ and $`B_{k+1}`$: the lower bound comes from positive-prefix words, and the upper bound from prepending one up bit, which makes every old prefix multiplier greater than $`(3/2)(3/4)>1`$. Thus the base density still has the order from Section 3.
+
+From any starting point, the modified base map admits a phase of at most $`k`$ steps ending at a value at most $`(3/4)x+k/2`$. At a flipped starting point, take the down step immediately. Otherwise take the shortest ordinary prefix with multiplier at most $`3/4`$, unless it is interrupted by a flip. If the flip interrupts after $`i`$ ordinary steps, the remaining ordinary suffix in the original witness would have multiplier greater than $`3/4`$, by the flip test there. The first $`i`$ steps therefore have multiplier less than 1, and appending the down step gives total multiplier less than $`1/2`$. In all cases the terminal phase multiplier is at most $`3/4`$ and each proper prefix multiplier is greater than $`3/4`$. Hence each terminal suffix multiplier is at most 1, so the affine intercept, a sum of at most $`k`$ contributions bounded by $`1/2`$, is at most $`k/2`$.
+
+Completed phases force entrance into $`[1,B]`$ with $`B=2k+1`$. Since at least $`\lfloor j/k\rfloor`$ phases have completed by time $`j`$ and fewer than $`k`$ steps of the next phase have elapsed, the all-up bound gives
+
+```math
+F_0^j(x)\le (3/2)^k\left[(3/4)^{\lfloor j/k\rfloor}x+2k+1\right].
+```
+
+Every fixed symbolic path lifts to arbitrarily large starts as before, so this also bounds its multiplier by the coefficient of $`x`$. Applying the bound to repeated cycles shows uniform descent of the strengthened base map.
+
+Use the refinement proof with $`J=8k^2+1`$ and $`M=2^K`$ for $`K\ge20k^2`$. The long-segment condition follows from $`(3/2)^k(3/4)^{8k}\le6^{-k}<1/(4B)`$ for $`k\ge2`$. The remaining size constraints follow from $`2^{20k^2}>3^J(B+1)`$ and $`2^{20k^2}>4B^2(3/2)^k`$. The extra classes cost at most $`B/2^K`$. Now take $`k=\lfloor\sqrt{K/20}\rfloor`$: the total density is $`O(2^{-(1-H)k}/k^{3/2})`$, which gives the corollary. Whether the sharp exponential-in-$`K`$ density bound from Section 3 can be achieved together with global convergence for all large widths remains open.
+
 ## What this says about ordinary Collatz
 
 An ordinary trajectory must either reach the cycle or hit $`R`$: it agrees with the convergent modified trajectory until its first visit to $`R`$. That visit can occur at the starting point itself. The proof uses the changed down step there. It gives no proof of ordinary convergence, including on Mersenne starts.
@@ -147,4 +167,4 @@ node check-density-zero.js
 
 The checker covers the positive-prefix recurrence through length 256, all 131,070 residues across the first 16 dyadic moduli, 262,140 weighted edge inequalities, and 32,768 starts for each nonperiodic rule. These finite checks illustrate the construction; the proofs above do not rely on them.
 
-This writeup is by Mira Cult. OpenAI models assisted with the proof, exposition and checking under Mira's guidance. Separate nonauthor automated proof checks covered the original answers, the sharp estimates, the periodic refinement, and the improved step bound. This is not a formalization or an external referee report. No historical priority claim is made.
+This writeup is by Mira Cult. OpenAI models assisted with the proof, exposition and checking under Mira's guidance. Separate nonauthor automated proof checks covered the original answers, the sharp estimates, the periodic refinement and its quantitative density bound, and the improved step bound. This is not a formalization or an external referee report. No historical priority claim is made.
