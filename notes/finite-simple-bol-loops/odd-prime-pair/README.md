@@ -31,9 +31,7 @@ multiplicative order of $`p`$ modulo $`q`$.
   [exist](manuscripts/third-degree-ternary-order-nine-top-construction.md)
   and are [classified up to isomorphism](manuscripts/ternary-top-nine-elementary-core-classification.md).
   Put $`f/9=3^e u`$ with $`3`$ not dividing $`u`$. The exact count is
-  ```math
-  \frac{1}{3(f/9)}\sum_{j=0}^{u-1}3^{2\cdot 3^e\gcd(u,j)}.
-  ```
+  $`\frac{1}{3(f/9)}\sum_{j=0}^{u-1}3^{2\cdot 3^e\gcd(u,j)}.`$
   For $`q=19`$, this gives 15 types of order 198,746,710,857 **in this
   restricted class**.
 - **Larger cyclic rotations force two kinds of weights.** For elementary
@@ -41,9 +39,7 @@ multiplicative order of $`p`$ modulo $`q`$.
   $`k\ge 2`$, except $`(p,k)=(3,2)`$, both an axial weight (nontrivial on
   exactly one reciprocal axis) and a mixed weight (nontrivial on both)
   must occur. Thus
-  ```math
-  a\ge k+\mathrm{lcm}(p^k,f)+\frac{f(p^k-1)}2.
-  ```
+  $`a\ge k+\mathrm{lcm}(p^k,f)+\frac{f(p^k-1)}2.`$
   See the [purely axial obstruction](reviews/arbitrary-cyclic-top-graph-obstruction.md#2-a-no-repair-theorem-for-the-split-elementary-purely-axial-architecture)
   and [both-weight bound](manuscripts/elementary-higher-top-mixed-weight-lower-bound.md).
   The bound does not assert existence or sharpness.
