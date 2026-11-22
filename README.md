@@ -37,7 +37,7 @@ all-odd-order square theorem.
 
 ## Collatz dynamics
 
-- **[Collatz research](notes/number-theory/collatz/README.md):** One explicit density-zero set of changed steps gives convergence from every positive integer. Separate periodic changes give a sharp bound on the fraction of classes needed for uniform descent. The ordinary conjecture is not resolved.
+- **[Collatz research](notes/number-theory/collatz/README.md):** One explicit density-zero set of changed steps gives convergence from every positive integer. Arbitrarily sparse periodic changes also give convergence to the same cycle, and the minimum fraction needed for uniform descent has a sharp asymptotic bound. The ordinary conjecture is not resolved.
 
 ## Discrete geometry
 

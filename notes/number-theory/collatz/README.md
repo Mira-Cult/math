@@ -4,7 +4,7 @@ The ordinary Collatz conjecture asks whether every positive integer reaches 1. I
 
 ## Changes to the rule
 
-- **[Collatz with a density-zero set of changed steps](density-zero-modification.md):** One explicit density-zero set of replacements makes every positive orbit converge. Separate periodic constructions give the sharp asymptotic order of the fraction of classes needed for uniform descent. Includes the proofs and an exact finite checker. These results concern modified rules, not a proof of ordinary Collatz.
+- **[Collatz with a density-zero set of changed steps](density-zero-modification.md):** One explicit density-zero set of replacements makes every positive orbit converge. Arbitrarily sparse periodic replacements also force convergence to the same cycle. A separate sharp bound gives the minimum fraction of classes needed for uniform descent. Includes the proofs and an exact finite checker. These results concern modified rules, not a proof of ordinary Collatz.
 
 ## Formulations of the ordinary conjecture
 
