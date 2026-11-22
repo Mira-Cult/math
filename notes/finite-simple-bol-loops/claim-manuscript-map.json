@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "original_claim_ids": "0001–0017",
-  "next_id": "0131",
+  "next_id": "0134",
   "manuscripts": [
     {
       "id": "0053",
@@ -2448,6 +2448,24 @@
       "id": "0130",
       "source": "odd-prime-pair/manuscripts/elementary-higher-top-mixed-weight-lower-bound.md",
       "group": "odd-prime-pair-higher-top",
+      "evidence": "odd-prime-pair/VERIFICATION.md"
+    },
+    {
+      "id": "0131",
+      "group": "frattini-quotient-crowding",
+      "source": "odd-prime-pair/manuscripts/0131-frattini-quotient-crowding.md",
+      "evidence": "odd-prime-pair/VERIFICATION.md"
+    },
+    {
+      "id": "0132",
+      "group": "fixed-frattini-multiplicity-one",
+      "source": "odd-prime-pair/manuscripts/0132-fixed-frattini-multiplicity-one.md",
+      "evidence": "odd-prime-pair/VERIFICATION.md"
+    },
+    {
+      "id": "0133",
+      "group": "fixed-frattini-repeated-packets",
+      "source": "odd-prime-pair/manuscripts/0133-fixed-frattini-repeated-packets.md",
       "evidence": "odd-prime-pair/VERIFICATION.md"
     }
   ]

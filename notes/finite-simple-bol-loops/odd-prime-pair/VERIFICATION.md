@@ -32,3 +32,16 @@ searches over entire multiplication tables or a substitute for proof.
 python3 code/verify_ternary_top_nine_chart_count.py
 python3 code/verify_first_degree_two_sheet_orbits.py
 ```
+
+
+## Fixed-Frattini proofs
+
+| Public claim | Scientific source and scoped proof review |
+| --- | --- |
+| 0131 | `e82fd017`: exact quotient mark multiplicity and physical dimension calculation; the projected lift argument is distinguished from an actual collision. The nonabelian single-packet exclusion uses the central commutator and an invariant nondegenerate contraction. |
+| 0132 | `b66d0fc5`, `47991cbd`, `0fd97ea1`: rank and radical averaging, exponent-p reduction, core-free exclusion of moving radical packets, complete even-degree multiplicity-one axial exclusion, and odd-degree reciprocal count. |
+| 0133 | `c3487774`, `e0c0257a`: rounded Witt bound using whole-first-axis isotropy, the top-zero signed conjugacy and central bracket, and the nonzero-top affine phase coset. The radical-quotient simplification requires fixed-point lifting. |
+
+These were scoped nonauthor mathematical reads by OpenAI models, not human
+referee reports or formal verification. The cited revisions are provenance
+identifiers; the proof dependencies are included on the public pages.

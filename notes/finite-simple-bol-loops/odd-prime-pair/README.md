@@ -62,6 +62,22 @@ avoid products of distinct marks, and not give a proper loop quotient.
 These conditions distinguish representations that could be realized by
 loops from abstract signed representations with the same dimension.
 
+## Nonabelian cores with fixed Frattini subgroup
+
+These results treat canonical nonabelian cores whose Frattini subgroup is
+fixed pointwise by the inversion automorphism, with the additional axial
+weight assumptions stated separately in each proof.
+
+- [Exact quotient mark multiplicity and single-packet exclusion](manuscripts/0131-frattini-quotient-crowding.md).
+  Projected collisions are not necessarily actual collisions.
+- [The multiplicity-one branch](manuscripts/0132-fixed-frattini-multiplicity-one.md).
+  Even Frobenius degree is excluded for purely axial weights of multiplicity
+  one; odd-degree reciprocal pairs have a separate necessary condition.
+- [Repeated packets and physical stabilizer phases](manuscripts/0133-fixed-frattini-repeated-packets.md).
+  The rank bound allows modular extensions within packets, and the central
+  phase calculation distinguishes actual from projected collisions. It does
+  not settle the remaining all-even case.
+
 ## What remains
 
 For $`p`$ dividing $`f`$, determine the full census at $`a=f+3`$, including
