@@ -35,6 +35,10 @@ all-odd-order square theorem.
 | Partial Latin square completions as one exact permanent | An explicit matrix over {−1, 0, 1/2, 1} has permanent exactly equal to the labeled completion count. After forced-cell propagation, a nonterminal instance with h holes and t candidates gives order t+2h and exactly 5t+h nonzeros. | [Construction, complete proof and code](notes/combinatorics/latin-completion-permanent/README.md), with [finite checks and review scope](notes/combinatorics/latin-completion-permanent/VERIFICATION.md). A conventional proof with exact-arithmetic tests; no novelty, zero-elimination, optimality, formal-verification or general counting-speedup claim. |
 | Exact uniform generation of labeled Latin squares | For every positive order $`n`$, exact uniform sampling in $`\widetilde O(n^{25})`$ expected total bit work. | [Research writeup, paper and reference sampler](notes/combinatorics/exact-latin-square-sampling/README.md). Internally cross-checked proof draft, not externally refereed; the reference code does not implement the revised runtime bound. |
 
+## Collatz dynamics
+
+- **[Collatz research](notes/number-theory/collatz/README.md):** One explicit density-zero set of changed steps gives convergence from every positive integer. Separate periodic changes give a sharp bound on the fraction of classes needed for uniform descent. The ordinary conjecture is not resolved.
+
 ## Discrete geometry
 
 - **[The smallest square that holds 18 unit squares](notes/geometry/unit-square-packing-18/README.md):** The exact side is (7 + √7)/2 with independent rotations and boundary contact allowed. Computer-assisted proof with an exact construction and a full public replay certificate for the lower bound.
