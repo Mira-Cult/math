@@ -62,6 +62,10 @@ See attribution and license status for the [Turing-machine results](turing-machi
 the [488-tile construction](tilings/wang-488/ATTRIBUTION.md),
 and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 
+## Logic and complexity
+
+- **[Power-of-two counting captures uniform TC⁰](notes/logic/power-of-two-counting/README.md):** On every finite linear order, ordinary truncated multiplication is definable using only order and a unary power-of-two cardinality test nested at most three deep. This gives DLOGTIME-uniform TC⁰ capture on nonempty ordered words. [Paper (PDF)](notes/logic/power-of-two-counting/paper/power-of-two-counting.pdf). Depth one is impossible; depth two remains open.
+
 ## Research notes
 
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.

@@ -1,0 +1,309 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1.04in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\TC}{\mathrm{TC}^{0}}
+\newcommand{\FO}{\mathrm{FO}}
+\newcommand{\Eq}{\operatorname{Eq}}
+\newcommand{\Add}{\operatorname{Add}}
+\newcommand{\Pow}{\operatorname{Pow}}
+\newcommand{\Mul}{\operatorname{Mul}}
+\newcommand{\Bit}{\operatorname{Bit}}
+\newcommand{\Sh}{\operatorname{Shift}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\dep}{C_E}
+\title{Power-of-two counting captures uniform \(\TC\)}
+\author{Mira}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Let \(C_E x\,\varphi\) hold if the set defined by \(\varphi\) has
+power-of-two cardinality. On finite linear orders, we define the ternary
+relation \(ab=c\) by a single first-order formula with at most three nested
+occurrences of \(C_E\), without enlarging the order. It follows that
+\(\FO_{\le}(C_E)\) captures DLOGTIME-uniform \(\TC\) on finite ordered
+words, answering a question of Hella, Kontinen, and Luosto. The key
+operation shifts a binary integer by counting a union of disjoint
+dyadic intervals. The largest in-domain weight is handled separately
+so that the construction works up to the last element of the order.
+\end{abstract}
+
+\section{Statement}
+Let \(E=\{2^i:i\geq 0\}\). The quantifier \(C_E x\,\varphi\)
+tests the cardinality of the set of elements satisfying \(\varphi\),
+with all other variables treated as parameters. The empty set fails
+the test. We write \([n]=\{0,\ldots,n-1\}\), with its standard order.
+The depth of a formula means its maximum nesting of \(C_E\) alone,
+after all abbreviations have been expanded. Ordinary first-order
+quantifiers do not add to this depth.
+
+\begin{theorem}\label{thm:main}
+There is a formula of depth at most three in \(\FO_{\le}(C_E)\)
+that defines \(ab=c\) for all \(a,b,c\in[n]\) and every \(n\geq 1\).
+In particular, on nonempty finite ordered words,
+\(\FO_{\le}(C_E)\) captures DLOGTIME-uniform \(\TC\).
+\end{theorem}
+
+Hella, Kontinen, and Luosto ask this capture question in
+\cite[Section~6]{hkl}. They give equicardinality for this quantifier
+and a partial-multiplication construction for suitable counting
+quantifiers. We use equicardinality with explicit depth bookkeeping,
+then give a small-product relation using separated intervals and
+congruences. The new step is the shift relation in Section~\ref{s:shift},
+which removes the need to enlarge the order.
+
+\section{Equicardinality at one counting layer}\label{s:eq}
+Use \(\Eq(A,B)\) for a formula comparing the cardinalities of two
+unary definable sets. We first exhibit a macro that adds at most one
+layer to the depth of the two input predicates. Set expressions in
+the proof are substitutions of unary formulas, never quantification
+over arbitrary sets.
+
+For \(n\geq4\), find the largest power-sized prefix and suffix,
+each of size \(4P\). They are definable by testing prefixes and
+suffixes with \(C_E\) and maximizing under inclusion.
+They cover \([n]\), since \(4P\leq n<8P\).
+An interval of size \(2^d\) splits into equal halves at the unique cut
+with both sides of power-of-two size: two positive powers can sum
+to a power only when equal. Split the prefix and suffix twice in
+this way. The four prefix quarters and the four suffix quarters
+after removing the prefix are disjoint pieces of size at most \(P\).
+All cuts use ordinary endpoint witnesses and parallel \(C_E\) tests.
+The first quarter and its immediate successor represent \(0,\ldots,P\).
+
+For sets \(A,B\) of size at most \(P\), let \(W\) be the
+complement of their union. Compare the truth values of the two power
+tests on \(A\cup W'\) and \(B\cup W'\) for every nonempty initial
+segment \(W'\) of \(W\). Equality of sizes gives agreement. If the
+sizes differ, take \(|W'|=2P-\min(|A|,|B|)\), which is possible
+since \(|W|\geq 2P\). One total is \(2P\), and the other lies
+strictly between \(2P\) and \(4P\). This detects inequality.
+Each \(W'\) is specified by the element of \(W\) at which it ends.
+
+For arbitrary sets, compare the intersection with each of the eight
+pieces to a prefix of size \(s\leq P\) by the small-set test.
+To add these eight counts, use quotient and remainder in base \(P\),
+with a remainder \(r<P\) and at most one carry at each of the eight
+steps. Small addition \(i+j=k\leq P\) compares \([i,k)\) and
+\([0,j)\) with the small-set test, requiring \(i\leq k\).
+For a carry from \(r+s\) to \(r'\), require \(r+t=P\) and
+\(t+r'=s\). The two lists of carries have the same number of ones
+by a fixed Boolean condition; their final remainders must agree.
+This works also for \(P=1\) and when a set is the whole domain.
+For \(n\leq3\), enumerate the four possible cardinalities with
+ordinary first-order formulas. This proves the claimed depth bound.
+
+Exact truncated addition \(\Add(a,b,c)\) is \(a\leq c\) and
+\(\Eq([a,c),[0,b))\), of depth one. Write \(P_2(p)\) for
+\(C_E x\,(x<p)\); it says that \(p\) is a positive power of two.
+The indexed power relation
+\[
+ \Pow(i,p)\ \equiv\ P_2(p)\ \land\
+   \Eq(\{u:u<p,\ P_2(u)\},[0,i))
+\]
+has depth two and says \(p=2^i<n\). In particular \(p=1\)
+corresponds to \(i=0\).
+
+\section{A small product at depth two}\label{s:small}
+We use an auxiliary relation \(D(x,y,z)\). It is sound for
+\(z=xy\) on every order but initially only complete with sufficient
+space. The zero-factor cases are immediate, so take \(x,y>0\).
+Let \(p\) be the least in-domain power of two at least \(x\), if
+there is one. The allowed starts are \(0\), the powers of two at
+least \(p\), and sums of two distinct such powers. Select the starts
+up to a cutoff which is itself a start. Compare this set to
+\([0,y)\) by \(\Eq\), require that the cutoff plus \(x-1\) is still
+in the domain, and compare the union of the length-\(x\) intervals
+at the selected starts to \([0,z)\) by \(\Eq\).
+
+All these starts are distinct multiples of \(p\), so the intervals
+are disjoint. A successful test gives \(z=xy\). Membership in
+the start or interval set uses only first-order operations,
+\(P_2\), and truncated addition in parallel. The added layer
+for \(\Eq\) makes the depth at most two. If \(t\) bit positions
+starting at \(p\) fit and \(1+t(t+1)/2\geq y\), there are
+at least \(y\) starts no larger than \(p(2^t-1)\). Thus the
+test succeeds for a true product (with its arguments in the
+domain) if
+\[
+ n\ \geq\ p(2^t-1)+x,\qquad 1+t(t+1)/2\geq y.
+ \tag{1}\label{eq:space}
+\]
+The first inequality also ensures that the \(t\) positions used here
+fit.
+
+Define \(\Res(x,m,u)\), for \(m\geq2\), by \(u<m\) and
+existence of \(v,w\) with \(D(v,m,w)\) and \(w+u=x\).
+Whenever this succeeds, \(u\) is the genuine residue of \(x\).
+For nonzero factors, define \(\Mul(a,b,c)\) by the following
+congruence tests. Let \(w=\max(a,b,c)\), let \(e\) be the number
+of powers of two at most \(w\), and put \(K=2e+2\).
+The integer \(e\) is defined by equicardinality with \([0,e)\);
+\(K\) uses truncated addition. For every \(2\leq m\leq K\),
+find the residues of \(a,b,c\) using \(\Res\), multiply the
+first two residues using \(D\), and require the residue of that
+product to equal the residue of \(c\). Once again check zero
+factors separately. Every arithmetic call is in ordinary
+first-order scope, so \(\Mul\) has depth at most two.
+Since \(w<2^e\), we have \(|ab-c|<2^{2e}\), and the tests force
+\(ab=c\) by
+\[
+ \operatorname{lcm}(1,\ldots,K)\ \geq\ 2^{K-1}.
+\]
+The latter is the standard consequence of Farhi's identity
+\cite[Theorem~1]{farhi}: \(\operatorname{lcm}(1,\ldots,K)\) is
+\(K\) times the least common multiple of the binomial coefficients
+in row \(K-1\); the largest coefficient is at least \(2^{K-1}/K\).
+
+\begin{lemma}\label{lem:small}
+Suppose \(n\geq65537\). Let \(2^h\) be the largest power of two in
+\([n]\), let \(k=\lfloor h/4\rfloor\), and put \(B=2^k\).
+For \(a,b,c<B^2\), the relation \(\Mul(a,b,c)\) holds exactly
+when \(ab=c\).
+\end{lemma}
+\begin{proof}
+Soundness was proved above. Here \(k\geq4\) and \(K\leq4k+2\).
+In the true residue calculations and the product of two residues,
+every \(D\) has second argument at most \(K\). Its first argument
+is at most \(2B^2\): the original arguments are below \(B^2\), and
+the residue product is bounded by \((4k+2)^2\leq2B^2\).
+The dyadic ceiling of any positive width is therefore at most
+\(2B^2\). With \(t=2k-2\), the number \(1+t(t+1)/2\) is at least
+\(4k+2\), and the space in \eqref{eq:space} is bounded by
+\[
+ (2B^2)\,2^{2k-2}=2^{4k-1}<n.
+\]
+Consequently every required witness fits and all true tests succeed.
+\end{proof}
+
+\section{Counting a binary shift}\label{s:shift}
+On the guarded range \(0\leq q<B^2\), define \(\Bit(q,j)\) by
+the existence of \(p,t,r,y\) with
+\[
+ \Pow(j,p),\quad t>0\text{ odd},\quad r<p,\quad
+ \Mul(t,p,y),\quad \Add(y,r,q).
+\]
+Oddness is expressible by truncated addition and successor. The
+formula is sound by division with remainder. If bit \(j\) is set,
+all witnesses, including \(p\), are at most \(q\); Lemma~\ref{lem:small}
+then proves completeness. The depth is two.
+
+To define \(\Sh(q,e,z)\) on the same input range, require that every
+set bit \(j\) of \(q\) has a represented index \(e+j\) and a represented
+target weight \(2^{e+j}\). Let \(P=2^h\) be the largest in-domain
+power. Call a weight selected if it is the target of some set bit.
+For each selected \(p<P\), use the interval \([p,2p)\), located
+using \(\Add(p,p,2p)\). These intervals are disjoint and contained
+in \([1,P)\). By \(\Eq\), require their union to have size exactly
+\(s\) by comparing it with \([0,s)\). If \(P\) was selected, require
+\(\Add(s,P,z)\); otherwise require \(s=z\).
+
+The separate top term prevents clipping at the endpoint \(n\).
+The size \(s<P\) always fits, including for \(q=0\). If \(q=0\)
+the relation gives \(z=0\) for every shift exponent in the domain,
+even if \(2^e\) is not in the domain. If \(q>0\) and the true output
+is in the domain, each target is in the domain; its index is also
+representable. Conversely, if a target is missing, or if the final
+addition would overflow, the formula fails. Hence the relation
+is exactly \(z=q2^e<n\) on the guarded range. Union membership
+has depth two, because the power, bit, and addition subformulas
+occur in parallel. The outer equicardinality macro brings the
+depth to at most three.
+
+\section{Full multiplication and capture}
+For \(n\geq65537\), choose \(h,k,B\) as above. They are definable
+using indexed powers, addition, and the remainder of \(h\) modulo
+four, a finite choice. The cutoff \(B^2\) is also defined by
+\(\Pow(2k,B^2)\). Since \(h\leq4k+3\) and \(k\geq4\), we have
+\(B^5\geq2^{h+1}\geq n\). Thus five base-\(B\) digits suffice.
+
+Existentially choose digits \(d_i,f_i<B\), \(0\leq i\leq4\).
+Use \(\Sh\) and fixed chains of truncated additions to require
+\[
+ a=\sum_{i=0}^4 d_i\,2^{ik},\qquad b=\sum_{i=0}^4 f_i\,2^{ik}.
+\]
+For each pair \(i,j\), require \(g_{ij}<B^2\) and
+\(\Mul(d_i,f_j,g_{ij})\). Use \(\Sh\) and addition again to demand
+\[
+ c=\sum_{i,j=0}^4 g_{ij}\,2^{(i+j)k}.
+\]
+The notation is a finite template: all indices are unrolled, and
+the exponents, at most \(8k<n\), are defined by fixed additions.
+Each witnessed equality is genuine. For a true product \(ab=c<n\),
+each nonnegative shifted term and each partial sum fit below \(n\),
+as do the terms and sums reconstructing the inputs. Thus the formula
+is complete. Combining the finitely many calls in ordinary first-order
+scope keeps depth at most three. The finitely many smaller orders
+can be covered by a pure-order disjunction specifying their sizes
+and the ordinal positions of each true triple.
+
+By \cite[Section~2, especially equation~(5)]{hkl}, order,
+multiplication, and H\"artig equicardinality capture DLOGTIME-uniform
+\(\TC\) on nonempty ordered words. Both of the latter relations
+are available in our logic. For the reverse inclusion, in that
+arithmetic logic compare a nonempty set with the prefix ending
+inclusively at \(u\). Its size is a power of two just when
+\(u=2^i-1\) for some \(i\geq0\). This is the usual binary test
+that \(u\) has no zero bit below a one bit, with \(u=0\) permitted.
+Here BIT is definable from the built-in arithmetic
+\cite[Chapter~6]{libkin}. The inclusive prefix also handles a
+power-sized full domain, without representing \(n\) as an element.
+This proves both inclusions and Theorem~\ref{thm:main}.
+
+\paragraph{The remaining depth question.}
+Can exact multiplication be defined with at most two nested
+\(C_E\) quantifiers? Depth one cannot suffice even with built-in
+truncated addition. Indeed, relativize each such formula to
+\([0,n)\) in the natural numbers. Each counting child is
+Presburger-definable; its unary cardinality is also
+Presburger-definable, by \cite{schweikardt}. Testing that cardinality
+for membership in \(E\) translates the whole formula into
+Presburger arithmetic with a power-of-two predicate, a decidable
+theory \cite{benedikt}. A depth-one definition of exact multiplication
+would define multiplication on the natural numbers by existentially
+choosing a containing \(n\), contradicting undecidability.
+The distinction between depth two and three remains open here.
+
+\paragraph{Acknowledgment.}
+OpenAI models assisted in developing the proof, drafting the
+exposition, and checking the argument, under Mira's guidance.
+The proof was separately checked by a nonauthor automated reviewer;
+no formal verification or external referee review is claimed.
+A companion \href{https://github.com/Mira-Cult/math/tree/main/notes/logic/power-of-two-counting}{research writeup}
+is available in the public mathematics repository.
+
+\begin{thebibliography}{9}
+\bibitem{hkl}
+L. Hella, J. Kontinen, and K. Luosto,
+\emph{Regular representations of uniform \(\TC\)},
+ACM Transactions on Computational Logic 26 (2025), Article 21.
+\href{https://doi.org/10.1145/3750044}{doi:10.1145/3750044}.
+
+\bibitem{farhi}
+B. Farhi,
+\emph{An identity involving the least common multiple of binomial
+coefficients and its application},
+American Mathematical Monthly 116 (2009), 836--839.
+\href{https://arxiv.org/abs/0906.2295}{arXiv:0906.2295}.
+
+\bibitem{libkin}
+L. Libkin, \emph{Elements of Finite Model Theory}, Springer, 2004.
+\href{https://www.cs.toronto.edu/~libkin/fmt/fmt.pdf}{Online edition}.
+
+\bibitem{schweikardt}
+N. Schweikardt,
+\emph{Arithmetic, first-order logic, and counting quantifiers},
+ACM Transactions on Computational Logic 6 (2005), 634--671.
+\href{https://arxiv.org/abs/cs/0211022}{arXiv:cs/0211022}.
+
+\bibitem{benedikt}
+M. Benedikt, C.-H. Chistikov, and A. Mansutti,
+\emph{The complexity of Presburger arithmetic with power or powers},
+ICALP 2023, Article 112.
+\href{https://doi.org/10.4230/LIPIcs.ICALP.2023.112}{doi:10.4230/LIPIcs.ICALP.2023.112}.
+\end{thebibliography}
+\end{document}
