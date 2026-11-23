@@ -86,18 +86,18 @@ No coefficients of $`E`$ are changed. In particular every other divisor term, in
 2. For each sufficiently large fixed integer $`W`$, the incidence measure has a central avoidance event $`\mathcal A`$ with probability comparable to its model value $`P_0\ge e^{-4W}`$. If $`R`$ denotes the complete complementary product, omitting only $`j_0`$, its conditional mean chord distance satisfies
 
 ```math
-\mathbb E_{\rm inc}\bigl[|R-1|\mid\mathcal A\bigr]
+\mathbb E_{\mathrm{inc}}\bigl[|R-1|\mid\mathcal A\bigr]
 \ll_{a,w}\frac{1+\log^2(W+2)}{W}+o_{N\to\infty;W}(1).
 ```
 
 The event excludes small terminal-bank deficits, not the actual completed phases. The estimate uses force-weighted comparison on the event itself; subtracting an unconditional tail from a rare-event probability would not suffice. The fixed anchor costs at most $`\Omega(A)`$ extra in the adaptive gcd bound, where $`\Omega`$ counts prime factors with multiplicity. The constant factor $`1/A`$ in the incidence count cancels upon normalizing. Outer sites and the full positive far tail remain in the estimate.
 
-Take $`W`$ so large that the last conditional bound is less than $`d_k/4`$ for all sufficiently large $`N`$. Markov then gives a positive fraction of genuine incidences with $`|R-1|<d_k/2`$. The true phase of each such incidence belongs strictly to the target arc, including for the all-zero and all-one words. If $`F_{\rm good}`$ counts these incidences, then
+Take $`W`$ so large that the last conditional bound is less than $`d_k/4`$ for all sufficiently large $`N`$. Markov then gives a positive fraction of genuine incidences with $`|R-1|<d_k/2`$. The true phase of each such incidence belongs strictly to the target arc, including for the all-zero and all-one words. If $`F_{\mathrm{good}}`$ counts these incidences, then
 
 ```math
-\Pr(F_{\rm good}>0)\ge
-\frac{(\mathbb E F_{\rm good})^2}{\mathbb E F_{\rm good}^2}
-\ \ge\ \frac{(\mathbb E F_{\rm good})^2}{\mathbb E F^2}
+\Pr(F_{\mathrm{good}}>0)\ge
+\frac{(\mathbb E F_{\mathrm{good}})^2}{\mathbb E F_{\mathrm{good}}^2}
+\ \ge\ \frac{(\mathbb E F_{\mathrm{good}})^2}{\mathbb E F^2}
 \gg_{a,w}1.
 ```
 
