@@ -1,6 +1,6 @@
 # Verification and sources for the positive-density theorem
 
-[The theorem and proof outline](../0002-erdos-borwein-positive-word-density.md) are accompanied by the main analytic estimates. This is a conventional mathematical result with internal proof checks. It is not a formal verification or a claim of external referee acceptance.
+[The theorem](../0002-erdos-borwein-positive-word-density.md) and [proof outline](proof.md) are accompanied by the main analytic estimates. This is a conventional mathematical result with internal proof checks. It is not a formal verification or a claim of external referee acceptance.
 
 ## Scope of the checks
 

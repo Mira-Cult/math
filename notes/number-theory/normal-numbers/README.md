@@ -18,7 +18,7 @@ This bound does not choose a base in which the switches are frequent, prove posi
 
 Every fixed binary word occurs in the Erdős–Borwein constant with positive lower density. More precisely, for each fixed $a>7/12$, it occupies a positive proportion of starts in every sufficiently late window of length $H$ between $N^a$ and $N$, with a constant depending on the word and $a$.
 
-**[Read the theorem and proof outline](0002-erdos-borwein-positive-word-density.md).** This gives no limiting frequency and does not prove binary normality.
+**[Read the theorem](0002-erdos-borwein-positive-word-density.md).** This gives no limiting frequency and does not prove binary normality.
 
 ## Normal Dovetails: constructing normal digit streams
 
