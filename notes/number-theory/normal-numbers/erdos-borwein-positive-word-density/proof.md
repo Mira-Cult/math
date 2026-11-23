@@ -1,6 +1,6 @@
 # Proof outline: positive density of every fixed binary word
 
-[Return to the theorem (claim 0002)](../0002-erdos-borwein-positive-word-density.md).
+[Return to the theorem (claim 0002)](README.md).
 
 Let $`E=\sum_{m\ge1}(2^m-1)^{-1}`$. Fix a binary word of length $`k`$ and a window of length $`H`$ after position $`N`$, with $`N^a\le H\le N`$ and $`a>7/12`$. An eligible start is one whose full $`k`$-digit block lies in the window.
 
