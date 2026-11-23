@@ -17,6 +17,8 @@ This workspace brings together results on Bol loops, their translation groups, a
 
 [Odd two-prime orders](odd-prime-pair/README.md) now have an exact least exponent and a complete census there. The next exponent is impossible. At the third exponent in the ternary order-nine case the elementary-core loops have an exact count; larger elementary-core rotations force both axial and mixed weights.
 
+The [prime-top two-type theorem](odd-prime-pair/manuscripts/0134-prime-top-two-types.md) classifies **every** finite simple proper left Bol loop at $`qp^{2p+2}`$ when $`\mathrm{ord}_q(p)=p`$. There are exactly two ordinary isomorphism types, including at order **85,293**.
+
 The [least odd order](odd-degree/README.md) of a finite simple nonassociative left Bol loop is **1053**. Nagy constructed an example; the new argument rules out every smaller odd order. The same package gives [the complete list at order *p*³ for primes *p* ≥ 5](odd-degree/manuscripts/all-bol-loops-of-prime-cube-order.md), up to isomorphism and isotopy. Neither result asserts uniqueness at 1053. [Separate proof reviews and reproducible checks](odd-degree/verification.md).
 
 ## Extraspecial cores at two-prime orders

@@ -4,12 +4,14 @@
 
 A loop has an identity and unique left and right division. It is *left Bol* if
 `x(y(xz)) = (x(yx))z`; it is *simple* if its only normal subloops are the
-identity and the whole loop. Here we exclude associative loops. Fix distinct odd
+identity and the whole loop. Here “proper” means non-Moufang. At odd order, a finite simple nonassociative left Bol loop is necessarily non-Moufang by Glauberman’s theorem. Fix distinct odd
 primes $`p,q`$ and ask which orders $`p^a q`$ occur and how many loops occur at
 the first admissible exponents. Write $`f=\mathrm{ord}_q(p)`$, the
 multiplicative order of $`p`$ modulo $`q`$.
 
 ## What is known
+
+- **Exactly two types at each prime-top family order.** If $`\mathrm{ord}_q(p)=p`$, there are exactly two finite simple proper left Bol loops at order $`qp^{2p+2}`$, up to ordinary isomorphism. In particular, there are exactly two at order **85,293**. The two classes are distinguished by a square class of the actual stabilizer lift. [Proof and model definitions](manuscripts/0134-prime-top-two-types.md) · [Checks and attribution](PRIME_TOP_VERIFICATION.md).
 
 - **Least exponent and its census.** Some order $`p^a q`$ occurs if and only
   if $`p`$ divides $`q-1`$. For such a pair, the least exponent is

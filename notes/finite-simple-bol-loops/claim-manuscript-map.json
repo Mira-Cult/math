@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "original_claim_ids": "0001–0017",
-  "next_id": "0134",
+  "next_id": "0135",
   "manuscripts": [
     {
       "id": "0053",
@@ -2467,6 +2467,11 @@
       "group": "fixed-frattini-repeated-packets",
       "source": "odd-prime-pair/manuscripts/0133-fixed-frattini-repeated-packets.md",
       "evidence": "odd-prime-pair/VERIFICATION.md"
+    },
+    {
+      "id": "0134",
+      "source": "odd-prime-pair/manuscripts/0134-prime-top-two-types.md",
+      "group": "odd-prime-top-exact-classification"
     }
   ]
 }

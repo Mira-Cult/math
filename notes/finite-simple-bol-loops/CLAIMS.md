@@ -41,6 +41,7 @@ Setting $`f=\mathrm{ord}_q(p)`$, the [two-prime workspace](odd-prime-pair/README
 - [0131: Frattini quotient crowding](odd-prime-pair/manuscripts/0131-frattini-quotient-crowding.md). Projecting the marked folder gives an exact uniform multiplicity, not necessarily a quotient loop; a fixed-central single axial packet per side is excluded.
 - [0132: Multiplicity-one axial packets with fixed Frattini subgroup](odd-prime-pair/manuscripts/0132-fixed-frattini-multiplicity-one.md). Even Frobenius degree rules out the stated nonabelian purely axial branch. For odd degree, the reciprocal-packet constraint applies.
 - [0133: Repeated axial packets and physical central phases](odd-prime-pair/manuscripts/0133-fixed-frattini-repeated-packets.md). A rounded isotropy bound holds without top semisimplicity. Exact phase formulas constrain collisions at zero and nonzero top; the all-even residual remains open.
+- [0134: Exact two-type census at the prime-top family orders](odd-prime-pair/manuscripts/0134-prime-top-two-types.md). At $`qp^{2p+2}`$ with $`\mathrm{ord}_q(p)=p`$, there are exactly two ordinary isomorphism types of finite simple proper left Bol loops. The order 85,293 case is included.
 
 ## Odd-order obstructions and prime cubes
 
@@ -204,7 +205,7 @@ Numbered expositions are linked where available. Other links identify supporting
 
 This catalogue covers all seventeen original claim records and every manuscript currently released in this public workspace. It does not claim that unpublished source work has been exhaustively audited. A compound manuscript can contain lemmas, examples and conjectures beyond its headline family: its hypotheses and section labels control their status. A material new theorem should get a new ID rather than being hidden under0010; an alternative proof of the same result retains its ID. Corrections retain IDs and state which conclusion changed.
 
-The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0134.
+The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0135.
 
 
 ## Manuscript-local QR labels, no permanent numeric allocation

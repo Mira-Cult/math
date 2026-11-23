@@ -33,6 +33,8 @@ weights. See [claims 0127–0130](CLAIMS.md#simple-loops-of-odd-two-prime-order)
 
 The [fixed-Frattini results](odd-prime-pair/README.md#nonabelian-cores-with-fixed-frattini-subgroup) give exact quotient mark multiplicity, exclude the even-degree multiplicity-one axial branch, and constrain repeated packets and the central phases of genuine collisions. See [claims 0131–0133](CLAIMS.md#simple-loops-of-odd-two-prime-order).
 
+[0134: Exact census at the prime-top family orders](odd-prime-pair/manuscripts/0134-prime-top-two-types.md) gives precisely two ordinary isomorphism types, including at order **85,293**. [Proof audit and runnable checks](odd-prime-pair/PRIME_TOP_VERIFICATION.md).
+
 ## Odd-order obstructions and prime cubes
 
 - [0115: Odd-order bounds and the least odd simple example](odd-degree/README.md). Odd cube-free orders have a normal series in the original loop with abelian factors of order prime or prime-square. For two-prime orders *p*ᵃ*q*, nonassociative simplicity requires *q* > *p* and *a* ≥ *p* + 1; at equality existence is characterized by the order of *p* modulo *q*. Two additional exclusions give the sharp odd minimum 1053, attained by Nagy’s earlier construction. No uniqueness claim.
