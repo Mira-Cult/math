@@ -18,7 +18,7 @@ all-odd-order square theorem.
 
 ## Normality and constructed numbers
 
-- **[Normal numbers and digit expansions](notes/number-theory/normal-numbers/README.md):** the full proof of a joint digit-switch lower bound for irrational numbers in two fixed coprime bases, and the Normal Dovetails proof and replay packet for constructing normal digit streams from analytic functions. Neither result proves normality of an unchanged traditional constant.
+- **[Normal numbers and digit expansions](notes/number-theory/normal-numbers/README.md):** the joint digit-switch lower bound for two coprime bases, [positive lower density of every fixed binary word in the Erdős–Borwein constant](notes/number-theory/normal-numbers/0002-erdos-borwein-positive-word-density.md), and the Normal Dovetails construction of normal digit streams. None proves normality of an unchanged traditional constant.
 
 ## Diophantine descriptions
 

@@ -14,6 +14,12 @@ For every irrational real number, the combined count is at least a positive cons
 
 This bound does not choose a base in which the switches are frequent, prove positive switch density, or prove normality of any particular irrational number. Natural next questions are whether the joint lower bound can be increased and what fails when the bases share a prime factor.
 
+## Erdős–Borwein: positive density of every fixed word
+
+Every fixed binary word occurs in the Erdős–Borwein constant with positive lower density. More precisely, for each fixed $a>7/12$, it occupies a positive proportion of starts in every sufficiently late window of length $H$ between $N^a$ and $N$, with a constant depending on the word and $a$.
+
+**[Read the theorem and proof outline](0002-erdos-borwein-positive-word-density.md).** This gives no limiting frequency and does not prove binary normality.
+
 ## Normal Dovetails: constructing normal digit streams
 
 The [Normal Dovetails proof and replay packet](normal-dovetails/README.md) constructs a normal stream in a fixed base by concatenating complete fractional prefixes of values of a nonpolynomial real D-finite function at suitable rational inputs. The proof controls every output prefix. This is a theorem about the constructed stream, not about normality of the original function values.
