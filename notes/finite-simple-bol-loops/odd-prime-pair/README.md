@@ -36,15 +36,14 @@ multiplicative order of $`p`$ modulo $`q`$.
   $`\frac{1}{3(f/9)}\sum_{j=0}^{u-1}3^{2\cdot 3^e\gcd(u,j)}.`$
   For $`q=19`$, this gives 15 types of order 198,746,710,857 **in this
   restricted class**.
-- **Larger cyclic rotations force two kinds of weights.** For elementary
-  abelian normal $`p`$-core and a cyclic rotation group of order $`p^k`$ with
-  $`k\ge 2`$, except $`(p,k)=(3,2)`$, both an axial weight (nontrivial on
-  exactly one reciprocal axis) and a mixed weight (nontrivial on both)
-  must occur. Thus
-  $`a\ge k+\mathrm{lcm}(p^k,f)+\frac{f(p^k-1)}2.`$
-  See the [purely axial obstruction](reviews/arbitrary-cyclic-top-graph-obstruction.md#2-a-no-repair-theorem-for-the-split-elementary-purely-axial-architecture)
-  and [both-weight bound](manuscripts/elementary-higher-top-mixed-weight-lower-bound.md).
-  The bound does not assert existence or sharpness.
+- **Sharp minimum at each higher cyclic top with abelian core.** Write
+  $`n=p^k\mid q-1`$, $`k\ge2`$, and $`d=\mathrm{lcm}(n,f)`$. The least
+  exponent with this top and an abelian core is $`kd+k`$, except at
+  $`(p,k)=(3,2)`$, where it is $`d+3`$. An elementary abelian core
+  is impossible outside the ternary exception. Mixed weights cannot
+  attain either abelian minimum.
+  [Proof](manuscripts/0135-higher-cyclic-abelian-cores.md) ·
+  [Constructions](manuscripts/higher-top-augmentation-construction.md).
 
 ## Why the stabilizer matters
 
@@ -79,11 +78,9 @@ weight assumptions stated separately in each proof.
 ## What remains
 
 For $`p`$ dividing $`f`$, determine the full census at $`a=f+3`$, including
-rotation order $`p`$ and non-elementary cores. For larger rotation groups,
-construct a genuine elementary-core folder with both types of weight, or
-prove an additional obstruction without assuming the linear data alone
-gives a transversal. The results here do not classify all odd simple
-Bol loops.
+rotation order $`p`$ and non-elementary cores. At a prescribed higher cyclic rotation, determine whether nonabelian cores
+can improve the abelian minimum and classify the operations at equality.
+The results here do not classify all odd simple Bol loops.
 
 [Verification and provenance](VERIFICATION.md) ·
 [Earlier odd-order bounds](../odd-degree/README.md) ·

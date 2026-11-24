@@ -28,8 +28,7 @@
 The [two-prime workspace](odd-prime-pair/README.md) gives the exact least
 exponent at each admissible pair and the census there, excludes the very
 next exponent, and gives an exact restricted census with ternary order-nine
-rotation. Larger elementary-core rotations force both axial and mixed
-weights. See [claims 0127–0130](CLAIMS.md#simple-loops-of-odd-two-prime-order).
+rotation. At every prescribed higher cyclic top, [0135](odd-prime-pair/manuscripts/0135-higher-cyclic-abelian-cores.md) gives the sharp minimum over abelian cores, and excludes elementary cores except for ternary order nine. See the [claim catalogue](CLAIMS.md#simple-loops-of-odd-two-prime-order).
 
 The [fixed-Frattini results](odd-prime-pair/README.md#nonabelian-cores-with-fixed-frattini-subgroup) give exact quotient mark multiplicity, exclude the even-degree multiplicity-one axial branch, and constrain repeated packets and the central phases of genuine collisions. See [claims 0131–0133](CLAIMS.md#simple-loops-of-odd-two-prime-order).
 

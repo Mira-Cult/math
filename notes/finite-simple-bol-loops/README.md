@@ -15,7 +15,7 @@ This workspace brings together results on Bol loops, their translation groups, a
 
 ## Odd orders: the first simple example and a full prime-cube list
 
-[Odd two-prime orders](odd-prime-pair/README.md) now have an exact least exponent and a complete census there. The next exponent is impossible. At the third exponent in the ternary order-nine case the elementary-core loops have an exact count; larger elementary-core rotations force both axial and mixed weights.
+[Odd two-prime orders](odd-prime-pair/README.md) now have an exact least exponent and a complete census there. The next exponent is impossible. At the third exponent in the ternary order-nine case the elementary-core loops have an exact count; [the higher-rotation minimum for abelian cores](odd-prime-pair/manuscripts/0135-higher-cyclic-abelian-cores.md) now excludes elementary cores outside the ternary order-nine case and gives sharp minimum orders for all abelian cores at each prescribed higher cyclic top.
 
 The [prime-top two-type theorem](odd-prime-pair/manuscripts/0134-prime-top-two-types.md) classifies **every** finite simple proper left Bol loop at $`qp^{2p+2}`$ when $`\mathrm{ord}_q(p)=p`$. There are exactly two ordinary isomorphism types, including at order **85,293**.
 

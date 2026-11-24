@@ -45,3 +45,19 @@ python3 code/verify_first_degree_two_sheet_orbits.py
 These were scoped nonauthor mathematical reads by OpenAI models, not human
 referee reports or formal verification. The cited revisions are provenance
 identifiers; the proof dependencies are included on the public pages.
+
+
+## Higher cyclic abelian cores
+
+Claim 0135 is a selective publication from the parked research branch, not a
+synchronization of all research through that branch head.
+
+| Source revision | Reviewed mathematical scope |
+| --- | --- |
+| `f928e8deace0ecf7d9237587b1448608fa5855e4` | Elementary-core exclusion: the actual lift, exact signed index and positive-projection quotient, nilpotent norm bound, and genuine product of outside involutions. |
+| `f566d91f9e6e43f6d94831a135be11a01d72bbc6` | Abelian exponent obstruction, including the ternary exceptional binomial coefficient; conversion to minimum orders retaining the canonical two-axis inputs. |
+| `00366d2c36edda2e198441374f3e3463acc61536`, `f34eeefc4574a72091867c962fb4f7f470fabb78` | Induced axial augmentation and the ternary order-nine construction on the induced module, including the physical folder and normal cuts. |
+
+The proof pages combine these scoped mathematical arguments. The independent
+checks were OpenAI model reviews, not human refereeing or formal verification.
+No new multiplication-table computation is needed or claimed for this batch.

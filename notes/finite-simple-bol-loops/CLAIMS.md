@@ -36,12 +36,14 @@ Setting $`f=\mathrm{ord}_q(p)`$, the [two-prime workspace](odd-prime-pair/README
 - [0127: Least exponent and complete first-degree census](odd-prime-pair/manuscripts/all-core-prime-pair-minimum.md). Some order occurs exactly when $`p`$ divides $`q-1`$. The least exponent is $`1+\mathrm{lcm}(p,f)`$, with an [explicit census](odd-prime-pair/manuscripts/two-weight-exhaustion-at-the-first-odd-prime-pair-degree.md) at equality.
 - [0128: Gap immediately after the minimum](odd-prime-pair/manuscripts/second-odd-prime-pair-degree-gap.md). For every admissible pair the next exponent is impossible; [the case $`p\mid f`$](odd-prime-pair/manuscripts/second-degree-gap-with-p-dividing-f.md) completes the exclusion.
 - [0129: Elementary-core ternary order-nine census](odd-prime-pair/manuscripts/ternary-top-nine-elementary-core-classification.md). A [construction](odd-prime-pair/manuscripts/third-degree-ternary-order-nine-top-construction.md) and exact count at order $`3^{f+3}q`$ with elementary abelian core and order-nine rotation. For $`q=19`$ this gives 15 types in this class.
-- [0130: Limits on higher cyclic rotation groups](odd-prime-pair/manuscripts/elementary-higher-top-mixed-weight-lower-bound.md). With elementary abelian core, both axial and mixed weights are necessary outside the ternary order-nine exception. A [separate bound](odd-prime-pair/manuscripts/no-saturated-higher-odd-prime-pair-top.md) for $`p\mid f`$ does not require an elementary core.
+- [0130: Limits on higher cyclic rotation groups](odd-prime-pair/manuscripts/elementary-higher-top-mixed-weight-lower-bound.md). The earlier both-weight necessity for elementary cores is superseded by [0135](odd-prime-pair/manuscripts/0135-higher-cyclic-abelian-cores.md), which excludes those elementary cores outright. A [separate bound](odd-prime-pair/manuscripts/no-saturated-higher-odd-prime-pair-top.md) for $`p\mid f`$ does not require an elementary core.
 
 - [0131: Frattini quotient crowding](odd-prime-pair/manuscripts/0131-frattini-quotient-crowding.md). Projecting the marked folder gives an exact uniform multiplicity, not necessarily a quotient loop; a fixed-central single axial packet per side is excluded.
 - [0132: Multiplicity-one axial packets with fixed Frattini subgroup](odd-prime-pair/manuscripts/0132-fixed-frattini-multiplicity-one.md). Even Frobenius degree rules out the stated nonabelian purely axial branch. For odd degree, the reciprocal-packet constraint applies.
 - [0133: Repeated axial packets and physical central phases](odd-prime-pair/manuscripts/0133-fixed-frattini-repeated-packets.md). A rounded isotropy bound holds without top semisimplicity. Exact phase formulas constrain collisions at zero and nonzero top; the all-even residual remains open.
 - [0134: Exact two-type census at the prime-top family orders](odd-prime-pair/manuscripts/0134-prime-top-two-types.md). At $`qp^{2p+2}`$ with $`\mathrm{ord}_q(p)=p`$, there are exactly two ordinary isomorphism types of finite simple proper left Bol loops. The order 85,293 case is included.
+
+- [0135: Sharp minimum orders for abelian cores with higher cyclic rotation](odd-prime-pair/manuscripts/0135-higher-cyclic-abelian-cores.md). In the reciprocal two-axis model with cyclic top of order $`p^k`$ for $`k\ge2`$, the least abelian-core exponent is $`kd+k`$ with $`d=\mathrm{lcm}(p^k,\mathrm{ord}_q(p))`$, except for ternary order nine, where it is $`d+3`$. Elementary cores are excluded outside that exception.
 
 ## Odd-order obstructions and prime cubes
 
@@ -205,7 +207,7 @@ Numbered expositions are linked where available. Other links identify supporting
 
 This catalogue covers all seventeen original claim records and every manuscript currently released in this public workspace. It does not claim that unpublished source work has been exhaustively audited. A compound manuscript can contain lemmas, examples and conjectures beyond its headline family: its hypotheses and section labels control their status. A material new theorem should get a new ID rather than being hidden under0010; an alternative proof of the same result retains its ID. Corrections retain IDs and state which conclusion changed.
 
-The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0135.
+The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0136.
 
 
 ## Manuscript-local QR labels, no permanent numeric allocation

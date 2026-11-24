@@ -1,5 +1,7 @@
 # Elementary higher cyclic tops require mixed weights
 
+**Historical bound.** The [later positive-projection obstruction](0135-higher-cyclic-abelian-cores.md) excludes these higher-top elementary cores outright outside ternary order nine. This earlier weight calculation is retained as a proof dependency and for its original scope.
+
 **Research proof; see the scope of verification.** [Verification and provenance](../VERIFICATION.md).
 
 **Corollary.** Let a finite simple proper left Bol loop have order $`p^a q`$ for distinct odd primes with elementary abelian canonical $`p`$-core and cyclic canonical top of order $`p^k`$, $`k\ge2`$. Apart from $`(p,k)=(3,2)`$, its canonical $`p`$-core has a mixed weight for the two $`q`$-axes. With $`f=\mathrm{ord}_q(p)`$, necessarily
