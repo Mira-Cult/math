@@ -36,7 +36,7 @@ is base-$`B`$ normal if and only if $`D`$ has a prime divisor not dividing $`B`$
 
 ## A power-orbit estimate
 
-Write $`e(t)=\exp(2\pi i t)`$. Fix $`b`$ and a finite prime set $`S`$ coprime to $`b`$. Fix $`0<\epsilon<A`$. For all sufficiently large integers $`q`$ supported on $`S`$, all $`a`$ coprime to $`q`$ and all lengths $`q^\epsilon\le L\le q^A`$, there is a $`\delta>0`$ independent of $`a,q,L`$ such that
+Write $`e(t)=\exp(2\pi i t)`$. Fix $`b`$ and a finite prime set $`S`$ coprime to $`b`$. Fix $`0\lt \epsilon\lt A`$. For all sufficiently large integers $`q`$ supported on $`S`$, all $`a`$ coprime to $`q`$ and all lengths $`q^\epsilon\le L\le q^A`$, there is a $`\delta\gt 0`$ independent of $`a,q,L`$ such that
 
 ```math
 \left|\sum_{j=0}^{L-1}e\!\left(\frac{ab^j}{q}\right)\right|
@@ -45,10 +45,10 @@ Write $`e(t)=\exp(2\pi i t)`$. Fix $`b`$ and a finite prime set $`S`$ coprime to
 
 The estimate is uniform in the starting exponent: its power of $`b`$ can be incorporated in $`a`$. A fixed nonzero integer multiplier in the phase is harmless, since reducing the fraction changes $`q`$ by at most a fixed factor; one may slightly widen the allowed powers of $`q`$.
 
-To prove the estimate, write $`q=\prod_{p\in S}p^{e_p}`$ and choose an integer $`d\ge2`$ with $`d\epsilon>1`$. Set
+To prove the estimate, write $`q=\prod_{p\in S}p^{e_p}`$ and choose an integer $`d\ge2`$ with $`d\epsilon\gt 1`$. Set
 
 ```math
-t_0=2\operatorname{lcm}_{p\in S}(p-1),\qquad
+t_0=2\mathrm{lcm}_{p\in S}(p-1),\qquad
 t=t_0\prod_{p\in S}p^{\lceil e_p/(d+1)\rceil},\qquad U=b^t-1.
 ```
 
@@ -65,25 +65,25 @@ Its leading coefficient has reduced denominator $`q_*\asymp q^{1/(d+1)}`$: for $
 \left(q_*^{-1}+K^{-1}+q_*K^{-d}\right)^{1/2^{d-1}} .
 ```
 
-Each term in parentheses saves a fixed power of $`q`$: the last is $`O(q^{1-d\epsilon})`$, and the other two save because $`d\epsilon>1`$. Take $`\rho>0`$ small enough relative to $`A`$ and sum the progression estimates. All constants can depend on the fixed prime set; no uniformity as that set grows is asserted.
+Each term in parentheses saves a fixed power of $`q`$: the last is $`O(q^{1-d\epsilon})`$, and the other two save because $`d\epsilon\gt 1`$. Take $`\rho\gt 0`$ small enough relative to $`A`$ and sum the progression estimates. All constants can depend on the fixed prime set; no uniformity as that set grows is asserted.
 
 ## From partial sums to actual digits
 
-We use the following reduction in the three proofs. On each dyadic digit interval $`[X,2X)`$, suppose that, apart from $`o(X)`$ exceptional positions, the orbit of a real $`x`$ is approximated with a uniform $`o(1)`$ error modulo one by consecutive power orbits of rational numbers. Suppose there are $`O((\log X)^r)`$ such pieces for a fixed $`r`$, and the reduced denominators share a fixed prime support coprime to the base and lie between $`cX^\alpha`$ and $`CX^\beta`$ for fixed $`0<\alpha\le\beta`$. Here each piece begins with a reduced rational and proceeds by multiplication by the base.
+We use the following reduction in the three proofs. On each dyadic digit interval $`[X,2X)`$, suppose that, apart from $`o(X)`$ exceptional positions, the orbit of a real $`x`$ is approximated with a uniform $`o(1)`$ error modulo one by consecutive power orbits of rational numbers. Suppose there are $`O((\log X)^r)`$ such pieces for a fixed $`r`$, and the reduced denominators share a fixed prime support coprime to the base and lie between $`cX^\alpha`$ and $`CX^\beta`$ for fixed $`0\lt \alpha\le\beta`$. Here each piece begins with a reduced rational and proceeds by multiplication by the base.
 
-Intersect with any prefix of the dyadic interval and discard pieces shorter than $`X/(\log X)^{r+2}`$; their combined length is $`O(X/(\log X)^2)`$. On all longer pieces the power-orbit estimate applies with small fixed $`\epsilon>0`$ and large fixed $`A`$. The error in a fixed Weyl sum is $`o(X)`$ because $`e(ht)`$ is Lipschitz for fixed integer $`h`$. The sum of the retained rational estimates is also $`o(X)`$ because their denominators grow by a fixed power of $`X`$. Summing over dyadic intervals gives $`\sum_{n<N}e(hb^n x)=o(N)`$ at every endpoint $`N`$ for each $`h\ne0`$.
+Intersect with any prefix of the dyadic interval and discard pieces shorter than $`X/(\log X)^{r+2}`$; their combined length is $`O(X/(\log X)^2)`$. On all longer pieces the power-orbit estimate applies with small fixed $`\epsilon\gt 0`$ and large fixed $`A`$. The error in a fixed Weyl sum is $`o(X)`$ because $`e(ht)`$ is Lipschitz for fixed integer $`h`$. The sum of the retained rational estimates is also $`o(X)`$ because their denominators grow by a fixed power of $`X`$. Summing over dyadic intervals gives $`\sum_{n\lt N}e(hb^n x)=o(N)`$ at every endpoint $`N`$ for each $`h\ne0`$.
 
 ### Proof of Theorem 1
 
 By the multidimensional Weyl criterion, consider any nonzero integer coefficient vector $`(c_{p,s})`$. Truncate each series of $`x=\sum_{p,s}c_{p,s}L_{p,s}(b)`$ at positions $`p^j\le n`$ and multiply the truncated value by $`b^n`$. For each active prime $`p`$, let $`s_p`$ be the largest $`s`$ with $`c_{p,s}\ne0`$ and put $`k=\lfloor\log_p n\rfloor`$.
 
-For sufficiently large $`n`$ the term with indices $`(p,s_p,k)`$ is the unique term of minimum $`p`$-adic valuation. Terms with smaller $`j`$ in the same column have larger valuation; terms with $`s<s_p`$ lose an amount growing linearly in $`k`$; terms for other primes have nonnegative valuation. In particular, neither signs nor carries can cancel this denominator. The reduced denominator of the scaled partial sum has exact $`p`$-exponent $`s_p k-v_p(c_{p,s_p})`$ and is therefore comparable to $`n^{\sum_p s_p}`$.
+For sufficiently large $`n`$ the term with indices $`(p,s_p,k)`$ is the unique term of minimum $`p`$-adic valuation. Terms with smaller $`j`$ in the same column have larger valuation; terms with $`s\lt s_p`$ lose an amount growing linearly in $`k`$; terms for other primes have nonnegative valuation. In particular, neither signs nor carries can cancel this denominator. The reduced denominator of the scaled partial sum has exact $`p`$-exponent $`s_p k-v_p(c_{p,s_p})`$ and is therefore comparable to $`n^{\sum_p s_p}`$.
 
-The partial sums change at $`O(\log X)`$ positions on $`[X,2X)`$ and give an exact rational power orbit between changes. The omitted terms after multiplying by $`b^n`$ have absolute sum $`O(X^{-1})`$: each omitted position $`m>n`$ has coefficient bounded in magnitude by a fixed multiple of $`1/m`$ and the factors $`b^{n-m}`$ sum geometrically. The reduction proves Weyl cancellation for every integer coefficient vector, hence joint uniform distribution. Clearing denominators and using [rational affine invariance of normality](https://www.davidhbailey.com/dhbpapers/nonnormality.pdf) gives the rational conclusion (a negative multiplier also preserves uniform distribution by reflection).
+The partial sums change at $`O(\log X)`$ positions on $`[X,2X)`$ and give an exact rational power orbit between changes. The omitted terms after multiplying by $`b^n`$ have absolute sum $`O(X^{-1})`$: each omitted position $`m\gt n`$ has coefficient bounded in magnitude by a fixed multiple of $`1/m`$ and the factors $`b^{n-m}`$ sum geometrically. The reduction proves Weyl cancellation for every integer coefficient vector, hence joint uniform distribution. Clearing denominators and using [rational affine invariance of normality](https://www.davidhbailey.com/dhbpapers/nonnormality.pdf) gives the rational conclusion (a negative multiplier also preserves uniform distribution by reflection).
 
 ### Proof of Theorem 2
 
-Let $`p_0=\min S`$ and let $`k=\lfloor\log_{p_0}n\rfloor`$. Among $`m\in\mathcal M(S)`$ with $`m\le n`$, the only one divisible by $`p_0^k`$ is $`p_0^k`$ itself: a second one would be at least $`p_0^{k+1}>n`$. So the term at $`p_0^k`$ in the partial sum scaled by $`b^n`$ forces a denominator divisible by $`p_0^{sk}`$. The denominator divides $`\prod_{p\in S}p^{s\lfloor\log_p n\rfloor}`$. These bounds give the required polynomial lower and upper bounds, respectively.
+Let $`p_0=\min S`$ and let $`k=\lfloor\log_{p_0}n\rfloor`$. Among $`m\in\mathcal M(S)`$ with $`m\le n`$, the only one divisible by $`p_0^k`$ is $`p_0^k`$ itself: a second one would be at least $`p_0^{k+1}\gt n`$. So the term at $`p_0^k`$ in the partial sum scaled by $`b^n`$ forces a denominator divisible by $`p_0^{sk}`$. The denominator divides $`\prod_{p\in S}p^{s\lfloor\log_p n\rfloor}`$. These bounds give the required polynomial lower and upper bounds, respectively.
 
 There are $`O((\log X)^{|S|})`$ changes, by counting the possible prime exponent vectors, and the scaled tail is $`O(X^{-s})`$ by summing over all integer positions greater than $`n`$. The same reduction applies.
 
@@ -91,7 +91,7 @@ There are $`O((\log X)^{|S|})`$ changes, by counting the possible prime exponent
 
 Write $`D=D_\parallel Q`$, where every prime of $`D_\parallel`$ divides $`B`$ and $`\gcd(Q,B)=1`$. Choose a fixed integer $`t\ge0`$ such that $`D_\parallel\mid B^t`$ and set $`V=B^t/D_\parallel`$. Then the $`j`$th term is $`V^j/(Q^j B^{C^j+tj})`$.
 
-If $`Q>1`$, the partial sum through $`j`$ has denominator $`Q^j B^{C^j+tj}`$ before reduction, with numerator coprime to $`Q`$: its last summand in the numerator is $`V^j`$ and every earlier one is divisible by $`Q`$. On $`C^j+tj\le n<C^{j+1}`$ this gives a rational power orbit with reduced denominator $`Q^j`$. The tail scaled by $`B^n`$ is $`O(D^{-j})`$ by the geometric series bound and the fact that successive positions $`C^i`$ are at least one apart. The skipped ranges $`C^j\le n<C^j+tj`$ contain $`O((\log X)^2)`$ positions up to $`2X`$. The denominator is comparable to $`X^{\log_C Q}`$ on the retained ranges intersecting $`[X,2X)`$. The reduction proves normality.
+If $`Q\gt 1`$, the partial sum through $`j`$ has denominator $`Q^j B^{C^j+tj}`$ before reduction, with numerator coprime to $`Q`$: its last summand in the numerator is $`V^j`$ and every earlier one is divisible by $`Q`$. On $`C^j+tj\le n\lt C^{j+1}`$ this gives a rational power orbit with reduced denominator $`Q^j`$. The tail scaled by $`B^n`$ is $`O(D^{-j})`$ by the geometric series bound and the fact that successive positions $`C^i`$ are at least one apart. The skipped ranges $`C^j\le n\lt C^j+tj`$ contain $`O((\log X)^2)`$ positions up to $`2X`$. The denominator is comparable to $`X^{\log_C Q}`$ on the retained ranges intersecting $`[X,2X)`$. The reduction proves normality.
 
 If $`Q=1`$, the $`j`$th term is a terminating base-$`B`$ fraction with at most $`O(j+1)`$ digits supported in a window ending at $`C^j+tj`$. These windows are eventually disjoint, and they eventually start after the end of the finite initial sum. Thus the tail windows cannot create carries between windows or into that initial sum. At most $`O((\log X)^2)`$ positions through digit $`X`$ contain a nonzero digit. This proves the other direction.
 
