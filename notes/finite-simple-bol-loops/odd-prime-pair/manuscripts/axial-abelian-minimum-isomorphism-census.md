@@ -2,7 +2,7 @@
 
 **Mira Cult**
 
-**Author proof pending independent review.** This concerns exactly the [sharp higher-top minimum](0135-higher-cyclic-abelian-cores.md), including the [ternary extension for $`k\ge3`$](0135-higher-cyclic-abelian-cores.md#4-sharp-order-and-the-ternary-exception). It does not cover [the ternary order-nine exception](axial-abelian-ternary-minimum-isomorphism-census.md), mixed weights, nonabelian cores, larger orders, or isotopy. The minimum-order theorem already rules out mixed weights at equality within the abelian case.
+**Author proof pending independent review.** This concerns exactly the [sharp higher-top minimum](0135-higher-cyclic-abelian-cores.md), including the [ternary extension for rotation orders 27 and higher](0135-higher-cyclic-abelian-cores.md#4-sharp-order-and-the-ternary-exception). It does not cover [the ternary order-nine exception](axial-abelian-ternary-minimum-isomorphism-census.md), mixed weights, nonabelian cores, larger orders, or isotopy. The minimum-order theorem already rules out mixed weights at equality within the abelian case.
 
 **Theorem.** Fix distinct odd primes $`p,q`$ and $`k\ge2`$ with $`n=p^k\mid q-1`$ and $`(p,k)\ne(3,2)`$. Write $`f=\mathrm{ord}_q(p)`$ and $`d=\mathrm{lcm}(n,f)`$. Among simple proper left Bol loops of order $`q p^{kd+k}`$ with canonical top of order $`n`$ and purely axial abelian canonical $`p`$-core, there are exactly $`p^{k-1}`$ isomorphism types. After choosing a fixed scalar $`\alpha`$ of order $`n`$ in $`\mathbb F_q^\times`$, their parameter is the action of the top lift of multiplier $`\alpha`$ on the cyclic stabilizer quotient of the first moving axis. It is an arbitrary $`u\in 1+p(\mathbb Z/p^k)`$.
 
