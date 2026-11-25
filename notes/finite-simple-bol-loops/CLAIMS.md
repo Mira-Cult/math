@@ -45,6 +45,10 @@ Setting $`f=\mathrm{ord}_q(p)`$, the [two-prime workspace](odd-prime-pair/README
 
 - [0135: Sharp minimum orders for abelian cores with higher cyclic rotation](odd-prime-pair/manuscripts/0135-higher-cyclic-abelian-cores.md). In the reciprocal two-axis model with cyclic top of order $`p^k`$ for $`k\ge2`$, the least abelian-core exponent is $`kd+k`$ with $`d=\mathrm{lcm}(p^k,\mathrm{ord}_q(p))`$, except for ternary order nine, where it is $`d+3`$. Elementary cores are excluded outside that exception.
 
+### Provisional: higher cyclic rotations
+
+The [higher-rotation notes](odd-prime-pair/README.md#provisional-higher-rotation-results) collect two proposed isomorphism censuses at the sharp abelian minimum and a nonabelian fixed-Frattini exclusion. They do not allocate permanent claim IDs pending independent audit.
+
 ## Odd-order obstructions and prime cubes
 
 - [0115: Odd-order bounds and the least odd simple example](odd-degree/README.md). Odd cube-free orders have a normal series in the original loop with abelian factors of order prime or prime-square. For two-prime orders *p*ᵃ*q*, nonassociative simplicity requires *q* > *p* and *a* ≥ *p* + 1; at equality existence is characterized by the order of *p* modulo *q*. Two additional exclusions give the sharp odd minimum 1053, attained by Nagy’s earlier construction. No uniqueness claim.

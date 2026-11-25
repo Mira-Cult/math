@@ -112,6 +112,8 @@ x\bigl(y(xz)\bigr)=\bigl(x(yx)\bigr)z.
 
 [Five author proofs and current classification questions](provisional/README.md) are kept separate from the reviewed catalogue. Among them are a proposed **native** universal-subloop construction, an unbounded single-associator order, and an affine-quotient classification. Their finite checks are reproducible; they have not received independent mathematical review.
 
+[Provisional higher-rotation results](odd-prime-pair/README.md#provisional-higher-rotation-results) add two exact-count formulas at the abelian minimum and an obstruction for a restricted nonabelian branch. These proofs also await independent mathematical review.
+
 ## Publication scope
 
 This is AI-assisted research, not human-refereed or formally verified mathematics. Review and computation have the exact scopes recorded with each source; novelty is a separate question. The [publication record](PUBLICATION-2026-11-17-LATEST.md) distinguishes preserved proofs, rerun checks and remaining verification gaps.

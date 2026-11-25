@@ -75,11 +75,20 @@ weight assumptions stated separately in each proof.
   phase calculation distinguishes actual from projected collisions. It does
   not settle the remaining all-even case.
 
+### Provisional higher-rotation results
+
+These are author proofs awaiting independent mathematical review. The censuses count ordinary isomorphism types, not isotopy types. These results do not yet carry permanent claim IDs.
+
+- [Abelian minimum, outside ternary order nine](manuscripts/axial-abelian-minimum-isomorphism-census.md). The proposed count is $`p^{k-1}`$, one type per unit acting on a cyclic stabilizer quotient.
+- [Abelian minimum, ternary order nine](manuscripts/axial-abelian-ternary-minimum-isomorphism-census.md). The orbit formula covers all admissible $`q`$, including 555 types for $`q=73`$, where nine does not divide the Frobenius degree.
+- [Nonabelian fixed-Frattini obstruction](manuscripts/odd-fixed-frattini-top-power-collision.md). Actual stabilizer collisions exclude purely axial cores with pointwise sign-fixed Frattini subgroup at $`p\ge5,\ k\ge3`$ or $`p=3,\ k\ge4`$; the result gives a narrower condition at ternary top order 27.
+
 ## What remains
 
 For $`p`$ dividing $`f`$, determine the full census at $`a=f+3`$, including
 rotation order $`p`$ and non-elementary cores. At a prescribed higher cyclic rotation, determine whether nonabelian cores
-can improve the abelian minimum and classify the operations at equality.
+can improve the abelian minimum. The proposed abelian isomorphism censuses
+still need independent review.
 The results here do not classify all odd simple Bol loops.
 
 [Verification and provenance](VERIFICATION.md) ·
