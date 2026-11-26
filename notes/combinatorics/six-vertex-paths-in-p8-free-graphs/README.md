@@ -8,7 +8,7 @@ Likewise $P_8$ is forbidden as a subgraph, not merely as an induced subgraph.
 For every integer $n\ge1$,
 
 ```math
-\operatorname{ex}(n,P_6,P_8)=
+\mathrm{ex}(n,P_6,P_8)=
 \begin{cases}
 0 & n<6,\\
 360 & n=6,\\
