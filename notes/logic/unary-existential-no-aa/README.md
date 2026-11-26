@@ -59,7 +59,7 @@ When the slot is occupied by `a`, it can contribute one pair on each side; when 
 
 ### 3. Nearest occupied letters
 
-Store a unary relation $R_*$ and bit $p$, and decode the right-neighbor flag by $R(x)=(p\land R_*(x))\lor(\neg p\land\neg R_*(x))$. Store and decode the left-hand flag symmetrically. Write $n=R(x)$, $m=R(i)$, and set
+Store a unary relation $R_{\ast}$ and bit $p$, and decode the right-neighbor flag by $R(x)=(p\land R_{\ast}(x))\lor(\neg p\land\neg R_{\ast}(x))$. Store and decode the left-hand flag symmetrically. Write $n=R(x)$, $m=R(i)$, and set
 
 $$
 E_a(x,i)=\exists y\,(x<y\land y<i\land A_{\mathrm{new}}(y)),
@@ -69,7 +69,7 @@ $$
 
 The interval excludes $i$, so either version of the input gives the same interval test. Here is the complete right-hand update; for the left-hand update reverse the order and use its own flag and polarity bit.
 
-| Edit at $i$ | $p'$ | $R_*'(x)$ for $x\ge i$ | $R_*'(x)$ for $x<i$ |
+| Edit at $i$ | $p'$ | $R_{\ast}'(x)$ for $x\ge i$ | $R_{\ast}'(x)$ for $x<i$ |
 | --- | --- | --- | --- |
 | Write `a` | $\bot$ | $\neg n$ | $\neg n\land E_b(x,i)$ |
 | Write `b` | $\top$ | $n$ | $n\land E_a(x,i)$ |
