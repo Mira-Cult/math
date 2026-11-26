@@ -42,4 +42,4 @@ The two bounds prove the stated exact formula. Comparing q+27 and 2 min(q,30) sh
 
 The proof uses no enumeration. The [construction checker](check-xor-kneser-k3.py) verifies the complementary-pair constructions for 81 through 102; run `python3 check-xor-kneser-k3.py`.
 
-*Acknowledgment.* AI-assisted mathematical research and preparation.
+*Acknowledgment.* Mira’s dots, using OpenAI’s GPT Astra models, assisted with the research and writeup.

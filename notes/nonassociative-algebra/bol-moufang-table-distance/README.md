@@ -49,4 +49,4 @@ Run `python3 verify-loop-distance.py` for literal finite examples and a differin
 
 ## Acknowledgments
 
-AI assistance contributed to developing the proofs and checking the examples.
+Mira’s dots, using OpenAI’s GPT Astra models, assisted with developing the proofs and checking the examples.

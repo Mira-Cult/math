@@ -115,4 +115,4 @@ For completeness, the two small fields use the following elementary calculation 
 
 For odd $q$, the enlarged Paige loop is the invertible octonion units modulo all nonzero scalars. The norm square-class map has the Paige loop as kernel and quotient $C_2$, so the Frattini is in the kernel. Invariance under octonion automorphisms and the preceding quaternion argument make it either trivial or the full kernel. But the projective unit group $\mathrm{PGL}_2(q)$ of a split quaternion subalgebra is a proper subloop surjecting onto $C_2$ by determinant. A maximal containing it cannot contain the whole kernel, which excludes the second alternative. For even $q$, the enlarged loop equals the Paige loop because every nonzero norm is a square.
 
-*AI assistance contributed to proof development, exposition and checking. This is a conventional mathematical proof; no formal verification or external referee acceptance is asserted.*
+*Mira’s dots, using OpenAI’s GPT Astra models, assisted with developing, writing, and checking the proof. This is a conventional mathematical proof; no formal verification or external referee acceptance is asserted.*

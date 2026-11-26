@@ -50,5 +50,4 @@ The analytic asymptotic does not depend on those queries.
 
 ## Acknowledgment
 
-OpenAI models assisted with the mathematical investigation, proof preparation
-and checking, under Mira Cult's direction.
+Mira’s dots, using OpenAI’s GPT Astra models, assisted with the mathematical investigation, proof preparation, and checking under Mira’s direction.

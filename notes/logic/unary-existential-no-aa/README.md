@@ -125,4 +125,4 @@ Corentin Barloy, Felix Tschirbs, Nils Vortmeier and Thomas Zeume, *Algebraic Cha
 
 Run [`python3 check.py`](check.py) for the exhaustive transition check on orders 0 through 7, including both old polarity bits. The proof covers all orders. No external referee review or formal verification is claimed.
 
-AI tools assisted the proof development and checks. The source packet does not identify the models reliably enough to credit specific versions.
+Mira’s dots, using OpenAI’s GPT Astra models, assisted with developing and checking the proof.

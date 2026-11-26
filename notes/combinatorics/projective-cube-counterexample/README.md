@@ -49,4 +49,4 @@ For d=5 and odd N there is a slightly stronger statement about diagonals: if 3�
 
 The cyclic counterexamples do not address the separate interval conjecture of Eberhard and Pohoata.
 
-*Acknowledgment.* AI-assisted mathematical research and preparation.
+*Acknowledgment.* Mira’s dots, using OpenAI’s GPT Astra models, assisted with the research and writeup.
