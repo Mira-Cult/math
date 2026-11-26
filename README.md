@@ -35,6 +35,13 @@ all-odd-order square theorem.
 | Partial Latin square completions as one exact permanent | An explicit matrix over {−1, 0, 1/2, 1} has permanent exactly equal to the labeled completion count. After forced-cell propagation, a nonterminal instance with h holes and t candidates gives order t+2h and exactly 5t+h nonzeros. | [Construction, complete proof and code](notes/combinatorics/latin-completion-permanent/README.md), with [finite checks and review scope](notes/combinatorics/latin-completion-permanent/VERIFICATION.md). A conventional proof with exact-arithmetic tests; no novelty, zero-elimination, optimality, formal-verification or general counting-speedup claim. |
 | Exact uniform generation of labeled Latin squares | For every positive order $`n`$, exact uniform sampling in $`\widetilde O(n^{25})`$ expected total bit work. | [Research writeup, paper and reference sampler](notes/combinatorics/exact-latin-square-sampling/README.md). Internally cross-checked proof draft, not externally refereed; the reference code does not implement the revised runtime bound. |
 
+### Exact extremal and additive results
+
+- **[Fifth greedy Bₕ term](notes/combinatorics/greedy-bh-fifth-term/README.md):** the conjectured leading term is h⁴/3, and an exact formula has least eventual quasiperiod six. The all-orders proof includes reproducible computer checks.
+- **[Six-vertex paths in P₈-free graphs](notes/combinatorics/six-vertex-paths-in-p8-free-graphs/README.md):** the exact extremal count at every order, with the unique extremal join for n ≥ 11.
+- **[XOR Kneser cliques for triples](notes/combinatorics/xor-kneser-k3/README.md):** exact from n = 81, with least threshold 99 for the eventual formula.
+- **[Cyclic projective cubes](notes/combinatorics/projective-cube-counterexample/README.md):** an analytic dimension-five counterexample to the proposed universal density bound.
+
 ## Collatz dynamics
 
 - **[Collatz research](notes/number-theory/collatz/README.md):** One explicit density-zero set of changed steps gives convergence from every positive integer. Arbitrarily sparse periodic changes also give convergence to the same cycle, and the minimum fraction needed for uniform descent has a sharp asymptotic bound. The ordinary conjecture is not resolved.
@@ -70,6 +77,8 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 
 - **[Power-of-two counting captures uniform TC⁰](notes/logic/power-of-two-counting/README.md):** On every finite linear order, ordinary truncated multiplication is definable using only order and a unary power-of-two cardinality test nested at most three deep. This gives DLOGTIME-uniform TC⁰ capture on nonempty ordered words. [Paper (PDF)](notes/logic/power-of-two-counting/paper/power-of-two-counting.pdf). Depth one is impossible; depth two remains open.
 
+- **[Unary existential updates for “no adjacent aa”](notes/logic/unary-existential-no-aa/README.md):** a uniform maintaining program with unary auxiliary relations and no built-in arithmetic. This refutes the specific nonmembership prediction, not just a positive-update variant.
+
 ## Research notes
 
 - [Theories K: a formal substitution catalogue](notes/set-theory/theories-k-substitution-catalogue.md) (2026-10-23 definitions draft). Precise first-order schemas, with established results distinguished from research reductions and outstanding proof obligations; no new full equivalence is claimed as formally verified.
@@ -77,3 +86,12 @@ and the [30-polygon construction](tilings/collatz-30/ATTRIBUTION.md).
 ## Nonassociative algebra
 
 - **[Bol-loop research](notes/finite-simple-bol-loops/README.md):** one workspace for the simple-loop classification, Burnside and Hall–Sylow questions, and graph and analytic applications. The [claim catalogue](notes/finite-simple-bol-loops/CLAIMS.md) links each result to its proof and review scope.
+
+### Further results on loops and quasigroups
+
+- **[Frattini subloops of finite Moufang loops](notes/nonassociative-algebra/moufang-frattini/README.md):** normality and central nilpotence.
+- **[Bol and Moufang multiplication-table distance](notes/nonassociative-algebra/bol-moufang-table-distance/README.md):** nonisomorphic left Bol loops at distance n; Moufang isomorphism below n²/20.
+- **[Simple paramedial quasigroups](notes/nonassociative-algebra/simple-paramedial-quasigroups/README.md):** an independent proof that every simple member is finite.
+- **[Isotopically universal varieties](notes/nonassociative-algebra/isotopically-universal-quasigroup-varieties/README.md):** minimality of the loop variety and a universal variety containing no whole loop parastrophe.
+- **[Recursive quasigroup tables](notes/nonassociative-algebra/recursive-quasigroup-tables/README.md):** compact witnesses at orders 14 and 18, with a separate note on [Latin division cores](notes/nonassociative-algebra/recursive-quasigroup-tables/0340-division-core.md). Earlier existence results are credited.
+- **[Quadratic multiplication groups](notes/nonassociative-algebra/quadratic-multiplication-groups/README.md):** a nonassociative Moufang variety with unbounded finite orders and a sharp quadratic bound within the construction.
