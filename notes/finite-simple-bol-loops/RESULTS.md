@@ -2,6 +2,10 @@
 
 <a id="odd-order-native-hall-and-sylow-subloops"></a>
 
+## Normal layers exchanged by marked inversion
+
+- [0136: Uniform fibers on exchanged normal layers](manuscripts/0136-exchanged-normal-layers.md). A proper paired layer forces at least two projected translations per stabilizer coset. For even fiber size, the projected stabilizer shares a prime with that size, at either quotient parity.
+
 ## Burnside and Hall–Sylow questions
 
 - [0124: Infinite two-generator Bol loops at every odd prime exponent](bol-burnside/two-generators.md). The explicit loops are residually finite; at exponent three they show that the free right Bol loop on at least two generators is infinite.

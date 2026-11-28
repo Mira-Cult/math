@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "original_claim_ids": "0001–0017",
-  "next_id": "0136",
+  "next_id": "0137",
   "manuscripts": [
     {
       "id": "0053",
@@ -2482,6 +2482,11 @@
       "id": "0135",
       "source": "odd-prime-pair/manuscripts/higher-top-augmentation-construction.md",
       "group": "higher-cyclic-abelian-cores"
+    },
+    {
+      "id": "0136",
+      "source": "manuscripts/0136-exchanged-normal-layers.md",
+      "group": "exchanged-normal-layers"
     }
   ]
 }

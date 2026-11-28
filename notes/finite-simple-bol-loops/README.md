@@ -47,6 +47,8 @@ For every pair of odd primes *p*, *q* with *p* dividing *q* − 1, [an explicit 
 
 ## The classification picture
 
+[Exchanged normal layers](manuscripts/0136-exchanged-normal-layers.md) give a restriction that applies across ambient groups: when an exchanged proper layer has even translation-fiber size, the actual projected stabilizer shares a prime with that size.
+
 Three kinds of progress fit together; none can replace the others.
 
 - **Restrict the full multiplication group.** The conditional full-socle exclusions cover all sporadic and exceptional Lie-type families, PSL₂ and odd-dimensional PSL/PSU, all characteristic-two PSL/PSU, PSL₄ and PSU₄ over every field, and binary Sp₂ₘ(2) for m≥3. Alternating full socles force the natural action. See the [family map](CLASSIFICATION.md) and [precise statements](CLAIMS.md).

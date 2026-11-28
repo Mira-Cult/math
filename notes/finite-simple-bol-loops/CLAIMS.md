@@ -2,6 +2,10 @@
 
 <a id="odd-order-native-hall-and-sylow-subloops"></a>
 
+## Normal layers exchanged by marked inversion
+
+- [0136: Uniform fibers on exchanged normal layers](manuscripts/0136-exchanged-normal-layers.md). A proper paired layer forces at least two projected translations per stabilizer coset. For even fiber size, the projected stabilizer shares a prime with that size, at either quotient parity.
+
 ## Burnside and Hall–Sylow questions
 
 - [0124: Infinite two-generator Bol loops at every odd prime exponent](bol-burnside/two-generators.md). The explicit loops are residually finite; at exponent three they show that the free right Bol loop on at least two generators is infinite.
@@ -211,7 +215,7 @@ Numbered expositions are linked where available. Other links identify supporting
 
 This catalogue covers all seventeen original claim records and every manuscript currently released in this public workspace. It does not claim that unpublished source work has been exhaustively audited. A compound manuscript can contain lemmas, examples and conjectures beyond its headline family: its hypotheses and section labels control their status. A material new theorem should get a new ID rather than being hidden under0010; an alternative proof of the same result retains its ID. Corrections retain IDs and state which conclusion changed.
 
-The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0136.
+The crosswalk is available in [claim-manuscript-map.json](claim-manuscript-map.json). The next unallocated public claim number is 0137.
 
 
 ## Manuscript-local QR labels, no permanent numeric allocation
